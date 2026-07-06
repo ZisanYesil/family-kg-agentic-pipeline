@@ -1,0 +1,231 @@
+@prefix fhkb: <http://www.example.com/genealogy.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/genealogy-shapes.owl>
+    a owl:Ontology ;
+    rdfs:comment """
+SHACL shapes for validating ABox data produced by agents/kg_builder_agent.py.
+These shapes intentionally avoid relying on OWL/RDFS class inference: generated people
+are asserted as fhkb:Person with fhkb:hasSex fhkb:Male/Female rather than as fhkb:Man
+or fhkb:Woman, and relation endpoints may exist without any rdf:type assertion when
+the extraction referred to an entity that was not listed. For that reason, relation
+constraints target subjects/objects of concrete predicates and validate sex via
+fhkb:hasSex values instead of sh:class fhkb:Man/fhkb:Woman.
+""" .
+
+fhkb:MaleSexShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path fhkb:hasSex ;
+        sh:hasValue fhkb:Male ;
+        sh:message "The referenced individual must have fhkb:hasSex fhkb:Male." ;
+    ] .
+
+fhkb:FemaleSexShape
+    a sh:NodeShape ;
+    sh:property [
+        sh:path fhkb:hasSex ;
+        sh:hasValue fhkb:Female ;
+        sh:message "The referenced individual must have fhkb:hasSex fhkb:Female." ;
+    ] .
+
+fhkb:PersonHasFatherShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasFather ;
+    sh:property fhkb:PersonHasFatherPropertyShape .
+
+fhkb:PersonHasFatherPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasFather ;
+    sh:maxCount 1 ;
+    sh:node fhkb:MaleSexShape ;
+    sh:message "fhkb:hasFather must have at most one value and that value must have fhkb:hasSex fhkb:Male." .
+
+fhkb:PersonHasMotherShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasMother ;
+    sh:property fhkb:PersonHasMotherPropertyShape .
+
+fhkb:PersonHasMotherPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasMother ;
+    sh:maxCount 1 ;
+    sh:node fhkb:FemaleSexShape ;
+    sh:message "fhkb:hasMother must have at most one value and that value must have fhkb:hasSex fhkb:Female." .
+
+fhkb:PersonHasBrotherShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasBrother ;
+    sh:property fhkb:PersonHasBrotherPropertyShape .
+
+fhkb:PersonHasBrotherPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasBrother ;
+    sh:node fhkb:MaleSexShape ;
+    sh:message "fhkb:hasBrother values must have fhkb:hasSex fhkb:Male." .
+
+fhkb:PersonHasSisterShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasSister ;
+    sh:property fhkb:PersonHasSisterPropertyShape .
+
+fhkb:PersonHasSisterPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasSister ;
+    sh:node fhkb:FemaleSexShape ;
+    sh:message "fhkb:hasSister values must have fhkb:hasSex fhkb:Female." .
+
+fhkb:PersonHasSonShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasSon ;
+    sh:property fhkb:PersonHasSonPropertyShape .
+
+fhkb:PersonHasSonPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasSon ;
+    sh:node fhkb:MaleSexShape ;
+    sh:message "fhkb:hasSon values must have fhkb:hasSex fhkb:Male." .
+
+fhkb:PersonHasDaughterShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasDaughter ;
+    sh:property fhkb:PersonHasDaughterPropertyShape .
+
+fhkb:PersonHasDaughterPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasDaughter ;
+    sh:node fhkb:FemaleSexShape ;
+    sh:message "fhkb:hasDaughter values must have fhkb:hasSex fhkb:Female." .
+
+fhkb:PersonHasHusbandShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasHusband ;
+    sh:property fhkb:PersonHasHusbandPropertyShape .
+
+fhkb:PersonHasHusbandPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasHusband ;
+    sh:node fhkb:MaleSexShape ;
+    sh:message "fhkb:hasHusband values must have fhkb:hasSex fhkb:Male." .
+
+fhkb:PersonHasWifeShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasWife ;
+    sh:property fhkb:PersonHasWifePropertyShape .
+
+fhkb:PersonHasWifePropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasWife ;
+    sh:node fhkb:FemaleSexShape ;
+    sh:message "fhkb:hasWife values must have fhkb:hasSex fhkb:Female." .
+
+fhkb:PersonHasSexShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasSex ;
+    sh:property fhkb:PersonHasSexPropertyShape .
+
+fhkb:PersonHasSexPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasSex ;
+    sh:maxCount 1 ;
+    sh:in ( fhkb:Male fhkb:Female ) ;
+    sh:message "fhkb:hasSex must have at most one value and must be fhkb:Male or fhkb:Female." .
+
+fhkb:PersonHasParentShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasParent ;
+    sh:property fhkb:PersonHasParentPropertyShape .
+
+fhkb:PersonHasParentPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasParent ;
+    sh:maxCount 2 ;
+    sh:message "fhkb:hasParent must have at most two values." .
+
+fhkb:PersonHasBirthYearShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasBirthYear ;
+    sh:property fhkb:PersonHasBirthYearPropertyShape .
+
+fhkb:PersonHasBirthYearPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasBirthYear ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1000 ;
+    sh:maxInclusive 2026 ;
+    sh:message "fhkb:hasBirthYear must be a single xsd:integer between 1000 and 2026." .
+
+fhkb:PersonHasDeathYearShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasDeathYear ;
+    sh:property fhkb:PersonHasDeathYearPropertyShape .
+
+fhkb:PersonHasDeathYearPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasDeathYear ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1000 ;
+    sh:maxInclusive 2026 ;
+    sh:message "fhkb:hasDeathYear must be a single xsd:integer between 1000 and 2026." .
+
+fhkb:BirthBeforeDeathShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasBirthYear ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "hasDeathYear must not be earlier than hasBirthYear" ;
+        sh:select """
+            PREFIX fhkb: <http://www.example.com/genealogy.owl#>
+            SELECT $this
+            WHERE {
+                $this fhkb:hasBirthYear ?birthYear ;
+                      fhkb:hasDeathYear ?deathYear .
+                FILTER(?deathYear < ?birthYear)
+            }
+        """ ;
+    ] ;
+    sh:message "hasDeathYear must not be earlier than hasBirthYear" .
+
+fhkb:MarriageHasMalePartnerShape
+    a sh:NodeShape ;
+    sh:targetClass fhkb:Marriage ;
+    sh:property fhkb:MarriageHasMalePartnerPropertyShape .
+
+fhkb:MarriageHasMalePartnerPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasMalePartner ;
+    sh:maxCount 1 ;
+    sh:node fhkb:MaleSexShape ;
+    sh:message "fhkb:hasMalePartner must have at most one value and that value must have fhkb:hasSex fhkb:Male." .
+
+fhkb:MarriageHasFemalePartnerShape
+    a sh:NodeShape ;
+    sh:targetClass fhkb:Marriage ;
+    sh:property fhkb:MarriageHasFemalePartnerPropertyShape .
+
+fhkb:MarriageHasFemalePartnerPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasFemalePartner ;
+    sh:maxCount 1 ;
+    sh:node fhkb:FemaleSexShape ;
+    sh:message "fhkb:hasFemalePartner must have at most one value and that value must have fhkb:hasSex fhkb:Female." .
+
+fhkb:MarriageHasMarriageYearShape
+    a sh:NodeShape ;
+    sh:targetClass fhkb:Marriage ;
+    sh:property fhkb:MarriageHasMarriageYearPropertyShape .
+
+fhkb:MarriageHasMarriageYearPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:hasMarriageYear ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1000 ;
+    sh:maxInclusive 2026 ;
+    sh:message "fhkb:hasMarriageYear must be a single xsd:integer between 1000 and 2026." .
