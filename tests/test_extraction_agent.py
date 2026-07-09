@@ -14,7 +14,7 @@ from agents.extraction_agent import (
 )
 
 
-def response_with_content(content: str) -> SimpleNamespace:
+def response_with_content(content: object) -> SimpleNamespace:
     return SimpleNamespace(
         choices=[
             SimpleNamespace(
@@ -71,16 +71,13 @@ def test_extraction_agent_happy_path_parses_structured_response(monkeypatch: pyt
         ],
         "relations": [
             {
-                "subject": "jane_doe_1925",
-                "predicate": "hasFather",
-                "object": "john_doe_1900",
-            }
-        ],
-        "marriages": [
-            {
-                "male_partner": "john_doe_1900",
-                "female_partner": "jane_doe_1925",
-                "marriage_year": 1945,
+                "subject": "john_doe_1900",
+                "object": "jane_doe_1925",
+                "relation_phrase": "married to",
+                "qualifiers": {
+                    "year": 1945,
+                    "note": None,
+                },
             }
         ],
     }
@@ -96,6 +93,26 @@ def test_extraction_agent_happy_path_parses_structured_response(monkeypatch: pyt
     assert call["response_format"] == EXTRACTION_RESPONSE_FORMAT
     assert call["messages"][0]["role"] == "system"
     assert call["messages"][1]["role"] == "user"
+    assert call["messages"][1]["content"] == (
+        "John Doe, also known as Johnny, married Jane Doe in 1945."
+    )
+
+
+def test_extraction_response_format_matches_current_agent_contract() -> None:
+    schema = EXTRACTION_RESPONSE_FORMAT["json_schema"]["schema"]
+
+    assert schema["required"] == ["entities", "relations"]
+    assert "marriages" not in schema["properties"]
+
+    relation_schema = schema["properties"]["relations"]["items"]
+    assert relation_schema["required"] == [
+        "subject",
+        "object",
+        "relation_phrase",
+        "qualifiers",
+    ]
+    assert "predicate" not in relation_schema["properties"]
+    assert relation_schema["properties"]["qualifiers"]["required"] == ["year", "note"]
 
 
 @pytest.mark.parametrize("text", ["", "   "])
@@ -117,6 +134,166 @@ def test_extraction_agent_malformed_json_raises_error_with_raw_content() -> None
     assert client.completions.call_count == 1
 
 
+def test_extraction_agent_non_string_model_content_raises_error() -> None:
+    client = FakeClient([response_with_content(None)])
+
+    with pytest.raises(ExtractionAgentError, match="Model returned non-string content"):
+        extraction_agent("John Doe was born in 1900.", client=client)
+
+    assert client.completions.call_count == 1
+
+
+@pytest.mark.parametrize(
+    ("payload", "error"),
+    [
+        (
+            {
+                "entities": [],
+                "relations": [],
+                "marriages": [],
+            },
+            "extraction result has unsupported field\\(s\\): marriages",
+        ),
+        (
+            {
+                "entities": [],
+            },
+            "extraction result is missing required field\\(s\\): relations",
+        ),
+        (
+            {
+                "entities": "not-a-list",
+                "relations": [],
+            },
+            "extraction result.entities must be a list",
+        ),
+        (
+            {
+                "entities": [
+                    {
+                        "id": "alex",
+                        "label": "Alex",
+                        "sex": "Nonbinary",
+                        "birth_year": None,
+                        "death_year": None,
+                        "aliases": [],
+                    }
+                ],
+                "relations": [],
+            },
+            "entities\\[0\\].sex must be one of",
+        ),
+        (
+            {
+                "entities": [
+                    {
+                        "id": "alex",
+                        "label": "Alex",
+                        "sex": "Unknown",
+                        "birth_year": True,
+                        "death_year": None,
+                        "aliases": [],
+                    }
+                ],
+                "relations": [],
+            },
+            "entities\\[0\\].birth_year must be an integer or null",
+        ),
+        (
+            {
+                "entities": [
+                    {
+                        "id": "alex",
+                        "label": "Alex",
+                        "sex": "Unknown",
+                        "birth_year": None,
+                        "death_year": None,
+                        "aliases": ["Al", 123],
+                    }
+                ],
+                "relations": [],
+            },
+            "entities\\[0\\].aliases must be a list of strings",
+        ),
+        (
+            {
+                "entities": [],
+                "relations": [
+                    {
+                        "subject": "alex",
+                        "object": "sam",
+                        "relation_phrase": "sibling of",
+                    }
+                ],
+            },
+            "relations\\[0\\] is missing required field\\(s\\): qualifiers",
+        ),
+        (
+            {
+                "entities": [],
+                "relations": [
+                    {
+                        "subject": "alex",
+                        "object": "sam",
+                        "relation_phrase": "sibling of",
+                        "qualifiers": {
+                            "year": 1990,
+                            "note": None,
+                            "source": "memoir",
+                        },
+                    }
+                ],
+            },
+            "relations\\[0\\].qualifiers has unsupported field\\(s\\): source",
+        ),
+        (
+            {
+                "entities": [],
+                "relations": [
+                    {
+                        "subject": "alex",
+                        "object": "sam",
+                        "relation_phrase": "sibling of",
+                        "qualifiers": {
+                            "year": "1990",
+                            "note": None,
+                        },
+                    }
+                ],
+            },
+            "relations\\[0\\].qualifiers.year must be an integer or null",
+        ),
+        (
+            {
+                "entities": [],
+                "relations": [
+                    {
+                        "subject": "alex",
+                        "object": "sam",
+                        "relation_phrase": "sibling of",
+                        "qualifiers": {
+                            "year": None,
+                            "note": ["not", "a", "string"],
+                        },
+                    }
+                ],
+            },
+            "relations\\[0\\].qualifiers.note must be a string or null",
+        ),
+    ],
+)
+def test_extraction_agent_rejects_invalid_structured_payloads(
+    payload: dict[str, object],
+    error: str,
+) -> None:
+    client = FakeClient([response_with_content(json.dumps(payload))])
+
+    with pytest.raises(ExtractionAgentError, match=error):
+        extraction_agent("Alex and Sam are siblings.", client=client)
+
+    assert client.completions.call_count == 1
+
+
 def test_extraction_agent_retries_timeout_errors_then_succeeds() -> None:
     payload = {
         "entities": [
@@ -130,7 +307,6 @@ def test_extraction_agent_retries_timeout_errors_then_succeeds() -> None:
             }
         ],
         "relations": [],
-        "marriages": [],
     }
     client = FakeClient(
         [
