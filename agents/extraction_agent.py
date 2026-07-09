@@ -136,8 +136,12 @@ def extraction_agent(text: str, *, client: "openai.OpenAI | None" = None) -> dic
         logger.exception("extraction_agent_failed")
         raise
 
-    model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-    api_client = client or openai.OpenAI()
+    model = os.getenv("OPENAI_MODEL", "gpt-oss:120b")
+
+    api_client = client or openai.OpenAI(
+        api_key=os.getenv("OPENAI_API_KEY"),
+        base_url=os.getenv("OPENAI_BASE_URL"),
+    )
 
     try:
         logger.info("extraction_agent_calling_openai", text_length=len(text), model=model)
