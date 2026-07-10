@@ -7,6 +7,10 @@ import structlog
 
 from agents.extraction_agent import ExtractionAgentError, extraction_agent
 from agents.kg_builder_agent import KGBuilderError, kg_builder_agent, kg_builder_agent_with_diagnostics
+from agents.ontology_mapping_agent import (
+    OntologyMappingAgentError,
+    ontology_mapping_agent_with_diagnostics,
+)
 from api.models.job import JobStatus
 from celery_app import celery_app
 from storage import database
@@ -193,7 +197,21 @@ def run_pipeline(self: Any, job_id: str) -> None:
 
         current_status = _transition(job_id, current_status, JobStatus.Building)
         try:
-            kg_builder_result = kg_builder_agent_with_diagnostics(extractions)
+            ontology_mapping_result = ontology_mapping_agent_with_diagnostics(extractions)
+            if ontology_mapping_result.unmapped_relations:
+                logger.warning(
+                    "ontology_mapping_unmapped_relations",
+                    job_id=job_id,
+                    unmapped_relation_count=len(ontology_mapping_result.unmapped_relations),
+                    unmapped_relations=ontology_mapping_result.unmapped_relations,
+                )
+
+            mapped_extractions = {
+                "entities": ontology_mapping_result.entities,
+                "relations": ontology_mapping_result.relations,
+                "marriages": ontology_mapping_result.marriages,
+            }
+            kg_builder_result = kg_builder_agent_with_diagnostics(mapped_extractions)
             turtle_graph = kg_builder_result.turtle_graph
             if kg_builder_result.dangling_references or kg_builder_result.dangling_marriage_references:
                 logger.warning(
@@ -206,6 +224,11 @@ def run_pipeline(self: Any, job_id: str) -> None:
                     dangling_references=kg_builder_result.dangling_references,
                     dangling_marriage_references=kg_builder_result.dangling_marriage_references,
                 )
+        except OntologyMappingAgentError as exc:
+            current_status = _transition(job_id, current_status, JobStatus.Error, last_error=str(exc))
+            logger.exception("ontology_mapping_agent_failed", job_id=job_id, error=str(exc))
+            _finish(job_id)
+            return
         except KGBuilderError as exc:
             current_status = _transition(job_id, current_status, JobStatus.Error, last_error=str(exc))
             logger.exception("kg_builder_agent_failed", job_id=job_id, error=str(exc))
