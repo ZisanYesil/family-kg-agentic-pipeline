@@ -7,7 +7,7 @@ Agentic AI for Ontology-Based Knowledge Graph Construction and Iterative Improve
 
 ## Summary
 
-During the last week, I focused on an important design issue I noticed in the pipeline: the implementation was too tightly coupled to the Family Ontology. The Extraction Agent, Ontology Mapping Agent, KG Builder Agent, API flow, and tests all assumed family-specific classes, attributes, and predicates. I refactored the system so that the pipeline can load an ontology schema dynamically and use that schema throughout the extraction, mapping, and RDF generation stages.
+During the last week, I focused on an important design issue we noticed in the pipeline: the implementation was too tightly coupled to the Family Ontology. The Extraction Agent, Ontology Mapping Agent, KG Builder Agent, API flow, and tests all assumed family-specific classes, attributes, and predicates. I refactored the system so that the pipeline can load an ontology schema dynamically and use that schema throughout the extraction, mapping, and RDF generation stages.
 
 ## 1. Ontology Schema Loading
 
