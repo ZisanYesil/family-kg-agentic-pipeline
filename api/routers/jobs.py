@@ -36,9 +36,19 @@ def create_kg_extraction_job(
     max_iterations = int(os.getenv("MAX_ITERATIONS", "10"))
     webhook_url = str(request.webhook_url) if request.webhook_url else None
 
+    ontology_path = request.ontology_path or os.getenv("DEFAULT_ONTOLOGY_PATH")
+    if not ontology_path:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=(
+                "ontology_path was not provided and DEFAULT_ONTOLOGY_PATH is not set"
+            ),
+        )
+
     db.create_job(
         job_id=job_id,
         input_text=request.text,
+        ontology_path=ontology_path,
         max_iterations=max_iterations,
         webhook_url=webhook_url,
     )

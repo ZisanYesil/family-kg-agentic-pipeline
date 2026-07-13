@@ -31,6 +31,7 @@ class _FakeStorage:
         self,
         job_id: str,
         input_text: str,
+        ontology_path: str,
         max_iterations: int,
         webhook_url: str | None,
     ) -> None:
@@ -38,6 +39,7 @@ class _FakeStorage:
             {
                 "job_id": job_id,
                 "input_text": input_text,
+                "ontology_path": ontology_path,
                 "max_iterations": max_iterations,
                 "webhook_url": webhook_url,
             }
@@ -91,6 +93,7 @@ def test_create_kg_extraction_job_persists_and_dispatches(monkeypatch) -> None:
     storage = _FakeStorage()
 
     monkeypatch.setenv("MAX_ITERATIONS", "7")
+    monkeypatch.setenv("DEFAULT_ONTOLOGY_PATH", "ontology/family_extended.ttl")
     monkeypatch.setattr(
         "api.routers.jobs.dispatch_extraction_job",
         lambda job_id: dispatched_job_ids.append(job_id),
@@ -106,6 +109,7 @@ def test_create_kg_extraction_job_persists_and_dispatches(monkeypatch) -> None:
         {
             "job_id": response.job_id,
             "input_text": "Jane Doe was born in 1900 and married John Doe.",
+            "ontology_path": "ontology/family_extended.ttl",
             "max_iterations": 7,
             "webhook_url": None,
         }
@@ -113,10 +117,46 @@ def test_create_kg_extraction_job_persists_and_dispatches(monkeypatch) -> None:
     assert dispatched_job_ids == [response.job_id]
 
 
+def test_create_kg_extraction_job_uses_request_ontology_path_when_given(
+    monkeypatch,
+) -> None:
+    storage = _FakeStorage()
+    monkeypatch.delenv("DEFAULT_ONTOLOGY_PATH", raising=False)
+    monkeypatch.setattr("api.routers.jobs.dispatch_extraction_job", lambda _job_id: None)
+
+    create_kg_extraction_job(
+        JobCreateRequest(
+            text="Jane Doe was born in 1900 and married John Doe.",
+            ontology_path="ontology/custom.ttl",
+        ),
+        db=storage,
+    )
+
+    assert storage.created_jobs[0]["ontology_path"] == "ontology/custom.ttl"
+
+
+def test_create_kg_extraction_job_422s_when_no_ontology_path_available(
+    monkeypatch,
+) -> None:
+    storage = _FakeStorage()
+    monkeypatch.delenv("DEFAULT_ONTOLOGY_PATH", raising=False)
+    monkeypatch.setattr("api.routers.jobs.dispatch_extraction_job", lambda _job_id: None)
+
+    with pytest.raises(HTTPException) as exc_info:
+        create_kg_extraction_job(
+            JobCreateRequest(text="Jane Doe was born in 1900 and married John Doe."),
+            db=storage,
+        )
+
+    assert exc_info.value.status_code == status.HTTP_422_UNPROCESSABLE_ENTITY
+    assert storage.created_jobs == []
+
+
 def test_create_kg_extraction_job_errors_when_created_job_cannot_be_read(
     monkeypatch,
 ) -> None:
     storage = _FakeStorage(read_after_create=False)
+    monkeypatch.setenv("DEFAULT_ONTOLOGY_PATH", "ontology/family_extended.ttl")
     monkeypatch.setattr("api.routers.jobs.dispatch_extraction_job", lambda _job_id: None)
 
     with pytest.raises(HTTPException) as exc_info:

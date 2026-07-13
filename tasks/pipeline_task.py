@@ -13,6 +13,7 @@ from agents.ontology_mapping_agent import (
 )
 from api.models.job import JobStatus
 from celery_app import celery_app
+from ontology.schema_loader import OntologySchemaError, load_ontology_schema
 from storage import database
 from utils.rdf import count_turtle_triples
 
@@ -24,6 +25,7 @@ DEFAULT_WEBHOOK_TIMEOUT_SECONDS = 10
 DEFAULT_WEBHOOK_MAX_ATTEMPTS = 3
 WEBHOOK_TIMEOUT_ENV = "WEBHOOK_TIMEOUT_SECONDS"
 WEBHOOK_MAX_ATTEMPTS_ENV = "WEBHOOK_MAX_ATTEMPTS"
+DEFAULT_ONTOLOGY_PATH_ENV = "DEFAULT_ONTOLOGY_PATH"
 
 
 def validation_agent(turtle_graph: str) -> dict[str, Any]:
@@ -186,9 +188,32 @@ def run_pipeline(self: Any, job_id: str) -> None:
         max_iterations = _max_iterations()
         previous_violations: Optional[list[str]] = None
 
+        ontology_path = job.get("ontology_path") or os.environ.get(DEFAULT_ONTOLOGY_PATH_ENV)
+        if not ontology_path:
+            reason = (
+                "Job has no ontology_path and DEFAULT_ONTOLOGY_PATH is not set"
+            )
+            current_status = _transition(job_id, current_status, JobStatus.Error, last_error=reason)
+            logger.error("pipeline_ontology_path_missing", job_id=job_id)
+            _finish(job_id)
+            return
+
+        try:
+            schema = load_ontology_schema(ontology_path)
+        except OntologySchemaError as exc:
+            current_status = _transition(job_id, current_status, JobStatus.Error, last_error=str(exc))
+            logger.exception(
+                "ontology_schema_load_failed",
+                job_id=job_id,
+                ontology_path=ontology_path,
+                error=str(exc),
+            )
+            _finish(job_id)
+            return
+
         current_status = _transition(job_id, current_status, JobStatus.Extracting)
         try:
-            extractions = extraction_agent(job["input_text"])
+            extractions = extraction_agent(job["input_text"], schema)
         except ExtractionAgentError as exc:
             current_status = _transition(job_id, current_status, JobStatus.Error, last_error=str(exc))
             logger.exception("extraction_agent_failed", job_id=job_id, error=str(exc))
@@ -197,7 +222,7 @@ def run_pipeline(self: Any, job_id: str) -> None:
 
         current_status = _transition(job_id, current_status, JobStatus.Building)
         try:
-            ontology_mapping_result = ontology_mapping_agent_with_diagnostics(extractions)
+            ontology_mapping_result = ontology_mapping_agent_with_diagnostics(extractions, schema)
             if ontology_mapping_result.unmapped_relations:
                 logger.warning(
                     "ontology_mapping_unmapped_relations",
@@ -209,20 +234,15 @@ def run_pipeline(self: Any, job_id: str) -> None:
             mapped_extractions = {
                 "entities": ontology_mapping_result.entities,
                 "relations": ontology_mapping_result.relations,
-                "marriages": ontology_mapping_result.marriages,
             }
-            kg_builder_result = kg_builder_agent_with_diagnostics(mapped_extractions)
+            kg_builder_result = kg_builder_agent_with_diagnostics(mapped_extractions, schema)
             turtle_graph = kg_builder_result.turtle_graph
-            if kg_builder_result.dangling_references or kg_builder_result.dangling_marriage_references:
+            if kg_builder_result.dangling_references:
                 logger.warning(
                     "kg_builder_dangling_references",
                     job_id=job_id,
                     dangling_reference_count=len(kg_builder_result.dangling_references),
-                    dangling_marriage_reference_count=len(
-                        kg_builder_result.dangling_marriage_references
-                    ),
                     dangling_references=kg_builder_result.dangling_references,
-                    dangling_marriage_references=kg_builder_result.dangling_marriage_references,
                 )
         except OntologyMappingAgentError as exc:
             current_status = _transition(job_id, current_status, JobStatus.Error, last_error=str(exc))

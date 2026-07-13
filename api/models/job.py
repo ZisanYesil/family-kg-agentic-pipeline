@@ -19,6 +19,13 @@ class JobStatus(str, Enum):
 class JobCreateRequest(BaseModel):
     text: str = Field(..., min_length=10)
     webhook_url: Optional[HttpUrl] = None
+    ontology_path: Optional[str] = Field(
+        default=None,
+        description=(
+            "Path to the OWL/TTL ontology file to extract against. If omitted, "
+            "falls back to the DEFAULT_ONTOLOGY_PATH environment variable."
+        ),
+    )
 
 
 class JobCreateResponse(BaseModel):

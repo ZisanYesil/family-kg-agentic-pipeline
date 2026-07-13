@@ -215,6 +215,7 @@ DATABASE_URL=sqlite:////app/storage/jobs.db
 LOG_LEVEL=INFO
 MAX_ITERATIONS=10
 WEBHOOK_TIMEOUT_SECONDS=10
+DEFAULT_ONTOLOGY_PATH=ontology/family_extended.ttl
 ```
 
 ### 2. Start with Docker Compose

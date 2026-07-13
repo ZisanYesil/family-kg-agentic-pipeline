@@ -10,58 +10,9 @@ import structlog
 from openai import APIConnectionError, APITimeoutError, RateLimitError
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
+from ontology.schema_loader import ObjectProperty, OntologySchema
+
 logger = structlog.get_logger(__name__)
-
-# The 6 direct person-to-person predicates the ontology (and family_shapes.ttl) validates
-# for non-spousal relations, plus a synthetic "isSpouseOf" marker used only inside this
-# agent to flag a relation as spousal so it can be reified into a fhkb:Marriage individual
-# by kg_builder_agent. This marker is never written to RDF directly. hasHusband/hasWife are
-# intentionally NOT offered to the model: if the model could pick either those or
-# isSpouseOf for the same kind of relation, marriage_year and Marriage reification would
-# silently be lost whenever it picked the direct predicate instead. Routing every spousal
-# relation through the single isSpouseOf marker removes that ambiguity entirely.
-DIRECT_PREDICATES = (
-    "hasFather",
-    "hasMother",
-    "hasBrother",
-    "hasSister",
-    "hasSon",
-    "hasDaughter",
-)
-SPOUSE_MARKER = "isSpouseOf"
-VALID_MAPPING_PREDICATES = DIRECT_PREDICATES + (SPOUSE_MARKER,)
-
-PREDICATE_REFERENCE = """Available ontology predicates (choose exactly one, or null if none fit):
-- hasFather: subject's father is object. object must be male.
-- hasMother: subject's mother is object. object must be female.
-- hasBrother: object is subject's brother. object must be male.
-- hasSister: object is subject's sister. object must be female.
-- hasSon: object is subject's son. object must be male.
-- hasDaughter: object is subject's daughter. object must be female.
-- isSpouseOf: any spousal/marriage relation (married, wed, husband, wife, spouse, partner
-  in marriage), regardless of which direction the text states it or which gendered word it
-  uses. Always use isSpouseOf for these, never invent a different label. A downstream step
-  resolves this into the correct gendered marriage structure using each entity's recorded
-  sex.
-"""
-
-MAPPING_SYSTEM_PROMPT = f"""You map free-text family relation descriptions onto a fixed
-ontology of predicates. You will receive a list of people (with id and sex) and a list of
-relations, each with a subject id, an object id, and a relation_phrase describing how
-subject relates to object in the source text.
-
-{PREDICATE_REFERENCE}
-
-For each relation, decide which single predicate from the list above best matches the
-relation_phrase. If the relation_phrase does not correspond to any of these predicates
-(for example: "godmother of", "employer of", "neighbor of", any non-family or non-spousal
-relation), set predicate to null. Do not force a mapping that is not clearly supported by
-the relation_phrase. Do not use entity sex to override what the relation_phrase states;
-sex is provided only as context.
-
-Return exactly one mapping object per input relation, in the same order, echoing back the
-same subject and object you were given for that relation.
-"""
 
 
 class OntologyMappingAgentError(Exception):
@@ -70,8 +21,8 @@ class OntologyMappingAgentError(Exception):
 
 @dataclass(frozen=True)
 class UnmappedRelation:
-    """A relation whose relation_phrase did not map to any ontology predicate, or a
-    spousal relation whose partner genders could not be resolved."""
+    """A relation whose relation_phrase did not map to any ontology predicate, or whose
+    endpoint entity types don't satisfy the chosen predicate's domain/range."""
 
     subject: str
     object: str
@@ -83,11 +34,50 @@ class UnmappedRelation:
 class OntologyMappingResult:
     entities: list[dict[str, Any]]
     relations: list[dict[str, Any]]
-    marriages: list[dict[str, Any]]
     unmapped_relations: tuple[UnmappedRelation, ...]
 
 
-def _mapping_response_format(relation_count: int) -> dict[str, Any]:
+def _build_predicate_reference(schema: OntologySchema) -> str:
+    """Render schema.object_properties as a numbered reference the model can pick from,
+    stating each predicate's domain/range class constraints (if any) and comment."""
+    lines = []
+    for prop in schema.object_properties:
+        domain = prop.domain_class or "any type"
+        range_ = prop.range_class or "any type"
+        line = f"- {prop.local_name}: subject must be {domain}, object must be {range_}."
+        if prop.comment:
+            line += f" {prop.comment}"
+        lines.append(line)
+    return "\n".join(lines) if lines else "(no object properties declared)"
+
+
+def _build_mapping_system_prompt(schema: OntologySchema) -> str:
+    """Build a system prompt listing exactly the object properties declared in `schema`,
+    so mapping works for whatever domain ontology is given rather than a hardcoded set of
+    family predicates.
+    """
+    reference = _build_predicate_reference(schema)
+    return f"""You map free-text relation descriptions onto a fixed ontology of predicates.
+You will receive a list of entities (with id and type) and a list of relations, each with a
+subject id, an object id, and a relation_phrase describing how subject relates to object in
+the source text.
+
+Available ontology predicates (choose exactly one, or null if none fit):
+{reference}
+
+For each relation, decide which single predicate from the list above best matches the
+relation_phrase, respecting the subject/object type constraints given for each predicate. If
+the relation_phrase does not correspond to any of these predicates, or the entity types do
+not satisfy a predicate's constraints, set predicate to null. Do not force a mapping that is
+not clearly supported by the relation_phrase.
+
+Return exactly one mapping object per input relation, in the same order, echoing back the
+same subject and object you were given for that relation.
+"""
+
+
+def _mapping_response_format(schema: OntologySchema, relation_count: int) -> dict[str, Any]:
+    predicate_names = [prop.local_name for prop in schema.object_properties]
     return {
         "type": "json_schema",
         "json_schema": {
@@ -111,7 +101,7 @@ def _mapping_response_format(relation_count: int) -> dict[str, Any]:
                                 "object": {"type": "string"},
                                 "predicate": {
                                     "type": ["string", "null"],
-                                    "enum": [*VALID_MAPPING_PREDICATES, None],
+                                    "enum": [*predicate_names, None],
                                 },
                             },
                         },
@@ -123,10 +113,7 @@ def _mapping_response_format(relation_count: int) -> dict[str, Any]:
 
 
 def _build_user_payload(entities: list[dict[str, Any]], relations: list[dict[str, Any]]) -> str:
-    people = [
-        {"id": entity.get("id"), "sex": entity.get("sex")}
-        for entity in entities
-    ]
+    typed_entities = [{"id": entity.get("id"), "type": entity.get("type")} for entity in entities]
     relation_prompts = [
         {
             "subject": relation.get("subject"),
@@ -135,10 +122,14 @@ def _build_user_payload(entities: list[dict[str, Any]], relations: list[dict[str
         }
         for relation in relations
     ]
-    return json.dumps({"people": people, "relations": relation_prompts})
+    return json.dumps({"entities": typed_entities, "relations": relation_prompts})
 
 
-def _validate_mapping_result(parsed: Any, relations: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _validate_mapping_result(
+    parsed: Any,
+    relations: list[dict[str, Any]],
+    object_properties_by_name: dict[str, ObjectProperty],
+) -> list[dict[str, Any]]:
     if not isinstance(parsed, dict) or set(parsed) != {"mappings"}:
         raise OntologyMappingAgentError("Mapping result must be an object with a single 'mappings' key")
 
@@ -157,7 +148,7 @@ def _validate_mapping_result(parsed: Any, relations: list[dict[str, Any]]) -> li
                 f"mappings[{index}] subject/object does not match relations[{index}]"
             )
         predicate = mapping["predicate"]
-        if predicate is not None and predicate not in VALID_MAPPING_PREDICATES:
+        if predicate is not None and predicate not in object_properties_by_name:
             raise OntologyMappingAgentError(f"mappings[{index}] has unsupported predicate: {predicate}")
 
     return mappings
@@ -170,64 +161,72 @@ def _validate_mapping_result(parsed: Any, relations: list[dict[str, Any]]) -> li
     reraise=True,
 )
 def _create_completion(
-    client: "openai.OpenAI", model: str, user_payload: str, relation_count: int
+    client: "openai.OpenAI",
+    model: str,
+    system_prompt: str,
+    response_format: dict[str, Any],
+    user_payload: str,
 ) -> Any:
     return client.chat.completions.create(
         model=model,
         messages=[
-            {"role": "system", "content": MAPPING_SYSTEM_PROMPT},
+            {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_payload},
         ],
-        response_format=_mapping_response_format(relation_count),
+        response_format=response_format,
     )
 
 
-def _resolve_spouse_partners(
-    subject_id: str,
-    object_id: str,
-    entity_sex_by_id: dict[str, str],
-) -> tuple[str, str] | None:
-    """Return (male_partner, female_partner) for a spousal relation, or None if the pair's
-    sexes cannot be used to confidently assign the ontology's gendered partner roles."""
-    subject_sex = entity_sex_by_id.get(subject_id)
-    object_sex = entity_sex_by_id.get(object_id)
-
-    if subject_sex == "Male" and object_sex == "Female":
-        return subject_id, object_id
-    if subject_sex == "Female" and object_sex == "Male":
-        return object_id, subject_id
-    return None
-
-
 def ontology_mapping_agent(
-    extraction_result: dict[str, Any], *, client: "openai.OpenAI | None" = None
+    extraction_result: dict[str, Any],
+    schema: OntologySchema,
+    *,
+    client: "openai.OpenAI | None" = None,
 ) -> dict[str, Any]:
-    """Convert generic extraction_agent output into the entities/relations/marriages
-    shape kg_builder_agent expects."""
-    result = ontology_mapping_agent_with_diagnostics(extraction_result, client=client)
+    """Convert generic extraction_agent output into the entities/relations shape
+    kg_builder_agent expects, for whatever ontology `schema` describes."""
+    result = ontology_mapping_agent_with_diagnostics(extraction_result, schema, client=client)
     return {
         "entities": result.entities,
         "relations": result.relations,
-        "marriages": result.marriages,
     }
 
 
 def ontology_mapping_agent_with_diagnostics(
-    extraction_result: dict[str, Any], *, client: "openai.OpenAI | None" = None
+    extraction_result: dict[str, Any],
+    schema: OntologySchema,
+    *,
+    client: "openai.OpenAI | None" = None,
 ) -> OntologyMappingResult:
     try:
-        if not isinstance(extraction_result, dict) or "entities" not in extraction_result or "relations" not in extraction_result:
+        if (
+            not isinstance(extraction_result, dict)
+            or "entities" not in extraction_result
+            or "relations" not in extraction_result
+        ):
             raise OntologyMappingAgentError("extraction_result must contain 'entities' and 'relations'")
 
         entities = extraction_result["entities"]
         relations = extraction_result["relations"]
-        entity_sex_by_id = {str(e["id"]): e.get("sex") for e in entities}
+        entity_type_by_id = {str(e["id"]): e.get("type") for e in entities}
 
         if not relations:
             logger.info("ontology_mapping_agent_skipped_empty_relations")
-            return OntologyMappingResult(
-                entities=entities, relations=[], marriages=[], unmapped_relations=()
+            return OntologyMappingResult(entities=entities, relations=[], unmapped_relations=())
+
+        object_properties_by_name = {prop.local_name: prop for prop in schema.object_properties}
+        if not object_properties_by_name:
+            logger.warning("ontology_mapping_agent_no_object_properties_declared")
+            unmapped = tuple(
+                UnmappedRelation(
+                    subject=str(relation.get("subject", "")),
+                    object=str(relation.get("object", "")),
+                    relation_phrase=str(relation.get("relation_phrase", "")),
+                    reason="ontology declares no object properties",
+                )
+                for relation in relations
             )
+            return OntologyMappingResult(entities=entities, relations=[], unmapped_relations=unmapped)
 
         model = os.getenv("OPENAI_MODEL", "gpt-oss:120b")
         api_client = client or openai.OpenAI(
@@ -236,8 +235,15 @@ def ontology_mapping_agent_with_diagnostics(
         )
 
         user_payload = _build_user_payload(entities, relations)
-        logger.info("ontology_mapping_agent_calling_openai", relation_count=len(relations), model=model)
-        response = _create_completion(api_client, model, user_payload, len(relations))
+        system_prompt = _build_mapping_system_prompt(schema)
+        response_format = _mapping_response_format(schema, len(relations))
+        logger.info(
+            "ontology_mapping_agent_calling_openai",
+            relation_count=len(relations),
+            model=model,
+            ontology_namespace=schema.namespace,
+        )
+        response = _create_completion(api_client, model, system_prompt, response_format, user_payload)
         content = response.choices[0].message.content
         if not isinstance(content, str):
             raise OntologyMappingAgentError("Model returned non-string content")
@@ -246,19 +252,18 @@ def ontology_mapping_agent_with_diagnostics(
         except json.JSONDecodeError as exc:
             raise OntologyMappingAgentError(f"Model returned malformed JSON: {content!r}") from exc
 
-        mappings = _validate_mapping_result(parsed, relations)
+        mappings = _validate_mapping_result(parsed, relations, object_properties_by_name)
 
         mapped_relations: list[dict[str, Any]] = []
-        marriages: list[dict[str, Any]] = []
         unmapped: list[UnmappedRelation] = []
 
         for mapping, relation in zip(mappings, relations):
-            predicate = mapping["predicate"]
+            predicate_name = mapping["predicate"]
             subject_id = str(relation.get("subject", ""))
             object_id = str(relation.get("object", ""))
             relation_phrase = str(relation.get("relation_phrase", ""))
 
-            if predicate is None:
+            if predicate_name is None:
                 unmapped.append(
                     UnmappedRelation(
                         subject=subject_id,
@@ -269,45 +274,50 @@ def ontology_mapping_agent_with_diagnostics(
                 )
                 continue
 
-            if predicate == SPOUSE_MARKER:
-                partners = _resolve_spouse_partners(subject_id, object_id, entity_sex_by_id)
-                if partners is None:
-                    unmapped.append(
-                        UnmappedRelation(
-                            subject=subject_id,
-                            object=object_id,
-                            relation_phrase=relation_phrase,
-                            reason=(
-                                "spousal relation but partner sexes are missing, unknown, "
-                                "or not male/female, so hasMalePartner/hasFemalePartner "
-                                "cannot be assigned"
-                            ),
-                        )
+            prop = object_properties_by_name[predicate_name]
+            subject_type = entity_type_by_id.get(subject_id)
+            object_type = entity_type_by_id.get(object_id)
+
+            # Only enforce domain/range when the endpoint's type is actually known; an
+            # unknown type usually means a dangling reference, which kg_builder_agent
+            # already reports separately, so it isn't re-flagged as a mapping problem here.
+            if subject_type is not None and prop.domain_class is not None and subject_type != prop.domain_class:
+                unmapped.append(
+                    UnmappedRelation(
+                        subject=subject_id,
+                        object=object_id,
+                        relation_phrase=relation_phrase,
+                        reason=(
+                            f"subject type '{subject_type}' does not satisfy {predicate_name}'s "
+                            f"expected domain '{prop.domain_class}'"
+                        ),
                     )
-                    continue
-                male_partner, female_partner = partners
-                qualifiers = relation.get("qualifiers") or {}
-                marriages.append(
-                    {
-                        "male_partner": male_partner,
-                        "female_partner": female_partner,
-                        "marriage_year": qualifiers.get("year"),
-                    }
+                )
+                continue
+            if object_type is not None and prop.range_class is not None and object_type != prop.range_class:
+                unmapped.append(
+                    UnmappedRelation(
+                        subject=subject_id,
+                        object=object_id,
+                        relation_phrase=relation_phrase,
+                        reason=(
+                            f"object type '{object_type}' does not satisfy {predicate_name}'s "
+                            f"expected range '{prop.range_class}'"
+                        ),
+                    )
                 )
                 continue
 
-            mapped_relations.append({"subject": subject_id, "predicate": predicate, "object": object_id})
+            mapped_relations.append({"subject": subject_id, "predicate": predicate_name, "object": object_id})
 
         logger.info(
             "ontology_mapping_agent_succeeded",
             mapped_relation_count=len(mapped_relations),
-            marriage_count=len(marriages),
             unmapped_count=len(unmapped),
         )
         return OntologyMappingResult(
             entities=entities,
             relations=mapped_relations,
-            marriages=marriages,
             unmapped_relations=tuple(unmapped),
         )
     except OntologyMappingAgentError:

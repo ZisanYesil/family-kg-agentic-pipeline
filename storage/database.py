@@ -49,6 +49,7 @@ def init_db(db_path: str) -> None:
                     job_id TEXT PRIMARY KEY,
                     status TEXT NOT NULL,
                     input_text TEXT NOT NULL,
+                    ontology_path TEXT NOT NULL,
                     current_iteration INTEGER NOT NULL DEFAULT 0,
                     max_iterations INTEGER NOT NULL,
                     last_error TEXT,
@@ -86,6 +87,7 @@ def init_db(db_path: str) -> None:
 def create_job(
     job_id: str,
     input_text: str,
+    ontology_path: str,
     max_iterations: int,
     webhook_url: Optional[str],
 ) -> None:
@@ -95,16 +97,17 @@ def create_job(
             conn.execute(
                 """
                 INSERT INTO jobs (
-                    job_id, status, input_text, current_iteration, max_iterations,
-                    last_error, graph_turtle, passed_validation, webhook_url,
-                    webhook_delivered, created_at, updated_at
+                    job_id, status, input_text, ontology_path, current_iteration,
+                    max_iterations, last_error, graph_turtle, passed_validation,
+                    webhook_url, webhook_delivered, created_at, updated_at
                 )
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     job_id,
                     "Pending",
                     input_text,
+                    ontology_path,
                     0,
                     max_iterations,
                     None,
@@ -117,7 +120,7 @@ def create_job(
                 ),
             )
             conn.commit()
-        logger.info("job_created", job_id=job_id)
+        logger.info("job_created", job_id=job_id, ontology_path=ontology_path)
     except sqlite3.Error:
         logger.exception("job_create_failed", job_id=job_id)
         raise

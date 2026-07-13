@@ -188,7 +188,10 @@ def test_pipeline_namespace_usage_does_not_mix_fhkb_and_base() -> None:
 
 
 def test_kg_builder_output_predicates_never_use_base_namespace() -> None:
-    from tasks.pipeline_task import kg_builder_agent
+    from agents.kg_builder_agent import kg_builder_agent
+    from ontology.schema_loader import load_ontology_schema
+
+    schema = load_ontology_schema(str(PROJECT_ROOT / "ontology" / "family_extended.ttl"))
 
     sample_extractions = {
         "entities": [
@@ -196,14 +199,15 @@ def test_kg_builder_output_predicates_never_use_base_namespace() -> None:
                 "id": "john_doe_1900",
                 "type": "Person",
                 "label": "John Doe",
-                "birth_year": 1900,
-                "death_year": 1970,
+                "aliases": [],
+                "attributes": {"hasBirthYear": 1900, "hasDeathYear": 1970},
             },
             {
                 "id": "jane_doe_1930",
                 "type": "Person",
                 "label": "Jane Doe",
-                "birth_year": 1930,
+                "aliases": [],
+                "attributes": {"hasBirthYear": 1930, "hasDeathYear": None},
             },
         ],
         "relations": [
@@ -213,10 +217,9 @@ def test_kg_builder_output_predicates_never_use_base_namespace() -> None:
                 "object": "john_doe_1900",
             }
         ],
-        "marriages": [],
     }
 
-    turtle_graph = kg_builder_agent(sample_extractions)
+    turtle_graph = kg_builder_agent(sample_extractions, schema)
     graph = Graph()
     try:
         graph.parse(data=turtle_graph, format="turtle")

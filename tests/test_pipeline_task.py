@@ -5,12 +5,20 @@ import httpx
 from agents.kg_builder_agent import KGBuilderResult
 from agents.ontology_mapping_agent import OntologyMappingAgentError, OntologyMappingResult
 from api.models.job import JobStatus
+from ontology.schema_loader import OntologySchema, OntologySchemaError
 from tasks.pipeline_task import (
     DEFAULT_MAX_ITERATIONS,
     DEFAULT_WEBHOOK_MAX_ATTEMPTS,
     _max_iterations,
     _trigger_webhook,
     run_pipeline,
+)
+
+_FAKE_SCHEMA = OntologySchema(
+    namespace="http://www.example.com/genealogy.owl#",
+    classes=(),
+    datatype_properties=(),
+    object_properties=(),
 )
 
 
@@ -25,6 +33,7 @@ class _PipelineStorage:
             "job_id": "job-1",
             "status": JobStatus.Pending.value,
             "input_text": "Jane Doe married John Doe in 1945.",
+            "ontology_path": "ontology/family_extended.ttl",
             "current_iteration": 0,
             "max_iterations": DEFAULT_MAX_ITERATIONS,
             "last_error": None,
@@ -222,23 +231,25 @@ def test_trigger_webhook_does_not_repost_when_mark_delivered_fails(monkeypatch) 
 def test_run_pipeline_maps_generic_extractions_before_building(monkeypatch) -> None:
     storage = _PipelineStorage()
     _install_pipeline_storage(monkeypatch, storage)
+    monkeypatch.setattr(
+        "tasks.pipeline_task.load_ontology_schema",
+        lambda _path: _FAKE_SCHEMA,
+    )
     generic_extractions = {
         "entities": [
             {
                 "id": "john_1900",
                 "label": "John",
-                "sex": "Male",
-                "birth_year": None,
-                "death_year": None,
+                "type": "Person",
                 "aliases": [],
+                "attributes": {},
             },
             {
                 "id": "jane_1925",
                 "label": "Jane",
-                "sex": "Female",
-                "birth_year": None,
-                "death_year": None,
+                "type": "Person",
                 "aliases": [],
+                "attributes": {},
             },
         ],
         "relations": [
@@ -252,38 +263,38 @@ def test_run_pipeline_maps_generic_extractions_before_building(monkeypatch) -> N
     }
     mapped_extractions = {
         "entities": generic_extractions["entities"],
-        "relations": [],
-        "marriages": [
-            {
-                "male_partner": "john_1900",
-                "female_partner": "jane_1925",
-                "marriage_year": 1945,
-            }
+        "relations": [
+            {"subject": "jane_1925", "predicate": "spouseOf", "object": "john_1900"}
         ],
     }
-    builder_inputs: list[dict[str, object]] = []
+    extraction_inputs: list[tuple[str, OntologySchema]] = []
+    mapping_inputs: list[tuple[dict[str, object], OntologySchema]] = []
+    builder_inputs: list[tuple[dict[str, object], OntologySchema]] = []
 
-    def fake_mapping(extractions):
+    def fake_extraction(text, schema):
+        extraction_inputs.append((text, schema))
+        return generic_extractions
+
+    def fake_mapping(extractions, schema):
+        mapping_inputs.append((extractions, schema))
         assert extractions == generic_extractions
         return OntologyMappingResult(
             entities=mapped_extractions["entities"],
             relations=mapped_extractions["relations"],
-            marriages=mapped_extractions["marriages"],
             unmapped_relations=(),
         )
 
-    def fake_builder(extractions):
-        builder_inputs.append(extractions)
+    def fake_builder(extractions, schema):
+        builder_inputs.append((extractions, schema))
         return KGBuilderResult(
             turtle_graph=(
                 "@prefix fhkb: <http://www.example.com/genealogy.owl#> .\n"
                 "fhkb:jane_1925 a fhkb:Person .\n"
             ),
             dangling_references=(),
-            dangling_marriage_references=(),
         )
 
-    monkeypatch.setattr("tasks.pipeline_task.extraction_agent", lambda _text: generic_extractions)
+    monkeypatch.setattr("tasks.pipeline_task.extraction_agent", fake_extraction)
     monkeypatch.setattr("tasks.pipeline_task.ontology_mapping_agent_with_diagnostics", fake_mapping)
     monkeypatch.setattr("tasks.pipeline_task.kg_builder_agent_with_diagnostics", fake_builder)
     monkeypatch.setattr(
@@ -293,7 +304,9 @@ def test_run_pipeline_maps_generic_extractions_before_building(monkeypatch) -> N
 
     run_pipeline.run("job-1")
 
-    assert builder_inputs == [mapped_extractions]
+    assert extraction_inputs == [("Jane Doe married John Doe in 1945.", _FAKE_SCHEMA)]
+    assert mapping_inputs == [(generic_extractions, _FAKE_SCHEMA)]
+    assert builder_inputs == [(mapped_extractions, _FAKE_SCHEMA)]
     assert storage.statuses == [
         JobStatus.Extracting.value,
         JobStatus.Building.value,
@@ -312,22 +325,53 @@ def test_run_pipeline_maps_generic_extractions_before_building(monkeypatch) -> N
     ]
 
 
+def test_run_pipeline_marks_job_error_when_ontology_path_missing(monkeypatch) -> None:
+    storage = _PipelineStorage()
+    storage.job["ontology_path"] = None
+    _install_pipeline_storage(monkeypatch, storage)
+    monkeypatch.delenv("DEFAULT_ONTOLOGY_PATH", raising=False)
+
+    run_pipeline.run("job-1")
+
+    assert storage.statuses == [JobStatus.Error.value]
+    assert storage.job["last_error"] is not None
+
+
+def test_run_pipeline_marks_job_error_when_ontology_schema_fails_to_load(monkeypatch) -> None:
+    storage = _PipelineStorage()
+    _install_pipeline_storage(monkeypatch, storage)
+
+    def fail_load(_path):
+        raise OntologySchemaError("could not parse ontology file")
+
+    monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", fail_load)
+
+    run_pipeline.run("job-1")
+
+    assert storage.statuses == [JobStatus.Error.value]
+    assert storage.job["last_error"] == "could not parse ontology file"
+
+
 def test_run_pipeline_marks_job_error_when_ontology_mapping_fails(monkeypatch) -> None:
     storage = _PipelineStorage()
     _install_pipeline_storage(monkeypatch, storage)
+    monkeypatch.setattr(
+        "tasks.pipeline_task.load_ontology_schema",
+        lambda _path: _FAKE_SCHEMA,
+    )
     builder_called = False
 
-    def fail_mapping(_extractions):
+    def fail_mapping(_extractions, _schema):
         raise OntologyMappingAgentError("mapping unavailable")
 
-    def fake_builder(_extractions):
+    def fake_builder(_extractions, _schema):
         nonlocal builder_called
         builder_called = True
         raise AssertionError("Builder must not run after mapping failure")
 
     monkeypatch.setattr(
         "tasks.pipeline_task.extraction_agent",
-        lambda _text: {"entities": [], "relations": []},
+        lambda _text, _schema: {"entities": [], "relations": []},
     )
     monkeypatch.setattr("tasks.pipeline_task.ontology_mapping_agent_with_diagnostics", fail_mapping)
     monkeypatch.setattr("tasks.pipeline_task.kg_builder_agent_with_diagnostics", fake_builder)

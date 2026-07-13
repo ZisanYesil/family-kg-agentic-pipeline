@@ -1,31 +1,47 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
 import re
-from typing import Any
+from dataclasses import dataclass
+from typing import Any, Optional
 
 import structlog
 from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import OWL, RDF, RDFS, XSD
 
+from ontology.schema_loader import OntologySchema
+
 logger = structlog.get_logger(__name__)
 
-FHKB = Namespace("http://www.example.com/genealogy.owl#")
-
-REQUIRED_EXTRACTION_KEYS = ("entities", "relations", "marriages")
-REQUIRED_ENTITY_KEYS = ("id",)
+REQUIRED_EXTRACTION_KEYS = ("entities", "relations")
+REQUIRED_ENTITY_KEYS = ("id", "type")
 RELATION_FIELDS = ("subject", "predicate", "object")
-MARRIAGE_FIELDS = ("male_partner", "female_partner", "marriage_year")
-VALID_RELATION_PREDICATES = (
-    "hasFather",
-    "hasMother",
-    "hasBrother",
-    "hasSister",
-    "hasSon",
-    "hasDaughter",
-    "hasHusband",
-    "hasWife",
-)
+
+# Common RDFS/SKOS-style naming conventions for "alternate name" datatype properties. If the
+# ontology declares one of these (case-insensitively), extraction_agent's `aliases` list is
+# serialized using it; otherwise aliases have nowhere ontology-defined to go and are simply
+# not written to RDF. This is a naming-convention match, not a hardcoded namespace/URI, so it
+# works for any ontology that follows the convention and degrades gracefully for ones that
+# don't.
+_ALIAS_PROPERTY_CANDIDATES = {
+    "alsoknownas",
+    "knownas",
+    "formerlyknownas",
+    "altlabel",
+    "aliases",
+    "alias",
+}
+
+
+# Deliberately excludes "string": xsd:string and a plain (untyped) literal are not the
+# same term as far as rdflib equality is concerned, and every other string-valued triple in
+# this module (rdfs:label, aliases) is written as a plain literal, so string-valued
+# attributes follow the same convention here for consistency.
+_RANGE_TYPE_TO_XSD = {
+    "integer": XSD.integer,
+    "boolean": XSD.boolean,
+    "decimal": XSD.decimal,
+    "date": XSD.date,
+}
 
 
 class KGBuilderError(Exception):
@@ -47,18 +63,6 @@ class DanglingRelationReference:
 class KGBuilderResult:
     turtle_graph: str
     dangling_references: tuple[DanglingRelationReference, ...]
-    dangling_marriage_references: tuple["DanglingMarriagePartnerReference", ...] = ()
-
-
-@dataclass(frozen=True)
-class DanglingMarriagePartnerReference:
-    """A marriage partner that was not present in the extracted entities list."""
-
-    role: str
-    entity_id: str
-    marriage_uri: str
-    male_partner: str
-    female_partner: str
 
 
 def _sanitize_local_name(raw_id: str) -> str:
@@ -68,26 +72,23 @@ def _sanitize_local_name(raw_id: str) -> str:
     return sanitized
 
 
-def _sanitize_local_part(raw_value: object) -> str:
-    return re.sub(r"[^a-zA-Z0-9_]", "_", str(raw_value).lower())
-
-
-def _bind_prefixes(graph: Graph) -> None:
-    graph.bind("fhkb", FHKB)
+def _bind_prefixes(graph: Graph, ns: Namespace) -> None:
+    graph.bind("onto", ns)
     graph.bind("rdf", RDF)
     graph.bind("rdfs", RDFS)
     graph.bind("owl", OWL)
     graph.bind("xsd", XSD)
 
 
-def _entity_uri(raw_id: object) -> URIRef:
-    return FHKB[_sanitize_local_name(str(raw_id))]
+def _find_alias_property(schema: OntologySchema) -> Optional[str]:
+    for prop in schema.datatype_properties:
+        if prop.local_name.lower() in _ALIAS_PROPERTY_CANDIDATES:
+            return prop.local_name
+    return None
 
 
-def _relation_predicate_uri(predicate: str) -> URIRef:
-    if predicate not in VALID_RELATION_PREDICATES:
-        raise KGBuilderError(f"Unsupported relation predicate: {predicate}")
-    return FHKB[predicate]
+def _entity_uri(ns: Namespace, raw_id: object) -> URIRef:
+    return ns[_sanitize_local_name(str(raw_id))]
 
 
 def _validate_required_object_fields(
@@ -105,29 +106,51 @@ def _validate_required_object_fields(
                 )
 
 
-def _validate_functional_year_fields(entities: list[Any]) -> None:
-    seen_years: dict[tuple[URIRef, str], object] = {}
+def _validate_functional_attribute_fields(entities: list[Any]) -> None:
+    """Flag conflicting values for the same (entity, attribute) pair across the entities
+    list, e.g. the same id extracted twice with two different birthYear values."""
+    seen_values: dict[tuple[str, str], object] = {}
 
     for entity in entities:
-        entity_uri = _entity_uri(entity["id"])
-        for field in ("birth_year", "death_year"):
-            year = entity.get(field)
-            if year is None:
+        entity_id = str(entity["id"])
+        attributes = entity.get("attributes") or {}
+        if not isinstance(attributes, dict):
+            continue
+        for field, value in attributes.items():
+            if value is None:
                 continue
-
-            key = (entity_uri, field)
-            existing_year = seen_years.get(key)
-            if existing_year is None:
-                seen_years[key] = year
+            key = (entity_id, field)
+            existing = seen_values.get(key)
+            if existing is None:
+                seen_values[key] = value
                 continue
-            if existing_year != year:
+            if existing != value:
                 raise KGBuilderError(
-                    f"Conflicting {field} values for entity {entity['id']}: "
-                    f"{existing_year} and {year}"
+                    f"Conflicting {field} values for entity {entity_id}: {existing} and {value}"
                 )
 
 
-def _validate_extractions(extractions: dict[str, list[Any]]) -> None:
+def _validate_entity_iri_local_names(entities: list[Any]) -> None:
+    """Ensure distinct extracted ids cannot collapse into the same RDF individual."""
+    raw_id_by_local_name: dict[str, str] = {}
+
+    for entity in entities:
+        raw_id = str(entity["id"])
+        local_name = _sanitize_local_name(raw_id)
+        if not local_name:
+            raise KGBuilderError(f"Entity id {raw_id!r} cannot be converted into a valid IRI local name")
+
+        existing_raw_id = raw_id_by_local_name.get(local_name)
+        if existing_raw_id is None:
+            raw_id_by_local_name[local_name] = raw_id
+            continue
+        if existing_raw_id != raw_id:
+            raise KGBuilderError(
+                f"Entity ids {existing_raw_id!r} and {raw_id!r} both map to IRI local name {local_name!r}"
+            )
+
+
+def _validate_extractions(extractions: dict[str, list[Any]], schema: OntologySchema) -> None:
     for key in REQUIRED_EXTRACTION_KEYS:
         if key not in extractions:
             raise KGBuilderError(f"Missing required extraction key: {key}")
@@ -136,45 +159,62 @@ def _validate_extractions(extractions: dict[str, list[Any]]) -> None:
 
     _validate_required_object_fields(extractions["entities"], "Entity", REQUIRED_ENTITY_KEYS)
     _validate_required_object_fields(extractions["relations"], "Relation", RELATION_FIELDS)
-    _validate_required_object_fields(extractions["marriages"], "Marriage", MARRIAGE_FIELDS)
+    _validate_entity_iri_local_names(extractions["entities"])
+    _validate_functional_attribute_fields(extractions["entities"])
 
-    _validate_functional_year_fields(extractions["entities"])
+    class_names = {cls.local_name for cls in schema.classes}
+    for index, entity in enumerate(extractions["entities"]):
+        entity_type = str(entity["type"])
+        if entity_type not in class_names:
+            raise KGBuilderError(f"Entity at index {index} has unsupported type: {entity_type}")
 
+    predicate_names = {prop.local_name for prop in schema.object_properties}
     for relation in extractions["relations"]:
-        _relation_predicate_uri(str(relation["predicate"]))
+        predicate = str(relation["predicate"])
+        if predicate not in predicate_names:
+            raise KGBuilderError(f"Unsupported relation predicate: {predicate}")
 
 
-def _add_entity(graph: Graph, entity: dict[str, Any]) -> None:
-    subject = _entity_uri(entity["id"])
-    graph.add((subject, RDF.type, FHKB.Person))
+def _add_entity(
+    graph: Graph,
+    ns: Namespace,
+    entity: dict[str, Any],
+    schema: OntologySchema,
+    alias_property: Optional[str],
+) -> None:
+    subject = _entity_uri(ns, entity["id"])
+    graph.add((subject, RDF.type, ns[str(entity["type"])]))
     graph.add((subject, RDF.type, OWL.NamedIndividual))
 
     label = str(entity.get("label", ""))
     if label:
         graph.add((subject, RDFS.label, Literal(label)))
 
-    sex = entity.get("sex")
-    if sex == "Male":
-        graph.add((subject, FHKB.hasSex, FHKB.Male))
-    elif sex == "Female":
-        graph.add((subject, FHKB.hasSex, FHKB.Female))
+    datatype_props_by_name = {prop.local_name: prop for prop in schema.datatype_properties}
+    attributes = entity.get("attributes") or {}
+    if isinstance(attributes, dict):
+        for name, value in attributes.items():
+            if value is None:
+                continue
+            prop = datatype_props_by_name.get(name)
+            if prop is None:
+                # Not declared by this ontology (shouldn't happen given schema-validated
+                # extraction output, but ignore defensively rather than fail late here).
+                continue
+            xsd_type = _RANGE_TYPE_TO_XSD.get(prop.range_type)
+            literal = Literal(value, datatype=xsd_type) if xsd_type is not None else Literal(value)
+            graph.add((subject, ns[prop.local_name], literal))
 
-    birth_year = entity.get("birth_year")
-    if birth_year is not None:
-        graph.add((subject, FHKB.hasBirthYear, Literal(birth_year, datatype=XSD.integer)))
-
-    death_year = entity.get("death_year")
-    if death_year is not None:
-        graph.add((subject, FHKB.hasDeathYear, Literal(death_year, datatype=XSD.integer)))
-
-    aliases = entity.get("aliases", [])
-    if isinstance(aliases, list):
-        for alias in aliases:
-            graph.add((subject, FHKB.alsoKnownAs, Literal(str(alias))))
+    if alias_property is not None:
+        aliases = entity.get("aliases", [])
+        if isinstance(aliases, list):
+            for alias in aliases:
+                graph.add((subject, ns[alias_property], Literal(str(alias))))
 
 
 def _add_relation(
     graph: Graph,
+    ns: Namespace,
     relation: dict[str, Any],
     known_entity_ids: set[str],
     dangling_references: list[DanglingRelationReference],
@@ -201,103 +241,45 @@ def _add_relation(
                 predicate=predicate,
             )
 
-    graph.add((_entity_uri(subject_id), _relation_predicate_uri(predicate), _entity_uri(object_id)))
+    graph.add((_entity_uri(ns, subject_id), ns[predicate], _entity_uri(ns, object_id)))
 
 
-def _marriage_uri(marriage: dict[str, Any], occurrence_index: int) -> URIRef:
-    male_local = _sanitize_local_name(str(marriage.get("male_partner", "")))
-    female_local = _sanitize_local_name(str(marriage.get("female_partner", "")))
-    marriage_year = marriage.get("marriage_year")
-    if marriage_year is None:
-        return FHKB[f"marriage_{male_local}_{female_local}_unknown_year_{occurrence_index}"]
-
-    year_local = _sanitize_local_part(marriage_year)
-    return FHKB[f"marriage_{male_local}_{female_local}_{year_local}"]
+def kg_builder_agent(extractions: dict[str, list[Any]], schema: OntologySchema) -> str:
+    """Convert extracted entities/relations into Turtle, for whatever ontology `schema`
+    describes."""
+    return kg_builder_agent_with_diagnostics(extractions, schema).turtle_graph
 
 
-def _add_marriage(
-    graph: Graph,
-    marriage: dict[str, Any],
-    occurrence_index: int,
-    known_entity_ids: set[str],
-    dangling_marriage_references: list[DanglingMarriagePartnerReference],
-) -> None:
-    male_partner = str(marriage.get("male_partner", ""))
-    female_partner = str(marriage.get("female_partner", ""))
-    marriage_uri = _marriage_uri(marriage, occurrence_index)
-
-    graph.add((marriage_uri, RDF.type, FHKB.Marriage))
-    graph.add((marriage_uri, RDF.type, OWL.NamedIndividual))
-
-    for role, partner_id in (("male_partner", male_partner), ("female_partner", female_partner)):
-        if partner_id and partner_id not in known_entity_ids:
-            dangling_marriage_references.append(
-                DanglingMarriagePartnerReference(
-                    role=role,
-                    entity_id=partner_id,
-                    marriage_uri=str(marriage_uri),
-                    male_partner=male_partner,
-                    female_partner=female_partner,
-                )
-            )
-            logger.warning(
-                "kg_builder_unknown_marriage_partner",
-                role=role,
-                entity_id=partner_id,
-                male_partner=male_partner,
-                female_partner=female_partner,
-                marriage_uri=str(marriage_uri),
-            )
-
-    if male_partner:
-        graph.add((marriage_uri, FHKB.hasMalePartner, _entity_uri(male_partner)))
-    if female_partner:
-        graph.add((marriage_uri, FHKB.hasFemalePartner, _entity_uri(female_partner)))
-
-    marriage_year = marriage.get("marriage_year")
-    if marriage_year is not None:
-        graph.add((marriage_uri, FHKB.hasMarriageYear, Literal(marriage_year, datatype=XSD.integer)))
-
-
-def kg_builder_agent(extractions: dict[str, list[Any]]) -> str:
-    """Convert extracted entities/relations/marriages into Turtle."""
-    return kg_builder_agent_with_diagnostics(extractions).turtle_graph
-
-
-def kg_builder_agent_with_diagnostics(extractions: dict[str, list[Any]]) -> KGBuilderResult:
-    """Convert extracted entities/relations/marriages into a Turtle-serialized RDF graph
-    and collect non-fatal diagnostics.
+def kg_builder_agent_with_diagnostics(
+    extractions: dict[str, list[Any]], schema: OntologySchema
+) -> KGBuilderResult:
+    """Convert extracted entities/relations into a Turtle-serialized RDF graph and collect
+    non-fatal diagnostics. Works for any ontology: the namespace, valid entity types (rdf:type
+    values), datatype property URIs, and valid relation predicates all come from `schema`
+    (see ontology/schema_loader.py) rather than being hardcoded to the family ontology.
     """
     try:
-        _validate_extractions(extractions)
+        _validate_extractions(extractions, schema)
         entities = extractions["entities"]
         relations = extractions["relations"]
-        marriages = extractions["marriages"]
         logger.info(
             "kg_builder_agent_called",
             entity_count=len(entities),
             relation_count=len(relations),
-            marriage_count=len(marriages),
+            ontology_namespace=schema.namespace,
         )
 
+        ns = Namespace(schema.namespace)
         graph = Graph()
-        _bind_prefixes(graph)
+        _bind_prefixes(graph, ns)
+        alias_property = _find_alias_property(schema)
         known_entity_ids = {str(entity["id"]) for entity in entities}
         dangling_references: list[DanglingRelationReference] = []
-        dangling_marriage_references: list[DanglingMarriagePartnerReference] = []
 
         for entity in entities:
-            _add_entity(graph, entity)
+            _add_entity(graph, ns, entity, schema, alias_property)
         for relation in relations:
-            _add_relation(graph, relation, known_entity_ids, dangling_references)
-        for occurrence_index, marriage in enumerate(marriages, start=1):
-            _add_marriage(
-                graph,
-                marriage,
-                occurrence_index,
-                known_entity_ids,
-                dangling_marriage_references,
-            )
+            _add_relation(graph, ns, relation, known_entity_ids, dangling_references)
 
         serialized = graph.serialize(format="turtle")
         if isinstance(serialized, bytes):
@@ -307,12 +289,10 @@ def kg_builder_agent_with_diagnostics(extractions: dict[str, list[Any]]) -> KGBu
             "kg_builder_agent_succeeded",
             triple_count=len(graph),
             dangling_reference_count=len(dangling_references),
-            dangling_marriage_reference_count=len(dangling_marriage_references),
         )
         return KGBuilderResult(
             turtle_graph=serialized,
             dangling_references=tuple(dangling_references),
-            dangling_marriage_references=tuple(dangling_marriage_references),
         )
     except KGBuilderError:
         logger.exception("kg_builder_agent_failed")
