@@ -33,6 +33,15 @@ fhkb:FemaleSexShape
         sh:message "The referenced individual must have fhkb:hasSex fhkb:Female." ;
     ] .
 
+fhkb:PersonLikeClassShape
+    a sh:NodeShape ;
+    sh:or (
+        [ sh:class fhkb:Person ]
+        [ sh:class fhkb:Man ]
+        [ sh:class fhkb:Woman ]
+    ) ;
+    sh:message "The referenced individual must be typed as fhkb:Person, fhkb:Man, or fhkb:Woman." .
+
 fhkb:PersonHasFatherShape
     a sh:NodeShape ;
     sh:targetSubjectsOf fhkb:hasFather ;
@@ -101,28 +110,6 @@ fhkb:PersonHasDaughterPropertyShape
     sh:node fhkb:FemaleSexShape ;
     sh:message "fhkb:hasDaughter values must have fhkb:hasSex fhkb:Female." .
 
-fhkb:PersonHasHusbandShape
-    a sh:NodeShape ;
-    sh:targetSubjectsOf fhkb:hasHusband ;
-    sh:property fhkb:PersonHasHusbandPropertyShape .
-
-fhkb:PersonHasHusbandPropertyShape
-    a sh:PropertyShape ;
-    sh:path fhkb:hasHusband ;
-    sh:node fhkb:MaleSexShape ;
-    sh:message "fhkb:hasHusband values must have fhkb:hasSex fhkb:Male." .
-
-fhkb:PersonHasWifeShape
-    a sh:NodeShape ;
-    sh:targetSubjectsOf fhkb:hasWife ;
-    sh:property fhkb:PersonHasWifePropertyShape .
-
-fhkb:PersonHasWifePropertyShape
-    a sh:PropertyShape ;
-    sh:path fhkb:hasWife ;
-    sh:node fhkb:FemaleSexShape ;
-    sh:message "fhkb:hasWife values must have fhkb:hasSex fhkb:Female." .
-
 fhkb:PersonHasSexShape
     a sh:NodeShape ;
     sh:targetSubjectsOf fhkb:hasSex ;
@@ -135,16 +122,67 @@ fhkb:PersonHasSexPropertyShape
     sh:in ( fhkb:Male fhkb:Female ) ;
     sh:message "fhkb:hasSex must have at most one value and must be fhkb:Male or fhkb:Female." .
 
-fhkb:PersonHasParentShape
+fhkb:PersonIsParentOfShape
     a sh:NodeShape ;
-    sh:targetSubjectsOf fhkb:hasParent ;
-    sh:property fhkb:PersonHasParentPropertyShape .
+    sh:targetSubjectsOf fhkb:isParentOf ;
+    sh:node fhkb:PersonLikeClassShape ;
+    sh:property fhkb:PersonIsParentOfPropertyShape .
 
-fhkb:PersonHasParentPropertyShape
+fhkb:PersonIsParentOfPropertyShape
     a sh:PropertyShape ;
-    sh:path fhkb:hasParent ;
-    sh:maxCount 2 ;
-    sh:message "fhkb:hasParent must have at most two values." .
+    sh:path fhkb:isParentOf ;
+    sh:node fhkb:PersonLikeClassShape ;
+    sh:message "fhkb:isParentOf subjects and values must be typed as fhkb:Person, fhkb:Man, or fhkb:Woman." .
+
+fhkb:PersonParentCountShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:hasFather ;
+    sh:targetSubjectsOf fhkb:hasMother ;
+    sh:targetObjectsOf fhkb:isParentOf ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A person must not have more than two distinct parents across fhkb:hasFather, fhkb:hasMother, and incoming fhkb:isParentOf." ;
+        sh:select """
+            PREFIX fhkb: <http://www.example.com/genealogy.owl#>
+            SELECT $this
+            WHERE {
+                {
+                    SELECT $this (COUNT(DISTINCT ?parent) AS ?parentCount)
+                    WHERE {
+                        { $this fhkb:hasFather ?parent }
+                        UNION { $this fhkb:hasMother ?parent }
+                        UNION { ?parent fhkb:isParentOf $this }
+                    }
+                    GROUP BY $this
+                }
+                FILTER(?parentCount > 2)
+            }
+        """ ;
+    ] .
+
+fhkb:PersonIsPartnerInShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:isPartnerIn ;
+    sh:node fhkb:PersonLikeClassShape ;
+    sh:property fhkb:PersonIsPartnerInPropertyShape .
+
+fhkb:PersonIsPartnerInPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:isPartnerIn ;
+    sh:class fhkb:Marriage ;
+    sh:message "fhkb:isPartnerIn subjects must be fhkb:Person individuals and values must be fhkb:Marriage individuals." .
+
+fhkb:PersonIsSpouseOfShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf fhkb:isSpouseOf ;
+    sh:node fhkb:PersonLikeClassShape ;
+    sh:property fhkb:PersonIsSpouseOfPropertyShape .
+
+fhkb:PersonIsSpouseOfPropertyShape
+    a sh:PropertyShape ;
+    sh:path fhkb:isSpouseOf ;
+    sh:node fhkb:PersonLikeClassShape ;
+    sh:message "fhkb:isSpouseOf subjects and values must be typed as fhkb:Person, fhkb:Man, or fhkb:Woman." .
 
 fhkb:PersonHasBirthYearShape
     a sh:NodeShape ;

@@ -35,8 +35,6 @@ RELATION_CASES = [
     (FHKB.hasSister, FHKB.Female, FHKB.Male),
     (FHKB.hasSon, FHKB.Male, FHKB.Female),
     (FHKB.hasDaughter, FHKB.Female, FHKB.Male),
-    (FHKB.hasHusband, FHKB.Male, FHKB.Female),
-    (FHKB.hasWife, FHKB.Female, FHKB.Male),
 ]
 
 
@@ -97,10 +95,14 @@ def test_multiple_has_father_values_violates_max_count():
     assert "fhkb:hasFather must have at most one value" in results_text
 
 
-def test_has_parent_allows_two_values():
+def test_parent_count_allows_two_distinct_parents_across_specific_and_inverse_edges():
     graph = _graph(
-        (FHKB.child, FHKB.hasParent, FHKB.parent_one),
-        (FHKB.child, FHKB.hasParent, FHKB.parent_two),
+        (FHKB.child, RDF.type, FHKB.Person),
+        (FHKB.father, RDF.type, FHKB.Person),
+        (FHKB.mother, RDF.type, FHKB.Person),
+        (FHKB.child, FHKB.hasFather, FHKB.father),
+        (FHKB.mother, FHKB.isParentOf, FHKB.child),
+        (FHKB.father, FHKB.hasSex, FHKB.Male),
     )
 
     conforms, results_text = _validate(graph)
@@ -108,17 +110,111 @@ def test_has_parent_allows_two_values():
     assert conforms, results_text
 
 
-def test_has_parent_with_three_values_violates_max_count():
+def test_is_parent_of_accepts_man_and_woman_types_without_class_inference():
     graph = _graph(
-        (FHKB.child, FHKB.hasParent, FHKB.parent_one),
-        (FHKB.child, FHKB.hasParent, FHKB.parent_two),
-        (FHKB.child, FHKB.hasParent, FHKB.parent_three),
+        (FHKB.father, RDF.type, FHKB.Man),
+        (FHKB.child, RDF.type, FHKB.Woman),
+        (FHKB.father, FHKB.isParentOf, FHKB.child),
+    )
+
+    conforms, results_text = _validate(graph)
+
+    assert conforms, results_text
+
+
+def test_parent_count_with_third_parent_via_is_parent_of_violates():
+    graph = _graph(
+        (FHKB.child, RDF.type, FHKB.Person),
+        (FHKB.father, RDF.type, FHKB.Person),
+        (FHKB.mother, RDF.type, FHKB.Person),
+        (FHKB.third_parent, RDF.type, FHKB.Person),
+        (FHKB.child, FHKB.hasFather, FHKB.father),
+        (FHKB.child, FHKB.hasMother, FHKB.mother),
+        (FHKB.third_parent, FHKB.isParentOf, FHKB.child),
+        (FHKB.father, FHKB.hasSex, FHKB.Male),
+        (FHKB.mother, FHKB.hasSex, FHKB.Female),
     )
 
     conforms, results_text = _validate(graph)
 
     assert not conforms
-    assert "at most two values" in results_text
+    assert "more than two distinct parents" in results_text
+
+
+def test_is_partner_in_requires_marriage_value():
+    graph = _graph(
+        (FHKB.alex, RDF.type, FHKB.Person),
+        (FHKB.not_a_marriage, RDF.type, FHKB.Person),
+        (FHKB.alex, FHKB.isPartnerIn, FHKB.not_a_marriage),
+    )
+
+    conforms, results_text = _validate(graph)
+
+    assert not conforms
+    assert "fhkb:isPartnerIn" in results_text
+    assert "fhkb:Marriage" in results_text
+
+
+def test_is_partner_in_with_marriage_value_conforms():
+    graph = _graph(
+        (FHKB.alex, RDF.type, FHKB.Person),
+        (FHKB.marriage_alex_jane, RDF.type, FHKB.Marriage),
+        (FHKB.alex, FHKB.isPartnerIn, FHKB.marriage_alex_jane),
+    )
+
+    conforms, results_text = _validate(graph)
+
+    assert conforms, results_text
+
+
+def test_is_partner_in_accepts_man_or_woman_subject_without_class_inference():
+    graph = _graph(
+        (FHKB.alex, RDF.type, FHKB.Man),
+        (FHKB.marriage_alex_jane, RDF.type, FHKB.Marriage),
+        (FHKB.alex, FHKB.isPartnerIn, FHKB.marriage_alex_jane),
+    )
+
+    conforms, results_text = _validate(graph)
+
+    assert conforms, results_text
+
+
+def test_is_spouse_of_requires_person_value():
+    graph = _graph(
+        (FHKB.alex, RDF.type, FHKB.Person),
+        (FHKB.marriage_alex_jane, RDF.type, FHKB.Marriage),
+        (FHKB.alex, FHKB.isSpouseOf, FHKB.marriage_alex_jane),
+    )
+
+    conforms, results_text = _validate(graph)
+
+    assert not conforms
+    assert "fhkb:isSpouseOf" in results_text
+    assert "fhkb:Person" in results_text
+
+
+def test_is_spouse_of_with_person_value_conforms():
+    graph = _graph(
+        (FHKB.alex, RDF.type, FHKB.Person),
+        (FHKB.jane, RDF.type, FHKB.Person),
+        (FHKB.alex, FHKB.isSpouseOf, FHKB.jane),
+    )
+
+    conforms, results_text = _validate(graph)
+
+    assert conforms, results_text
+
+
+def test_is_spouse_of_accepts_man_and_woman_types_without_class_inference():
+    graph = _graph(
+        (FHKB.alex, RDF.type, FHKB.Man),
+        (FHKB.jane, RDF.type, FHKB.Woman),
+        (FHKB.alex, FHKB.isSpouseOf, FHKB.jane),
+    )
+
+    conforms, results_text = _validate(graph)
+
+    assert conforms, results_text
 
 
 def test_has_birth_year_string_literal_violates_datatype():
