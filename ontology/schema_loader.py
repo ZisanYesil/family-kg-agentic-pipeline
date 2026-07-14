@@ -55,6 +55,10 @@ class DatatypeProperty:
     domain_class: Optional[str]  # local name of the class this attribute belongs to
     range_type: str  # normalized type name, e.g. "integer", "string"
     comment: Optional[str] = None
+    # owl:FunctionalProperty: at most one value per subject (e.g. hasBirthYear). Used to
+    # generate sh:maxCount 1 constraints; not propagated to/from an inverse since datatype
+    # properties don't have an inverse direction.
+    is_functional: bool = False
 
 
 @dataclass(frozen=True)
@@ -65,6 +69,13 @@ class ObjectProperty:
     range_class: Optional[str]
     comment: Optional[str] = None
     inverse_of: Optional[str] = None
+    # owl:FunctionalProperty on THIS property's own URI, as declared in the file. Unlike
+    # reasoner_derived/superproperty status, functional-ness is not propagated across an
+    # inverse pair: it is a fact about this specific direction (e.g. hasFather is functional
+    # because each person has at most one father, but its inverse isFatherOf is not, since a
+    # father can have many children). Only meaningful for properties that survive into
+    # `object_properties`; excluded/dropped inverse partners don't carry this forward.
+    is_functional: bool = False
 
 
 @dataclass(frozen=True)
@@ -139,6 +150,10 @@ def _comment_of(graph: Graph, subject: URIRef) -> Optional[str]:
     return str(value) if value is not None else None
 
 
+def _is_functional(graph: Graph, subject: URIRef) -> bool:
+    return (subject, RDF.type, OWL.FunctionalProperty) in graph
+
+
 def _class_local_name(graph: Graph, uri_value, namespace: str) -> Optional[str]:
     if not isinstance(uri_value, URIRef):
         return None
@@ -188,6 +203,7 @@ def _load_datatype_properties(graph: Graph, namespace: str) -> tuple[DatatypePro
                 domain_class=domain_class,
                 range_type=range_type,
                 comment=_comment_of(graph, subject),
+                is_functional=_is_functional(graph, subject),
             )
         )
     return tuple(sorted(properties, key=lambda p: p.local_name))
@@ -248,6 +264,7 @@ def _load_object_properties(
             range_class=range_class,
             comment=_comment_of(graph, subject),
             inverse_of=inverse_map.get(local_name),
+            is_functional=_is_functional(graph, subject),
         )
         if _is_reasoner_derived(graph, subject):
             reasoner_derived_names.add(local_name)
