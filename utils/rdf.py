@@ -41,6 +41,28 @@ def serialize_graph(graph: Graph, graph_format: Enum) -> str:
     return serialized
 
 
+def serialize_turtle_graph(graph: Graph) -> str:
+    """Serialize an in-memory pipeline graph at a persistence/API boundary."""
+    if not isinstance(graph, Graph):
+        raise TypeError("graph must be an rdflib.Graph")
+    serialized: Any = graph.serialize(format="turtle")
+    if isinstance(serialized, bytes):
+        return serialized.decode("utf-8")
+    return serialized
+
+
+def clone_graph(graph: Graph) -> Graph:
+    """Return an independent graph copy while preserving namespace bindings."""
+    if not isinstance(graph, Graph):
+        raise TypeError("graph must be an rdflib.Graph")
+    cloned = Graph()
+    for prefix, namespace in graph.namespaces():
+        cloned.bind(prefix, namespace)
+    for triple in graph:
+        cloned.add(triple)
+    return cloned
+
+
 def count_turtle_triples(graph_turtle: str) -> int:
     return len(parse_turtle_graph(graph_turtle))
 

@@ -4,6 +4,7 @@ from typing import Any, Optional
 
 import httpx
 import structlog
+from rdflib import Graph
 
 from agents.extraction_agent import ExtractionAgentError, extraction_agent
 from agents.kg_builder_agent import KGBuilderError, kg_builder_agent, kg_builder_agent_with_diagnostics
@@ -11,11 +12,17 @@ from agents.ontology_mapping_agent import (
     OntologyMappingAgentError,
     ontology_mapping_agent_with_diagnostics,
 )
+from agents.validation_agent import ValidationAgentError, validation_agent
 from api.models.job import JobStatus
 from celery_app import celery_app
 from ontology.schema_loader import OntologySchemaError, load_ontology_schema
 from storage import database
-from utils.rdf import count_turtle_triples
+from utils.rdf import (
+    TurtleParseError,
+    clone_graph,
+    parse_turtle_graph,
+    serialize_turtle_graph,
+)
 
 logger = structlog.get_logger(__name__)
 
@@ -28,14 +35,31 @@ WEBHOOK_MAX_ATTEMPTS_ENV = "WEBHOOK_MAX_ATTEMPTS"
 DEFAULT_ONTOLOGY_PATH_ENV = "DEFAULT_ONTOLOGY_PATH"
 
 
-def validation_agent(turtle_graph: str) -> dict[str, Any]:
-    """Placeholder Validation Agent that always returns a conforming graph."""
-    return {"conforms": True, "violations": []}
+class FeedbackResultError(Exception):
+    """Raised when a feedback implementation violates the in-memory graph contract."""
 
 
-def feedback_agent(turtle_graph: str, violations: list[str]) -> dict[str, str]:
+def feedback_agent(graph: Graph, violations: list[str]) -> dict[str, Any]:
     """Placeholder Feedback Agent that returns the graph unchanged."""
-    return {"reasoning": "", "corrected_graph": turtle_graph}
+    return {"reasoning": "", "corrected_graph": graph}
+
+
+def _read_feedback_result(feedback: Any) -> tuple[str, Graph]:
+    if not isinstance(feedback, Mapping):
+        raise FeedbackResultError("Feedback result must be a mapping")
+    if "corrected_graph" not in feedback:
+        raise FeedbackResultError("Feedback result is missing corrected_graph")
+
+    corrected_graph = feedback["corrected_graph"]
+    if not isinstance(corrected_graph, Graph):
+        raise FeedbackResultError(
+            "Feedback corrected_graph must be an rdflib.Graph"
+        )
+
+    reasoning = feedback.get("reasoning", "")
+    if not isinstance(reasoning, str):
+        raise FeedbackResultError("Feedback reasoning must be a string")
+    return reasoning, corrected_graph
 
 
 def _max_iterations(env: Optional[Mapping[str, str]] = None) -> int:
@@ -244,6 +268,7 @@ def run_pipeline(self: Any, job_id: str) -> None:
                     dangling_reference_count=len(kg_builder_result.dangling_references),
                     dangling_references=kg_builder_result.dangling_references,
                 )
+            graph = parse_turtle_graph(turtle_graph)
         except OntologyMappingAgentError as exc:
             current_status = _transition(job_id, current_status, JobStatus.Error, last_error=str(exc))
             logger.exception("ontology_mapping_agent_failed", job_id=job_id, error=str(exc))
@@ -254,20 +279,64 @@ def run_pipeline(self: Any, job_id: str) -> None:
             logger.exception("kg_builder_agent_failed", job_id=job_id, error=str(exc))
             _finish(job_id)
             return
+        except TurtleParseError as exc:
+            current_status = _transition(
+                job_id,
+                current_status,
+                JobStatus.Error,
+                last_error=str(exc),
+            )
+            logger.exception(
+                "kg_builder_graph_parse_failed",
+                job_id=job_id,
+                error=str(exc),
+            )
+            _finish(job_id)
+            return
 
-        # Iterations operate on the current graph. Feedback mutates that graph;
-        # extraction/building should not restart unless the whole Celery task retries.
+        # The KG builder's Turtle output is parsed exactly once above. Every iteration
+        # operates on an in-memory rdflib.Graph and serializes only at persistence
+        # boundaries.
         for iteration_number in range(1, max_iterations + 1):
             database.update_job_iteration(job_id, iteration_number)
-            triples_before = count_turtle_triples(turtle_graph)
 
             current_status = _transition(job_id, current_status, JobStatus.Validating)
-            validation_result = validation_agent(turtle_graph)
-            violations = list(validation_result.get("violations", []))
-            conforms = bool(validation_result.get("conforms", False))
+            try:
+                triples_before = len(graph)
+                validation_result = validation_agent(
+                    graph,
+                    schema,
+                    unmapped_relations=ontology_mapping_result.unmapped_relations,
+                    dangling_references=kg_builder_result.dangling_references,
+                    entities=ontology_mapping_result.entities,
+                )
+            except ValidationAgentError as exc:
+                current_status = _transition(
+                    job_id,
+                    current_status,
+                    JobStatus.Error,
+                    last_error=str(exc),
+                )
+                logger.exception(
+                    "validation_agent_failed",
+                    job_id=job_id,
+                    iteration_number=iteration_number,
+                    error=str(exc),
+                )
+                _finish(job_id)
+                return
+
+            # Keep structured findings internally and serialize only at the existing
+            # database/API boundary. Canonical JSON is deterministic for plateau checks
+            # and retains the full context required by the future feedback agent.
+            violations = [
+                violation.canonical_key()
+                for violation in validation_result.violations
+            ]
+            conforms = validation_result.conforms
 
             if conforms:
-                triples_after = count_turtle_triples(turtle_graph)
+                triples_after = len(graph)
                 database.add_iteration_detail(
                     job_id,
                     iteration_number,
@@ -284,7 +353,11 @@ def run_pipeline(self: Any, job_id: str) -> None:
                     triples_before=triples_before,
                     triples_after=triples_after,
                 )
-                database.save_final_graph(job_id, turtle_graph, passed_validation=True)
+                database.save_final_graph(
+                    job_id,
+                    serialize_turtle_graph(graph),
+                    passed_validation=True,
+                )
                 current_status = _transition(job_id, current_status, JobStatus.Complete)
                 _finish(job_id)
                 return
@@ -307,17 +380,36 @@ def run_pipeline(self: Any, job_id: str) -> None:
                     triples_before=triples_before,
                     triples_after=triples_before,
                 )
-                database.save_final_graph(job_id, turtle_graph, passed_validation=False)
+                database.save_final_graph(
+                    job_id,
+                    serialize_turtle_graph(graph),
+                    passed_validation=False,
+                )
                 current_status = _transition(job_id, current_status, JobStatus.Error, last_error=reason)
                 logger.error("pipeline_plateau_detected", job_id=job_id, iteration_number=iteration_number)
                 _finish(job_id)
                 return
 
             current_status = _transition(job_id, current_status, JobStatus.Repairing)
-            feedback = feedback_agent(turtle_graph, violations)
-            corrected_graph = feedback.get("corrected_graph", turtle_graph)
-            reasoning = feedback.get("reasoning", "")
-            triples_after = count_turtle_triples(corrected_graph)
+            try:
+                feedback = feedback_agent(clone_graph(graph), violations)
+                reasoning, corrected_graph = _read_feedback_result(feedback)
+            except FeedbackResultError as exc:
+                current_status = _transition(
+                    job_id,
+                    current_status,
+                    JobStatus.Error,
+                    last_error=str(exc),
+                )
+                logger.exception(
+                    "feedback_result_invalid",
+                    job_id=job_id,
+                    iteration_number=iteration_number,
+                    error=str(exc),
+                )
+                _finish(job_id)
+                return
+            triples_after = len(corrected_graph)
 
             database.add_iteration_detail(
                 job_id,
@@ -337,10 +429,14 @@ def run_pipeline(self: Any, job_id: str) -> None:
             )
 
             previous_violations = violations
-            turtle_graph = corrected_graph
+            graph = corrected_graph
 
         reason = f"Maximum iteration limit reached ({max_iterations})"
-        database.save_final_graph(job_id, turtle_graph, passed_validation=False)
+        database.save_final_graph(
+            job_id,
+            serialize_turtle_graph(graph),
+            passed_validation=False,
+        )
         current_status = _transition(
             job_id,
             current_status,

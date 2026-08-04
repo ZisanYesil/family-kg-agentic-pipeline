@@ -1,17 +1,36 @@
 from __future__ import annotations
 
 import httpx
+from rdflib import Graph
 
-from agents.kg_builder_agent import KGBuilderResult
-from agents.ontology_mapping_agent import OntologyMappingAgentError, OntologyMappingResult
+from agents.kg_builder_agent import DanglingRelationReference, KGBuilderResult
+from agents.ontology_mapping_agent import (
+    OntologyMappingAgentError,
+    OntologyMappingResult,
+    UnmappedRelation,
+)
+from agents.validation_agent import ValidationAgentError
 from api.models.job import JobStatus
-from ontology.schema_loader import OntologySchema, OntologySchemaError
+from ontology.schema_loader import (
+    DatatypeProperty,
+    ObjectProperty,
+    OntologyClass,
+    OntologySchema,
+    OntologySchemaError,
+)
 from tasks.pipeline_task import (
     DEFAULT_MAX_ITERATIONS,
     DEFAULT_WEBHOOK_MAX_ATTEMPTS,
     _max_iterations,
     _trigger_webhook,
     run_pipeline,
+)
+from utils.rdf import parse_turtle_graph
+from validation.models import (
+    ValidationResult,
+    ValidationViolation,
+    ViolationKind,
+    ViolationSource,
 )
 
 _FAKE_SCHEMA = OntologySchema(
@@ -297,11 +316,6 @@ def test_run_pipeline_maps_generic_extractions_before_building(monkeypatch) -> N
     monkeypatch.setattr("tasks.pipeline_task.extraction_agent", fake_extraction)
     monkeypatch.setattr("tasks.pipeline_task.ontology_mapping_agent_with_diagnostics", fake_mapping)
     monkeypatch.setattr("tasks.pipeline_task.kg_builder_agent_with_diagnostics", fake_builder)
-    monkeypatch.setattr(
-        "tasks.pipeline_task.validation_agent",
-        lambda _graph: {"conforms": True, "violations": []},
-    )
-
     run_pipeline.run("job-1")
 
     assert extraction_inputs == [("Jane Doe married John Doe in 1945.", _FAKE_SCHEMA)]
@@ -314,15 +328,247 @@ def test_run_pipeline_maps_generic_extractions_before_building(monkeypatch) -> N
         JobStatus.Complete.value,
     ]
     assert storage.iterations == [1]
-    assert storage.saved_graphs == [
-        {
-            "graph_turtle": (
-                "@prefix fhkb: <http://www.example.com/genealogy.owl#> .\n"
-                "fhkb:jane_1925 a fhkb:Person .\n"
+    assert storage.saved_graphs[0]["passed_validation"] is True
+    assert set(parse_turtle_graph(storage.saved_graphs[0]["graph_turtle"])) == set(
+        parse_turtle_graph(
+            "@prefix fhkb: <http://www.example.com/genealogy.owl#> .\n"
+            "fhkb:jane_1925 a fhkb:Person .\n"
+        )
+    )
+
+
+def test_run_pipeline_passes_dangling_reference_to_feedback_and_blocks_completion(
+    monkeypatch,
+) -> None:
+    storage = _PipelineStorage()
+    _install_pipeline_storage(monkeypatch, storage)
+    schema = OntologySchema(
+        namespace="http://example.com/family#",
+        classes=(),
+        datatype_properties=(),
+        object_properties=(
+            ObjectProperty(
+                local_name="hasFather",
+                uri="http://example.com/family#hasFather",
+                domain_class="Person",
+                range_class="Man",
             ),
-            "passed_validation": True,
+        ),
+    )
+    turtle = (
+        "@prefix ex: <http://example.com/family#> .\n"
+        "ex:known_child ex:hasFather ex:unknown_father .\n"
+    )
+    dangling = DanglingRelationReference(
+        role="object",
+        entity_id="unknown_father",
+        predicate="hasFather",
+        subject_id="known_child",
+        object_id="unknown_father",
+    )
+    feedback_inputs: list[list[str]] = []
+
+    monkeypatch.setenv("MAX_ITERATIONS", "2")
+    monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
+    monkeypatch.setattr(
+        "tasks.pipeline_task.extraction_agent",
+        lambda _text, _schema: {"entities": [], "relations": []},
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
+        lambda _extractions, _schema: OntologyMappingResult(
+            entities=[],
+            relations=[],
+            unmapped_relations=(),
+        ),
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.kg_builder_agent_with_diagnostics",
+        lambda _extractions, _schema: KGBuilderResult(
+            turtle_graph=turtle,
+            dangling_references=(dangling,),
+        ),
+    )
+    def fake_feedback(_graph: Graph, violations: list[str]) -> dict[str, object]:
+        feedback_inputs.append(violations)
+        return {
+            "reasoning": "No safe repair found",
+            "corrected_graph": parse_turtle_graph(turtle),
         }
+
+    monkeypatch.setattr("tasks.pipeline_task.feedback_agent", fake_feedback)
+
+    run_pipeline.run("job-1")
+
+    assert len(feedback_inputs) == 1
+    assert '"kind":"dangling_reference"' in feedback_inputs[0][0]
+    assert '"expected":"Man"' in feedback_inputs[0][0]
+    assert JobStatus.Complete.value not in storage.statuses
+    assert storage.statuses[-1] == JobStatus.Error.value
+    assert storage.saved_graphs[-1]["passed_validation"] is False
+
+
+def test_run_pipeline_passes_unmapped_relation_to_feedback_and_blocks_completion(
+    monkeypatch,
+) -> None:
+    storage = _PipelineStorage()
+    _install_pipeline_storage(monkeypatch, storage)
+    schema = OntologySchema(
+        namespace="http://example.com/family#",
+        classes=(),
+        datatype_properties=(),
+        object_properties=(
+            ObjectProperty(
+                local_name="hasFather",
+                uri="http://example.com/family#hasFather",
+                domain_class="Person",
+                range_class="Man",
+            ),
+        ),
+    )
+    entities = [
+        {"id": "known_child", "type": "Person"},
+        {"id": "known_father", "type": "Man"},
     ]
+    unmapped = UnmappedRelation(
+        subject="known_child",
+        object="known_father",
+        relation_phrase="father",
+        reason="relation_phrase did not match any ontology predicate",
+    )
+    turtle = (
+        "@prefix ex: <http://example.com/family#> .\n"
+        "ex:known_child a ex:Person .\n"
+        "ex:known_father a ex:Man .\n"
+    )
+    feedback_inputs: list[list[str]] = []
+
+    monkeypatch.setenv("MAX_ITERATIONS", "2")
+    monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
+    monkeypatch.setattr(
+        "tasks.pipeline_task.extraction_agent",
+        lambda _text, _schema: {"entities": entities, "relations": []},
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
+        lambda _extractions, _schema: OntologyMappingResult(
+            entities=entities,
+            relations=[],
+            unmapped_relations=(unmapped,),
+        ),
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.kg_builder_agent_with_diagnostics",
+        lambda _extractions, _schema: KGBuilderResult(
+            turtle_graph=turtle,
+            dangling_references=(),
+        ),
+    )
+    def fake_feedback(_graph: Graph, violations: list[str]) -> dict[str, object]:
+        feedback_inputs.append(violations)
+        return {
+            "reasoning": "No safe repair found",
+            "corrected_graph": parse_turtle_graph(turtle),
+        }
+
+    monkeypatch.setattr("tasks.pipeline_task.feedback_agent", fake_feedback)
+
+    run_pipeline.run("job-1")
+
+    assert len(feedback_inputs) == 1
+    assert '"kind":"unmapped_relation"' in feedback_inputs[0][0]
+    assert "http://example.com/family#hasFather" in feedback_inputs[0][0]
+    assert JobStatus.Complete.value not in storage.statuses
+    assert storage.statuses[-1] == JobStatus.Error.value
+
+
+def test_run_pipeline_clears_unmapped_diagnostic_after_feedback_adds_candidate_triple(
+    monkeypatch,
+) -> None:
+    storage = _PipelineStorage()
+    _install_pipeline_storage(monkeypatch, storage)
+    schema = OntologySchema(
+        namespace="http://example.com/family#",
+        classes=(),
+        datatype_properties=(),
+        object_properties=(
+            ObjectProperty(
+                local_name="hasFather",
+                uri="http://example.com/family#hasFather",
+                domain_class="Person",
+                range_class="Man",
+            ),
+        ),
+    )
+    entities = [
+        {"id": "known_child", "type": "Person"},
+        {"id": "known_father", "type": "Man"},
+    ]
+    unmapped = UnmappedRelation(
+        subject="known_child",
+        object="known_father",
+        relation_phrase="father",
+        reason="relation_phrase did not match any ontology predicate",
+    )
+    initial_turtle = (
+        "@prefix ex: <http://example.com/family#> .\n"
+        "ex:known_child a ex:Person .\n"
+        "ex:known_father a ex:Man .\n"
+    )
+    repaired_turtle = (
+        initial_turtle
+        + "ex:known_child ex:hasFather ex:known_father .\n"
+    )
+    pipeline_parse_calls: list[str] = []
+
+    def counted_pipeline_parse(turtle: str) -> Graph:
+        pipeline_parse_calls.append(turtle)
+        return parse_turtle_graph(turtle)
+
+    monkeypatch.setenv("MAX_ITERATIONS", "3")
+    monkeypatch.setattr(
+        "tasks.pipeline_task.parse_turtle_graph",
+        counted_pipeline_parse,
+    )
+    monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
+    monkeypatch.setattr(
+        "tasks.pipeline_task.extraction_agent",
+        lambda _text, _schema: {"entities": entities, "relations": []},
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
+        lambda _extractions, _schema: OntologyMappingResult(
+            entities=entities,
+            relations=[],
+            unmapped_relations=(unmapped,),
+        ),
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.kg_builder_agent_with_diagnostics",
+        lambda _extractions, _schema: KGBuilderResult(
+            turtle_graph=initial_turtle,
+            dangling_references=(),
+        ),
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.feedback_agent",
+        lambda _graph, _violations: {
+            "reasoning": "Mapped the source-supported father relation.",
+            "corrected_graph": parse_turtle_graph(repaired_turtle),
+        },
+    )
+
+    run_pipeline.run("job-1")
+
+    assert storage.iterations == [1, 2]
+    assert pipeline_parse_calls == [initial_turtle]
+    assert storage.statuses[-1] == JobStatus.Complete.value
+    assert storage.saved_graphs[-1]["passed_validation"] is True
+    assert set(parse_turtle_graph(storage.saved_graphs[-1]["graph_turtle"])) == set(
+        parse_turtle_graph(repaired_turtle)
+    )
+    assert storage.iteration_details[0]["violations"]
+    assert storage.iteration_details[1]["violations"] == []
 
 
 def test_run_pipeline_marks_job_error_when_ontology_path_missing(monkeypatch) -> None:
@@ -385,4 +631,188 @@ def test_run_pipeline_marks_job_error_when_ontology_mapping_fails(monkeypatch) -
         JobStatus.Error.value,
     ]
     assert storage.job["last_error"] == "mapping unavailable"
+    assert storage.saved_graphs == []
+
+
+def test_run_pipeline_marks_job_error_when_validation_infrastructure_fails(
+    monkeypatch,
+) -> None:
+    storage = _PipelineStorage()
+    _install_pipeline_storage(monkeypatch, storage)
+    monkeypatch.setattr(
+        "tasks.pipeline_task.load_ontology_schema",
+        lambda _path: _FAKE_SCHEMA,
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.extraction_agent",
+        lambda _text, _schema: {"entities": [], "relations": []},
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
+        lambda _extractions, _schema: OntologyMappingResult(
+            entities=[],
+            relations=[],
+            unmapped_relations=(),
+        ),
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.kg_builder_agent_with_diagnostics",
+        lambda _extractions, _schema: KGBuilderResult(
+            turtle_graph="",
+            dangling_references=(),
+        ),
+    )
+
+    def fail_validation(_graph, _schema, **_kwargs):
+        raise ValidationAgentError("SHACL engine unavailable")
+
+    monkeypatch.setattr("tasks.pipeline_task.validation_agent", fail_validation)
+
+    run_pipeline.run("job-1")
+
+    assert storage.statuses[-2:] == [
+        JobStatus.Validating.value,
+        JobStatus.Error.value,
+    ]
+    assert storage.job["last_error"] == "SHACL engine unavailable"
+    assert storage.saved_graphs == []
+
+
+def test_run_pipeline_real_shacl_violation_blocks_completion_and_reaches_feedback(
+    monkeypatch,
+) -> None:
+    storage = _PipelineStorage()
+    _install_pipeline_storage(monkeypatch, storage)
+    schema = OntologySchema(
+        namespace="http://example.com/mixed#",
+        classes=(
+            OntologyClass(
+                local_name="Car",
+                uri="http://example.com/mixed#Car",
+            ),
+        ),
+        datatype_properties=(
+            DatatypeProperty(
+                local_name="modelYear",
+                uri="http://example.com/mixed#modelYear",
+                domain_class="Car",
+                range_type="integer",
+            ),
+        ),
+        object_properties=(),
+    )
+    invalid_turtle = (
+        "@prefix ex: <http://example.com/mixed#> .\n"
+        "ex:car a ex:Car ; ex:modelYear \"recent\" .\n"
+    )
+    feedback_inputs: list[list[str]] = []
+
+    monkeypatch.setenv("MAX_ITERATIONS", "2")
+    monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
+    monkeypatch.setattr(
+        "tasks.pipeline_task.extraction_agent",
+        lambda _text, _schema: {"entities": [], "relations": []},
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
+        lambda _extractions, _schema: OntologyMappingResult(
+            entities=[],
+            relations=[],
+            unmapped_relations=(),
+        ),
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.kg_builder_agent_with_diagnostics",
+        lambda _extractions, _schema: KGBuilderResult(
+            turtle_graph=invalid_turtle,
+            dangling_references=(),
+        ),
+    )
+
+    def unchanged_feedback(_graph: Graph, violations: list[str]) -> dict[str, object]:
+        feedback_inputs.append(violations)
+        return {
+            "reasoning": "No repair implemented yet",
+            "corrected_graph": parse_turtle_graph(invalid_turtle),
+        }
+
+    monkeypatch.setattr("tasks.pipeline_task.feedback_agent", unchanged_feedback)
+
+    run_pipeline.run("job-1")
+
+    assert len(feedback_inputs) == 1
+    assert any('"kind":"shacl"' in violation for violation in feedback_inputs[0])
+    assert any("DatatypeConstraintComponent" in violation for violation in feedback_inputs[0])
+    assert JobStatus.Complete.value not in storage.statuses
+    assert storage.statuses[-1] == JobStatus.Error.value
+    assert storage.saved_graphs[-1]["passed_validation"] is False
+
+
+def test_run_pipeline_rejects_string_feedback_graph_and_passes_independent_copy(
+    monkeypatch,
+) -> None:
+    storage = _PipelineStorage()
+    _install_pipeline_storage(monkeypatch, storage)
+    source_turtle = (
+        "@prefix ex: <http://example.com/family#> .\n"
+        "ex:child a ex:Person .\n"
+    )
+    validation_graphs: list[Graph] = []
+    feedback_graphs: list[Graph] = []
+    finding = ValidationViolation(
+        kind=ViolationKind.SHACL,
+        source=ViolationSource.SHACL_GENERATOR,
+        focus_node="http://example.com/family#child",
+        message="Needs repair",
+    )
+
+    monkeypatch.setattr(
+        "tasks.pipeline_task.load_ontology_schema",
+        lambda _path: _FAKE_SCHEMA,
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.extraction_agent",
+        lambda _text, _schema: {"entities": [], "relations": []},
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
+        lambda _extractions, _schema: OntologyMappingResult(
+            entities=[],
+            relations=[],
+            unmapped_relations=(),
+        ),
+    )
+    monkeypatch.setattr(
+        "tasks.pipeline_task.kg_builder_agent_with_diagnostics",
+        lambda _extractions, _schema: KGBuilderResult(
+            turtle_graph=source_turtle,
+            dangling_references=(),
+        ),
+    )
+
+    def fake_validation(graph: Graph, _schema, **_kwargs) -> ValidationResult:
+        validation_graphs.append(graph)
+        return ValidationResult(violations=(finding,))
+
+    def invalid_feedback(graph: Graph, _violations: list[str]) -> dict[str, object]:
+        feedback_graphs.append(graph)
+        graph.remove((None, None, None))
+        return {
+            "reasoning": "Invalid legacy response",
+            "corrected_graph": source_turtle,
+        }
+
+    monkeypatch.setattr("tasks.pipeline_task.validation_agent", fake_validation)
+    monkeypatch.setattr("tasks.pipeline_task.feedback_agent", invalid_feedback)
+
+    run_pipeline.run("job-1")
+
+    assert len(validation_graphs) == 1
+    assert len(feedback_graphs) == 1
+    assert feedback_graphs[0] is not validation_graphs[0]
+    assert len(validation_graphs[0]) == 1
+    assert storage.statuses[-1] == JobStatus.Error.value
+    assert storage.job["last_error"] == (
+        "Feedback corrected_graph must be an rdflib.Graph"
+    )
     assert storage.saved_graphs == []
