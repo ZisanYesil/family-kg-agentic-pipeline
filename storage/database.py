@@ -10,6 +10,12 @@ import structlog
 logger = structlog.get_logger(__name__)
 
 DEFAULT_DATABASE_URL = "sqlite:///storage/jobs.db"
+CURRENT_SCHEMA_VERSION = 2
+DEFAULT_LEGACY_ONTOLOGY_PATH = "ontology/family_extended.ttl"
+
+
+class DatabaseSchemaError(RuntimeError):
+    """Raised when the on-disk schema is newer than this application supports."""
 
 
 def get_database_path() -> str:
@@ -38,6 +44,62 @@ def _row_to_dict(row: sqlite3.Row) -> dict[str, Any]:
     result["passed_validation"] = bool(result["passed_validation"])
     result["webhook_delivered"] = bool(result["webhook_delivered"])
     return result
+
+
+def _column_names(conn: sqlite3.Connection, table: str) -> set[str]:
+    return {str(row[1]) for row in conn.execute(f"PRAGMA table_info({table})")}
+
+
+def _migrate_schema(conn: sqlite3.Connection) -> None:
+    """Upgrade databases created by earlier releases without losing job history."""
+    conn.execute(
+        """
+        CREATE TABLE IF NOT EXISTS schema_migrations (
+            version INTEGER PRIMARY KEY,
+            applied_at TIMESTAMP NOT NULL
+        )
+        """
+    )
+    applied_version = conn.execute(
+        "SELECT MAX(version) FROM schema_migrations"
+    ).fetchone()[0]
+    if applied_version is not None and applied_version > CURRENT_SCHEMA_VERSION:
+        raise DatabaseSchemaError(
+            f"Database schema version {applied_version} is newer than supported "
+            f"version {CURRENT_SCHEMA_VERSION}"
+        )
+
+    job_columns = _column_names(conn, "jobs")
+    if "ontology_path" not in job_columns:
+        conn.execute("ALTER TABLE jobs ADD COLUMN ontology_path TEXT")
+    legacy_path = os.getenv("DEFAULT_ONTOLOGY_PATH", DEFAULT_LEGACY_ONTOLOGY_PATH)
+    conn.execute(
+        "UPDATE jobs SET ontology_path = ? WHERE ontology_path IS NULL OR TRIM(ontology_path) = ''",
+        (legacy_path,),
+    )
+
+    iteration_columns = _column_names(conn, "iterations")
+    if "edit_log_json" not in iteration_columns:
+        conn.execute(
+            "ALTER TABLE iterations ADD COLUMN edit_log_json TEXT NOT NULL DEFAULT '[]'"
+        )
+    if "unresolved_violations_json" not in iteration_columns:
+        conn.execute(
+            "ALTER TABLE iterations ADD COLUMN unresolved_violations_json TEXT NOT NULL DEFAULT '[]'"
+        )
+
+    conn.execute(
+        "CREATE INDEX IF NOT EXISTS idx_iterations_job_number "
+        "ON iterations(job_id, iteration_number)"
+    )
+    conn.execute(
+        "CREATE INDEX IF NOT EXISTS idx_jobs_status_created "
+        "ON jobs(status, created_at)"
+    )
+    conn.execute(
+        "INSERT OR IGNORE INTO schema_migrations(version, applied_at) VALUES (?, ?)",
+        (CURRENT_SCHEMA_VERSION, _utc_timestamp()),
+    )
 
 
 def init_db(db_path: str) -> None:
@@ -72,11 +134,14 @@ def init_db(db_path: str) -> None:
                     llm_reasoning TEXT NOT NULL,
                     triples_before INTEGER NOT NULL,
                     triples_after INTEGER NOT NULL,
+                    edit_log_json TEXT NOT NULL DEFAULT '[]',
+                    unresolved_violations_json TEXT NOT NULL DEFAULT '[]',
                     timestamp TIMESTAMP NOT NULL,
                     FOREIGN KEY (job_id) REFERENCES jobs(job_id)
                 )
                 """
             )
+            _migrate_schema(conn)
             conn.commit()
         logger.info("sqlite_database_initialized", db_path=db_path)
     except sqlite3.Error:
@@ -220,18 +285,25 @@ def add_iteration_detail(
     llm_reasoning: str,
     triples_before: int,
     triples_after: int,
+    edit_log: Optional[list[dict[str, Any]]] = None,
+    unresolved_violation_fingerprints: Optional[list[str]] = None,
 ) -> None:
     timestamp = _utc_timestamp()
     violations_json = json.dumps(violations)
+    edit_log_json = json.dumps(edit_log or [], ensure_ascii=False, sort_keys=True)
+    unresolved_json = json.dumps(
+        unresolved_violation_fingerprints or [], ensure_ascii=False, sort_keys=True
+    )
     try:
         with _connect() as conn:
             conn.execute(
                 """
                 INSERT INTO iterations (
                     job_id, iteration_number, violations_json, llm_reasoning,
-                    triples_before, triples_after, timestamp
+                    triples_before, triples_after, edit_log_json,
+                    unresolved_violations_json, timestamp
                 )
-                VALUES (?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     job_id,
@@ -240,6 +312,8 @@ def add_iteration_detail(
                     llm_reasoning,
                     triples_before,
                     triples_after,
+                    edit_log_json,
+                    unresolved_json,
                     timestamp,
                 ),
             )
@@ -268,7 +342,8 @@ def get_iterations(job_id: str) -> list[dict[str, Any]]:
             rows = conn.execute(
                 """
                 SELECT iteration_number, violations_json, llm_reasoning,
-                       triples_before, triples_after, timestamp
+                       triples_before, triples_after, edit_log_json,
+                       unresolved_violations_json, timestamp
                 FROM iterations
                 WHERE job_id = ?
                 ORDER BY iteration_number ASC
@@ -280,6 +355,10 @@ def get_iterations(job_id: str) -> list[dict[str, Any]]:
         for row in rows:
             item = dict(row)
             item["violations"] = json.loads(item.pop("violations_json"))
+            item["edit_log"] = json.loads(item.pop("edit_log_json"))
+            item["unresolved_violation_fingerprints"] = json.loads(
+                item.pop("unresolved_violations_json")
+            )
             iterations.append(item)
         return iterations
     except sqlite3.Error:

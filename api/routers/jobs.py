@@ -39,7 +39,7 @@ def create_kg_extraction_job(
     ontology_path = request.ontology_path or os.getenv("DEFAULT_ONTOLOGY_PATH")
     if not ontology_path:
         raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
             detail=(
                 "ontology_path was not provided and DEFAULT_ONTOLOGY_PATH is not set"
             ),
@@ -111,7 +111,7 @@ def get_validated_graph(
     except TurtleParseError as exc:
         logger.exception("graph_parse_failed", job_id=job_id, error=str(exc))
         raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
             detail="Stored graph_turtle is not valid Turtle and cannot be serialized",
         ) from exc
 

@@ -9,7 +9,9 @@ from agents.ontology_mapping_agent import (
     OntologyMappingResult,
     UnmappedRelation,
 )
+from agents.feedback_agent import FeedbackAgentError
 from agents.validation_agent import ValidationAgentError
+from feedback.models import FeedbackPlan
 from api.models.job import JobStatus
 from ontology.schema_loader import (
     DatatypeProperty,
@@ -90,6 +92,7 @@ class _PipelineStorage:
         llm_reasoning: str,
         triples_before: int,
         triples_after: int,
+        **metadata,
     ) -> None:
         self.iteration_details.append(
             {
@@ -98,9 +101,9 @@ class _PipelineStorage:
                 "llm_reasoning": llm_reasoning,
                 "triples_before": triples_before,
                 "triples_after": triples_after,
+                **metadata,
             }
         )
-
     def save_final_graph(
         self,
         _job_id: str,
@@ -118,6 +121,22 @@ class _PipelineStorage:
 
     def set_webhook_delivered(self, _job_id: str) -> None:
         raise AssertionError("No webhook should be delivered in these tests")
+
+
+def _unresolved_plan(violations) -> FeedbackPlan:
+    return FeedbackPlan.model_validate(
+        {
+            "reasoning": "No safe source-grounded repair was found.",
+            "repairs": [
+                {
+                    "violation_fingerprint": violation.fingerprint,
+                    "reasoning": "The available evidence is insufficient.",
+                    "operations": [],
+                }
+                for violation in violations
+            ],
+        }
+    )
 
 
 def _install_pipeline_storage(monkeypatch, storage: _PipelineStorage) -> None:
@@ -366,7 +385,7 @@ def test_run_pipeline_passes_dangling_reference_to_feedback_and_blocks_completio
         subject_id="known_child",
         object_id="unknown_father",
     )
-    feedback_inputs: list[list[str]] = []
+    feedback_inputs = []
 
     monkeypatch.setenv("MAX_ITERATIONS", "2")
     monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
@@ -389,20 +408,17 @@ def test_run_pipeline_passes_dangling_reference_to_feedback_and_blocks_completio
             dangling_references=(dangling,),
         ),
     )
-    def fake_feedback(_graph: Graph, violations: list[str]) -> dict[str, object]:
+    def fake_feedback(_graph, violations, _schema, _source_text):
         feedback_inputs.append(violations)
-        return {
-            "reasoning": "No safe repair found",
-            "corrected_graph": parse_turtle_graph(turtle),
-        }
+        return _unresolved_plan(violations)
 
     monkeypatch.setattr("tasks.pipeline_task.feedback_agent", fake_feedback)
 
     run_pipeline.run("job-1")
 
     assert len(feedback_inputs) == 1
-    assert '"kind":"dangling_reference"' in feedback_inputs[0][0]
-    assert '"expected":"Man"' in feedback_inputs[0][0]
+    assert any(item.kind == ViolationKind.DANGLING_REFERENCE for item in feedback_inputs[0])
+    assert any(item.expected == "Man" for item in feedback_inputs[0])
     assert JobStatus.Complete.value not in storage.statuses
     assert storage.statuses[-1] == JobStatus.Error.value
     assert storage.saved_graphs[-1]["passed_validation"] is False
@@ -441,7 +457,7 @@ def test_run_pipeline_passes_unmapped_relation_to_feedback_and_blocks_completion
         "ex:known_child a ex:Person .\n"
         "ex:known_father a ex:Man .\n"
     )
-    feedback_inputs: list[list[str]] = []
+    feedback_inputs = []
 
     monkeypatch.setenv("MAX_ITERATIONS", "2")
     monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
@@ -464,20 +480,17 @@ def test_run_pipeline_passes_unmapped_relation_to_feedback_and_blocks_completion
             dangling_references=(),
         ),
     )
-    def fake_feedback(_graph: Graph, violations: list[str]) -> dict[str, object]:
+    def fake_feedback(_graph, violations, _schema, _source_text):
         feedback_inputs.append(violations)
-        return {
-            "reasoning": "No safe repair found",
-            "corrected_graph": parse_turtle_graph(turtle),
-        }
+        return _unresolved_plan(violations)
 
     monkeypatch.setattr("tasks.pipeline_task.feedback_agent", fake_feedback)
 
     run_pipeline.run("job-1")
 
     assert len(feedback_inputs) == 1
-    assert '"kind":"unmapped_relation"' in feedback_inputs[0][0]
-    assert "http://example.com/family#hasFather" in feedback_inputs[0][0]
+    assert any(item.kind == ViolationKind.UNMAPPED_RELATION for item in feedback_inputs[0])
+    assert any("http://example.com/family#hasFather" in (item.expected or "") for item in feedback_inputs[0])
     assert JobStatus.Complete.value not in storage.statuses
     assert storage.statuses[-1] == JobStatus.Error.value
 
@@ -552,10 +565,26 @@ def test_run_pipeline_clears_unmapped_diagnostic_after_feedback_adds_candidate_t
     )
     monkeypatch.setattr(
         "tasks.pipeline_task.feedback_agent",
-        lambda _graph, _violations: {
-            "reasoning": "Mapped the source-supported father relation.",
-            "corrected_graph": parse_turtle_graph(repaired_turtle),
-        },
+        lambda _graph, violations, _schema, _source_text: FeedbackPlan.model_validate(
+            {
+                "reasoning": "Mapped the source-supported father relation.",
+                "repairs": [
+                    {
+                        "violation_fingerprint": violation.fingerprint,
+                        "reasoning": "The father relation is stated in the source.",
+                        "operations": [
+                            {
+                                "operation": "add_triple",
+                                "subject": "http://example.com/family#known_child",
+                                "predicate": "http://example.com/family#hasFather",
+                                "object": {"kind": "iri", "value": "http://example.com/family#known_father"},
+                            }
+                        ],
+                    }
+                    for violation in violations
+                ],
+            }
+        ),
     )
 
     run_pipeline.run("job-1")
@@ -568,6 +597,8 @@ def test_run_pipeline_clears_unmapped_diagnostic_after_feedback_adds_candidate_t
         parse_turtle_graph(repaired_turtle)
     )
     assert storage.iteration_details[0]["violations"]
+    assert storage.iteration_details[0]["edit_log"][0]["operation"] == "add_triple"
+    assert storage.iteration_details[0]["unresolved_violation_fingerprints"] == []
     assert storage.iteration_details[1]["violations"] == []
 
 
@@ -705,7 +736,7 @@ def test_run_pipeline_real_shacl_violation_blocks_completion_and_reaches_feedbac
         "@prefix ex: <http://example.com/mixed#> .\n"
         "ex:car a ex:Car ; ex:modelYear \"recent\" .\n"
     )
-    feedback_inputs: list[list[str]] = []
+    feedback_inputs = []
 
     monkeypatch.setenv("MAX_ITERATIONS", "2")
     monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
@@ -729,20 +760,17 @@ def test_run_pipeline_real_shacl_violation_blocks_completion_and_reaches_feedbac
         ),
     )
 
-    def unchanged_feedback(_graph: Graph, violations: list[str]) -> dict[str, object]:
+    def unchanged_feedback(_graph, violations, _schema, _source_text):
         feedback_inputs.append(violations)
-        return {
-            "reasoning": "No repair implemented yet",
-            "corrected_graph": parse_turtle_graph(invalid_turtle),
-        }
+        return _unresolved_plan(violations)
 
     monkeypatch.setattr("tasks.pipeline_task.feedback_agent", unchanged_feedback)
 
     run_pipeline.run("job-1")
 
     assert len(feedback_inputs) == 1
-    assert any('"kind":"shacl"' in violation for violation in feedback_inputs[0])
-    assert any("DatatypeConstraintComponent" in violation for violation in feedback_inputs[0])
+    assert any(violation.kind == ViolationKind.SHACL for violation in feedback_inputs[0])
+    assert any("DatatypeConstraintComponent" in (violation.constraint_component or "") for violation in feedback_inputs[0])
     assert JobStatus.Complete.value not in storage.statuses
     assert storage.statuses[-1] == JobStatus.Error.value
     assert storage.saved_graphs[-1]["passed_validation"] is False
@@ -794,13 +822,10 @@ def test_run_pipeline_rejects_string_feedback_graph_and_passes_independent_copy(
         validation_graphs.append(graph)
         return ValidationResult(violations=(finding,))
 
-    def invalid_feedback(graph: Graph, _violations: list[str]) -> dict[str, object]:
+    def invalid_feedback(graph, _violations, _schema, _source_text):
         feedback_graphs.append(graph)
         graph.remove((None, None, None))
-        return {
-            "reasoning": "Invalid legacy response",
-            "corrected_graph": source_turtle,
-        }
+        raise FeedbackAgentError("Invalid feedback response")
 
     monkeypatch.setattr("tasks.pipeline_task.validation_agent", fake_validation)
     monkeypatch.setattr("tasks.pipeline_task.feedback_agent", invalid_feedback)
@@ -812,7 +837,5 @@ def test_run_pipeline_rejects_string_feedback_graph_and_passes_independent_copy(
     assert feedback_graphs[0] is not validation_graphs[0]
     assert len(validation_graphs[0]) == 1
     assert storage.statuses[-1] == JobStatus.Error.value
-    assert storage.job["last_error"] == (
-        "Feedback corrected_graph must be an rdflib.Graph"
-    )
+    assert storage.job["last_error"] == "Invalid feedback response"
     assert storage.saved_graphs == []

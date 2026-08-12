@@ -7,6 +7,7 @@ import structlog
 from rdflib import Graph
 
 from agents.extraction_agent import ExtractionAgentError, extraction_agent
+from agents.feedback_agent import FeedbackAgentError, feedback_agent
 from agents.kg_builder_agent import KGBuilderError, kg_builder_agent, kg_builder_agent_with_diagnostics
 from agents.ontology_mapping_agent import (
     OntologyMappingAgentError,
@@ -15,6 +16,7 @@ from agents.ontology_mapping_agent import (
 from agents.validation_agent import ValidationAgentError, validation_agent
 from api.models.job import JobStatus
 from celery_app import celery_app
+from feedback.apply_edits import ApplyEditsError, apply_feedback_plan
 from ontology.schema_loader import OntologySchemaError, load_ontology_schema
 from storage import database
 from utils.rdf import (
@@ -33,33 +35,6 @@ DEFAULT_WEBHOOK_MAX_ATTEMPTS = 3
 WEBHOOK_TIMEOUT_ENV = "WEBHOOK_TIMEOUT_SECONDS"
 WEBHOOK_MAX_ATTEMPTS_ENV = "WEBHOOK_MAX_ATTEMPTS"
 DEFAULT_ONTOLOGY_PATH_ENV = "DEFAULT_ONTOLOGY_PATH"
-
-
-class FeedbackResultError(Exception):
-    """Raised when a feedback implementation violates the in-memory graph contract."""
-
-
-def feedback_agent(graph: Graph, violations: list[str]) -> dict[str, Any]:
-    """Placeholder Feedback Agent that returns the graph unchanged."""
-    return {"reasoning": "", "corrected_graph": graph}
-
-
-def _read_feedback_result(feedback: Any) -> tuple[str, Graph]:
-    if not isinstance(feedback, Mapping):
-        raise FeedbackResultError("Feedback result must be a mapping")
-    if "corrected_graph" not in feedback:
-        raise FeedbackResultError("Feedback result is missing corrected_graph")
-
-    corrected_graph = feedback["corrected_graph"]
-    if not isinstance(corrected_graph, Graph):
-        raise FeedbackResultError(
-            "Feedback corrected_graph must be an rdflib.Graph"
-        )
-
-    reasoning = feedback.get("reasoning", "")
-    if not isinstance(reasoning, str):
-        raise FeedbackResultError("Feedback reasoning must be a string")
-    return reasoning, corrected_graph
 
 
 def _max_iterations(env: Optional[Mapping[str, str]] = None) -> int:
@@ -392,9 +367,24 @@ def run_pipeline(self: Any, job_id: str) -> None:
 
             current_status = _transition(job_id, current_status, JobStatus.Repairing)
             try:
-                feedback = feedback_agent(clone_graph(graph), violations)
-                reasoning, corrected_graph = _read_feedback_result(feedback)
-            except FeedbackResultError as exc:
+                plan = feedback_agent(
+                    clone_graph(graph),
+                    validation_result.violations,
+                    schema,
+                    job["input_text"],
+                )
+                applied = apply_feedback_plan(
+                    graph,
+                    plan,
+                    violations=validation_result.violations,
+                    schema=schema,
+                    source_text=job["input_text"],
+                )
+                reasoning = plan.reasoning
+                corrected_graph = applied.graph
+                edit_log = [entry.__dict__ for entry in applied.edit_log]
+                unresolved = list(applied.unresolved_violation_fingerprints)
+            except (FeedbackAgentError, ApplyEditsError) as exc:
                 current_status = _transition(
                     job_id,
                     current_status,
@@ -402,7 +392,7 @@ def run_pipeline(self: Any, job_id: str) -> None:
                     last_error=str(exc),
                 )
                 logger.exception(
-                    "feedback_result_invalid",
+                    "feedback_repair_failed",
                     job_id=job_id,
                     iteration_number=iteration_number,
                     error=str(exc),
@@ -418,6 +408,8 @@ def run_pipeline(self: Any, job_id: str) -> None:
                 reasoning,
                 triples_before,
                 triples_after,
+                edit_log=edit_log,
+                unresolved_violation_fingerprints=unresolved,
             )
             logger.info(
                 "pipeline_iteration",

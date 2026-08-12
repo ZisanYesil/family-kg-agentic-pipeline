@@ -76,9 +76,9 @@ Validation can be performed with OWL reasoners or SHACL shapes.
 
 ### Feedback Agent
 
-The Feedback Agent reads validation errors and determines how the graph or extraction strategy should be corrected. It enables error-driven iterative improvement by feeding structured feedback back into the pipeline.
+The Feedback Agent reads structured validation errors and asks the configured LLM for a strict `FeedbackPlan`. The model cannot replace the graph directly: every proposed add, remove, or literal replacement is checked against the ontology, current graph, source text, and targeted validation fingerprint before being applied atomically.
 
-This loop continues until the graph passes validation or the configured iteration threshold is reached.
+Unsafe plans fail the job without mutating the graph. Findings that cannot be repaired safely remain explicitly unresolved. The loop continues until the graph passes validation, repeats the same report, or reaches the configured iteration threshold.
 
 ## Knowledge Graph Construction
 
@@ -215,8 +215,13 @@ DATABASE_URL=sqlite:////app/storage/jobs.db
 LOG_LEVEL=INFO
 MAX_ITERATIONS=10
 WEBHOOK_TIMEOUT_SECONDS=10
+WEBHOOK_MAX_ATTEMPTS=3
 DEFAULT_ONTOLOGY_PATH=ontology/family_extended.ttl
 ```
+
+SQLite schema upgrades run automatically at API startup. Existing job and iteration
+history is preserved; older databases receive the ontology path and repair-audit columns
+required by the current pipeline.
 
 ### 2. Start with Docker Compose
 

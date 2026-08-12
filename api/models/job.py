@@ -1,6 +1,6 @@
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import Any, Optional
 
 from pydantic import BaseModel, Field, HttpUrl
 
@@ -50,6 +50,8 @@ class IterationDetail(BaseModel):
     llm_reasoning: str
     triples_before: int
     triples_after: int
+    edit_log: list[dict[str, Any]] = Field(default_factory=list)
+    unresolved_violation_fingerprints: list[str] = Field(default_factory=list)
     timestamp: datetime
 
 

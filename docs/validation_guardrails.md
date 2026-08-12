@@ -221,8 +221,8 @@ still miss cycles longer than the window.
 4. Reasoner prototype.
 5. Reasoner runner + Docker validation + tests.
 6. Validation agent orchestration.
-7. Feedback agent edit operation generation.
-8. Apply edits + pipeline graph refactor.
+7. Feedback agent edit operation generation. (implemented)
+8. Apply edits + pipeline graph refactor. (implemented)
 9. End-to-end Docker run, edge cases, README/report updates.
 
 ## Non-Negotiables

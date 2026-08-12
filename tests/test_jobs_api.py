@@ -148,7 +148,7 @@ def test_create_kg_extraction_job_422s_when_no_ontology_path_available(
             db=storage,
         )
 
-    assert exc_info.value.status_code == status.HTTP_422_UNPROCESSABLE_ENTITY
+    assert exc_info.value.status_code == status.HTTP_422_UNPROCESSABLE_CONTENT
     assert storage.created_jobs == []
 
 
@@ -258,6 +258,20 @@ def test_get_iteration_history_returns_iterations() -> None:
     assert len(response.iterations) == 1
     assert response.iterations[0].iteration_number == 1
     assert response.iterations[0].violations == ["Missing rdf:type for fhkb:jane"]
+
+
+def test_get_iteration_history_exposes_repair_audit_fields() -> None:
+    iteration = _iteration()
+    iteration["edit_log"] = [{"operation": "add_triple", "triples_after": 4}]
+    iteration["unresolved_violation_fingerprints"] = ["a" * 64]
+
+    response = get_iteration_history(
+        "job-1",
+        db=_FakeStorage(_job(JobStatus.Repairing), iterations=[iteration]),
+    )
+
+    assert response.iterations[0].edit_log[0]["operation"] == "add_triple"
+    assert response.iterations[0].unresolved_violation_fingerprints == ["a" * 64]
 
 
 def test_get_iteration_history_returns_404_for_missing_job() -> None:
