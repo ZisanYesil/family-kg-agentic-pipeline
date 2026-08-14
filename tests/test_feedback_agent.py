@@ -78,7 +78,10 @@ def test_feedback_agent_returns_strict_plan_and_sends_fingerprints() -> None:
     assert plan.repairs[0].violation_fingerprint == VIOLATION.fingerprint
     request_payload = json.loads(completions.calls[0]["messages"][1]["content"])
     assert request_payload["violations"][0]["fingerprint"] == VIOLATION.fingerprint
-    assert completions.calls[0]["response_format"]["json_schema"]["strict"] is True
+    assert completions.calls[0]["model"] == "deepseek-v4-flash"
+    assert completions.calls[0]["response_format"] == {"type": "json_object"}
+    assert completions.calls[0]["max_tokens"] == 8192
+    assert completions.calls[0]["extra_body"] == {"thinking": {"type": "disabled"}}
 
 
 def test_feedback_agent_rejects_invalid_model_plan() -> None:

@@ -125,6 +125,33 @@ def test_datatype_violation_is_detected() -> None:
     assert str(XSD.integer) in results_text
 
 
+def test_date_or_year_shape_accepts_both_supported_datatypes() -> None:
+    schema = OntologySchema(
+        namespace=str(EX),
+        classes=(OntologyClass(local_name="Person", uri=str(EX.Person)),),
+        datatype_properties=(
+            DatatypeProperty(
+                local_name="birthDate",
+                uri=str(EX.birthDate),
+                domain_class="Person",
+                range_type="date_or_year",
+            ),
+        ),
+        object_properties=(),
+    )
+    shapes = generate_shacl_graph(schema)
+
+    for value in (
+        Literal("2001-02-03", datatype=XSD.date),
+        Literal("1984", datatype=XSD.gYear),
+    ):
+        data = Graph()
+        data.add((EX.alex, RDF.type, EX.Person))
+        data.add((EX.alex, EX.birthDate, value))
+        conforms, _, report = validate(data_graph=data, shacl_graph=shapes)
+        assert conforms, report
+
+
 def test_functional_object_property_violation_is_detected() -> None:
     data = Graph()
     data.add((EX.alex, RDF.type, EX.Person))

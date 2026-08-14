@@ -1,0 +1,96 @@
+{
+  "inputs": {
+    "extracted": "dataset/3/inference/extracted_reasoned_3.ttl",
+    "ground_truth": "dataset/3/inference/ground_truth_reasoned_3.ttl"
+  },
+  "comparison": "exact RDF term equality after entity canonicalization and independent inference",
+  "matched_triples": [
+    {
+      "subject": "Q4968933",
+      "predicate": "hasBirthDate",
+      "object": "\"1946-06-13\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://www.wikidata.org/entity/Q4968933",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1946-06-13\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Q4968933",
+      "predicate": "hasChild",
+      "object": "Q4969243",
+      "subject_uri": "http://www.wikidata.org/entity/Q4968933",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://www.wikidata.org/entity/Q4969243"
+    },
+    {
+      "subject": "Q4968933",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://www.wikidata.org/entity/Q4968933",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Q4968933",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://www.wikidata.org/entity/Q4968933",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Q4969243",
+      "predicate": "hasFather",
+      "object": "Q4968933",
+      "subject_uri": "http://www.wikidata.org/entity/Q4969243",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFather",
+      "object_term": "http://www.wikidata.org/entity/Q4968933"
+    },
+    {
+      "subject": "Q4969243",
+      "predicate": "hasParent",
+      "object": "Q4968933",
+      "subject_uri": "http://www.wikidata.org/entity/Q4969243",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://www.wikidata.org/entity/Q4968933"
+    },
+    {
+      "subject": "Q4969243",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://www.wikidata.org/entity/Q4969243",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Q4969243",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://www.wikidata.org/entity/Q4969243",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Q4969243",
+      "predicate": "hasBirthDate",
+      "object": "\"1975-09-14\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://www.wikidata.org/entity/Q4969243",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1975-09-14\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 9,
+    "true_positives": 8,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1": 0.9411764705882353
+  }
+}

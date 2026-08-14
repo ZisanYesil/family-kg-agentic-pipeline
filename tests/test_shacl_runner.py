@@ -14,7 +14,7 @@ from ontology.schema_loader import (
 )
 from validation.models import ViolationKind, ViolationSeverity, ViolationSource
 from validation.shacl_runner import (
-    FAMILY_ONTOLOGY_NAMESPACE,
+    DATASET_ONTOLOGY_NAMESPACE,
     ShaclRunnerError,
     build_shacl_graph,
     run_shacl_validation,
@@ -55,7 +55,7 @@ def test_unregistered_namespace_uses_dynamic_shapes_only() -> None:
     assert (
         None,
         SH.targetSubjectsOf,
-        Namespace(FAMILY_ONTOLOGY_NAMESPACE).hasFather,
+        Namespace(DATASET_ONTOLOGY_NAMESPACE).hasFather,
     ) not in shapes
 
 
@@ -165,19 +165,45 @@ def test_warning_is_reported_but_does_not_block_conformance(tmp_path: Path) -> N
     assert result.violations[0].severity == ViolationSeverity.WARNING
 
 
-def test_family_namespace_automatically_loads_family_semantic_shapes() -> None:
-    family = Namespace(FAMILY_ONTOLOGY_NAMESPACE)
-    family_schema = OntologySchema(
-        namespace=FAMILY_ONTOLOGY_NAMESPACE,
-        classes=(),
+def test_dataset_namespace_automatically_loads_dataset_semantic_shapes() -> None:
+    dataset = Namespace(DATASET_ONTOLOGY_NAMESPACE)
+    dataset_schema = OntologySchema(
+        namespace=DATASET_ONTOLOGY_NAMESPACE,
+        classes=(OntologyClass(local_name="Person", uri=str(dataset.Person)),),
         datatype_properties=(),
         object_properties=(),
     )
+
+    shapes = build_shacl_graph(dataset_schema)
+
+    assert (dataset.PersonShape, RDF.type, SH.NodeShape) in shapes
+    assert (dataset.PersonShape, SH.targetClass, dataset.Person) in shapes
+
+
+def test_rdfs_inference_accepts_subclass_for_property_domain_and_range() -> None:
+    hierarchical_schema = OntologySchema(
+        namespace=str(EX),
+        classes=(
+            OntologyClass(local_name="Vehicle", uri=str(EX.Vehicle)),
+            OntologyClass(local_name="Car", uri=str(EX.Car)),
+            OntologyClass(local_name="Person", uri=str(EX.Person)),
+        ),
+        datatype_properties=(),
+        object_properties=(
+            ObjectProperty(
+                local_name="owns",
+                uri=str(EX.owns),
+                domain_class="Person",
+                range_class="Vehicle",
+            ),
+        ),
+        subclass_relations=(("Car", "Vehicle"),),
+    )
     data = Graph()
-    data.add((family.child, family.hasFather, family.father))
-    data.add((family.father, family.hasSex, family.Female))
+    data.add((EX.alex, RDF.type, EX.Person))
+    data.add((EX.car_one, RDF.type, EX.Car))
+    data.add((EX.alex, EX.owns, EX.car_one))
 
-    result = run_shacl_validation(data, family_schema)
+    result = run_shacl_validation(data, hierarchical_schema)
 
-    assert result.conforms is False
-    assert any("hasSex" in violation.message for violation in result.violations)
+    assert result.conforms is True

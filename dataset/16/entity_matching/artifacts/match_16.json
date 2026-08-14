@@ -1,0 +1,103 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "dataset/16/originals/extracted_16.ttl",
+  "ground_truth_graph": "dataset/16/originals/ground_truth_16.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/wandering_fires": "http://www.wikidata.org/entity/Q21869977",
+    "http://example.org/extracted/maurice_campbell": "http://www.wikidata.org/entity/Q17353699"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/maurice_campbell",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maurice Campbell",
+          "source": "label"
+        }
+      ],
+      "context": "Maurice Campbell. has birth date: 1919-11-28. has death date: 2014-07-04. inverse has director: Wandering Fires.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q17353699",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maurice Campbell",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maurice Campbell",
+        "extracted_source": "label",
+        "ground_truth_text": "Maurice Campbell",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.9949456453323364,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "context_score": 0.9595658183097839,
+      "graph_score": 0.9797829389572144,
+      "margin": 0.9949456453323364
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wandering_fires",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Wandering Fires",
+          "source": "label"
+        }
+      ],
+      "context": "Wandering Fires. has director: Maurice Campbell. has publication date: 1925.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q21869977",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Wandering Fires",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Wandering Fires",
+        "extracted_source": "label",
+        "ground_truth_text": "Wandering Fires",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.9860101938247681,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "context_score": 0.8880816102027893,
+      "graph_score": 0.9440407752990723,
+      "margin": 0.9860101938247681
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

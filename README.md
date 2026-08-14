@@ -208,15 +208,17 @@ This endpoint returns the history of the iterative improvement process, includin
 Create a `.env` file based on `.env.example`.
 
 ```env
-OPENAI_API_KEY=your_llm_provider_api_key_here
-OPENAI_MODEL=gpt-4o-mini
+DEEPSEEK_API_KEY=
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+DEEPSEEK_MODEL=deepseek-v4-flash
+DEEPSEEK_MAX_TOKENS=8192
 REDIS_URL=redis://redis:6379/0
 DATABASE_URL=sqlite:////app/storage/jobs.db
 LOG_LEVEL=INFO
 MAX_ITERATIONS=10
 WEBHOOK_TIMEOUT_SECONDS=10
 WEBHOOK_MAX_ATTEMPTS=3
-DEFAULT_ONTOLOGY_PATH=ontology/family_extended.ttl
+DEFAULT_ONTOLOGY_PATH=ontology/dataset_ontology.ttl
 ```
 
 SQLite schema upgrades run automatically at API startup. Existing job and iteration

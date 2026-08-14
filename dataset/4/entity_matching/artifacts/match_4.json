@@ -1,0 +1,137 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "dataset/4/originals/extracted_4.ttl",
+  "ground_truth_graph": "dataset/4/originals/ground_truth_4.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/geza_von_bolvary": "http://www.wikidata.org/entity/Q40646",
+    "http://example.org/extracted/wedding_night_in_paradise_1950_film": "http://www.wikidata.org/entity/Q176135"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/wedding_night_in_paradise_1950_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Wedding Night in Paradise (1950 film)",
+          "source": "label"
+        },
+        {
+          "text": "wedding night in paradise 1950 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Wedding Night in Paradise (1950 film). has publication date: 1950.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q176135",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Wedding Night in Paradise (1950 film)",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Wedding Night in Paradise",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Hochzeitsnacht im Paradies",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Wedding Night in Paradise (1950 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Wedding Night in Paradise (1950 film)",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8459131717681885,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.7673051357269287,
+      "graph_score": 0.38365256786346436,
+      "margin": 0.8459131717681885
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/geza_von_bolvary",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Géza Maria von Bolváry-Zahn",
+          "source": "altLabel"
+        },
+        {
+          "text": "Géza von Bolváry",
+          "source": "label"
+        },
+        {
+          "text": "geza von bolvary",
+          "source": "uri"
+        }
+      ],
+      "context": "Géza Maria von Bolváry-Zahn. has birth date: 1897-12-26. has death date: 1961-08-10.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q40646",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Geza von Bolvary",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Géza Maria von Bolváry-Zahn",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Géza von Bolváry",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Geza Maria von Bolvary-Zahn",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Géza Maria von Bolváry-Zahn",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Géza Maria von Bolváry-Zahn",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8090900778770447,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.4727206826210022,
+      "graph_score": 0.2363603413105011,
+      "margin": 0.8090900778770447
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://www.wikidata.org/entity/Q28"
+  ]
+}

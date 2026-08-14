@@ -3,7 +3,8 @@ from __future__ import annotations
 import hashlib
 import re
 
-from rdflib import Graph, Literal, Namespace, URIRef
+from rdflib import BNode, Graph, Literal, Namespace, URIRef
+from rdflib.collection import Collection
 from rdflib.namespace import RDF, XSD
 from rdflib.namespace import SH
 
@@ -18,6 +19,7 @@ _RANGE_TYPE_TO_XSD = {
     "boolean": XSD.boolean,
     "decimal": XSD.decimal,
     "date": XSD.date,
+    "year": XSD.gYear,
 }
 
 
@@ -147,7 +149,6 @@ def _add_datatype_property_shape(
         domain_class=prop.domain_class,
     )
 
-    datatype = _RANGE_TYPE_TO_XSD.get(prop.range_type, XSD.string)
     property_shape = _add_property_constraint(
         graph,
         node_shape=node_shape,
@@ -155,12 +156,25 @@ def _add_datatype_property_shape(
         property_uri=prop.uri,
         constraint="Datatype",
     )
-    graph.add((property_shape, SH.datatype, datatype))
+    if prop.range_type == "date_or_year":
+        alternatives = []
+        for datatype in (XSD.date, XSD.gYear):
+            alternative = BNode()
+            graph.add((alternative, SH.datatype, datatype))
+            alternatives.append(alternative)
+        union_head = BNode()
+        Collection(graph, union_head, alternatives)
+        graph.add((property_shape, SH["or"], union_head))
+        expected = "xsd:date or xsd:gYear"
+    else:
+        datatype = _RANGE_TYPE_TO_XSD.get(prop.range_type, XSD.string)
+        graph.add((property_shape, SH.datatype, datatype))
+        expected = str(datatype)
     graph.add(
         (
             property_shape,
             SH.message,
-            Literal(f"Values of {prop.local_name} must use datatype {datatype}."),
+            Literal(f"Values of {prop.local_name} must use datatype {expected}."),
         )
     )
 

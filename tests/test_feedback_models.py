@@ -279,42 +279,10 @@ def test_plan_enforces_total_operation_limit(monkeypatch) -> None:
         )
 
 
-def test_feedback_json_schema_is_strict_and_has_no_graph_rewrite_field() -> None:
+def test_feedback_uses_json_object_mode_and_has_no_graph_rewrite_field() -> None:
     response_format = build_feedback_response_format()
-    schema = response_format["json_schema"]["schema"]
-    serialized_schema = json.dumps(schema)
+    serialized_schema = json.dumps(FeedbackPlan.model_json_schema())
 
-    assert response_format["type"] == "json_schema"
-    assert response_format["json_schema"]["strict"] is True
+    assert response_format == {"type": "json_object"}
     assert "corrected_graph" not in serialized_schema
     assert "turtle" not in serialized_schema.lower()
-    assert schema.get("type") == "object"
-    assert "anyOf" not in schema
-
-    unsupported_keywords = {
-        "oneOf",
-        "allOf",
-        "not",
-        "dependentRequired",
-        "dependentSchemas",
-        "if",
-        "then",
-        "else",
-        "discriminator",
-        "const",
-    }
-
-    def assert_strict_objects(node: object) -> None:
-        if isinstance(node, dict):
-            assert unsupported_keywords.isdisjoint(node)
-            if node.get("type") == "object":
-                assert node.get("additionalProperties") is False
-                properties = node.get("properties", {})
-                assert set(node.get("required", [])) == set(properties)
-            for value in node.values():
-                assert_strict_objects(value)
-        elif isinstance(node, list):
-            for value in node:
-                assert_strict_objects(value)
-
-    assert_strict_objects(schema)

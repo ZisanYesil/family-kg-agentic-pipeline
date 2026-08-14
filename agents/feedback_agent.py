@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import os
 from typing import Any
 
 import openai
@@ -10,7 +9,8 @@ from openai import APIConnectionError, APITimeoutError, RateLimitError
 from rdflib import Graph
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
-from feedback.models import FeedbackPlan, build_feedback_response_format
+from core.deepseek import completion_options, create_client, get_model
+from feedback.models import FeedbackPlan
 from ontology.schema_loader import OntologySchema
 from utils.rdf import serialize_turtle_graph
 from validation.models import ValidationViolation
@@ -105,7 +105,6 @@ def _create_completion(
     client: "openai.OpenAI",
     model: str,
     system_prompt: str,
-    response_format: dict[str, Any],
     payload: str,
 ) -> Any:
     return client.chat.completions.create(
@@ -114,7 +113,7 @@ def _create_completion(
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": payload},
         ],
-        response_format=response_format,
+        **completion_options(),
     )
 
 
@@ -134,18 +133,16 @@ def feedback_agent(
     if not source_text.strip():
         raise FeedbackAgentError("source_text must not be empty")
 
-    model = os.getenv("OPENAI_MODEL", "gpt-oss:120b")
-    api_client = client or openai.OpenAI(
-        api_key=os.getenv("OPENAI_API_KEY"),
-        base_url=os.getenv("OPENAI_BASE_URL"),
-    )
+    model = get_model()
+    api_client = client or create_client()
 
     try:
         response = _create_completion(
             api_client,
             model,
-            build_feedback_system_prompt(),
-            build_feedback_response_format(),
+            build_feedback_system_prompt()
+            + "\nReturn only one valid JSON object matching this JSON Schema exactly:\n"
+            + json.dumps(FeedbackPlan.model_json_schema(), ensure_ascii=False),
             build_feedback_payload(graph, violations, schema, source_text),
         )
         content = response.choices[0].message.content
@@ -169,10 +166,10 @@ def feedback_agent(
         raise
     except (APIConnectionError, APITimeoutError, RateLimitError) as exc:
         logger.exception("feedback_agent_failed", error=str(exc))
-        raise FeedbackAgentError(f"OpenAI API error after retries exhausted: {exc}") from exc
+        raise FeedbackAgentError(f"DeepSeek API error after retries exhausted: {exc}") from exc
     except openai.OpenAIError as exc:
         logger.exception("feedback_agent_failed", error=str(exc))
-        raise FeedbackAgentError(f"OpenAI API error: {exc}") from exc
+        raise FeedbackAgentError(f"DeepSeek API error: {exc}") from exc
     except Exception as exc:
         logger.exception("feedback_agent_failed", error=str(exc))
         raise FeedbackAgentError(f"Feedback agent failed: {exc}") from exc

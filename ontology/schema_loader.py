@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from typing import Optional
 
 import structlog
-from rdflib import Graph, URIRef
+from rdflib import BNode, Graph, URIRef
 from rdflib.namespace import OWL, RDF, RDFS, XSD
 
 logger = structlog.get_logger(__name__)
@@ -34,7 +34,10 @@ _XSD_TYPE_NAMES = {
     str(XSD.double): "decimal",
     str(XSD.date): "date",
     str(XSD.dateTime): "date",
+    str(XSD.gYear): "year",
 }
+
+_DATE_OR_YEAR_TYPES = {str(XSD.date), str(XSD.gYear)}
 
 
 class OntologySchemaError(Exception):
@@ -85,7 +88,7 @@ class ExcludedObjectProperty:
 
     local_name: str
     uri: str
-    reason: str  # "reasoner_derived" | "superproperty" | "inverse_duplicate"
+    reason: str  # "reasoner_derived" | "inverse_duplicate"
 
 
 @dataclass(frozen=True)
@@ -93,10 +96,13 @@ class OntologySchema:
     namespace: str
     classes: tuple[OntologyClass, ...]
     datatype_properties: tuple[DatatypeProperty, ...]
-    # The final, LLM-ready predicate list: no reasoner-derived properties, no
-    # superproperties, and exactly one direction per inverse pair.
+    # The final, LLM-ready predicate list: no reasoner-derived properties and exactly
+    # one direction per inverse pair. Named superproperties remain assertable because
+    # source data can state them directly and the production pipeline has no mandatory
+    # OWL materialization stage.
     object_properties: tuple[ObjectProperty, ...]
     excluded_object_properties: tuple[ExcludedObjectProperty, ...] = ()
+    subclass_relations: tuple[tuple[str, str], ...] = ()
 
     def class_by_name(self, local_name: str) -> Optional[OntologyClass]:
         for cls in self.classes:
@@ -109,6 +115,37 @@ class OntologySchema:
             prop
             for prop in self.datatype_properties
             if prop.domain_class in (class_local_name, None)
+        )
+
+    def is_class_compatible(self, actual_class: str, expected_class: str) -> bool:
+        """Return whether ``actual_class`` is ``expected_class`` or one of its subtypes."""
+        if actual_class == expected_class:
+            return True
+
+        parents_by_child: dict[str, set[str]] = {}
+        for child, parent in self.subclass_relations:
+            parents_by_child.setdefault(child, set()).add(parent)
+
+        pending = list(parents_by_child.get(actual_class, ()))
+        visited: set[str] = set()
+        while pending:
+            parent = pending.pop()
+            if parent == expected_class:
+                return True
+            if parent in visited:
+                continue
+            visited.add(parent)
+            pending.extend(parents_by_child.get(parent, ()))
+        return False
+
+    def subclasses_of(self, expected_class: str) -> tuple[str, ...]:
+        return tuple(
+            sorted(
+                cls.local_name
+                for cls in self.classes
+                if cls.local_name != expected_class
+                and self.is_class_compatible(cls.local_name, expected_class)
+            )
         )
 
 
@@ -178,6 +215,22 @@ def _load_classes(graph: Graph, namespace: str) -> tuple[OntologyClass, ...]:
     return tuple(sorted(classes, key=lambda c: c.local_name))
 
 
+def _load_subclass_relations(graph: Graph, namespace: str) -> tuple[tuple[str, str], ...]:
+    relations: set[tuple[str, str]] = set()
+    for child, parent in graph.subject_objects(RDFS.subClassOf):
+        child_name = _class_local_name(graph, child, namespace)
+        parent_name = _class_local_name(graph, parent, namespace)
+        if child_name is not None and parent_name is not None and child_name != parent_name:
+            relations.add((child_name, parent_name))
+    for left, right in graph.subject_objects(OWL.equivalentClass):
+        left_name = _class_local_name(graph, left, namespace)
+        right_name = _class_local_name(graph, right, namespace)
+        if left_name is not None and right_name is not None and left_name != right_name:
+            relations.add((left_name, right_name))
+            relations.add((right_name, left_name))
+    return tuple(sorted(relations))
+
+
 def _load_datatype_properties(graph: Graph, namespace: str) -> tuple[DatatypeProperty, ...]:
     properties: list[DatatypeProperty] = []
     seen: set[str] = set()
@@ -194,7 +247,7 @@ def _load_datatype_properties(graph: Graph, namespace: str) -> tuple[DatatypePro
 
         domain_class = _class_local_name(graph, graph.value(subject, RDFS.domain), namespace)
         range_value = graph.value(subject, RDFS.range)
-        range_type = _XSD_TYPE_NAMES.get(str(range_value), "string") if range_value is not None else "string"
+        range_type = _datatype_range_type(graph, range_value)
 
         properties.append(
             DatatypeProperty(
@@ -207,6 +260,19 @@ def _load_datatype_properties(graph: Graph, namespace: str) -> tuple[DatatypePro
             )
         )
     return tuple(sorted(properties, key=lambda p: p.local_name))
+
+
+def _datatype_range_type(graph: Graph, range_value: object) -> str:
+    """Normalize a named XSD datatype or a supported OWL datatype union."""
+    if isinstance(range_value, URIRef):
+        return _XSD_TYPE_NAMES.get(str(range_value), "string")
+    if isinstance(range_value, BNode):
+        union_head = graph.value(range_value, OWL.unionOf)
+        if union_head is not None:
+            union_types = {str(item) for item in graph.items(union_head)}
+            if union_types == _DATE_OR_YEAR_TYPES:
+                return "date_or_year"
+    return "string"
 
 
 def _is_reasoner_derived(graph: Graph, subject: URIRef) -> bool:
@@ -230,21 +296,10 @@ def _build_inverse_map(graph: Graph, namespace: str) -> dict[str, str]:
     return inverse_map
 
 
-def _build_superproperty_names(graph: Graph, namespace: str) -> set[str]:
-    """Local names that appear as the *target* of some rdfs:subPropertyOf
-    triple, i.e. properties that are a generalization of a more specific one."""
-    superproperties: set[str] = set()
-    for _subject, obj in graph.subject_objects(RDFS.subPropertyOf):
-        if isinstance(obj, URIRef) and str(obj).startswith(namespace):
-            superproperties.add(_local_name(obj))
-    return superproperties
-
-
 def _load_object_properties(
     graph: Graph, namespace: str
 ) -> tuple[tuple[ObjectProperty, ...], tuple[ExcludedObjectProperty, ...]]:
     inverse_map = _build_inverse_map(graph, namespace)
-    superproperty_names = _build_superproperty_names(graph, namespace)
 
     raw: dict[str, ObjectProperty] = {}
     reasoner_derived_names: set[str] = set()
@@ -300,12 +355,8 @@ def _load_object_properties(
         if local_name in reasoner_derived_names:
             excluded.append(ExcludedObjectProperty(local_name, prop.uri, "reasoner_derived"))
             continue
-        if local_name in superproperty_names:
-            excluded.append(ExcludedObjectProperty(local_name, prop.uri, "superproperty"))
-            continue
-
         partner_name = prop.inverse_of
-        if partner_name and partner_name in raw and partner_name not in superproperty_names:
+        if partner_name and partner_name in raw:
             pair_key = frozenset({local_name, partner_name})
             if pair_key in resolved_inverse_pairs:
                 continue
@@ -350,6 +401,7 @@ def load_ontology_schema(path: str, *, format: str = "turtle") -> OntologySchema
     try:
         namespace = _infer_namespace(graph)
         classes = _load_classes(graph, namespace)
+        subclass_relations = _load_subclass_relations(graph, namespace)
         datatype_properties = _load_datatype_properties(graph, namespace)
         object_properties, excluded_object_properties = _load_object_properties(graph, namespace)
     except OntologySchemaError:
@@ -372,4 +424,5 @@ def load_ontology_schema(path: str, *, format: str = "turtle") -> OntologySchema
         datatype_properties=datatype_properties,
         object_properties=object_properties,
         excluded_object_properties=excluded_object_properties,
+        subclass_relations=subclass_relations,
     )

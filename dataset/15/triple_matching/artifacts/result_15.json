@@ -1,0 +1,112 @@
+{
+  "inputs": {
+    "extracted": "dataset/15/inference/extracted_reasoned_15.ttl",
+    "ground_truth": "dataset/15/inference/ground_truth_reasoned_15.ttl"
+  },
+  "comparison": "exact RDF term equality after entity canonicalization and independent inference",
+  "matched_triples": [
+    {
+      "subject": "Q303",
+      "predicate": "hasBurialPlace",
+      "object": "Q545360",
+      "subject_uri": "http://www.wikidata.org/entity/Q303",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://www.wikidata.org/entity/Q545360"
+    },
+    {
+      "subject": "Q303",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://www.wikidata.org/entity/Q303",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Q303",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://www.wikidata.org/entity/Q303",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Q545360",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://www.wikidata.org/entity/Q545360",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Q7782748",
+      "predicate": "hasCreator",
+      "object": "Q303",
+      "subject_uri": "http://www.wikidata.org/entity/Q7782748",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://www.wikidata.org/entity/Q303"
+    },
+    {
+      "subject": "Q7782748",
+      "predicate": "hasPerformer",
+      "object": "Q303",
+      "subject_uri": "http://www.wikidata.org/entity/Q7782748",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://www.wikidata.org/entity/Q303"
+    },
+    {
+      "subject": "Q7782748",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://www.wikidata.org/entity/Q7782748",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Q7782748",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://www.wikidata.org/entity/Q7782748",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Q303",
+      "predicate": "hasBirthDate",
+      "object": "\"1935-01-08\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://www.wikidata.org/entity/Q303",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1935-01-08\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Q303",
+      "predicate": "hasDeathDate",
+      "object": "\"1977-08-16\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://www.wikidata.org/entity/Q303",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1977-08-16\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Q7782748",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://www.wikidata.org/entity/Q7782748",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 11,
+    "true_positives": 8,
+    "false_positives": 3,
+    "false_negatives": 0,
+    "precision": 0.7272727272727273,
+    "recall": 1.0,
+    "f1": 0.8421052631578948
+  }
+}

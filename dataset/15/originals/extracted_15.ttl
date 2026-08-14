@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:there_is_so_much_world_to_see a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "There Is So Much World to See" ;
+    onto:hasPerformer data:elvis_presley ;
+    owl:sameAs <http://www.wikidata.org/entity/Q7782748> .
+
+data:elvis_presley a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Elvis Presley" ;
+    onto:hasBirthDate "1935-01-08"^^xsd:date ;
+    onto:hasBurialPlace data:graceland ;
+    onto:hasDeathDate "1977-08-16"^^xsd:date ;
+    skos:altLabel "Elvis",
+        "the King",
+        "the King of Rock and Roll" .
+
+data:graceland a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Graceland" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q545360> .
+

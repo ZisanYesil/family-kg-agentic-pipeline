@@ -1,0 +1,46 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:jean_daniel_pollet a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jean-Daniel Pollet" ;
+    onto:hasBirthDate "1936"^^xsd:gYear ;
+    onto:hasCitizenship data:france ;
+    onto:hasDeathDate "2004"^^xsd:gYear ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1532445> .
+
+data:mediterranee_1963_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Méditerranée (1963 film)" ;
+    onto:hasPublicationDate "1963"^^xsd:gYear ;
+    owl:sameAs <http://www.wikidata.org/entity/Q3332684> ;
+    skos:altLabel "Méditerranée" .
+
+data:move_1970_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Move (1970 film)" ;
+    onto:hasPublicationDate "1970"^^xsd:gYear ;
+    owl:sameAs <http://www.wikidata.org/entity/Q6926481> ;
+    skos:altLabel "Move" .
+
+data:stuart_rosenberg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Stuart Rosenberg" ;
+    onto:hasBirthDate "1927-08-11"^^xsd:date ;
+    onto:hasCitizenship data:united_states ;
+    onto:hasDeathDate "2007-03-15"^^xsd:date ;
+    owl:sameAs <http://www.wikidata.org/entity/Q966078> .
+
+data:france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "America" .
+

@@ -1,0 +1,64 @@
+{
+  "inputs": {
+    "extracted": "dataset/11/inference/extracted_reasoned_11.ttl",
+    "ground_truth": "dataset/11/inference/ground_truth_reasoned_11.ttl"
+  },
+  "comparison": "exact RDF term equality after entity canonicalization and independent inference",
+  "matched_triples": [
+    {
+      "subject": "Q22096841",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://www.wikidata.org/entity/Q22096841",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Q22096841",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://www.wikidata.org/entity/Q22096841",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Q5271466",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://www.wikidata.org/entity/Q5271466",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Q5271466",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://www.wikidata.org/entity/Q5271466",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Q5271466",
+      "predicate": "hasBirthDate",
+      "object": "\"1957\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://www.wikidata.org/entity/Q5271466",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1957\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 5,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 5,
+    "true_positives": 4,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.888888888888889
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "dataset/9/originals/extracted_9.ttl",
+  "ground_truth_graph": "dataset/9/originals/ground_truth_9.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/the_fascist": "http://www.wikidata.org/entity/Q232190",
+    "http://example.org/extracted/luciano_salce": "http://www.wikidata.org/entity/Q697834",
+    "http://example.org/extracted/rome": "http://www.wikidata.org/entity/Q220"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/rome",
+      "extracted_types": [
+        "GeographicLocation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rome",
+          "source": "label"
+        }
+      ],
+      "context": "Rome. inverse has birth place: Pilantra.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q220",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Roma",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "The Eternal City",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Rome Italy",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Rome",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Roman",
+          "source": "id_aliases:demonym"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rome",
+        "extracted_source": "label",
+        "ground_truth_text": "Rome",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.9815927743911743,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "context_score": 0.8527424931526184,
+      "graph_score": 0.9263712167739868,
+      "margin": 0.9815927743911743
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/luciano_salce",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pilantra",
+          "source": "altLabel"
+        },
+        {
+          "text": "Luciano Salce",
+          "source": "label"
+        }
+      ],
+      "context": "Pilantra. has birth date: 1922-09-25. has birth place: Rome. has death date: 1989-12-17.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q697834",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pilantra",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Luciano Salce",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Luciano Salce",
+        "extracted_source": "label",
+        "ground_truth_text": "Luciano Salce",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8746774792671204,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.49741965532302856,
+      "graph_score": 0.4987098276615143,
+      "margin": 0.8746774792671204
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_fascist",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Fascist",
+          "source": "label"
+        }
+      ],
+      "context": "The Fascist. has publication date: 1961.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q232190",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fascist",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Il federale",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "The Fascist",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Fascist",
+        "extracted_source": "label",
+        "ground_truth_text": "The Fascist",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8196646571159363,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.5573172569274902,
+      "graph_score": 0.2786586284637451,
+      "margin": 0.8196646571159363
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

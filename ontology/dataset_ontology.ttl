@@ -1,0 +1,388 @@
+# =============================================================================
+# 2Wiki Biography/Work Ontology  (ex:)
+# Namespace : http://example.org/2wiki-ontology#
+# Version   : 0.3 (extends the flat predicate list in ONTOLOGY.md with a real
+#             class hierarchy, typed domains/ranges, and Wikidata alignment)
+# Source    : Modelling decisions are derived from the 34 Wikidata property
+#             pages supplied (subject type constraint / P2302+Q21503250 and
+#             value-type constraint / P2302+Q21510865 statements), plus the
+#             actual ground-truth triples in dataset/N/originals/ground_truth_N.ttl.
+# =============================================================================
+
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+@prefix wdt:  <http://www.wikidata.org/prop/direct/> .
+
+<http://example.org/2wiki-ontology> a owl:Ontology ;
+    rdfs:label "2Wiki Biography/Work Ontology" ;
+    rdfs:comment "Ontology for the 2WikiMultihopQA-derived biography/creative-work extraction pipeline. Domains and ranges are grounded in Wikidata subject-type and value-type property constraints." ;
+    owl:versionInfo "0.3" .
+
+# =============================================================================
+# 1. CLASS HIERARCHY
+# =============================================================================
+
+## -- Root abstractions ------------------------------------------------------
+
+ex:Agent a owl:Class ;
+    rdfs:label "Agent" ;
+    rdfs:comment "Something capable of creating, directing, performing, founding or authoring: a person or an organization. Introduced because many Wikidata properties accept either a human or an organization as a value. The source does not always distinguish the subtype, so SHACL validates the shared Agent class." .
+
+ex:Person a owl:Class ;
+    rdfs:subClassOf ex:Agent ;
+    rdfs:label "Person" ;
+    rdfs:comment "A real human being. Wikidata's own subject/value-type constraints are broader (they also list 'character', 'deity', 'mythical animal', etc.) because Wikidata models fiction and mythology too; this ontology deliberately narrows to real humans because the 2WikiMultihopQA source data is biographical." ;
+    rdfs:seeAlso wd:Q5 .
+
+ex:Organization a owl:Class ;
+    rdfs:subClassOf ex:Agent ;
+    rdfs:label "Organization" ;
+    rdfs:comment "A collective agent: a company, studio, publisher, institution, or other organized body." ;
+    rdfs:seeAlso wd:Q43229 .
+
+ex:Company a owl:Class ;
+    rdfs:subClassOf ex:Organization ;
+    rdfs:label "Company" ;
+    rdfs:comment "A commercial organization, e.g. a production company, publishing house, or manufacturer." ;
+    rdfs:seeAlso wd:Q783794 .
+
+ex:EducationalInstitution a owl:Class ;
+    rdfs:subClassOf ex:Organization ;
+    rdfs:label "Educational Institution" ;
+    rdfs:comment "A university, school, or other institution someone can be 'educated at'." ;
+    rdfs:seeAlso wd:Q2385804 .
+
+## -- Artifacts / created things ----------------------------------------------
+
+ex:Artifact a owl:Class ;
+    rdfs:label "Artifact" ;
+    rdfs:comment "Something brought into existence by an agent and which can therefore have a country of origin, an inception date, and a creator. Superclass of CreativeWork and Product; introduced for the same union-domain reason as ex:Agent (P495 country-of-origin's Wikidata subject-type constraint spans works, products, foods, languages, etc.)." .
+
+ex:CreativeWork a owl:Class ;
+    rdfs:subClassOf ex:Artifact ;
+    rdfs:label "Creative Work" ;
+    rdfs:comment "A film, book, musical work, TV program, video game, or other authored work." ;
+    rdfs:seeAlso wd:Q386724 .
+
+ex:Film a owl:Class ;
+    rdfs:subClassOf ex:CreativeWork ;
+    rdfs:label "Film" ;
+    rdfs:seeAlso wd:Q11424 .
+
+ex:TelevisionProgram a owl:Class ;
+    rdfs:subClassOf ex:CreativeWork ;
+    rdfs:label "Television Program" ;
+    rdfs:seeAlso wd:Q15416 .
+
+ex:WrittenWork a owl:Class ;
+    rdfs:subClassOf ex:CreativeWork ;
+    rdfs:label "Written Work" ;
+    rdfs:comment "A book, article, or other written/published work." .
+
+ex:MusicalWork a owl:Class ;
+    rdfs:subClassOf ex:CreativeWork ;
+    rdfs:label "Musical Work" .
+
+ex:VideoGame a owl:Class ;
+    rdfs:subClassOf ex:CreativeWork ;
+    rdfs:label "Video Game" ;
+    rdfs:seeAlso wd:Q7889 .
+
+ex:PerformingArtsProduction a owl:Class ;
+    rdfs:subClassOf ex:CreativeWork ;
+    rdfs:label "Performing Arts Production" ;
+    rdfs:comment "A play or other staged production." ;
+    rdfs:seeAlso wd:Q25379 .
+
+ex:Product a owl:Class ;
+    rdfs:subClassOf ex:Artifact ;
+    rdfs:label "Product" ;
+    rdfs:comment "A manufactured, non-creative-work artifact (P176 'manufacturer' subject)." .
+
+## -- Places -------------------------------------------------------------------
+
+ex:Place a owl:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "Any geographic entity: a country, city, building, cemetery, or other location." ;
+    rdfs:seeAlso wd:Q2221906 .
+
+ex:Country a owl:Class ;
+    rdfs:subClassOf ex:Place ;
+    rdfs:label "Country" ;
+    rdfs:seeAlso wd:Q6256 .
+
+ex:GeographicLocation a owl:Class ;
+    rdfs:subClassOf ex:Place ;
+    rdfs:label "Geographic Location" ;
+    rdfs:comment "A non-country place: city, region, building, cemetery, facility, etc. Used as the range of place-of-birth/death/burial when the value is not itself a country." .
+
+## -- Other value classes -------------------------------------------------------
+
+ex:Award a owl:Class ;
+    rdfs:label "Award" ;
+    rdfs:seeAlso wd:Q618779 .
+
+ex:Occupation a owl:Class ;
+    rdfs:label "Occupation" ;
+    rdfs:seeAlso wd:Q12737077 .
+
+ex:CauseOfDeath a owl:Class ;
+    rdfs:label "Cause of Death" ;
+    rdfs:comment "A health problem, accident, or other circumstance of death (P509 value-type constraint)." ;
+    rdfs:seeAlso wd:Q2057971 .
+
+# =============================================================================
+# 2. OBJECT / DATATYPE PROPERTIES
+#    For each: rdfs:domain / rdfs:range reflect the *OWL-safe* (single,
+#    conjunctive) modelling choice; Agent-valued ranges represent cases where
+#    the source does not distinguish a person from an organization.
+# =============================================================================
+
+## -- Family / relationship properties -----------------------------------------
+
+ex:hasParent a owl:ObjectProperty ;
+    rdfs:label "has parent" ;
+    rdfs:comment "Abstract super-property of hasFather / hasMother, introduced because Wikidata's inverse of 'child' (P40) is the single property 'parent', not two separate ones." ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person .
+
+ex:hasFather a owl:ObjectProperty ;
+    rdfs:label "has father" ;
+    rdfs:subPropertyOf ex:hasParent ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    skos:exactMatch wdt:P22 .
+
+ex:hasMother a owl:ObjectProperty ;
+    rdfs:label "has mother" ;
+    rdfs:subPropertyOf ex:hasParent ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    skos:exactMatch wdt:P25 .
+
+ex:hasChild a owl:ObjectProperty ;
+    rdfs:label "has child" ;
+    owl:inverseOf ex:hasParent ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    skos:exactMatch wdt:P40 .
+
+ex:hasSpouse a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:label "has spouse" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Modelled as symmetric because Wikidata's own constraint data lists 'spouse' as its own inverse (a 'symmetric constraint'). Real-world edge cases (e.g. historical/legal asymmetries) are out of scope." ;
+    skos:exactMatch wdt:P26 .
+
+ex:hasSibling a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:label "has sibling" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    skos:exactMatch wdt:P3373 .
+
+## -- Biographical properties ---------------------------------------------------
+
+ex:hasCitizenship a owl:ObjectProperty ;
+    rdfs:label "has citizenship" ;
+    rdfs:subPropertyOf ex:hasCountry ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Country ;
+    skos:exactMatch wdt:P27 .
+
+ex:hasBirthDate a owl:DatatypeProperty ;
+    rdfs:label "has birth date" ;
+    rdfs:domain ex:Person ;
+    rdfs:range [ a rdfs:Datatype ; owl:unionOf ( xsd:date xsd:gYear ) ] ;
+    rdfs:comment "A full date (xsd:date) or, where the source only provides year precision, xsd:gYear." ;
+    skos:exactMatch wdt:P569 .
+
+ex:hasDeathDate a owl:DatatypeProperty ;
+    rdfs:label "has death date" ;
+    rdfs:domain ex:Person ;
+    rdfs:range [ a rdfs:Datatype ; owl:unionOf ( xsd:date xsd:gYear ) ] ;
+    rdfs:comment "A full date (xsd:date) or a year-precision value (xsd:gYear)." ;
+    skos:exactMatch wdt:P570 .
+
+ex:hasBirthPlace a owl:ObjectProperty ;
+    rdfs:label "has birth place" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Place ;
+    skos:exactMatch wdt:P19 .
+
+ex:hasDeathPlace a owl:ObjectProperty ;
+    rdfs:label "has death place" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Place ;
+    skos:exactMatch wdt:P20 .
+
+ex:hasBurialPlace a owl:ObjectProperty ;
+    rdfs:label "has burial place" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Place ;
+    skos:exactMatch wdt:P119 .
+
+ex:hasDetentionPlace a owl:ObjectProperty ;
+    rdfs:label "has detention place" ;
+    rdfs:comment "Place where a person is or was detained. The project narrows P2632's broader subject constraint to real people and its physical/fictional-location value constraint to Place." ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Place ;
+    skos:exactMatch wdt:P2632 .
+
+ex:hasCauseOfDeath a owl:ObjectProperty ;
+    rdfs:label "has cause of death" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:CauseOfDeath ;
+    skos:exactMatch wdt:P509 .
+
+ex:hasOccupation a owl:ObjectProperty ;
+    rdfs:label "has occupation" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Occupation ;
+    skos:exactMatch wdt:P106 .
+
+ex:hasEducatedAt a owl:ObjectProperty ;
+    rdfs:label "has educated at" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:EducationalInstitution ;
+    skos:exactMatch wdt:P69 .
+
+ex:hasStudentOf a owl:ObjectProperty ;
+    rdfs:label "has student of" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "P1066: general mentor/tutor relation (not necessarily academic-doctoral)." ;
+    skos:exactMatch wdt:P1066 .
+
+ex:hasDoctoralAdvisor a owl:ObjectProperty ;
+    rdfs:label "has doctoral advisor" ;
+    rdfs:subPropertyOf ex:hasStudentOf ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Imported as a sub-property of hasStudentOf: Wikidata lists 'student of' among P184's super-properties, and here the domain/range (Person/Person) are identical for both, so the subPropertyOf link is safe to import (contrast with hasBirthDate above)." ;
+    skos:exactMatch wdt:P184 .
+
+ex:hasEmployer a owl:ObjectProperty ;
+    rdfs:label "has employer" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Organization ;
+    skos:exactMatch wdt:P108 .
+
+ex:hasAwardReceived a owl:ObjectProperty ;
+    rdfs:label "has award received" ;
+    rdfs:range ex:Award ;
+    rdfs:comment "Wikidata defines no subject-type constraint for P166. The OWL domain is intentionally omitted because people, organizations and creative works can all receive awards; SHACL targets constrain the project-specific subjects." ;
+    skos:exactMatch wdt:P166 .
+
+## -- Work-authorship / production properties -----------------------------------
+
+ex:hasCreator a owl:ObjectProperty ;
+    rdfs:label "has creator" ;
+    rdfs:domain ex:CreativeWork ;
+    rdfs:range ex:Agent ;
+    skos:exactMatch wdt:P170 .
+
+ex:hasDirector a owl:ObjectProperty ;
+    rdfs:label "has director" ;
+    rdfs:subPropertyOf ex:hasCreator ;
+    rdfs:domain ex:CreativeWork ;
+    rdfs:range ex:Person ;
+    skos:exactMatch wdt:P57 .
+
+ex:hasComposer a owl:ObjectProperty ;
+    rdfs:label "has composer" ;
+    rdfs:subPropertyOf ex:hasCreator ;
+    rdfs:domain ex:MusicalWork ;
+    rdfs:range ex:Person ;
+    skos:exactMatch wdt:P86 .
+
+ex:hasProducer a owl:ObjectProperty ;
+    rdfs:label "has producer" ;
+    rdfs:domain ex:CreativeWork ;
+    rdfs:range ex:Agent ;
+    skos:exactMatch wdt:P162 .
+
+ex:hasPerformer a owl:ObjectProperty ;
+    rdfs:label "has performer" ;
+    rdfs:subPropertyOf ex:hasCreator ;
+    rdfs:domain ex:CreativeWork ;
+    rdfs:range ex:Agent ;
+    skos:exactMatch wdt:P175 .
+
+ex:hasEditor a owl:ObjectProperty ;
+    rdfs:label "has editor" ;
+    rdfs:domain ex:CreativeWork ;
+    rdfs:range ex:Agent ;
+    skos:exactMatch wdt:P98 .
+
+ex:hasPresenter a owl:ObjectProperty ;
+    rdfs:label "has presenter" ;
+    rdfs:domain ex:CreativeWork ;
+    rdfs:range ex:Person ;
+    skos:exactMatch wdt:P371 .
+
+ex:hasPublisher a owl:ObjectProperty ;
+    rdfs:label "has publisher" ;
+    rdfs:domain ex:CreativeWork ;
+    rdfs:range ex:Organization ;
+    skos:exactMatch wdt:P123 .
+
+ex:hasFounder a owl:ObjectProperty ;
+    rdfs:label "has founder" ;
+    rdfs:domain ex:Organization ;
+    rdfs:range ex:Agent ;
+    skos:exactMatch wdt:P112 .
+
+ex:hasManufacturer a owl:ObjectProperty ;
+    rdfs:label "has manufacturer" ;
+    rdfs:domain ex:Product ;
+    rdfs:range ex:Agent ;
+    skos:exactMatch wdt:P176 .
+
+ex:hasPart a owl:ObjectProperty ;
+    rdfs:label "has part" ;
+    rdfs:domain ex:CreativeWork ;
+    rdfs:range ex:CreativeWork ;
+    skos:exactMatch wdt:P527 .
+
+ex:isPartOf a owl:ObjectProperty ;
+    rdfs:label "is part of" ;
+    owl:inverseOf ex:hasPart ;
+    rdfs:domain ex:CreativeWork ;
+    rdfs:range ex:CreativeWork ;
+    skos:exactMatch wdt:P361 .
+
+## -- Location / origin properties ------------------------------------------------
+
+ex:hasCountry a owl:ObjectProperty ;
+    rdfs:label "has country" ;
+    rdfs:range ex:Country ;
+    rdfs:comment "Wikidata defines NO subject-type constraint for P17 ('country'): it is used on places, organizations, events and works alike. We therefore leave rdfs:domain unasserted (any resource may have a country) rather than picking an arbitrary superclass." ;
+    skos:exactMatch wdt:P17 .
+
+ex:hasCountryOfOrigin a owl:ObjectProperty ;
+    rdfs:label "has country of origin" ;
+    rdfs:subPropertyOf ex:hasCountry ;
+    rdfs:domain ex:Artifact ;
+    rdfs:range ex:Country ;
+    skos:exactMatch wdt:P495 .
+
+## -- Temporal properties (kept as siblings, see hasBirthDate comment) ----------
+
+ex:hasPublicationDate a owl:DatatypeProperty ;
+    rdfs:label "has publication date" ;
+    rdfs:domain ex:CreativeWork ;
+    rdfs:range [ a rdfs:Datatype ; owl:unionOf ( xsd:date xsd:gYear ) ] ;
+    rdfs:comment "A full date (xsd:date) or a year-precision value (xsd:gYear)." ;
+    skos:exactMatch wdt:P577 .
+
+ex:hasInception a owl:DatatypeProperty ;
+    rdfs:label "has inception" ;
+    rdfs:domain ex:Organization ;
+    rdfs:range [ a rdfs:Datatype ; owl:unionOf ( xsd:date xsd:gYear ) ] ;
+    rdfs:comment "Domain narrowed to Organization for this ontology's scope (companies, studios). Extend to CreativeWork via an owl:unionOf domain if works-with-no-publication-date need an inception date too." ;
+    skos:exactMatch wdt:P571 .

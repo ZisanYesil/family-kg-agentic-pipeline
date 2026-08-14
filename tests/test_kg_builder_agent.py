@@ -114,6 +114,48 @@ def test_kg_builder_agent_full_example_emits_expected_triples() -> None:
     assert (civic, NS.model, Literal("Civic")) in graph
 
 
+def test_date_or_year_attributes_preserve_rdf_datatypes() -> None:
+    schema = OntologySchema(
+        namespace=NS_URI,
+        classes=(OntologyClass(local_name="Person", uri=str(NS.Person)),),
+        datatype_properties=(
+            DatatypeProperty(
+                local_name="birthDate",
+                uri=str(NS.birthDate),
+                domain_class="Person",
+                range_type="date_or_year",
+            ),
+        ),
+        object_properties=(),
+    )
+
+    full_date = parse_turtle_graph(
+        kg_builder_agent(
+            {
+                "entities": [
+                    _entity("alice", "Person", attributes={"birthDate": "2001-02-03"})
+                ],
+                "relations": [],
+            },
+            schema,
+        )
+    )
+    year_only = parse_turtle_graph(
+        kg_builder_agent(
+            {
+                "entities": [
+                    _entity("bob", "Person", attributes={"birthDate": "1984"})
+                ],
+                "relations": [],
+            },
+            schema,
+        )
+    )
+
+    assert (NS.alice, NS.birthDate, Literal("2001-02-03", datatype=XSD.date)) in full_date
+    assert (NS.bob, NS.birthDate, Literal("1984", datatype=XSD.gYear)) in year_only
+
+
 def test_kg_builder_agent_null_attributes_emit_no_triples() -> None:
     schema = make_schema()
     graph = parse_turtle_graph(

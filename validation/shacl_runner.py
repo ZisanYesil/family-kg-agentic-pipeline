@@ -7,7 +7,7 @@ from typing import Optional
 import structlog
 from pyshacl import validate
 from rdflib import BNode, Graph, Literal, URIRef
-from rdflib.namespace import RDF, SH
+from rdflib.namespace import OWL, RDF, RDFS, SH, XSD
 from rdflib.term import Identifier
 
 from ontology.schema_loader import OntologySchema
@@ -23,13 +23,13 @@ from validation.shacl_generator import generate_shacl_graph
 logger = structlog.get_logger(__name__)
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-FAMILY_ONTOLOGY_NAMESPACE = "http://www.example.com/genealogy.owl#"
+DATASET_ONTOLOGY_NAMESPACE = "http://example.org/2wiki-ontology#"
 
 # Supplements are selected by the ontology's semantic namespace, never by a
 # user-controlled ontology filename. Unregistered ontologies intentionally use only the
 # generated structural shapes.
 HAND_WRITTEN_SHAPES_BY_NAMESPACE: Mapping[str, Path] = {
-    FAMILY_ONTOLOGY_NAMESPACE: PROJECT_ROOT / "shapes" / "family_shapes.ttl",
+    DATASET_ONTOLOGY_NAMESPACE: PROJECT_ROOT / "shapes" / "dataset_shapes.ttl",
 }
 
 _SEVERITY_BY_URI = {
@@ -57,6 +57,47 @@ def _copy_graph(source: Graph, target: Graph) -> None:
         target.bind(prefix, namespace)
     for triple in source:
         target.add(triple)
+
+
+def build_ontology_graph(schema: OntologySchema) -> Graph:
+    """Reconstruct the ontology statements needed by pySHACL's RDFS inference."""
+    graph = Graph()
+    classes_by_name = {item.local_name: URIRef(item.uri) for item in schema.classes}
+
+    for class_uri in classes_by_name.values():
+        graph.add((class_uri, RDF.type, OWL.Class))
+    for child, parent in schema.subclass_relations:
+        child_uri = classes_by_name.get(child)
+        parent_uri = classes_by_name.get(parent)
+        if child_uri is not None and parent_uri is not None:
+            graph.add((child_uri, RDFS.subClassOf, parent_uri))
+
+    datatype_uris = {
+        "integer": XSD.integer,
+        "string": XSD.string,
+        "boolean": XSD.boolean,
+        "decimal": XSD.decimal,
+        "date": XSD.date,
+        "year": XSD.gYear,
+    }
+    for prop in schema.datatype_properties:
+        prop_uri = URIRef(prop.uri)
+        graph.add((prop_uri, RDF.type, OWL.DatatypeProperty))
+        if prop.domain_class in classes_by_name:
+            graph.add((prop_uri, RDFS.domain, classes_by_name[prop.domain_class]))
+        range_uri = datatype_uris.get(prop.range_type)
+        if range_uri is not None:
+            graph.add((prop_uri, RDFS.range, range_uri))
+
+    for prop in schema.object_properties:
+        prop_uri = URIRef(prop.uri)
+        graph.add((prop_uri, RDF.type, OWL.ObjectProperty))
+        if prop.domain_class in classes_by_name:
+            graph.add((prop_uri, RDFS.domain, classes_by_name[prop.domain_class]))
+        if prop.range_class in classes_by_name:
+            graph.add((prop_uri, RDFS.range, classes_by_name[prop.range_class]))
+
+    return graph
 
 
 def build_shacl_graph(
@@ -211,11 +252,13 @@ def run_shacl_validation(
         schema,
         supplement_registry=supplement_registry,
     )
+    ontology_graph = build_ontology_graph(schema)
     try:
         conforms, results_graph, _results_text = validate(
             data_graph=data_graph,
             shacl_graph=shapes_graph,
-            inference=None,
+            ont_graph=ontology_graph,
+            inference="rdfs",
             advanced=True,
             inplace=False,
             abort_on_first=False,

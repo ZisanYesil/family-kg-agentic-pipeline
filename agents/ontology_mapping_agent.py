@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import os
 from dataclasses import dataclass
 from typing import Any
 
@@ -10,6 +9,7 @@ import structlog
 from openai import APIConnectionError, APITimeoutError, RateLimitError
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
+from core.deepseek import JSON_RESPONSE_FORMAT, completion_options, create_client, get_model
 from ontology.schema_loader import ObjectProperty, OntologySchema
 
 logger = structlog.get_logger(__name__)
@@ -42,13 +42,22 @@ def _build_predicate_reference(schema: OntologySchema) -> str:
     stating each predicate's domain/range class constraints (if any) and comment."""
     lines = []
     for prop in schema.object_properties:
-        domain = prop.domain_class or "any type"
-        range_ = prop.range_class or "any type"
+        domain = _class_constraint_text(schema, prop.domain_class)
+        range_ = _class_constraint_text(schema, prop.range_class)
         line = f"- {prop.local_name}: subject must be {domain}, object must be {range_}."
         if prop.comment:
             line += f" {prop.comment}"
         lines.append(line)
     return "\n".join(lines) if lines else "(no object properties declared)"
+
+
+def _class_constraint_text(schema: OntologySchema, class_name: str | None) -> str:
+    if class_name is None:
+        return "any type"
+    subclasses = schema.subclasses_of(class_name)
+    if not subclasses:
+        return class_name
+    return f"{class_name} or a subclass ({', '.join(subclasses)})"
 
 
 def _build_mapping_system_prompt(schema: OntologySchema) -> str:
@@ -76,40 +85,38 @@ same subject and object you were given for that relation.
 """
 
 
-def _mapping_response_format(schema: OntologySchema, relation_count: int) -> dict[str, Any]:
+def _mapping_json_schema(schema: OntologySchema, relation_count: int) -> dict[str, Any]:
     predicate_names = [prop.local_name for prop in schema.object_properties]
     return {
-        "type": "json_schema",
-        "json_schema": {
-            "name": "ontology_mapping",
-            "strict": True,
-            "schema": {
-                "type": "object",
-                "additionalProperties": False,
-                "required": ["mappings"],
-                "properties": {
-                    "mappings": {
-                        "type": "array",
-                        "minItems": relation_count,
-                        "maxItems": relation_count,
-                        "items": {
-                            "type": "object",
-                            "additionalProperties": False,
-                            "required": ["subject", "object", "predicate"],
-                            "properties": {
-                                "subject": {"type": "string"},
-                                "object": {"type": "string"},
-                                "predicate": {
-                                    "type": ["string", "null"],
-                                    "enum": [*predicate_names, None],
-                                },
-                            },
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["mappings"],
+        "properties": {
+            "mappings": {
+                "type": "array",
+                "minItems": relation_count,
+                "maxItems": relation_count,
+                "items": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "required": ["subject", "object", "predicate"],
+                    "properties": {
+                        "subject": {"type": "string"},
+                        "object": {"type": "string"},
+                        "predicate": {
+                            "type": ["string", "null"],
+                            "enum": [*predicate_names, None],
                         },
                     }
                 },
-            },
+            }
         },
     }
+
+
+def _mapping_response_format(schema: OntologySchema, relation_count: int) -> dict[str, str]:
+    _mapping_json_schema(schema, relation_count)
+    return JSON_RESPONSE_FORMAT.copy()
 
 
 def _build_user_payload(entities: list[dict[str, Any]], relations: list[dict[str, Any]]) -> str:
@@ -164,7 +171,6 @@ def _create_completion(
     client: "openai.OpenAI",
     model: str,
     system_prompt: str,
-    response_format: dict[str, Any],
     user_payload: str,
 ) -> Any:
     return client.chat.completions.create(
@@ -173,7 +179,7 @@ def _create_completion(
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_payload},
         ],
-        response_format=response_format,
+        **completion_options(),
     )
 
 
@@ -228,22 +234,24 @@ def ontology_mapping_agent_with_diagnostics(
             )
             return OntologyMappingResult(entities=entities, relations=[], unmapped_relations=unmapped)
 
-        model = os.getenv("OPENAI_MODEL", "gpt-oss:120b")
-        api_client = client or openai.OpenAI(
-            api_key=os.getenv("OPENAI_API_KEY"),
-            base_url=os.getenv("OPENAI_BASE_URL"),
-        )
+        model = get_model()
+        api_client = client or create_client()
 
         user_payload = _build_user_payload(entities, relations)
-        system_prompt = _build_mapping_system_prompt(schema)
-        response_format = _mapping_response_format(schema, len(relations))
+        output_schema = json.dumps(_mapping_json_schema(schema, len(relations)))
+        system_prompt = (
+            _build_mapping_system_prompt(schema)
+            + "\nReturn only one valid JSON object matching this JSON Schema exactly:\n"
+            + output_schema
+        )
+        _mapping_response_format(schema, len(relations))
         logger.info(
-            "ontology_mapping_agent_calling_openai",
+            "ontology_mapping_agent_calling_deepseek",
             relation_count=len(relations),
             model=model,
             ontology_namespace=schema.namespace,
         )
-        response = _create_completion(api_client, model, system_prompt, response_format, user_payload)
+        response = _create_completion(api_client, model, system_prompt, user_payload)
         content = response.choices[0].message.content
         if not isinstance(content, str):
             raise OntologyMappingAgentError("Model returned non-string content")
@@ -281,7 +289,11 @@ def ontology_mapping_agent_with_diagnostics(
             # Only enforce domain/range when the endpoint's type is actually known; an
             # unknown type usually means a dangling reference, which kg_builder_agent
             # already reports separately, so it isn't re-flagged as a mapping problem here.
-            if subject_type is not None and prop.domain_class is not None and subject_type != prop.domain_class:
+            if (
+                subject_type is not None
+                and prop.domain_class is not None
+                and not schema.is_class_compatible(str(subject_type), prop.domain_class)
+            ):
                 unmapped.append(
                     UnmappedRelation(
                         subject=subject_id,
@@ -294,7 +306,11 @@ def ontology_mapping_agent_with_diagnostics(
                     )
                 )
                 continue
-            if object_type is not None and prop.range_class is not None and object_type != prop.range_class:
+            if (
+                object_type is not None
+                and prop.range_class is not None
+                and not schema.is_class_compatible(str(object_type), prop.range_class)
+            ):
                 unmapped.append(
                     UnmappedRelation(
                         subject=subject_id,
@@ -325,10 +341,10 @@ def ontology_mapping_agent_with_diagnostics(
         raise
     except (APIConnectionError, APITimeoutError, RateLimitError) as exc:
         logger.exception("ontology_mapping_agent_failed", error=str(exc))
-        raise OntologyMappingAgentError(f"OpenAI API error after retries exhausted: {exc}") from exc
+        raise OntologyMappingAgentError(f"DeepSeek API error after retries exhausted: {exc}") from exc
     except openai.OpenAIError as exc:
         logger.exception("ontology_mapping_agent_failed", error=str(exc))
-        raise OntologyMappingAgentError(f"OpenAI API error: {exc}") from exc
+        raise OntologyMappingAgentError(f"DeepSeek API error: {exc}") from exc
     except Exception as exc:
         logger.exception("ontology_mapping_agent_failed", error=str(exc))
         raise

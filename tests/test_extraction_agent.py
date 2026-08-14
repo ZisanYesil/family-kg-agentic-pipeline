@@ -9,6 +9,7 @@ import pytest
 
 from agents.extraction_agent import (
     ExtractionAgentError,
+    build_extraction_json_schema,
     build_extraction_response_format,
     build_extraction_system_prompt,
     extraction_agent,
@@ -125,7 +126,7 @@ def test_extraction_agent_extracts_entities_across_mixed_domains(monkeypatch: py
         ],
     }
     client = FakeClient([response_with_content(json.dumps(payload))])
-    monkeypatch.setenv("OPENAI_MODEL", "test-model")
+    monkeypatch.setenv("DEEPSEEK_MODEL", "test-model")
 
     result = extraction_agent(
         "John Doe, also known as Johnny, born in 1900, owns a 2015 Honda Civic.",
@@ -138,6 +139,8 @@ def test_extraction_agent_extracts_entities_across_mixed_domains(monkeypatch: py
     call = client.completions.calls[0]
     assert call["model"] == "test-model"
     assert call["response_format"] == build_extraction_response_format(schema)
+    assert call["max_tokens"] == 8192
+    assert call["extra_body"] == {"thinking": {"type": "disabled"}}
     assert call["messages"][0]["role"] == "system"
     assert "Car" in call["messages"][0]["content"]
     assert "Person" in call["messages"][0]["content"]
@@ -149,8 +152,9 @@ def test_extraction_agent_extracts_entities_across_mixed_domains(monkeypatch: py
 def test_response_format_reflects_schema_classes_and_attributes() -> None:
     schema = make_schema()
     response_format = build_extraction_response_format(schema)
-    entity_schema = response_format["json_schema"]["schema"]["properties"]["entities"]["items"]
+    entity_schema = build_extraction_json_schema(schema)["properties"]["entities"]["items"]
 
+    assert response_format == {"type": "json_object"}
     assert entity_schema["properties"]["type"]["enum"] == ["Car", "Person"]
     assert set(entity_schema["properties"]["attributes"]["required"]) == {
         "birthYear",

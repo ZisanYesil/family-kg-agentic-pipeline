@@ -1,0 +1,375 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "dataset/7/originals/extracted_7.ttl",
+  "ground_truth_graph": "dataset/7/originals/ground_truth_7.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/germany": "http://www.wikidata.org/entity/Q183",
+    "http://example.org/extracted/the_star_of_santa_clara": "http://www.wikidata.org/entity/Q387784",
+    "http://example.org/extracted/united_states": "http://www.wikidata.org/entity/Q30",
+    "http://example.org/extracted/stephen_roberts": "http://www.wikidata.org/entity/Q773242",
+    "http://example.org/extracted/werner_jacobs": "http://www.wikidata.org/entity/Q97799",
+    "http://example.org/extracted/the_ex_mrs_bradford": "http://www.wikidata.org/entity/Q2707484"
+  },
+  "summary": {
+    "extracted_entities": 6,
+    "ground_truth_entities": 6,
+    "matched": 6,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "German",
+          "source": "altLabel"
+        },
+        {
+          "text": "West German",
+          "source": "altLabel"
+        },
+        {
+          "text": "Germany",
+          "source": "label"
+        }
+      ],
+      "context": "German. inverse has citizenship: Werner Jacobs.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q183",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "de",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Bundesrepublik Deutschland",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Germany",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "🇩🇪",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Deutschland",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "FRG",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Federal Republic of Germany",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "BRD",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "GER",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "German",
+          "source": "id_aliases:demonym"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "German",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "German",
+        "ground_truth_source": "id_aliases:demonym"
+      },
+      "final_score": 0.9916200041770935,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.9329600930213928,
+      "graph_score": 0.966480016708374,
+      "margin": 0.6561253368854523
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has citizenship: Stephen Roberts.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q30",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "the US",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "US",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "the USA",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "🇺🇸",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "U.S.A.",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "U.S.",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "America",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "the United States",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "US of A",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "USA",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "the United States of America",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "United States",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "United States of America",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "American",
+          "source": "id_aliases:demonym"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "id_aliases:demonym"
+      },
+      "final_score": 0.9901070594787598,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "context_score": 0.920856237411499,
+      "graph_score": 0.9604281187057495,
+      "margin": 0.6153015494346619
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/werner_jacobs",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Werner Jacobs",
+          "source": "label"
+        }
+      ],
+      "context": "Werner Jacobs. has birth date: 1909. has citizenship: German. has death date: 1999.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q97799",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Werner Jacobs",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Werner Jacobs",
+        "extracted_source": "label",
+        "ground_truth_text": "Werner Jacobs",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8912898302078247,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.6303184628486633,
+      "graph_score": 0.5651592016220093,
+      "margin": 0.5443329811096191
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/stephen_roberts",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stephen Roberts",
+          "source": "label"
+        }
+      ],
+      "context": "Stephen Roberts. has birth date: 1895-11-23. has citizenship: American. has death date: 1936-07-17.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q773242",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stephen Roberts (director)",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Stephen Roberts",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stephen Roberts",
+        "extracted_source": "label",
+        "ground_truth_text": "Stephen Roberts",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8787451386451721,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "context_score": 0.5299616456031799,
+      "graph_score": 0.5149807929992676,
+      "margin": 0.49763402342796326
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_star_of_santa_clara",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Der Stern von Santa Clara",
+          "source": "altLabel"
+        },
+        {
+          "text": "The Star of Santa Clara",
+          "source": "label"
+        }
+      ],
+      "context": "Der Stern von Santa Clara. has publication date: 1958.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q387784",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Der Stern von Santa Clara",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "The Star of Santa Clara",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Der Stern von Santa Clara",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Der Stern von Santa Clara",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.829093337059021,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "context_score": 0.6327465772628784,
+      "graph_score": 0.3163732886314392,
+      "margin": 0.6095312982797623
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_ex_mrs_bradford",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Ex-Mrs. Bradford",
+          "source": "label"
+        },
+        {
+          "text": "the ex mrs bradford",
+          "source": "uri"
+        }
+      ],
+      "context": "The Ex-Mrs. Bradford. has publication date: 1936.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q2707484",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Ex-Mrs. Bradford",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Ex-Mrs. Bradford",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Ex-Mrs. Bradford",
+        "extracted_source": "label",
+        "ground_truth_text": "The Ex-Mrs. Bradford",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8135519027709961,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.5084151029586792,
+      "graph_score": 0.2542075514793396,
+      "margin": 0.5721921920776367
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

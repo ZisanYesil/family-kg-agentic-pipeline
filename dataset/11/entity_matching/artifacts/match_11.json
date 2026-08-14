@@ -1,0 +1,105 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "dataset/11/originals/extracted_11.ttl",
+  "ground_truth_graph": "dataset/11/originals/ground_truth_11.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/alison_skipper": "http://www.wikidata.org/entity/Q22096841",
+    "http://example.org/extracted/diane_gilliam_fisher": "http://www.wikidata.org/entity/Q5271466"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/diane_gilliam_fisher",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Diane Gilliam Fisher",
+          "source": "label"
+        }
+      ],
+      "context": "Diane Gilliam Fisher. has birth date: 1957.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q5271466",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Diane Gilliam Fisher",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Diane Gilliam Fisher",
+        "extracted_source": "label",
+        "ground_truth_text": "Diane Gilliam Fisher",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.9178158044815063,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "context_score": 0.671263575553894,
+      "graph_score": 0.671263575553894,
+      "margin": 0.5525017380714417
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/alison_skipper",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alison Skipper",
+          "source": "label"
+        }
+      ],
+      "context": "Alison Skipper.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q22096841",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alison Skipper",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alison Skipper",
+        "extracted_source": "label",
+        "ground_truth_text": "Alison Skipper",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.915877103805542,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.663508415222168,
+      "graph_score": 0.663508415222168,
+      "margin": 0.5583445131778717
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://www.wikidata.org/entity/Q30"
+  ]
+}

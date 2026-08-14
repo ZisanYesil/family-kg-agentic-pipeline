@@ -1,0 +1,183 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "dataset/2/originals/extracted_2.ttl",
+  "ground_truth_graph": "dataset/2/originals/ground_truth_2.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/charge_it_to_me": "http://example.org/entity/Charge%20It%20to%20Me",
+    "http://example.org/extracted/roy_william_neill": "http://example.org/entity/Roy%20William%20Neill",
+    "http://example.org/extracted/danger_diabolik": "http://example.org/entity/Danger:%20Diabolik",
+    "http://example.org/extracted/mario_bava": "http://example.org/entity/Mario%20Bava"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/mario_bava",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mario Bava",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Mario Bava. has birth date: 1914-07-31. has death date: 1980-04-27.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mario%20Bava",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mario Bava",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mario Bava",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Mario Bava",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.842894971370697,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.7431596517562866,
+      "graph_score": 0.3715798258781433,
+      "margin": 0.6998374164104462
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/roy_william_neill",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Roy William Neill",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Roy William Neill. has birth date: 1887-09-04. has death date: 1946-12-14.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Roy%20William%20Neill",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Roy William Neill",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Roy William Neill",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Roy William Neill",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.840062141418457,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.7204970121383667,
+      "graph_score": 0.36024850606918335,
+      "margin": 0.6711803674697876
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/charge_it_to_me",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charge It to Me",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Charge It to Me. has publication date: 1919.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charge%20It%20to%20Me",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charge It to Me",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charge It to Me",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Charge It to Me",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.827762246131897,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "context_score": 0.6220980286598206,
+      "graph_score": 0.3110490143299103,
+      "margin": 0.7016311436891556
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/danger_diabolik",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Danger: Diabolik",
+          "source": "altLabel"
+        },
+        {
+          "text": "danger diabolik",
+          "source": "uri"
+        }
+      ],
+      "context": "Danger: Diabolik. has publication date: 1968.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Danger:%20Diabolik",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Danger: Diabolik",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Danger: Diabolik",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Danger: Diabolik",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8207694292068481,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.5661554932594299,
+      "graph_score": 0.28307774662971497,
+      "margin": 0.6647664904594421
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

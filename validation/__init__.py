@@ -15,6 +15,7 @@ from validation.models import (
 from validation.shacl_runner import (
     ShaclRunnerError,
     build_shacl_graph,
+    build_ontology_graph,
     normalize_shacl_report,
     run_shacl_validation,
 )
@@ -30,6 +31,7 @@ __all__ = [
     "ViolationSource",
     "ShaclRunnerError",
     "build_shacl_graph",
+    "build_ontology_graph",
     "normalize_shacl_report",
     "run_shacl_validation",
 ]

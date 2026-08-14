@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "dataset/14/originals/extracted_14.ttl",
+  "ground_truth_graph": "dataset/14/originals/ground_truth_14.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/india": "http://www.wikidata.org/entity/Q668",
+    "http://example.org/extracted/borunbabur_bondhu": "http://www.wikidata.org/entity/Q79781208",
+    "http://example.org/extracted/anik_dutta": "http://www.wikidata.org/entity/Q4764595"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/anik_dutta",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anik Dutta",
+          "source": "label"
+        }
+      ],
+      "context": "Anik Dutta.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q4764595",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anik Dutta",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anik Dutta",
+        "extracted_source": "label",
+        "ground_truth_text": "Anik Dutta",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8247594833374023,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.5980759263038635,
+      "graph_score": 0.29903796315193176,
+      "margin": 0.8247594833374023
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/borunbabur_bondhu",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Borunbabur Bondhu",
+          "source": "label"
+        }
+      ],
+      "context": "Borunbabur Bondhu. has country of origin: India. has publication date: 2019.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q79781208",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Borunbabur Bondhu",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Borunbabur Bondhu",
+        "extracted_source": "label",
+        "ground_truth_text": "Borunbabur Bondhu",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8182647824287415,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "context_score": 0.5461186170578003,
+      "graph_score": 0.27305930852890015,
+      "margin": 0.8182647824287415
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/india",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "India",
+          "source": "label"
+        }
+      ],
+      "context": "India. inverse has country of origin: Borunbabur Bondhu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q668",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "IND",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Hindustan",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "IN",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "🇮🇳",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Bharatvarsh",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Republic of India",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "India",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Bharat",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Indian",
+          "source": "id_aliases:demonym"
+        },
+        {
+          "text": "Bharati",
+          "source": "id_aliases:demonym"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "India",
+        "extracted_source": "label",
+        "ground_truth_text": "India",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.7973471879959106,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.3787776827812195,
+      "graph_score": 0.18938884139060974,
+      "margin": 0.7973471879959106
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/bengali_language",
+      "extracted_types": [
+        "Agent"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bengali language",
+          "source": "label"
+        }
+      ],
+      "context": "Bengali language.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

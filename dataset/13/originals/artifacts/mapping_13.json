@@ -1,0 +1,65 @@
+{
+  "entities": [
+    {
+      "id": "neil_young",
+      "label": "Neil Young",
+      "type": "Person",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": "1945-11-12",
+        "hasDeathDate": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "soldier_neil_young_song",
+      "label": "Soldier (Neil Young song)",
+      "type": "MusicalWork",
+      "aliases": [
+        "Soldier"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasInception": null,
+        "hasPublicationDate": "1972"
+      }
+    },
+    {
+      "id": "canada",
+      "label": "Canada",
+      "type": "Country",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "neil_young",
+      "predicate": "hasCitizenship",
+      "object": "canada",
+      "relation_phrase": "is citizen of",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "neil_young",
+      "source_object": "canada",
+      "endpoints_swapped": false
+    }
+  ],
+  "unmapped_relations": [
+    {
+      "subject": "neil_young",
+      "object": "soldier_neil_young_song",
+      "relation_phrase": "performed by",
+      "reason": "subject type 'Person' does not satisfy hasPerformer's expected domain 'CreativeWork'"
+    }
+  ]
+}

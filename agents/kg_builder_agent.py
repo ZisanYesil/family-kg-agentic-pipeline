@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from datetime import date
 from dataclasses import dataclass
 from typing import Any, Optional
 
@@ -41,7 +42,23 @@ _RANGE_TYPE_TO_XSD = {
     "boolean": XSD.boolean,
     "decimal": XSD.decimal,
     "date": XSD.date,
+    "year": XSD.gYear,
 }
+
+_GYEAR_PATTERN = re.compile(r"^-?\d{4,}(?:Z|[+-]\d{2}:\d{2})?$")
+
+
+def _date_or_year_datatype(value: object) -> URIRef:
+    lexical_value = str(value)
+    if _GYEAR_PATTERN.fullmatch(lexical_value):
+        return XSD.gYear
+    try:
+        date.fromisoformat(lexical_value)
+    except ValueError as exc:
+        raise KGBuilderError(
+            f"Value {lexical_value!r} must be an ISO-8601 date or year"
+        ) from exc
+    return XSD.date
 
 
 class KGBuilderError(Exception):
@@ -201,7 +218,11 @@ def _add_entity(
                 # Not declared by this ontology (shouldn't happen given schema-validated
                 # extraction output, but ignore defensively rather than fail late here).
                 continue
-            xsd_type = _RANGE_TYPE_TO_XSD.get(prop.range_type)
+            xsd_type = (
+                _date_or_year_datatype(value)
+                if prop.range_type == "date_or_year"
+                else _RANGE_TYPE_TO_XSD.get(prop.range_type)
+            )
             literal = Literal(value, datatype=xsd_type) if xsd_type is not None else Literal(value)
             graph.add((subject, ns[prop.local_name], literal))
 

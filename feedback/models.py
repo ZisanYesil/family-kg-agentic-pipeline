@@ -201,47 +201,5 @@ class FeedbackPlan(StrictFeedbackModel):
 
 
 def build_feedback_response_format() -> dict[str, Any]:
-    """Return the strict Structured Outputs wrapper used by the feedback LLM call."""
-    schema = _to_openai_structured_outputs_schema(
-        FeedbackPlan.model_json_schema()
-    )
-    return {
-        "type": "json_schema",
-        "json_schema": {
-            "name": "knowledge_graph_feedback_plan",
-            "strict": True,
-            "schema": schema,
-        },
-    }
-
-
-def _to_openai_structured_outputs_schema(node: Any) -> Any:
-    """Translate Pydantic JSON Schema to OpenAI's supported strict subset.
-
-    Pydantic discriminated unions emit ``oneOf`` plus the annotation-only
-    ``discriminator`` keyword. Structured Outputs supports nested ``anyOf`` instead.
-    Literal values are emitted as ``const`` by Pydantic and are represented as
-    single-value enums in the API schema.
-    """
-    if isinstance(node, list):
-        return [
-            _to_openai_structured_outputs_schema(item)
-            for item in node
-        ]
-    if not isinstance(node, dict):
-        return node
-
-    transformed: dict[str, Any] = {}
-    for key, value in node.items():
-        if key in {"discriminator", "title"}:
-            continue
-        if key == "oneOf":
-            transformed["anyOf"] = _to_openai_structured_outputs_schema(value)
-            continue
-        if key == "const":
-            transformed["enum"] = [
-                _to_openai_structured_outputs_schema(value)
-            ]
-            continue
-        transformed[key] = _to_openai_structured_outputs_schema(value)
-    return transformed
+    """Return DeepSeek's supported JSON response mode."""
+    return {"type": "json_object"}

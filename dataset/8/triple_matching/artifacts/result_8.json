@@ -1,0 +1,97 @@
+{
+  "inputs": {
+    "extracted": "dataset/8/inference/extracted_reasoned_8.ttl",
+    "ground_truth": "dataset/8/inference/ground_truth_reasoned_8.ttl"
+  },
+  "comparison": "exact RDF term equality after entity canonicalization and independent inference",
+  "matched_triples": [
+    {
+      "subject": "Engal Aasan",
+      "predicate": "hasPublicationDate",
+      "object": "\"2009\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Engal%20Aasan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"2009\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Engal Aasan",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Engal%20Aasan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Engal Aasan",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Engal%20Aasan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "The Love Route",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/The%20Love%20Route",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "The Love Route",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The%20Love%20Route",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "The Love Route",
+      "predicate": "hasPublicationDate",
+      "object": "\"1915\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/The%20Love%20Route",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1915\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Engal Aasan",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Engal%20Aasan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The Love Route",
+      "predicate": "hasPublicationDate",
+      "object": "\"1915-02-25\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/The%20Love%20Route",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1915-02-25\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "The Love Route",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The%20Love%20Route",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 6,
+    "union_triples_in_scope": 9,
+    "true_positives": 5,
+    "false_positives": 3,
+    "false_negatives": 1,
+    "precision": 0.625,
+    "recall": 0.8333333333333334,
+    "f1": 0.7142857142857143
+  }
+}

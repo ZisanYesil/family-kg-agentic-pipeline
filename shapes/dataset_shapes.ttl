@@ -1,0 +1,222 @@
+# =============================================================================
+# SHACL shapes for the 2Wiki Biography/Work Ontology
+# Validates instance data (e.g. dataset/N/originals/ground_truth_N.ttl) against
+# ontology/dataset_ontology.ttl. Cardinalities below come from Wikidata "single-best-value
+# constraint" markers (P2302/Q52558054) found on: date of birth, date of
+# death, father, mother, place of birth, place of death, inception.
+# Agent-valued properties use ex:Agent because 2Wiki does not always expose
+# whether a creator/performer/producer is a person or an organization.
+# =============================================================================
+
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# -----------------------------------------------------------------------------
+# Person
+# -----------------------------------------------------------------------------
+ex:PersonShape a sh:NodeShape ;
+    sh:targetClass ex:Person ;
+
+    sh:property [
+        sh:path ex:hasFather ;
+        sh:class ex:Person ;
+        sh:maxCount 1 ;                       # single-best-value constraint (WD)
+        sh:severity sh:Warning ;              # "best value", not a hard rule (adoptive/step relations)
+    ] ;
+    sh:property [
+        sh:path ex:hasMother ;
+        sh:class ex:Person ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path ex:hasSpouse ;
+        sh:class ex:Person ;
+    ] ;
+    sh:property [
+        sh:path ex:hasSibling ;
+        sh:class ex:Person ;
+    ] ;
+    sh:property [
+        sh:path ex:hasChild ;
+        sh:class ex:Person ;
+    ] ;
+    sh:property [
+        sh:path ex:hasCitizenship ;
+        sh:class ex:Country ;
+    ] ;
+    sh:property [
+        sh:path ex:hasBirthDate ;
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYear ] ) ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path ex:hasDeathDate ;
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYear ] ) ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path ex:hasBirthPlace ;
+        sh:class ex:Place ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path ex:hasDeathPlace ;
+        sh:class ex:Place ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+    ] ;
+    sh:property [
+        sh:path ex:hasBurialPlace ;
+        sh:class ex:Place ;
+    ] ;
+    sh:property [
+        sh:path ex:hasDetentionPlace ;
+        sh:class ex:Place ;
+    ] ;
+    sh:property [
+        sh:path ex:hasCauseOfDeath ;
+        sh:class ex:CauseOfDeath ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ex:hasOccupation ;
+        sh:class ex:Occupation ;
+    ] ;
+    sh:property [
+        sh:path ex:hasEducatedAt ;
+        sh:class ex:EducationalInstitution ;
+    ] ;
+    sh:property [
+        sh:path ex:hasStudentOf ;
+        sh:class ex:Person ;
+    ] ;
+    sh:property [
+        sh:path ex:hasDoctoralAdvisor ;
+        sh:class ex:Person ;
+    ] ;
+    sh:property [
+        sh:path ex:hasEmployer ;
+        sh:class ex:Organization ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Organization
+# -----------------------------------------------------------------------------
+ex:OrganizationShape a sh:NodeShape ;
+    sh:targetClass ex:Organization ;
+    sh:property [
+        sh:path ex:hasFounder ;
+        sh:class ex:Agent ;
+    ] ;
+    sh:property [
+        sh:path ex:hasCountry ;
+        sh:class ex:Country ;
+    ] ;
+    sh:property [
+        sh:path ex:hasInception ;
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYear ] ) ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# CreativeWork (and subclasses inherit via sh:targetClass on the parent —
+# SHACL does not auto-inherit targets through rdfs:subClassOf by default in
+# all engines, so we target CreativeWork directly; Film/TVProgram/etc. get
+# the same shape because ground-truth data types them as CreativeWork's
+# subclasses, which pySHACL's rdfs-reasoning-enabled validation will honour.)
+# -----------------------------------------------------------------------------
+ex:CreativeWorkShape a sh:NodeShape ;
+    sh:targetClass ex:CreativeWork ;
+
+    sh:property [
+        sh:path ex:hasDirector ;
+        sh:class ex:Person ;
+    ] ;
+    sh:property [
+        sh:path ex:hasComposer ;
+        sh:class ex:Person ;
+    ] ;
+    sh:property [
+        sh:path ex:hasCreator ;
+        sh:class ex:Agent ;
+    ] ;
+    sh:property [
+        sh:path ex:hasProducer ;
+        sh:class ex:Agent ;
+    ] ;
+    sh:property [
+        sh:path ex:hasPerformer ;
+        sh:class ex:Agent ;
+    ] ;
+    sh:property [
+        sh:path ex:hasEditor ;
+        sh:class ex:Agent ;
+    ] ;
+    sh:property [
+        sh:path ex:hasPresenter ;
+        sh:class ex:Person ;
+    ] ;
+    sh:property [
+        sh:path ex:hasPublisher ;
+        sh:class ex:Organization ;
+    ] ;
+    sh:property [
+        sh:path ex:hasPublicationDate ;
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYear ] ) ;
+    ] ;
+    sh:property [
+        sh:path ex:hasCountryOfOrigin ;
+        sh:class ex:Country ;
+    ] ;
+    sh:property [
+        sh:path ex:hasCountry ;
+        sh:class ex:Country ;
+    ] ;
+    sh:property [
+        sh:path ex:hasPart ;
+        sh:class ex:CreativeWork ;
+    ] ;
+    sh:property [
+        sh:path ex:isPartOf ;
+        sh:class ex:CreativeWork ;
+    ] .
+
+# P166 has no subject-type constraint. Target every use of the property and
+# validate only its value, regardless of the subject's class.
+ex:AwardReceivedShape a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasAwardReceived ;
+    sh:property [
+        sh:path ex:hasAwardReceived ;
+        sh:class ex:Award ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Product
+# -----------------------------------------------------------------------------
+ex:ProductShape a sh:NodeShape ;
+    sh:targetClass ex:Product ;
+    sh:property [
+        sh:path ex:hasManufacturer ;
+        sh:class ex:Agent ;
+    ] ;
+    sh:property [
+        sh:path ex:hasCountryOfOrigin ;
+        sh:class ex:Country ;
+    ] .
+
+# -----------------------------------------------------------------------------
+# Place / Country — mostly leaf value-types, but Country itself can nest
+# -----------------------------------------------------------------------------
+ex:PlaceShape a sh:NodeShape ;
+    sh:targetClass ex:Place ;
+    sh:property [
+        sh:path ex:hasCountry ;
+        sh:class ex:Country ;
+    ] .

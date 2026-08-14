@@ -89,6 +89,29 @@ def make_schema_no_object_properties() -> OntologySchema:
     )
 
 
+def make_hierarchical_schema() -> OntologySchema:
+    ns = "http://example.com/hierarchy#"
+    return OntologySchema(
+        namespace=ns,
+        classes=(
+            OntologyClass(local_name="Artifact", uri=ns + "Artifact"),
+            OntologyClass(local_name="CreativeWork", uri=ns + "CreativeWork"),
+            OntologyClass(local_name="Film", uri=ns + "Film"),
+            OntologyClass(local_name="Person", uri=ns + "Person"),
+        ),
+        datatype_properties=(),
+        object_properties=(
+            ObjectProperty(
+                local_name="directedBy",
+                uri=ns + "directedBy",
+                domain_class="CreativeWork",
+                range_class="Person",
+            ),
+        ),
+        subclass_relations=(("CreativeWork", "Artifact"), ("Film", "CreativeWork")),
+    )
+
+
 def _entity(id_: str, type_: str) -> dict:
     return {"id": id_, "label": id_, "type": type_, "aliases": [], "attributes": {}}
 
@@ -120,6 +143,10 @@ def test_direct_predicate_mapping_happy_path() -> None:
     ]
     assert result["entities"] == extraction_result["entities"]
     call = client.completions.calls[0]
+    assert call["model"] == "deepseek-v4-flash"
+    assert call["response_format"] == {"type": "json_object"}
+    assert call["max_tokens"] == 8192
+    assert call["extra_body"] == {"thinking": {"type": "disabled"}}
     assert "owns" in call["messages"][0]["content"]
     assert "Person" in call["messages"][0]["content"]
 
@@ -145,6 +172,31 @@ def test_predicate_incompatible_with_entity_types_is_unmapped() -> None:
     unmapped = result.unmapped_relations[0]
     assert isinstance(unmapped, UnmappedRelation)
     assert "domain" in unmapped.reason
+
+
+def test_subclass_satisfies_predicate_domain_and_is_described_in_prompt() -> None:
+    schema = make_hierarchical_schema()
+    extraction_result = {
+        "entities": [_entity("movie", "Film"), _entity("director", "Person")],
+        "relations": [_relation("movie", "director", "directed by")],
+    }
+    mapping_payload = {
+        "mappings": [
+            {"subject": "movie", "object": "director", "predicate": "directedBy"}
+        ]
+    }
+    client = FakeClient([response_with_content(json.dumps(mapping_payload))])
+
+    result = ontology_mapping_agent_with_diagnostics(
+        extraction_result, schema, client=client
+    )
+
+    assert result.relations == [
+        {"subject": "movie", "predicate": "directedBy", "object": "director"}
+    ]
+    assert result.unmapped_relations == ()
+    prompt = client.completions.calls[0]["messages"][0]["content"]
+    assert "CreativeWork or a subclass (Film)" in prompt
 
 
 def test_unknown_entity_type_does_not_block_mapping() -> None:

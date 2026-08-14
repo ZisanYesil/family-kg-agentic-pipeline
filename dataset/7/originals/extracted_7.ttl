@@ -1,0 +1,47 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:stephen_roberts a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Stephen Roberts" ;
+    onto:hasBirthDate "1895-11-23"^^xsd:date ;
+    onto:hasCitizenship data:united_states ;
+    onto:hasDeathDate "1936-07-17"^^xsd:date ;
+    owl:sameAs <http://www.wikidata.org/entity/Q773242> .
+
+data:the_ex_mrs_bradford a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Ex-Mrs. Bradford" ;
+    onto:hasPublicationDate "1936"^^xsd:gYear ;
+    owl:sameAs <http://www.wikidata.org/entity/Q2707484> .
+
+data:the_star_of_santa_clara a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Star of Santa Clara" ;
+    onto:hasPublicationDate "1958"^^xsd:gYear ;
+    owl:sameAs <http://www.wikidata.org/entity/Q387784> ;
+    skos:altLabel "Der Stern von Santa Clara" .
+
+data:werner_jacobs a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Werner Jacobs" ;
+    onto:hasBirthDate "1909"^^xsd:gYear ;
+    onto:hasCitizenship data:germany ;
+    onto:hasDeathDate "1999"^^xsd:gYear ;
+    owl:sameAs <http://www.wikidata.org/entity/Q97799> .
+
+data:germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German",
+        "West German" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

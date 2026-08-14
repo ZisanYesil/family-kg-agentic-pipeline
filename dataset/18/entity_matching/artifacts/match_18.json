@@ -1,0 +1,111 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "dataset/18/originals/extracted_18.ttl",
+  "ground_truth_graph": "dataset/18/originals/ground_truth_18.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/private_hell_36": "http://www.wikidata.org/entity/Q3514179",
+    "http://example.org/extracted/don_siegel": "http://www.wikidata.org/entity/Q358322"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/don_siegel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Donald Siegel",
+          "source": "altLabel"
+        },
+        {
+          "text": "Don Siegel",
+          "source": "label"
+        }
+      ],
+      "context": "Donald Siegel. has birth date: 1912-10-26. has death date: 1991-04-20.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q358322",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Don Siegel",
+          "source": "id_aliases:alias"
+        },
+        {
+          "text": "Donald \"Don\" Siegel",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Don Siegel",
+        "extracted_source": "label",
+        "ground_truth_text": "Don Siegel",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8383918404579163,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.7071345448493958,
+      "graph_score": 0.3535672724246979,
+      "margin": 0.8383918404579163
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/private_hell_36",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Private Hell 36",
+          "source": "label"
+        }
+      ],
+      "context": "Private Hell 36. has publication date: 1954.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://www.wikidata.org/entity/Q3514179",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Private Hell 36",
+          "source": "id_aliases:alias"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Private Hell 36",
+        "extracted_source": "label",
+        "ground_truth_text": "Private Hell 36",
+        "ground_truth_source": "id_aliases:alias"
+      },
+      "final_score": 0.8193151950836182,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "context_score": 0.5545217990875244,
+      "graph_score": 0.2772608995437622,
+      "margin": 0.8193151950836182
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

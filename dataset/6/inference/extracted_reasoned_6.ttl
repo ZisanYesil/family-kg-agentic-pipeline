@@ -1,0 +1,18 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+wd:Q7285226 a ex:Agent,
+        ex:Person ;
+    ex:hasFather wd:Q5175909 ;
+    ex:hasParent wd:Q5175909 .
+
+wd:Q7320430 a ex:Agent,
+        ex:Person ;
+    ex:hasChild wd:Q5175909 .
+
+wd:Q5175909 a ex:Agent,
+        ex:Person ;
+    ex:hasChild wd:Q7285226 ;
+    ex:hasFather wd:Q7320430 ;
+    ex:hasParent wd:Q7320430 .
+

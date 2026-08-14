@@ -1,0 +1,25 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:raizdos a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Raizdos" ;
+    onto:hasFather data:cotys_iii_odrysian ;
+    owl:sameAs <http://www.wikidata.org/entity/Q7285226> .
+
+data:cotys_iii_odrysian a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Cotys III" ;
+    onto:hasFather data:rhescuporis_i_odrysian ;
+    owl:sameAs <http://www.wikidata.org/entity/Q5175909> ;
+    skos:altLabel "Cotys III (Odrysian)" .
+
+data:rhescuporis_i_odrysian a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Rhescuporis I" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q7320430> ;
+    skos:altLabel "Rhescuporis I (Odrysian)" .
+

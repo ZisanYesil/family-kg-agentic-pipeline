@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 import json
-import os
+import re
+from datetime import date
 from collections.abc import Mapping
 from typing import Any
 
@@ -10,6 +11,7 @@ import structlog
 from openai import APIConnectionError, APITimeoutError, RateLimitError
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
+from core.deepseek import JSON_RESPONSE_FORMAT, completion_options, create_client, get_model
 from ontology.schema_loader import OntologySchema
 
 logger = structlog.get_logger(__name__)
@@ -27,7 +29,25 @@ _RANGE_TYPE_TO_JSON_TYPE = {
     "boolean": "boolean",
     "decimal": "number",
     "date": "string",  # dates are carried as ISO-8601 strings, not a native JSON type
+    "year": "string",
+    "date_or_year": "string",
 }
+
+_GYEAR_PATTERN = re.compile(r"^-?\d{4,}(?:Z|[+-]\d{2}:\d{2})?$")
+
+
+def _is_date(value: Any) -> bool:
+    if not isinstance(value, str):
+        return False
+    try:
+        date.fromisoformat(value)
+    except ValueError:
+        return False
+    return True
+
+
+def _is_year(value: Any) -> bool:
+    return isinstance(value, str) and _GYEAR_PATTERN.fullmatch(value) is not None
 
 # Python-level type checks used when validating attribute values coming back from the
 # model, keyed by the same range_type names as above.
@@ -37,6 +57,8 @@ _RANGE_TYPE_VALIDATORS = {
     "decimal": lambda v: isinstance(v, (int, float)) and not isinstance(v, bool),
     "string": lambda v: isinstance(v, str),
     "date": lambda v: isinstance(v, str),
+    "year": _is_year,
+    "date_or_year": lambda v: _is_date(v) or _is_year(v),
 }
 
 
@@ -122,8 +144,10 @@ entities and relations.
 """
 
 
-def build_extraction_response_format(schema: OntologySchema) -> dict[str, Any]:
-    """Build the structured-output JSON schema for `schema`'s classes and datatype
+def build_extraction_json_schema(schema: OntologySchema) -> dict[str, Any]:
+    """Build the JSON schema included in the prompt for DeepSeek JSON mode.
+
+    The schema describes `schema`'s classes and datatype
     properties. Every entity carries the full set of the ontology's attribute names
     (nullable), since strict JSON Schema cannot branch the property set on "type"; the
     prompt instructs the model to leave attributes for other classes null, and
@@ -140,15 +164,10 @@ def build_extraction_response_format(schema: OntologySchema) -> dict[str, Any]:
     }
 
     return {
-        "type": "json_schema",
-        "json_schema": {
-            "name": "ontology_extraction",
-            "strict": True,
-            "schema": {
-                "type": "object",
-                "additionalProperties": False,
-                "required": ["entities", "relations"],
-                "properties": {
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["entities", "relations"],
+        "properties": {
                     "entities": {
                         "type": "array",
                         "items": {
@@ -191,10 +210,16 @@ def build_extraction_response_format(schema: OntologySchema) -> dict[str, Any]:
                             },
                         },
                     },
-                },
-            },
         },
     }
+
+
+def build_extraction_response_format(schema: OntologySchema) -> dict[str, str]:
+    """Return DeepSeek's supported JSON response mode."""
+    # Keep the early ontology validation previously performed while building the
+    # Structured Outputs wrapper.
+    build_extraction_json_schema(schema)
+    return JSON_RESPONSE_FORMAT.copy()
 
 
 def _validate_object(
@@ -315,7 +340,6 @@ def _create_completion(
     client: "openai.OpenAI",
     model: str,
     system_prompt: str,
-    response_format: dict[str, Any],
     text: str,
 ) -> Any:
     return client.chat.completions.create(
@@ -324,7 +348,7 @@ def _create_completion(
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": text},
         ],
-        response_format=response_format,
+        **completion_options(),
     )
 
 
@@ -349,25 +373,26 @@ def extraction_agent(
         logger.exception("extraction_agent_failed")
         raise
 
-    model = os.getenv("OPENAI_MODEL", "gpt-oss:120b")
-
-    api_client = client or openai.OpenAI(
-        api_key=os.getenv("OPENAI_API_KEY"),
-        base_url=os.getenv("OPENAI_BASE_URL"),
-    )
+    model = get_model()
+    api_client = client or create_client()
 
     try:
-        response_format = build_extraction_response_format(schema)
-        system_prompt = build_extraction_system_prompt(schema)
+        build_extraction_response_format(schema)
+        output_schema = json.dumps(build_extraction_json_schema(schema), ensure_ascii=False)
+        system_prompt = (
+            build_extraction_system_prompt(schema)
+            + "\nReturn only one valid JSON object matching this JSON Schema exactly:\n"
+            + output_schema
+        )
 
         logger.info(
-            "extraction_agent_calling_openai",
+            "extraction_agent_calling_deepseek",
             text_length=len(text),
             model=model,
             ontology_namespace=schema.namespace,
             class_count=len(schema.classes),
         )
-        response = _create_completion(api_client, model, system_prompt, response_format, text)
+        response = _create_completion(api_client, model, system_prompt, text)
         content = response.choices[0].message.content
         if not isinstance(content, str):
             raise ExtractionAgentError("Model returned non-string content")
@@ -388,10 +413,10 @@ def extraction_agent(
         raise
     except (APIConnectionError, APITimeoutError, RateLimitError) as exc:
         logger.exception("extraction_agent_failed", error=str(exc))
-        raise ExtractionAgentError(f"OpenAI API error after retries exhausted: {exc}") from exc
+        raise ExtractionAgentError(f"DeepSeek API error after retries exhausted: {exc}") from exc
     except openai.OpenAIError as exc:
         logger.exception("extraction_agent_failed", error=str(exc))
-        raise ExtractionAgentError(f"OpenAI API error: {exc}") from exc
+        raise ExtractionAgentError(f"DeepSeek API error: {exc}") from exc
     except Exception as exc:
         logger.exception("extraction_agent_failed", error=str(exc))
         raise
