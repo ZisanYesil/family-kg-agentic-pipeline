@@ -1,0 +1,547 @@
+# SHACL shapes for the 2Wiki Biography/Work Ontology.
+#
+# GENERATED FILE -- do not hand-edit. Regenerate with:
+#     python ontology/generate_shacl_shapes.py
+# after any change to ontology.ttl.
+#
+# Design notes
+# ------------
+# * One sh:NodeShape per declared property, targeted with sh:targetSubjectsOf
+#   so it fires on real assertions (including ones inferred by RDFS
+#   subPropertyOf entailment, since run_agent_pipeline.py validates with
+#   pyshacl inference="rdfs").
+# * Deliberately NO sh:class check against a property's own rdfs:domain/range.
+#   run_agent_pipeline.py always validates with inference="rdfs" and passes
+#   ontology.ttl (which carries those very rdfs:domain/rdfs:range triples) as
+#   ont_graph. RDFS entailment (rules rdfs2/rdfs3) means any subject/object of
+#   a property is automatically inferred to have that property's declared
+#   domain/range type *regardless of what was actually asserted* -- so an
+#   sh:class shape tied to the same class would always pass, catching nothing.
+#   Verified empirically: an Organization wrongly given ex:hasDeathDate, and
+#   ex:hasSpouse wrongly pointing at a Country, both validate as conformant
+#   under inference="rdfs" despite being real domain/range violations, and
+#   both correctly fail under inference=None. Domain/range compatibility is
+#   instead enforced directly in kg_builder_agent.py._validate_extractions
+#   before any Turtle is written, so no coverage gap results from omitting it
+#   here -- but a hand-added sh:class shape here would be misleading, since it
+#   would look like a live check while doing nothing under how this project
+#   actually invokes pyshacl.
+# * sh:nodeKind (sh:IRI / sh:Literal) is unaffected by that entailment and
+#   still catches a value of the wrong RDF term kind for a property.
+# * sh:datatype / sh:or (datatype properties) is likewise unaffected and
+#   still catches malformed or wrongly-typed literals.
+# * sh:maxCount 1 is added only for properties judged genuinely single-valued
+#   in the real world (hasBirthDate, hasBirthPlace, hasBurialPlace, hasCauseOfDeath, hasCountryOfOrigin, hasDeathDate, hasDeathPlace, hasDoctoralAdvisor, hasFather, hasInception, hasMother, hasPublicationDate); see
+#   generate_shacl_shapes.py:MAX_COUNT_ONE. No property in ontology.ttl is
+#   currently declared owl:FunctionalProperty, so this list is a project-level
+#   judgement call layered on top, not something derived from the ontology
+#   file automatically.
+# * This is intentionally an *open* shapes file (no sh:closed): kg_builder_agent.py
+#   already rejects unknown attributes/predicates and domain/range mismatches
+#   in Python before any Turtle is written, so SHACL's job here is to catch what
+#   that layer doesn't -- cardinality, literal datatype well-formedness, and a
+#   second independent check on object-property value types.
+
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# 0. GENERIC ENTITY SHAPE
+# ------------------------------------------------------------------
+# Every individual kg_builder_agent produces is typed with owl:NamedIndividual
+# alongside its domain class (see kg_builder_agent._add_entity). This is a
+# lightweight sanity check that survives even hand-edited or reasoner-derived
+# graphs: every named individual must carry at least one rdf:type from this
+# ontology's own class hierarchy.
+ex:NamedIndividualShape
+    a sh:NodeShape ;
+    sh:targetClass owl:NamedIndividual ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:minCount 1 ;
+        sh:message "owl:NamedIndividual must also have at least one rdf:type from the ontology's class hierarchy" ;
+    ] .
+
+# 1. OBJECT PROPERTY SHAPES (41)
+# ------------------------------------------------------------------
+ex:hasAwardReceivedShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasAwardReceived ;
+    sh:property [
+        sh:path ex:hasAwardReceived ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has award received" ;
+        sh:message "ex:hasAwardReceived value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasBirthPlaceShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasBirthPlace ;
+    sh:property [
+        sh:path ex:hasBirthPlace ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:name "has birth place" ;
+        sh:message "ex:hasBirthPlace value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasBrotherShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasBrother ;
+    sh:property [
+        sh:path ex:hasBrother ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has brother" ;
+        sh:message "ex:hasBrother value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasBurialPlaceShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasBurialPlace ;
+    sh:property [
+        sh:path ex:hasBurialPlace ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:name "has burial place" ;
+        sh:message "ex:hasBurialPlace value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasCauseOfDeathShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasCauseOfDeath ;
+    sh:property [
+        sh:path ex:hasCauseOfDeath ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:name "has cause of death" ;
+        sh:message "ex:hasCauseOfDeath value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasChildShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasChild ;
+    sh:property [
+        sh:path ex:hasChild ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has child" ;
+        sh:message "ex:hasChild value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasCitizenshipShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasCitizenship ;
+    sh:property [
+        sh:path ex:hasCitizenship ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has citizenship" ;
+        sh:message "ex:hasCitizenship value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasComposerShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasComposer ;
+    sh:property [
+        sh:path ex:hasComposer ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has composer" ;
+        sh:message "ex:hasComposer value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasCountryShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasCountry ;
+    sh:property [
+        sh:path ex:hasCountry ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has country" ;
+        sh:message "ex:hasCountry value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasCountryOfOriginShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasCountryOfOrigin ;
+    sh:property [
+        sh:path ex:hasCountryOfOrigin ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:name "has country of origin" ;
+        sh:message "ex:hasCountryOfOrigin value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasCreatorShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasCreator ;
+    sh:property [
+        sh:path ex:hasCreator ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has creator" ;
+        sh:message "ex:hasCreator value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasDaughterShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasDaughter ;
+    sh:property [
+        sh:path ex:hasDaughter ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has daughter" ;
+        sh:message "ex:hasDaughter value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasDeathPlaceShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasDeathPlace ;
+    sh:property [
+        sh:path ex:hasDeathPlace ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:name "has death place" ;
+        sh:message "ex:hasDeathPlace value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasDetentionPlaceShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasDetentionPlace ;
+    sh:property [
+        sh:path ex:hasDetentionPlace ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has detention place" ;
+        sh:message "ex:hasDetentionPlace value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasDirectorShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasDirector ;
+    sh:property [
+        sh:path ex:hasDirector ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has director" ;
+        sh:message "ex:hasDirector value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasDoctoralAdvisorShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasDoctoralAdvisor ;
+    sh:property [
+        sh:path ex:hasDoctoralAdvisor ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:name "has doctoral advisor" ;
+        sh:message "ex:hasDoctoralAdvisor value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasEditorShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasEditor ;
+    sh:property [
+        sh:path ex:hasEditor ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has editor" ;
+        sh:message "ex:hasEditor value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasEducatedAtShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasEducatedAt ;
+    sh:property [
+        sh:path ex:hasEducatedAt ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has educated at" ;
+        sh:message "ex:hasEducatedAt value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasEmployerShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasEmployer ;
+    sh:property [
+        sh:path ex:hasEmployer ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has employer" ;
+        sh:message "ex:hasEmployer value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasFatherShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasFather ;
+    sh:property [
+        sh:path ex:hasFather ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:name "has father" ;
+        sh:message "ex:hasFather value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasFounderShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasFounder ;
+    sh:property [
+        sh:path ex:hasFounder ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has founder" ;
+        sh:message "ex:hasFounder value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasManufacturerShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasManufacturer ;
+    sh:property [
+        sh:path ex:hasManufacturer ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has manufacturer" ;
+        sh:message "ex:hasManufacturer value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasMotherShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasMother ;
+    sh:property [
+        sh:path ex:hasMother ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:name "has mother" ;
+        sh:message "ex:hasMother value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasNationalityShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasNationality ;
+    sh:property [
+        sh:path ex:hasNationality ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has nationality" ;
+        sh:message "ex:hasNationality value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasOccupationShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasOccupation ;
+    sh:property [
+        sh:path ex:hasOccupation ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has occupation" ;
+        sh:message "ex:hasOccupation value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasParentShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasParent ;
+    sh:property [
+        sh:path ex:hasParent ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has parent" ;
+        sh:message "ex:hasParent value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasPartShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasPart ;
+    sh:property [
+        sh:path ex:hasPart ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has part" ;
+        sh:message "ex:hasPart value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasPerformerShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasPerformer ;
+    sh:property [
+        sh:path ex:hasPerformer ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has performer" ;
+        sh:message "ex:hasPerformer value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasPresenterShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasPresenter ;
+    sh:property [
+        sh:path ex:hasPresenter ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has presenter" ;
+        sh:message "ex:hasPresenter value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasProducerShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasProducer ;
+    sh:property [
+        sh:path ex:hasProducer ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has producer" ;
+        sh:message "ex:hasProducer value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasPublisherShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasPublisher ;
+    sh:property [
+        sh:path ex:hasPublisher ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has publisher" ;
+        sh:message "ex:hasPublisher value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasSiblingShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasSibling ;
+    sh:property [
+        sh:path ex:hasSibling ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has sibling" ;
+        sh:message "ex:hasSibling value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasSisterShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasSister ;
+    sh:property [
+        sh:path ex:hasSister ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has sister" ;
+        sh:message "ex:hasSister value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasSonShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasSon ;
+    sh:property [
+        sh:path ex:hasSon ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has son" ;
+        sh:message "ex:hasSon value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasSpouseShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasSpouse ;
+    sh:property [
+        sh:path ex:hasSpouse ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has spouse" ;
+        sh:message "ex:hasSpouse value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:hasStudentOfShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasStudentOf ;
+    sh:property [
+        sh:path ex:hasStudentOf ;
+        sh:nodeKind sh:IRI ;
+        sh:name "has student of" ;
+        sh:message "ex:hasStudentOf value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:isBrotherOfShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:isBrotherOf ;
+    sh:property [
+        sh:path ex:isBrotherOf ;
+        sh:nodeKind sh:IRI ;
+        sh:name "is brother of" ;
+        sh:message "ex:isBrotherOf value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:isDaughterOfShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:isDaughterOf ;
+    sh:property [
+        sh:path ex:isDaughterOf ;
+        sh:nodeKind sh:IRI ;
+        sh:name "is daughter of" ;
+        sh:message "ex:isDaughterOf value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:isPartOfShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:isPartOf ;
+    sh:property [
+        sh:path ex:isPartOf ;
+        sh:nodeKind sh:IRI ;
+        sh:name "is part of" ;
+        sh:message "ex:isPartOf value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:isSisterOfShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:isSisterOf ;
+    sh:property [
+        sh:path ex:isSisterOf ;
+        sh:nodeKind sh:IRI ;
+        sh:name "is sister of" ;
+        sh:message "ex:isSisterOf value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+ex:isSonOfShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:isSonOf ;
+    sh:property [
+        sh:path ex:isSonOf ;
+        sh:nodeKind sh:IRI ;
+        sh:name "is son of" ;
+        sh:message "ex:isSonOf value must be an IRI of the declared range/cardinality" ;
+    ] .
+
+# 2. DATATYPE PROPERTY SHAPES (5)
+# ------------------------------------------------------------------
+ex:hasBirthDateShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasBirthDate ;
+    sh:property [
+        sh:path ex:hasBirthDate ;
+        sh:nodeKind sh:Literal ;
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYear ] ) ;
+        sh:maxCount 1 ;
+        sh:name "has birth date" ;
+        sh:message "ex:hasBirthDate value must be a literal of the declared datatype/cardinality" ;
+    ] .
+
+ex:hasDeathDateShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasDeathDate ;
+    sh:property [
+        sh:path ex:hasDeathDate ;
+        sh:nodeKind sh:Literal ;
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYear ] ) ;
+        sh:maxCount 1 ;
+        sh:name "has death date" ;
+        sh:message "ex:hasDeathDate value must be a literal of the declared datatype/cardinality" ;
+    ] .
+
+ex:hasDemonymShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasDemonym ;
+    sh:property [
+        sh:path ex:hasDemonym ;
+        sh:nodeKind sh:Literal ;
+        sh:datatype xsd:string ;
+        sh:name "has demonym" ;
+        sh:message "ex:hasDemonym value must be a literal of the declared datatype/cardinality" ;
+    ] .
+
+ex:hasInceptionShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasInception ;
+    sh:property [
+        sh:path ex:hasInception ;
+        sh:nodeKind sh:Literal ;
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYear ] ) ;
+        sh:maxCount 1 ;
+        sh:name "has inception" ;
+        sh:message "ex:hasInception value must be a literal of the declared datatype/cardinality" ;
+    ] .
+
+ex:hasPublicationDateShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ex:hasPublicationDate ;
+    sh:property [
+        sh:path ex:hasPublicationDate ;
+        sh:nodeKind sh:Literal ;
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYear ] ) ;
+        sh:maxCount 1 ;
+        sh:name "has publication date" ;
+        sh:message "ex:hasPublicationDate value must be a literal of the declared datatype/cardinality" ;
+    ] .

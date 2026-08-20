@@ -1,14 +1,3 @@
-# =============================================================================
-# 2Wiki Biography/Work Ontology  (ex:)
-# Namespace : http://example.org/2wiki-ontology#
-# Version   : 0.3 (extends the flat predicate list in ONTOLOGY.md with a real
-#             class hierarchy, typed domains/ranges, and Wikidata alignment)
-# Source    : Modelling decisions are derived from the 34 Wikidata property
-#             pages supplied (subject type constraint / P2302+Q21503250 and
-#             value-type constraint / P2302+Q21510865 statements), plus the
-#             actual ground-truth triples in dataset/N/originals/ground_truth_N.ttl.
-# =============================================================================
-
 @prefix ex:   <http://example.org/2wiki-ontology#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -21,11 +10,19 @@
 <http://example.org/2wiki-ontology> a owl:Ontology ;
     rdfs:label "2Wiki Biography/Work Ontology" ;
     rdfs:comment "Ontology for the 2WikiMultihopQA-derived biography/creative-work extraction pipeline. Domains and ranges are grounded in Wikidata subject-type and value-type property constraints." ;
-    owl:versionInfo "0.3" .
+    owl:versionInfo "0.6" .
 
-# =============================================================================
+# 0. ANNOTATION PROPERTIES
+
+ex:directPhrase a owl:AnnotationProperty ;
+    rdfs:label "direct phrase" ;
+    rdfs:comment "A short canonical phrase (as it would appear in extracted relation_phrase text) indicating this predicate should be asserted subject->object as declared, e.g. 'director of' for hasDirector. Used by the ontology mapping agent for deterministic phrase matching before falling back to the LLM." .
+
+ex:inversePhrase a owl:AnnotationProperty ;
+    rdfs:label "inverse phrase" ;
+    rdfs:comment "A short canonical phrase indicating this predicate should be asserted with subject/object swapped relative to how the phrase reads, e.g. 'directed by' for hasDirector (object directed subject -> subject hasDirector object). Used by the ontology mapping agent for deterministic phrase matching before falling back to the LLM." .
+
 # 1. CLASS HIERARCHY
-# =============================================================================
 
 ## -- Root abstractions ------------------------------------------------------
 
@@ -45,12 +42,6 @@ ex:Organization a owl:Class ;
     rdfs:comment "A collective agent: a company, studio, publisher, institution, or other organized body." ;
     rdfs:seeAlso wd:Q43229 .
 
-ex:Company a owl:Class ;
-    rdfs:subClassOf ex:Organization ;
-    rdfs:label "Company" ;
-    rdfs:comment "A commercial organization, e.g. a production company, publishing house, or manufacturer." ;
-    rdfs:seeAlso wd:Q783794 .
-
 ex:EducationalInstitution a owl:Class ;
     rdfs:subClassOf ex:Organization ;
     rdfs:label "Educational Institution" ;
@@ -66,7 +57,7 @@ ex:Artifact a owl:Class ;
 ex:CreativeWork a owl:Class ;
     rdfs:subClassOf ex:Artifact ;
     rdfs:label "Creative Work" ;
-    rdfs:comment "A film, book, musical work, TV program, video game, or other authored work." ;
+    rdfs:comment "A film, book, musical work, TV program, video game, or other authored work. Deliberately kept as a single class rather than split into Film/TelevisionProgram/WrittenWork/etc. subclasses: type is not scored by this project's evaluation, and no property in this ontology narrows its domain/range to any such subclass, so a finer split would only add classification risk for the extraction LLM with no downstream benefit. MusicalWork is the one exception kept as a real subclass, since hasComposer's domain is narrowed to it specifically." ;
     rdfs:seeAlso wd:Q386724 .
 
 ex:Film a owl:Class ;
@@ -74,30 +65,10 @@ ex:Film a owl:Class ;
     rdfs:label "Film" ;
     rdfs:seeAlso wd:Q11424 .
 
-ex:TelevisionProgram a owl:Class ;
-    rdfs:subClassOf ex:CreativeWork ;
-    rdfs:label "Television Program" ;
-    rdfs:seeAlso wd:Q15416 .
-
-ex:WrittenWork a owl:Class ;
-    rdfs:subClassOf ex:CreativeWork ;
-    rdfs:label "Written Work" ;
-    rdfs:comment "A book, article, or other written/published work." .
-
 ex:MusicalWork a owl:Class ;
     rdfs:subClassOf ex:CreativeWork ;
-    rdfs:label "Musical Work" .
-
-ex:VideoGame a owl:Class ;
-    rdfs:subClassOf ex:CreativeWork ;
-    rdfs:label "Video Game" ;
-    rdfs:seeAlso wd:Q7889 .
-
-ex:PerformingArtsProduction a owl:Class ;
-    rdfs:subClassOf ex:CreativeWork ;
-    rdfs:label "Performing Arts Production" ;
-    rdfs:comment "A play or other staged production." ;
-    rdfs:seeAlso wd:Q25379 .
+    rdfs:label "Musical Work" ;
+    rdfs:comment "Kept as a distinct CreativeWork subclass because hasComposer's domain is narrowed specifically to MusicalWork; this is the only CreativeWork subclass a property actually depends on." .
 
 ex:Product a owl:Class ;
     rdfs:subClassOf ex:Artifact ;
@@ -116,11 +87,6 @@ ex:Country a owl:Class ;
     rdfs:label "Country" ;
     rdfs:seeAlso wd:Q6256 .
 
-ex:GeographicLocation a owl:Class ;
-    rdfs:subClassOf ex:Place ;
-    rdfs:label "Geographic Location" ;
-    rdfs:comment "A non-country place: city, region, building, cemetery, facility, etc. Used as the range of place-of-birth/death/burial when the value is not itself a country." .
-
 ## -- Other value classes -------------------------------------------------------
 
 ex:Award a owl:Class ;
@@ -136,12 +102,8 @@ ex:CauseOfDeath a owl:Class ;
     rdfs:comment "A health problem, accident, or other circumstance of death (P509 value-type constraint)." ;
     rdfs:seeAlso wd:Q2057971 .
 
-# =============================================================================
+
 # 2. OBJECT / DATATYPE PROPERTIES
-#    For each: rdfs:domain / rdfs:range reflect the *OWL-safe* (single,
-#    conjunctive) modelling choice; Agent-valued ranges represent cases where
-#    the source does not distinguish a person from an organization.
-# =============================================================================
 
 ## -- Family / relationship properties -----------------------------------------
 
@@ -153,6 +115,8 @@ ex:hasParent a owl:ObjectProperty ;
 
 ex:hasFather a owl:ObjectProperty ;
     rdfs:label "has father" ;
+    ex:directPhrase "has father", "father is" ;
+    ex:inversePhrase "father of" ;
     rdfs:subPropertyOf ex:hasParent ;
     rdfs:domain ex:Person ;
     rdfs:range ex:Person ;
@@ -160,6 +124,8 @@ ex:hasFather a owl:ObjectProperty ;
 
 ex:hasMother a owl:ObjectProperty ;
     rdfs:label "has mother" ;
+    ex:directPhrase "has mother", "mother is" ;
+    ex:inversePhrase "mother of" ;
     rdfs:subPropertyOf ex:hasParent ;
     rdfs:domain ex:Person ;
     rdfs:range ex:Person ;
@@ -167,13 +133,58 @@ ex:hasMother a owl:ObjectProperty ;
 
 ex:hasChild a owl:ObjectProperty ;
     rdfs:label "has child" ;
+    ex:directPhrase "has child", "parent of" ;
+    ex:inversePhrase "child of" ;
     owl:inverseOf ex:hasParent ;
     rdfs:domain ex:Person ;
     rdfs:range ex:Person ;
     skos:exactMatch wdt:P40 .
 
+ex:hasSon a owl:ObjectProperty ;
+    rdfs:label "has son" ;
+    ex:directPhrase "has son" ;
+    ex:inversePhrase "son of", "is son of" ;
+    rdfs:subPropertyOf ex:hasChild ;
+    owl:inverseOf ex:isSonOf ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Gendered, directional child-relation as it commonly appears in source text (e.g. 'X's son Y'). Wikidata has no distinct property for this (P40 'child' is ungendered), so this is an ontology-only refinement subsumed under hasChild rather than a Wikidata import." ;
+    skos:closeMatch wdt:P40 .
+
+ex:hasDaughter a owl:ObjectProperty ;
+    rdfs:label "has daughter" ;
+    ex:directPhrase "has daughter" ;
+    ex:inversePhrase "daughter of", "is daughter of" ;
+    rdfs:subPropertyOf ex:hasChild ;
+    owl:inverseOf ex:isDaughterOf ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Gendered, directional child-relation as it commonly appears in source text (e.g. 'X's daughter Y'). Wikidata has no distinct property for this (P40 'child' is ungendered), so this is an ontology-only refinement subsumed under hasChild rather than a Wikidata import." ;
+    skos:closeMatch wdt:P40 .
+
+ex:isSonOf a owl:ObjectProperty ;
+    rdfs:label "is son of" ;
+    ex:directPhrase "son of", "is son of" ;
+    rdfs:subPropertyOf ex:hasParent ;
+    owl:inverseOf ex:hasSon ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Gendered, directional parent-relation as it commonly appears in source text (e.g. 'Y is the son of X'). Mirrors hasSon in the opposite direction so extractions in either phrasing resolve to the same subsumption path." ;
+    skos:closeMatch wdt:P40 .
+
+ex:isDaughterOf a owl:ObjectProperty ;
+    rdfs:label "is daughter of" ;
+    ex:directPhrase "daughter of", "is daughter of" ;
+    rdfs:subPropertyOf ex:hasParent ;
+    owl:inverseOf ex:hasDaughter ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Gendered, directional parent-relation as it commonly appears in source text (e.g. 'Y is the daughter of X'). Mirrors hasDaughter in the opposite direction so extractions in either phrasing resolve to the same subsumption path." ;
+    skos:closeMatch wdt:P40 .
+
 ex:hasSpouse a owl:ObjectProperty , owl:SymmetricProperty ;
     rdfs:label "has spouse" ;
+    ex:directPhrase "has spouse", "spouse of", "married to", "wife of", "husband of" ;
     rdfs:domain ex:Person ;
     rdfs:range ex:Person ;
     rdfs:comment "Modelled as symmetric because Wikidata's own constraint data lists 'spouse' as its own inverse (a 'symmetric constraint'). Real-world edge cases (e.g. historical/legal asymmetries) are out of scope." ;
@@ -181,9 +192,52 @@ ex:hasSpouse a owl:ObjectProperty , owl:SymmetricProperty ;
 
 ex:hasSibling a owl:ObjectProperty , owl:SymmetricProperty ;
     rdfs:label "has sibling" ;
+    ex:directPhrase "has sibling", "sibling of" ;
     rdfs:domain ex:Person ;
     rdfs:range ex:Person ;
     skos:exactMatch wdt:P3373 .
+
+ex:hasBrother a owl:ObjectProperty ;
+    rdfs:label "has brother" ;
+    ex:directPhrase "has brother" ;
+    ex:inversePhrase "brother of", "is brother of" ;
+    rdfs:subPropertyOf ex:hasSibling ;
+    owl:inverseOf ex:isBrotherOf ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Gendered sibling-relation as it commonly appears in source text (e.g. 'X's brother Y'). NOT symmetric like hasSibling: X hasBrother Y does not imply Y hasBrother X, since Y may have a sister rather than a brother. Wikidata has no distinct property for this (P3373 'sibling' is ungendered), so this is an ontology-only refinement subsumed under hasSibling." ;
+    skos:closeMatch wdt:P3373 .
+
+ex:hasSister a owl:ObjectProperty ;
+    rdfs:label "has sister" ;
+    ex:directPhrase "has sister" ;
+    ex:inversePhrase "sister of", "is sister of" ;
+    rdfs:subPropertyOf ex:hasSibling ;
+    owl:inverseOf ex:isSisterOf ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Gendered sibling-relation as it commonly appears in source text (e.g. 'X's sister Y'). NOT symmetric like hasSibling: X hasSister Y does not imply Y hasSister X, since Y may have a brother rather than a sister. Wikidata has no distinct property for this (P3373 'sibling' is ungendered), so this is an ontology-only refinement subsumed under hasSibling." ;
+    skos:closeMatch wdt:P3373 .
+
+ex:isBrotherOf a owl:ObjectProperty ;
+    rdfs:label "is brother of" ;
+    ex:directPhrase "brother of", "is brother of" ;
+    rdfs:subPropertyOf ex:hasSibling ;
+    owl:inverseOf ex:hasBrother ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Mirrors hasBrother in the opposite phrasing direction (e.g. 'Y is X's brother') so extractions in either direction resolve to the same subsumption path." ;
+    skos:closeMatch wdt:P3373 .
+
+ex:isSisterOf a owl:ObjectProperty ;
+    rdfs:label "is sister of" ;
+    ex:directPhrase "sister of", "is sister of" ;
+    rdfs:subPropertyOf ex:hasSibling ;
+    owl:inverseOf ex:hasSister ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Mirrors hasSister in the opposite phrasing direction (e.g. 'Y is X's sister') so extractions in either direction resolve to the same subsumption path." ;
+    skos:closeMatch wdt:P3373 .
 
 ## -- Biographical properties ---------------------------------------------------
 
@@ -194,17 +248,31 @@ ex:hasCitizenship a owl:ObjectProperty ;
     rdfs:range ex:Country ;
     skos:exactMatch wdt:P27 .
 
+ex:hasNationality a owl:ObjectProperty ;
+    rdfs:label "has nationality" ;
+    rdfs:subPropertyOf ex:hasCountry ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Country ;
+    rdfs:comment "Country a person is associated with via a nationality/ethnic-cultural identity, as commonly expressed through a demonym or adjective in source text (e.g. 'X is Indian' -> hasNationality ex:India), rather than through an explicit statement of legal citizenship. Kept as a sibling of hasCitizenship under hasCountry rather than a sub-property of it, since a demonym in text does not always entail legal citizenship (P27); the two often resolve to the same Country in practice but should not be conflated at the ontology level. EXTRACTION NOTE: the object is always the resolved Country entity, never a bare demonym string -- when the text only states an adjectival/demonym form (e.g. 'Indian', 'French'), resolve it to the corresponding ex:Country entity (see ex:hasDemonym) at extraction time and emit hasNationality against that entity." .
+
+ex:hasDemonym a owl:DatatypeProperty ;
+    rdfs:label "has demonym" ;
+    rdfs:domain ex:Country ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The nationality adjective/demonym used to refer to people from this country (e.g. India -> 'Indian'). Mirrors Wikidata's P1549 in the forward direction (Country -> demonym string) so it can support demonym -> Country resolution when extracting ex:hasNationality." ;
+    skos:exactMatch wdt:P1549 .
+
 ex:hasBirthDate a owl:DatatypeProperty ;
     rdfs:label "has birth date" ;
     rdfs:domain ex:Person ;
-    rdfs:range [ a rdfs:Datatype ; owl:unionOf ( xsd:date xsd:gYear ) ] ;
+    rdfs:range rdfs:Literal ;
     rdfs:comment "A full date (xsd:date) or, where the source only provides year precision, xsd:gYear." ;
     skos:exactMatch wdt:P569 .
 
 ex:hasDeathDate a owl:DatatypeProperty ;
     rdfs:label "has death date" ;
     rdfs:domain ex:Person ;
-    rdfs:range [ a rdfs:Datatype ; owl:unionOf ( xsd:date xsd:gYear ) ] ;
+    rdfs:range rdfs:Literal ;
     rdfs:comment "A full date (xsd:date) or a year-precision value (xsd:gYear)." ;
     skos:exactMatch wdt:P570 .
 
@@ -284,13 +352,17 @@ ex:hasCreator a owl:ObjectProperty ;
     rdfs:label "has creator" ;
     rdfs:domain ex:CreativeWork ;
     rdfs:range ex:Agent ;
+    rdfs:comment "Generic/umbrella authorship relation. Prefer the more specific hasDirector/hasComposer/hasProducer/hasPerformer/hasEditor/hasPresenter below whenever the text supports one of those specific roles; use hasCreator only when the text states authorship without specifying which role." ;
     skos:exactMatch wdt:P170 .
 
 ex:hasDirector a owl:ObjectProperty ;
     rdfs:label "has director" ;
     rdfs:subPropertyOf ex:hasCreator ;
-    rdfs:domain ex:CreativeWork ;
+    rdfs:domain ex:Film ;
     rdfs:range ex:Person ;
+    rdfs:comment "The person who directed the work -- oversaw its creative/artistic execution. Distinct from hasProducer (financing/logistics oversight) and hasComposer (music specifically)." ;
+    ex:directPhrase "directed by" ;
+    ex:inversePhrase "director of" , "directed" ;
     skos:exactMatch wdt:P57 .
 
 ex:hasComposer a owl:ObjectProperty ;
@@ -298,12 +370,18 @@ ex:hasComposer a owl:ObjectProperty ;
     rdfs:subPropertyOf ex:hasCreator ;
     rdfs:domain ex:MusicalWork ;
     rdfs:range ex:Person ;
+    rdfs:comment "The person who wrote the music for the work. Applies specifically to musical works, not films or other creative works in general." ;
+    ex:directPhrase "composed by" ;
+    ex:inversePhrase "composer of" ;
     skos:exactMatch wdt:P86 .
 
 ex:hasProducer a owl:ObjectProperty ;
     rdfs:label "has producer" ;
     rdfs:domain ex:CreativeWork ;
     rdfs:range ex:Agent ;
+    rdfs:comment "The agent (person or company) who produced the work -- oversaw financing and logistics. Distinct from hasDirector (creative/artistic oversight)." ;
+    ex:directPhrase "produced by" ;
+    ex:inversePhrase "producer of" ;
     skos:exactMatch wdt:P162 .
 
 ex:hasPerformer a owl:ObjectProperty ;
@@ -311,42 +389,69 @@ ex:hasPerformer a owl:ObjectProperty ;
     rdfs:subPropertyOf ex:hasCreator ;
     rdfs:domain ex:CreativeWork ;
     rdfs:range ex:Agent ;
+    rdfs:comment "An actor, musician, or other performer who appeared in or performed the work -- not the person who directed, produced, or wrote it." ;
+    ex:directPhrase "performed by" , "starred in" ;
+    ex:inversePhrase "performer of" , "starring" ;
     skos:exactMatch wdt:P175 .
 
 ex:hasEditor a owl:ObjectProperty ;
     rdfs:label "has editor" ;
     rdfs:domain ex:CreativeWork ;
     rdfs:range ex:Agent ;
+    rdfs:comment "The agent who edited the work (e.g. film editor, book editor) after its content was created -- not the director, author, or publisher." ;
+    ex:directPhrase "edited by" ;
+    ex:inversePhrase "editor of" ;
     skos:exactMatch wdt:P98 .
 
 ex:hasPresenter a owl:ObjectProperty ;
     rdfs:label "has presenter" ;
     rdfs:domain ex:CreativeWork ;
     rdfs:range ex:Person ;
+    rdfs:comment "The person who hosts or presents the work on-screen/on-air (e.g. a TV host), as distinct from a performer/actor in a scripted role." ;
+    ex:directPhrase "presented by" , "hosted by" ;
+    ex:inversePhrase "presenter of" , "host of" ;
     skos:exactMatch wdt:P371 .
 
 ex:hasPublisher a owl:ObjectProperty ;
     rdfs:label "has publisher" ;
     rdfs:domain ex:CreativeWork ;
     rdfs:range ex:Organization ;
+    rdfs:comment "The organization that published or released the work. Range is Organization, not Person -- distinguishes this from the individual creative roles (director, composer, performer)." ;
+    ex:directPhrase "published by" ;
+    ex:inversePhrase "publisher of" ;
     skos:exactMatch wdt:P123 .
 
 ex:hasFounder a owl:ObjectProperty ;
     rdfs:label "has founder" ;
     rdfs:domain ex:Organization ;
     rdfs:range ex:Agent ;
+    rdfs:comment "The agent who founded/established the organization. Subject is an Organization, not a CreativeWork -- distinguishes this from all the work-authorship properties above." ;
+    ex:directPhrase "founded by" ;
+    ex:inversePhrase "founder of" ;
     skos:exactMatch wdt:P112 .
 
 ex:hasManufacturer a owl:ObjectProperty ;
     rdfs:label "has manufacturer" ;
     rdfs:domain ex:Product ;
     rdfs:range ex:Agent ;
+    rdfs:comment "The agent that manufactured the product. Subject is a Product, not a CreativeWork -- a manufactured item is not an authored/artistic work." ;
+    ex:directPhrase "manufactured by" ;
+    ex:inversePhrase "manufacturer of" ;
     skos:exactMatch wdt:P176 .
 
 ex:hasPart a owl:ObjectProperty ;
     rdfs:label "has part" ;
     rdfs:domain ex:CreativeWork ;
     rdfs:range ex:CreativeWork ;
+    skos:exactMatch wdt:P527 .
+
+ex:hasMember a owl:ObjectProperty ;
+    rdfs:label "has member" ;
+    rdfs:domain ex:Organization ;
+    rdfs:range ex:Person ;
+    rdfs:comment "A person belonging to a group or organization (e.g. a band member). Kept distinct from ex:hasPart: 2wiki's 'has part' relation string is used for group membership (band -> member) rather than creative-work composition, and ex:Person is not a subclass of ex:CreativeWork -- reusing hasPart's CreativeWork/CreativeWork domain/range for this case would make every such ground-truth triple structurally unextractable (a correctly-typed Person object would fail the range check before it could ever be asserted), the same failure mode as hasCauseOfDeath's term-kind mismatch." ;
+    ex:directPhrase "has member" ;
+    ex:inversePhrase "member of" ;
     skos:exactMatch wdt:P527 .
 
 ex:isPartOf a owl:ObjectProperty ;
@@ -366,6 +471,7 @@ ex:hasCountry a owl:ObjectProperty ;
 
 ex:hasCountryOfOrigin a owl:ObjectProperty ;
     rdfs:label "has country of origin" ;
+    ex:directPhrase "country of origin", "originated from", "originates from", "is from" ;
     rdfs:subPropertyOf ex:hasCountry ;
     rdfs:domain ex:Artifact ;
     rdfs:range ex:Country ;
@@ -376,13 +482,13 @@ ex:hasCountryOfOrigin a owl:ObjectProperty ;
 ex:hasPublicationDate a owl:DatatypeProperty ;
     rdfs:label "has publication date" ;
     rdfs:domain ex:CreativeWork ;
-    rdfs:range [ a rdfs:Datatype ; owl:unionOf ( xsd:date xsd:gYear ) ] ;
+    rdfs:range rdfs:Literal ;
     rdfs:comment "A full date (xsd:date) or a year-precision value (xsd:gYear)." ;
     skos:exactMatch wdt:P577 .
 
 ex:hasInception a owl:DatatypeProperty ;
     rdfs:label "has inception" ;
     rdfs:domain ex:Organization ;
-    rdfs:range [ a rdfs:Datatype ; owl:unionOf ( xsd:date xsd:gYear ) ] ;
+    rdfs:range rdfs:Literal ;
     rdfs:comment "Domain narrowed to Organization for this ontology's scope (companies, studios). Extend to CreativeWork via an owl:unionOf domain if works-with-no-publication-date need an inception date too." ;
     skos:exactMatch wdt:P571 .
