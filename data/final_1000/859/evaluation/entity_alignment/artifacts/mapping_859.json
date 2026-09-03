@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/859/originals/extracted_859.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/859/ground_truth_859.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_vasantha_sena_1967": "http://example.org/entity/Vasantha_Sena_1967_film",
+    "http://example.org/extracted/person_george_sherman": "http://example.org/entity/George_Sherman",
+    "http://example.org/extracted/person_b_s_ranga": "http://example.org/entity/B_S_Ranga",
+    "http://example.org/extracted/film_crime_doctors_courage": "http://example.org/entity/The_Crime_Doctor_s_Courage"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_crime_doctors_courage",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Crime Doctor's Courage",
+          "source": "label"
+        },
+        {
+          "text": "film crime doctors courage",
+          "source": "uri"
+        }
+      ],
+      "context": "The Crime Doctor's Courage. has director: George Sherman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Crime_Doctor_s_Courage",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Crime Doctor s Courage",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Crime Doctor's Courage",
+        "extracted_source": "label",
+        "ground_truth_text": "The Crime Doctor s Courage",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9900557398796082,
+      "string_score": 0.982692301273346,
+      "independent_identity_support": true,
+      "context_score": 0.9935458898544312,
+      "graph_score": 0.9967729449272156,
+      "margin": 0.7403748333454132
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_vasantha_sena_1967",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vasantha Sena (1967 film)",
+          "source": "label"
+        },
+        {
+          "text": "film vasantha sena 1967",
+          "source": "uri"
+        }
+      ],
+      "context": "Vasantha Sena (1967 film). has director: B. S. Ranga.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vasantha_Sena_1967_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vasantha Sena 1967 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vasantha Sena (1967 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Vasantha Sena 1967 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9671290516853333,
+      "string_score": 0.981249988079071,
+      "independent_identity_support": true,
+      "context_score": 0.9720844030380249,
+      "graph_score": 0.9860422015190125,
+      "margin": 0.8428927361965179
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_b_s_ranga",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "B. S. Ranga",
+          "source": "label"
+        },
+        {
+          "text": "person b s ranga",
+          "source": "uri"
+        }
+      ],
+      "context": "B. S. Ranga. has death date: 2010-12-12. inverse has director: Vasantha Sena (1967 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/B_S_Ranga",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "B S Ranga",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "B. S. Ranga",
+        "extracted_source": "label",
+        "ground_truth_text": "B S Ranga",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.91572505235672,
+      "string_score": 0.9549999833106995,
+      "independent_identity_support": true,
+      "context_score": 0.9763172268867493,
+      "graph_score": 0.9881585836410522,
+      "margin": 0.7665752172470093
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_george_sherman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George Sherman",
+          "source": "label"
+        },
+        {
+          "text": "person george sherman",
+          "source": "uri"
+        }
+      ],
+      "context": "George Sherman. has death date: 1991-03-15. inverse has director: The Crime Doctor's Courage.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_Sherman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George Sherman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George Sherman",
+        "extracted_source": "label",
+        "ground_truth_text": "George Sherman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.996049702167511,
+      "graph_score": 0.9980248212814331,
+      "margin": 0.7739055007696152
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

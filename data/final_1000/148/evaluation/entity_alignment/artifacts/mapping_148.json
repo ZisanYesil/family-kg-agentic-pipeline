@@ -1,0 +1,172 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/148/originals/extracted_148.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/148/ground_truth_148.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_fernando_poe_jr": "http://example.org/entity/Fernando_Poe_Jr",
+    "http://example.org/extracted/film_ang_padrino": "http://example.org/entity/Ang_Padrino"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_ang_padrino",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ang Padrino",
+          "source": "label"
+        },
+        {
+          "text": "film ang padrino",
+          "source": "uri"
+        }
+      ],
+      "context": "Ang Padrino. has director: Da King.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ang_Padrino",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ang Padrino",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ang Padrino",
+        "extracted_source": "label",
+        "ground_truth_text": "Ang Padrino",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6871112585067749,
+      "graph_score": 0.8435556292533875,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_fernando_poe_jr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Da King",
+          "source": "altLabel"
+        },
+        {
+          "text": "FPJ",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ronald Allan Kelley Poe",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ronwaldo Reyes",
+          "source": "altLabel"
+        },
+        {
+          "text": "Fernando Poe Jr.",
+          "source": "label"
+        },
+        {
+          "text": "person fernando poe jr",
+          "source": "uri"
+        }
+      ],
+      "context": "Da King. has award received: National Artist of the Philippines for Film. inverse has director: Ang Padrino.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fernando_Poe_Jr",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fernando Poe Jr",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fernando Poe Jr.",
+        "extracted_source": "label",
+        "ground_truth_text": "Fernando Poe Jr",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9893553853034973,
+      "string_score": 0.9854838848114014,
+      "independent_identity_support": true,
+      "context_score": 0.774918794631958,
+      "graph_score": 0.887459397315979,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/award_national_artist_philippines_film",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "National Artist of the Philippines for Film",
+          "source": "label"
+        },
+        {
+          "text": "award national artist philippines film",
+          "source": "uri"
+        }
+      ],
+      "context": "National Artist of the Philippines for Film. inverse has award received: Da King.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/National_Artist_of_the_Philippines",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "National Artist of the Philippines",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "National Artist of the Philippines for Film",
+        "extracted_source": "label",
+        "ground_truth_text": "National Artist of the Philippines",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9048277735710144,
+      "name_embedding_score": 0.9267326593399048,
+      "string_score": 0.8759739995002747,
+      "independent_identity_support": true,
+      "context_score": 0.7797436714172363,
+      "graph_score": 0.8898718357086182,
+      "margin": 0.9048277735710144
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

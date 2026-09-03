@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/352/originals/extracted_352.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/352/ground_truth_352.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/johann_adolf_saxe_gotha_altenburg": "http://example.org/entity/Johann_Adolf_of_Saxe_Gotha_Altenburg",
+    "http://example.org/extracted/jules_brunet": "http://example.org/entity/Jules_Brunet"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/johann_adolf_saxe_gotha_altenburg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Johann Adolf of Saxe-Gotha-Altenburg",
+          "source": "label"
+        },
+        {
+          "text": "johann adolf saxe gotha altenburg",
+          "source": "uri"
+        }
+      ],
+      "context": "Johann Adolf of Saxe-Gotha-Altenburg. has birth date: 1721-05-18. has death date: 1799-04-29.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Johann Adolf of Saxe Gotha Altenburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Johann Adolf of Saxe-Gotha-Altenburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Johann Adolf of Saxe Gotha Altenburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.936062216758728,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9313712120056152,
+      "graph_score": 0.9313712120056152,
+      "margin": 0.5947482585906982
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jules_brunet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jules Brunet",
+          "source": "label"
+        }
+      ],
+      "context": "Jules Brunet. has birth date: 1838-01-02. has death date: 1911-08-12.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jules_Brunet",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jules Brunet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jules Brunet",
+        "extracted_source": "label",
+        "ground_truth_text": "Jules Brunet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.6394652724266052
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

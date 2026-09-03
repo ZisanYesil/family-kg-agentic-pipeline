@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:vestire_gli_ignudi_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Vestire gli ignudi" ;
+    onto:hasDirector data:marcello_pagliero_person .
+
+data:marcello_pagliero_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marcello Pagliero" ;
+    onto:hasDeathPlace data:paris_place .
+
+data:paris_place a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Paris" .
+

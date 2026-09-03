@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/912/originals/extracted_912.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/912/ground_truth_912.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/pier_celestino_gilardi": "http://example.org/entity/Pier_Celestino_Gilardi",
+    "http://example.org/extracted/robert_heetmoller": "http://example.org/entity/Robert_Heetmøller"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/pier_celestino_gilardi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pier Celestino Gilardi",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Pier Celestino Gilardi. has birth date: 1837-09-16.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pier_Celestino_Gilardi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pier Celestino Gilardi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pier Celestino Gilardi",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Pier Celestino Gilardi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.6499373316764832
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/robert_heetmoller",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Robert Heetmøller",
+          "source": "altLabel"
+        },
+        {
+          "text": "robert heetmoller",
+          "source": "uri"
+        }
+      ],
+      "context": "Robert Heetmøller. has birth date: 1950-06-28.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Robert_Heetmøller",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Robert Heetmøller",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Robert Heetmøller",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Robert Heetmøller",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6499373316764832
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

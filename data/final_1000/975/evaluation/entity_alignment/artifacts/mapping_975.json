@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/975/originals/extracted_975.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/975/ground_truth_975.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/john_baxter_1896": "http://example.org/entity/John_Baxter",
+    "http://example.org/extracted/agnieszka_holland_1948": "http://example.org/entity/Agnieszka_Holland",
+    "http://example.org/extracted/talking_feet_1937": "http://example.org/entity/Talking_Feet",
+    "http://example.org/extracted/the_third_miracle_1999": "http://example.org/entity/The_Third_Miracle"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/agnieszka_holland_1948",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Agnieszka Holland",
+          "source": "label"
+        },
+        {
+          "text": "agnieszka holland 1948",
+          "source": "uri"
+        }
+      ],
+      "context": "Agnieszka Holland. has birth date: 1948-11-28. inverse has director: The Third Miracle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Agnieszka_Holland",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Agnieszka Holland",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Agnieszka Holland",
+        "extracted_source": "label",
+        "ground_truth_text": "Agnieszka Holland",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7820824086666107
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_baxter_1896",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Baxter",
+          "source": "label"
+        },
+        {
+          "text": "john baxter 1896",
+          "source": "uri"
+        }
+      ],
+      "context": "John Baxter. has birth date: 1896-12-31. has death date: 1975-01-21. inverse has director: Talking Feet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Baxter",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Baxter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Baxter",
+        "extracted_source": "label",
+        "ground_truth_text": "John Baxter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6968405246734619,
+      "graph_score": 0.848420262336731,
+      "margin": 0.2581261396408081
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/talking_feet_1937",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Talking Feet",
+          "source": "label"
+        },
+        {
+          "text": "talking feet 1937",
+          "source": "uri"
+        }
+      ],
+      "context": "Talking Feet. has director: John Baxter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Talking_Feet",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Talking Feet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Talking Feet",
+        "extracted_source": "label",
+        "ground_truth_text": "Talking Feet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999997615814209,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.8604503273963928
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_third_miracle_1999",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Third Miracle",
+          "source": "label"
+        },
+        {
+          "text": "the third miracle 1999",
+          "source": "uri"
+        }
+      ],
+      "context": "The Third Miracle. has director: Agnieszka Holland.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Third_Miracle",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Third Miracle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Third Miracle",
+        "extracted_source": "label",
+        "ground_truth_text": "The Third Miracle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8901350200176239
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/John_Baxter_director"
+  ]
+}

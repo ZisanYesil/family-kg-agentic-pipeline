@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/336/originals/extracted_336.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/336/ground_truth_336.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/down_in_the_dm_song": "http://example.org/entity/Down_in_the_DM",
+    "http://example.org/extracted/welcome_to_st_tropez_song": "http://example.org/entity/Welcome_to_St_Tropez"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/down_in_the_dm_song",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Down in the DM",
+          "source": "label"
+        },
+        {
+          "text": "down in the dm song",
+          "source": "uri"
+        }
+      ],
+      "context": "Down in the DM. has publication date: 2015-10-27.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Down_in_the_DM",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Down in the DM",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Down in the DM",
+        "extracted_source": "label",
+        "ground_truth_text": "Down in the DM",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9516681432723999,
+      "graph_score": 0.9516681432723999,
+      "margin": 0.8263162821531296
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/welcome_to_st_tropez_song",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Welcome to St. Tropez",
+          "source": "label"
+        },
+        {
+          "text": "welcome to st tropez song",
+          "source": "uri"
+        }
+      ],
+      "context": "Welcome to St. Tropez. has publication date: 2011.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Welcome_to_St_Tropez",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Welcome to St Tropez",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Welcome to St. Tropez",
+        "extracted_source": "label",
+        "ground_truth_text": "Welcome to St Tropez",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.98985755443573,
+      "string_score": 0.9890244007110596,
+      "independent_identity_support": true,
+      "context_score": 0.9915139675140381,
+      "graph_score": 0.9915139675140381,
+      "margin": 0.8526225388050079
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

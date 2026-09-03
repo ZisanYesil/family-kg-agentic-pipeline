@@ -1,0 +1,18 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Fredegund> a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "0597-12-08"^^xsd:date ;
+    ex:hasSpouse <http://example.org/entity/Chilperic_I> .
+
+<http://example.org/entity/Aregund> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Chilperic_I> .
+
+<http://example.org/entity/Chilperic_I> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/entity/Aregund> ;
+    ex:hasParent <http://example.org/entity/Aregund> ;
+    ex:hasSpouse <http://example.org/entity/Fredegund> .
+

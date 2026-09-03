@@ -1,0 +1,235 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/700/originals/extracted_700.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/700/ground_truth_700.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/olaf_ittenbach": "http://example.org/entity/Olaf_Ittenbach",
+    "http://example.org/extracted/long_legs_long_fingers_film": "http://example.org/entity/Long_Legs_Long_Fingers",
+    "http://example.org/extracted/germany": "http://example.org/entity/German",
+    "http://example.org/extracted/alfred_vohrer": "http://example.org/entity/Alfred_Vohrer",
+    "http://example.org/extracted/premutos_film": "http://example.org/entity/Premutos_The_Fallen_Angel"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alfred_vohrer",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alfred Vohrer",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Alfred Vohrer. has nationality: German. inverse has director: Long Legs, Long Fingers.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alfred_Vohrer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alfred Vohrer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alfred Vohrer",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Alfred Vohrer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.956414520740509,
+      "graph_score": 0.6448739171028137,
+      "margin": 0.7116095721721649
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "German",
+          "source": "altLabel"
+        },
+        {
+          "text": "Germany",
+          "source": "altLabel"
+        }
+      ],
+      "context": "German. inverse has nationality: Alfred Vohrer. inverse has nationality: Olaf Ittenbach.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/German",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "German",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "German",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "German",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9194087386131287,
+      "graph_score": 0.45970436930656433,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/long_legs_long_fingers_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Long Legs, Long Fingers",
+          "source": "altLabel"
+        },
+        {
+          "text": "long legs long fingers film",
+          "source": "uri"
+        }
+      ],
+      "context": "Long Legs, Long Fingers. has director: Alfred Vohrer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Long_Legs_Long_Fingers",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Long Legs Long Fingers",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Long Legs, Long Fingers",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Long Legs Long Fingers",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9782629013061523,
+      "string_score": 0.9900000095367432,
+      "independent_identity_support": true,
+      "context_score": 0.9920981526374817,
+      "graph_score": 0.9960490465164185,
+      "margin": 0.8476320952177048
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/olaf_ittenbach",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Olaf Ittenbach",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Olaf Ittenbach. has nationality: German. inverse has director: Premutos: The Fallen Angel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Olaf_Ittenbach",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Olaf Ittenbach",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Olaf Ittenbach",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Olaf Ittenbach",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9627828001976013,
+      "graph_score": 0.6480580568313599,
+      "margin": 0.7302189767360687
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/premutos_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Premutos: The Fallen Angel",
+          "source": "altLabel"
+        },
+        {
+          "text": "premutos film",
+          "source": "uri"
+        }
+      ],
+      "context": "Premutos: The Fallen Angel. has director: Olaf Ittenbach.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Premutos_The_Fallen_Angel",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Premutos The Fallen Angel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Premutos: The Fallen Angel",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Premutos The Fallen Angel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9702596068382263,
+      "string_score": 0.9911764860153198,
+      "independent_identity_support": true,
+      "context_score": 0.9927845001220703,
+      "graph_score": 0.9963922500610352,
+      "margin": 0.8673690110445023
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

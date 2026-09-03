@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/30/evaluation/entity_alignment/baseline_extracted_aligned_30.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/30/evaluation/entity_alignment/baseline_ground_truth_aligned_30.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Los_Motivos_de_Luz",
+      "predicate": "hasDirector",
+      "object": "Felipe_Cazals",
+      "subject_uri": "http://example.org/entity/Los_Motivos_de_Luz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Felipe_Cazals"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Felipe_Cazals",
+      "predicate": "hasBirthPlace",
+      "object": "France",
+      "subject_uri": "http://example.org/entity/Felipe_Cazals",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/France"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Felipe_Cazals",
+      "predicate": "hasBirthPlace",
+      "object": "place_mexico_df",
+      "subject_uri": "http://example.org/entity/Felipe_Cazals",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/extracted/place_mexico_df"
+    },
+    {
+      "subject": "Felipe_Cazals",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Felipe_Cazals",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Felipe_Cazals",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Felipe_Cazals",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Felipe_Cazals",
+      "predicate": "label",
+      "object": "\"Felipe Cazals\"",
+      "subject_uri": "http://example.org/entity/Felipe_Cazals",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Felipe Cazals\""
+    },
+    {
+      "subject": "Los_Motivos_de_Luz",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Los_Motivos_de_Luz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Los_Motivos_de_Luz",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Los_Motivos_de_Luz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Los_Motivos_de_Luz",
+      "predicate": "label",
+      "object": "\"Los Motivos de Luz\"",
+      "subject_uri": "http://example.org/entity/Los_Motivos_de_Luz",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Los Motivos de Luz\""
+    },
+    {
+      "subject": "place_mexico_df",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/place_mexico_df",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "place_mexico_df",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/place_mexico_df",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "place_mexico_df",
+      "predicate": "label",
+      "object": "\"Mexico, D.F.\"",
+      "subject_uri": "http://example.org/extracted/place_mexico_df",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Mexico, D.F.\""
+    },
+    {
+      "subject": "place_mexico_df",
+      "predicate": "altLabel",
+      "object": "\"Mexico D.F.\"",
+      "subject_uri": "http://example.org/extracted/place_mexico_df",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Mexico D.F.\""
+    },
+    {
+      "subject": "place_mexico_df",
+      "predicate": "altLabel",
+      "object": "\"Mexico, D.F.\"",
+      "subject_uri": "http://example.org/extracted/place_mexico_df",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Mexico, D.F.\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 1,
+    "false_positives": 12,
+    "false_negatives": 1,
+    "precision": 0.07692307692307693,
+    "recall": 0.5,
+    "f1": 0.13333333333333336
+  },
+  "stage": "pre_inference"
+}

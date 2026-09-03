@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/108/originals/extracted_108.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/108/ground_truth_108.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_the_yellow_passport_1916": "http://example.org/entity/The_Yellow_Passport",
+    "http://example.org/extracted/person_edwin_august": "http://example.org/entity/Edwin_August",
+    "http://example.org/extracted/place_valhalla_memorial_park_cemetery": "http://example.org/entity/Valhalla_Memorial_Park_Cemetery"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_yellow_passport_1916",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Yellow Passport",
+          "source": "label"
+        },
+        {
+          "text": "film the yellow passport 1916",
+          "source": "uri"
+        }
+      ],
+      "context": "The Yellow Passport. has director: Edwin August Phillip von der Butz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Yellow_Passport",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Yellow Passport",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Yellow Passport",
+        "extracted_source": "label",
+        "ground_truth_text": "The Yellow Passport",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7955279350280762,
+      "graph_score": 0.8977639675140381,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_edwin_august",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edwin August Phillip von der Butz",
+          "source": "altLabel"
+        },
+        {
+          "text": "Edwin August",
+          "source": "label"
+        },
+        {
+          "text": "person edwin august",
+          "source": "uri"
+        }
+      ],
+      "context": "Edwin August Phillip von der Butz. has burial place: Valhalla Memorial Park Cemetery. inverse has director: The Yellow Passport.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Edwin_August",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Edwin August",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Edwin August",
+        "extracted_source": "label",
+        "ground_truth_text": "Edwin August",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8400648236274719,
+      "graph_score": 0.9200323820114136,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_valhalla_memorial_park_cemetery",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Valhalla Memorial Park Cemetery",
+          "source": "label"
+        },
+        {
+          "text": "place valhalla memorial park cemetery",
+          "source": "uri"
+        }
+      ],
+      "context": "Valhalla Memorial Park Cemetery. inverse has burial place: Edwin August Phillip von der Butz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Valhalla_Memorial_Park_Cemetery",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Valhalla Memorial Park Cemetery",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Valhalla Memorial Park Cemetery",
+        "extracted_source": "label",
+        "ground_truth_text": "Valhalla Memorial Park Cemetery",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8745850324630737,
+      "graph_score": 0.9372925162315369,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

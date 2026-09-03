@@ -1,0 +1,150 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/196/originals/extracted_196.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/196/ground_truth_196.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_jamie_foxx": "http://example.org/entity/Jamie_Foxx",
+    "http://example.org/extracted/song_you_changed_me": "http://example.org/entity/You_Changed_Me"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_jamie_foxx",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eric Marlon Bishop",
+          "source": "altLabel"
+        },
+        {
+          "text": "Jamie Foxx",
+          "source": "label"
+        },
+        {
+          "text": "person jamie foxx",
+          "source": "uri"
+        }
+      ],
+      "context": "Eric Marlon Bishop. has award received: Grammy Award. inverse has performer: You Changed Me.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jamie_Foxx",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jamie Foxx",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jamie Foxx",
+        "extracted_source": "label",
+        "ground_truth_text": "Jamie Foxx",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.53973388671875,
+      "graph_score": 0.769866943359375,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_you_changed_me",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "You Changed Me",
+          "source": "label"
+        },
+        {
+          "text": "song you changed me",
+          "source": "uri"
+        }
+      ],
+      "context": "You Changed Me. has performer: Eric Marlon Bishop.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/You_Changed_Me",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "You Changed Me",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "You Changed Me",
+        "extracted_source": "label",
+        "ground_truth_text": "You Changed Me",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5727552771568298,
+      "graph_score": 0.7863776683807373,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/award_grammy",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Grammy Award",
+          "source": "label"
+        },
+        {
+          "text": "award grammy",
+          "source": "uri"
+        }
+      ],
+      "context": "Grammy Award. inverse has award received: Eric Marlon Bishop.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Best_Actor"
+  ]
+}

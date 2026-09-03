@@ -1,0 +1,163 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/109/originals/extracted_109.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/109/ground_truth_109.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_the_crime_of_korea": "http://example.org/entity/The_Crime_of_Korea",
+    "http://example.org/extracted/film_the_christian_licorice_store": "http://example.org/entity/The_Christian_Licorice_Store",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has country of origin: The Christian Licorice Store. inverse has country of origin: The Crime of Korea.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.832831084728241,
+      "graph_score": 0.6664155721664429,
+      "margin": 0.36174631118774414
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_christian_licorice_store",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Christian Licorice Store",
+          "source": "label"
+        },
+        {
+          "text": "film the christian licorice store",
+          "source": "uri"
+        }
+      ],
+      "context": "The Christian Licorice Store. has country of origin: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Christian_Licorice_Store",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Christian Licorice Store",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Christian Licorice Store",
+        "extracted_source": "label",
+        "ground_truth_text": "The Christian Licorice Store",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7912279367446899
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_crime_of_korea",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Crime of Korea",
+          "source": "label"
+        },
+        {
+          "text": "film the crime of korea",
+          "source": "uri"
+        }
+      ],
+      "context": "The Crime of Korea. has country of origin: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Crime_of_Korea",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Crime of Korea",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Crime of Korea",
+        "extracted_source": "label",
+        "ground_truth_text": "The Crime of Korea",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9773485660552979,
+      "graph_score": 0.4886742830276489,
+      "margin": 0.6856087148189545
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/US"
+  ]
+}

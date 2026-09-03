@@ -1,0 +1,27 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:ingegerd_oloftdotter a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ingegerd Olofsdotter of Sweden" ;
+    onto:hasFather data:olof_skotkonung ;
+    skos:altLabel "Anna",
+        "Ingegerd Olofsdotter",
+        "Ingegerd Olofsdotter of Sweden",
+        "Irene",
+        "Saint Anna" .
+
+data:olof_skotkonung a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Olof Skötkonung" ;
+    onto:hasMother data:sigrid_haughty ;
+    skos:altLabel "Olof Skötkonung" .
+
+data:sigrid_haughty a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sigrid the Haughty" ;
+    skos:altLabel "Sigrid the Haughty" .
+

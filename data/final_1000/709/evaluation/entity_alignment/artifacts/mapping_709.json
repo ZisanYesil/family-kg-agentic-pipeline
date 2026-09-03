@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/709/originals/extracted_709.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/709/ground_truth_709.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/charles_duke_of_lower_lorraine": "http://example.org/entity/Charles_Duke_of_Lower_Lorraine",
+    "http://example.org/extracted/louis_of_lower_lorraine": "http://example.org/entity/Louis_of_Lower_Lorraine",
+    "http://example.org/extracted/basilica_of_saint_servatius_maastricht": "http://example.org/entity/Basilica_of_Saint_Servatius"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/basilica_of_saint_servatius_maastricht",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Basilica of Saint Servatius",
+          "source": "altLabel"
+        },
+        {
+          "text": "Basilica of Saint Servatius in Maastricht",
+          "source": "altLabel"
+        },
+        {
+          "text": "basilica of saint servatius maastricht",
+          "source": "uri"
+        }
+      ],
+      "context": "Basilica of Saint Servatius. inverse has burial place: Charles, Duke of Lower Lorraine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Basilica_of_Saint_Servatius",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Basilica of Saint Servatius",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Basilica of Saint Servatius",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Basilica of Saint Servatius",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9919993877410889,
+      "graph_score": 0.9959996938705444,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/charles_duke_of_lower_lorraine",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charles, Duke of Lower Lorraine",
+          "source": "altLabel"
+        },
+        {
+          "text": "charles duke of lower lorraine",
+          "source": "uri"
+        }
+      ],
+      "context": "Charles, Duke of Lower Lorraine. has burial place: Basilica of Saint Servatius. has son: Louis of Lower Lorraine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charles_Duke_of_Lower_Lorraine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charles Duke of Lower Lorraine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charles, Duke of Lower Lorraine",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Charles Duke of Lower Lorraine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9785232543945312,
+      "string_score": 0.992622971534729,
+      "independent_identity_support": true,
+      "context_score": 0.9572287201881409,
+      "graph_score": 0.6452810168266296,
+      "margin": 0.343178391456604
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_of_lower_lorraine",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis of Lower Lorraine",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Louis of Lower Lorraine. inverse has son: Charles, Duke of Lower Lorraine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_of_Lower_Lorraine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis of Lower Lorraine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis of Lower Lorraine",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Louis of Lower Lorraine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9594661593437195,
+      "graph_score": 0.47973307967185974,
+      "margin": 0.33952945470809937
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

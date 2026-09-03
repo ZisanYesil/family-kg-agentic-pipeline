@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/454/evaluation/entity_alignment/baseline_extracted_aligned_454.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/454/evaluation/entity_alignment/baseline_ground_truth_aligned_454.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Christine_of_Mecklenburg_Güstrow",
+      "predicate": "hasParent",
+      "object": "Gustav_Adolph_Duke_of_Mecklenburg_Güstrow",
+      "subject_uri": "http://example.org/entity/Christine_of_Mecklenburg_Güstrow",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Gustav_Adolph_Duke_of_Mecklenburg_Güstrow"
+    },
+    {
+      "subject": "Countess_Ferdinande_Henriette_of_Stolberg_Gedern",
+      "predicate": "hasParent",
+      "object": "Christine_of_Mecklenburg_Güstrow",
+      "subject_uri": "http://example.org/entity/Countess_Ferdinande_Henriette_of_Stolberg_Gedern",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Christine_of_Mecklenburg_Güstrow"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Christine_of_Mecklenburg_Güstrow",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Christine_of_Mecklenburg_Güstrow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Christine_of_Mecklenburg_Güstrow",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Christine_of_Mecklenburg_Güstrow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Christine_of_Mecklenburg_Güstrow",
+      "predicate": "label",
+      "object": "\"Duchess Christine of Mecklenburg-Güstrow\"",
+      "subject_uri": "http://example.org/entity/Christine_of_Mecklenburg_Güstrow",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Duchess Christine of Mecklenburg-Güstrow\""
+    },
+    {
+      "subject": "Countess_Ferdinande_Henriette_of_Stolberg_Gedern",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Countess_Ferdinande_Henriette_of_Stolberg_Gedern",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Countess_Ferdinande_Henriette_of_Stolberg_Gedern",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Countess_Ferdinande_Henriette_of_Stolberg_Gedern",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Countess_Ferdinande_Henriette_of_Stolberg_Gedern",
+      "predicate": "label",
+      "object": "\"Countess Ferdinande Henriette of Stolberg-Gedern\"",
+      "subject_uri": "http://example.org/entity/Countess_Ferdinande_Henriette_of_Stolberg_Gedern",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Countess Ferdinande Henriette of Stolberg-Gedern\""
+    },
+    {
+      "subject": "Gustav_Adolph_Duke_of_Mecklenburg_Güstrow",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gustav_Adolph_Duke_of_Mecklenburg_Güstrow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Gustav_Adolph_Duke_of_Mecklenburg_Güstrow",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gustav_Adolph_Duke_of_Mecklenburg_Güstrow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gustav_Adolph_Duke_of_Mecklenburg_Güstrow",
+      "predicate": "label",
+      "object": "\"Gustav Adolph, Duke of Mecklenburg-Güstrow\"",
+      "subject_uri": "http://example.org/entity/Gustav_Adolph_Duke_of_Mecklenburg_Güstrow",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gustav Adolph, Duke of Mecklenburg-Güstrow\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

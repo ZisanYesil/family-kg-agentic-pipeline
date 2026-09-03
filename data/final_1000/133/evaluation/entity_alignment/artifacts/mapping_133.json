@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/133/originals/extracted_133.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/133/ground_truth_133.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/hugo_chavez": "http://example.org/entity/Hugo_Chávez"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/hugo_chavez",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hugo Rafael Chávez Frías",
+          "source": "altLabel"
+        },
+        {
+          "text": "Hugo Chávez",
+          "source": "label"
+        },
+        {
+          "text": "hugo chavez",
+          "source": "uri"
+        }
+      ],
+      "context": "Hugo Rafael Chávez Frías. has birth place: Sabaneta, Barinas. inverse has founder: Bolivarian Military University of Venezuela.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hugo_Chávez",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hugo Chávez",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hugo Chávez",
+        "extracted_source": "label",
+        "ground_truth_text": "Hugo Chávez",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8799715638160706,
+      "graph_score": 0.8799715638160706,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sabaneta_barinas",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sabaneta, Barinas",
+          "source": "label"
+        },
+        {
+          "text": "sabaneta barinas",
+          "source": "uri"
+        }
+      ],
+      "context": "Sabaneta, Barinas. inverse has birth place: Hugo Rafael Chávez Frías.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sabaneta",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sabaneta",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sabaneta, Barinas",
+        "extracted_source": "label",
+        "ground_truth_text": "Sabaneta",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8149429559707642,
+      "name_embedding_score": 0.802980899810791,
+      "string_score": 0.7129999995231628,
+      "independent_identity_support": true,
+      "context_score": 0.881619930267334,
+      "graph_score": 0.940809965133667,
+      "margin": 0.8149429559707642
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/bolivarian_military_university_of_venezuela",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bolivarian Military University of Venezuela",
+          "source": "label"
+        }
+      ],
+      "context": "Bolivarian Military University of Venezuela. has founder: Hugo Rafael Chávez Frías.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Universidad_Militar_Bolivariana_de_Venezuela",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Universidad Militar Bolivariana de Venezuela",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bolivarian Military University of Venezuela",
+        "extracted_source": "label",
+        "ground_truth_text": "Universidad Militar Bolivariana de Venezuela",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8074731826782227,
+      "name_embedding_score": 0.981526255607605,
+      "string_score": 0.31536397337913513,
+      "independent_identity_support": false,
+      "context_score": 0.9029529094696045,
+      "graph_score": 0.9514764547348022,
+      "margin": 0.8074731826782227
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

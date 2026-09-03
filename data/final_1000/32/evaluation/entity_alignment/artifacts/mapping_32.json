@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/32/originals/extracted_32.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/32/ground_truth_32.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/adalberto_pereira_dos_santos": "http://example.org/entity/Adalberto_Pereira_dos_Santos",
+    "http://example.org/extracted/louis_armand_constantin_de_rohan": "http://example.org/entity/Louis_Armand_Constantin_de_Rohan"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adalberto_pereira_dos_santos",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adalberto Pereira dos Santos",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Adalberto Pereira dos Santos. has birth date: 1905-04-11. has death date: 1984-04-02.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adalberto_Pereira_dos_Santos",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adalberto Pereira dos Santos",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adalberto Pereira dos Santos",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Adalberto Pereira dos Santos",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5962013006210327
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_armand_constantin_de_rohan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis- Armand- Constantin de Rohan",
+          "source": "altLabel"
+        },
+        {
+          "text": "Louis‐Armand‐Constantin de Rohan",
+          "source": "altLabel"
+        },
+        {
+          "text": "Louis-Armand-Constantin de Rohan",
+          "source": "label"
+        },
+        {
+          "text": "louis armand constantin de rohan",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis- Armand- Constantin de Rohan. has birth date: 1732-04-06. has death date: 1794-07-27.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_Armand_Constantin_de_Rohan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis Armand Constantin de Rohan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis- Armand- Constantin de Rohan",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Louis Armand Constantin de Rohan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.946217954158783,
+      "string_score": 0.9863636493682861,
+      "independent_identity_support": true,
+      "context_score": 0.9873514771461487,
+      "graph_score": 0.9873514771461487,
+      "margin": 0.6000893414020538
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

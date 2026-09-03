@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/479/originals/extracted_479.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/479/ground_truth_479.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/douglas_vautin": "http://example.org/entity/Douglas_Vautin",
+    "http://example.org/extracted/anthony_crosland": "http://example.org/entity/Anthony_Crosland"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/anthony_crosland",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "C. A. R. Crosland",
+          "source": "altLabel"
+        },
+        {
+          "text": "Charles Anthony Raven Crosland",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tony Crosland",
+          "source": "altLabel"
+        },
+        {
+          "text": "Anthony Crosland",
+          "source": "label"
+        }
+      ],
+      "context": "C. A. R. Crosland. has birth date: 1918-08-29. has death date: 1977-02-19.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anthony_Crosland",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anthony Crosland",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anthony Crosland",
+        "extracted_source": "label",
+        "ground_truth_text": "Anthony Crosland",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9061934351921082,
+      "graph_score": 0.9061934351921082,
+      "margin": 0.5984504818916321
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/douglas_vautin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Douglas Vautin",
+          "source": "label"
+        }
+      ],
+      "context": "Douglas Vautin. has birth date: 1896-07-26. has death date: 1976-01-11.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Douglas_Vautin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Douglas Vautin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Douglas Vautin",
+        "extracted_source": "label",
+        "ground_truth_text": "Douglas Vautin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6099551916122437
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,17 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Billy_Elliot> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Billy Elliot" .
+
+<http://example.org/entity/Stephen_Warbeck> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Stephen Warbeck" ;
+    onto:hasBirthPlace <http://example.org/entity/Southampton_Hampshire> .
+
+<http://example.org/entity/Southampton_Hampshire> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Southampton, Hampshire" .
+

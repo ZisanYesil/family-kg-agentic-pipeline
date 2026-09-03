@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Priyanka_Gandhi a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Rajiv_Gandhi ;
+    ex:hasParent entity:Rajiv_Gandhi .
+
+entity:Sanjay_Gandhi a ex:Agent,
+        ex:Person ;
+    ex:hasSibling entity:Rajiv_Gandhi .
+
+entity:Rajiv_Gandhi a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Priyanka_Gandhi ;
+    ex:hasSibling entity:Sanjay_Gandhi .
+

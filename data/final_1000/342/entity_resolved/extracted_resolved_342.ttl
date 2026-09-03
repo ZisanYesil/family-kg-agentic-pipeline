@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:_miriam_adelson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Miriam Adelson" ;
+    onto:hasSpouse data:_sheldon_adelson .
+
+data:_las_vegas_sands_corporation a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Las Vegas Sands Corporation" .
+
+data:_sheldon_adelson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sheldon Adelson" ;
+    onto:hasEmployer data:_las_vegas_sands_corporation .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_the_great_circus_mystery a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Great Circus Mystery" ;
+    onto:hasDirector data:person_jay_marchant .
+
+data:person_jay_marchant a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jay Marchant" ;
+    onto:hasDeathPlace data:place_los_angeles_county_california .
+
+data:place_los_angeles_county_california a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Los Angeles County, California" .
+

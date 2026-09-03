@@ -2,9 +2,9 @@
 """Run HermiT over one or more 2Wiki ABox graphs and materialize entailments.
 
 Examples:
-    python3 reasoner-inference/reasoner_kg_hermit.py dataset/0/originals/ground_truth_0.ttl
-    python3 reasoner-inference/reasoner_kg_hermit.py dataset --summary-only
-    python3 reasoner-inference/reasoner_kg_hermit.py dataset --output-ttl materialized.ttl
+    python3 reasoner_kg_hermit.py pilot/0/originals/ground_truth_0.ttl
+    python3 reasoner_kg_hermit.py pilot --summary-only
+    python3 reasoner_kg_hermit.py pilot --output-ttl materialized.ttl
 """
 
 import argparse
@@ -18,12 +18,11 @@ from pathlib import Path
 
 import rdflib
 from rdflib import BNode, Graph, Literal, RDF, RDFS, OWL, URIRef
+from rdflib.namespace import XSD
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = SCRIPT_DIR.parent
-DEFAULT_TBOX = PROJECT_ROOT / "ontology" / "dataset_ontology.ttl"
-DEFAULT_DATASET = PROJECT_ROOT / "dataset"
+DEFAULT_TBOX = SCRIPT_DIR.parent / "ontology" / "ontology.ttl"
 ONTOLOGY_NAMESPACE = "http://example.org/2wiki-ontology#"
 
 
@@ -33,14 +32,13 @@ def build_parser():
     )
     parser.add_argument(
         "abox",
-        nargs="*",
-        default=[str(DEFAULT_DATASET)],
-        help="ABox Turtle files or directories (default: project dataset directory)",
+        nargs="+",
+        help="ABox Turtle files or directories (at least one is required)",
     )
     parser.add_argument(
         "--tbox",
         default=str(DEFAULT_TBOX),
-        help="Ontology/TBox Turtle file (default: ontology/dataset_ontology.ttl)",
+        help="Ontology/TBox Turtle file (default: ontology.ttl)",
     )
     parser.add_argument(
         "--pattern",
@@ -113,6 +111,16 @@ def is_abox_fact(triple, classes, object_properties, datatype_properties):
     if predicate in datatype_properties:
         return isinstance(obj, Literal)
     return False
+
+
+def canonicalize_string_literals(facts):
+    """Collapse RDF 1.1-equivalent plain and xsd:string lexical forms."""
+    normalized = set()
+    for subject, predicate, obj in facts:
+        if isinstance(obj, Literal) and (obj.datatype is None or obj.datatype == XSD.string):
+            obj = Literal(str(obj))
+        normalized.add((subject, predicate, obj))
+    return normalized
 
 
 def materialize_property_closure(facts, tbox, object_properties):
@@ -337,6 +345,8 @@ def main(argv=None):
             for triple in reasoned
             if is_abox_fact(triple, classes, object_properties, datatype_properties)
         }
+        asserted = canonicalize_string_literals(asserted)
+        hermit_facts = canonicalize_string_literals(hermit_facts)
         materialized = asserted | hermit_facts
         hermit_additions = materialized - asserted
         before_property_closure = set(materialized)

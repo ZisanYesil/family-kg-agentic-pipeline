@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/73/originals/extracted_73.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/73/ground_truth_73.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_a_day_at_the_museum": "http://example.org/entity/A_Day_at_the_Museum",
+    "http://example.org/extracted/film_ryans_daughter": "http://example.org/entity/Ryan_s_Daughter"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_a_day_at_the_museum",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A Day at the Museum",
+          "source": "label"
+        },
+        {
+          "text": "film a day at the museum",
+          "source": "uri"
+        }
+      ],
+      "context": "A Day at the Museum. has publication date: 2008.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Day_at_the_Museum",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Day at the Museum",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Day at the Museum",
+        "extracted_source": "label",
+        "ground_truth_text": "A Day at the Museum",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7995896339416504
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_ryans_daughter",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ryan's Daughter",
+          "source": "label"
+        },
+        {
+          "text": "film ryans daughter",
+          "source": "uri"
+        }
+      ],
+      "context": "Ryan's Daughter. has publication date: 1970.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ryan_s_Daughter",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ryan s Daughter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ryan's Daughter",
+        "extracted_source": "label",
+        "ground_truth_text": "Ryan s Daughter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9497653841972351,
+      "string_score": 0.9700000286102295,
+      "independent_identity_support": true,
+      "context_score": 0.9880199432373047,
+      "graph_score": 0.9880199432373047,
+      "margin": 0.7602374851703644
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

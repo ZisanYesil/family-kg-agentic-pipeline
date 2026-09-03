@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/You_Were_Made_for_Me> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "You Were Made for Me" ;
+    onto:hasPerformer <http://example.org/entity/Sam_Cooke> .
+
+<http://example.org/entity/Los_Angeles_California> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Los Angeles" .
+
+<http://example.org/entity/Sam_Cooke> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sam Cooke" ;
+    onto:hasDeathPlace <http://example.org/entity/Los_Angeles_California> ;
+    skos:altLabel "Samuel Cook" .
+

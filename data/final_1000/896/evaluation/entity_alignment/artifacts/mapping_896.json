@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/896/originals/extracted_896.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/896/ground_truth_896.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/far_away_and_long_ago_1978": "http://example.org/entity/Far_Away_and_Long_Ago",
+    "http://example.org/extracted/i_always_loved_you_1953": "http://example.org/entity/I_Always_Loved_You"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/far_away_and_long_ago_1978",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Far Away and Long Ago",
+          "source": "label"
+        },
+        {
+          "text": "far away and long ago 1978",
+          "source": "uri"
+        }
+      ],
+      "context": "Far Away and Long Ago. has publication date: 1978.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Far_Away_and_Long_Ago",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Far Away and Long Ago",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Far Away and Long Ago",
+        "extracted_source": "label",
+        "ground_truth_text": "Far Away and Long Ago",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7120824754238129
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/i_always_loved_you_1953",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "I Always Loved You",
+          "source": "label"
+        },
+        {
+          "text": "i always loved you 1953",
+          "source": "uri"
+        }
+      ],
+      "context": "I Always Loved You. has publication date: 1953.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/I_Always_Loved_You",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "I Always Loved You",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "I Always Loved You",
+        "extracted_source": "label",
+        "ground_truth_text": "I Always Loved You",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.7035499513149261
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

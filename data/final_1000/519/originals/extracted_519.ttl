@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:education_in_chemistry a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Education in Chemistry" ;
+    onto:hasPublisher data:royal_society_of_chemistry .
+
+data:royal_society_of_chemistry a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Royal Society of Chemistry" ;
+    onto:hasCountry data:united_kingdom .
+
+data:united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" .
+

@@ -1,0 +1,163 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/252/originals/extracted_252.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/252/ground_truth_252.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/to_kill_a_dragon_film": "http://example.org/entity/To_Kill_a_Dragon",
+    "http://example.org/extracted/tannenberg_film": "http://example.org/entity/Tannenberg_film",
+    "http://example.org/extracted/germany_country": "http://example.org/entity/German"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/germany_country",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "German",
+          "source": "altLabel"
+        },
+        {
+          "text": "Germany",
+          "source": "label"
+        },
+        {
+          "text": "germany country",
+          "source": "uri"
+        }
+      ],
+      "context": "German. inverse has country: Tannenberg. inverse has country: To Kill a Dragon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/German",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "German",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "German",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "German",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9066601395606995,
+      "graph_score": 0.45333006978034973,
+      "margin": 0.6507604122161865
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tannenberg_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tannenberg",
+          "source": "label"
+        },
+        {
+          "text": "tannenberg film",
+          "source": "uri"
+        }
+      ],
+      "context": "Tannenberg. has country: German.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tannenberg_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tannenberg film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "tannenberg film",
+        "extracted_source": "uri",
+        "ground_truth_text": "Tannenberg film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9919310808181763,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8286896347999573,
+      "graph_score": 0.41434481739997864,
+      "margin": 0.8275032639503479
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/to_kill_a_dragon_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "To Kill a Dragon",
+          "source": "label"
+        },
+        {
+          "text": "to kill a dragon film",
+          "source": "uri"
+        }
+      ],
+      "context": "To Kill a Dragon. has country: German.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/To_Kill_a_Dragon",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "To Kill a Dragon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "To Kill a Dragon",
+        "extracted_source": "label",
+        "ground_truth_text": "To Kill a Dragon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8323228359222412,
+      "graph_score": 0.4161614179611206,
+      "margin": 0.6295060515403748
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Soviet"
+  ]
+}

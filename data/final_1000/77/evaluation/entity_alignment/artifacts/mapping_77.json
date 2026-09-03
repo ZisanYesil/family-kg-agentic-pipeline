@@ -1,0 +1,144 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/77/originals/extracted_77.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/77/ground_truth_77.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/alessandria": "http://example.org/entity/Alessandria",
+    "http://example.org/extracted/riccardo_sogliano": "http://example.org/entity/Riccardo_Sogliano"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alessandria",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alessandria",
+          "source": "label"
+        }
+      ],
+      "context": "Alessandria. inverse has birth place: Riccardo Sogliano.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alessandria",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alessandria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alessandria",
+        "extracted_source": "label",
+        "ground_truth_text": "Alessandria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/riccardo_sogliano",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Riccardo Sogliano",
+          "source": "label"
+        }
+      ],
+      "context": "Riccardo Sogliano. has birth place: Alessandria. inverse has father: Sean Sogliano.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Riccardo_Sogliano",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Riccardo Sogliano",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Riccardo Sogliano",
+        "extracted_source": "label",
+        "ground_truth_text": "Riccardo Sogliano",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9843794107437134,
+      "graph_score": 0.9921897053718567,
+      "margin": 0.3573380708694458
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sean_sogliano",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sean Sogliano",
+          "source": "label"
+        }
+      ],
+      "context": "Sean Sogliano. has father: Riccardo Sogliano.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sean_Luca_Sogliano",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sean Luca Sogliano",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sean Sogliano",
+        "extracted_source": "label",
+        "ground_truth_text": "Sean Luca Sogliano",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.876551628112793,
+      "name_embedding_score": 0.8422695398330688,
+      "string_score": 0.8440860509872437,
+      "independent_identity_support": true,
+      "context_score": 0.9551629424095154,
+      "graph_score": 0.9775815010070801,
+      "margin": 0.25054991245269775
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

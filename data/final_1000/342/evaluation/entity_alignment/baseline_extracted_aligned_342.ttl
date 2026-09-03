@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Miriam_Adelson> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Miriam Adelson" ;
+    onto:hasSpouse <http://example.org/entity/Sheldon_Adelson> .
+
+<http://example.org/entity/Las_Vegas_Sands> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Las Vegas Sands Corporation" .
+
+<http://example.org/entity/Sheldon_Adelson> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sheldon Adelson" ;
+    onto:hasEmployer <http://example.org/entity/Las_Vegas_Sands> .
+

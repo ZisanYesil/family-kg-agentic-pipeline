@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/864/originals/extracted_864.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/864/ground_truth_864.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/paris_place": "http://example.org/entity/Paris",
+    "http://example.org/extracted/marcello_pagliero_person": "http://example.org/entity/Marcello_Pagliero",
+    "http://example.org/extracted/vestire_gli_ignudi_film": "http://example.org/entity/Vestire_gli_ignudi"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/marcello_pagliero_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marcello Pagliero",
+          "source": "label"
+        },
+        {
+          "text": "marcello pagliero person",
+          "source": "uri"
+        }
+      ],
+      "context": "Marcello Pagliero. has death place: Paris. inverse has director: Vestire gli ignudi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marcello_Pagliero",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marcello Pagliero",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marcello Pagliero",
+        "extracted_source": "label",
+        "ground_truth_text": "Marcello Pagliero",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/paris_place",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Paris",
+          "source": "label"
+        },
+        {
+          "text": "paris place",
+          "source": "uri"
+        }
+      ],
+      "context": "Paris. inverse has death place: Marcello Pagliero.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Paris",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Paris",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Paris",
+        "extracted_source": "label",
+        "ground_truth_text": "Paris",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/vestire_gli_ignudi_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vestire gli ignudi",
+          "source": "label"
+        },
+        {
+          "text": "vestire gli ignudi film",
+          "source": "uri"
+        }
+      ],
+      "context": "Vestire gli ignudi. has director: Marcello Pagliero.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vestire_gli_ignudi",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vestire gli ignudi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vestire gli ignudi",
+        "extracted_source": "label",
+        "ground_truth_text": "Vestire gli ignudi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

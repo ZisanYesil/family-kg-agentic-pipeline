@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/424/originals/extracted_424.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/424/ground_truth_424.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ma_xisheng": "http://example.org/entity/Ma_Xisheng",
+    "http://example.org/extracted/alice_k_bache": "http://example.org/entity/Alice_K_Bache"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alice_k_bache",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alice K. Bache",
+          "source": "label"
+        },
+        {
+          "text": "alice k bache",
+          "source": "uri"
+        }
+      ],
+      "context": "Alice K. Bache. has birth date: 1903. has death date: 1977.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alice_K_Bache",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alice K Bache",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alice K. Bache",
+        "extracted_source": "label",
+        "ground_truth_text": "Alice K Bache",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9877464175224304,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9938436150550842,
+      "graph_score": 0.9938436150550842,
+      "margin": 0.5998024344444275
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ma_xisheng",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ma Xisheng",
+          "source": "label"
+        }
+      ],
+      "context": "Ma Xisheng. has birth date: 0899. has death date: 0932-08-15.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ma_Xisheng",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ma Xisheng",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ma Xisheng",
+        "extracted_source": "label",
+        "ground_truth_text": "Ma Xisheng",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.6356277167797089
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

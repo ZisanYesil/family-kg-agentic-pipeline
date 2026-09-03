@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/377/originals/extracted_377.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/377/ground_truth_377.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/john_i_marquis_of_namur": "http://example.org/entity/John_I_Marquis_of_Namur",
+    "http://example.org/extracted/isabelle_of_luxembourg": "http://example.org/entity/Isabelle_of_Luxembourg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/isabelle_of_luxembourg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Isabelle of Luxembourg",
+          "source": "label"
+        }
+      ],
+      "context": "Isabelle of Luxembourg. inverse has mother: John I, Marquis of Namur.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Isabelle_of_Luxembourg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Isabelle of Luxembourg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Isabelle of Luxembourg",
+        "extracted_source": "label",
+        "ground_truth_text": "Isabelle of Luxembourg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9953370094299316,
+      "graph_score": 0.9976685047149658,
+      "margin": 0.604415237903595
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_i_marquis_of_namur",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John I, Marquis of Namur",
+          "source": "label"
+        },
+        {
+          "text": "john i marquis of namur",
+          "source": "uri"
+        }
+      ],
+      "context": "John I, Marquis of Namur. has mother: Isabelle of Luxembourg. inverse has father: John II, Marquis of Namur.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_I_Marquis_of_Namur",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John I Marquis of Namur",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John I, Marquis of Namur",
+        "extracted_source": "label",
+        "ground_truth_text": "John I Marquis of Namur",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.990431010723114,
+      "string_score": 0.9904255270957947,
+      "independent_identity_support": true,
+      "context_score": 0.9884346723556519,
+      "graph_score": 0.9942173361778259,
+      "margin": 0.261405348777771
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_ii_marquis_of_namur",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John II, Marquis of Namur",
+          "source": "label"
+        },
+        {
+          "text": "john ii marquis of namur",
+          "source": "uri"
+        }
+      ],
+      "context": "John II, Marquis of Namur. has father: John I, Marquis of Namur.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_II_of_Namur",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John II of Namur",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John II, Marquis of Namur",
+        "extracted_source": "label",
+        "ground_truth_text": "John II of Namur",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9233375787734985,
+      "name_embedding_score": 0.9266089200973511,
+      "string_score": 0.8512195348739624,
+      "independent_identity_support": true,
+      "context_score": 0.9778263568878174,
+      "graph_score": 0.9889131784439087,
+      "margin": 0.12280696630477905
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

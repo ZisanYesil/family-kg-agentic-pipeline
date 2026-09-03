@@ -1,0 +1,29 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:watch_me_do a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Watch Me Do" ;
+    onto:hasPerformer data:meghan_trainor .
+
+data:ascap_pop_music_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "ASCAP Pop Music Award" .
+
+data:billboard_music_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Billboard Music Award" .
+
+data:grammy_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Grammy Award" .
+
+data:meghan_trainor a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Meghan Trainor" ;
+    onto:hasAwardReceived data:ascap_pop_music_award,
+        data:billboard_music_award,
+        data:grammy_award .
+

@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/232/originals/extracted_232.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/232/ground_truth_232.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/united_kingdom": "http://example.org/entity/British",
+    "http://example.org/extracted/barton_mystery_1920_film": "http://example.org/entity/The_Barton_Mystery_1920_film"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/barton_mystery_1920_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Barton Mystery (1920 film)",
+          "source": "label"
+        },
+        {
+          "text": "barton mystery 1920 film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Barton Mystery (1920 film). has country of origin: British.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Barton_Mystery_1920_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Barton Mystery 1920 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Barton Mystery (1920 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Barton Mystery 1920 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9796115159988403,
+      "string_score": 0.9844827651977539,
+      "independent_identity_support": true,
+      "context_score": 0.9767438173294067,
+      "graph_score": 0.9883719086647034,
+      "margin": 0.7389239966869354
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "British. inverse has country of origin: Man on the Run (1949 film). inverse has country of origin: The Barton Mystery (1920 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "British",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9872578978538513,
+      "graph_score": 0.993628978729248,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/man_on_the_run_1949_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Man on the Run (1949 film)",
+          "source": "label"
+        },
+        {
+          "text": "man on the run 1949 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Man on the Run (1949 film). has country of origin: British.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Man_on_the_Run",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Man on the Run",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Man on the Run (1949 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Man on the Run",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.749517023563385,
+      "name_embedding_score": 0.6460228562355042,
+      "string_score": 0.7816666960716248,
+      "independent_identity_support": true,
+      "context_score": 0.848711371421814,
+      "graph_score": 0.924355685710907,
+      "margin": 0.1592007875442505
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

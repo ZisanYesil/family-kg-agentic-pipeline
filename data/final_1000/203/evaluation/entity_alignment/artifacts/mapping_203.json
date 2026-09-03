@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/203/originals/extracted_203.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/203/ground_truth_203.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/united_kingdom": "http://example.org/entity/British",
+    "http://example.org/extracted/lover_prayer_2001_film": "http://example.org/entity/Lover_s_Prayer",
+    "http://example.org/extracted/make_up_1937_film": "http://example.org/entity/Make_Up_1937_film",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/lover_prayer_2001_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lover's Prayer",
+          "source": "altLabel"
+        },
+        {
+          "text": "lover prayer 2001 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Lover's Prayer. has country of origin: American. has country of origin: British.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lover_s_Prayer",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lover s Prayer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lover's Prayer",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Lover s Prayer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9810270071029663,
+      "string_score": 0.9678571224212646,
+      "independent_identity_support": true,
+      "context_score": 0.9903608560562134,
+      "graph_score": 0.9951804280281067,
+      "margin": 0.6234478652477264
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/make_up_1937_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Make-Up (1937 film)",
+          "source": "altLabel"
+        },
+        {
+          "text": "make up 1937 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Make-Up (1937 film). has country of origin: British.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Make_Up_1937_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Make Up 1937 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "make up 1937 film",
+        "extracted_source": "uri",
+        "ground_truth_text": "Make Up 1937 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9875642657279968,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9178051948547363,
+      "graph_score": 0.9589025974273682,
+      "margin": 0.873254582285881
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "British. inverse has country of origin: Lover's Prayer. inverse has country of origin: Make-Up (1937 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "British",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9761468172073364,
+      "graph_score": 0.9880734086036682,
+      "margin": 0.5830947160720825
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has country of origin: Lover's Prayer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9945058822631836,
+      "graph_score": 0.9972529411315918,
+      "margin": 0.5856163799762726
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

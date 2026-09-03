@@ -1,0 +1,98 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/176/evaluation/entity_alignment/final_extracted_aligned_176.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/176/evaluation/entity_alignment/final_ground_truth_aligned_176.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Edmund_Mortimer",
+      "predicate": "hasBirthPlace",
+      "object": "New_York",
+      "subject_uri": "http://example.org/entity/Edmund_Mortimer",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/New_York"
+    },
+    {
+      "subject": "Edmund_Mortimer",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Edmund_Mortimer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Edmund_Mortimer",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Edmund_Mortimer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Just_Off_Broadway",
+      "predicate": "hasCreator",
+      "object": "Edmund_Mortimer",
+      "subject_uri": "http://example.org/entity/Just_Off_Broadway",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Edmund_Mortimer"
+    },
+    {
+      "subject": "Just_Off_Broadway",
+      "predicate": "hasDirector",
+      "object": "Edmund_Mortimer",
+      "subject_uri": "http://example.org/entity/Just_Off_Broadway",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Edmund_Mortimer"
+    },
+    {
+      "subject": "Just_Off_Broadway",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Just_Off_Broadway",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Just_Off_Broadway",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Just_Off_Broadway",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Just_Off_Broadway",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Just_Off_Broadway",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "New_York",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 9,
+    "true_positives": 9,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

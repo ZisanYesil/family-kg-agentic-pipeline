@@ -1,0 +1,28 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/American_Casino> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/entity/Leslie_Cockburn> ;
+    ex:hasDirector <http://example.org/entity/Leslie_Cockburn> ;
+    ex:hasPublicationDate "2009"^^xsd:gYear .
+
+<http://example.org/entity/George_Polk_Award> a ex:Award .
+
+<http://example.org/extracted/award_dupont> a ex:Award .
+
+<http://example.org/extracted/award_emmy> a ex:Award .
+
+<http://example.org/extracted/award_hillman_prize> a ex:Award .
+
+<http://example.org/extracted/award_rf_kennedy_journalism> a ex:Award .
+
+<http://example.org/entity/Leslie_Cockburn> a ex:Agent,
+        ex:Person ;
+    ex:hasAwardReceived <http://example.org/entity/George_Polk_Award>,
+        <http://example.org/extracted/award_dupont>,
+        <http://example.org/extracted/award_emmy>,
+        <http://example.org/extracted/award_hillman_prize>,
+        <http://example.org/extracted/award_rf_kennedy_journalism> .
+

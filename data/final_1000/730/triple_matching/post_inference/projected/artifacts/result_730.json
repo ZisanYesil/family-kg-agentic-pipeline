@@ -1,0 +1,106 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/730/evaluation/entity_alignment/final_extracted_aligned_730.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/730/evaluation/entity_alignment/final_ground_truth_aligned_730.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Campbell_Stephen",
+      "predicate": "hasSpouse",
+      "object": "Dorothy_Jewson",
+      "subject_uri": "http://example.org/entity/Campbell_Stephen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Dorothy_Jewson"
+    },
+    {
+      "subject": "Campbell_Stephen",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Campbell_Stephen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Campbell_Stephen",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Campbell_Stephen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Dorothy_Jewson",
+      "predicate": "hasEducatedAt",
+      "object": "Girton_College_Cambridge",
+      "subject_uri": "http://example.org/entity/Dorothy_Jewson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Girton_College_Cambridge"
+    },
+    {
+      "subject": "Dorothy_Jewson",
+      "predicate": "hasSpouse",
+      "object": "Campbell_Stephen",
+      "subject_uri": "http://example.org/entity/Dorothy_Jewson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Campbell_Stephen"
+    },
+    {
+      "subject": "Dorothy_Jewson",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Dorothy_Jewson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Dorothy_Jewson",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Dorothy_Jewson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Girton_College_Cambridge",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Girton_College_Cambridge",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Girton_College_Cambridge",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Girton_College_Cambridge",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Girton_College_Cambridge",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Girton_College_Cambridge",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 10,
+    "true_positives": 10,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

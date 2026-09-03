@@ -1,0 +1,237 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/452/originals/extracted_452.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/452/ground_truth_452.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ripkin_film": "http://example.org/entity/Ripkin",
+    "http://example.org/extracted/this_man_is_mine_1934_film": "http://example.org/entity/This_Man_Is_Mine_1934_film",
+    "http://example.org/extracted/john_cromwell": "http://example.org/entity/John_Cromwell",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American",
+    "http://example.org/extracted/frank_arnold": "http://example.org/entity/Frank_Arnold"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 6,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/frank_arnold",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Frank Arnold",
+          "source": "label"
+        }
+      ],
+      "context": "Frank Arnold. has nationality: American. inverse has director: Ripkin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Frank_Arnold",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Frank Arnold",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Frank Arnold",
+        "extracted_source": "label",
+        "ground_truth_text": "Frank Arnold",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9495692849159241,
+      "graph_score": 0.6414512991905212,
+      "margin": 0.7172354459762573
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_cromwell",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Cromwell",
+          "source": "label"
+        }
+      ],
+      "context": "John Cromwell. has nationality: American. inverse has director: This Man Is Mine (1934 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Cromwell",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Cromwell",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Cromwell",
+        "extracted_source": "label",
+        "ground_truth_text": "John Cromwell",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8951757550239563,
+      "graph_score": 0.6975878477096558,
+      "margin": 0.2679651975631714
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ripkin_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ripkin",
+          "source": "label"
+        },
+        {
+          "text": "ripkin film",
+          "source": "uri"
+        }
+      ],
+      "context": "Ripkin. has director: Frank Arnold.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ripkin",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ripkin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ripkin",
+        "extracted_source": "label",
+        "ground_truth_text": "Ripkin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.584312379360199
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/this_man_is_mine_1934_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "This Man Is Mine (1934 film)",
+          "source": "label"
+        },
+        {
+          "text": "this man is mine 1934 film",
+          "source": "uri"
+        }
+      ],
+      "context": "This Man Is Mine (1934 film). has director: John Cromwell.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/This_Man_Is_Mine_1934_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "This Man Is Mine 1934 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "this man is mine 1934 film",
+        "extracted_source": "uri",
+        "ground_truth_text": "This Man Is Mine 1934 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9805696606636047,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9807547926902771,
+      "graph_score": 0.9903774261474609,
+      "margin": 0.8089810460805893
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has nationality: Frank Arnold. inverse has nationality: John Cromwell.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9202278256416321,
+      "graph_score": 0.46011391282081604,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/John_Cromwell_director"
+  ]
+}

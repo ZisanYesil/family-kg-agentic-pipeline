@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/771/originals/extracted_771.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/771/ground_truth_771.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_stephen_warbeck": "http://example.org/entity/Stephen_Warbeck",
+    "http://example.org/extracted/place_southampton_hampshire": "http://example.org/entity/Southampton_Hampshire",
+    "http://example.org/extracted/film_billy_elliot": "http://example.org/entity/Billy_Elliot"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_billy_elliot",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Billy Elliot",
+          "source": "label"
+        },
+        {
+          "text": "film billy elliot",
+          "source": "uri"
+        }
+      ],
+      "context": "Billy Elliot.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Billy_Elliot",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Billy Elliot",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Billy Elliot",
+        "extracted_source": "label",
+        "ground_truth_text": "Billy Elliot",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5732209086418152,
+      "graph_score": 0.2866104543209076,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_stephen_warbeck",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stephen Warbeck",
+          "source": "label"
+        },
+        {
+          "text": "person stephen warbeck",
+          "source": "uri"
+        }
+      ],
+      "context": "Stephen Warbeck. has birth place: Southampton, Hampshire.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stephen_Warbeck",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stephen Warbeck",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stephen Warbeck",
+        "extracted_source": "label",
+        "ground_truth_text": "Stephen Warbeck",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8301217555999756,
+      "graph_score": 0.6650608777999878,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_southampton_hampshire",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Southampton, Hampshire",
+          "source": "label"
+        },
+        {
+          "text": "place southampton hampshire",
+          "source": "uri"
+        }
+      ],
+      "context": "Southampton, Hampshire. inverse has birth place: Stephen Warbeck.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Southampton_Hampshire",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Southampton Hampshire",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Southampton, Hampshire",
+        "extracted_source": "label",
+        "ground_truth_text": "Southampton Hampshire",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9627013206481934,
+      "string_score": 0.989534854888916,
+      "independent_identity_support": true,
+      "context_score": 0.9944021701812744,
+      "graph_score": 0.9972010850906372,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

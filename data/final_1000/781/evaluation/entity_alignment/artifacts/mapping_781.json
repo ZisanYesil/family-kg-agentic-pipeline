@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/781/originals/extracted_781.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/781/ground_truth_781.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/port_of_seven_seas_film": "http://example.org/entity/Port_of_Seven_Seas",
+    "http://example.org/extracted/james_whale_person": "http://example.org/entity/James_Whale"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/james_whale_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Whale",
+          "source": "label"
+        },
+        {
+          "text": "james whale person",
+          "source": "uri"
+        }
+      ],
+      "context": "James Whale. has cause of death: suicide. inverse has director: Port of Seven Seas.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_Whale",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James Whale",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James Whale",
+        "extracted_source": "label",
+        "ground_truth_text": "James Whale",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9761839509010315,
+      "graph_score": 0.9880919456481934,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/port_of_seven_seas_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Port of Seven Seas",
+          "source": "label"
+        },
+        {
+          "text": "port of seven seas film",
+          "source": "uri"
+        }
+      ],
+      "context": "Port of Seven Seas. has director: James Whale.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Port_of_Seven_Seas",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Port of Seven Seas",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Port of Seven Seas",
+        "extracted_source": "label",
+        "ground_truth_text": "Port of Seven Seas",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/suicide_cause",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "suicide",
+          "source": "label"
+        },
+        {
+          "text": "suicide cause",
+          "source": "uri"
+        }
+      ],
+      "context": "suicide. inverse has cause of death: James Whale.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/drowning",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "drowning",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "suicide",
+        "extracted_source": "label",
+        "ground_truth_text": "drowning",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5753257870674133,
+      "name_embedding_score": 0.6392889022827148,
+      "string_score": 0.05999999865889549,
+      "independent_identity_support": false,
+      "context_score": 0.92545086145401,
+      "graph_score": 0.9627254009246826,
+      "margin": 0.5753257870674133
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

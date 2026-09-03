@@ -1,0 +1,134 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/413/originals/extracted_413.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/413/ground_truth_413.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/creative_call_for_help": "http://example.org/entity/Call_for_Help"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 1,
+    "review": 0,
+    "unmatched": 2,
+    "unmatched_ground_truth": 2
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/creative_call_for_help",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Call for Help",
+          "source": "label"
+        },
+        {
+          "text": "creative call for help",
+          "source": "uri"
+        }
+      ],
+      "context": "Call for Help. has presenter: Chris Pirillo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Call_for_Help",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Call for Help",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Call for Help",
+        "extracted_source": "label",
+        "ground_truth_text": "Call for Help",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5410332083702087,
+      "graph_score": 0.5410332083702087,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/org_lockergnome_inc",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Locker Gnome, Inc.",
+          "source": "label"
+        },
+        {
+          "text": "org lockergnome inc",
+          "source": "uri"
+        }
+      ],
+      "context": "Locker Gnome, Inc.. has founder: Chris Pirillo.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_chris_pirillo",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chris Pirillo",
+          "source": "label"
+        },
+        {
+          "text": "person chris pirillo",
+          "source": "uri"
+        }
+      ],
+      "context": "Chris Pirillo. inverse has founder: Locker Gnome, Inc.. inverse has presenter: Call for Help.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Leo_Laporte",
+    "http://example.org/entity/TWiT_tv"
+  ]
+}

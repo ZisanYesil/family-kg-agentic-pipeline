@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/278/originals/extracted_278.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/278/ground_truth_278.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/son_of_amir_is_dead_film": "http://example.org/entity/The_Son_of_Amir_Is_Dead",
+    "http://example.org/extracted/vishwavidhaata_film": "http://example.org/entity/Vishwavidhaata"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/son_of_amir_is_dead_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Son Of Amir Is Dead",
+          "source": "label"
+        },
+        {
+          "text": "son of amir is dead film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Son Of Amir Is Dead. has publication date: 1975.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Son_of_Amir_Is_Dead",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Son of Amir Is Dead",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Son Of Amir Is Dead",
+        "extracted_source": "label",
+        "ground_truth_text": "The Son of Amir Is Dead",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9998646378517151,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9998801946640015,
+      "graph_score": 0.9998801946640015,
+      "margin": 0.8245190680027008
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/vishwavidhaata_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vishwavidhaata",
+          "source": "label"
+        },
+        {
+          "text": "vishwavidhaata film",
+          "source": "uri"
+        }
+      ],
+      "context": "Vishwavidhaata. has publication date: 1997.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vishwavidhaata",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vishwavidhaata",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vishwavidhaata",
+        "extracted_source": "label",
+        "ground_truth_text": "Vishwavidhaata",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8121608793735504
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

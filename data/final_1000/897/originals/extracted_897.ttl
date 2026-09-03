@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_1924_king_of_the_wild_horses a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The King of the Wild Horses (1924 film)" ;
+    onto:hasDirector data:fred_jackman .
+
+data:fred_jackman a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fred Wood Jackman Sr." ;
+    onto:hasDeathPlace data:hollywood_california ;
+    skos:altLabel "Fred Jackman" .
+
+data:hollywood_california a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Hollywood, California" .
+

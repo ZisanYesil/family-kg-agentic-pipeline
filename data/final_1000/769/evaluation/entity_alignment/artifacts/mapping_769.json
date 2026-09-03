@@ -1,0 +1,184 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/769/originals/extracted_769.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/769/ground_truth_769.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/lebanon": "http://example.org/entity/Lebanon",
+    "http://example.org/extracted/dargi_kerman": "http://example.org/entity/Dargi_Kerman",
+    "http://example.org/extracted/bmahray": "http://example.org/entity/Bmahray",
+    "http://example.org/extracted/iran": "http://example.org/entity/Iran"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bmahray",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bmahray",
+          "source": "label"
+        }
+      ],
+      "context": "Bmahray. has country: Lebanon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bmahray",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bmahray",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bmahray",
+        "extracted_source": "label",
+        "ground_truth_text": "Bmahray",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.7182206213474274
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dargi_kerman",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dargi, Kerman",
+          "source": "label"
+        },
+        {
+          "text": "dargi kerman",
+          "source": "uri"
+        }
+      ],
+      "context": "Dargi, Kerman. has country: Iran.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dargi_Kerman",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dargi Kerman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dargi, Kerman",
+        "extracted_source": "label",
+        "ground_truth_text": "Dargi Kerman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9404417872428894,
+      "string_score": 0.9819999933242798,
+      "independent_identity_support": true,
+      "context_score": 0.9820914268493652,
+      "graph_score": 0.9910457134246826,
+      "margin": 0.5948897302150726
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/iran",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Iran",
+          "source": "label"
+        }
+      ],
+      "context": "Iran. inverse has country: Dargi, Kerman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Iran",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Iran",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Iran",
+        "extracted_source": "label",
+        "ground_truth_text": "Iran",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9818488955497742,
+      "graph_score": 0.9909244775772095,
+      "margin": 0.5735135674476624
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lebanon",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lebanon",
+          "source": "label"
+        }
+      ],
+      "context": "Lebanon. inverse has country: Bmahray.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lebanon",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lebanon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lebanon",
+        "extracted_source": "label",
+        "ground_truth_text": "Lebanon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5868546962738037
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

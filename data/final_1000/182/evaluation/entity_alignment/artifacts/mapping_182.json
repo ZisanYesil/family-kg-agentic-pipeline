@@ -1,0 +1,294 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/182/originals/extracted_182.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/182/ground_truth_182.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_a_heart_in_winter": "http://example.org/entity/A_Heart_in_Winter",
+    "http://example.org/extracted/country_switzerland": "http://example.org/entity/Swiss",
+    "http://example.org/extracted/person_barbet_schroeder": "http://example.org/entity/Barbet_Schroeder",
+    "http://example.org/extracted/film_single_white_female": "http://example.org/entity/Single_White_Female",
+    "http://example.org/extracted/country_france": "http://example.org/entity/French",
+    "http://example.org/extracted/person_claude_sautet": "http://example.org/entity/Claude_Sautet"
+  },
+  "summary": {
+    "extracted_entities": 6,
+    "ground_truth_entities": 6,
+    "matched": 6,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        },
+        {
+          "text": "country france",
+          "source": "uri"
+        }
+      ],
+      "context": "French. inverse has nationality: Claude Sautet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/French",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "French",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "French",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "French",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8303792476654053,
+      "graph_score": 0.41518962383270264,
+      "margin": 0.5519165098667145
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_switzerland",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Swiss",
+          "source": "altLabel"
+        },
+        {
+          "text": "Switzerland",
+          "source": "label"
+        },
+        {
+          "text": "country switzerland",
+          "source": "uri"
+        }
+      ],
+      "context": "Swiss. inverse has nationality: Barbet Schroeder.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Swiss",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Swiss",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Swiss",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Swiss",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9232391119003296,
+      "graph_score": 0.4616195559501648,
+      "margin": 0.5713996887207031
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_a_heart_in_winter",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A Heart In Winter",
+          "source": "label"
+        },
+        {
+          "text": "film a heart in winter",
+          "source": "uri"
+        }
+      ],
+      "context": "A Heart In Winter. has director: Claude Sautet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Heart_in_Winter",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Heart in Winter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Heart In Winter",
+        "extracted_source": "label",
+        "ground_truth_text": "A Heart in Winter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999179840087891,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9998790621757507,
+      "graph_score": 0.9999395608901978,
+      "margin": 0.8807224482297897
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_single_white_female",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Single White Female",
+          "source": "label"
+        },
+        {
+          "text": "film single white female",
+          "source": "uri"
+        }
+      ],
+      "context": "Single White Female. has director: Barbet Schroeder.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Single_White_Female",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Single White Female",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Single White Female",
+        "extracted_source": "label",
+        "ground_truth_text": "Single White Female",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.8812685906887054
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_barbet_schroeder",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Barbet Schroeder",
+          "source": "label"
+        },
+        {
+          "text": "person barbet schroeder",
+          "source": "uri"
+        }
+      ],
+      "context": "Barbet Schroeder. has nationality: Swiss. inverse has director: Single White Female.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Barbet_Schroeder",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Barbet Schroeder",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Barbet Schroeder",
+        "extracted_source": "label",
+        "ground_truth_text": "Barbet Schroeder",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9153029918670654,
+      "graph_score": 0.5826514959335327,
+      "margin": 0.6146332621574402
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_claude_sautet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Claude Sautet",
+          "source": "label"
+        },
+        {
+          "text": "person claude sautet",
+          "source": "uri"
+        }
+      ],
+      "context": "Claude Sautet. has nationality: French. inverse has director: A Heart In Winter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Claude_Sautet",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Claude Sautet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Claude Sautet",
+        "extracted_source": "label",
+        "ground_truth_text": "Claude Sautet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9609814286231995,
+      "graph_score": 0.6471573710441589,
+      "margin": 0.6132780313491821
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

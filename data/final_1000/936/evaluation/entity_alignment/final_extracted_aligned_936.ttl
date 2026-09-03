@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Harith_ibn_Harb> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/entity/Harb_ibn_Umayya> ;
+    ex:hasParent <http://example.org/entity/Harb_ibn_Umayya> .
+
+<http://example.org/entity/Umayya_ibn_Abd_Shams> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Harb_ibn_Umayya> .
+
+<http://example.org/entity/Harb_ibn_Umayya> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Harith_ibn_Harb> ;
+    ex:hasFather <http://example.org/entity/Umayya_ibn_Abd_Shams> ;
+    ex:hasParent <http://example.org/entity/Umayya_ibn_Abd_Shams> .
+

@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/812/originals/extracted_812.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/812/ground_truth_812.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/award_turner_prize": "http://example.org/entity/Turner_Prize",
+    "http://example.org/extracted/film_24_hour_psycho": "http://example.org/entity/24_Hour_Psycho",
+    "http://example.org/extracted/person_douglas_gordon": "http://example.org/entity/Douglas_Gordon"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/award_turner_prize",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Turner Prize",
+          "source": "label"
+        },
+        {
+          "text": "award turner prize",
+          "source": "uri"
+        }
+      ],
+      "context": "Turner Prize. inverse has award received: Douglas Gordon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Turner_Prize",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Turner Prize",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Turner Prize",
+        "extracted_source": "label",
+        "ground_truth_text": "Turner Prize",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_24_hour_psycho",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "24 Hour Psycho",
+          "source": "label"
+        },
+        {
+          "text": "film 24 hour psycho",
+          "source": "uri"
+        }
+      ],
+      "context": "24 Hour Psycho. has creator: Douglas Gordon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/24_Hour_Psycho",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "24 Hour Psycho",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "24 Hour Psycho",
+        "extracted_source": "label",
+        "ground_truth_text": "24 Hour Psycho",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9389944076538086,
+      "graph_score": 0.4694972038269043,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_douglas_gordon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Douglas Gordon",
+          "source": "label"
+        },
+        {
+          "text": "person douglas gordon",
+          "source": "uri"
+        }
+      ],
+      "context": "Douglas Gordon. has award received: Turner Prize. inverse has creator: 24 Hour Psycho.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Douglas_Gordon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Douglas Gordon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Douglas Gordon",
+        "extracted_source": "label",
+        "ground_truth_text": "Douglas Gordon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9279849529266357,
+      "graph_score": 0.6306591629981995,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

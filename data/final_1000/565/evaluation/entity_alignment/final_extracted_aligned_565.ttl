@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/The_Cousin_from_Nowhere> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasComposer <http://example.org/entity/Eduard_Künneke> ;
+    ex:hasCreator <http://example.org/entity/Eduard_Künneke> .
+
+<http://example.org/entity/Evelyn_Künneke> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/entity/Eduard_Künneke> ;
+    ex:isDaughterOf <http://example.org/entity/Eduard_Künneke> .
+
+<http://example.org/entity/Eduard_Künneke> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1885-01-27"^^xsd:date ;
+    ex:hasChild <http://example.org/entity/Evelyn_Künneke> ;
+    ex:hasDaughter <http://example.org/entity/Evelyn_Künneke> ;
+    ex:hasDeathDate "1953-10-27"^^xsd:date .
+

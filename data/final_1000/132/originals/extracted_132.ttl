@@ -1,0 +1,36 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:karimabad_place a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Karimabad" ;
+    onto:hasCountry data:iran_country ;
+    skos:altLabel "Karimabad",
+        "Karīmābād" .
+
+data:shadi_khan_place a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Shadi Khan" ;
+    onto:hasCountry data:pakistan_country ;
+    skos:altLabel "Shadi Khan",
+        "Shadikhan" .
+
+data:silvaneh_place a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Silvaneh" ;
+    onto:hasCountry data:iran_country ;
+    skos:altLabel "Silvaneh" .
+
+data:pakistan_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Pakistan" ;
+    skos:altLabel "Pakistan" .
+
+data:iran_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Iran" ;
+    skos:altLabel "Iran" .
+

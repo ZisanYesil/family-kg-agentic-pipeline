@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/819/originals/extracted_819.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/819/ground_truth_819.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/institution_konstfack": "http://example.org/entity/Konstfack",
+    "http://example.org/extracted/film_sallskapsresan_2_snowroller": "http://example.org/entity/Sällskapsresan_2_Snowroller",
+    "http://example.org/extracted/person_lasse_berg": "http://example.org/entity/Lasse_Åberg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_sallskapsresan_2_snowroller",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sällskapsresan 2 – Snowroller",
+          "source": "label"
+        },
+        {
+          "text": "film sallskapsresan 2 snowroller",
+          "source": "uri"
+        }
+      ],
+      "context": "Sällskapsresan 2 – Snowroller. has director: Lars Gunnar Åberg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sällskapsresan_2_Snowroller",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sällskapsresan 2 Snowroller",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sällskapsresan 2 – Snowroller",
+        "extracted_source": "label",
+        "ground_truth_text": "Sällskapsresan 2 Snowroller",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9608741402626038,
+      "string_score": 0.9839285612106323,
+      "independent_identity_support": true,
+      "context_score": 0.7742553949356079,
+      "graph_score": 0.887127697467804,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/institution_konstfack",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Konstfack",
+          "source": "label"
+        },
+        {
+          "text": "institution konstfack",
+          "source": "uri"
+        }
+      ],
+      "context": "Konstfack. inverse has educated at: Lars Gunnar Åberg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Konstfack",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Konstfack",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Konstfack",
+        "extracted_source": "label",
+        "ground_truth_text": "Konstfack",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7682409882545471,
+      "graph_score": 0.8841204643249512,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_lasse_berg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lars Gunnar Åberg",
+          "source": "altLabel"
+        },
+        {
+          "text": "Lasse Åberg",
+          "source": "label"
+        },
+        {
+          "text": "person lasse berg",
+          "source": "uri"
+        }
+      ],
+      "context": "Lars Gunnar Åberg. has educated at: Konstfack. inverse has director: Sällskapsresan 2 – Snowroller.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lasse_Åberg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lasse Åberg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lasse Åberg",
+        "extracted_source": "label",
+        "ground_truth_text": "Lasse Åberg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8366742730140686,
+      "graph_score": 0.9183371067047119,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

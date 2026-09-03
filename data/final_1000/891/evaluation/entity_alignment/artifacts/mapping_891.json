@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/891/originals/extracted_891.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/891/ground_truth_891.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/mayrouba_lebanon": "http://example.org/entity/Mayrouba",
+    "http://example.org/extracted/jorge_sapag": "http://example.org/entity/Jorge_Sapag",
+    "http://example.org/extracted/elias_sapag": "http://example.org/entity/Elías_Sapag"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/elias_sapag",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Elías Sapag",
+          "source": "altLabel"
+        },
+        {
+          "text": "Elías Canaán Sapag",
+          "source": "label"
+        },
+        {
+          "text": "elias sapag",
+          "source": "uri"
+        }
+      ],
+      "context": "Elías Sapag. has birth place: Mayrouba. inverse has father: Jorge Sapag.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Elías_Sapag",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Elías Sapag",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Elías Sapag",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Elías Sapag",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3259478807449341
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jorge_sapag",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jorge Sapag",
+          "source": "altLabel"
+        },
+        {
+          "text": "Jorge Augusto Sapag",
+          "source": "label"
+        }
+      ],
+      "context": "Jorge Sapag. has father: Elías Sapag.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jorge_Sapag",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jorge Sapag",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jorge Sapag",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Jorge Sapag",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.3259478807449341
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mayrouba_lebanon",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mayrouba",
+          "source": "altLabel"
+        },
+        {
+          "text": "Mayrouba, Lebanon",
+          "source": "label"
+        },
+        {
+          "text": "mayrouba lebanon",
+          "source": "uri"
+        }
+      ],
+      "context": "Mayrouba. inverse has birth place: Elías Sapag.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mayrouba",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mayrouba",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mayrouba",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Mayrouba",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

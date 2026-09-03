@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/45/originals/extracted_45.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/45/ground_truth_45.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/_normande_film": "http://example.org/entity/Normande",
+    "http://example.org/extracted/_gilles_carle": "http://example.org/entity/Gilles_Carle"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/_gilles_carle",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gilles Carle",
+          "source": "label"
+        }
+      ],
+      "context": "Gilles Carle. has cause of death: complications from Parkinson's disease. inverse has director: Normande.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gilles_Carle",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gilles Carle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gilles Carle",
+        "extracted_source": "label",
+        "ground_truth_text": "Gilles Carle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9883853793144226,
+      "graph_score": 0.9941927194595337,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_normande_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Normande",
+          "source": "label"
+        },
+        {
+          "text": "normande film",
+          "source": "uri"
+        }
+      ],
+      "context": "Normande. has director: Gilles Carle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Normande",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Normande",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Normande",
+        "extracted_source": "label",
+        "ground_truth_text": "Normande",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_parkinsons_complications",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "complications from Parkinson's disease",
+          "source": "label"
+        },
+        {
+          "text": "parkinsons complications",
+          "source": "uri"
+        }
+      ],
+      "context": "complications from Parkinson's disease. inverse has cause of death: Gilles Carle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Parkinson_s_disease",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Parkinson s disease",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "complications from Parkinson's disease",
+        "extracted_source": "label",
+        "ground_truth_text": "Parkinson s disease",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8827581405639648,
+      "name_embedding_score": 0.9076070785522461,
+      "string_score": 0.7342105507850647,
+      "independent_identity_support": true,
+      "context_score": 0.9632158279418945,
+      "graph_score": 0.9816079139709473,
+      "margin": 0.8827581405639648
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

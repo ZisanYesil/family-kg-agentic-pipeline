@@ -1,0 +1,90 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/319/evaluation/entity_alignment/final_extracted_aligned_319.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/319/evaluation/entity_alignment/final_ground_truth_aligned_319.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Constantia_Eriksdotter",
+      "predicate": "hasParent",
+      "object": "Eric_XIV_of_Sweden",
+      "subject_uri": "http://example.org/entity/Constantia_Eriksdotter",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Eric_XIV_of_Sweden"
+    },
+    {
+      "subject": "Constantia_Eriksdotter",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Constantia_Eriksdotter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Constantia_Eriksdotter",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Constantia_Eriksdotter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Eric_XIV_of_Sweden",
+      "predicate": "hasCauseOfDeath",
+      "object": "poisoning",
+      "subject_uri": "http://example.org/entity/Eric_XIV_of_Sweden",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+      "object_term": "http://example.org/entity/poisoning"
+    },
+    {
+      "subject": "Eric_XIV_of_Sweden",
+      "predicate": "hasChild",
+      "object": "Constantia_Eriksdotter",
+      "subject_uri": "http://example.org/entity/Eric_XIV_of_Sweden",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Constantia_Eriksdotter"
+    },
+    {
+      "subject": "Eric_XIV_of_Sweden",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Eric_XIV_of_Sweden",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Eric_XIV_of_Sweden",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Eric_XIV_of_Sweden",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "poisoning",
+      "predicate": "type",
+      "object": "CauseOfDeath",
+      "subject_uri": "http://example.org/entity/poisoning",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CauseOfDeath"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 8,
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

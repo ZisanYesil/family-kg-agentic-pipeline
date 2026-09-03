@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/436/originals/extracted_436.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/436/ground_truth_436.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/branko_tomovic": "http://example.org/entity/Branko_Tomovic"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/branko_tomovic",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Branko Tomović",
+          "source": "label"
+        },
+        {
+          "text": "branko tomovic",
+          "source": "uri"
+        }
+      ],
+      "context": "Branko Tomović. has birth place: Münster, Germany. inverse has director: Red (2016 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Branko_Tomovic",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Branko Tomovic",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "branko tomovic",
+        "extracted_source": "uri",
+        "ground_truth_text": "Branko Tomovic",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.7372297048568726,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9126802682876587,
+      "graph_score": 0.9126802682876587,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/munster_germany",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Münster, Germany",
+          "source": "label"
+        },
+        {
+          "text": "munster germany",
+          "source": "uri"
+        }
+      ],
+      "context": "Münster, Germany. inverse has birth place: Branko Tomović.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Münster",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Münster",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Münster, Germany",
+        "extracted_source": "label",
+        "ground_truth_text": "Münster",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8227918148040771,
+      "name_embedding_score": 0.8091607689857483,
+      "string_score": 0.698913037776947,
+      "independent_identity_support": false,
+      "context_score": 0.9478654861450195,
+      "graph_score": 0.9739327430725098,
+      "margin": 0.8227918148040771
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/red_2016_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Red (2016 film)",
+          "source": "label"
+        },
+        {
+          "text": "red 2016 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Red (2016 film). has director: Branko Tomović.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Red",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Red",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Red (2016 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Red",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7465373277664185,
+      "name_embedding_score": 0.7567631602287292,
+      "string_score": 0.5333333611488342,
+      "independent_identity_support": false,
+      "context_score": 0.8785791397094727,
+      "graph_score": 0.9392895698547363,
+      "margin": 0.7465373277664185
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

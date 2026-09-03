@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/920/originals/extracted_920.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/920/ground_truth_920.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_stolen_identity": "http://example.org/entity/Stolen_Identity",
+    "http://example.org/extracted/film_them": "http://example.org/entity/Them",
+    "http://example.org/extracted/person_gordon_douglas": "http://example.org/entity/Gordon_Douglas",
+    "http://example.org/extracted/person_gunther_von_fritsch": "http://example.org/entity/Gunther_von_Fritsch"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_stolen_identity",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stolen Identity",
+          "source": "label"
+        },
+        {
+          "text": "film stolen identity",
+          "source": "uri"
+        }
+      ],
+      "context": "Stolen Identity. has director: Gunther von Fritsch.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stolen_Identity",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stolen Identity",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stolen Identity",
+        "extracted_source": "label",
+        "ground_truth_text": "Stolen Identity",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7775507271289825
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_them",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Them!",
+          "source": "label"
+        },
+        {
+          "text": "film them",
+          "source": "uri"
+        }
+      ],
+      "context": "Them!. has director: Gordon Douglas.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Them",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Them",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Them!",
+        "extracted_source": "label",
+        "ground_truth_text": "Them",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8805583715438843,
+      "string_score": 0.949999988079071,
+      "independent_identity_support": true,
+      "context_score": 0.9401740431785583,
+      "graph_score": 0.9700870513916016,
+      "margin": 0.7953968942165375
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_gordon_douglas",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gordon Douglas",
+          "source": "label"
+        },
+        {
+          "text": "person gordon douglas",
+          "source": "uri"
+        }
+      ],
+      "context": "Gordon Douglas. has birth date: 1907-12-15. inverse has director: Them!.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gordon_Douglas",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gordon Douglas",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gordon Douglas",
+        "extracted_source": "label",
+        "ground_truth_text": "Gordon Douglas",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7825344204902649,
+      "graph_score": 0.8912671804428101,
+      "margin": 0.2635497450828552
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_gunther_von_fritsch",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gunther von Fritsch",
+          "source": "label"
+        },
+        {
+          "text": "person gunther von fritsch",
+          "source": "uri"
+        }
+      ],
+      "context": "Gunther von Fritsch. has birth date: 1906-07-15. inverse has director: Stolen Identity.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gunther_von_Fritsch",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gunther von Fritsch",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gunther von Fritsch",
+        "extracted_source": "label",
+        "ground_truth_text": "Gunther von Fritsch",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.6909273266792297
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Gordon_Douglas_director"
+  ]
+}

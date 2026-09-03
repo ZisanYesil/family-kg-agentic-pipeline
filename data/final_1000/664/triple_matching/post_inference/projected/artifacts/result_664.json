@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/664/evaluation/entity_alignment/final_extracted_aligned_664.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/664/evaluation/entity_alignment/final_ground_truth_aligned_664.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Alden_B_Dow",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Alden_B_Dow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Alden_B_Dow",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Alden_B_Dow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Case",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Case",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Case",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Case",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Case",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Case",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Herbert_Henry_Dow",
+      "predicate": "hasEducatedAt",
+      "object": "Case",
+      "subject_uri": "http://example.org/entity/Herbert_Henry_Dow",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Case"
+    },
+    {
+      "subject": "Herbert_Henry_Dow",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Herbert_Henry_Dow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Herbert_Henry_Dow",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Herbert_Henry_Dow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Alden_B_Dow",
+      "predicate": "hasParent",
+      "object": "Herbert_Henry_Dow",
+      "subject_uri": "http://example.org/entity/Alden_B_Dow",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Herbert_Henry_Dow"
+    },
+    {
+      "subject": "Herbert_Henry_Dow",
+      "predicate": "hasChild",
+      "object": "Alden_B_Dow",
+      "subject_uri": "http://example.org/entity/Herbert_Henry_Dow",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Alden_B_Dow"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Alden_B_Dow",
+      "predicate": "hasChild",
+      "object": "Herbert_Henry_Dow",
+      "subject_uri": "http://example.org/entity/Alden_B_Dow",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Herbert_Henry_Dow"
+    },
+    {
+      "subject": "Herbert_Henry_Dow",
+      "predicate": "hasParent",
+      "object": "Alden_B_Dow",
+      "subject_uri": "http://example.org/entity/Herbert_Henry_Dow",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Alden_B_Dow"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 12,
+    "true_positives": 8,
+    "false_positives": 2,
+    "false_negatives": 2,
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1": 0.8000000000000002
+  },
+  "stage": "post_inference"
+}

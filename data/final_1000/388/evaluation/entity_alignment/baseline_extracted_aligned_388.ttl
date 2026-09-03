@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Things_Done_Changed> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Things Done Changed" ;
+    onto:hasPerformer <http://example.org/entity/Notorious_B_I_G> .
+
+<http://example.org/entity/Notorious_B_I_G> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "The Notorious B.I.G." ;
+    onto:hasCauseOfDeath <http://example.org/entity/drive_by_shooting> .
+
+<http://example.org/entity/drive_by_shooting> a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "drive-by shooting" .
+

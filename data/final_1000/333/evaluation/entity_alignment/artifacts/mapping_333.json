@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/333/originals/extracted_333.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/333/ground_truth_333.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/friedrich_paschen": "http://example.org/entity/Friedrich_Paschen",
+    "http://example.org/extracted/ernst_bessey": "http://example.org/entity/Ernst_Bessey"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ernst_bessey",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ernst Athearn Bessey",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ernst Bessey",
+          "source": "label"
+        }
+      ],
+      "context": "Ernst Athearn Bessey. has birth date: 1877-02-20. has death date: 1957-07-17.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ernst_Bessey",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ernst Bessey",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ernst Bessey",
+        "extracted_source": "label",
+        "ground_truth_text": "Ernst Bessey",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9403442144393921,
+      "graph_score": 0.9403442144393921,
+      "margin": 0.4960516095161438
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/friedrich_paschen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis Carl Heinrich Friedrich Paschen",
+          "source": "altLabel"
+        },
+        {
+          "text": "Friedrich Paschen",
+          "source": "label"
+        }
+      ],
+      "context": "Louis Carl Heinrich Friedrich Paschen. has birth date: 1865-01-22. has death date: 1947-02-25.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Friedrich_Paschen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Friedrich Paschen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Friedrich Paschen",
+        "extracted_source": "label",
+        "ground_truth_text": "Friedrich Paschen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9577583074569702,
+      "graph_score": 0.9577583074569702,
+      "margin": 0.5324633121490479
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

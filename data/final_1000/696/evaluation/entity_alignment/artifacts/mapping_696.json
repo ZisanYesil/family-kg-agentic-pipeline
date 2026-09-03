@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/696/originals/extracted_696.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/696/ground_truth_696.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_to_light_a_candle": "http://example.org/entity/To_Light_a_Candle",
+    "http://example.org/extracted/person_maziar_bahari": "http://example.org/entity/Maziar_Bahari",
+    "http://example.org/extracted/organization_newsweek": "http://example.org/entity/Newsweek"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_to_light_a_candle",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "To Light a Candle",
+          "source": "label"
+        },
+        {
+          "text": "film to light a candle",
+          "source": "uri"
+        }
+      ],
+      "context": "To Light a Candle. has creator: Maziar Bahari.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/To_Light_a_Candle",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "To Light a Candle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "To Light a Candle",
+        "extracted_source": "label",
+        "ground_truth_text": "To Light a Candle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9157139658927917,
+      "graph_score": 0.4578569829463959,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/organization_newsweek",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Newsweek",
+          "source": "label"
+        },
+        {
+          "text": "organization newsweek",
+          "source": "uri"
+        }
+      ],
+      "context": "Newsweek. inverse has employer: Maziar Bahari.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Newsweek",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Newsweek",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Newsweek",
+        "extracted_source": "label",
+        "ground_truth_text": "Newsweek",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_maziar_bahari",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maziar Bahari",
+          "source": "label"
+        },
+        {
+          "text": "person maziar bahari",
+          "source": "uri"
+        }
+      ],
+      "context": "Maziar Bahari. has employer: Newsweek. inverse has creator: To Light a Candle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maziar_Bahari",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maziar Bahari",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maziar Bahari",
+        "extracted_source": "label",
+        "ground_truth_text": "Maziar Bahari",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9466997981071472,
+      "graph_score": 0.6400165557861328,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

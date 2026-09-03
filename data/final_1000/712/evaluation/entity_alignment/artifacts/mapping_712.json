@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/712/originals/extracted_712.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/712/ground_truth_712.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/cancun_intl_airport": "http://example.org/entity/Cancún_International_Airport",
+    "http://example.org/extracted/mexico": "http://example.org/entity/Mexico",
+    "http://example.org/extracted/ciudad_juarez_intl_airport": "http://example.org/entity/Ciudad_Juárez_International_Airport"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/cancun_intl_airport",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cancún International Airport",
+          "source": "label"
+        },
+        {
+          "text": "cancun intl airport",
+          "source": "uri"
+        }
+      ],
+      "context": "Cancún International Airport. has country: Mexico.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cancún_International_Airport",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cancún International Airport",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cancún International Airport",
+        "extracted_source": "label",
+        "ground_truth_text": "Cancún International Airport",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.2994840145111084
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ciudad_juarez_intl_airport",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Abraham González International Airport",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ciudad Juárez International Airport",
+          "source": "label"
+        },
+        {
+          "text": "ciudad juarez intl airport",
+          "source": "uri"
+        }
+      ],
+      "context": "Abraham González International Airport. has country: Mexico.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ciudad_Juárez_International_Airport",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ciudad Juárez International Airport",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ciudad Juárez International Airport",
+        "extracted_source": "label",
+        "ground_truth_text": "Ciudad Juárez International Airport",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7957233786582947,
+      "graph_score": 0.8978617191314697,
+      "margin": 0.2687442898750305
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mexico",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mexico",
+          "source": "label"
+        }
+      ],
+      "context": "Mexico. inverse has country: Abraham González International Airport. inverse has country: Cancún International Airport.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mexico",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mexico",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mexico",
+        "extracted_source": "label",
+        "ground_truth_text": "Mexico",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9571071863174438,
+      "graph_score": 0.9785535931587219,
+      "margin": 0.6954388320446014
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

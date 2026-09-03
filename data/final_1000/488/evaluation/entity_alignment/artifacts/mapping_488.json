@@ -1,0 +1,142 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/488/originals/extracted_488.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/488/ground_truth_488.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/stefan_vladislav": "http://example.org/entity/Stefan_Vladislav",
+    "http://example.org/extracted/stefan_firstcrowned": "http://example.org/entity/Stefan_the_First_Crowned"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/stefan_firstcrowned",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stefan Nemanjić",
+          "source": "altLabel"
+        },
+        {
+          "text": "Stefan the First-Crowned",
+          "source": "label"
+        },
+        {
+          "text": "stefan firstcrowned",
+          "source": "uri"
+        }
+      ],
+      "context": "Stefan Nemanjić. has father: Stefan Vladislav. has nationality: Serbia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stefan_the_First_Crowned",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stefan the First Crowned",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stefan the First-Crowned",
+        "extracted_source": "label",
+        "ground_truth_text": "Stefan the First Crowned",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9585606455802917,
+      "string_score": 0.981249988079071,
+      "independent_identity_support": true,
+      "context_score": 0.7344895601272583,
+      "graph_score": 0.36724478006362915,
+      "margin": 0.4443238377571106
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/stefan_vladislav",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stefan Vladislav",
+          "source": "label"
+        }
+      ],
+      "context": "Stefan Vladislav. inverse has father: Stefan Nemanjić.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stefan_Vladislav",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stefan Vladislav",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stefan Vladislav",
+        "extracted_source": "label",
+        "ground_truth_text": "Stefan Vladislav",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7620499730110168,
+      "graph_score": 0.3810249865055084,
+      "margin": 0.49961817264556885
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/serbia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Serbia",
+          "source": "label"
+        }
+      ],
+      "context": "Serbia. inverse has nationality: Stefan Nemanjić.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Serbian_Grand_Principality"
+  ]
+}

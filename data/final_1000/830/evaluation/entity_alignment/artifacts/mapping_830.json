@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/830/originals/extracted_830.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/830/ground_truth_830.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/elizabeth_woodville": "http://example.org/entity/Elizabeth_Woodville",
+    "http://example.org/extracted/arthur_plantagenet": "http://example.org/entity/Arthur_Plantagenet_1st_Viscount_Lisle",
+    "http://example.org/extracted/edward_iv": "http://example.org/entity/Edward_IV"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/arthur_plantagenet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Arthur Plantagenet, 1st Viscount Lisle",
+          "source": "label"
+        },
+        {
+          "text": "arthur plantagenet",
+          "source": "uri"
+        }
+      ],
+      "context": "Arthur Plantagenet, 1st Viscount Lisle. has father: Edward IV of England.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Arthur_Plantagenet_1st_Viscount_Lisle",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Arthur Plantagenet 1st Viscount Lisle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Arthur Plantagenet, 1st Viscount Lisle",
+        "extracted_source": "label",
+        "ground_truth_text": "Arthur Plantagenet 1st Viscount Lisle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9810211062431335,
+      "string_score": 0.9940000176429749,
+      "independent_identity_support": true,
+      "context_score": 0.9745528697967529,
+      "graph_score": 0.9872764348983765,
+      "margin": 0.5496472716331482
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/edward_iv",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edward IV of England",
+          "source": "label"
+        },
+        {
+          "text": "edward iv",
+          "source": "uri"
+        }
+      ],
+      "context": "Edward IV of England. has spouse: Elizabeth Woodville. inverse has father: Arthur Plantagenet, 1st Viscount Lisle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Edward_IV",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Edward IV",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "edward iv",
+        "extracted_source": "uri",
+        "ground_truth_text": "Edward IV",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.7674988508224487,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9800208806991577,
+      "graph_score": 0.9900104403495789,
+      "margin": 0.5444735586643219
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/elizabeth_woodville",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Elizabeth Woodville",
+          "source": "label"
+        }
+      ],
+      "context": "Elizabeth Woodville. inverse has spouse: Edward IV of England.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Elizabeth_Woodville",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Elizabeth Woodville",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Elizabeth Woodville",
+        "extracted_source": "label",
+        "ground_truth_text": "Elizabeth Woodville",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9638988375663757,
+      "graph_score": 0.9819494485855103,
+      "margin": 0.6817247867584229
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

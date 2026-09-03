@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/808/evaluation/entity_alignment/baseline_extracted_aligned_808.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/808/evaluation/entity_alignment/baseline_ground_truth_aligned_808.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Colonel_Abrams_album",
+      "predicate": "hasPublicationDate",
+      "object": "\"1985\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Colonel_Abrams_album",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1985\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Eto_Baš_hoću",
+      "predicate": "hasPublicationDate",
+      "object": "\"1976\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Eto_Baš_hoću",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1976\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Colonel_Abrams_album",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Colonel_Abrams_album",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Colonel_Abrams_album",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Colonel_Abrams_album",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Colonel_Abrams_album",
+      "predicate": "label",
+      "object": "\"Colonel Abrams\"",
+      "subject_uri": "http://example.org/entity/Colonel_Abrams_album",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Colonel Abrams\""
+    },
+    {
+      "subject": "Colonel_Abrams_album",
+      "predicate": "altLabel",
+      "object": "\"Colonel Abrams\"",
+      "subject_uri": "http://example.org/entity/Colonel_Abrams_album",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Colonel Abrams\""
+    },
+    {
+      "subject": "Eto_Baš_hoću",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Eto_Baš_hoću",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Eto_Baš_hoću",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Eto_Baš_hoću",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Eto_Baš_hoću",
+      "predicate": "label",
+      "object": "\"Eto! Baš hoću!\"",
+      "subject_uri": "http://example.org/entity/Eto_Baš_hoću",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Eto! Baš hoću!\""
+    },
+    {
+      "subject": "Eto_Baš_hoću",
+      "predicate": "altLabel",
+      "object": "\"Eto! Baš hoću!\"",
+      "subject_uri": "http://example.org/entity/Eto_Baš_hoću",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Eto! Baš hoću!\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 2,
+    "false_positives": 8,
+    "false_negatives": 0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "f1": 0.33333333333333337
+  },
+  "stage": "pre_inference"
+}

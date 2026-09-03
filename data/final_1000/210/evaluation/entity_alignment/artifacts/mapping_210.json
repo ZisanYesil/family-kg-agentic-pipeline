@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/210/originals/extracted_210.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/210/ground_truth_210.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_michael_mayer": "http://example.org/entity/Michael_Mayer",
+    "http://example.org/extracted/award_tony_award_best_direction_of_a_musical": "http://example.org/entity/Tony_Award_for_Best_Direction_of_a_Musical"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/award_tony_award_best_direction_of_a_musical",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tony Award for Best Direction of a Musical",
+          "source": "label"
+        },
+        {
+          "text": "award tony award best direction of a musical",
+          "source": "uri"
+        }
+      ],
+      "context": "Tony Award for Best Direction of a Musical. inverse has award received: Michael Mayer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tony_Award_for_Best_Direction_of_a_Musical",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tony Award for Best Direction of a Musical",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tony Award for Best Direction of a Musical",
+        "extracted_source": "label",
+        "ground_truth_text": "Tony Award for Best Direction of a Musical",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_michael_mayer",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Michael Mayer",
+          "source": "label"
+        },
+        {
+          "text": "person michael mayer",
+          "source": "uri"
+        }
+      ],
+      "context": "Michael Mayer. has award received: Tony Award for Best Direction of a Musical. inverse has director: The Seagull (2018 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Michael_Mayer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Michael Mayer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Michael Mayer",
+        "extracted_source": "label",
+        "ground_truth_text": "Michael Mayer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9795682430267334,
+      "graph_score": 0.9897841215133667,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_seagull_2018",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Seagull (2018 film)",
+          "source": "label"
+        },
+        {
+          "text": "film the seagull 2018",
+          "source": "uri"
+        }
+      ],
+      "context": "The Seagull (2018 film). has director: Michael Mayer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Seagull",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Seagull",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Seagull (2018 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Seagull",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8611995577812195,
+      "name_embedding_score": 0.8845260143280029,
+      "string_score": 0.716176450252533,
+      "independent_identity_support": true,
+      "context_score": 0.9191392660140991,
+      "graph_score": 0.9595696330070496,
+      "margin": 0.8611995577812195
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

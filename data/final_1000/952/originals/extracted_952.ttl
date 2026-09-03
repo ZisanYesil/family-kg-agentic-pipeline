@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:ruqayyah_bint_husayn a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ruqayyah bint Al-Ḥusayn" ;
+    onto:hasFather data:husayn_ibn_ali .
+
+data:cause_battle_of_karbala a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "killed in the Battle of Karbala" .
+
+data:husayn_ibn_ali a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Husayn ibn Ali" ;
+    onto:hasCauseOfDeath data:cause_battle_of_karbala .
+

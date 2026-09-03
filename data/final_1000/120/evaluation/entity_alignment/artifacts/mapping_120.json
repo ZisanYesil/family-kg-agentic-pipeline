@@ -1,0 +1,144 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/120/originals/extracted_120.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/120/ground_truth_120.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/prince_sahle_selassie": "http://example.org/entity/Prince_Sahle_Selassie",
+    "http://example.org/extracted/mahisente_habte_mariam": "http://example.org/entity/Mahisente_Habte_Mariam"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/mahisente_habte_mariam",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mahisente Habte Mariam",
+          "source": "label"
+        }
+      ],
+      "context": "Mahisente Habte Mariam. has spouse: Prince Sahle Selassie.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mahisente_Habte_Mariam",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mahisente Habte Mariam",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mahisente Habte Mariam",
+        "extracted_source": "label",
+        "ground_truth_text": "Mahisente Habte Mariam",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.6099954843521118
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/prince_sahle_selassie",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prince Sahle Selassie",
+          "source": "label"
+        }
+      ],
+      "context": "Prince Sahle Selassie. has mother: Empress Menen Asfaw. inverse has spouse: Mahisente Habte Mariam.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prince_Sahle_Selassie",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prince Sahle Selassie",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prince Sahle Selassie",
+        "extracted_source": "label",
+        "ground_truth_text": "Prince Sahle Selassie",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.985718309879303,
+      "graph_score": 0.9928591251373291,
+      "margin": 0.6198590993881226
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/empress_menen_asfaw",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Empress Menen Asfaw",
+          "source": "label"
+        }
+      ],
+      "context": "Empress Menen Asfaw. inverse has mother: Prince Sahle Selassie.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Menen_Asfaw",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Menen Asfaw",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Empress Menen Asfaw",
+        "extracted_source": "label",
+        "ground_truth_text": "Menen Asfaw",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7802095413208008,
+      "name_embedding_score": 0.6740029454231262,
+      "string_score": 0.79666668176651,
+      "independent_identity_support": true,
+      "context_score": 0.952331006526947,
+      "graph_score": 0.9761655330657959,
+      "margin": 0.38846254348754883
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_k9_pi a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "K-9: P.I." ;
+    onto:hasDirector data:person_richard_j_lewis .
+
+data:person_richard_j_lewis a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Richard J. Lewis" ;
+    onto:hasBirthPlace data:place_toronto .
+
+data:place_toronto a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Toronto, Ontario, Canada" .
+

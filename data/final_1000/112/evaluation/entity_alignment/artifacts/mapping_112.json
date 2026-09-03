@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/112/originals/extracted_112.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/112/ground_truth_112.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/crockett_johnson": "http://example.org/entity/Crockett_Johnson",
+    "http://example.org/extracted/sven_olof_lundgren": "http://example.org/entity/Sven_Olof_Lundgren"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/crockett_johnson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Johnson Leisk",
+          "source": "altLabel"
+        },
+        {
+          "text": "Crockett Johnson",
+          "source": "label"
+        }
+      ],
+      "context": "David Johnson Leisk. has birth date: 1906-10-20. has death date: 1975-07-11.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Crockett_Johnson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Crockett Johnson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Crockett Johnson",
+        "extracted_source": "label",
+        "ground_truth_text": "Crockett Johnson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6608290672302246,
+      "graph_score": 0.6608290672302246,
+      "margin": 0.605734258890152
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sven_olof_lundgren",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sven-Olof Lundgren",
+          "source": "label"
+        },
+        {
+          "text": "sven olof lundgren",
+          "source": "uri"
+        }
+      ],
+      "context": "Sven-Olof Lundgren. has birth date: 1908-11-03. has death date: 1946-03-26.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sven_Olof_Lundgren",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sven Olof Lundgren",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sven-Olof Lundgren",
+        "extracted_source": "label",
+        "ground_truth_text": "Sven Olof Lundgren",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9735634326934814,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9848927855491638,
+      "graph_score": 0.9848927855491638,
+      "margin": 0.6538061797618866
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

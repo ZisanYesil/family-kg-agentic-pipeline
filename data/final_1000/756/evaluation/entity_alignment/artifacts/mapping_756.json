@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/756/originals/extracted_756.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/756/ground_truth_756.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/georg_alexander_1859": "http://example.org/entity/Duke_Georg_Alexander_of_Mecklenburg_Strelitz",
+    "http://example.org/extracted/catherine_mikhailovna_of_russia": "http://example.org/entity/Grand_Duchess_Catherine_Mikhailovna_of_Russia"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/catherine_mikhailovna_of_russia",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Grand Duchess Catherine Mikhailovna of Russia",
+          "source": "label"
+        },
+        {
+          "text": "catherine mikhailovna of russia",
+          "source": "uri"
+        }
+      ],
+      "context": "Grand Duchess Catherine Mikhailovna of Russia. has birth date: 1827-08-28. inverse has mother: Duke Georg Alexander of Mecklenburg-Strelitz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Grand_Duchess_Catherine_Mikhailovna_of_Russia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Grand Duchess Catherine Mikhailovna of Russia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Grand Duchess Catherine Mikhailovna of Russia",
+        "extracted_source": "label",
+        "ground_truth_text": "Grand Duchess Catherine Mikhailovna of Russia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9956262707710266,
+      "graph_score": 0.9978131055831909,
+      "margin": 0.6031942367553711
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/georg_alexander_1859",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Duke Georg Alexander of Mecklenburg-Strelitz",
+          "source": "label"
+        },
+        {
+          "text": "georg alexander 1859",
+          "source": "uri"
+        }
+      ],
+      "context": "Duke Georg Alexander of Mecklenburg-Strelitz. has mother: Grand Duchess Catherine Mikhailovna of Russia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Duke_Georg_Alexander_of_Mecklenburg_Strelitz",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Duke Georg Alexander of Mecklenburg Strelitz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Duke Georg Alexander of Mecklenburg-Strelitz",
+        "extracted_source": "label",
+        "ground_truth_text": "Duke Georg Alexander of Mecklenburg Strelitz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9878503084182739,
+      "string_score": 0.9897727370262146,
+      "independent_identity_support": true,
+      "context_score": 0.9940827488899231,
+      "graph_score": 0.9970413446426392,
+      "margin": 0.6033871471881866
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

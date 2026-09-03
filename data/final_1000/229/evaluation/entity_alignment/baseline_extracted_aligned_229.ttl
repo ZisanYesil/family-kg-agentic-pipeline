@@ -1,0 +1,35 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/It_s_a_Great_Feeling> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "It's a Great Feeling" ;
+    onto:hasDirector <http://example.org/entity/David_Butler> .
+
+<http://example.org/entity/Oklahoma_1999_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Oklahoma! (1999 film)" ;
+    onto:hasDirector <http://example.org/entity/Trevor_Nunn> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/British> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "English" .
+
+<http://example.org/entity/David_Butler> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "David Butler" ;
+    onto:hasNationality <http://example.org/entity/American> .
+
+<http://example.org/entity/Trevor_Nunn> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Trevor Nunn" ;
+    onto:hasNationality <http://example.org/entity/British> .
+

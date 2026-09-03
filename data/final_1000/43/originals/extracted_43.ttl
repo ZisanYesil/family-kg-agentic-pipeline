@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_polish_russian_war_2009 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Polish-Russian War" ;
+    onto:hasDirector data:person_xawery_zulawski .
+
+data:edu_national_film_school_lodz a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "National Film School in Łódź" .
+
+data:person_xawery_zulawski a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Xawery Żuławski" ;
+    onto:hasEducatedAt data:edu_national_film_school_lodz .
+

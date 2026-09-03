@@ -1,0 +1,39 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Chantilly_Lace> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Chantilly Lace" ;
+    onto:hasDirector <http://example.org/entity/Linda_Yellen> .
+
+<http://example.org/entity/Emmys> a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Emmy Award" .
+
+<http://example.org/entity/Linda_Yellen> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Linda Yellen" ;
+    onto:hasAwardReceived <http://example.org/entity/Emmys>,
+        data:christopher_award,
+        data:peabody_award,
+        data:primetime_emmy_award,
+        data:silver_nymph_award .
+
+data:christopher_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Christopher Award" .
+
+data:peabody_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Peabody Award" .
+
+data:primetime_emmy_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Primetime Emmy Award" .
+
+data:silver_nymph_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Silver Nymph" .
+

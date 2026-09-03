@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/127/originals/extracted_127.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/127/ground_truth_127.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/st_louis_missouri": "http://example.org/entity/St_Louis_Missouri",
+    "http://example.org/extracted/chuck_berry": "http://example.org/entity/Chuck_Berry",
+    "http://example.org/extracted/wee_wee_hours": "http://example.org/entity/Wee_Wee_Hours"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/chuck_berry",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chuck Berry",
+          "source": "label"
+        }
+      ],
+      "context": "Chuck Berry. has birth place: St. Louis, Missouri. inverse has performer: Wee Wee Hours.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chuck_Berry",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chuck Berry",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chuck Berry",
+        "extracted_source": "label",
+        "ground_truth_text": "Chuck Berry",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9931509494781494,
+      "graph_score": 0.9965754747390747,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/st_louis_missouri",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "St. Louis, Missouri",
+          "source": "label"
+        },
+        {
+          "text": "st louis missouri",
+          "source": "uri"
+        }
+      ],
+      "context": "St. Louis, Missouri. inverse has birth place: Chuck Berry.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/St_Louis_Missouri",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "St Louis Missouri",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "St. Louis, Missouri",
+        "extracted_source": "label",
+        "ground_truth_text": "St Louis Missouri",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9413700699806213,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.991531491279602,
+      "graph_score": 0.995765745639801,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wee_wee_hours",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Wee Wee Hours",
+          "source": "label"
+        }
+      ],
+      "context": "Wee Wee Hours. has performer: Chuck Berry.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Wee_Wee_Hours",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Wee Wee Hours",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Wee Wee Hours",
+        "extracted_source": "label",
+        "ground_truth_text": "Wee Wee Hours",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

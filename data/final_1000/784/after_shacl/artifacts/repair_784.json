@@ -1,0 +1,114 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "6130e674e642ff6d78c355f78b2a177208d9180dc6eb9ddf1767edbdd32cf43f",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/song_talking_to_the_moon",
+        "path": null,
+        "value": "http://example.org/extracted/person_bruno_mars",
+        "expected": null,
+        "message": "Relation phrase 'composed by' from http://example.org/extracted/song_talking_to_the_moon to http://example.org/extracted/person_bruno_mars was not mapped: subject type 'CreativeWork' does not satisfy hasComposer's expected domain 'MusicalWork'. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "6130e674e642ff6d78c355f78b2a177208d9180dc6eb9ddf1767edbdd32cf43f",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/song_talking_to_the_moon",
+            "path": null,
+            "value": "http://example.org/extracted/person_bruno_mars",
+            "expected": null,
+            "message": "Relation phrase 'composed by' from http://example.org/extracted/song_talking_to_the_moon to http://example.org/extracted/person_bruno_mars was not mapped: subject type 'CreativeWork' does not satisfy hasComposer's expected domain 'MusicalWork'. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 10,
+      "feedback_reasoning": "The source text states that “Talking to the Moon” is a song written/composed by Bruno Mars. The appropriate ontology predicate for a 'composed by' relation is onto:hasComposer (domain CreativeWork, range Person). The current node is typed only as CreativeWork, but a more specific type MusicalWork better reflects the source and satisfies the expected domain for a musical composition. Adding the MusicalWork type and the hasComposer triple resolves the unmapped_relation violation.",
+      "repairs": [
+        {
+          "violation_fingerprint": "ebaebdfdbb15d2aabf435512565d7eada650b1c5e0051e00f74527df29a4d8da",
+          "reasoning": "Add the missing composer relationship and a more specific type for the song.",
+          "operations": [
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/song_talking_to_the_moon",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/2wiki-ontology#MusicalWork"
+              }
+            },
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/song_talking_to_the_moon",
+              "predicate": "http://example.org/2wiki-ontology#hasComposer",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/extracted/person_bruno_mars"
+              }
+            }
+          ]
+        }
+      ],
+      "edit_log": [
+        {
+          "violation_fingerprint": "ebaebdfdbb15d2aabf435512565d7eada650b1c5e0051e00f74527df29a4d8da",
+          "operation_index": 0,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/song_talking_to_the_moon",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "old_value": null,
+          "new_value": "<http://example.org/2wiki-ontology#MusicalWork>",
+          "triples_before": 10,
+          "triples_after": 11
+        },
+        {
+          "violation_fingerprint": "ebaebdfdbb15d2aabf435512565d7eada650b1c5e0051e00f74527df29a4d8da",
+          "operation_index": 1,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/song_talking_to_the_moon",
+          "predicate": "http://example.org/2wiki-ontology#hasComposer",
+          "old_value": null,
+          "new_value": "<http://example.org/extracted/person_bruno_mars>",
+          "triples_before": 11,
+          "triples_after": 12
+        }
+      ],
+      "unresolved_violation_fingerprints": [],
+      "triples_after": 12,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": true,
+        "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "violations": []
+      },
+      "outcome": "conforms"
+    }
+  ],
+  "status": "repaired",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": true,
+    "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "violations": []
+  },
+  "dangling_references": []
+}

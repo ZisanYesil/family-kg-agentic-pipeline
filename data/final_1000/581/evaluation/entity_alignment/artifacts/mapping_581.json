@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/581/originals/extracted_581.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/581/ground_truth_581.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/cbs": "http://example.org/entity/Columbia_Broadcasting_System",
+    "http://example.org/extracted/babe_paley": "http://example.org/entity/Barbara_Babe_Cushing_Mortimer_Paley",
+    "http://example.org/extracted/william_paley": "http://example.org/entity/William_S_Paley"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/babe_paley",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Babe Paley",
+          "source": "altLabel"
+        },
+        {
+          "text": "Barbara \"Babe\" Cushing Mortimer Paley",
+          "source": "label"
+        }
+      ],
+      "context": "Babe Paley. has spouse: William S. Paley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Barbara_Babe_Cushing_Mortimer_Paley",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Barbara Babe Cushing Mortimer Paley",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Barbara \"Babe\" Cushing Mortimer Paley",
+        "extracted_source": "label",
+        "ground_truth_text": "Barbara Babe Cushing Mortimer Paley",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9042989611625671,
+      "string_score": 0.987500011920929,
+      "independent_identity_support": true,
+      "context_score": 0.8649364709854126,
+      "graph_score": 0.9324682354927063,
+      "margin": 0.46993398666381836
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cbs",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "CBS",
+          "source": "altLabel"
+        },
+        {
+          "text": "Columbia Broadcasting System",
+          "source": "label"
+        }
+      ],
+      "context": "CBS. inverse has employer: William S. Paley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Columbia_Broadcasting_System",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Columbia Broadcasting System",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Columbia Broadcasting System",
+        "extracted_source": "label",
+        "ground_truth_text": "Columbia Broadcasting System",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8641951680183411,
+      "graph_score": 0.9320975542068481,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/william_paley",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William S. Paley",
+          "source": "altLabel"
+        },
+        {
+          "text": "William Samuel Paley",
+          "source": "label"
+        },
+        {
+          "text": "william paley",
+          "source": "uri"
+        }
+      ],
+      "context": "William S. Paley. has employer: CBS. inverse has spouse: Babe Paley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_S_Paley",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William S Paley",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William S. Paley",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "William S Paley",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9860833287239075,
+      "string_score": 0.9854838848114014,
+      "independent_identity_support": true,
+      "context_score": 0.9112130999565125,
+      "graph_score": 0.9556065797805786,
+      "margin": 0.5268599390983582
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

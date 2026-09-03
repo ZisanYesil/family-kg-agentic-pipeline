@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/635/originals/extracted_635.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/635/ground_truth_635.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/catherine_ivanovna": "http://example.org/entity/Tsarevna_Catherine_Ivanovna_of_Russia",
+    "http://example.org/extracted/praskovia_saltykova": "http://example.org/entity/Praskovia_Saltykova"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/catherine_ivanovna",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Catherine Ivanovna",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tsarevna Catherine Ivanovna of Russia",
+          "source": "label"
+        }
+      ],
+      "context": "Catherine Ivanovna. has mother: Praskovia Fyodorovna Saltykova.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tsarevna_Catherine_Ivanovna_of_Russia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tsarevna Catherine Ivanovna of Russia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tsarevna Catherine Ivanovna of Russia",
+        "extracted_source": "label",
+        "ground_truth_text": "Tsarevna Catherine Ivanovna of Russia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9286182522773743,
+      "graph_score": 0.9643090963363647,
+      "margin": 0.5714087784290314
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/praskovia_saltykova",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Praskovia Fyodorovna Saltykova",
+          "source": "altLabel"
+        },
+        {
+          "text": "Praskovia Saltykova",
+          "source": "label"
+        }
+      ],
+      "context": "Praskovia Fyodorovna Saltykova. has death date: 1723-10-13. inverse has mother: Catherine Ivanovna.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Praskovia_Saltykova",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Praskovia Saltykova",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Praskovia Saltykova",
+        "extracted_source": "label",
+        "ground_truth_text": "Praskovia Saltykova",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9495367407798767,
+      "graph_score": 0.9747684001922607,
+      "margin": 0.5192794799804688
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:helen_dortch_longstreet a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Helen Dortch Longstreet" ;
+    onto:hasSpouse data:james_longstreet .
+
+data:james_longstreet a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "James Longstreet" ;
+    onto:hasEducatedAt data:usma_west_point .
+
+data:usma_west_point a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "United States Military Academy at West Point" .
+

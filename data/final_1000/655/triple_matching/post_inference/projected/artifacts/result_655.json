@@ -1,0 +1,82 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/655/evaluation/entity_alignment/final_extracted_aligned_655.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/655/evaluation/entity_alignment/final_ground_truth_aligned_655.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Bobby_Previte",
+      "predicate": "hasBirthPlace",
+      "object": "Niagara_Falls_New_York",
+      "subject_uri": "http://example.org/entity/Bobby_Previte",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Niagara_Falls_New_York"
+    },
+    {
+      "subject": "Bobby_Previte",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Bobby_Previte",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Bobby_Previte",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bobby_Previte",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Niagara_Falls_New_York",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Niagara_Falls_New_York",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "The_Coalition_of_the_Willing",
+      "predicate": "hasMember",
+      "object": "Bobby_Previte",
+      "subject_uri": "http://example.org/entity/The_Coalition_of_the_Willing",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasMember",
+      "object_term": "http://example.org/entity/Bobby_Previte"
+    },
+    {
+      "subject": "The_Coalition_of_the_Willing",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/The_Coalition_of_the_Willing",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "The_Coalition_of_the_Willing",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/The_Coalition_of_the_Willing",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 7,
+    "true_positives": 7,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

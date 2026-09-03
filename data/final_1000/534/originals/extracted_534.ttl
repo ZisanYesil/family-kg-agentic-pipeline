@@ -1,0 +1,40 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:amir_hossein_arman a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Amir Hossein Arman" ;
+    onto:hasOccupation data:occupation_actor,
+        data:occupation_model,
+        data:occupation_singer .
+
+data:inbakavi a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Inbakavi" ;
+    onto:hasOccupation data:occupation_dramatist,
+        data:occupation_poet ;
+    skos:altLabel "Xavier Henric Leam" .
+
+data:occupation_actor a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "actor" .
+
+data:occupation_dramatist a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "dramatist" .
+
+data:occupation_model a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "model" .
+
+data:occupation_poet a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "poet" .
+
+data:occupation_singer a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "singer" .
+

@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/683/evaluation/entity_alignment/final_extracted_aligned_683.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/683/evaluation/entity_alignment/final_ground_truth_aligned_683.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Alfons_Zitterbacke",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Alfons_Zitterbacke",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "German",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/German",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "German",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/German",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "The_Almighty_Dollar_1923_film",
+      "predicate": "hasCountry",
+      "object": "German",
+      "subject_uri": "http://example.org/entity/The_Almighty_Dollar_1923_film",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/German"
+    },
+    {
+      "subject": "The_Almighty_Dollar_1923_film",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/The_Almighty_Dollar_1923_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Alfons_Zitterbacke",
+      "predicate": "hasCountry",
+      "object": "German",
+      "subject_uri": "http://example.org/entity/Alfons_Zitterbacke",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/German"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Alfons_Zitterbacke",
+      "predicate": "hasCountry",
+      "object": "country_east_germany",
+      "subject_uri": "http://example.org/entity/Alfons_Zitterbacke",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/country_east_germany"
+    },
+    {
+      "subject": "Alfons_Zitterbacke",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Alfons_Zitterbacke",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Alfons_Zitterbacke",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Alfons_Zitterbacke",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Almighty_Dollar_1923_film",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The_Almighty_Dollar_1923_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "The_Almighty_Dollar_1923_film",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Almighty_Dollar_1923_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "country_east_germany",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/country_east_germany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "country_east_germany",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/country_east_germany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 6,
+    "union_triples_in_scope": 13,
+    "true_positives": 5,
+    "false_positives": 7,
+    "false_negatives": 1,
+    "precision": 0.4166666666666667,
+    "recall": 0.8333333333333334,
+    "f1": 0.5555555555555556
+  },
+  "stage": "post_inference"
+}

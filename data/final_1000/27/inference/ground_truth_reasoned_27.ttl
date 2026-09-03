@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Catherine_Allégret a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Yves_Allégret ;
+    ex:hasParent entity:Yves_Allégret .
+
+entity:Marc_Allégret a ex:Agent,
+        ex:Person ;
+    ex:hasSibling entity:Yves_Allégret .
+
+entity:Yves_Allégret a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Catherine_Allégret ;
+    ex:hasSibling entity:Marc_Allégret .
+

@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:St_John_s_College a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+entity:Edward_Bulstrode a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Richard_Bulstrode .
+
+entity:Richard_Bulstrode a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Edward_Bulstrode .
+

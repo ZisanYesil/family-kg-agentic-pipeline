@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_dont_knock_the_ox a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Don't Knock the Ox" ;
+    onto:hasDirector data:person_tony_ianzelo .
+
+data:edu_ryerson_polytechnical_school a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Ryerson Polytechnical School" ;
+    skos:altLabel "Ryerson University",
+        "Toronto’s Ryerson Polytechnical School" .
+
+data:person_tony_ianzelo a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tony Ianzelo" ;
+    onto:hasEducatedAt data:edu_ryerson_polytechnical_school .
+

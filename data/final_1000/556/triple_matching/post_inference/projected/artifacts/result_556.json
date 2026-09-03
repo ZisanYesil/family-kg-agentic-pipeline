@@ -1,0 +1,75 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/556/evaluation/entity_alignment/final_extracted_aligned_556.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/556/evaluation/entity_alignment/final_ground_truth_aligned_556.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Kosobokovo",
+      "predicate": "hasCountry",
+      "object": "Russia",
+      "subject_uri": "http://example.org/entity/Kosobokovo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Russia"
+    },
+    {
+      "subject": "Pavlovka_Uglovsky_District_Altai_Krai",
+      "predicate": "hasCountry",
+      "object": "Russia",
+      "subject_uri": "http://example.org/entity/Pavlovka_Uglovsky_District_Altai_Krai",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Russia"
+    },
+    {
+      "subject": "Russia",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Russia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Russia",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Russia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Kosobokovo",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Kosobokovo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Pavlovka_Uglovsky_District_Altai_Krai",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Pavlovka_Uglovsky_District_Altai_Krai",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 6,
+    "true_positives": 4,
+    "false_positives": 2,
+    "false_negatives": 0,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8
+  },
+  "stage": "post_inference"
+}

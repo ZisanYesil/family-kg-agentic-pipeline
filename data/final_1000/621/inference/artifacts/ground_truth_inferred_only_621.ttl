@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:John_Palaiologos a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Irene_of_Montferrat .
+
+entity:William_VII_Marquess_of_Montferrat a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Irene_of_Montferrat .
+
+entity:Irene_of_Montferrat a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:John_Palaiologos ;
+    ex:hasParent entity:William_VII_Marquess_of_Montferrat .
+

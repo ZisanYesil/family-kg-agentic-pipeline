@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/639/originals/extracted_639.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/639/ground_truth_639.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/shonan_institute_of_technology_high_school": "http://example.org/entity/Shonan_Institute_of_Technology_High_School",
+    "http://example.org/extracted/amaya_school_of_home_industries": "http://example.org/entity/Amaya_School_of_Home_Industries"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/amaya_school_of_home_industries",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Amaya School of Home Industries",
+          "source": "label"
+        }
+      ],
+      "context": "Amaya School of Home Industries. has inception: 1964-06-18.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Amaya_School_of_Home_Industries",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Amaya School of Home Industries",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Amaya School of Home Industries",
+        "extracted_source": "label",
+        "ground_truth_text": "Amaya School of Home Industries",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9620194435119629,
+      "graph_score": 0.9620194435119629,
+      "margin": 0.4645944833755493
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/shonan_institute_of_technology_high_school",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shonan Institute of Technology High School",
+          "source": "label"
+        }
+      ],
+      "context": "Shonan Institute of Technology High School. has inception: 1961.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shonan_Institute_of_Technology_High_School",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shonan Institute of Technology High School",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shonan Institute of Technology High School",
+        "extracted_source": "label",
+        "ground_truth_text": "Shonan Institute of Technology High School",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4599766135215759
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,164 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/92/originals/extracted_92.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/92/ground_truth_92.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_angel_square": "http://example.org/entity/Angel_Square",
+    "http://example.org/extracted/anne_wheeler": "http://example.org/entity/Anne_Wheeler"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 2,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/anne_wheeler",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anne Wheeler",
+          "source": "label"
+        }
+      ],
+      "context": "Anne Wheeler. has award received: Gemini Award. has award received: Leo Award. inverse has director: Angel Square.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anne_Wheeler",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anne Wheeler",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anne Wheeler",
+        "extracted_source": "label",
+        "ground_truth_text": "Anne Wheeler",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7489787340164185,
+      "graph_score": 0.8744893670082092,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_angel_square",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Angel Square",
+          "source": "label"
+        },
+        {
+          "text": "film angel square",
+          "source": "uri"
+        }
+      ],
+      "context": "Angel Square. has director: Anne Wheeler.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Angel_Square",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Angel Square",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Angel Square",
+        "extracted_source": "label",
+        "ground_truth_text": "Angel Square",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/gemini_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gemini Award",
+          "source": "label"
+        }
+      ],
+      "context": "Gemini Award. inverse has award received: Anne Wheeler.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/leo_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Leo Award",
+          "source": "label"
+        }
+      ],
+      "context": "Leo Award. inverse has award received: Anne Wheeler.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Officer_of_the_Order_of_Canada"
+  ]
+}

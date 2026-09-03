@@ -1,0 +1,106 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/303/evaluation/entity_alignment/final_extracted_aligned_303.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/303/evaluation/entity_alignment/final_ground_truth_aligned_303.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Adelaide_of_Auxerre",
+      "predicate": "hasChild",
+      "object": "Rudolph_of_France",
+      "subject_uri": "http://example.org/entity/Adelaide_of_Auxerre",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Rudolph_of_France"
+    },
+    {
+      "subject": "Adelaide_of_Auxerre",
+      "predicate": "hasParent",
+      "object": "Conrad_II_Duke_of_Transjurane_Burgundy",
+      "subject_uri": "http://example.org/entity/Adelaide_of_Auxerre",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Conrad_II_Duke_of_Transjurane_Burgundy"
+    },
+    {
+      "subject": "Adelaide_of_Auxerre",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Adelaide_of_Auxerre",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Adelaide_of_Auxerre",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Adelaide_of_Auxerre",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Conrad_II_Duke_of_Transjurane_Burgundy",
+      "predicate": "hasChild",
+      "object": "Adelaide_of_Auxerre",
+      "subject_uri": "http://example.org/entity/Conrad_II_Duke_of_Transjurane_Burgundy",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Adelaide_of_Auxerre"
+    },
+    {
+      "subject": "Conrad_II_Duke_of_Transjurane_Burgundy",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Conrad_II_Duke_of_Transjurane_Burgundy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Conrad_II_Duke_of_Transjurane_Burgundy",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Conrad_II_Duke_of_Transjurane_Burgundy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Rudolph_of_France",
+      "predicate": "hasParent",
+      "object": "Adelaide_of_Auxerre",
+      "subject_uri": "http://example.org/entity/Rudolph_of_France",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Adelaide_of_Auxerre"
+    },
+    {
+      "subject": "Rudolph_of_France",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Rudolph_of_France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Rudolph_of_France",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Rudolph_of_France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 10,
+    "true_positives": 10,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:el_show_de_renny a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "El Show De Renny" ;
+    onto:hasPresenter data:renny_ottolina .
+
+data:renny_ottolina a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Renny Ottolina" ;
+    onto:hasBirthPlace data:valencia_carabobo ;
+    skos:altLabel "Renaldo José Ottolina Pinto" .
+
+data:valencia_carabobo a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Valencia, Carabobo" .
+

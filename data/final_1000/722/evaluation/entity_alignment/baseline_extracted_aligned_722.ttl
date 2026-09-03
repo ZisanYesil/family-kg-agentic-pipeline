@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:king_gizzard_lizard_wizard a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "King Gizzard & The Lizard Wizard" ;
+    onto:hasCountry <http://example.org/entity/Australian> ;
+    skos:altLabel "King Gizzard & The Lizard Wizard" .
+
+data:rebeccas_empire a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Rebecca's Empire" ;
+    onto:hasCountry <http://example.org/entity/Australian> ;
+    skos:altLabel "Rebecca's Empire",
+        "Rebeccas Empire" .
+
+<http://example.org/entity/Australian> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Australia" ;
+    skos:altLabel "Australian" .
+

@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:count_your_blessings_1959_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Count Your Blessings (1959 film)" .
+
+data:franz_waxman a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Franz Waxman" ;
+    onto:hasNationality data:germany,
+        data:united_states .
+
+data:germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/175/originals/extracted_175.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/175/ground_truth_175.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sudhendu_roy": "http://example.org/entity/Sudhendu_Roy",
+    "http://example.org/extracted/jee_mukt_film": "http://example.org/entity/Jeevan_Mukt"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/jee_mukt_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jeevan Mukt",
+          "source": "label"
+        },
+        {
+          "text": "jee mukt film",
+          "source": "uri"
+        }
+      ],
+      "context": "Jeevan Mukt. has director: Sudhendu Roy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jeevan_Mukt",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jeevan Mukt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jeevan Mukt",
+        "extracted_source": "label",
+        "ground_truth_text": "Jeevan Mukt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999996423721313,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sudhendu_roy",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sudhendu Roy",
+          "source": "label"
+        }
+      ],
+      "context": "Sudhendu Roy. has award received: Filmfare Award for Best Art Direction. inverse has director: Jeevan Mukt.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sudhendu_Roy",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sudhendu Roy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sudhendu Roy",
+        "extracted_source": "label",
+        "ground_truth_text": "Sudhendu Roy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9404259920120239,
+      "graph_score": 0.970212996006012,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/filmfare_best_art_direction_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Filmfare Award for Best Art Direction",
+          "source": "label"
+        },
+        {
+          "text": "filmfare best art direction award",
+          "source": "uri"
+        }
+      ],
+      "context": "Filmfare Award for Best Art Direction. inverse has award received: Sudhendu Roy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Filmfare_Award",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Filmfare Award",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Filmfare Award for Best Art Direction",
+        "extracted_source": "label",
+        "ground_truth_text": "Filmfare Award",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7842544317245483,
+      "name_embedding_score": 0.7796281576156616,
+      "string_score": 0.6303921341896057,
+      "independent_identity_support": false,
+      "context_score": 0.8947389721870422,
+      "graph_score": 0.9473694562911987,
+      "margin": 0.7842544317245483
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/875/originals/extracted_875.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/875/ground_truth_875.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ansegisel": "http://example.org/entity/Ansegisel",
+    "http://example.org/extracted/pepin_of_herstal": "http://example.org/entity/Pepin_of_Herstal"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ansegisel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ansegisel",
+          "source": "label"
+        }
+      ],
+      "context": "Ansegisel. inverse has father: Pepin II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ansegisel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ansegisel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ansegisel",
+        "extracted_source": "label",
+        "ground_truth_text": "Ansegisel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8619447350502014,
+      "graph_score": 0.9309723377227783,
+      "margin": 0.7417638897895813
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pepin_of_herstal",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pepin II",
+          "source": "altLabel"
+        },
+        {
+          "text": "Pepin of Herstal",
+          "source": "label"
+        }
+      ],
+      "context": "Pepin II. has father: Ansegisel. inverse has father: Grimoald II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pepin of Herstal",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pepin of Herstal",
+        "extracted_source": "label",
+        "ground_truth_text": "Pepin of Herstal",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8419450521469116,
+      "graph_score": 0.9209725260734558,
+      "margin": 0.668906956911087
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/grimoald_the_younger",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Grimoald II",
+          "source": "altLabel"
+        },
+        {
+          "text": "Grimoald the Younger",
+          "source": "label"
+        }
+      ],
+      "context": "Grimoald II. has father: Pepin II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Grimoald_II_died_714_called_the_Younger",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Grimoald II died 714 called the Younger",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Grimoald the Younger",
+        "extracted_source": "label",
+        "ground_truth_text": "Grimoald II died 714 called the Younger",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7544688582420349,
+      "name_embedding_score": 0.7207145094871521,
+      "string_score": 0.7122275829315186,
+      "independent_identity_support": true,
+      "context_score": 0.7284380197525024,
+      "graph_score": 0.8642190098762512,
+      "margin": 0.4272419810295105
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

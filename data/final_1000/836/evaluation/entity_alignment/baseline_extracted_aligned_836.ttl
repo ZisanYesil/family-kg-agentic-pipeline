@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/The_Extraordinary_Adventures_of_Adèle_Blanc_Sec> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Extraordinary Adventures of Adèle Blanc‑Sec" ;
+    onto:hasDirector <http://example.org/entity/Luc_Besson> .
+
+<http://example.org/entity/César_Award_for_Best_Director> a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Best Director" .
+
+<http://example.org/entity/Luc_Besson> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Luc Besson" ;
+    onto:hasAwardReceived <http://example.org/entity/César_Award_for_Best_Director>,
+        data:award_best_french_director .
+
+data:award_best_french_director a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Best French Director" .
+

@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/791/originals/extracted_791.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/791/ground_truth_791.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/the_famous_mrs_fair_film": "http://example.org/entity/The_Famous_Mrs_Fair",
+    "http://example.org/extracted/louis_b_mayer_person": "http://example.org/entity/Louis_B_Mayer",
+    "http://example.org/extracted/the_flame_barrier_film": "http://example.org/entity/The_Flame_Barrier",
+    "http://example.org/extracted/arthur_gardner_person": "http://example.org/entity/Arthur_Gardner"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/arthur_gardner_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Arthur Gardner",
+          "source": "label"
+        },
+        {
+          "text": "arthur gardner person",
+          "source": "uri"
+        }
+      ],
+      "context": "Arthur Gardner. has birth date: 1910-06-07. has death date: 2014-12-19. inverse has producer: The Flame Barrier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Arthur_Gardner",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Arthur Gardner",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Arthur Gardner",
+        "extracted_source": "label",
+        "ground_truth_text": "Arthur Gardner",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6790177822113037,
+      "graph_score": 0.8395088911056519,
+      "margin": 0.2819410562515259
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_b_mayer_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis B. Mayer",
+          "source": "label"
+        },
+        {
+          "text": "louis b mayer person",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis B. Mayer. has birth date: 1884-07-12. has death date: 1957-10-29. inverse has producer: The Famous Mrs. Fair.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_B_Mayer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis B Mayer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis B. Mayer",
+        "extracted_source": "label",
+        "ground_truth_text": "Louis B Mayer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9883095026016235,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9260083436965942,
+      "graph_score": 0.9630041718482971,
+      "margin": 0.7550254911184311
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_famous_mrs_fair_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Famous Mrs. Fair",
+          "source": "label"
+        },
+        {
+          "text": "the famous mrs fair film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Famous Mrs. Fair. has producer: Louis B. Mayer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Famous_Mrs_Fair",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Famous Mrs Fair",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Famous Mrs. Fair",
+        "extracted_source": "label",
+        "ground_truth_text": "The Famous Mrs Fair",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9774226546287537,
+      "string_score": 0.9884615540504456,
+      "independent_identity_support": true,
+      "context_score": 0.9834279417991638,
+      "graph_score": 0.9917140007019043,
+      "margin": 0.7930262684822083
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_flame_barrier_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Flame Barrier",
+          "source": "label"
+        },
+        {
+          "text": "the flame barrier film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Flame Barrier. has producer: Arthur Gardner.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Flame_Barrier",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Flame Barrier",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Flame Barrier",
+        "extracted_source": "label",
+        "ground_truth_text": "The Flame Barrier",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.8049861043691635
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Arthur_Gardner_producer"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/507/evaluation/entity_alignment/final_extracted_aligned_507.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/507/evaluation/entity_alignment/final_ground_truth_aligned_507.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Dawn_Fraser",
+      "predicate": "hasOccupation",
+      "object": "politician",
+      "subject_uri": "http://example.org/entity/Dawn_Fraser",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasOccupation",
+      "object_term": "http://example.org/entity/politician"
+    },
+    {
+      "subject": "Dawn_Fraser",
+      "predicate": "hasOccupation",
+      "object": "swimmer",
+      "subject_uri": "http://example.org/entity/Dawn_Fraser",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasOccupation",
+      "object_term": "http://example.org/entity/swimmer"
+    },
+    {
+      "subject": "Dawn_Fraser",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Dawn_Fraser",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Dawn_Fraser",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Dawn_Fraser",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Dunois_Master",
+      "predicate": "hasOccupation",
+      "object": "manuscript_illuminator",
+      "subject_uri": "http://example.org/entity/Dunois_Master",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasOccupation",
+      "object_term": "http://example.org/entity/manuscript_illuminator"
+    },
+    {
+      "subject": "Dunois_Master",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Dunois_Master",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Dunois_Master",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Dunois_Master",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "manuscript_illuminator",
+      "predicate": "type",
+      "object": "Occupation",
+      "subject_uri": "http://example.org/entity/manuscript_illuminator",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Occupation"
+    },
+    {
+      "subject": "politician",
+      "predicate": "type",
+      "object": "Occupation",
+      "subject_uri": "http://example.org/entity/politician",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Occupation"
+    },
+    {
+      "subject": "swimmer",
+      "predicate": "type",
+      "object": "Occupation",
+      "subject_uri": "http://example.org/entity/swimmer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Occupation"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Dawn_Fraser",
+      "predicate": "hasBirthDate",
+      "object": "\"1937-09-04\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Dawn_Fraser",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1937-09-04\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 5,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 11,
+    "true_positives": 10,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.9090909090909091,
+    "recall": 1.0,
+    "f1": 0.9523809523809523
+  },
+  "stage": "post_inference"
+}

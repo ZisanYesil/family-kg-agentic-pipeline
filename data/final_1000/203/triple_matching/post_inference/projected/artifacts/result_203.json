@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/203/evaluation/entity_alignment/final_extracted_aligned_203.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/203/evaluation/entity_alignment/final_ground_truth_aligned_203.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "British",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/British",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "British",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/British",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Lover_s_Prayer",
+      "predicate": "hasCountry",
+      "object": "American",
+      "subject_uri": "http://example.org/entity/Lover_s_Prayer",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/American"
+    },
+    {
+      "subject": "Lover_s_Prayer",
+      "predicate": "hasCountry",
+      "object": "British",
+      "subject_uri": "http://example.org/entity/Lover_s_Prayer",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/British"
+    },
+    {
+      "subject": "Lover_s_Prayer",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Lover_s_Prayer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Make_Up_1937_film",
+      "predicate": "hasCountry",
+      "object": "British",
+      "subject_uri": "http://example.org/entity/Make_Up_1937_film",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/British"
+    },
+    {
+      "subject": "Make_Up_1937_film",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Make_Up_1937_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Lover_s_Prayer",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Lover_s_Prayer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Lover_s_Prayer",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Lover_s_Prayer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Make_Up_1937_film",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Make_Up_1937_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Make_Up_1937_film",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Make_Up_1937_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 4,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 13,
+    "true_positives": 9,
+    "false_positives": 4,
+    "false_negatives": 0,
+    "precision": 0.6923076923076923,
+    "recall": 1.0,
+    "f1": 0.8181818181818181
+  },
+  "stage": "post_inference"
+}

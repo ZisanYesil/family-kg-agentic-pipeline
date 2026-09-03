@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/214/originals/extracted_214.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/214/ground_truth_214.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/prince_nikolaus_wilhelm_of_nassau": "http://example.org/entity/Prince_Nikolaus_Wilhelm_of_Nassau",
+    "http://example.org/extracted/princess_pauline_of_wurttemberg": "http://example.org/entity/Princess_Pauline_of_Württemberg",
+    "http://example.org/extracted/stuttgart": "http://example.org/entity/Stuttgart"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/prince_nikolaus_wilhelm_of_nassau",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prince Nikolaus Wilhelm of Nassau",
+          "source": "label"
+        }
+      ],
+      "context": "Prince Nikolaus Wilhelm of Nassau. has mother: Princess Pauline of Württemberg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prince_Nikolaus_Wilhelm_of_Nassau",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prince Nikolaus Wilhelm of Nassau",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prince Nikolaus Wilhelm of Nassau",
+        "extracted_source": "label",
+        "ground_truth_text": "Prince Nikolaus Wilhelm of Nassau",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.6096295118331909
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/princess_pauline_of_wurttemberg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Pauline of Württemberg",
+          "source": "label"
+        },
+        {
+          "text": "princess pauline of wurttemberg",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Pauline of Württemberg. has birth place: Stuttgart, Kingdom of Württemberg. inverse has mother: Prince Nikolaus Wilhelm of Nassau.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Pauline_of_Württemberg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Pauline of Württemberg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Pauline of Württemberg",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Pauline of Württemberg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9750702381134033,
+      "graph_score": 0.9875351190567017,
+      "margin": 0.6075977981090546
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/stuttgart",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stuttgart, Kingdom of Württemberg",
+          "source": "altLabel"
+        },
+        {
+          "text": "Stuttgart",
+          "source": "label"
+        }
+      ],
+      "context": "Stuttgart, Kingdom of Württemberg. inverse has birth place: Princess Pauline of Württemberg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stuttgart",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stuttgart",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stuttgart",
+        "extracted_source": "label",
+        "ground_truth_text": "Stuttgart",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9662672877311707,
+      "graph_score": 0.9831336736679077,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

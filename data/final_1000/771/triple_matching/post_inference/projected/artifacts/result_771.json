@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/771/evaluation/entity_alignment/final_extracted_aligned_771.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/771/evaluation/entity_alignment/final_ground_truth_aligned_771.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Billy_Elliot",
+      "predicate": "hasComposer",
+      "object": "Stephen_Warbeck",
+      "subject_uri": "http://example.org/entity/Billy_Elliot",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Stephen_Warbeck"
+    },
+    {
+      "subject": "Billy_Elliot",
+      "predicate": "hasCreator",
+      "object": "Stephen_Warbeck",
+      "subject_uri": "http://example.org/entity/Billy_Elliot",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Stephen_Warbeck"
+    },
+    {
+      "subject": "Billy_Elliot",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Billy_Elliot",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Billy_Elliot",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Billy_Elliot",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Southampton_Hampshire",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Southampton_Hampshire",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Stephen_Warbeck",
+      "predicate": "hasBirthPlace",
+      "object": "Southampton_Hampshire",
+      "subject_uri": "http://example.org/entity/Stephen_Warbeck",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Southampton_Hampshire"
+    },
+    {
+      "subject": "Stephen_Warbeck",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Stephen_Warbeck",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Stephen_Warbeck",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Stephen_Warbeck",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Billy_Elliot",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Billy_Elliot",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 9,
+    "true_positives": 8,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1": 0.9411764705882353
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/396/evaluation/entity_alignment/baseline_extracted_aligned_396.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/396/evaluation/entity_alignment/baseline_ground_truth_aligned_396.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "George_II",
+      "predicate": "hasParent",
+      "object": "Princess_Augusta_of_Schwarzburg_Sondershausen",
+      "subject_uri": "http://example.org/entity/George_II",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Princess_Augusta_of_Schwarzburg_Sondershausen"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Princess_Hermine_of_Waldeck_and_Pyrmont",
+      "predicate": "hasParent",
+      "object": "George_II",
+      "subject_uri": "http://example.org/entity/Princess_Hermine_of_Waldeck_and_Pyrmont",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/George_II"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "George_II",
+      "predicate": "hasChild",
+      "object": "Princess_Hermine_of_Waldeck_and_Pyrmont",
+      "subject_uri": "http://example.org/entity/George_II",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Princess_Hermine_of_Waldeck_and_Pyrmont"
+    },
+    {
+      "subject": "George_II",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/George_II",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "George_II",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/George_II",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "George_II",
+      "predicate": "label",
+      "object": "\"George II, Prince of Waldeck and Pyrmont\"",
+      "subject_uri": "http://example.org/entity/George_II",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"George II, Prince of Waldeck and Pyrmont\""
+    },
+    {
+      "subject": "Princess_Augusta_of_Schwarzburg_Sondershausen",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Augusta_of_Schwarzburg_Sondershausen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Princess_Augusta_of_Schwarzburg_Sondershausen",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Princess_Augusta_of_Schwarzburg_Sondershausen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Princess_Augusta_of_Schwarzburg_Sondershausen",
+      "predicate": "label",
+      "object": "\"Countess Princess Augusta of Schwarzburg-Sondershausen\"",
+      "subject_uri": "http://example.org/entity/Princess_Augusta_of_Schwarzburg_Sondershausen",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Countess Princess Augusta of Schwarzburg-Sondershausen\""
+    },
+    {
+      "subject": "Princess_Hermine_of_Waldeck_and_Pyrmont",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Hermine_of_Waldeck_and_Pyrmont",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Princess_Hermine_of_Waldeck_and_Pyrmont",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Princess_Hermine_of_Waldeck_and_Pyrmont",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Princess_Hermine_of_Waldeck_and_Pyrmont",
+      "predicate": "label",
+      "object": "\"Princess Hermine of Waldeck and Pyrmont\"",
+      "subject_uri": "http://example.org/entity/Princess_Hermine_of_Waldeck_and_Pyrmont",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Princess Hermine of Waldeck and Pyrmont\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

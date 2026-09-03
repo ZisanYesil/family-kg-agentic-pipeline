@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/965/originals/extracted_965.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/965/ground_truth_965.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/morshed_alam": "http://example.org/entity/Morshed_Alam",
+    "http://example.org/extracted/kanchana_mendis": "http://example.org/entity/Kanchana_Mendis"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/kanchana_mendis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kanchana Mendis",
+          "source": "label"
+        }
+      ],
+      "context": "Kanchana Mendis. has birth date: 1980-06-24.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kanchana_Mendis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kanchana Mendis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kanchana Mendis",
+        "extracted_source": "label",
+        "ground_truth_text": "Kanchana Mendis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.637073278427124
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/morshed_alam",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Morshed Alam",
+          "source": "label"
+        }
+      ],
+      "context": "Morshed Alam. has birth date: 1950-03-29.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Morshed_Alam",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Morshed Alam",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Morshed Alam",
+        "extracted_source": "label",
+        "ground_truth_text": "Morshed Alam",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6454066038131714
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

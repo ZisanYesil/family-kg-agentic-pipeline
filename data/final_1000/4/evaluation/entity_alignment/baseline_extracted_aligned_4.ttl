@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/John_Middleton_Murry> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Middleton Murry" ;
+    onto:hasSpouse <http://example.org/entity/Katherine_Mansfield> .
+
+<http://example.org/entity/Katherine_Mansfield> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Katherine Mansfield" ;
+    onto:hasCauseOfDeath <http://example.org/entity/tuberculosis> ;
+    skos:altLabel "Katherine Mansfield",
+        "Kathleen Mansfield Murry" .
+
+<http://example.org/entity/tuberculosis> a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "extrapulmonary tuberculosis" .
+

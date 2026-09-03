@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/284/originals/extracted_284.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/284/ground_truth_284.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/nikolai_sheremetev": "http://example.org/entity/Nikolai_Sheremetev",
+    "http://example.org/extracted/dmitri_sheremetev": "http://example.org/entity/Dmitri_Nikolaevich_Sheremetev"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/dmitri_sheremetev",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dmitri Nikolaevich Sheremetev",
+          "source": "altLabel"
+        },
+        {
+          "text": "dmitri sheremetev",
+          "source": "uri"
+        }
+      ],
+      "context": "Dmitri Nikolaevich Sheremetev. inverse has son: Nikolai Petrovich Sheremetev.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dmitri_Nikolaevich_Sheremetev",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dmitri Nikolaevich Sheremetev",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dmitri Nikolaevich Sheremetev",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Dmitri Nikolaevich Sheremetev",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9066988229751587,
+      "graph_score": 0.45334941148757935,
+      "margin": 0.27878111600875854
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/nikolai_sheremetev",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nikolai Petrovich Sheremetev",
+          "source": "altLabel"
+        },
+        {
+          "text": "nikolai sheremetev",
+          "source": "uri"
+        }
+      ],
+      "context": "Nikolai Petrovich Sheremetev. has son: Dmitri Nikolaevich Sheremetev.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nikolai_Sheremetev",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nikolai Sheremetev",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nikolai Petrovich Sheremetev",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Nikolai Sheremetev",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9216944575309753,
+      "string_score": 0.8188405632972717,
+      "independent_identity_support": true,
+      "context_score": 0.8007808923721313,
+      "graph_score": 0.4003904461860657,
+      "margin": 0.2921717166900635
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Moscow"
+  ]
+}

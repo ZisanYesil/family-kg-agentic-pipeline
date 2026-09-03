@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:nicholas_eliot_9th_earl a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Nicholas Richard Michael Eliot, 9th Earl of St Germans" ;
+    onto:hasFather data:montague_eliot_8th_earl ;
+    skos:altLabel "Nicholas Eliot",
+        "Nicholas Richard Michael Eliot" .
+
+data:granville_eliot_7th_earl a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Granville John Eliot, 7th Earl of St Germans" ;
+    skos:altLabel "Granville Eliot" .
+
+data:montague_eliot_8th_earl a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Montague Charles Eliot, 8th Earl of St Germans" ;
+    onto:hasBrother data:granville_eliot_7th_earl ;
+    skos:altLabel "Montague Eliot" .
+

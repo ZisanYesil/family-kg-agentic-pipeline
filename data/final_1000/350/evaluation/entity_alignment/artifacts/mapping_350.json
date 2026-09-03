@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/350/originals/extracted_350.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/350/ground_truth_350.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/austria": "http://example.org/entity/Austrian",
+    "http://example.org/extracted/dietrich_mateschitz": "http://example.org/entity/Dietrich_Mateschitz"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/austria",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Austrian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Austria",
+          "source": "label"
+        }
+      ],
+      "context": "Austrian. inverse has nationality: Dietrich Mateschitz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Austrian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Austrian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Austrian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Austrian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9410251379013062,
+      "graph_score": 0.4705125689506531,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dietrich_mateschitz",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dietrich Mateschitz",
+          "source": "label"
+        }
+      ],
+      "context": "Dietrich Mateschitz. has nationality: Austrian. inverse has founder: Team Red Bull (NASCAR team).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dietrich_Mateschitz",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dietrich Mateschitz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dietrich Mateschitz",
+        "extracted_source": "label",
+        "ground_truth_text": "Dietrich Mateschitz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.928501546382904,
+      "graph_score": 0.464250773191452,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/team_red_bull_nascar_team",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Team Red Bull (NASCAR team)",
+          "source": "label"
+        },
+        {
+          "text": "team red bull nascar team",
+          "source": "uri"
+        }
+      ],
+      "context": "Team Red Bull (NASCAR team). has founder: Dietrich Mateschitz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Red_Bull_Racing_Team",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Red Bull Racing Team",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "team red bull nascar team",
+        "extracted_source": "uri",
+        "ground_truth_text": "Red Bull Racing Team",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8626459836959839,
+      "name_embedding_score": 0.9033088088035583,
+      "string_score": 0.675000011920929,
+      "independent_identity_support": false,
+      "context_score": 0.9379323720932007,
+      "graph_score": 0.9689661860466003,
+      "margin": 0.8626459836959839
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

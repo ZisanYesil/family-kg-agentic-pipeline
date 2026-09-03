@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/386/evaluation/entity_alignment/final_extracted_aligned_386.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/386/evaluation/entity_alignment/final_ground_truth_aligned_386.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "The_Job",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/The_Job",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "The_Job",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The_Job",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Metropolitan_Police_Service",
+      "predicate": "hasCountry",
+      "object": "United_Kingdom",
+      "subject_uri": "http://example.org/entity/Metropolitan_Police_Service",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/United_Kingdom"
+    },
+    {
+      "subject": "Metropolitan_Police_Service",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Metropolitan_Police_Service",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Metropolitan_Police_Service",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Metropolitan_Police_Service",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "The_Job",
+      "predicate": "hasPublisher",
+      "object": "Metropolitan_Police_Service",
+      "subject_uri": "http://example.org/entity/The_Job",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublisher",
+      "object_term": "http://example.org/entity/Metropolitan_Police_Service"
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "The_Job",
+      "predicate": "hasPublisher",
+      "object": "square_one_publishing",
+      "subject_uri": "http://example.org/entity/The_Job",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublisher",
+      "object_term": "http://example.org/extracted/square_one_publishing"
+    },
+    {
+      "subject": "square_one_publishing",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/square_one_publishing",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "square_one_publishing",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/extracted/square_one_publishing",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 1,
+    "extracted_triples_in_scope": 5,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 3,
+    "false_negatives": 6,
+    "precision": 0.4,
+    "recall": 0.25,
+    "f1": 0.3076923076923077
+  },
+  "stage": "post_inference"
+}

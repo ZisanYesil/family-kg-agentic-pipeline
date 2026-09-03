@@ -1,0 +1,115 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/718/originals/extracted_718.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/718/ground_truth_718.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/tai_solarin": "http://example.org/entity/Tai_Solarin"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/tai_solarin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Augustus Taiwo \"Tai\" Solarin",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tai Solarin",
+          "source": "label"
+        }
+      ],
+      "context": "Augustus Taiwo \"Tai\" Solarin. inverse has spouse: Sheila Mary Solarin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tai_Solarin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tai Solarin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tai Solarin",
+        "extracted_source": "label",
+        "ground_truth_text": "Tai Solarin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8202171325683594,
+      "graph_score": 0.8202171325683594,
+      "margin": 0.5538977682590485
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sheila_mary_tuer",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sheila Mary Solarin",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sheila Mary Tuer",
+          "source": "label"
+        }
+      ],
+      "context": "Sheila Mary Solarin. has spouse: Augustus Taiwo \"Tai\" Solarin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sheila_Mary_Solarin_née_Tuer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sheila Mary Solarin née Tuer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sheila Mary Solarin",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Sheila Mary Solarin née Tuer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8905408978462219,
+      "name_embedding_score": 0.894130289554596,
+      "string_score": 0.813829779624939,
+      "independent_identity_support": true,
+      "context_score": 0.9201463460922241,
+      "graph_score": 0.9600731730461121,
+      "margin": 0.3833293914794922
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Ogun_State"
+  ]
+}

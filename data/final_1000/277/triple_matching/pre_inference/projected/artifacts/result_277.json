@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/277/evaluation/entity_alignment/baseline_extracted_aligned_277.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/277/evaluation/entity_alignment/baseline_ground_truth_aligned_277.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "William_Prince_of_Hohenzollern",
+      "predicate": "hasDeathPlace",
+      "object": "Sigmaringen",
+      "subject_uri": "http://example.org/entity/William_Prince_of_Hohenzollern",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Sigmaringen"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Frederick_Prince_of_Hohenzollern",
+      "predicate": "hasParent",
+      "object": "William_Prince_of_Hohenzollern",
+      "subject_uri": "http://example.org/entity/Frederick_Prince_of_Hohenzollern",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/William_Prince_of_Hohenzollern"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Frederick_Prince_of_Hohenzollern",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Frederick_Prince_of_Hohenzollern",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Frederick_Prince_of_Hohenzollern",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Frederick_Prince_of_Hohenzollern",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Frederick_Prince_of_Hohenzollern",
+      "predicate": "label",
+      "object": "\"Frederick, Prince of Hohenzollern\"",
+      "subject_uri": "http://example.org/entity/Frederick_Prince_of_Hohenzollern",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Frederick, Prince of Hohenzollern\""
+    },
+    {
+      "subject": "Sigmaringen",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Sigmaringen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Sigmaringen",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sigmaringen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sigmaringen",
+      "predicate": "label",
+      "object": "\"Sigmaringen\"",
+      "subject_uri": "http://example.org/entity/Sigmaringen",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sigmaringen\""
+    },
+    {
+      "subject": "William_Prince_of_Hohenzollern",
+      "predicate": "hasChild",
+      "object": "Frederick_Prince_of_Hohenzollern",
+      "subject_uri": "http://example.org/entity/William_Prince_of_Hohenzollern",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Frederick_Prince_of_Hohenzollern"
+    },
+    {
+      "subject": "William_Prince_of_Hohenzollern",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/William_Prince_of_Hohenzollern",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "William_Prince_of_Hohenzollern",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/William_Prince_of_Hohenzollern",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "William_Prince_of_Hohenzollern",
+      "predicate": "label",
+      "object": "\"William, Prince of Hohenzollern\"",
+      "subject_uri": "http://example.org/entity/William_Prince_of_Hohenzollern",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"William, Prince of Hohenzollern\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

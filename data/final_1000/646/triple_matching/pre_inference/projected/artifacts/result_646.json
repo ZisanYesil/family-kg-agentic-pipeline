@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/646/evaluation/entity_alignment/baseline_extracted_aligned_646.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/646/evaluation/entity_alignment/baseline_ground_truth_aligned_646.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Only_When_I_Dance",
+      "predicate": "hasPublicationDate",
+      "object": "\"2009\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Only_When_I_Dance",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"2009\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "The_Wicked_Dreams_of_Paula_Schultz",
+      "predicate": "hasPublicationDate",
+      "object": "\"1968\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/The_Wicked_Dreams_of_Paula_Schultz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1968\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Only_When_I_Dance",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Only_When_I_Dance",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Only_When_I_Dance",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Only_When_I_Dance",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Only_When_I_Dance",
+      "predicate": "label",
+      "object": "\"Only When I Dance\"",
+      "subject_uri": "http://example.org/entity/Only_When_I_Dance",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Only When I Dance\""
+    },
+    {
+      "subject": "Only_When_I_Dance",
+      "predicate": "altLabel",
+      "object": "\"Only When I Dance\"",
+      "subject_uri": "http://example.org/entity/Only_When_I_Dance",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Only When I Dance\""
+    },
+    {
+      "subject": "The_Wicked_Dreams_of_Paula_Schultz",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Wicked_Dreams_of_Paula_Schultz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Wicked_Dreams_of_Paula_Schultz",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Wicked_Dreams_of_Paula_Schultz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Wicked_Dreams_of_Paula_Schultz",
+      "predicate": "label",
+      "object": "\"The Wicked Dreams of Paula Schultz\"",
+      "subject_uri": "http://example.org/entity/The_Wicked_Dreams_of_Paula_Schultz",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Wicked Dreams of Paula Schultz\""
+    },
+    {
+      "subject": "The_Wicked_Dreams_of_Paula_Schultz",
+      "predicate": "altLabel",
+      "object": "\"The Wicked Dreams of Paula Schultz\"",
+      "subject_uri": "http://example.org/entity/The_Wicked_Dreams_of_Paula_Schultz",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"The Wicked Dreams of Paula Schultz\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 2,
+    "false_positives": 8,
+    "false_negatives": 0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "f1": 0.33333333333333337
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,36 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_its_a_great_feeling a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "It's a Great Feeling" ;
+    onto:hasDirector data:person_david_butler .
+
+data:film_oklahoma_1999 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Oklahoma! (1999 film)" ;
+    onto:hasDirector data:person_trevor_nunn .
+
+data:country_united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "English" .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+data:person_david_butler a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "David Butler" ;
+    onto:hasNationality data:country_united_states .
+
+data:person_trevor_nunn a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Trevor Nunn" ;
+    onto:hasNationality data:country_united_kingdom .
+

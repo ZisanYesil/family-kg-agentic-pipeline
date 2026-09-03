@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:let_asfaltoveho_holuba a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Let asfaltového holuba" ;
+    onto:hasCreator data:vladimir_godar .
+
+data:slovakia a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Slovakia" ;
+    skos:altLabel "Slovak" .
+
+data:vladimir_godar a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Vladimír Godár" ;
+    onto:hasNationality data:slovakia .
+

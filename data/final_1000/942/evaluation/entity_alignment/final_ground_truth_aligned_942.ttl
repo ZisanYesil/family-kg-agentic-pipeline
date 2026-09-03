@@ -1,0 +1,24 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Demetrius_and_the_Gladiators a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Delmer_Daves ;
+    ex:hasDirector entity:Delmer_Daves .
+
+entity:Riders_of_the_Deadline a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Lesley_Selander ;
+    ex:hasDirector entity:Lesley_Selander .
+
+entity:Delmer_Daves a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1904-07-24"^^xsd:date .
+
+entity:Lesley_Selander a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1900-05-26"^^xsd:date .
+

@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Istanbul a ex:Place .
+
+entity:Mehmed_Ziyaeddin a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Mehmed_V ;
+    ex:hasParent entity:Mehmed_V .
+
+entity:Mehmed_V a ex:Agent,
+        ex:Person ;
+    ex:hasBurialPlace entity:Istanbul ;
+    ex:hasChild entity:Mehmed_Ziyaeddin .
+

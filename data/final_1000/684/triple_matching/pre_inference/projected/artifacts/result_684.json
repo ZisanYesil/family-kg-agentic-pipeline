@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/684/evaluation/entity_alignment/baseline_extracted_aligned_684.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/684/evaluation/entity_alignment/baseline_ground_truth_aligned_684.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Sigismund_II_Augustus",
+      "predicate": "hasParent",
+      "object": "Bona_Sforza",
+      "subject_uri": "http://example.org/entity/Sigismund_II_Augustus",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Bona_Sforza"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Bona_Sforza",
+      "predicate": "hasCountry",
+      "object": "Duchy_of_Milan",
+      "subject_uri": "http://example.org/entity/Bona_Sforza",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Duchy_of_Milan"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Bona_Sforza",
+      "predicate": "hasCountry",
+      "object": "italy",
+      "subject_uri": "http://example.org/entity/Bona_Sforza",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/italy"
+    },
+    {
+      "subject": "Bona_Sforza",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bona_Sforza",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Bona_Sforza",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Bona_Sforza",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Bona_Sforza",
+      "predicate": "label",
+      "object": "\"Bona Sforza\"",
+      "subject_uri": "http://example.org/entity/Bona_Sforza",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bona Sforza\""
+    },
+    {
+      "subject": "Sigismund_II_Augustus",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sigismund_II_Augustus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sigismund_II_Augustus",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sigismund_II_Augustus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sigismund_II_Augustus",
+      "predicate": "label",
+      "object": "\"Sigismund II Augustus\"",
+      "subject_uri": "http://example.org/entity/Sigismund_II_Augustus",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sigismund II Augustus\""
+    },
+    {
+      "subject": "italy",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/italy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "italy",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/italy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "italy",
+      "predicate": "label",
+      "object": "\"Italy\"",
+      "subject_uri": "http://example.org/extracted/italy",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Italy\""
+    },
+    {
+      "subject": "italy",
+      "predicate": "altLabel",
+      "object": "\"Italian\"",
+      "subject_uri": "http://example.org/extracted/italy",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Italian\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 1,
+    "false_positives": 11,
+    "false_negatives": 1,
+    "precision": 0.08333333333333333,
+    "recall": 0.5,
+    "f1": 0.14285714285714285
+  },
+  "stage": "pre_inference"
+}

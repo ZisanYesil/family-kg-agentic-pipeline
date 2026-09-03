@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/33/evaluation/entity_alignment/baseline_extracted_aligned_33.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/33/evaluation/entity_alignment/baseline_ground_truth_aligned_33.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Chris_Squire",
+      "predicate": "hasBirthPlace",
+      "object": "Kingsbury_London",
+      "subject_uri": "http://example.org/entity/Chris_Squire",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Kingsbury_London"
+    },
+    {
+      "subject": "XYZ",
+      "predicate": "hasMember",
+      "object": "Chris_Squire",
+      "subject_uri": "http://example.org/entity/XYZ",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasMember",
+      "object_term": "http://example.org/entity/Chris_Squire"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Chris_Squire",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Chris_Squire",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Chris_Squire",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Chris_Squire",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Chris_Squire",
+      "predicate": "label",
+      "object": "\"Chris Squire\"",
+      "subject_uri": "http://example.org/entity/Chris_Squire",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Chris Squire\""
+    },
+    {
+      "subject": "Chris_Squire",
+      "predicate": "altLabel",
+      "object": "\"Christopher Russell Edward Squire\"",
+      "subject_uri": "http://example.org/entity/Chris_Squire",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Christopher Russell Edward Squire\""
+    },
+    {
+      "subject": "Kingsbury_London",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Kingsbury_London",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Kingsbury_London",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Kingsbury_London",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Kingsbury_London",
+      "predicate": "label",
+      "object": "\"Kingsbury, London\"",
+      "subject_uri": "http://example.org/entity/Kingsbury_London",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Kingsbury, London\""
+    },
+    {
+      "subject": "XYZ",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/XYZ",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "XYZ",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/XYZ",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "XYZ",
+      "predicate": "label",
+      "object": "\"XYZ\"",
+      "subject_uri": "http://example.org/entity/XYZ",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"XYZ\""
+    },
+    {
+      "subject": "XYZ",
+      "predicate": "altLabel",
+      "object": "\"XYZ (English band)\"",
+      "subject_uri": "http://example.org/entity/XYZ",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"XYZ (English band)\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

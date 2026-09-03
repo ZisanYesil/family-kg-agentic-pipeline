@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:elizabeth_fitzalan_1366 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Elizabeth Fitzalan, Duchess of Norfolk" ;
+    onto:hasSpouse data:thomas_mowbray_1366 .
+
+data:thomas_mowbray_1366 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Thomas Mowbray, 1st Duke of Norfolk" ;
+    onto:hasDeathPlace data:venice .
+
+data:venice a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Venice" .
+

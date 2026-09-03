@@ -1,0 +1,90 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/428/evaluation/entity_alignment/final_extracted_aligned_428.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/428/evaluation/entity_alignment/final_ground_truth_aligned_428.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Amun_her_khepeshef",
+      "predicate": "hasParent",
+      "object": "Nefertari",
+      "subject_uri": "http://example.org/entity/Amun_her_khepeshef",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Nefertari"
+    },
+    {
+      "subject": "Amun_her_khepeshef",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Amun_her_khepeshef",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Amun_her_khepeshef",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Amun_her_khepeshef",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Nefertari",
+      "predicate": "hasBurialPlace",
+      "object": "QV66",
+      "subject_uri": "http://example.org/entity/Nefertari",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://example.org/entity/QV66"
+    },
+    {
+      "subject": "Nefertari",
+      "predicate": "hasChild",
+      "object": "Amun_her_khepeshef",
+      "subject_uri": "http://example.org/entity/Nefertari",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Amun_her_khepeshef"
+    },
+    {
+      "subject": "Nefertari",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Nefertari",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Nefertari",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Nefertari",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "QV66",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/QV66",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 8,
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

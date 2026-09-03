@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/556/originals/extracted_556.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/556/ground_truth_556.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/kosobokovo_place": "http://example.org/entity/Kosobokovo",
+    "http://example.org/extracted/russia_country": "http://example.org/entity/Russia",
+    "http://example.org/extracted/pavlovka_place": "http://example.org/entity/Pavlovka_Uglovsky_District_Altai_Krai"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/kosobokovo_place",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kosobokovo",
+          "source": "label"
+        },
+        {
+          "text": "kosobokovo place",
+          "source": "uri"
+        }
+      ],
+      "context": "Kosobokovo. has country: Russia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kosobokovo",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kosobokovo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kosobokovo",
+        "extracted_source": "label",
+        "ground_truth_text": "Kosobokovo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.48469555377960205
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pavlovka_place",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pavlovka, Uglovsky District, Altai Krai",
+          "source": "label"
+        },
+        {
+          "text": "pavlovka place",
+          "source": "uri"
+        }
+      ],
+      "context": "Pavlovka, Uglovsky District, Altai Krai. has country: Russia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pavlovka_Uglovsky_District_Altai_Krai",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pavlovka Uglovsky District Altai Krai",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pavlovka, Uglovsky District, Altai Krai",
+        "extracted_source": "label",
+        "ground_truth_text": "Pavlovka Uglovsky District Altai Krai",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9544472694396973,
+      "string_score": 0.9881578683853149,
+      "independent_identity_support": true,
+      "context_score": 0.9814556241035461,
+      "graph_score": 0.9907277822494507,
+      "margin": 0.48491156101226807
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/russia_country",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Russia",
+          "source": "label"
+        },
+        {
+          "text": "russia country",
+          "source": "uri"
+        }
+      ],
+      "context": "Russia. inverse has country: Kosobokovo. inverse has country: Pavlovka, Uglovsky District, Altai Krai.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Russia",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Russia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Russia",
+        "extracted_source": "label",
+        "ground_truth_text": "Russia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9943123459815979,
+      "graph_score": 0.9971561431884766,
+      "margin": 0.6202345490455627
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

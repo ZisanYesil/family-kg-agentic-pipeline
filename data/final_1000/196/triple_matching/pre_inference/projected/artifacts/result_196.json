@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/196/evaluation/entity_alignment/baseline_extracted_aligned_196.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/196/evaluation/entity_alignment/baseline_ground_truth_aligned_196.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "You_Changed_Me",
+      "predicate": "hasPerformer",
+      "object": "Jamie_Foxx",
+      "subject_uri": "http://example.org/entity/You_Changed_Me",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Jamie_Foxx"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Jamie_Foxx",
+      "predicate": "hasAwardReceived",
+      "object": "Best_Actor",
+      "subject_uri": "http://example.org/entity/Jamie_Foxx",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Best_Actor"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Jamie_Foxx",
+      "predicate": "hasAwardReceived",
+      "object": "award_grammy",
+      "subject_uri": "http://example.org/entity/Jamie_Foxx",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/extracted/award_grammy"
+    },
+    {
+      "subject": "Jamie_Foxx",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jamie_Foxx",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jamie_Foxx",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jamie_Foxx",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jamie_Foxx",
+      "predicate": "label",
+      "object": "\"Jamie Foxx\"",
+      "subject_uri": "http://example.org/entity/Jamie_Foxx",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jamie Foxx\""
+    },
+    {
+      "subject": "Jamie_Foxx",
+      "predicate": "altLabel",
+      "object": "\"Eric Marlon Bishop\"",
+      "subject_uri": "http://example.org/entity/Jamie_Foxx",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Eric Marlon Bishop\""
+    },
+    {
+      "subject": "You_Changed_Me",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/You_Changed_Me",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "You_Changed_Me",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/You_Changed_Me",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "You_Changed_Me",
+      "predicate": "label",
+      "object": "\"You Changed Me\"",
+      "subject_uri": "http://example.org/entity/You_Changed_Me",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"You Changed Me\""
+    },
+    {
+      "subject": "award_grammy",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/extracted/award_grammy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "award_grammy",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/award_grammy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "award_grammy",
+      "predicate": "label",
+      "object": "\"Grammy Award\"",
+      "subject_uri": "http://example.org/extracted/award_grammy",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Grammy Award\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 1,
+    "false_positives": 11,
+    "false_negatives": 1,
+    "precision": 0.08333333333333333,
+    "recall": 0.5,
+    "f1": 0.14285714285714285
+  },
+  "stage": "pre_inference"
+}

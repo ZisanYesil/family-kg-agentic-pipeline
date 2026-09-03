@@ -1,0 +1,82 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/971/evaluation/entity_alignment/final_extracted_aligned_971.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/971/evaluation/entity_alignment/final_ground_truth_aligned_971.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "FLMNE",
+      "predicate": "hasFounder",
+      "object": "Jean_Pierre_Willem",
+      "subject_uri": "http://example.org/entity/FLMNE",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Jean_Pierre_Willem"
+    },
+    {
+      "subject": "FLMNE",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/FLMNE",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "FLMNE",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/FLMNE",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Jean_Pierre_Willem",
+      "predicate": "hasBirthPlace",
+      "object": "Sedan",
+      "subject_uri": "http://example.org/entity/Jean_Pierre_Willem",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Sedan"
+    },
+    {
+      "subject": "Jean_Pierre_Willem",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Jean_Pierre_Willem",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Jean_Pierre_Willem",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jean_Pierre_Willem",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sedan",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Sedan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 7,
+    "true_positives": 7,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

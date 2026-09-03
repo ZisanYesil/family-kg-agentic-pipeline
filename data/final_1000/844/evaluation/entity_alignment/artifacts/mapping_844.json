@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/844/originals/extracted_844.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/844/ground_truth_844.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/gillian_blake": "http://example.org/entity/Gillian_Blake",
+    "http://example.org/extracted/peter_whitbread": "http://example.org/entity/Peter_Whitbread",
+    "http://example.org/extracted/greshams_school_holt": "http://example.org/entity/Gresham_s_School"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gillian_blake",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gillian Blake",
+          "source": "label"
+        }
+      ],
+      "context": "Gillian Blake. has spouse: Peter Whitbread.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gillian_Blake",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gillian Blake",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gillian Blake",
+        "extracted_source": "label",
+        "ground_truth_text": "Gillian Blake",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8344495594501495
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/greshams_school_holt",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gresham's School, Holt, Norfolk",
+          "source": "altLabel"
+        },
+        {
+          "text": "Gresham's School",
+          "source": "label"
+        },
+        {
+          "text": "greshams school holt",
+          "source": "uri"
+        }
+      ],
+      "context": "Gresham's School, Holt, Norfolk. inverse has educated at: Peter Whitbread.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gresham_s_School",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gresham s School",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gresham's School",
+        "extracted_source": "label",
+        "ground_truth_text": "Gresham s School",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9794295430183411,
+      "string_score": 0.971875011920929,
+      "independent_identity_support": true,
+      "context_score": 0.912125825881958,
+      "graph_score": 0.956062912940979,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/peter_whitbread",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Peter Whitbread",
+          "source": "label"
+        }
+      ],
+      "context": "Peter Whitbread. has educated at: Gresham's School, Holt, Norfolk. inverse has spouse: Gillian Blake.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Peter_Whitbread",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Peter Whitbread",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Peter Whitbread",
+        "extracted_source": "label",
+        "ground_truth_text": "Peter Whitbread",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9363991618156433,
+      "graph_score": 0.968199610710144,
+      "margin": 0.8405982553958893
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,22 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Pons> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Pons, Count of Tripoli" ;
+    onto:hasFather <http://example.org/entity/Bertrand_of_Toulouse> ;
+    onto:hasSpouse <http://example.org/entity/Cecile_of_France> ;
+    skos:altLabel "Pons" .
+
+<http://example.org/entity/Bertrand_of_Toulouse> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bertrand, Count of Toulouse" ;
+    skos:altLabel "Bertrand of Toulouse" .
+
+<http://example.org/entity/Cecile_of_France> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Cecile of France" ;
+    skos:altLabel "Cecile" .
+

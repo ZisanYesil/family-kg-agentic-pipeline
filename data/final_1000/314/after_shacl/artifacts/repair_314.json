@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "b3c6c0c5f981521783286f31d430d316bcd9deeb7f92dc69a6771a7f87fdaf28",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_long_arm_of_the_godfather",
+        "path": null,
+        "value": "http://example.org/extracted/film_virineya",
+        "expected": null,
+        "message": "Relation phrase 'was released after' from http://example.org/extracted/film_long_arm_of_the_godfather to http://example.org/extracted/film_virineya was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "b3c6c0c5f981521783286f31d430d316bcd9deeb7f92dc69a6771a7f87fdaf28",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_long_arm_of_the_godfather",
+            "path": null,
+            "value": "http://example.org/extracted/film_virineya",
+            "expected": null,
+            "message": "Relation phrase 'was released after' from http://example.org/extracted/film_long_arm_of_the_godfather to http://example.org/extracted/film_virineya was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 8,
+      "feedback_reasoning": "The violation is an unmapped_relation for the phrase “was released after” linking the two Film individuals. The ontology only provides datatype property `onto:hasPublicationDate` (a date) and object properties related to creators, directors, etc. It does **not** define any predicate that expresses a temporal ordering or “released after” relationship between two CreativeWorks. Because the required predicate is absent, we cannot safely add or modify a triple without inventing a property, which is prohibited.",
+      "repairs": [
+        {
+          "violation_fingerprint": "87e675edf3d5ee7a5a42b1bc8d0182921571d783295110dbb33b11edb6b8786d",
+          "reasoning": "No ontology predicate matches the relation phrase and source‑text meaning; therefore the relation cannot be repaired.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "87e675edf3d5ee7a5a42b1bc8d0182921571d783295110dbb33b11edb6b8786d"
+      ],
+      "triples_after": 8,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "b3c6c0c5f981521783286f31d430d316bcd9deeb7f92dc69a6771a7f87fdaf28",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_long_arm_of_the_godfather",
+            "path": null,
+            "value": "http://example.org/extracted/film_virineya",
+            "expected": null,
+            "message": "Relation phrase 'was released after' from http://example.org/extracted/film_long_arm_of_the_godfather to http://example.org/extracted/film_virineya was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "b3c6c0c5f981521783286f31d430d316bcd9deeb7f92dc69a6771a7f87fdaf28",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_long_arm_of_the_godfather",
+        "path": null,
+        "value": "http://example.org/extracted/film_virineya",
+        "expected": null,
+        "message": "Relation phrase 'was released after' from http://example.org/extracted/film_long_arm_of_the_godfather to http://example.org/extracted/film_virineya was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

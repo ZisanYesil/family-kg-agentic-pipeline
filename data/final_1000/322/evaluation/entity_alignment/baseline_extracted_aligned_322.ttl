@@ -1,0 +1,25 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/All_American_Co_ed> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "All-American Co-ed" ;
+    onto:hasProducer data:leroy_prinz .
+
+<http://example.org/entity/Lagu_Kenangan> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Lagu Kenangan" ;
+    onto:hasProducer <http://example.org/entity/Djamaluddin_Malik> .
+
+<http://example.org/entity/Djamaluddin_Malik> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Djamaluddin Malik" ;
+    onto:hasBirthDate "1917-02-13"^^xsd:date .
+
+data:leroy_prinz a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leroy Prinz" .
+

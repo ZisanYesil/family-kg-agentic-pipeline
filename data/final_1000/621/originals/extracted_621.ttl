@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:john_palaiologos a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Palaiologos (son of Andronikos II)" ;
+    onto:hasMother data:irene_of_montferrat .
+
+data:irene_of_montferrat a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Irene of Montferrat" ;
+    onto:hasFather data:william_vii_montferrat .
+
+data:william_vii_montferrat a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William VII, Marquess of Montferrat" .
+

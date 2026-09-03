@@ -1,0 +1,141 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/465/originals/extracted_465.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/465/ground_truth_465.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/brisk_island": "http://example.org/entity/Brisk_Island",
+    "http://example.org/extracted/churchill_island": "http://example.org/entity/Churchill_Island",
+    "http://example.org/extracted/australia": "http://example.org/entity/Australia"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/australia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Australia",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Australia. inverse has country: Brisk Island. inverse has country: Churchill Island.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Australia",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Australia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Australia",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Australia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7211349606513977
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/brisk_island",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Brisk Island",
+          "source": "label"
+        }
+      ],
+      "context": "Brisk Island. has country: Australia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Brisk_Island",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Brisk Island",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Brisk Island",
+        "extracted_source": "label",
+        "ground_truth_text": "Brisk Island",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3130660057067871
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/churchill_island",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Churchill Island",
+          "source": "label"
+        }
+      ],
+      "context": "Churchill Island. has country: Australia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Churchill_Island",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Churchill Island",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Churchill Island",
+        "extracted_source": "label",
+        "ground_truth_text": "Churchill Island",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3130660057067871
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

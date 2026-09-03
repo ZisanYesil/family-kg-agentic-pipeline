@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:natalya_alexeyevna_1714 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Grand Duchess Natalya Alexeyevna of Russia" ;
+    onto:hasSister data:peter_ii_of_russia ;
+    skos:altLabel "Natalya Alexeyevna (1714–1728)" .
+
+data:charlotte_christine_brunswick_luneburg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Charlotte Christine of Brunswick-Lüneburg" .
+
+data:peter_ii_of_russia a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Peter II of Russia" ;
+    onto:hasMother data:charlotte_christine_brunswick_luneburg ;
+    skos:altLabel "Peter II Alexeyevich" .
+

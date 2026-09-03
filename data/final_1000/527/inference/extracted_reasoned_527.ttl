@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/eleanor_roosevelt> a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse <http://example.org/extracted/franklin_d_roosevelt> .
+
+<http://example.org/extracted/james_roosevelt_roosevelt> a ex:Agent,
+        ex:Person ;
+    ex:hasBrother <http://example.org/extracted/franklin_d_roosevelt> ;
+    ex:hasSibling <http://example.org/extracted/franklin_d_roosevelt> .
+
+<http://example.org/extracted/franklin_d_roosevelt> a ex:Agent,
+        ex:Person ;
+    ex:hasSibling <http://example.org/extracted/james_roosevelt_roosevelt> ;
+    ex:hasSpouse <http://example.org/extracted/eleanor_roosevelt> ;
+    ex:isBrotherOf <http://example.org/extracted/james_roosevelt_roosevelt> .
+

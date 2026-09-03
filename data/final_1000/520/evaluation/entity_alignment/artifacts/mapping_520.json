@@ -1,0 +1,287 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/520/originals/extracted_520.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/520/ground_truth_520.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_joseph_lerner": "http://example.org/entity/Joseph_Lerner",
+    "http://example.org/extracted/person_koran_dunbar": "http://example.org/entity/Koran_Dunbar",
+    "http://example.org/extracted/country_usa": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 6,
+    "ground_truth_entities": 6,
+    "matched": 6,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_usa",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country usa",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has nationality: Koran Dunbar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9395857453346252,
+      "graph_score": 0.4697928726673126,
+      "margin": 0.6899744868278503
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_joseph_lerner",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Joseph Lerner",
+          "source": "label"
+        },
+        {
+          "text": "person joseph lerner",
+          "source": "uri"
+        }
+      ],
+      "context": "Joseph Lerner. has nationality: Canada. inverse has director: C-Man.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Joseph_Lerner",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Joseph Lerner",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Joseph Lerner",
+        "extracted_source": "label",
+        "ground_truth_text": "Joseph Lerner",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8975192308425903,
+      "graph_score": 0.8975192308425903,
+      "margin": 0.6877372860908508
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_koran_dunbar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Koran Dunbar",
+          "source": "label"
+        },
+        {
+          "text": "person koran dunbar",
+          "source": "uri"
+        }
+      ],
+      "context": "Koran Dunbar. has nationality: American. inverse has director: Greencastle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Koran_Dunbar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Koran Dunbar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Koran Dunbar",
+        "extracted_source": "label",
+        "ground_truth_text": "Koran Dunbar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9264172911643982,
+      "graph_score": 0.4632086455821991,
+      "margin": 0.6800327003002167
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_greencastle",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Greencastle",
+          "source": "label"
+        },
+        {
+          "text": "film greencastle",
+          "source": "uri"
+        }
+      ],
+      "context": "Greencastle. has director: Koran Dunbar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Greencastle_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Greencastle film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film greencastle",
+        "extracted_source": "uri",
+        "ground_truth_text": "Greencastle film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9411939382553101,
+      "name_embedding_score": 0.9773291349411011,
+      "string_score": 0.859375,
+      "independent_identity_support": true,
+      "context_score": 0.9014849066734314,
+      "graph_score": 0.9507424831390381,
+      "margin": 0.5131721496582031
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_c_man",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "C-Man",
+          "source": "label"
+        },
+        {
+          "text": "film c man",
+          "source": "uri"
+        }
+      ],
+      "context": "C-Man. has director: Joseph Lerner.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/C_Man_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "C Man film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film c man",
+        "extracted_source": "uri",
+        "ground_truth_text": "C Man film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.892099916934967,
+      "name_embedding_score": 0.9337435364723206,
+      "string_score": 0.7749999761581421,
+      "independent_identity_support": true,
+      "context_score": 0.8518251180648804,
+      "graph_score": 0.9259125590324402,
+      "margin": 0.4792768955230713
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_canada",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Canada",
+          "source": "label"
+        },
+        {
+          "text": "country canada",
+          "source": "uri"
+        }
+      ],
+      "context": "Canada. inverse has nationality: Joseph Lerner.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Canadian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Canadian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Canada",
+        "extracted_source": "label",
+        "ground_truth_text": "Canadian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7041288614273071,
+      "name_embedding_score": 0.980833113193512,
+      "string_score": 0.3857142925262451,
+      "independent_identity_support": false,
+      "context_score": 0.9382697939872742,
+      "graph_score": 0.4691348969936371,
+      "margin": 0.38701683282852173
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

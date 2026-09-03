@@ -1,0 +1,19 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Hürriyet> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Hürriyet" ;
+    onto:hasPublisher <http://example.org/entity/Doğan_Media> ;
+    skos:altLabel "Hürriyet" .
+
+<http://example.org/entity/Doğan_Media> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Doğan Media Group" ;
+    onto:hasInception "1997"^^xsd:gYear ;
+    skos:altLabel "Doğan Media Group",
+        "Doğan Yayın Holding" .
+

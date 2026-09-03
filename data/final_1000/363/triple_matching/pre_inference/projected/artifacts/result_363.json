@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/363/evaluation/entity_alignment/baseline_extracted_aligned_363.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/363/evaluation/entity_alignment/baseline_ground_truth_aligned_363.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Anubhav",
+      "predicate": "hasDirector",
+      "object": "Basu_Bhattacharya",
+      "subject_uri": "http://example.org/entity/Anubhav",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Basu_Bhattacharya"
+    },
+    {
+      "subject": "Basu_Bhattacharya",
+      "predicate": "hasSpouse",
+      "object": "Rinki_Bhattacharya",
+      "subject_uri": "http://example.org/entity/Basu_Bhattacharya",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Rinki_Bhattacharya"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Anubhav",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Anubhav",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Anubhav",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Anubhav",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Anubhav",
+      "predicate": "label",
+      "object": "\"Anubhav (1971 film)\"",
+      "subject_uri": "http://example.org/entity/Anubhav",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Anubhav (1971 film)\""
+    },
+    {
+      "subject": "Basu_Bhattacharya",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Basu_Bhattacharya",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Basu_Bhattacharya",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Basu_Bhattacharya",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Basu_Bhattacharya",
+      "predicate": "label",
+      "object": "\"Basu Bhattacharya\"",
+      "subject_uri": "http://example.org/entity/Basu_Bhattacharya",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Basu Bhattacharya\""
+    },
+    {
+      "subject": "Rinki_Bhattacharya",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Rinki_Bhattacharya",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Rinki_Bhattacharya",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Rinki_Bhattacharya",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Rinki_Bhattacharya",
+      "predicate": "label",
+      "object": "\"Rinki Bhattacharya\"",
+      "subject_uri": "http://example.org/entity/Rinki_Bhattacharya",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Rinki Bhattacharya\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_hot_time_berlin a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "(There'll Be a) Hot Time in the Town of Berlin" ;
+    onto:hasComposer data:person_joe_bushkin .
+
+data:person_joe_bushkin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joe Bushkin" ;
+    onto:hasDeathPlace data:place_santa_barbara_california ;
+    skos:altLabel "Bushkin" .
+
+data:place_santa_barbara_california a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Santa Barbara, California" .
+

@@ -1,0 +1,16 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Princess_Eugénie_of_Greece_and_Denmark> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Eugénie of Greece and Denmark" ;
+    onto:hasMother <http://example.org/entity/Princess_Marie_Bonaparte> .
+
+<http://example.org/entity/Princess_Marie_Bonaparte> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Marie Bonaparte" ;
+    onto:hasBirthDate "1882-07-02"^^xsd:date ;
+    onto:hasDeathDate "1962-09-21"^^xsd:date .
+

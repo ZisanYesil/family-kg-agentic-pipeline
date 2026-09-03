@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:alam_shah a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alam Shah" ;
+    onto:hasFather data:muhammad_shah .
+
+data:lodi_gardens a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Lodi Gardens" ;
+    skos:altLabel "New Delhi" .
+
+data:muhammad_shah a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Muhammad Shah" ;
+    onto:hasBurialPlace data:lodi_gardens .
+

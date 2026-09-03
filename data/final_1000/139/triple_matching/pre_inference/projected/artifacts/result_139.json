@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/139/evaluation/entity_alignment/baseline_extracted_aligned_139.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/139/evaluation/entity_alignment/baseline_ground_truth_aligned_139.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Ed_Blackwell",
+      "predicate": "hasBirthPlace",
+      "object": "New_Orleans_Louisiana",
+      "subject_uri": "http://example.org/entity/Ed_Blackwell",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/New_Orleans_Louisiana"
+    },
+    {
+      "subject": "Old_and_New_Dreams",
+      "predicate": "hasMember",
+      "object": "Ed_Blackwell",
+      "subject_uri": "http://example.org/entity/Old_and_New_Dreams",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasMember",
+      "object_term": "http://example.org/entity/Ed_Blackwell"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Ed_Blackwell",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ed_Blackwell",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Ed_Blackwell",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ed_Blackwell",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ed_Blackwell",
+      "predicate": "label",
+      "object": "\"Ed Blackwell\"",
+      "subject_uri": "http://example.org/entity/Ed_Blackwell",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ed Blackwell\""
+    },
+    {
+      "subject": "Ed_Blackwell",
+      "predicate": "altLabel",
+      "object": "\"Edward Joseph Blackwell\"",
+      "subject_uri": "http://example.org/entity/Ed_Blackwell",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Edward Joseph Blackwell\""
+    },
+    {
+      "subject": "New_Orleans_Louisiana",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/New_Orleans_Louisiana",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "New_Orleans_Louisiana",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/New_Orleans_Louisiana",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "New_Orleans_Louisiana",
+      "predicate": "label",
+      "object": "\"New Orleans, Louisiana\"",
+      "subject_uri": "http://example.org/entity/New_Orleans_Louisiana",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"New Orleans, Louisiana\""
+    },
+    {
+      "subject": "Old_and_New_Dreams",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Old_and_New_Dreams",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Old_and_New_Dreams",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Old_and_New_Dreams",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Old_and_New_Dreams",
+      "predicate": "label",
+      "object": "\"Old and New Dreams\"",
+      "subject_uri": "http://example.org/entity/Old_and_New_Dreams",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Old and New Dreams\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

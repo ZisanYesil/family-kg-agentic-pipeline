@@ -1,0 +1,75 @@
+{
+  "_source_extraction_sha256": "7f8430891f92ebf45dff9ef910ddaee36b7151e3b5cbe9e815471a53bb7e856e",
+  "entities": [
+    {
+      "id": "awesome_film",
+      "label": "Awesome; I Fuckin' Shot That!",
+      "type": "Film",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "adam_yauch",
+      "label": "Adam Yauch",
+      "type": "Person",
+      "aliases": [
+        "Adam Nathaniel Yauch"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "parotid_cancer",
+      "label": "parotid cancer",
+      "type": "CauseOfDeath",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "awesome_film",
+      "predicate": "hasDirector",
+      "object": "adam_yauch",
+      "relation_phrase": "directed by",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "awesome_film",
+      "source_object": "adam_yauch",
+      "endpoints_swapped": false
+    },
+    {
+      "subject": "adam_yauch",
+      "predicate": "hasCauseOfDeath",
+      "object": "parotid_cancer",
+      "relation_phrase": "died from",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "adam_yauch",
+      "source_object": "parotid_cancer",
+      "endpoints_swapped": false
+    }
+  ],
+  "unmapped_relations": []
+}

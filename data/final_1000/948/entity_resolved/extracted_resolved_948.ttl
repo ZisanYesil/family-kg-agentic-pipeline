@@ -1,0 +1,31 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_calling_philo_vance a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Calling Philo Vance" ;
+    onto:hasDirector data:person_william_clemens ;
+    skos:altLabel "Calling Philo Vance" .
+
+data:film_the_witchs_curse a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Witch's Curse" ;
+    onto:hasDirector data:person_riccardo_freda ;
+    skos:altLabel "The Witch's Curse" .
+
+data:person_riccardo_freda a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Riccardo Freda" ;
+    onto:hasDeathDate "1999-12-20"^^xsd:date ;
+    skos:altLabel "Riccardo Freda" .
+
+data:person_william_clemens a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Clemens" ;
+    onto:hasDeathDate "1980-04-29"^^xsd:date ;
+    skos:altLabel "William Clemens" .
+

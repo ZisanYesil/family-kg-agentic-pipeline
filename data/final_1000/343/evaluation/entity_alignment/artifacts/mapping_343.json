@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/343/originals/extracted_343.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/343/ground_truth_343.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/philippa_of_hainault": "http://example.org/entity/Philippa_of_Hainault",
+    "http://example.org/extracted/joan_of_england_1335_1348": "http://example.org/entity/Joan_of_England"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/joan_of_england_1335_1348",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Joan of England (1333/34–1348)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Joan of England (1335–1348)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Joan of England",
+          "source": "label"
+        },
+        {
+          "text": "joan of england 1335 1348",
+          "source": "uri"
+        }
+      ],
+      "context": "Joan of England (1333/34–1348). inverse has daughter: Philippa of Hainault.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Joan_of_England",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Joan of England",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Joan of England",
+        "extracted_source": "label",
+        "ground_truth_text": "Joan of England",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8407189846038818,
+      "graph_score": 0.4203594923019409,
+      "margin": 0.6394556760787964
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/philippa_of_hainault",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Philippa of Hainault",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Philippa of Hainault. has cause of death: Illness closely related to edema. has daughter: Joan of England (1333/34–1348).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Philippa_of_Hainault",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Philippa of Hainault",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Philippa of Hainault",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Philippa of Hainault",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.91228848695755,
+      "graph_score": 0.456144243478775,
+      "margin": 0.6385923624038696
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/illness_related_to_edema",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Illness closely related to edema",
+          "source": "label"
+        },
+        {
+          "text": "illness related to edema",
+          "source": "uri"
+        }
+      ],
+      "context": "Illness closely related to edema. inverse has cause of death: Philippa of Hainault.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/edema",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "edema",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "illness related to edema",
+        "extracted_source": "uri",
+        "ground_truth_text": "edema",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6922913789749146,
+      "name_embedding_score": 0.6445523500442505,
+      "string_score": 0.5176724195480347,
+      "independent_identity_support": false,
+      "context_score": 0.9247768521308899,
+      "graph_score": 0.9623883962631226,
+      "margin": 0.6922913789749146
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

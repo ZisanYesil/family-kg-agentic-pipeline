@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:La_Cage_aux_Folles_3_The_Wedding a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Georges_Lautner ;
+    ex:hasDirector entity:Georges_Lautner .
+
+entity:Renée_Saint_Cyr a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Georges_Lautner .
+
+entity:Georges_Lautner a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Renée_Saint_Cyr ;
+    ex:hasParent entity:Renée_Saint_Cyr .
+

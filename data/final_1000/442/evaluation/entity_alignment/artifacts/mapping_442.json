@@ -1,0 +1,147 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/442/originals/extracted_442.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/442/ground_truth_442.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/eleanor_de_clare": "http://example.org/entity/Eleanor_de_Clare"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/eleanor_de_clare",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eleanor de Clare",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Eleanor de Clare. has birth place: Caerphilly Castle. inverse has mother: Hugh Le Despenser, Baron Le Despenser (1338).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eleanor_de_Clare",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eleanor de Clare",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eleanor de Clare",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Eleanor de Clare",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9024786949157715,
+      "graph_score": 0.9024786949157715,
+      "margin": 0.7208065390586853
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/hugh_le_despenser_1338",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hugh Le Despenser, Baron Le Despenser (1338)",
+          "source": "altLabel"
+        },
+        {
+          "text": "hugh le despenser 1338",
+          "source": "uri"
+        }
+      ],
+      "context": "Hugh Le Despenser, Baron Le Despenser (1338). has mother: Eleanor de Clare.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hugh_le_Despenser",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hugh le Despenser",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hugh Le Despenser, Baron Le Despenser (1338)",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Hugh le Despenser",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8403029441833496,
+      "name_embedding_score": 0.8602052330970764,
+      "string_score": 0.7008196711540222,
+      "independent_identity_support": true,
+      "context_score": 0.8799634575843811,
+      "graph_score": 0.9399816989898682,
+      "margin": 0.5345026850700378
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/caerphilly_castle",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Caerphilly Castle",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Caerphilly Castle. inverse has birth place: Eleanor de Clare.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Caerphilly",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Caerphilly",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Caerphilly Castle",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Caerphilly",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7589855194091797,
+      "name_embedding_score": 0.6630789637565613,
+      "string_score": 0.7583333253860474,
+      "independent_identity_support": true,
+      "context_score": 0.9029014110565186,
+      "graph_score": 0.9514507055282593,
+      "margin": 0.7589855194091797
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

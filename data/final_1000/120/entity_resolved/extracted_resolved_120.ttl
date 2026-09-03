@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:mahisente_habte_mariam a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mahisente Habte Mariam" ;
+    onto:hasSpouse data:prince_sahle_selassie .
+
+data:empress_menen_asfaw a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Empress Menen Asfaw" .
+
+data:prince_sahle_selassie a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Sahle Selassie" ;
+    onto:hasMother data:empress_menen_asfaw .
+

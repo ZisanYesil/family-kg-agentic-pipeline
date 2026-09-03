@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "64d0e7dd0078875f3e8bc69b2f9faba7a1fa11fa99c276d32d3cc3fbf3fda8b8",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/li_zhong",
+        "path": null,
+        "value": "http://example.org/extracted/zhangsun",
+        "expected": null,
+        "message": "Relation phrase 'paternal grandmother' from http://example.org/extracted/li_zhong to http://example.org/extracted/zhangsun was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "64d0e7dd0078875f3e8bc69b2f9faba7a1fa11fa99c276d32d3cc3fbf3fda8b8",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/li_zhong",
+            "path": null,
+            "value": "http://example.org/extracted/zhangsun",
+            "expected": null,
+            "message": "Relation phrase 'paternal grandmother' from http://example.org/extracted/li_zhong to http://example.org/extracted/zhangsun was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 12,
+      "feedback_reasoning": "The violation reports an unmapped relation phrase “paternal grandmother” between li_zhong and zhangsun. The ontology provides only hasMother, hasFather, and other sibling/child predicates, but no predicate that denotes a grand‑parent relationship. Because there is no ontology predicate whose documented meaning matches “paternal grandmother”, we cannot safely add or replace a triple. Substituting a loosely type‑compatible predicate (e.g., hasMother) would misrepresent the semantics, which the instruction forbids.",
+      "repairs": [
+        {
+          "violation_fingerprint": "ebfd8ae7a77255bbe9d218810a1965fd9b728d9df223c0785f19ac8f287a80c8",
+          "reasoning": "No suitable ontology predicate exists for the ‘paternal grandmother’ relation.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "ebfd8ae7a77255bbe9d218810a1965fd9b728d9df223c0785f19ac8f287a80c8"
+      ],
+      "triples_after": 12,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "64d0e7dd0078875f3e8bc69b2f9faba7a1fa11fa99c276d32d3cc3fbf3fda8b8",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/li_zhong",
+            "path": null,
+            "value": "http://example.org/extracted/zhangsun",
+            "expected": null,
+            "message": "Relation phrase 'paternal grandmother' from http://example.org/extracted/li_zhong to http://example.org/extracted/zhangsun was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "64d0e7dd0078875f3e8bc69b2f9faba7a1fa11fa99c276d32d3cc3fbf3fda8b8",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/li_zhong",
+        "path": null,
+        "value": "http://example.org/extracted/zhangsun",
+        "expected": null,
+        "message": "Relation phrase 'paternal grandmother' from http://example.org/extracted/li_zhong to http://example.org/extracted/zhangsun was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

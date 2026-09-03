@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_24_hour_psycho a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "24 Hour Psycho" ;
+    onto:hasCreator data:person_douglas_gordon .
+
+data:award_turner_prize a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Turner Prize" .
+
+data:person_douglas_gordon a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Douglas Gordon" ;
+    onto:hasAwardReceived data:award_turner_prize .
+

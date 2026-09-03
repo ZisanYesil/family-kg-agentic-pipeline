@@ -1,0 +1,139 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/526/evaluation/entity_alignment/baseline_extracted_aligned_526.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/526/evaluation/entity_alignment/baseline_ground_truth_aligned_526.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Gaozong",
+      "predicate": "hasParent",
+      "object": "Empress_Zhangsun",
+      "subject_uri": "http://example.org/entity/Gaozong",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Empress_Zhangsun"
+    },
+    {
+      "subject": "Li_Zhong",
+      "predicate": "hasParent",
+      "object": "Gaozong",
+      "subject_uri": "http://example.org/entity/Li_Zhong",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Gaozong"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Empress_Zhangsun",
+      "predicate": "hasParent",
+      "object": "Gaozong",
+      "subject_uri": "http://example.org/entity/Empress_Zhangsun",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Gaozong"
+    },
+    {
+      "subject": "Empress_Zhangsun",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Empress_Zhangsun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Empress_Zhangsun",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Empress_Zhangsun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Empress_Zhangsun",
+      "predicate": "label",
+      "object": "\"Empress Zhangsun\"",
+      "subject_uri": "http://example.org/entity/Empress_Zhangsun",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Empress Zhangsun\""
+    },
+    {
+      "subject": "Gaozong",
+      "predicate": "hasParent",
+      "object": "Li_Zhong",
+      "subject_uri": "http://example.org/entity/Gaozong",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Li_Zhong"
+    },
+    {
+      "subject": "Gaozong",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gaozong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Gaozong",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gaozong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gaozong",
+      "predicate": "label",
+      "object": "\"Emperor Gaozong of Tang\"",
+      "subject_uri": "http://example.org/entity/Gaozong",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Emperor Gaozong of Tang\""
+    },
+    {
+      "subject": "Gaozong",
+      "predicate": "altLabel",
+      "object": "\"Li Zhi\"",
+      "subject_uri": "http://example.org/entity/Gaozong",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Li Zhi\""
+    },
+    {
+      "subject": "Li_Zhong",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Li_Zhong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Li_Zhong",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Li_Zhong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Li_Zhong",
+      "predicate": "label",
+      "object": "\"Li Zhong\"",
+      "subject_uri": "http://example.org/entity/Li_Zhong",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Li Zhong\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 0,
+    "false_positives": 12,
+    "false_negatives": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "pre_inference"
+}

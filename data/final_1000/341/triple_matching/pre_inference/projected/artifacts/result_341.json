@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/341/evaluation/entity_alignment/baseline_extracted_aligned_341.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/341/evaluation/entity_alignment/baseline_ground_truth_aligned_341.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "John_F_Kennedy_Years_of_Lightning_Day_of_Drums",
+      "predicate": "hasDirector",
+      "object": "Bruce_Herschensohn",
+      "subject_uri": "http://example.org/entity/John_F_Kennedy_Years_of_Lightning_Day_of_Drums",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Bruce_Herschensohn"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Bruce_Herschensohn",
+      "predicate": "hasEmployer",
+      "object": "Harvard",
+      "subject_uri": "http://example.org/entity/Bruce_Herschensohn",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/Harvard"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Bruce_Herschensohn",
+      "predicate": "hasEmployer",
+      "object": "org_pepperdine_university_school_of_public_policy",
+      "subject_uri": "http://example.org/entity/Bruce_Herschensohn",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/extracted/org_pepperdine_university_school_of_public_policy"
+    },
+    {
+      "subject": "Bruce_Herschensohn",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bruce_Herschensohn",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Bruce_Herschensohn",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Bruce_Herschensohn",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Bruce_Herschensohn",
+      "predicate": "label",
+      "object": "\"Bruce Herschensohn\"",
+      "subject_uri": "http://example.org/entity/Bruce_Herschensohn",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bruce Herschensohn\""
+    },
+    {
+      "subject": "John_F_Kennedy_Years_of_Lightning_Day_of_Drums",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/John_F_Kennedy_Years_of_Lightning_Day_of_Drums",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "John_F_Kennedy_Years_of_Lightning_Day_of_Drums",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/John_F_Kennedy_Years_of_Lightning_Day_of_Drums",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "John_F_Kennedy_Years_of_Lightning_Day_of_Drums",
+      "predicate": "label",
+      "object": "\"John F. Kennedy: Years of Lightning, Day of Drums\"",
+      "subject_uri": "http://example.org/entity/John_F_Kennedy_Years_of_Lightning_Day_of_Drums",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"John F. Kennedy: Years of Lightning, Day of Drums\""
+    },
+    {
+      "subject": "org_pepperdine_university_school_of_public_policy",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/extracted/org_pepperdine_university_school_of_public_policy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "org_pepperdine_university_school_of_public_policy",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/org_pepperdine_university_school_of_public_policy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "org_pepperdine_university_school_of_public_policy",
+      "predicate": "label",
+      "object": "\"Pepperdine University School of Public Policy\"",
+      "subject_uri": "http://example.org/extracted/org_pepperdine_university_school_of_public_policy",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Pepperdine University School of Public Policy\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

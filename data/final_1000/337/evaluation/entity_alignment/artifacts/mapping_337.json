@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/337/originals/extracted_337.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/337/ground_truth_337.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {},
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/lord_herbert_scott",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lord Herbert Andrew Montagu Douglas Scott",
+          "source": "label"
+        },
+        {
+          "text": "lord herbert scott",
+          "source": "uri"
+        }
+      ],
+      "context": "Lord Herbert Andrew Montagu Douglas Scott. has mother: Lady Louisa Jane Hamilton.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Herbert_Andrew_Montagu_Douglas_Scott",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Herbert Andrew Montagu Douglas Scott",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lord Herbert Andrew Montagu Douglas Scott",
+        "extracted_source": "label",
+        "ground_truth_text": "Herbert Andrew Montagu Douglas Scott",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9509562253952026,
+      "name_embedding_score": 0.9590550661087036,
+      "string_score": 0.9291125535964966,
+      "independent_identity_support": true,
+      "context_score": 0.956602156162262,
+      "graph_score": 0.956602156162262,
+      "margin": 0.3297575116157532
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lady_louisa_hamilton",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lady Louisa Jane Hamilton",
+          "source": "label"
+        },
+        {
+          "text": "lady louisa hamilton",
+          "source": "uri"
+        }
+      ],
+      "context": "Lady Louisa Jane Hamilton. has father: James Hamilton, 1st Duke of Abercorn. inverse has mother: Lord Herbert Andrew Montagu Douglas Scott.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louisa_Jane_Hamilton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louisa Jane Hamilton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lady Louisa Jane Hamilton",
+        "extracted_source": "label",
+        "ground_truth_text": "Louisa Jane Hamilton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9210030436515808,
+      "name_embedding_score": 0.9672232866287231,
+      "string_score": 0.887499988079071,
+      "independent_identity_support": true,
+      "context_score": 0.8620655536651611,
+      "graph_score": 0.8620655536651611,
+      "margin": 0.3061050772666931
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/james_hamilton_1st_duke_abercorn",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Hamilton, 1st Duke of Abercorn",
+          "source": "label"
+        },
+        {
+          "text": "james hamilton 1st duke abercorn",
+          "source": "uri"
+        }
+      ],
+      "context": "James Hamilton, 1st Duke of Abercorn. inverse has father: Lady Louisa Jane Hamilton.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_Hamilton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James Hamilton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James Hamilton, 1st Duke of Abercorn",
+        "extracted_source": "label",
+        "ground_truth_text": "James Hamilton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7327598333358765,
+      "name_embedding_score": 0.7677114605903625,
+      "string_score": 0.6353333592414856,
+      "independent_identity_support": false,
+      "context_score": 0.7602831125259399,
+      "graph_score": 0.7602831125259399,
+      "margin": 0.23693740367889404
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Louisa_Jane_Montagu_Douglas_Scott_Duchess_of_Buccleuch"
+  ]
+}

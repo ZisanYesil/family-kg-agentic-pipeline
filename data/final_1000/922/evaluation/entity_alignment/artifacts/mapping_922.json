@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/922/originals/extracted_922.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/922/ground_truth_922.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_the_law_in_these_parts": "http://example.org/entity/The_Law_in_These_Parts",
+    "http://example.org/extracted/film_extraordinary_women": "http://example.org/entity/Extraordinary_Women"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_extraordinary_women",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Extraordinary Women",
+          "source": "label"
+        },
+        {
+          "text": "film extraordinary women",
+          "source": "uri"
+        }
+      ],
+      "context": "Extraordinary Women. has publication date: 2009.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Extraordinary_Women",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Extraordinary Women",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Extraordinary Women",
+        "extracted_source": "label",
+        "ground_truth_text": "Extraordinary Women",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8098962306976318
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_law_in_these_parts",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Law in These Parts",
+          "source": "label"
+        },
+        {
+          "text": "film the law in these parts",
+          "source": "uri"
+        }
+      ],
+      "context": "The Law in These Parts. has publication date: 2011.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Law_in_These_Parts",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Law in These Parts",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Law in These Parts",
+        "extracted_source": "label",
+        "ground_truth_text": "The Law in These Parts",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.8311770111322403
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

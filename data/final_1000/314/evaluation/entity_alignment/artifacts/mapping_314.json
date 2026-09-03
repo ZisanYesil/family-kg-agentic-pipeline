@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/314/originals/extracted_314.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/314/ground_truth_314.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_long_arm_of_the_godfather": "http://example.org/entity/Long_Arm_of_the_Godfather",
+    "http://example.org/extracted/film_virineya": "http://example.org/entity/Virineya"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_long_arm_of_the_godfather",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Long Arm of the Godfather",
+          "source": "label"
+        },
+        {
+          "text": "film long arm of the godfather",
+          "source": "uri"
+        }
+      ],
+      "context": "Long Arm of the Godfather. has publication date: 1972.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Long_Arm_of_the_Godfather",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Long Arm of the Godfather",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Long Arm of the Godfather",
+        "extracted_source": "label",
+        "ground_truth_text": "Long Arm of the Godfather",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999997615814209,
+      "graph_score": 0.9999997615814209,
+      "margin": 0.7484385371208191
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_virineya",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Virineya",
+          "source": "label"
+        },
+        {
+          "text": "film virineya",
+          "source": "uri"
+        }
+      ],
+      "context": "Virineya. has publication date: 1968.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Virineya",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Virineya",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Virineya",
+        "extracted_source": "label",
+        "ground_truth_text": "Virineya",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6942358314990997
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

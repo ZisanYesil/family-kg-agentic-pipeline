@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/392/evaluation/entity_alignment/baseline_extracted_aligned_392.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/392/evaluation/entity_alignment/baseline_ground_truth_aligned_392.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Richard_Pottier",
+      "predicate": "hasDeathPlace",
+      "object": "Le_Plessis_Bouchard",
+      "subject_uri": "http://example.org/entity/Richard_Pottier",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Le_Plessis_Bouchard"
+    },
+    {
+      "subject": "The_Beautiful_Otero",
+      "predicate": "hasDirector",
+      "object": "Richard_Pottier",
+      "subject_uri": "http://example.org/entity/The_Beautiful_Otero",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Richard_Pottier"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Le_Plessis_Bouchard",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Le_Plessis_Bouchard",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Le_Plessis_Bouchard",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Le_Plessis_Bouchard",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Le_Plessis_Bouchard",
+      "predicate": "label",
+      "object": "\"Le Plessis-Bouchard\"",
+      "subject_uri": "http://example.org/entity/Le_Plessis_Bouchard",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Le Plessis-Bouchard\""
+    },
+    {
+      "subject": "Richard_Pottier",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Richard_Pottier",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Richard_Pottier",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Richard_Pottier",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Richard_Pottier",
+      "predicate": "label",
+      "object": "\"Richard Pottier\"",
+      "subject_uri": "http://example.org/entity/Richard_Pottier",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Richard Pottier\""
+    },
+    {
+      "subject": "The_Beautiful_Otero",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Beautiful_Otero",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Beautiful_Otero",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Beautiful_Otero",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Beautiful_Otero",
+      "predicate": "label",
+      "object": "\"The Beautiful Otero\"",
+      "subject_uri": "http://example.org/entity/The_Beautiful_Otero",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Beautiful Otero\""
+    },
+    {
+      "subject": "The_Beautiful_Otero",
+      "predicate": "altLabel",
+      "object": "\"La bella Otero\"",
+      "subject_uri": "http://example.org/entity/The_Beautiful_Otero",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"La bella Otero\""
+    },
+    {
+      "subject": "The_Beautiful_Otero",
+      "predicate": "altLabel",
+      "object": "\"La belle Otero\"",
+      "subject_uri": "http://example.org/entity/The_Beautiful_Otero",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"La belle Otero\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

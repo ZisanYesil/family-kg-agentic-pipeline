@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/498/originals/extracted_498.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/498/ground_truth_498.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/frances_adeline_seward": "http://example.org/entity/Frances_Adeline_Seward",
+    "http://example.org/extracted/augustus_henry_seward": "http://example.org/entity/Augustus_Henry_Seward"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/augustus_henry_seward",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Augustus Henry Seward",
+          "source": "label"
+        }
+      ],
+      "context": "Augustus Henry Seward. has mother: Frances Adeline Miller Seward.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Augustus_Henry_Seward",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Augustus Henry Seward",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Augustus Henry Seward",
+        "extracted_source": "label",
+        "ground_truth_text": "Augustus Henry Seward",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9737022519111633,
+      "graph_score": 0.9868510961532593,
+      "margin": 0.5152471959590912
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/frances_adeline_seward",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Frances Adeline Miller Seward",
+          "source": "altLabel"
+        },
+        {
+          "text": "Frances Adeline Seward",
+          "source": "label"
+        }
+      ],
+      "context": "Frances Adeline Miller Seward. has birth date: 1805-09-25. has death date: 1865-06-21. inverse has mother: Augustus Henry Seward.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Frances_Adeline_Seward",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Frances Adeline Seward",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Frances Adeline Seward",
+        "extracted_source": "label",
+        "ground_truth_text": "Frances Adeline Seward",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997019767761,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9286090731620789,
+      "graph_score": 0.9643045663833618,
+      "margin": 0.5217772126197815
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

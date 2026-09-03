@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Boris_Prince_of_Turnovo> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Boris, Prince of Turnovo" ;
+    onto:hasFather <http://example.org/entity/Kardam_Prince_of_Turnovo> .
+
+<http://example.org/entity/Kardam_Prince_of_Turnovo> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Kardam, Prince of Turnovo" ;
+    onto:hasEducatedAt <http://example.org/entity/Penn_State> .
+
+<http://example.org/entity/Penn_State> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Penn State University" .
+

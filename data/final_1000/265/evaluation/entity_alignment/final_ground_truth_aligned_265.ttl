@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Mugain a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:Conchobar_mac_Nessa .
+
+entity:Conchobar_mac_Nessa a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Ness ;
+    ex:hasParent entity:Ness ;
+    ex:hasSpouse entity:Mugain .
+
+entity:Ness a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Conchobar_mac_Nessa .
+

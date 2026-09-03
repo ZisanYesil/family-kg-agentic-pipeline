@@ -1,0 +1,23 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Bottle_Caps> a onto:Product,
+        owl:NamedIndividual ;
+    rdfs:label "Bottle Caps" ;
+    onto:hasManufacturer <http://example.org/entity/Nestlé> ;
+    skos:altLabel "Bottle Caps (candy)" .
+
+<http://example.org/entity/Nestlé> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Nestlé" ;
+    onto:hasCountry <http://example.org/entity/Swiss> ;
+    skos:altLabel "Nestlé",
+        "Nestlé S.A." .
+
+<http://example.org/entity/Swiss> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Switzerland" ;
+    skos:altLabel "Swiss" .
+

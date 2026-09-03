@@ -1,0 +1,187 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/582/originals/extracted_582.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/582/ground_truth_582.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/andjeko_klobucar": "http://example.org/entity/Anđelko_Klobučar",
+    "http://example.org/extracted/vladimir_nazor_award": "http://example.org/entity/Vladimir_Nazor_Award",
+    "http://example.org/extracted/black_birds_film": "http://example.org/entity/Black_Birds"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/andjeko_klobucar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anđelko Klobučar",
+          "source": "label"
+        },
+        {
+          "text": "andjeko klobucar",
+          "source": "uri"
+        }
+      ],
+      "context": "Anđelko Klobučar. has award received: Porin Lifetime Achievement Award. has award received: Vladimir Nazor Award for Life Achievement in Music. has birth date: 1931-07-11. has death date: 2016-08-07.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anđelko_Klobučar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anđelko Klobučar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anđelko Klobučar",
+        "extracted_source": "label",
+        "ground_truth_text": "Anđelko Klobučar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5749551057815552,
+      "graph_score": 0.5374775528907776,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/black_birds_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Black Birds",
+          "source": "label"
+        },
+        {
+          "text": "black birds film",
+          "source": "uri"
+        }
+      ],
+      "context": "Black Birds.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Black_Birds",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Black Birds",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Black Birds",
+        "extracted_source": "label",
+        "ground_truth_text": "Black Birds",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6399598121643066,
+      "graph_score": 0.3199799060821533,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/vladimir_nazor_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vladimir Nazor Award for Life Achievement in Music",
+          "source": "label"
+        },
+        {
+          "text": "vladimir nazor award",
+          "source": "uri"
+        }
+      ],
+      "context": "Vladimir Nazor Award for Life Achievement in Music. inverse has award received: Anđelko Klobučar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vladimir_Nazor_Award",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vladimir Nazor Award",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "vladimir nazor award",
+        "extracted_source": "uri",
+        "ground_truth_text": "Vladimir Nazor Award",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.6997334957122803,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.841821551322937,
+      "graph_score": 0.9209107756614685,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/porin_lifetime_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Porin Lifetime Achievement Award",
+          "source": "label"
+        },
+        {
+          "text": "porin lifetime award",
+          "source": "uri"
+        }
+      ],
+      "context": "Porin Lifetime Achievement Award. inverse has award received: Anđelko Klobučar.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

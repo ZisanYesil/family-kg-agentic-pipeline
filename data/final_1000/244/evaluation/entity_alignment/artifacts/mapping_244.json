@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/244/originals/extracted_244.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/244/ground_truth_244.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/gabrielle_1969": "http://example.org/entity/Gabrielle",
+    "http://example.org/extracted/song_forget_about_the_world": "http://example.org/entity/Forget_About_the_World"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gabrielle_1969",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louisa Gabrielle Bobb",
+          "source": "altLabel"
+        },
+        {
+          "text": "Gabrielle",
+          "source": "label"
+        },
+        {
+          "text": "gabrielle 1969",
+          "source": "uri"
+        }
+      ],
+      "context": "Louisa Gabrielle Bobb. has birth date: 1969-07-19. has birth place: Hackney, London. inverse has performer: Forget About the World.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gabrielle",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gabrielle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gabrielle",
+        "extracted_source": "label",
+        "ground_truth_text": "Gabrielle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.674859881401062,
+      "graph_score": 0.837429940700531,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_forget_about_the_world",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Forget About the World",
+          "source": "label"
+        },
+        {
+          "text": "song forget about the world",
+          "source": "uri"
+        }
+      ],
+      "context": "Forget About the World. has performer: Louisa Gabrielle Bobb.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Forget_About_the_World",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Forget About the World",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Forget About the World",
+        "extracted_source": "label",
+        "ground_truth_text": "Forget About the World",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.826544463634491,
+      "graph_score": 0.9132722616195679,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/hackney_london",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hackney, London",
+          "source": "label"
+        },
+        {
+          "text": "hackney london",
+          "source": "uri"
+        }
+      ],
+      "context": "Hackney, London. inverse has birth place: Louisa Gabrielle Bobb.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hackney",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hackney",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hackney, London",
+        "extracted_source": "label",
+        "ground_truth_text": "Hackney",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8319880366325378,
+      "name_embedding_score": 0.8563700914382935,
+      "string_score": 0.7113636136054993,
+      "independent_identity_support": true,
+      "context_score": 0.8076967000961304,
+      "graph_score": 0.9038483500480652,
+      "margin": 0.8319880366325378
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

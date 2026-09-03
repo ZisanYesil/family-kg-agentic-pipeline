@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_the_seagull_2018 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Seagull (2018 film)" ;
+    onto:hasDirector data:person_michael_mayer .
+
+data:award_tony_award_best_direction_of_a_musical a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Tony Award for Best Direction of a Musical" .
+
+data:person_michael_mayer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Michael Mayer" ;
+    onto:hasAwardReceived data:award_tony_award_best_direction_of_a_musical .
+

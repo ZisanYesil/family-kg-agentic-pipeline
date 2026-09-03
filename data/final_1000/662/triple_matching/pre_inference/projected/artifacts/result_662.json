@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/662/evaluation/entity_alignment/baseline_extracted_aligned_662.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/662/evaluation/entity_alignment/baseline_ground_truth_aligned_662.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Philip_III_of_France",
+      "predicate": "hasDeathPlace",
+      "object": "Perpignan",
+      "subject_uri": "http://example.org/entity/Philip_III_of_France",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Perpignan"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Louis_of_France",
+      "predicate": "hasParent",
+      "object": "Philip_III_of_France",
+      "subject_uri": "http://example.org/entity/Louis_of_France",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Philip_III_of_France"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Louis_of_France",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Louis_of_France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Louis_of_France",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Louis_of_France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Louis_of_France",
+      "predicate": "label",
+      "object": "\"Louis of France (1264–1276)\"",
+      "subject_uri": "http://example.org/entity/Louis_of_France",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Louis of France (1264–1276)\""
+    },
+    {
+      "subject": "Perpignan",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Perpignan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Perpignan",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Perpignan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Perpignan",
+      "predicate": "label",
+      "object": "\"Perpignan\"",
+      "subject_uri": "http://example.org/entity/Perpignan",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Perpignan\""
+    },
+    {
+      "subject": "Philip_III_of_France",
+      "predicate": "hasParent",
+      "object": "Louis_of_France",
+      "subject_uri": "http://example.org/entity/Philip_III_of_France",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Louis_of_France"
+    },
+    {
+      "subject": "Philip_III_of_France",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Philip_III_of_France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Philip_III_of_France",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Philip_III_of_France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Philip_III_of_France",
+      "predicate": "label",
+      "object": "\"Philip III of France\"",
+      "subject_uri": "http://example.org/entity/Philip_III_of_France",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Philip III of France\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

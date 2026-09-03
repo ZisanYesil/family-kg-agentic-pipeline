@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/310/evaluation/entity_alignment/baseline_extracted_aligned_310.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/310/evaluation/entity_alignment/baseline_ground_truth_aligned_310.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Ermesinda_of_Bigorre",
+      "predicate": "hasSpouse",
+      "object": "Ramiro_I_of_Aragon",
+      "subject_uri": "http://example.org/entity/Ermesinda_of_Bigorre",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Ramiro_I_of_Aragon"
+    },
+    {
+      "subject": "Sancho_Ramírez",
+      "predicate": "hasParent",
+      "object": "Ermesinda_of_Bigorre",
+      "subject_uri": "http://example.org/entity/Sancho_Ramírez",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Ermesinda_of_Bigorre"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Ramiro_I_of_Aragon",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ramiro_I_of_Aragon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Ramiro_I_of_Aragon",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ramiro_I_of_Aragon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ramiro_I_of_Aragon",
+      "predicate": "label",
+      "object": "\"Ramiro I of Aragon\"",
+      "subject_uri": "http://example.org/entity/Ramiro_I_of_Aragon",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ramiro I of Aragon\""
+    },
+    {
+      "subject": "Sancho_Ramírez",
+      "predicate": "hasParent",
+      "object": "Ramiro_I_of_Aragon",
+      "subject_uri": "http://example.org/entity/Sancho_Ramírez",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Ramiro_I_of_Aragon"
+    },
+    {
+      "subject": "Sancho_Ramírez",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sancho_Ramírez",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sancho_Ramírez",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sancho_Ramírez",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sancho_Ramírez",
+      "predicate": "label",
+      "object": "\"Sancho Ramírez\"",
+      "subject_uri": "http://example.org/entity/Sancho_Ramírez",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sancho Ramírez\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 9,
+    "true_positives": 0,
+    "false_positives": 7,
+    "false_negatives": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "pre_inference"
+}

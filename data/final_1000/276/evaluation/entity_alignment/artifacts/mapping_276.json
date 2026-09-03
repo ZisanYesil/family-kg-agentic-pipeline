@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/276/originals/extracted_276.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/276/ground_truth_276.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/nicolae_ceausescu": "http://example.org/entity/Nicolae_Ceaușescu",
+    "http://example.org/extracted/zoia_ceausescu": "http://example.org/entity/Zoia_Ceaușescu"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/nicolae_ceausescu",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nicolae Ceaușescu",
+          "source": "label"
+        },
+        {
+          "text": "nicolae ceausescu",
+          "source": "uri"
+        }
+      ],
+      "context": "Nicolae Ceaușescu. has cause of death: execution by firing squad. inverse has father: Zoia Ceaușescu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nicolae_Ceaușescu",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nicolae Ceaușescu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nicolae Ceaușescu",
+        "extracted_source": "label",
+        "ground_truth_text": "Nicolae Ceaușescu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9814272522926331,
+      "graph_score": 0.9907135963439941,
+      "margin": 0.3143751621246338
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/zoia_ceausescu",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Zoia Ceaușescu",
+          "source": "label"
+        },
+        {
+          "text": "zoia ceausescu",
+          "source": "uri"
+        }
+      ],
+      "context": "Zoia Ceaușescu. has father: Nicolae Ceaușescu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Zoia_Ceaușescu",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Zoia Ceaușescu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Zoia Ceaușescu",
+        "extracted_source": "label",
+        "ground_truth_text": "Zoia Ceaușescu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.313149631023407
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cause_execution_firing_squad",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "execution by firing squad",
+          "source": "label"
+        },
+        {
+          "text": "cause execution firing squad",
+          "source": "uri"
+        }
+      ],
+      "context": "execution by firing squad. inverse has cause of death: Nicolae Ceaușescu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/firing_squad",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "firing squad",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "execution by firing squad",
+        "extracted_source": "label",
+        "ground_truth_text": "firing squad",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8424256443977356,
+      "name_embedding_score": 0.8375028371810913,
+      "string_score": 0.716891884803772,
+      "independent_identity_support": true,
+      "context_score": 0.9556097388267517,
+      "graph_score": 0.9778048992156982,
+      "margin": 0.8424256443977356
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,191 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/754/originals/extracted_754.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/754/ground_truth_754.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/lawrence_school_sanawar_educational_institution": "http://example.org/entity/Lawrence_School_Sanawar",
+    "http://example.org/extracted/bunty_aur_babli_film": "http://example.org/entity/Bunty_Aur_Babli",
+    "http://example.org/extracted/shaad_ali_person": "http://example.org/entity/Shaad_Ali"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bunty_aur_babli_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bunty Aur Babli",
+          "source": "label"
+        },
+        {
+          "text": "bunty aur babli film",
+          "source": "uri"
+        }
+      ],
+      "context": "Bunty Aur Babli. has director: Shaad Ali Sehgal.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bunty_Aur_Babli",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bunty Aur Babli",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bunty Aur Babli",
+        "extracted_source": "label",
+        "ground_truth_text": "Bunty Aur Babli",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9385831356048584,
+      "graph_score": 0.9692915678024292,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lawrence_school_sanawar_educational_institution",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lawrence School, Sanawar",
+          "source": "label"
+        },
+        {
+          "text": "lawrence school sanawar educational institution",
+          "source": "uri"
+        }
+      ],
+      "context": "Lawrence School, Sanawar. inverse has educated at: Shaad Ali Sehgal.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lawrence_School_Sanawar",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lawrence School Sanawar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lawrence School, Sanawar",
+        "extracted_source": "label",
+        "ground_truth_text": "Lawrence School Sanawar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9768093228340149,
+      "string_score": 0.9904255270957947,
+      "independent_identity_support": true,
+      "context_score": 0.9467933773994446,
+      "graph_score": 0.9733966588973999,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/shaad_ali_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shaad Ali Sehgal",
+          "source": "altLabel"
+        },
+        {
+          "text": "Shaad Ali",
+          "source": "label"
+        },
+        {
+          "text": "shaad ali person",
+          "source": "uri"
+        }
+      ],
+      "context": "Shaad Ali Sehgal. has educated at: Lawrence School, Sanawar. has educated at: Welham Boys' School. inverse has director: Bunty Aur Babli.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shaad_Ali",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shaad Ali",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shaad Ali",
+        "extracted_source": "label",
+        "ground_truth_text": "Shaad Ali",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8797652125358582,
+      "graph_score": 0.9398826360702515,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/welham_boys_school_educational_institution",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Welham Boys' School",
+          "source": "label"
+        },
+        {
+          "text": "welham boys school educational institution",
+          "source": "uri"
+        }
+      ],
+      "context": "Welham Boys' School. inverse has educated at: Shaad Ali Sehgal.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/994/originals/extracted_994.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/994/ground_truth_994.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/dry_summer_film": "http://example.org/entity/Dry_Summer",
+    "http://example.org/extracted/la_segretaria_per_tutti_film": "http://example.org/entity/La_segretaria_per_tutti"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/dry_summer_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dry Summer",
+          "source": "label"
+        },
+        {
+          "text": "dry summer film",
+          "source": "uri"
+        }
+      ],
+      "context": "Dry Summer. has publication date: 1964.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dry_Summer",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dry Summer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dry Summer",
+        "extracted_source": "label",
+        "ground_truth_text": "Dry Summer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8538198173046112
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/la_segretaria_per_tutti_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "La segretaria per tutti",
+          "source": "label"
+        },
+        {
+          "text": "la segretaria per tutti film",
+          "source": "uri"
+        }
+      ],
+      "context": "La segretaria per tutti. has publication date: 1933.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/La_segretaria_per_tutti",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "La segretaria per tutti",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "La segretaria per tutti",
+        "extracted_source": "label",
+        "ground_truth_text": "La segretaria per tutti",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8538198173046112
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

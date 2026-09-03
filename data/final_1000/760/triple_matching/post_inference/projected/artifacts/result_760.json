@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/760/evaluation/entity_alignment/final_extracted_aligned_760.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/760/evaluation/entity_alignment/final_ground_truth_aligned_760.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Amado_V_Hernandez",
+      "predicate": "hasSpouse",
+      "object": "Atang_de_la_Rama",
+      "subject_uri": "http://example.org/entity/Amado_V_Hernandez",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Atang_de_la_Rama"
+    },
+    {
+      "subject": "Amado_V_Hernandez",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Amado_V_Hernandez",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Amado_V_Hernandez",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Amado_V_Hernandez",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Atang_de_la_Rama",
+      "predicate": "hasSpouse",
+      "object": "Amado_V_Hernandez",
+      "subject_uri": "http://example.org/entity/Atang_de_la_Rama",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Amado_V_Hernandez"
+    },
+    {
+      "subject": "Atang_de_la_Rama",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Atang_de_la_Rama",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Atang_de_la_Rama",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Atang_de_la_Rama",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Amado_V_Hernandez",
+      "predicate": "hasBirthPlace",
+      "object": "Hagonoy",
+      "subject_uri": "http://example.org/entity/Amado_V_Hernandez",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Hagonoy"
+    },
+    {
+      "subject": "Hagonoy",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Hagonoy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Amado_V_Hernandez",
+      "predicate": "hasBirthPlace",
+      "object": "tondo_manila",
+      "subject_uri": "http://example.org/entity/Amado_V_Hernandez",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/extracted/tondo_manila"
+    },
+    {
+      "subject": "tondo_manila",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/tondo_manila",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 10,
+    "true_positives": 6,
+    "false_positives": 2,
+    "false_negatives": 2,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,194 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/427/originals/extracted_427.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/427/ground_truth_427.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/performer_enrique_iglesias": "http://example.org/entity/Enrique_Iglesias",
+    "http://example.org/extracted/country_spain": "http://example.org/entity/Spanish"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_spain",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Spanish",
+          "source": "altLabel"
+        },
+        {
+          "text": "Spain",
+          "source": "label"
+        },
+        {
+          "text": "country spain",
+          "source": "uri"
+        }
+      ],
+      "context": "Spanish. inverse has nationality: Enrique Iglesias.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Spanish",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Spanish",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Spanish",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Spanish",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.940330982208252,
+      "graph_score": 0.470165491104126,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/performer_enrique_iglesias",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Enrique Iglesias",
+          "source": "label"
+        },
+        {
+          "text": "performer enrique iglesias",
+          "source": "uri"
+        }
+      ],
+      "context": "Enrique Iglesias. has nationality: Filipino. has nationality: Spanish. inverse has performer: Heart Attack (Enrique Iglesias song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Enrique_Iglesias",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Enrique Iglesias",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Enrique Iglesias",
+        "extracted_source": "label",
+        "ground_truth_text": "Enrique Iglesias",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9174350500106812,
+      "graph_score": 0.4587175250053406,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_heart_attack",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Heart Attack (Enrique Iglesias song)",
+          "source": "label"
+        },
+        {
+          "text": "song heart attack",
+          "source": "uri"
+        }
+      ],
+      "context": "Heart Attack (Enrique Iglesias song). has performer: Enrique Iglesias.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Heart_Attack",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Heart Attack",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "song heart attack",
+        "extracted_source": "uri",
+        "ground_truth_text": "Heart Attack",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8470628261566162,
+      "name_embedding_score": 0.7924328446388245,
+      "string_score": 0.8390804529190063,
+      "independent_identity_support": true,
+      "context_score": 0.9286101460456848,
+      "graph_score": 0.96430504322052,
+      "margin": 0.8470628261566162
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_philippines",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Filipino",
+          "source": "altLabel"
+        },
+        {
+          "text": "Philippines",
+          "source": "label"
+        },
+        {
+          "text": "country philippines",
+          "source": "uri"
+        }
+      ],
+      "context": "Filipino. inverse has nationality: Enrique Iglesias.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Besançon a ex:Place .
+
+entity:Pierre_Brissaud a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Edouard_Brissaud ;
+    ex:hasParent entity:Edouard_Brissaud .
+
+entity:Edouard_Brissaud a ex:Agent,
+        ex:Person ;
+    ex:hasBirthPlace entity:Besançon ;
+    ex:hasChild entity:Pierre_Brissaud .
+

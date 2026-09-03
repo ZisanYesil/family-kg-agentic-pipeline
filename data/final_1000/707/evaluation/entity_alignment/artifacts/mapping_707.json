@@ -1,0 +1,173 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/707/originals/extracted_707.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/707/ground_truth_707.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/charles_iv_hre": "http://example.org/entity/Charles_IV"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 1,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/charles_iv_hre",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charles IV, Holy Roman Emperor",
+          "source": "altLabel"
+        },
+        {
+          "text": "Charles IV",
+          "source": "label"
+        },
+        {
+          "text": "charles iv hre",
+          "source": "uri"
+        }
+      ],
+      "context": "Charles IV, Holy Roman Emperor. has mother: Elisabeth of Bohemia (1292–1330). inverse has father: Elisabeth of Bohemia (1358–1373).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charles_IV",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charles IV",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charles IV",
+        "extracted_source": "label",
+        "ground_truth_text": "Charles IV",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8697817325592041,
+      "graph_score": 0.8697817325592041,
+      "margin": 0.6022195219993591
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/elisabeth_of_bohemia_1358",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Elisabeth of Bohemia (1358–1373)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Elisabeth of Bohemia",
+          "source": "label"
+        },
+        {
+          "text": "elisabeth of bohemia 1358",
+          "source": "uri"
+        }
+      ],
+      "context": "Elisabeth of Bohemia (1358–1373). has father: Charles IV, Holy Roman Emperor.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Elisabeth_of_Bohemia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Elisabeth of Bohemia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Elisabeth of Bohemia",
+        "extracted_source": "label",
+        "ground_truth_text": "Elisabeth of Bohemia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9764686822891235,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.811750054359436,
+      "graph_score": 0.905875027179718,
+      "margin": 0.23444390296936035
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/elisabeth_of_bohemia_1292",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Elisabeth of Bohemia (1292–1330)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Elizabeth of Bohemia (1292–1330)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Elisabeth of Bohemia",
+          "source": "label"
+        },
+        {
+          "text": "elisabeth of bohemia 1292",
+          "source": "uri"
+        }
+      ],
+      "context": "Elisabeth of Bohemia (1292–1330). inverse has mother: Charles IV, Holy Roman Emperor.",
+      "decision": "review",
+      "matched": false,
+      "ground_truth_uri": "http://example.org/entity/Elizabeth_of_Bohemia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Elizabeth of Bohemia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Elisabeth of Bohemia",
+        "extracted_source": "label",
+        "ground_truth_text": "Elizabeth of Bohemia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8879420757293701,
+      "name_embedding_score": 0.9346972107887268,
+      "string_score": 0.7524999976158142,
+      "independent_identity_support": true,
+      "context_score": 0.8597480058670044,
+      "graph_score": 0.9298740029335022,
+      "margin": 0.03976762294769287
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Elizabeth_of_Bohemia"
+  ]
+}

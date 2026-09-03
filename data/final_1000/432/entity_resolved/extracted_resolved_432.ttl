@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:believe_it_meek_mill_song a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Believe It (Meek Mill song)" ;
+    onto:hasPerformer data:meek_mill .
+
+data:meek_mill a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Meek Mill" ;
+    onto:hasDetentionPlace data:state_correctional_institution_chester ;
+    skos:altLabel "Robert Rihmeek Williams" .
+
+data:state_correctional_institution_chester a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "State Correctional Institution – Chester" .
+

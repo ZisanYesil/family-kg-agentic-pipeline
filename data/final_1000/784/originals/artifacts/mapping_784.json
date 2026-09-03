@@ -1,0 +1,67 @@
+{
+  "_source_extraction_sha256": "e50348204215a4e24fd8c8ac2a298a95fed6ca0a59b945d219f9188734a33b7d",
+  "entities": [
+    {
+      "id": "song_talking_to_the_moon",
+      "label": "Talking to the Moon",
+      "type": "CreativeWork",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "person_bruno_mars",
+      "label": "Bruno Mars",
+      "type": "Person",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "award_grammy",
+      "label": "Grammy Award",
+      "type": "Award",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "person_bruno_mars",
+      "predicate": "hasAwardReceived",
+      "object": "award_grammy",
+      "relation_phrase": "received",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "person_bruno_mars",
+      "source_object": "award_grammy",
+      "endpoints_swapped": false
+    }
+  ],
+  "unmapped_relations": [
+    {
+      "subject": "song_talking_to_the_moon",
+      "object": "person_bruno_mars",
+      "relation_phrase": "composed by",
+      "reason": "subject type 'CreativeWork' does not satisfy hasComposer's expected domain 'MusicalWork'"
+    }
+  ]
+}

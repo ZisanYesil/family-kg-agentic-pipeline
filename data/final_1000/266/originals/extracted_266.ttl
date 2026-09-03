@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:maude_smith_skater a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Maude Smith" ;
+    onto:hasSpouse data:john_a_mcdougald ;
+    skos:altLabel "Hedley Maude Smith",
+        "Maude Smith" .
+
+data:john_a_mcdougald a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John A. McDougald" ;
+    onto:hasDeathPlace data:palm_beach_florida ;
+    skos:altLabel "Bud McDougald",
+        "John Angus \"Bud\" McDougald" .
+
+data:palm_beach_florida a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Palm Beach, Florida" .
+

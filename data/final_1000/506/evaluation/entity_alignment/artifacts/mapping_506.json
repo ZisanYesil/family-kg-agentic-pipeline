@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/506/originals/extracted_506.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/506/ground_truth_506.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ernst_ii_prince": "http://example.org/entity/Ernst_II_Prince_of_Hohenlohe_Langenburg",
+    "http://example.org/extracted/hans_albrecht_prince": "http://example.org/entity/Hans_Albrecht_Hereditary_Prince_of_Schleswig_Holstein",
+    "http://example.org/extracted/marie_melita_hohenlohe": "http://example.org/entity/Princess_Marie_Melita_of_Hohenlohe_Langenburg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ernst_ii_prince",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ernst II, Prince of Hohenlohe-Langenburg",
+          "source": "label"
+        },
+        {
+          "text": "ernst ii prince",
+          "source": "uri"
+        }
+      ],
+      "context": "Ernst II, Prince of Hohenlohe-Langenburg. inverse has father: Princess Marie Melita of Hohenlohe-Langenburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ernst_II_Prince_of_Hohenlohe_Langenburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ernst II Prince of Hohenlohe Langenburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ernst II, Prince of Hohenlohe-Langenburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Ernst II Prince of Hohenlohe Langenburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9372596144676208,
+      "string_score": 0.9829114079475403,
+      "independent_identity_support": true,
+      "context_score": 0.919256865978241,
+      "graph_score": 0.9596284627914429,
+      "margin": 0.4893173575401306
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/hans_albrecht_prince",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hans Albrecht, Hereditary Prince of Schleswig-Holstein-Sonderburg-Glücksburg",
+          "source": "altLabel"
+        },
+        {
+          "text": "Hans Albrecht, Hereditary Prince of Schleswig-Holstein",
+          "source": "label"
+        },
+        {
+          "text": "hans albrecht prince",
+          "source": "uri"
+        }
+      ],
+      "context": "Hans Albrecht, Hereditary Prince of Schleswig-Holstein-Sonderburg-Glücksburg. has mother: Princess Marie Melita of Hohenlohe-Langenburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hans_Albrecht_Hereditary_Prince_of_Schleswig_Holstein",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hans Albrecht Hereditary Prince of Schleswig Holstein",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hans Albrecht, Hereditary Prince of Schleswig-Holstein",
+        "extracted_source": "label",
+        "ground_truth_text": "Hans Albrecht Hereditary Prince of Schleswig Holstein",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9740473031997681,
+      "string_score": 0.9873831868171692,
+      "independent_identity_support": true,
+      "context_score": 0.9019994139671326,
+      "graph_score": 0.9509997367858887,
+      "margin": 0.4705965518951416
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/marie_melita_hohenlohe",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Marie Melita of Hohenlohe-Langenburg",
+          "source": "label"
+        },
+        {
+          "text": "marie melita hohenlohe",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Marie Melita of Hohenlohe-Langenburg. has father: Ernst II, Prince of Hohenlohe-Langenburg. inverse has mother: Hans Albrecht, Hereditary Prince of Schleswig-Holstein-Sonderburg-Glücksburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Marie_Melita_of_Hohenlohe_Langenburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Marie Melita of Hohenlohe Langenburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Marie Melita of Hohenlohe-Langenburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Marie Melita of Hohenlohe Langenburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9756627082824707,
+      "string_score": 0.9900000095367432,
+      "independent_identity_support": true,
+      "context_score": 0.9310142397880554,
+      "graph_score": 0.9655071496963501,
+      "margin": 0.48707592487335205
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

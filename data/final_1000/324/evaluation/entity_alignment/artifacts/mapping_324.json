@@ -1,0 +1,238 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/324/originals/extracted_324.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/324/ground_truth_324.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/fine_by_me_song": "http://example.org/entity/Fine_by_Me",
+    "http://example.org/extracted/chris_brown": "http://example.org/entity/Chris_Brown"
+  },
+  "summary": {
+    "extracted_entities": 6,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 3,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/chris_brown",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Christopher Maurice Brown",
+          "source": "altLabel"
+        },
+        {
+          "text": "Chris Brown",
+          "source": "label"
+        }
+      ],
+      "context": "Christopher Maurice Brown. has award received: BET Award. has award received: Billboard Music Award. has award received: Grammy Award. has award received: Soul Train Music Award. inverse has performer: Fine by Me (Chris Brown song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chris_Brown",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chris Brown",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chris Brown",
+        "extracted_source": "label",
+        "ground_truth_text": "Chris Brown",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7808491587638855,
+      "graph_score": 0.8904246091842651,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/fine_by_me_song",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fine by Me (Chris Brown song)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Fine by Me",
+          "source": "label"
+        },
+        {
+          "text": "fine by me song",
+          "source": "uri"
+        }
+      ],
+      "context": "Fine by Me (Chris Brown song). has performer: Christopher Maurice Brown.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fine_by_Me",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fine by Me",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fine by Me",
+        "extracted_source": "label",
+        "ground_truth_text": "Fine by Me",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8820565938949585,
+      "graph_score": 0.9410282969474792,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/grammy_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Grammy Award",
+          "source": "label"
+        }
+      ],
+      "context": "Grammy Award. inverse has award received: Christopher Maurice Brown.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Grammy_Award_for_Best_R_B_Album",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Grammy Award for Best R B Album",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Grammy Award",
+        "extracted_source": "label",
+        "ground_truth_text": "Grammy Award for Best R B Album",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7773193717002869,
+      "name_embedding_score": 0.7827247381210327,
+      "string_score": 0.6225913763046265,
+      "independent_identity_support": false,
+      "context_score": 0.8424735069274902,
+      "graph_score": 0.9212367534637451,
+      "margin": 0.7773193717002869
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/bet_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "BET Award",
+          "source": "label"
+        }
+      ],
+      "context": "BET Award. inverse has award received: Christopher Maurice Brown.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/billboard_music_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Billboard Music Award",
+          "source": "label"
+        }
+      ],
+      "context": "Billboard Music Award. inverse has award received: Christopher Maurice Brown.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/soul_train_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Soul Train Music Award",
+          "source": "label"
+        },
+        {
+          "text": "soul train award",
+          "source": "uri"
+        }
+      ],
+      "context": "Soul Train Music Award. inverse has award received: Christopher Maurice Brown.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

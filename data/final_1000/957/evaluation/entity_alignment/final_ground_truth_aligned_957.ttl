@@ -1,0 +1,27 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Frank_McDonald_director a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1899-11-09"^^xsd:date .
+
+entity:Song_of_Arizona a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Frank_McDonald ;
+    ex:hasDirector entity:Frank_McDonald .
+
+entity:Texas_Terrors a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:George_Sherman ;
+    ex:hasDirector entity:George_Sherman .
+
+entity:Frank_McDonald a ex:Agent,
+        ex:Person .
+
+entity:George_Sherman a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1908-07-14"^^xsd:date .
+

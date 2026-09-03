@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/216/evaluation/entity_alignment/baseline_extracted_aligned_216.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/216/evaluation/entity_alignment/baseline_ground_truth_aligned_216.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Hannes_Stöhr",
+      "predicate": "hasEducatedAt",
+      "object": "Deutsche_Film_und_Fernsehakademie_Berlin",
+      "subject_uri": "http://example.org/entity/Hannes_Stöhr",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Deutsche_Film_und_Fernsehakademie_Berlin"
+    },
+    {
+      "subject": "One_Day_in_Europe",
+      "predicate": "hasDirector",
+      "object": "Hannes_Stöhr",
+      "subject_uri": "http://example.org/entity/One_Day_in_Europe",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Hannes_Stöhr"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Deutsche_Film_und_Fernsehakademie_Berlin",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Deutsche_Film_und_Fernsehakademie_Berlin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Deutsche_Film_und_Fernsehakademie_Berlin",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Deutsche_Film_und_Fernsehakademie_Berlin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Deutsche_Film_und_Fernsehakademie_Berlin",
+      "predicate": "label",
+      "object": "\"Deutsche Film- und Fernsehakademie Berlin\"",
+      "subject_uri": "http://example.org/entity/Deutsche_Film_und_Fernsehakademie_Berlin",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Deutsche Film- und Fernsehakademie Berlin\""
+    },
+    {
+      "subject": "Hannes_Stöhr",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Hannes_Stöhr",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Hannes_Stöhr",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hannes_Stöhr",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hannes_Stöhr",
+      "predicate": "label",
+      "object": "\"Hannes Stöhr\"",
+      "subject_uri": "http://example.org/entity/Hannes_Stöhr",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hannes Stöhr\""
+    },
+    {
+      "subject": "One_Day_in_Europe",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/One_Day_in_Europe",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "One_Day_in_Europe",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/One_Day_in_Europe",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "One_Day_in_Europe",
+      "predicate": "label",
+      "object": "\"One Day in Europe\"",
+      "subject_uri": "http://example.org/entity/One_Day_in_Europe",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"One Day in Europe\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

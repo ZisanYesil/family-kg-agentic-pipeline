@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/441/originals/extracted_441.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/441/ground_truth_441.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/olivier_long": "http://example.org/entity/Olivier_Long",
+    "http://example.org/extracted/robert_ernest_cheesman": "http://example.org/entity/Robert_Ernest_Cheesman"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/olivier_long",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Olivier Long",
+          "source": "label"
+        }
+      ],
+      "context": "Olivier Long. has birth date: 1915-10-11. has death date: 2003-03-19.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Olivier_Long",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Olivier Long",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Olivier Long",
+        "extracted_source": "label",
+        "ground_truth_text": "Olivier Long",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.676638662815094
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/robert_ernest_cheesman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Robert Ernest Cheesman",
+          "source": "label"
+        }
+      ],
+      "context": "Robert Ernest Cheesman. has birth date: 1878. has death date: 1962-02-13.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Robert_Ernest_Cheesman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Robert Ernest Cheesman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Robert Ernest Cheesman",
+        "extracted_source": "label",
+        "ground_truth_text": "Robert Ernest Cheesman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.676638662815094
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

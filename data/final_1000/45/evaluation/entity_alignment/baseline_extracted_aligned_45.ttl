@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Normande> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Normande" ;
+    onto:hasDirector <http://example.org/entity/Gilles_Carle> .
+
+<http://example.org/entity/Gilles_Carle> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gilles Carle" ;
+    onto:hasCauseOfDeath <http://example.org/entity/Parkinson_s_disease> .
+
+<http://example.org/entity/Parkinson_s_disease> a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "complications from Parkinson's disease" .
+

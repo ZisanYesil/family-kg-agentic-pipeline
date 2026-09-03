@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/École_polytechnique_fédérale_de_Lausanne> a ex:Agent,
+        ex:Organization .
+
+<http://example.org/entity/Bernard_Tschumi> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/entity/Jean_Tschumi> ;
+    ex:isSonOf <http://example.org/entity/Jean_Tschumi> .
+
+<http://example.org/entity/Jean_Tschumi> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Bernard_Tschumi> ;
+    ex:hasEmployer <http://example.org/entity/École_polytechnique_fédérale_de_Lausanne> ;
+    ex:hasSon <http://example.org/entity/Bernard_Tschumi> .
+

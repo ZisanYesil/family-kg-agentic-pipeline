@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/834/evaluation/entity_alignment/baseline_extracted_aligned_834.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/834/evaluation/entity_alignment/baseline_ground_truth_aligned_834.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Lee_Mantle",
+      "predicate": "hasBirthDate",
+      "object": "\"1851-12-13\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Lee_Mantle",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1851-12-13\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Lee_Mantle",
+      "predicate": "hasDeathDate",
+      "object": "\"1934-11-18\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Lee_Mantle",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1934-11-18\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Silas_Hardy",
+      "predicate": "hasBirthDate",
+      "object": "\"1867-04-30\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Silas_Hardy",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1867-04-30\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Silas_Hardy",
+      "predicate": "hasDeathDate",
+      "object": "\"1905-06-27\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Silas_Hardy",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1905-06-27\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Lee_Mantle",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Lee_Mantle",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Lee_Mantle",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lee_Mantle",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lee_Mantle",
+      "predicate": "label",
+      "object": "\"Lee Mantle\"",
+      "subject_uri": "http://example.org/entity/Lee_Mantle",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Lee Mantle\""
+    },
+    {
+      "subject": "Silas_Hardy",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Silas_Hardy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Silas_Hardy",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Silas_Hardy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Silas_Hardy",
+      "predicate": "label",
+      "object": "\"Silas Hardy\"",
+      "subject_uri": "http://example.org/entity/Silas_Hardy",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Silas Hardy\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 10,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715
+  },
+  "stage": "pre_inference"
+}

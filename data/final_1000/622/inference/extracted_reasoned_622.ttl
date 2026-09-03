@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/film_crd> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/person_kranti_kanade> ;
+    ex:hasDirector <http://example.org/extracted/person_kranti_kanade> .
+
+<http://example.org/extracted/edu_ftii> a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+<http://example.org/extracted/edu_ucla> a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+<http://example.org/extracted/person_kranti_kanade> a ex:Agent,
+        ex:Person ;
+    ex:hasEducatedAt <http://example.org/extracted/edu_ftii>,
+        <http://example.org/extracted/edu_ucla> .
+

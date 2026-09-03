@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/476/originals/extracted_476.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/476/ground_truth_476.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/edouard_brissaud": "http://example.org/entity/Edouard_Brissaud",
+    "http://example.org/extracted/pierre_brissaud": "http://example.org/entity/Pierre_Brissaud",
+    "http://example.org/extracted/besancon": "http://example.org/entity/Besançon"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/besancon",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Besançon",
+          "source": "label"
+        },
+        {
+          "text": "besancon",
+          "source": "uri"
+        }
+      ],
+      "context": "Besançon. inverse has birth place: Edouard Brissaud.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Besançon",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Besançon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Besançon",
+        "extracted_source": "label",
+        "ground_truth_text": "Besançon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/edouard_brissaud",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edouard Brissaud",
+          "source": "altLabel"
+        },
+        {
+          "text": "Édouard Brissaud",
+          "source": "label"
+        }
+      ],
+      "context": "Edouard Brissaud. has birth place: Besançon. inverse has father: Pierre Brissaud.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Edouard_Brissaud",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Edouard Brissaud",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Edouard Brissaud",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Edouard Brissaud",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.2859903573989868
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pierre_brissaud",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pierre Brissaud",
+          "source": "label"
+        }
+      ],
+      "context": "Pierre Brissaud. has father: Edouard Brissaud.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pierre_Brissaud",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pierre Brissaud",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pierre Brissaud",
+        "extracted_source": "label",
+        "ground_truth_text": "Pierre Brissaud",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.2859903573989868
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

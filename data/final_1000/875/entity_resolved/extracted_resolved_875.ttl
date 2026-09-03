@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:grimoald_the_younger a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Grimoald the Younger" ;
+    onto:hasFather data:pepin_of_herstal ;
+    skos:altLabel "Grimoald II" .
+
+data:ansegisel a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ansegisel" .
+
+data:pepin_of_herstal a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Pepin of Herstal" ;
+    onto:hasFather data:ansegisel ;
+    skos:altLabel "Pepin II" .
+

@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/668/originals/extracted_668.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/668/ground_truth_668.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/franz_schubert": "http://example.org/entity/Franz_Schubert",
+    "http://example.org/extracted/antonio_salieri": "http://example.org/entity/Antonio_Salieri"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/antonio_salieri",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Antonio Salieri",
+          "source": "label"
+        }
+      ],
+      "context": "Antonio Salieri. inverse has student of: Franz Schubert.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Antonio_Salieri",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Antonio Salieri",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Antonio Salieri",
+        "extracted_source": "label",
+        "ground_truth_text": "Antonio Salieri",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6607040762901306
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/franz_schubert",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Franz Schubert",
+          "source": "label"
+        }
+      ],
+      "context": "Franz Schubert. has student of: Antonio Salieri.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Franz_Schubert",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Franz Schubert",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Franz Schubert",
+        "extracted_source": "label",
+        "ground_truth_text": "Franz Schubert",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8677529692649841,
+      "graph_score": 0.9338765144348145,
+      "margin": 0.6627309322357178
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/prometheus_art_song",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prometheus (art song)",
+          "source": "label"
+        },
+        {
+          "text": "prometheus art song",
+          "source": "uri"
+        }
+      ],
+      "context": "Prometheus (art song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prometheus",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prometheus",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prometheus (art song)",
+        "extracted_source": "label",
+        "ground_truth_text": "Prometheus",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6138808727264404,
+      "name_embedding_score": 0.7435432076454163,
+      "string_score": 0.6736559271812439,
+      "independent_identity_support": false,
+      "context_score": 0.5895623564720154,
+      "graph_score": 0.2947811782360077,
+      "margin": 0.6138808727264404
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/124/originals/extracted_124.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/124/ground_truth_124.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/matthew_boulton_1728": "http://example.org/entity/Matthew_Boulton",
+    "http://example.org/extracted/boulton_watt": "http://example.org/entity/Boulton_Watt"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/boulton_watt",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Boulton and Watt",
+          "source": "altLabel"
+        },
+        {
+          "text": "Boulton & Watt",
+          "source": "label"
+        },
+        {
+          "text": "boulton watt",
+          "source": "uri"
+        }
+      ],
+      "context": "Boulton and Watt. has founder: James Watt. has founder: Matthew Boulton.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Boulton_Watt",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Boulton Watt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Boulton & Watt",
+        "extracted_source": "label",
+        "ground_truth_text": "Boulton Watt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9253439903259277,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9151854515075684,
+      "graph_score": 0.9575927257537842,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/matthew_boulton_1728",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Matthew Boulton",
+          "source": "label"
+        },
+        {
+          "text": "matthew boulton 1728",
+          "source": "uri"
+        }
+      ],
+      "context": "Matthew Boulton. has death date: 1809-08-17. inverse has founder: Boulton and Watt.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Matthew_Boulton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Matthew Boulton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Matthew Boulton",
+        "extracted_source": "label",
+        "ground_truth_text": "Matthew Boulton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9921059608459473,
+      "graph_score": 0.9960529804229736,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/james_watt_1736",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Watt",
+          "source": "label"
+        },
+        {
+          "text": "james watt 1736",
+          "source": "uri"
+        }
+      ],
+      "context": "James Watt. has death date: 1819-08-25. inverse has founder: Boulton and Watt.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

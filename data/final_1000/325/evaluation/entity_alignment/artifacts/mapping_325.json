@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/325/originals/extracted_325.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/325/ground_truth_325.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_otto_carlmar": "http://example.org/entity/Otto_Carlmar",
+    "http://example.org/extracted/film_bedre_enn_sitt_rykte": "http://example.org/entity/Bedre_enn_sitt_rykte",
+    "http://example.org/extracted/person_edith_carlmar": "http://example.org/entity/Edith_Carlmar"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_bedre_enn_sitt_rykte",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bedre Enn Sitt Rykte",
+          "source": "altLabel"
+        },
+        {
+          "text": "film bedre enn sitt rykte",
+          "source": "uri"
+        }
+      ],
+      "context": "Bedre Enn Sitt Rykte. has director: Edith Carlmar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bedre_enn_sitt_rykte",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bedre enn sitt rykte",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film bedre enn sitt rykte",
+        "extracted_source": "uri",
+        "ground_truth_text": "Bedre enn sitt rykte",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.6936572194099426,
+      "string_score": 0.8999999761581421,
+      "independent_identity_support": true,
+      "context_score": 0.6243700981140137,
+      "graph_score": 0.8121850490570068,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_edith_carlmar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edith Carlmar",
+          "source": "label"
+        },
+        {
+          "text": "person edith carlmar",
+          "source": "uri"
+        }
+      ],
+      "context": "Edith Carlmar. has spouse: Otto Carlmar. inverse has director: Bedre Enn Sitt Rykte.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Edith_Carlmar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Edith Carlmar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Edith Carlmar",
+        "extracted_source": "label",
+        "ground_truth_text": "Edith Carlmar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9082489609718323,
+      "graph_score": 0.9541244506835938,
+      "margin": 0.41301894187927246
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_otto_carlmar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Otto Carlmar",
+          "source": "label"
+        },
+        {
+          "text": "person otto carlmar",
+          "source": "uri"
+        }
+      ],
+      "context": "Otto Carlmar. inverse has spouse: Edith Carlmar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Otto_Carlmar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Otto Carlmar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Otto Carlmar",
+        "extracted_source": "label",
+        "ground_truth_text": "Otto Carlmar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.404310405254364
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

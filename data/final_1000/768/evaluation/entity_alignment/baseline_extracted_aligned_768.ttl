@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Balls_Out> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Balls Out (2014 film)" ;
+    onto:hasDirector <http://example.org/entity/Andrew_Disney> .
+
+<http://example.org/entity/Andrew_Disney> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Andrew Disney" ;
+    onto:hasEducatedAt data:edu_tisch_school_of_the_arts .
+
+data:edu_tisch_school_of_the_arts a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Tisch School of the Arts" .
+

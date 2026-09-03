@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/The_Roadhouse_Murder> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Roadhouse Murder" ;
+    onto:hasDirector <http://example.org/entity/J_Walter_Ruben> .
+
+<http://example.org/entity/Forest_Lawn_Memorial_Park> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Glendale's Forest Lawn Memorial Park Cemetery" .
+
+<http://example.org/entity/J_Walter_Ruben> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "J. Walter Ruben" ;
+    onto:hasBurialPlace <http://example.org/entity/Forest_Lawn_Memorial_Park> ;
+    skos:altLabel "Jacob Walter Ruben" .
+

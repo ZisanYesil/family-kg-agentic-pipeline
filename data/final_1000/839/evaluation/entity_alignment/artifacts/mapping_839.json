@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/839/originals/extracted_839.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/839/ground_truth_839.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/neil_cross": "http://example.org/entity/Neil_Cross",
+    "http://example.org/extracted/united_kingdom": "http://example.org/entity/British"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/neil_cross",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Neil Cross",
+          "source": "label"
+        }
+      ],
+      "context": "Neil Cross. has nationality: British. inverse has creator: Crossbones (TV series).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Neil_Cross",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Neil Cross",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Neil Cross",
+        "extracted_source": "label",
+        "ground_truth_text": "Neil Cross",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8884035348892212,
+      "graph_score": 0.4442017674446106,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "British. inverse has nationality: Neil Cross.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "British",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9352228045463562,
+      "graph_score": 0.4676114022731781,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/crossbones_tv_series",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Crossbones (TV series)",
+          "source": "label"
+        },
+        {
+          "text": "crossbones tv series",
+          "source": "uri"
+        }
+      ],
+      "context": "Crossbones (TV series). has creator: Neil Cross.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Crossbones",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Crossbones",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Crossbones (TV series)",
+        "extracted_source": "label",
+        "ground_truth_text": "Crossbones",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7270957827568054,
+      "name_embedding_score": 0.6511973142623901,
+      "string_score": 0.6645833253860474,
+      "independent_identity_support": false,
+      "context_score": 0.8828102946281433,
+      "graph_score": 0.941405177116394,
+      "margin": 0.7270957827568054
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

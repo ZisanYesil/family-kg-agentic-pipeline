@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/838/originals/extracted_838.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/838/ground_truth_838.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_my_other_husband": "http://example.org/entity/My_Other_Husband",
+    "http://example.org/extracted/person_georges_lautner": "http://example.org/entity/Georges_Lautner",
+    "http://example.org/extracted/person_renee_saint_cyr": "http://example.org/entity/Renée_Saint_Cyr"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_my_other_husband",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "My Other Husband",
+          "source": "label"
+        },
+        {
+          "text": "film my other husband",
+          "source": "uri"
+        }
+      ],
+      "context": "My Other Husband. has director: Georges Lautner.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/My_Other_Husband",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "My Other Husband",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "My Other Husband",
+        "extracted_source": "label",
+        "ground_truth_text": "My Other Husband",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_georges_lautner",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Georges Lautner",
+          "source": "label"
+        },
+        {
+          "text": "person georges lautner",
+          "source": "uri"
+        }
+      ],
+      "context": "Georges Lautner. has mother: Renée Saint‐Cyr. inverse has director: My Other Husband.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Georges_Lautner",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Georges Lautner",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Georges Lautner",
+        "extracted_source": "label",
+        "ground_truth_text": "Georges Lautner",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9839268922805786,
+      "graph_score": 0.9919634461402893,
+      "margin": 0.7238085865974426
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_renee_saint_cyr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Renée Saint‐Cyr",
+          "source": "label"
+        },
+        {
+          "text": "person renee saint cyr",
+          "source": "uri"
+        }
+      ],
+      "context": "Renée Saint‐Cyr. inverse has mother: Georges Lautner.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Renée_Saint_Cyr",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Renée Saint Cyr",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Renée Saint‐Cyr",
+        "extracted_source": "label",
+        "ground_truth_text": "Renée Saint Cyr",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9107280969619751,
+      "string_score": 0.9700000286102295,
+      "independent_identity_support": true,
+      "context_score": 0.9697494506835938,
+      "graph_score": 0.9848747253417969,
+      "margin": 0.6585263609886169
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

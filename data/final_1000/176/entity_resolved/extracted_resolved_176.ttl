@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_just_off_broadway_1924 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Just Off Broadway" ;
+    onto:hasDirector data:person_edmund_mortimer .
+
+data:person_edmund_mortimer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edmund Mortimer" ;
+    onto:hasBirthPlace data:place_new_york_new_york .
+
+data:place_new_york_new_york a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "New York, New York" .
+

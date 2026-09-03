@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/62/originals/extracted_62.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/62/ground_truth_62.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/tag_der_freiheit": "http://example.org/entity/Tag_der_Freiheit_Unsere_Wehrmacht",
+    "http://example.org/extracted/munich_waldfriedhof": "http://example.org/entity/Munich_Waldfriedhof",
+    "http://example.org/extracted/leni_riefenstahl": "http://example.org/entity/Leni_Riefenstahl"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/leni_riefenstahl",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Helene Bertha Amalie \"Leni\" Riefenstahl",
+          "source": "altLabel"
+        },
+        {
+          "text": "Leni Riefenstahl",
+          "source": "label"
+        }
+      ],
+      "context": "Helene Bertha Amalie \"Leni\" Riefenstahl. has burial place: Munich Waldfriedhof. inverse has director: Tag der Freiheit: Unsere Wehrmacht.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Leni_Riefenstahl",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Leni Riefenstahl",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Leni Riefenstahl",
+        "extracted_source": "label",
+        "ground_truth_text": "Leni Riefenstahl",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8958686590194702,
+      "graph_score": 0.9479343295097351,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/munich_waldfriedhof",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Munich Waldfriedhof",
+          "source": "label"
+        }
+      ],
+      "context": "Munich Waldfriedhof. inverse has burial place: Helene Bertha Amalie \"Leni\" Riefenstahl.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Munich_Waldfriedhof",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Munich Waldfriedhof",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Munich Waldfriedhof",
+        "extracted_source": "label",
+        "ground_truth_text": "Munich Waldfriedhof",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8845471739768982,
+      "graph_score": 0.9422736167907715,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tag_der_freiheit",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tag der Freiheit: Unsere Wehrmacht",
+          "source": "label"
+        },
+        {
+          "text": "tag der freiheit",
+          "source": "uri"
+        }
+      ],
+      "context": "Tag der Freiheit: Unsere Wehrmacht. has director: Helene Bertha Amalie \"Leni\" Riefenstahl.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tag_der_Freiheit_Unsere_Wehrmacht",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tag der Freiheit Unsere Wehrmacht",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tag der Freiheit: Unsere Wehrmacht",
+        "extracted_source": "label",
+        "ground_truth_text": "Tag der Freiheit Unsere Wehrmacht",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9555068016052246,
+      "string_score": 0.9932835698127747,
+      "independent_identity_support": true,
+      "context_score": 0.8463473320007324,
+      "graph_score": 0.9231736660003662,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "c0928efa0615051eddda1cb7d81fe274ba035ca37886e3b5b6c002744356f617",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/nathaniel_wallich",
+        "path": null,
+        "value": "http://example.org/extracted/royal_botanical_gardens",
+        "expected": null,
+        "message": "Relation phrase 'was Superintendent of' from http://example.org/extracted/nathaniel_wallich to http://example.org/extracted/royal_botanical_gardens was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "c0928efa0615051eddda1cb7d81fe274ba035ca37886e3b5b6c002744356f617",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/nathaniel_wallich",
+            "path": null,
+            "value": "http://example.org/extracted/royal_botanical_gardens",
+            "expected": null,
+            "message": "Relation phrase 'was Superintendent of' from http://example.org/extracted/nathaniel_wallich to http://example.org/extracted/royal_botanical_gardens was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 10,
+      "feedback_reasoning": "The source text states that Nathaniel Wallich “was Superintendent of the Royal Botanical Gardens.” The ontology does not contain any predicate whose documented meaning corresponds to a supervisory or managerial role such as “superintendent of.” The closest predicates (e.g., onto:hasEmployer) either have an incompatible range (Organization, not Place) or describe a different type of relationship. Because no declared ontology predicate matches the semantics of the phrase, the relation cannot be safely mapped.",
+      "repairs": [
+        {
+          "violation_fingerprint": "3d1d1e222c5dea7aab8d2840e5388ece782e90ad21c350b1e253e54881288cd6",
+          "reasoning": "No ontology predicate captures the meaning of ‘was Superintendent of’ between a Person and a Place, and any substitution would be semantically unjustified.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "3d1d1e222c5dea7aab8d2840e5388ece782e90ad21c350b1e253e54881288cd6"
+      ],
+      "triples_after": 10,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "c0928efa0615051eddda1cb7d81fe274ba035ca37886e3b5b6c002744356f617",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/nathaniel_wallich",
+            "path": null,
+            "value": "http://example.org/extracted/royal_botanical_gardens",
+            "expected": null,
+            "message": "Relation phrase 'was Superintendent of' from http://example.org/extracted/nathaniel_wallich to http://example.org/extracted/royal_botanical_gardens was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "c0928efa0615051eddda1cb7d81fe274ba035ca37886e3b5b6c002744356f617",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/nathaniel_wallich",
+        "path": null,
+        "value": "http://example.org/extracted/royal_botanical_gardens",
+        "expected": null,
+        "message": "Relation phrase 'was Superintendent of' from http://example.org/extracted/nathaniel_wallich to http://example.org/extracted/royal_botanical_gardens was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

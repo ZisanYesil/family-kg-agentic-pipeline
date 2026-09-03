@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/344/originals/extracted_344.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/344/ground_truth_344.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/henry_strutt_2nd_baron_belper": "http://example.org/entity/Henry_Strutt_2nd_Baron_Belper",
+    "http://example.org/extracted/nina_skottova": "http://example.org/entity/Nina_Škottová"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/henry_strutt_2nd_baron_belper",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henry Strutt, 2nd Baron Belper",
+          "source": "label"
+        },
+        {
+          "text": "henry strutt 2nd baron belper",
+          "source": "uri"
+        }
+      ],
+      "context": "Henry Strutt, 2nd Baron Belper. has birth date: 1840-05-20. has death date: 1914-07-26.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Henry_Strutt_2nd_Baron_Belper",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Henry Strutt 2nd Baron Belper",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henry Strutt, 2nd Baron Belper",
+        "extracted_source": "label",
+        "ground_truth_text": "Henry Strutt 2nd Baron Belper",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9943687319755554,
+      "string_score": 0.9923728704452515,
+      "independent_identity_support": true,
+      "context_score": 0.9980081915855408,
+      "graph_score": 0.9980081915855408,
+      "margin": 0.8105151951313019
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/nina_skottova",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nina Škottová",
+          "source": "label"
+        },
+        {
+          "text": "nina skottova",
+          "source": "uri"
+        }
+      ],
+      "context": "Nina Škottová. has birth date: 1946-10-06. has death date: 2018-04-28.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nina_Škottová",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nina Škottová",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nina Škottová",
+        "extracted_source": "label",
+        "ground_truth_text": "Nina Škottová",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.7529910802841187
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

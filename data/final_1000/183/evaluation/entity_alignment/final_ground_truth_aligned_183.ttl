@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Nippu a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Gunasekhar ;
+    ex:hasDirector entity:Gunasekhar .
+
+entity:Filmfare_Awards_South a ex:Award .
+
+entity:Gunasekhar a ex:Agent,
+        ex:Person ;
+    ex:hasAwardReceived entity:Filmfare_Awards_South .
+

@@ -1,0 +1,25 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Fredegund> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fredegund" ;
+    onto:hasDeathDate "0597-12-08"^^xsd:date ;
+    onto:hasSpouse <http://example.org/entity/Chilperic_I> ;
+    skos:altLabel "Fredegund",
+        "Fredegunda" .
+
+<http://example.org/entity/Aregund> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Aregund" ;
+    skos:altLabel "Aregund" .
+
+<http://example.org/entity/Chilperic_I> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Chilperic I" ;
+    onto:hasMother <http://example.org/entity/Aregund> ;
+    skos:altLabel "Chilperic I" .
+

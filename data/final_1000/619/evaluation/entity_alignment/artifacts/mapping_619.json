@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/619/originals/extracted_619.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/619/ground_truth_619.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_marie_laforet": "http://example.org/entity/Marie_Laforêt",
+    "http://example.org/extracted/person_lisa_azuelos": "http://example.org/entity/Lisa_Azuelos"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_lisa_azuelos",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lisa Azuelos",
+          "source": "label"
+        },
+        {
+          "text": "person lisa azuelos",
+          "source": "uri"
+        }
+      ],
+      "context": "Lisa Azuelos. has mother: Marie Laforêt. inverse has director: Dalida (2017 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lisa_Azuelos",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lisa Azuelos",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lisa Azuelos",
+        "extracted_source": "label",
+        "ground_truth_text": "Lisa Azuelos",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.943200945854187,
+      "graph_score": 0.9716004729270935,
+      "margin": 0.5762280523777008
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_marie_laforet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marie Laforêt",
+          "source": "label"
+        },
+        {
+          "text": "person marie laforet",
+          "source": "uri"
+        }
+      ],
+      "context": "Marie Laforêt. inverse has mother: Lisa Azuelos.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marie_Laforêt",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marie Laforêt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marie Laforêt",
+        "extracted_source": "label",
+        "ground_truth_text": "Marie Laforêt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.5578395128250122
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_dalida_2017",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dalida (2017 film)",
+          "source": "label"
+        },
+        {
+          "text": "film dalida 2017",
+          "source": "uri"
+        }
+      ],
+      "context": "Dalida (2017 film). has director: Lisa Azuelos.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dalida",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dalida",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dalida (2017 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Dalida",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.812961757183075,
+      "name_embedding_score": 0.8497135639190674,
+      "string_score": 0.6083333492279053,
+      "independent_identity_support": false,
+      "context_score": 0.8881732225418091,
+      "graph_score": 0.9440866112709045,
+      "margin": 0.812961757183075
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

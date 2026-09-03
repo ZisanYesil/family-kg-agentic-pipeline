@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from urllib.parse import quote
+
 from rdflib import Graph, Namespace, URIRef
 from rdflib.namespace import RDF
 
@@ -14,6 +16,37 @@ from validation.models import (
 )
 
 
+def _entity_uri(graph: Graph, raw_id: str, schema: OntologySchema) -> URIRef:
+    """Resolve an extracted entity ID to the namespace actually used by the graph.
+
+    Ontology terms and extracted individuals intentionally use different namespaces.
+    Falling back to the ontology namespace retains compatibility for coarse diagnostics
+    on an empty graph, while populated pipeline graphs resolve their concrete node IRI.
+    """
+    suffix = quote(str(raw_id), safe="-._~")
+    candidates = sorted(
+        {
+            str(subject)
+            for subject in graph.subjects()
+            if isinstance(subject, URIRef)
+            and str(subject).rsplit("/", 1)[-1].rsplit("#", 1)[-1] == suffix
+        }
+    )
+    if candidates:
+        return URIRef(candidates[0])
+    return URIRef(str(Namespace(schema.namespace)[suffix]))
+
+
+def _entity_namespace_from_known_node(
+    graph: Graph,
+    raw_id: str,
+    schema: OntologySchema,
+) -> str:
+    uri = str(_entity_uri(graph, raw_id, schema))
+    suffix = quote(str(raw_id), safe="-._~")
+    return uri[: -len(suffix)] if suffix and uri.endswith(suffix) else schema.namespace
+
+
 def dangling_reference_violations(
     references: tuple[DanglingRelationReference, ...],
     schema: OntologySchema,
@@ -25,12 +58,15 @@ def dangling_reference_violations(
     referenced individual. Re-checking the current graph on every iteration prevents a
     stale builder diagnostic from blocking a graph after it has been repaired.
     """
-    namespace = Namespace(schema.namespace)
     properties = {prop.local_name: prop for prop in schema.object_properties}
     violations: list[ValidationViolation] = []
 
     for reference in references:
-        entity_uri = namespace[reference.entity_id]
+        entity_namespace = _entity_namespace_from_known_node(
+            graph, reference.subject_id, schema
+        )
+        namespace = Namespace(entity_namespace)
+        entity_uri = namespace[quote(reference.entity_id, safe="-._~")]
         if any(graph.objects(entity_uri, RDF.type)):
             continue
 
@@ -43,8 +79,8 @@ def dangling_reference_violations(
                 prop.domain_class if reference.role == "subject" else prop.range_class
             )
 
-        relation_subject = namespace[reference.subject_id]
-        relation_object = namespace[reference.object_id]
+        relation_subject = namespace[quote(reference.subject_id, safe="-._~")]
+        relation_object = namespace[quote(reference.object_id, safe="-._~")]
         expectation = (
             f" Expected rdf:type {expected_class}."
             if expected_class is not None
@@ -108,11 +144,12 @@ def unmapped_relation_violations(
 ) -> tuple[ValidationViolation, ...]:
     """Convert unresolved ontology-mapping diagnostics into blocking findings.
 
-    A relation is considered repaired when feedback adds one of the type-compatible
-    ontology predicates between its original subject and object. Until then the source
-    fact remains absent from the graph and must prevent a successful validation result.
+    A relation is considered repaired when feedback adds an ontology predicate between
+    its original subject and object. Predicate semantics are deliberately left to the
+    source-grounded feedback step; domain/range compatibility alone is not evidence that
+    a predicate expresses the extracted phrase. SHACL validates the chosen predicate's
+    endpoint types separately.
     """
-    namespace = Namespace(schema.namespace)
     entity_types = {
         str(entity.get("id", "")): entity.get("type")
         for entity in entities
@@ -120,22 +157,15 @@ def unmapped_relation_violations(
     violations: list[ValidationViolation] = []
 
     for relation in relations:
-        subject_uri = namespace[relation.subject]
-        object_uri = namespace[relation.object]
-        candidates = _compatible_predicate_uris(
-            subject_type=entity_types.get(relation.subject),
-            object_type=entity_types.get(relation.object),
-            schema=schema,
-        )
-        if any((subject_uri, URIRef(predicate), object_uri) in graph for predicate in candidates):
+        subject_uri = _entity_uri(graph, relation.subject, schema)
+        object_uri = _entity_uri(graph, relation.object, schema)
+        ontology_predicates = tuple(prop.uri for prop in schema.object_properties)
+        if any(
+            (subject_uri, URIRef(predicate), object_uri) in graph
+            for predicate in ontology_predicates
+        ):
             continue
 
-        expected = ", ".join(candidates) if candidates else None
-        candidate_message = (
-            f" Compatible predicates: {expected}."
-            if expected is not None
-            else " No ontology predicate satisfies the known endpoint types."
-        )
         violations.append(
             ValidationViolation(
                 kind=ViolationKind.UNMAPPED_RELATION,
@@ -143,11 +173,13 @@ def unmapped_relation_violations(
                 focus_node=str(subject_uri),
                 path=None,
                 value=str(object_uri),
-                expected=expected,
+                expected=None,
                 message=(
                     f"Relation phrase {relation.relation_phrase!r} from "
                     f"{subject_uri} to {object_uri} was not mapped: "
-                    f"{relation.reason}.{candidate_message}"
+                    f"{relation.reason}. Select a predicate only when its meaning is "
+                    "supported by the relation phrase and source text; do not substitute "
+                    "a merely type-compatible predicate."
                 ),
                 constraint_component="OntologyMappingConstraint",
             )

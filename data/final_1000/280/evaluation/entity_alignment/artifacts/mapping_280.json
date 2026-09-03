@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/280/originals/extracted_280.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/280/ground_truth_280.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/norman_panama": "http://example.org/entity/Norman_Panama",
+    "http://example.org/extracted/i_will_i_will_for_now": "http://example.org/entity/I_Will_I_Will_for_Now"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/i_will_i_will_for_now",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "I Will, I Will... for Now",
+          "source": "label"
+        },
+        {
+          "text": "i will i will for now",
+          "source": "uri"
+        }
+      ],
+      "context": "I Will, I Will... for Now. has director: Norman Kaye Panama.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/I_Will_I_Will_for_Now",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "I Will I Will for Now",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "i will i will for now",
+        "extracted_source": "uri",
+        "ground_truth_text": "I Will I Will for Now",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9869566559791565,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9499540328979492,
+      "graph_score": 0.9749770164489746,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/norman_panama",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Norman Kaye Panama",
+          "source": "altLabel"
+        },
+        {
+          "text": "Norman Panama",
+          "source": "label"
+        }
+      ],
+      "context": "Norman Kaye Panama. has cause of death: complications of Parkinson's disease. inverse has director: I Will, I Will... for Now.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Norman_Panama",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Norman Panama",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Norman Panama",
+        "extracted_source": "label",
+        "ground_truth_text": "Norman Panama",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9370363354682922,
+      "graph_score": 0.9685181379318237,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/parkinsons_complications",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "complications of Parkinson's disease",
+          "source": "label"
+        },
+        {
+          "text": "parkinsons complications",
+          "source": "uri"
+        }
+      ],
+      "context": "complications of Parkinson's disease. inverse has cause of death: Norman Kaye Panama.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Parkinson",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Parkinson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "complications of Parkinson's disease",
+        "extracted_source": "label",
+        "ground_truth_text": "Parkinson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7807952761650085,
+      "name_embedding_score": 0.8148714900016785,
+      "string_score": 0.5299999713897705,
+      "independent_identity_support": false,
+      "context_score": 0.9268766641616821,
+      "graph_score": 0.9634383320808411,
+      "margin": 0.7807952761650085
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

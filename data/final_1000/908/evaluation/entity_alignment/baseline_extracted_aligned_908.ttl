@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Mariamne> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mariamne" ;
+    onto:hasFather <http://example.org/entity/Herod_Agrippa> ;
+    skos:altLabel "Mariamne (daughter of Herod Agrippa)" .
+
+<http://example.org/entity/Aristobulus_IV> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Aristobulus IV" .
+
+<http://example.org/entity/Herod_Agrippa> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Herod Agrippa I" ;
+    onto:hasFather <http://example.org/entity/Aristobulus_IV> ;
+    skos:altLabel "Herod Agrippa" .
+

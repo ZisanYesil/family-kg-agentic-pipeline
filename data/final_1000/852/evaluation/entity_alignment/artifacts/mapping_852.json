@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/852/originals/extracted_852.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/852/ground_truth_852.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/coulson_wallop": "http://example.org/entity/Coulson_Wallop",
+    "http://example.org/extracted/john_wallop_2nd_earl_of_portsmouth": "http://example.org/entity/John_Wallop_2nd_Earl_of_Portsmouth",
+    "http://example.org/extracted/oxford_university": "http://example.org/entity/Oxford"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/coulson_wallop",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Coulson Wallop",
+          "source": "label"
+        }
+      ],
+      "context": "Coulson Wallop. has father: John Wallop, 2nd Earl of Portsmouth.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Coulson_Wallop",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Coulson Wallop",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Coulson Wallop",
+        "extracted_source": "label",
+        "ground_truth_text": "Coulson Wallop",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9979403614997864,
+      "graph_score": 0.9989701509475708,
+      "margin": 0.5287529528141022
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_wallop_2nd_earl_of_portsmouth",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Wallop, 2nd Earl of Portsmouth",
+          "source": "label"
+        },
+        {
+          "text": "john wallop 2nd earl of portsmouth",
+          "source": "uri"
+        }
+      ],
+      "context": "John Wallop, 2nd Earl of Portsmouth. has educated at: Oxford. inverse has father: Coulson Wallop.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Wallop_2nd_Earl_of_Portsmouth",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Wallop 2nd Earl of Portsmouth",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Wallop, 2nd Earl of Portsmouth",
+        "extracted_source": "label",
+        "ground_truth_text": "John Wallop 2nd Earl of Portsmouth",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9965766668319702,
+      "string_score": 0.9934782385826111,
+      "independent_identity_support": true,
+      "context_score": 0.997832179069519,
+      "graph_score": 0.9989160895347595,
+      "margin": 0.5216802060604095
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/oxford_university",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Oxford",
+          "source": "label"
+        },
+        {
+          "text": "oxford university",
+          "source": "uri"
+        }
+      ],
+      "context": "Oxford. inverse has educated at: John Wallop, 2nd Earl of Portsmouth.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Oxford",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Oxford",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Oxford",
+        "extracted_source": "label",
+        "ground_truth_text": "Oxford",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9967189431190491,
+      "graph_score": 0.9983594417572021,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

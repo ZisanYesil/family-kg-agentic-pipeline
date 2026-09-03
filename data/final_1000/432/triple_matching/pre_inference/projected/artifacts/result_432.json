@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/432/evaluation/entity_alignment/baseline_extracted_aligned_432.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/432/evaluation/entity_alignment/baseline_ground_truth_aligned_432.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Believe_It",
+      "predicate": "hasPerformer",
+      "object": "Meek_Mill",
+      "subject_uri": "http://example.org/entity/Believe_It",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Meek_Mill"
+    },
+    {
+      "subject": "Meek_Mill",
+      "predicate": "hasDetentionPlace",
+      "object": "State_Correctional_Institution_Chester",
+      "subject_uri": "http://example.org/entity/Meek_Mill",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDetentionPlace",
+      "object_term": "http://example.org/entity/State_Correctional_Institution_Chester"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Believe_It",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Believe_It",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    },
+    {
+      "subject": "Believe_It",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Believe_It",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Believe_It",
+      "predicate": "label",
+      "object": "\"Believe It (Meek Mill song)\"",
+      "subject_uri": "http://example.org/entity/Believe_It",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Believe It (Meek Mill song)\""
+    },
+    {
+      "subject": "Meek_Mill",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Meek_Mill",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Meek_Mill",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Meek_Mill",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Meek_Mill",
+      "predicate": "label",
+      "object": "\"Meek Mill\"",
+      "subject_uri": "http://example.org/entity/Meek_Mill",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Meek Mill\""
+    },
+    {
+      "subject": "Meek_Mill",
+      "predicate": "altLabel",
+      "object": "\"Robert Rihmeek Williams\"",
+      "subject_uri": "http://example.org/entity/Meek_Mill",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Robert Rihmeek Williams\""
+    },
+    {
+      "subject": "State_Correctional_Institution_Chester",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/State_Correctional_Institution_Chester",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "State_Correctional_Institution_Chester",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/State_Correctional_Institution_Chester",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "State_Correctional_Institution_Chester",
+      "predicate": "label",
+      "object": "\"State Correctional Institution – Chester\"",
+      "subject_uri": "http://example.org/entity/State_Correctional_Institution_Chester",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"State Correctional Institution – Chester\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

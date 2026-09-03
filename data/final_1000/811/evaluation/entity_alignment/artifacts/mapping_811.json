@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/811/originals/extracted_811.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/811/ground_truth_811.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/starvation": "http://example.org/entity/starvation",
+    "http://example.org/extracted/agrippina_the_elder": "http://example.org/entity/Agrippina_the_Elder",
+    "http://example.org/extracted/agrippina_the_younger": "http://example.org/entity/Agrippina_the_Younger"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/agrippina_the_elder",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Agrippina the Elder",
+          "source": "label"
+        }
+      ],
+      "context": "Agrippina the Elder. has cause of death: starvation. inverse has mother: Agrippina the Younger.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Agrippina_the_Elder",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Agrippina the Elder",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Agrippina the Elder",
+        "extracted_source": "label",
+        "ground_truth_text": "Agrippina the Elder",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.29100173711776733
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/agrippina_the_younger",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Agrippina the Younger",
+          "source": "label"
+        }
+      ],
+      "context": "Agrippina the Younger. has mother: Agrippina the Elder.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Agrippina_the_Younger",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Agrippina the Younger",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Agrippina the Younger",
+        "extracted_source": "label",
+        "ground_truth_text": "Agrippina the Younger",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.29100173711776733
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/starvation",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "starvation",
+          "source": "label"
+        }
+      ],
+      "context": "starvation. inverse has cause of death: Agrippina the Elder.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/starvation",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "starvation",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "starvation",
+        "extracted_source": "label",
+        "ground_truth_text": "starvation",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

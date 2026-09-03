@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/334/evaluation/entity_alignment/baseline_extracted_aligned_334.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/334/evaluation/entity_alignment/baseline_ground_truth_aligned_334.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Abdülaziz",
+      "predicate": "hasBirthPlace",
+      "object": "Constantinople",
+      "subject_uri": "http://example.org/entity/Abdülaziz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Constantinople"
+    },
+    {
+      "subject": "Edadil_Kadın",
+      "predicate": "hasSpouse",
+      "object": "Abdülaziz",
+      "subject_uri": "http://example.org/entity/Edadil_Kadın",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Abdülaziz"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Abdülaziz",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Abdülaziz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Abdülaziz",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Abdülaziz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Abdülaziz",
+      "predicate": "label",
+      "object": "\"Abdülaziz\"",
+      "subject_uri": "http://example.org/entity/Abdülaziz",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Abdülaziz\""
+    },
+    {
+      "subject": "Constantinople",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Constantinople",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Constantinople",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Constantinople",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Constantinople",
+      "predicate": "label",
+      "object": "\"Eyüp Palace, Constantinople (present‑day Istanbul)\"",
+      "subject_uri": "http://example.org/entity/Constantinople",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Eyüp Palace, Constantinople (present‑day Istanbul)\""
+    },
+    {
+      "subject": "Edadil_Kadın",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Edadil_Kadın",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Edadil_Kadın",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Edadil_Kadın",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Edadil_Kadın",
+      "predicate": "label",
+      "object": "\"Edadil Kadın\"",
+      "subject_uri": "http://example.org/entity/Edadil_Kadın",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Edadil Kadın\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

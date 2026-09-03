@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/963/originals/extracted_963.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/963/ground_truth_963.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/_elvira_of_sicily": "http://example.org/entity/Elvira_of_Sicily",
+    "http://example.org/extracted/_john_brienne": "http://example.org/entity/John_Count_of_Brienne"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 2,
+    "review": 1,
+    "unmatched": 0,
+    "unmatched_ground_truth": 2
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/_elvira_of_sicily",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Elvira of Sicily",
+          "source": "label"
+        }
+      ],
+      "context": "Elvira of Sicily. inverse has mother: Walter IV, Count of Brienne.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Elvira_of_Sicily",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Elvira of Sicily",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Elvira of Sicily",
+        "extracted_source": "label",
+        "ground_truth_text": "Elvira of Sicily",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9696577787399292,
+      "graph_score": 0.9696577787399292,
+      "margin": 0.7332997918128967
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_john_brienne",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John, Count of Brienne",
+          "source": "label"
+        },
+        {
+          "text": "john brienne",
+          "source": "uri"
+        }
+      ],
+      "context": "John, Count of Brienne. has father: Walter IV, Count of Brienne.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Count_of_Brienne",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Count of Brienne",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John, Count of Brienne",
+        "extracted_source": "label",
+        "ground_truth_text": "John Count of Brienne",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9601327180862427,
+      "string_score": 0.989534854888916,
+      "independent_identity_support": true,
+      "context_score": 0.9731692671775818,
+      "graph_score": 0.9731692671775818,
+      "margin": 0.37866050004959106
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_walter_iv_brienne",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Walter IV, Count of Brienne",
+          "source": "label"
+        },
+        {
+          "text": "walter iv brienne",
+          "source": "uri"
+        }
+      ],
+      "context": "Walter IV, Count of Brienne. has mother: Elvira of Sicily. inverse has father: John, Count of Brienne.",
+      "decision": "review",
+      "matched": false,
+      "ground_truth_uri": "http://example.org/entity/Walter_IV_of_Brienne",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Walter IV of Brienne",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Walter IV, Count of Brienne",
+        "extracted_source": "label",
+        "ground_truth_text": "Walter IV of Brienne",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8529824614524841,
+      "name_embedding_score": 0.9382930397987366,
+      "string_score": 0.8829787373542786,
+      "independent_identity_support": true,
+      "context_score": 0.8047300577163696,
+      "graph_score": 0.6523650288581848,
+      "margin": 0.044116079807281494
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Walter_IV_of_Brienne",
+    "http://example.org/entity/Walter_IV_the_Great_of_Brienne"
+  ]
+}

@@ -1,0 +1,20 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Walter_Devereux a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:English ;
+    ex:hasCountry entity:English .
+
+entity:Leicester_Devereux_6th_Viscount_Hereford a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Walter_Devereux_5th_Viscount_Hereford ;
+    ex:hasParent entity:Walter_Devereux_5th_Viscount_Hereford .
+
+entity:English a ex:Country,
+        ex:Place .
+
+entity:Walter_Devereux_5th_Viscount_Hereford a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Leicester_Devereux_6th_Viscount_Hereford .
+

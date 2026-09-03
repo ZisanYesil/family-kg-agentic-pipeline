@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/407/originals/extracted_407.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/407/ground_truth_407.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/omar_rayo": "http://example.org/entity/Omar_Rayo",
+    "http://example.org/extracted/stefan_henze": "http://example.org/entity/Stefan_Henze"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/omar_rayo",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Omar Rayo Reyes",
+          "source": "altLabel"
+        },
+        {
+          "text": "Omar Rayo",
+          "source": "label"
+        }
+      ],
+      "context": "Omar Rayo Reyes. has birth date: 1928-01-20. has death date: 2010-06-07.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Omar_Rayo",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Omar Rayo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Omar Rayo",
+        "extracted_source": "label",
+        "ground_truth_text": "Omar Rayo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8798146843910217,
+      "graph_score": 0.8798146843910217,
+      "margin": 0.696844071149826
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/stefan_henze",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stefan Henze",
+          "source": "label"
+        }
+      ],
+      "context": "Stefan Henze. has birth date: 1981-05-03. has death date: 2016-08-15.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stefan_Henze",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stefan Henze",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stefan Henze",
+        "extracted_source": "label",
+        "ground_truth_text": "Stefan Henze",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6909032166004181
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

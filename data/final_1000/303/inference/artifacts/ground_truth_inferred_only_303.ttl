@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Conrad_II_Duke_of_Transjurane_Burgundy a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Adelaide_of_Auxerre .
+
+entity:Rudolph_of_France a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Adelaide_of_Auxerre .
+
+entity:Adelaide_of_Auxerre a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Rudolph_of_France ;
+    ex:hasParent entity:Conrad_II_Duke_of_Transjurane_Burgundy .
+

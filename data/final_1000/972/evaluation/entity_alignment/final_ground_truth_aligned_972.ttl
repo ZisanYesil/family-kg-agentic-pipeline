@@ -1,0 +1,30 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Don_Taylor_American_actor_and_director a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "1998-12-29"^^xsd:date .
+
+entity:Everything_s_Ducky a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Don_Taylor ;
+    ex:hasDirector entity:Don_Taylor .
+
+entity:Karthika_film a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:M_Krishnan_Nair ;
+    ex:hasDirector entity:M_Krishnan_Nair .
+
+entity:M_Krishnan_Nair_director a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "2001-05-10"^^xsd:date .
+
+entity:Don_Taylor a ex:Agent,
+        ex:Person .
+
+entity:M_Krishnan_Nair a ex:Agent,
+        ex:Person .
+

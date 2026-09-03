@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/181/originals/extracted_181.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/181/ground_truth_181.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jean_de_bie": "http://example.org/entity/Jean_de_Bie",
+    "http://example.org/extracted/dillon_s_myer": "http://example.org/entity/Dillon_S_Myer"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/dillon_s_myer",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dillon S. Myer",
+          "source": "label"
+        },
+        {
+          "text": "dillon s myer",
+          "source": "uri"
+        }
+      ],
+      "context": "Dillon S. Myer. has birth date: 1891-09-04. has death date: 1982-10-21.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dillon_S_Myer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dillon S Myer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dillon S. Myer",
+        "extracted_source": "label",
+        "ground_truth_text": "Dillon S Myer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.96633380651474,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9882827401161194,
+      "graph_score": 0.9882827401161194,
+      "margin": 0.5427974462509155
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jean_de_bie",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jean de Bie",
+          "source": "label"
+        }
+      ],
+      "context": "Jean de Bie. has birth date: 1892-05-09. has death date: 1961-04-30.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jean_de_Bie",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jean de Bie",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jean de Bie",
+        "extracted_source": "label",
+        "ground_truth_text": "Jean de Bie",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.5375252962112427
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

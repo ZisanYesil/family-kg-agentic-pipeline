@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/927/originals/extracted_927.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/927/ground_truth_927.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_peak_scaler": "http://example.org/entity/The_Peak_Scaler",
+    "http://example.org/extracted/film_pehla_pehla_pyar": "http://example.org/entity/Pehla_Pehla_Pyaar"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_peak_scaler",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Peak Scaler",
+          "source": "label"
+        },
+        {
+          "text": "film peak scaler",
+          "source": "uri"
+        }
+      ],
+      "context": "The Peak Scaler. has publication date: 1933.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Peak_Scaler",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Peak Scaler",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Peak Scaler",
+        "extracted_source": "label",
+        "ground_truth_text": "The Peak Scaler",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.7746009677648544
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_pehla_pehla_pyar",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pehla Pehla Pyaar",
+          "source": "label"
+        },
+        {
+          "text": "film pehla pehla pyar",
+          "source": "uri"
+        }
+      ],
+      "context": "Pehla Pehla Pyaar. has publication date: 2006.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pehla_Pehla_Pyaar",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pehla Pehla Pyaar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pehla Pehla Pyaar",
+        "extracted_source": "label",
+        "ground_truth_text": "Pehla Pehla Pyaar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997019767761,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7886634767055511
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

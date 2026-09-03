@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Henry_III a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Conrad_II ;
+    ex:hasParent entity:Conrad_II .
+
+entity:Speyer a ex:Place .
+
+entity:Conrad_II a ex:Agent,
+        ex:Person ;
+    ex:hasBirthPlace entity:Speyer ;
+    ex:hasChild entity:Henry_III .
+

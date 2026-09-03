@@ -1,0 +1,182 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/47/originals/extracted_47.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/47/ground_truth_47.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/japan": "http://example.org/entity/Japan",
+    "http://example.org/extracted/akiko_matsuura": "http://example.org/entity/Akiko_Matsuura"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/akiko_matsuura",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Akiko \"Keex\" Matsuura",
+          "source": "altLabel"
+        },
+        {
+          "text": "Akiko Matsuura",
+          "source": "label"
+        }
+      ],
+      "context": "Akiko \"Keex\" Matsuura. has birth place: Osaka. inverse has member: Pre (band).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Akiko_Matsuura",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Akiko Matsuura",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Akiko Matsuura",
+        "extracted_source": "label",
+        "ground_truth_text": "Akiko Matsuura",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7672833800315857,
+      "graph_score": 0.38364169001579285,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/japan",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Japanese",
+          "source": "altLabel"
+        },
+        {
+          "text": "Japan",
+          "source": "label"
+        }
+      ],
+      "context": "Japanese. inverse has country: Osaka.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Japan",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Japan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Japan",
+        "extracted_source": "label",
+        "ground_truth_text": "Japan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6234325170516968,
+      "graph_score": 0.3117162585258484,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pre_band",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pre (band)",
+          "source": "label"
+        },
+        {
+          "text": "pre band",
+          "source": "uri"
+        }
+      ],
+      "context": "Pre (band). has member: Akiko \"Keex\" Matsuura.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pre",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pre",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "pre band",
+        "extracted_source": "uri",
+        "ground_truth_text": "Pre",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.665810763835907,
+      "name_embedding_score": 0.5468162894248962,
+      "string_score": 0.6704545617103577,
+      "independent_identity_support": false,
+      "context_score": 0.798311710357666,
+      "graph_score": 0.899155855178833,
+      "margin": 0.665810763835907
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/osaka",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Osaka",
+          "source": "label"
+        }
+      ],
+      "context": "Osaka. has country: Japanese. inverse has birth place: Akiko \"Keex\" Matsuura.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "18dec0fff6ed1858f67878f2ff98a6c01fdb0496ab5387a6babfc291aafddd97",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/prologue_magazine",
+        "path": null,
+        "value": "http://example.org/extracted/james_b_rhoads",
+        "expected": null,
+        "message": "Relation phrase 'founded by' from http://example.org/extracted/prologue_magazine to http://example.org/extracted/james_b_rhoads was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "18dec0fff6ed1858f67878f2ff98a6c01fdb0496ab5387a6babfc291aafddd97",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/prologue_magazine",
+            "path": null,
+            "value": "http://example.org/extracted/james_b_rhoads",
+            "expected": null,
+            "message": "Relation phrase 'founded by' from http://example.org/extracted/prologue_magazine to http://example.org/extracted/james_b_rhoads was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 10,
+      "feedback_reasoning": "The violation concerns the unmapped relation phrase “founded by” linking the CreativeWork http://example.org/extracted/prologue_magazine to the Person http://example.org/extracted/james_b_rhoads. The ontology provides no object‑property whose documented meaning corresponds to a “founder” relationship for a CreativeWork. The closest predicates (e.g., onto:hasCreator) have a different semantic focus, and others (e.g., onto:hasFounder) are restricted to the domain Organization. Because the required predicate is absent from the ontology, we cannot safely add or modify a triple without inventing a predicate, which is disallowed.",
+      "repairs": [
+        {
+          "violation_fingerprint": "5290b079923b804867b66b85d4e57922212d0eea39e4ef1bd6fc851bf4644047",
+          "reasoning": "No ontology predicate matches the phrase “founded by” for a CreativeWork‑Person relation; therefore the violation cannot be repaired.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "5290b079923b804867b66b85d4e57922212d0eea39e4ef1bd6fc851bf4644047"
+      ],
+      "triples_after": 10,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "18dec0fff6ed1858f67878f2ff98a6c01fdb0496ab5387a6babfc291aafddd97",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/prologue_magazine",
+            "path": null,
+            "value": "http://example.org/extracted/james_b_rhoads",
+            "expected": null,
+            "message": "Relation phrase 'founded by' from http://example.org/extracted/prologue_magazine to http://example.org/extracted/james_b_rhoads was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "18dec0fff6ed1858f67878f2ff98a6c01fdb0496ab5387a6babfc291aafddd97",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/prologue_magazine",
+        "path": null,
+        "value": "http://example.org/extracted/james_b_rhoads",
+        "expected": null,
+        "message": "Relation phrase 'founded by' from http://example.org/extracted/prologue_magazine to http://example.org/extracted/james_b_rhoads was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

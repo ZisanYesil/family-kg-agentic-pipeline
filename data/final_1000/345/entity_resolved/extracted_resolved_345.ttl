@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_pleasure_1931 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Pleasure" ;
+    onto:hasCountry data:country_united_states .
+
+data:film_ten_thousand_dollars_for_a_massacre_1967 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Ten Thousand Dollars for a Massacre" ;
+    onto:hasCountry data:country_italy .
+
+data:country_italy a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Italy" .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" .
+

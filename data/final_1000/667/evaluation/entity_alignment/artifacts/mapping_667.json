@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/667/originals/extracted_667.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/667/ground_truth_667.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/booker_t": "http://example.org/entity/Booker_T",
+    "http://example.org/extracted/wwe_hall_of_fame": "http://example.org/entity/WWE_Hall_of_Fame"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/booker_t",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Robert Booker Tio Huffman",
+          "source": "altLabel"
+        },
+        {
+          "text": "Booker T",
+          "source": "label"
+        }
+      ],
+      "context": "Robert Booker Tio Huffman. has award received: WWE Hall of Fame. inverse has founder: ROW.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Booker_T",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Booker T",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Booker T",
+        "extracted_source": "label",
+        "ground_truth_text": "Booker T",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7894525527954102,
+      "graph_score": 0.8947262763977051,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wwe_hall_of_fame",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "WWE Hall of Fame",
+          "source": "label"
+        }
+      ],
+      "context": "WWE Hall of Fame. inverse has award received: Robert Booker Tio Huffman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/WWE_Hall_of_Fame",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "WWE Hall of Fame",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "WWE Hall of Fame",
+        "extracted_source": "label",
+        "ground_truth_text": "WWE Hall of Fame",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8695294857025146,
+      "graph_score": 0.9347647428512573,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/reality_of_wrestling",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "ROW",
+          "source": "altLabel"
+        },
+        {
+          "text": "Reality of Wrestling",
+          "source": "altLabel"
+        }
+      ],
+      "context": "ROW. has founder: Robert Booker Tio Huffman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pro_Wrestling_Alliance",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pro Wrestling Alliance",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Reality of Wrestling",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Pro Wrestling Alliance",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6809218525886536,
+      "name_embedding_score": 0.7770768404006958,
+      "string_score": 0.40714284777641296,
+      "independent_identity_support": false,
+      "context_score": 0.5247818231582642,
+      "graph_score": 0.7623909115791321,
+      "margin": 0.34019654989242554
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

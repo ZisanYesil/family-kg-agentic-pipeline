@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_hush_money_1931 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Hush Money" ;
+    onto:hasDirector data:person_sidney_lanfield .
+
+data:person_sidney_lanfield a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sidney Lanfield" ;
+    onto:hasBurialPlace data:place_westwood_village_memorial_park_cemetery .
+
+data:place_westwood_village_memorial_park_cemetery a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Westwood Village Memorial Park Cemetery" .
+

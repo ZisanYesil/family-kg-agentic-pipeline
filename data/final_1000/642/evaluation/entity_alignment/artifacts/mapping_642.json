@@ -1,0 +1,151 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/642/originals/extracted_642.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/642/ground_truth_642.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/lake_powell": "http://example.org/entity/Lake_Powell",
+    "http://example.org/extracted/takhlakh_lake": "http://example.org/entity/Takhlakh_Lake",
+    "http://example.org/extracted/united_states": "http://example.org/entity/United_States"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/lake_powell",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lake Powell",
+          "source": "label"
+        }
+      ],
+      "context": "Lake Powell. has country: U.S..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lake_Powell",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lake Powell",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lake Powell",
+        "extracted_source": "label",
+        "ground_truth_text": "Lake Powell",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9667650461196899,
+      "graph_score": 0.983382523059845,
+      "margin": 0.560179591178894
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/takhlakh_lake",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Takhlakh Lake",
+          "source": "label"
+        }
+      ],
+      "context": "Takhlakh Lake. has country: U.S..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Takhlakh_Lake",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Takhlakh Lake",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Takhlakh Lake",
+        "extracted_source": "label",
+        "ground_truth_text": "Takhlakh Lake",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9816896915435791,
+      "graph_score": 0.49084484577178955,
+      "margin": 0.43759864568710327
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "U.S.",
+          "source": "altLabel"
+        },
+        {
+          "text": "USA",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "U.S.. inverse has country: Lake Powell. inverse has country: Takhlakh Lake.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_States",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United States",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "label",
+        "ground_truth_text": "United States",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.904180645942688,
+      "graph_score": 0.702090322971344,
+      "margin": 0.2767760157585144
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/U_S"
+  ]
+}

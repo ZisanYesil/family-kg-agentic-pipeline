@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/658/evaluation/entity_alignment/final_extracted_aligned_658.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/658/evaluation/entity_alignment/final_ground_truth_aligned_658.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Sanjay_Gupta",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Sanjay_Gupta",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Sanjay_Gupta",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sanjay_Gupta",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "The_Next_List",
+      "predicate": "hasPresenter",
+      "object": "Sanjay_Gupta",
+      "subject_uri": "http://example.org/entity/The_Next_List",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPresenter",
+      "object_term": "http://example.org/entity/Sanjay_Gupta"
+    },
+    {
+      "subject": "The_Next_List",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/The_Next_List",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "The_Next_List",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The_Next_List",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Emory_University",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Emory_University",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Emory_University",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Emory_University",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Sanjay_Gupta",
+      "predicate": "hasEmployer",
+      "object": "Emory_University",
+      "subject_uri": "http://example.org/entity/Sanjay_Gupta",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/Emory_University"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Sanjay_Gupta",
+      "predicate": "hasEmployer",
+      "object": "cnn",
+      "subject_uri": "http://example.org/entity/Sanjay_Gupta",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/extracted/cnn"
+    },
+    {
+      "subject": "cnn",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/cnn",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "cnn",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/extracted/cnn",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 11,
+    "true_positives": 5,
+    "false_positives": 3,
+    "false_negatives": 3,
+    "precision": 0.625,
+    "recall": 0.625,
+    "f1": 0.625
+  },
+  "stage": "post_inference"
+}

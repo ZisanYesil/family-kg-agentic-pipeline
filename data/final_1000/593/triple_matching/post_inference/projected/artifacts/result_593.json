@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/593/evaluation/entity_alignment/final_extracted_aligned_593.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/593/evaluation/entity_alignment/final_ground_truth_aligned_593.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "George_S_Patton",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/George_S_Patton",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "George_S_Patton",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/George_S_Patton",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Susan_Thornton_Glassell",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Susan_Thornton_Glassell",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Susan_Thornton_Glassell",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Susan_Thornton_Glassell",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Col_George_Patton_Sr",
+      "predicate": "hasChild",
+      "object": "George_S_Patton",
+      "subject_uri": "http://example.org/entity/Col_George_Patton_Sr",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/George_S_Patton"
+    },
+    {
+      "subject": "Col_George_Patton_Sr",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Col_George_Patton_Sr",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Col_George_Patton_Sr",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Col_George_Patton_Sr",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "George_S_Patton",
+      "predicate": "hasParent",
+      "object": "Col_George_Patton_Sr",
+      "subject_uri": "http://example.org/entity/George_S_Patton",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Col_George_Patton_Sr"
+    },
+    {
+      "subject": "George_S_Patton",
+      "predicate": "hasParent",
+      "object": "Susan_Thornton_Glassell",
+      "subject_uri": "http://example.org/entity/George_S_Patton",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Susan_Thornton_Glassell"
+    },
+    {
+      "subject": "Susan_Thornton_Glassell",
+      "predicate": "hasChild",
+      "object": "George_S_Patton",
+      "subject_uri": "http://example.org/entity/Susan_Thornton_Glassell",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/George_S_Patton"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "George_S_Patton",
+      "predicate": "hasSpouse",
+      "object": "Susan_Thornton_Glassell",
+      "subject_uri": "http://example.org/entity/George_S_Patton",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Susan_Thornton_Glassell"
+    },
+    {
+      "subject": "Susan_Thornton_Glassell",
+      "predicate": "hasSpouse",
+      "object": "George_S_Patton",
+      "subject_uri": "http://example.org/entity/Susan_Thornton_Glassell",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/George_S_Patton"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 12,
+    "true_positives": 4,
+    "false_positives": 2,
+    "false_negatives": 6,
+    "precision": 0.6666666666666666,
+    "recall": 0.4,
+    "f1": 0.5
+  },
+  "stage": "post_inference"
+}

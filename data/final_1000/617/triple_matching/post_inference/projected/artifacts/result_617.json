@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/617/evaluation/entity_alignment/final_extracted_aligned_617.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/617/evaluation/entity_alignment/final_ground_truth_aligned_617.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Fred_Fisher",
+      "predicate": "hasCountry",
+      "object": "American",
+      "subject_uri": "http://example.org/entity/Fred_Fisher",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/American"
+    },
+    {
+      "subject": "Fred_Fisher",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Fred_Fisher",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Fred_Fisher",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Fred_Fisher",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Oui_Oui_Marie",
+      "predicate": "hasComposer",
+      "object": "Fred_Fisher",
+      "subject_uri": "http://example.org/entity/Oui_Oui_Marie",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Fred_Fisher"
+    },
+    {
+      "subject": "Oui_Oui_Marie",
+      "predicate": "hasCreator",
+      "object": "Fred_Fisher",
+      "subject_uri": "http://example.org/entity/Oui_Oui_Marie",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Fred_Fisher"
+    },
+    {
+      "subject": "Oui_Oui_Marie",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Oui_Oui_Marie",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Oui_Oui_Marie",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Oui_Oui_Marie",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Oui_Oui_Marie",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Oui_Oui_Marie",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 10,
+    "true_positives": 9,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.9,
+    "recall": 1.0,
+    "f1": 0.9473684210526316
+  },
+  "stage": "post_inference"
+}

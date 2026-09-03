@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_a_midnight_romance a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A Midnight Romance" ;
+    onto:hasProducer data:person_anita_stewart .
+
+data:film_the_bedford_incident a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Bedford Incident" ;
+    onto:hasProducer data:person_richard_widmark .
+
+data:person_anita_stewart a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Anita Stewart" ;
+    onto:hasDeathDate "1961-05-04"^^xsd:date .
+
+data:person_richard_widmark a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Richard Widmark" ;
+    onto:hasDeathDate "2008-03-24"^^xsd:date .
+

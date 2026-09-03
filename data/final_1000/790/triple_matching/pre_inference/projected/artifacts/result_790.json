@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/790/evaluation/entity_alignment/baseline_extracted_aligned_790.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/790/evaluation/entity_alignment/baseline_ground_truth_aligned_790.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Dirk_van_Brederode",
+      "predicate": "hasParent",
+      "object": "William_I_van_Brederode",
+      "subject_uri": "http://example.org/entity/Dirk_van_Brederode",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/William_I_van_Brederode"
+    },
+    {
+      "subject": "William_I_van_Brederode",
+      "predicate": "hasDeathPlace",
+      "object": "Velsen",
+      "subject_uri": "http://example.org/entity/William_I_van_Brederode",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Velsen"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Dirk_van_Brederode",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Dirk_van_Brederode",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Dirk_van_Brederode",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Dirk_van_Brederode",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Dirk_van_Brederode",
+      "predicate": "label",
+      "object": "\"Dirk II van Brederode\"",
+      "subject_uri": "http://example.org/entity/Dirk_van_Brederode",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Dirk II van Brederode\""
+    },
+    {
+      "subject": "Velsen",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Velsen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Velsen",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Velsen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Velsen",
+      "predicate": "label",
+      "object": "\"Velsen\"",
+      "subject_uri": "http://example.org/entity/Velsen",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Velsen\""
+    },
+    {
+      "subject": "William_I_van_Brederode",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/William_I_van_Brederode",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "William_I_van_Brederode",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/William_I_van_Brederode",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "William_I_van_Brederode",
+      "predicate": "label",
+      "object": "\"William I van Brederode\"",
+      "subject_uri": "http://example.org/entity/William_I_van_Brederode",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"William I van Brederode\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

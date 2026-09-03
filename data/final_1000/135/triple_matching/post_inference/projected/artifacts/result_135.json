@@ -1,0 +1,139 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/135/evaluation/entity_alignment/final_extracted_aligned_135.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/135/evaluation/entity_alignment/final_ground_truth_aligned_135.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Chimalpopoca",
+      "predicate": "hasSibling",
+      "object": "Tlacaelel",
+      "subject_uri": "http://example.org/entity/Chimalpopoca",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Tlacaelel"
+    },
+    {
+      "subject": "Chimalpopoca",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Chimalpopoca",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Chimalpopoca",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Chimalpopoca",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Tlacaelel",
+      "predicate": "hasChild",
+      "object": "Tlilpotoncatzin",
+      "subject_uri": "http://example.org/entity/Tlacaelel",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Tlilpotoncatzin"
+    },
+    {
+      "subject": "Tlacaelel",
+      "predicate": "hasSibling",
+      "object": "Chimalpopoca",
+      "subject_uri": "http://example.org/entity/Tlacaelel",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Chimalpopoca"
+    },
+    {
+      "subject": "Tlacaelel",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Tlacaelel",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Tlacaelel",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Tlacaelel",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Tlilpotoncatzin",
+      "predicate": "hasParent",
+      "object": "Tlacaelel",
+      "subject_uri": "http://example.org/entity/Tlilpotoncatzin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Tlacaelel"
+    },
+    {
+      "subject": "Tlilpotoncatzin",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Tlilpotoncatzin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Tlilpotoncatzin",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Tlilpotoncatzin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Tlacaelel",
+      "predicate": "hasSibling",
+      "object": "moctezuma_i",
+      "subject_uri": "http://example.org/entity/Tlacaelel",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/extracted/moctezuma_i"
+    },
+    {
+      "subject": "moctezuma_i",
+      "predicate": "hasSibling",
+      "object": "Tlacaelel",
+      "subject_uri": "http://example.org/extracted/moctezuma_i",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Tlacaelel"
+    },
+    {
+      "subject": "moctezuma_i",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/moctezuma_i",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "moctezuma_i",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/moctezuma_i",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 14,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 14,
+    "true_positives": 10,
+    "false_positives": 4,
+    "false_negatives": 0,
+    "precision": 0.7142857142857143,
+    "recall": 1.0,
+    "f1": 0.8333333333333333
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,91 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/60/evaluation/entity_alignment/baseline_extracted_aligned_60.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/60/evaluation/entity_alignment/baseline_ground_truth_aligned_60.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Den_of_Lions",
+      "predicate": "hasPublicationDate",
+      "object": "\"2003\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Den_of_Lions",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"2003\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "The_Greatest_Thing_in_Life",
+      "predicate": "hasPublicationDate",
+      "object": "\"1918\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/The_Greatest_Thing_in_Life",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1918\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Den_of_Lions",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Den_of_Lions",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Den_of_Lions",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Den_of_Lions",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Den_of_Lions",
+      "predicate": "label",
+      "object": "\"Den of Lions\"",
+      "subject_uri": "http://example.org/entity/Den_of_Lions",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Den of Lions\""
+    },
+    {
+      "subject": "The_Greatest_Thing_in_Life",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Greatest_Thing_in_Life",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Greatest_Thing_in_Life",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Greatest_Thing_in_Life",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Greatest_Thing_in_Life",
+      "predicate": "label",
+      "object": "\"The Greatest Thing in Life\"",
+      "subject_uri": "http://example.org/entity/The_Greatest_Thing_in_Life",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Greatest Thing in Life\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 8,
+    "true_positives": 2,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.25,
+    "recall": 1.0,
+    "f1": 0.4
+  },
+  "stage": "pre_inference"
+}

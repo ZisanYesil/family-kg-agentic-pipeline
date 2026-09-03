@@ -1,0 +1,158 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/440/originals/extracted_440.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/440/ground_truth_440.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/john_manners_sutton_1752": "http://example.org/entity/John_Manners_Sutton",
+    "http://example.org/extracted/lord_george_manners_sutton": "http://example.org/entity/Lord_George_Manners_Sutton"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 1,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/john_manners_sutton_1752",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Manners-Sutton",
+          "source": "label"
+        },
+        {
+          "text": "john manners sutton 1752",
+          "source": "uri"
+        }
+      ],
+      "context": "John Manners-Sutton. has father: Lord George Manners-Sutton.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Manners_Sutton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Manners Sutton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Manners-Sutton",
+        "extracted_source": "label",
+        "ground_truth_text": "John Manners Sutton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.7825464606285095,
+      "string_score": 0.9763157963752747,
+      "independent_identity_support": true,
+      "context_score": 0.6694012880325317,
+      "graph_score": 0.8347006440162659,
+      "margin": 0.3894382119178772
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lord_george_manners_sutton",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lord George Manners-Sutton",
+          "source": "label"
+        },
+        {
+          "text": "lord george manners sutton",
+          "source": "uri"
+        }
+      ],
+      "context": "Lord George Manners-Sutton. has brother: John Manners, Marquess of Granby. inverse has father: John Manners-Sutton.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lord_George_Manners_Sutton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lord George Manners Sutton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "lord george manners sutton",
+        "extracted_source": "uri",
+        "ground_truth_text": "Lord George Manners Sutton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8164893388748169,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7828365564346313,
+      "graph_score": 0.8914182782173157,
+      "margin": 0.32100439071655273
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_manners_marquess_of_granby",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Manners, Marquess of Granby",
+          "source": "label"
+        },
+        {
+          "text": "john manners marquess of granby",
+          "source": "uri"
+        }
+      ],
+      "context": "John Manners, Marquess of Granby. inverse has brother: Lord George Manners-Sutton.",
+      "decision": "review",
+      "matched": false,
+      "ground_truth_uri": "http://example.org/entity/Lord_Robert_Manners_Sutton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lord Robert Manners Sutton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Manners, Marquess of Granby",
+        "extracted_source": "label",
+        "ground_truth_text": "Lord Robert Manners Sutton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5781223177909851,
+      "name_embedding_score": 0.8064994812011719,
+      "string_score": 0.3079741299152374,
+      "independent_identity_support": false,
+      "context_score": 0.7830323576927185,
+      "graph_score": 0.39151617884635925,
+      "margin": -0.03314429521560669
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Lord_Robert_Manners_Sutton"
+  ]
+}

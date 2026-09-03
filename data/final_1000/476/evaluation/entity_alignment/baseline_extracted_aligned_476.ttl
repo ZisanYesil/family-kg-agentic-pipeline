@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Pierre_Brissaud> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Pierre Brissaud" ;
+    onto:hasFather <http://example.org/entity/Edouard_Brissaud> .
+
+<http://example.org/entity/Besançon> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Besançon" .
+
+<http://example.org/entity/Edouard_Brissaud> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Édouard Brissaud" ;
+    onto:hasBirthPlace <http://example.org/entity/Besançon> ;
+    skos:altLabel "Edouard Brissaud" .
+

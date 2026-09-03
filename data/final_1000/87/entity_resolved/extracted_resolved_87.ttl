@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_bond_boy a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Bond Boy" ;
+    onto:hasCountry data:country_united_states .
+
+data:film_mad_dogs_and_englishmen a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Mad Dogs and Englishmen" ;
+    onto:hasCountry data:country_united_kingdom .
+
+data:country_united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "British" .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

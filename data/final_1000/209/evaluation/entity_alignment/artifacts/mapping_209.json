@@ -1,0 +1,251 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/209/originals/extracted_209.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/209/ground_truth_209.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/occupation_actor": "http://example.org/entity/actor",
+    "http://example.org/extracted/occupation_rapper": "http://example.org/entity/rapper",
+    "http://example.org/extracted/ti_person": "http://example.org/entity/T_I",
+    "http://example.org/extracted/occupation_ice_hockey_player": "http://example.org/entity/ice_hockey_player",
+    "http://example.org/extracted/wayne_maki_person": "http://example.org/entity/Wayne_Maki"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_actor",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "actor",
+          "source": "label"
+        },
+        {
+          "text": "occupation actor",
+          "source": "uri"
+        }
+      ],
+      "context": "actor. inverse has occupation: T.I..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/actor",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "actor",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "actor",
+        "extracted_source": "label",
+        "ground_truth_text": "actor",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9867314696311951,
+      "graph_score": 0.9933657646179199,
+      "margin": 0.5563664436340332
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_ice_hockey_player",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "ice hockey player",
+          "source": "label"
+        },
+        {
+          "text": "occupation ice hockey player",
+          "source": "uri"
+        }
+      ],
+      "context": "ice hockey player. inverse has occupation: Wayne Maki.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/ice_hockey_player",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "ice hockey player",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "ice hockey player",
+        "extracted_source": "label",
+        "ground_truth_text": "ice hockey player",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.749811589717865
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_rapper",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "rapper",
+          "source": "label"
+        },
+        {
+          "text": "occupation rapper",
+          "source": "uri"
+        }
+      ],
+      "context": "rapper. inverse has occupation: T.I..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/rapper",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "rapper",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "rapper",
+        "extracted_source": "label",
+        "ground_truth_text": "rapper",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9860073924064636,
+      "graph_score": 0.9930037260055542,
+      "margin": 0.5648015737533569
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ti_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "T.I.",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tip",
+          "source": "altLabel"
+        },
+        {
+          "text": "Clifford Joseph Harris Jr.",
+          "source": "label"
+        },
+        {
+          "text": "ti person",
+          "source": "uri"
+        }
+      ],
+      "context": "T.I.. has occupation: actor. has occupation: rapper.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/T_I",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "T I",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "T.I.",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "T I",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8943038582801819,
+      "string_score": 0.8071428537368774,
+      "independent_identity_support": true,
+      "context_score": 0.9839072823524475,
+      "graph_score": 0.9919536113739014,
+      "margin": 0.748917430639267
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wayne_maki_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Wayne Maki",
+          "source": "label"
+        },
+        {
+          "text": "wayne maki person",
+          "source": "uri"
+        }
+      ],
+      "context": "Wayne Maki. has occupation: ice hockey player.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Wayne_Maki",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Wayne Maki",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Wayne Maki",
+        "extracted_source": "label",
+        "ground_truth_text": "Wayne Maki",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7084590494632721
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:reverse_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Reverse" ;
+    onto:hasDirector data:borys_lankosz .
+
+data:borys_lankosz a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Borys Lankosz" ;
+    onto:hasEducatedAt data:national_film_school_lodz .
+
+data:national_film_school_lodz a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "National Film School in Łódź" .
+

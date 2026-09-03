@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/445/evaluation/entity_alignment/baseline_extracted_aligned_445.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/445/evaluation/entity_alignment/baseline_ground_truth_aligned_445.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Marvin_Hatley",
+      "predicate": "hasDeathPlace",
+      "object": "Hollywood_California",
+      "subject_uri": "http://example.org/entity/Marvin_Hatley",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Hollywood_California"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "There_Goes_My_Heart",
+      "predicate": "hasComposer",
+      "object": "Marvin_Hatley",
+      "subject_uri": "http://example.org/entity/There_Goes_My_Heart",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Marvin_Hatley"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Hollywood_California",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Hollywood_California",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Hollywood_California",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hollywood_California",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hollywood_California",
+      "predicate": "label",
+      "object": "\"Hollywood, California\"",
+      "subject_uri": "http://example.org/entity/Hollywood_California",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hollywood, California\""
+    },
+    {
+      "subject": "Marvin_Hatley",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Marvin_Hatley",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Marvin_Hatley",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Marvin_Hatley",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Marvin_Hatley",
+      "predicate": "label",
+      "object": "\"Marvin Hatley\"",
+      "subject_uri": "http://example.org/entity/Marvin_Hatley",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Marvin Hatley\""
+    },
+    {
+      "subject": "There_Goes_My_Heart",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/There_Goes_My_Heart",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "There_Goes_My_Heart",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/There_Goes_My_Heart",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "There_Goes_My_Heart",
+      "predicate": "label",
+      "object": "\"There Goes My Heart\"",
+      "subject_uri": "http://example.org/entity/There_Goes_My_Heart",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"There Goes My Heart\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 1,
+    "false_positives": 9,
+    "false_negatives": 1,
+    "precision": 0.1,
+    "recall": 0.5,
+    "f1": 0.16666666666666669
+  },
+  "stage": "pre_inference"
+}

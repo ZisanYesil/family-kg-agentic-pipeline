@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/230/originals/extracted_230.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/230/ground_truth_230.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/university_of_maryland_college_park": "http://example.org/entity/University_of_Maryland_College_Park",
+    "http://example.org/extracted/jim_henson": "http://example.org/entity/Jim_Henson",
+    "http://example.org/extracted/the_muppets_on_puppets": "http://example.org/entity/The_Muppets_on_Puppets"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/jim_henson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jim Henson",
+          "source": "label"
+        }
+      ],
+      "context": "Jim Henson. has educated at: University of Maryland, College Park. inverse has creator: The Muppets on Puppets.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jim_Henson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jim Henson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jim Henson",
+        "extracted_source": "label",
+        "ground_truth_text": "Jim Henson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9977381825447083,
+      "graph_score": 0.9988690614700317,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_muppets_on_puppets",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Muppets on Puppets",
+          "source": "label"
+        }
+      ],
+      "context": "The Muppets on Puppets. has creator: Jim Henson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Muppets_on_Puppets",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Muppets on Puppets",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Muppets on Puppets",
+        "extracted_source": "label",
+        "ground_truth_text": "The Muppets on Puppets",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/university_of_maryland_college_park",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "University of Maryland, College Park",
+          "source": "label"
+        },
+        {
+          "text": "university of maryland college park",
+          "source": "uri"
+        }
+      ],
+      "context": "University of Maryland, College Park. inverse has educated at: Jim Henson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/University_of_Maryland_College_Park",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "University of Maryland College Park",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "University of Maryland, College Park",
+        "extracted_source": "label",
+        "ground_truth_text": "University of Maryland College Park",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9920587539672852,
+      "string_score": 0.9936619997024536,
+      "independent_identity_support": true,
+      "context_score": 0.9958353042602539,
+      "graph_score": 0.997917652130127,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

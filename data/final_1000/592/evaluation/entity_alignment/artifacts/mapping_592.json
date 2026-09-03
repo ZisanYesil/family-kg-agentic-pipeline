@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/592/originals/extracted_592.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/592/ground_truth_592.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/vujadin_boskov": "http://example.org/entity/Vujadin_Boškov",
+    "http://example.org/extracted/william_holaday": "http://example.org/entity/William_P_Holaday"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/vujadin_boskov",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vujadin Boškov",
+          "source": "label"
+        },
+        {
+          "text": "vujadin boskov",
+          "source": "uri"
+        }
+      ],
+      "context": "Vujadin Boškov. has birth date: 1931-05-16. has death date: 2014-04-27.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vujadin_Boškov",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vujadin Boškov",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vujadin Boškov",
+        "extracted_source": "label",
+        "ground_truth_text": "Vujadin Boškov",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6696183681488037
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/william_holaday",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William P. Holaday",
+          "source": "label"
+        },
+        {
+          "text": "william holaday",
+          "source": "uri"
+        }
+      ],
+      "context": "William P. Holaday. has birth date: 1882-12-14. has death date: 1946-01-29.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_P_Holaday",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William P Holaday",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William P. Holaday",
+        "extracted_source": "label",
+        "ground_truth_text": "William P Holaday",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9884182214736938,
+      "string_score": 0.9871428608894348,
+      "independent_identity_support": true,
+      "context_score": 0.995771050453186,
+      "graph_score": 0.995771050453186,
+      "margin": 0.7115201354026794
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,19 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Maria_Gloria_Macaraeg_Macapagal_Arroyo a ex:Agent,
+        ex:Person ;
+    ex:hasEmployer entity:Ateneo .
+
+entity:Ateneo a ex:Agent,
+        ex:Organization .
+
+entity:Mikey_Arroyo a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Gloria_Macapagal_Arroyo ;
+    ex:hasParent entity:Gloria_Macapagal_Arroyo .
+
+entity:Gloria_Macapagal_Arroyo a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Mikey_Arroyo .
+

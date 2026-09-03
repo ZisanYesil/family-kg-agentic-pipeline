@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/921/originals/extracted_921.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/921/ground_truth_921.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_richard_j_lewis": "http://example.org/entity/Richard_J_Lewis",
+    "http://example.org/extracted/film_k9_pi": "http://example.org/entity/K_9_P_I"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_k9_pi",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "K-9: P.I.",
+          "source": "label"
+        },
+        {
+          "text": "film k9 pi",
+          "source": "uri"
+        }
+      ],
+      "context": "K-9: P.I.. has director: Richard J. Lewis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/K_9_P_I",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "K 9 P I",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "K-9: P.I.",
+        "extracted_source": "label",
+        "ground_truth_text": "K 9 P I",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9069864749908447,
+      "string_score": 0.831250011920929,
+      "independent_identity_support": true,
+      "context_score": 0.9739742279052734,
+      "graph_score": 0.9869871139526367,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_richard_j_lewis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Richard J. Lewis",
+          "source": "label"
+        },
+        {
+          "text": "person richard j lewis",
+          "source": "uri"
+        }
+      ],
+      "context": "Richard J. Lewis. has birth place: Toronto, Ontario, Canada. inverse has director: K-9: P.I..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Richard_J_Lewis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Richard J Lewis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Richard J. Lewis",
+        "extracted_source": "label",
+        "ground_truth_text": "Richard J Lewis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9911948442459106,
+      "string_score": 0.9854838848114014,
+      "independent_identity_support": true,
+      "context_score": 0.9761735796928406,
+      "graph_score": 0.9880868196487427,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_toronto",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Toronto, Ontario, Canada",
+          "source": "label"
+        },
+        {
+          "text": "place toronto",
+          "source": "uri"
+        }
+      ],
+      "context": "Toronto, Ontario, Canada. inverse has birth place: Richard J. Lewis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Toronto_Ontario",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Toronto Ontario",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Toronto, Ontario, Canada",
+        "extracted_source": "label",
+        "ground_truth_text": "Toronto Ontario",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9029278755187988,
+      "name_embedding_score": 0.9046548008918762,
+      "string_score": 0.8128204941749573,
+      "independent_identity_support": true,
+      "context_score": 0.9791628122329712,
+      "graph_score": 0.9895814061164856,
+      "margin": 0.9029278755187988
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

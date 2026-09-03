@@ -1,0 +1,208 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/599/originals/extracted_599.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/599/ground_truth_599.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_island_of_doomed_men": "http://example.org/entity/Island_of_Doomed_Men",
+    "http://example.org/extracted/film_far_from_madding_crowd_2015": "http://example.org/entity/Far_from_the_Madding_Crowd_2015_film",
+    "http://example.org/extracted/country_united_kingdom": "http://example.org/entity/British",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        },
+        {
+          "text": "country united kingdom",
+          "source": "uri"
+        }
+      ],
+      "context": "British. inverse has country of origin: Far From The Madding Crowd (2015 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "British",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9811859130859375,
+      "graph_score": 0.9905929565429688,
+      "margin": 0.6755061745643616
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has country of origin: Island of Doomed Men.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6782000064849854
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_far_from_madding_crowd_2015",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Far From The Madding Crowd (2015 film)",
+          "source": "label"
+        },
+        {
+          "text": "film far from madding crowd 2015",
+          "source": "uri"
+        }
+      ],
+      "context": "Far From The Madding Crowd (2015 film). has country of origin: British.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Far_from_the_Madding_Crowd_2015_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Far from the Madding Crowd 2015 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Far From The Madding Crowd (2015 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Far from the Madding Crowd 2015 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9628348350524902,
+      "string_score": 0.9878378510475159,
+      "independent_identity_support": true,
+      "context_score": 0.9614860415458679,
+      "graph_score": 0.9807430505752563,
+      "margin": 0.7902168929576874
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_island_of_doomed_men",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Island of Doomed Men",
+          "source": "label"
+        },
+        {
+          "text": "film island of doomed men",
+          "source": "uri"
+        }
+      ],
+      "context": "Island of Doomed Men. has country of origin: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Island_of_Doomed_Men",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Island of Doomed Men",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Island of Doomed Men",
+        "extracted_source": "label",
+        "ground_truth_text": "Island of Doomed Men",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.6762473285198212
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

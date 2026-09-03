@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Reunion_at_Fairborough> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/entity/Herbert_Wise> ;
+    ex:hasDirector <http://example.org/entity/Herbert_Wise> .
+
+<http://example.org/entity/Susannah_Wise> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/entity/Herbert_Wise> .
+
+<http://example.org/extracted/charlie_walker_wise> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/entity/Herbert_Wise> .
+
+<http://example.org/entity/Herbert_Wise> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Susannah_Wise>,
+        <http://example.org/extracted/charlie_walker_wise> .
+

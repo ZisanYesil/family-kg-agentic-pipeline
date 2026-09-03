@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:gerry_neugebauer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gerhart \"Gerry\" Neugebauer" ;
+    onto:hasSpouse data:marcia_neugebauer ;
+    skos:altLabel "Gerry Neugebauer" .
+
+data:marcia_neugebauer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marcia Neugebauer" ;
+    onto:hasBirthPlace data:new_york_city .
+
+data:new_york_city a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "New York City" .
+

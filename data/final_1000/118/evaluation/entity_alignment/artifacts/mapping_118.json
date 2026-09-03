@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/118/originals/extracted_118.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/118/ground_truth_118.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ruffine_tsiranana": "http://example.org/entity/Ruffine_Tsiranana",
+    "http://example.org/extracted/justine_tsiranana": "http://example.org/entity/Justine_Tsiranana"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/justine_tsiranana",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Justine Kalotody",
+          "source": "altLabel"
+        },
+        {
+          "text": "Justine Tsiranana",
+          "source": "label"
+        }
+      ],
+      "context": "Justine Kalotody. has death date: 1999-07-01. inverse has mother: Ruffine Tsiranana.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Justine_Tsiranana",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Justine Tsiranana",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Justine Tsiranana",
+        "extracted_source": "label",
+        "ground_truth_text": "Justine Tsiranana",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.851229190826416,
+      "graph_score": 0.925614595413208,
+      "margin": 0.42810213565826416
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ruffine_tsiranana",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ruffine Tsiranana",
+          "source": "label"
+        }
+      ],
+      "context": "Ruffine Tsiranana. has mother: Justine Kalotody.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ruffine_Tsiranana",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ruffine Tsiranana",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ruffine Tsiranana",
+        "extracted_source": "label",
+        "ground_truth_text": "Ruffine Tsiranana",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9046152830123901,
+      "graph_score": 0.9523076415061951,
+      "margin": 0.41441959142684937
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

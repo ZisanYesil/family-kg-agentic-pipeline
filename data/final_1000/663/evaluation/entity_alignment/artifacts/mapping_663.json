@@ -1,0 +1,140 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/663/originals/extracted_663.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/663/ground_truth_663.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/tauheed_railway_station": "http://example.org/entity/Tauheed_railway_station",
+    "http://example.org/extracted/tamluk_junction_railway_station": "http://example.org/entity/Tamluk_Junction_railway_station"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/tamluk_junction_railway_station",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tamluk Junction railway station",
+          "source": "label"
+        }
+      ],
+      "context": "Tamluk Junction railway station. has country: India.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tamluk_Junction_railway_station",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tamluk Junction railway station",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tamluk Junction railway station",
+        "extracted_source": "label",
+        "ground_truth_text": "Tamluk Junction railway station",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9897047877311707,
+      "graph_score": 0.9897047877311707,
+      "margin": 0.3253694772720337
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tauheed_railway_station",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tauheed railway station",
+          "source": "label"
+        }
+      ],
+      "context": "Tauheed railway station. has country: India.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tauheed_railway_station",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tauheed railway station",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tauheed railway station",
+        "extracted_source": "label",
+        "ground_truth_text": "Tauheed railway station",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9901235699653625,
+      "graph_score": 0.9901235699653625,
+      "margin": 0.3344886898994446
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/india",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "India",
+          "source": "label"
+        }
+      ],
+      "context": "India. inverse has country: Tamluk Junction railway station. inverse has country: Tauheed railway station.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Indian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Indian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "India",
+        "extracted_source": "label",
+        "ground_truth_text": "Indian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.823479950428009,
+      "name_embedding_score": 0.9436163902282715,
+      "string_score": 0.40909090638160706,
+      "independent_identity_support": false,
+      "context_score": 0.9951921105384827,
+      "graph_score": 0.997596025466919,
+      "margin": 0.6698670238256454
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

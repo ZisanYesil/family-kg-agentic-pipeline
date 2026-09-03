@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/We_Write_the_Story> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "We Write the Story" ;
+    onto:hasComposer <http://example.org/entity/Avicii> .
+
+<http://example.org/entity/Avicii> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tim Bergling" ;
+    onto:hasDeathPlace <http://example.org/entity/Muscat> ;
+    skos:altLabel "Avicii" .
+
+<http://example.org/entity/Muscat> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Muscat, Oman" .
+

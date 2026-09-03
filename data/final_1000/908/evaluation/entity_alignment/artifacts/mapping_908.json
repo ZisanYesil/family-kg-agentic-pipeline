@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/908/originals/extracted_908.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/908/ground_truth_908.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/herod_agrippa_i": "http://example.org/entity/Herod_Agrippa",
+    "http://example.org/extracted/aristobulus_iv": "http://example.org/entity/Aristobulus_IV",
+    "http://example.org/extracted/mariamne": "http://example.org/entity/Mariamne"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/aristobulus_iv",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Aristobulus IV",
+          "source": "label"
+        }
+      ],
+      "context": "Aristobulus IV. inverse has father: Herod Agrippa.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Aristobulus_IV",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Aristobulus IV",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Aristobulus IV",
+        "extracted_source": "label",
+        "ground_truth_text": "Aristobulus IV",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.6322052180767059
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/herod_agrippa_i",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Herod Agrippa",
+          "source": "altLabel"
+        },
+        {
+          "text": "Herod Agrippa I",
+          "source": "label"
+        }
+      ],
+      "context": "Herod Agrippa. has father: Aristobulus IV. inverse has father: Mariamne (daughter of Herod Agrippa).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Herod_Agrippa",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Herod Agrippa",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Herod Agrippa",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Herod Agrippa",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9594840407371521,
+      "graph_score": 0.9797420501708984,
+      "margin": 0.5944523811340332
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mariamne",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mariamne (daughter of Herod Agrippa)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Mariamne",
+          "source": "label"
+        }
+      ],
+      "context": "Mariamne (daughter of Herod Agrippa). has father: Herod Agrippa.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mariamne",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mariamne",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mariamne",
+        "extracted_source": "label",
+        "ground_truth_text": "Mariamne",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9311757683753967,
+      "graph_score": 0.965587854385376,
+      "margin": 0.4197455048561096
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

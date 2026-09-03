@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_one_day_in_europe a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "One Day in Europe" ;
+    onto:hasDirector data:person_hannes_stoehr .
+
+data:institution_deutsche_film_und_fernsehakademie_berlin a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Deutsche Film- und Fernsehakademie Berlin" .
+
+data:person_hannes_stoehr a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Hannes Stöhr" ;
+    onto:hasEducatedAt data:institution_deutsche_film_und_fernsehakademie_berlin .
+

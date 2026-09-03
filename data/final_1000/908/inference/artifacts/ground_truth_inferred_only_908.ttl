@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Aristobulus_IV a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Herod_Agrippa .
+
+entity:Mariamne a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Herod_Agrippa .
+
+entity:Herod_Agrippa a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Mariamne ;
+    ex:hasParent entity:Aristobulus_IV .
+

@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:alice_gerstenberg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alice Gerstenberg" ;
+    onto:hasNationality data:united_states ;
+    skos:altLabel "Alice Gerstenberg" .
+
+data:nastia_liukin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Nastia Liukin" ;
+    onto:hasNationality data:united_states ;
+    skos:altLabel "Nastia Liukin" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American",
+        "United States" .
+

@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Creditors a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Ben_Cura ;
+    ex:hasDirector entity:Ben_Cura .
+
+entity:Argentine a ex:Country,
+        ex:Place .
+
+entity:Ben_Cura a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:Argentine ;
+    ex:hasCountry entity:Argentine .
+

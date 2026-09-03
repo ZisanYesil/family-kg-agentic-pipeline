@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/275/originals/extracted_275.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/275/ground_truth_275.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/brand_new_immortals": "http://example.org/entity/Brand_New_Immortals",
+    "http://example.org/extracted/david_ryan_harris": "http://example.org/entity/David_Ryan_Harris",
+    "http://example.org/extracted/evanston_illinois": "http://example.org/entity/Evanston_Illinois"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/brand_new_immortals",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Brand New Immortals",
+          "source": "label"
+        }
+      ],
+      "context": "Brand New Immortals. has founder: David Ryan Harris.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Brand_New_Immortals",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Brand New Immortals",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Brand New Immortals",
+        "extracted_source": "label",
+        "ground_truth_text": "Brand New Immortals",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9394052624702454,
+      "graph_score": 0.4697026312351227,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/david_ryan_harris",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Ryan Harris",
+          "source": "label"
+        }
+      ],
+      "context": "David Ryan Harris. has birth place: Evanston, Illinois. inverse has founder: Brand New Immortals.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/David_Ryan_Harris",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "David Ryan Harris",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "David Ryan Harris",
+        "extracted_source": "label",
+        "ground_truth_text": "David Ryan Harris",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.957217276096344,
+      "graph_score": 0.6452752947807312,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/evanston_illinois",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Evanston, Illinois",
+          "source": "label"
+        },
+        {
+          "text": "evanston illinois",
+          "source": "uri"
+        }
+      ],
+      "context": "Evanston, Illinois. inverse has birth place: David Ryan Harris.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Evanston_Illinois",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Evanston Illinois",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Evanston, Illinois",
+        "extracted_source": "label",
+        "ground_truth_text": "Evanston Illinois",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9714453816413879,
+      "string_score": 0.9871428608894348,
+      "independent_identity_support": true,
+      "context_score": 0.9924553632736206,
+      "graph_score": 0.9962276816368103,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

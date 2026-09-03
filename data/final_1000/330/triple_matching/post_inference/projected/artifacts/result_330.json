@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/330/evaluation/entity_alignment/final_extracted_aligned_330.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/330/evaluation/entity_alignment/final_ground_truth_aligned_330.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Drogo_of_Champagne",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Drogo_of_Champagne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Drogo_of_Champagne",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Drogo_of_Champagne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Pepin_of_Herstal",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Pepin_of_Herstal",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Drogo_of_Champagne",
+      "predicate": "hasParent",
+      "object": "Plectrudis",
+      "subject_uri": "http://example.org/entity/Drogo_of_Champagne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Plectrudis"
+    },
+    {
+      "subject": "Pepin_of_Herstal",
+      "predicate": "hasSpouse",
+      "object": "Plectrude",
+      "subject_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Plectrude"
+    },
+    {
+      "subject": "Plectrude",
+      "predicate": "hasSpouse",
+      "object": "Pepin_of_Herstal",
+      "subject_uri": "http://example.org/entity/Plectrude",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Pepin_of_Herstal"
+    },
+    {
+      "subject": "Plectrude",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Plectrude",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Plectrude",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Plectrude",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Plectrudis",
+      "predicate": "hasChild",
+      "object": "Drogo_of_Champagne",
+      "subject_uri": "http://example.org/entity/Plectrudis",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Drogo_of_Champagne"
+    },
+    {
+      "subject": "Plectrudis",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Plectrudis",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Plectrudis",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Plectrudis",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Drogo_of_Champagne",
+      "predicate": "hasChild",
+      "object": "Pepin_of_Herstal",
+      "subject_uri": "http://example.org/entity/Drogo_of_Champagne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Pepin_of_Herstal"
+    },
+    {
+      "subject": "Pepin_of_Herstal",
+      "predicate": "hasParent",
+      "object": "Drogo_of_Champagne",
+      "subject_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Drogo_of_Champagne"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 12,
+    "union_triples_in_scope": 14,
+    "true_positives": 4,
+    "false_positives": 2,
+    "false_negatives": 8,
+    "precision": 0.6666666666666666,
+    "recall": 0.3333333333333333,
+    "f1": 0.4444444444444444
+  },
+  "stage": "post_inference"
+}

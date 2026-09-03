@@ -1,0 +1,247 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/66/originals/extracted_66.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/66/ground_truth_66.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_maury_dexter": "http://example.org/entity/Maury_Dexter",
+    "http://example.org/extracted/film_the_young_animals": "http://example.org/entity/The_Young_Animals",
+    "http://example.org/extracted/film_a_south_sea_bubble": "http://example.org/entity/A_South_Sea_Bubble",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/American",
+    "http://example.org/extracted/person_t_hayes_hunter": "http://example.org/entity/T_Hayes_Hunter"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has nationality: Maury Dexter. inverse has nationality: T. Hayes Hunter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.92405104637146,
+      "graph_score": 0.46202552318573,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_a_south_sea_bubble",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A South Sea Bubble",
+          "source": "label"
+        },
+        {
+          "text": "film a south sea bubble",
+          "source": "uri"
+        }
+      ],
+      "context": "A South Sea Bubble. has director: T. Hayes Hunter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_South_Sea_Bubble",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A South Sea Bubble",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A South Sea Bubble",
+        "extracted_source": "label",
+        "ground_truth_text": "A South Sea Bubble",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9957509636878967,
+      "graph_score": 0.997875452041626,
+      "margin": 0.8777273967862129
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_young_animals",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Young Animals",
+          "source": "label"
+        },
+        {
+          "text": "film the young animals",
+          "source": "uri"
+        }
+      ],
+      "context": "The Young Animals. has director: Maury Dexter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Young_Animals",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Young Animals",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Young Animals",
+        "extracted_source": "label",
+        "ground_truth_text": "The Young Animals",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8701089918613434
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_maury_dexter",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maury Dexter",
+          "source": "label"
+        },
+        {
+          "text": "person maury dexter",
+          "source": "uri"
+        }
+      ],
+      "context": "Maury Dexter. has nationality: American. inverse has director: The Young Animals.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maury_Dexter",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maury Dexter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maury Dexter",
+        "extracted_source": "label",
+        "ground_truth_text": "Maury Dexter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9556760787963867,
+      "graph_score": 0.644504725933075,
+      "margin": 0.7475334703922272
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_t_hayes_hunter",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "T. Hayes Hunter",
+          "source": "label"
+        },
+        {
+          "text": "person t hayes hunter",
+          "source": "uri"
+        }
+      ],
+      "context": "T. Hayes Hunter. has nationality: American. inverse has director: A South Sea Bubble.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/T_Hayes_Hunter",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "T Hayes Hunter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "T. Hayes Hunter",
+        "extracted_source": "label",
+        "ground_truth_text": "T Hayes Hunter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9818413257598877,
+      "string_score": 0.9844827651977539,
+      "independent_identity_support": true,
+      "context_score": 0.9441949129104614,
+      "graph_score": 0.6387641429901123,
+      "margin": 0.7339776754379272
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/17/evaluation/entity_alignment/baseline_extracted_aligned_17.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/17/evaluation/entity_alignment/baseline_ground_truth_aligned_17.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Charles_Willoughby_10th_Baron_Willoughby_of_Parham",
+      "predicate": "hasParent",
+      "object": "William_Willoughby",
+      "subject_uri": "http://example.org/entity/Charles_Willoughby_10th_Baron_Willoughby_of_Parham",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/William_Willoughby"
+    },
+    {
+      "subject": "William_Willoughby",
+      "predicate": "hasParent",
+      "object": "Lady_Frances_Manners",
+      "subject_uri": "http://example.org/entity/William_Willoughby",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Lady_Frances_Manners"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Charles_Willoughby_10th_Baron_Willoughby_of_Parham",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Charles_Willoughby_10th_Baron_Willoughby_of_Parham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Charles_Willoughby_10th_Baron_Willoughby_of_Parham",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Charles_Willoughby_10th_Baron_Willoughby_of_Parham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Charles_Willoughby_10th_Baron_Willoughby_of_Parham",
+      "predicate": "label",
+      "object": "\"Charles Willoughby, 10th Baron Willoughby of Parham\"",
+      "subject_uri": "http://example.org/entity/Charles_Willoughby_10th_Baron_Willoughby_of_Parham",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Charles Willoughby, 10th Baron Willoughby of Parham\""
+    },
+    {
+      "subject": "Lady_Frances_Manners",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Lady_Frances_Manners",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Lady_Frances_Manners",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lady_Frances_Manners",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lady_Frances_Manners",
+      "predicate": "label",
+      "object": "\"Frances Manners\"",
+      "subject_uri": "http://example.org/entity/Lady_Frances_Manners",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Frances Manners\""
+    },
+    {
+      "subject": "William_Willoughby",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/William_Willoughby",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "William_Willoughby",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/William_Willoughby",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "William_Willoughby",
+      "predicate": "label",
+      "object": "\"William Willoughby, 6th Baron Willoughby of Parham\"",
+      "subject_uri": "http://example.org/entity/William_Willoughby",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"William Willoughby, 6th Baron Willoughby of Parham\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

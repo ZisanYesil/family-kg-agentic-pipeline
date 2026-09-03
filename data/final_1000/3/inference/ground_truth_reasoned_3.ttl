@@ -1,0 +1,13 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Jean_Martin a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:William_Black .
+
+entity:William_Black a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "1983"^^xsd:gYear ;
+    ex:hasSpouse entity:Jean_Martin .
+

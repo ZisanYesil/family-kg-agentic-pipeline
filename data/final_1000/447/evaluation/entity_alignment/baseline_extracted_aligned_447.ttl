@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Dexter_Scott_King> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Dexter Scott King" ;
+    onto:hasMother <http://example.org/entity/Coretta_Scott_King> ;
+    skos:altLabel "Dexter King" .
+
+<http://example.org/entity/Coretta_Scott_King> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Coretta Scott King" ;
+    onto:hasBurialPlace data:king_center ;
+    skos:altLabel "Coretta Scott King" .
+
+data:king_center a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "King Center" ;
+    skos:altLabel "King Center grounds" .
+

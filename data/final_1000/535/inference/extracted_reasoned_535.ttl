@@ -1,0 +1,18 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/robert_de_brus_4th_lord> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/extracted/william_de_brus_3rd_lord> ;
+    ex:hasParent <http://example.org/extracted/william_de_brus_3rd_lord> .
+
+<http://example.org/extracted/robert_de_brus_uncle> a ex:Agent,
+        ex:Person ;
+    ex:hasSibling <http://example.org/extracted/william_de_brus_3rd_lord> ;
+    ex:isBrotherOf <http://example.org/extracted/william_de_brus_3rd_lord> .
+
+<http://example.org/extracted/william_de_brus_3rd_lord> a ex:Agent,
+        ex:Person ;
+    ex:hasBrother <http://example.org/extracted/robert_de_brus_uncle> ;
+    ex:hasChild <http://example.org/extracted/robert_de_brus_4th_lord> ;
+    ex:hasSibling <http://example.org/extracted/robert_de_brus_uncle> .
+

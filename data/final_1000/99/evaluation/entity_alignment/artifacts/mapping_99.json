@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/99/originals/extracted_99.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/99/ground_truth_99.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/gofraid_ua_imir": "http://example.org/entity/Gofraid_ua_Ímair",
+    "http://example.org/extracted/olaf_guthfrithson": "http://example.org/entity/Olaf_Guthfrithson",
+    "http://example.org/extracted/blacaire_mac_gofraid": "http://example.org/entity/Blácaire_mac_Gofraid"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/blacaire_mac_gofraid",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Blácaire mac Gofraid",
+          "source": "label"
+        },
+        {
+          "text": "blacaire mac gofraid",
+          "source": "uri"
+        }
+      ],
+      "context": "Blácaire mac Gofraid. inverse has brother: Olaf Guthfrithson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Blácaire_mac_Gofraid",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Blácaire mac Gofraid",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Blácaire mac Gofraid",
+        "extracted_source": "label",
+        "ground_truth_text": "Blácaire mac Gofraid",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7621956467628479,
+      "graph_score": 0.38109782338142395,
+      "margin": 0.3159584403038025
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/gofraid_ua_imir",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gofraid ua Ímair",
+          "source": "label"
+        },
+        {
+          "text": "gofraid ua imir",
+          "source": "uri"
+        }
+      ],
+      "context": "Gofraid ua Ímair. has son: Olaf Guthfrithson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gofraid_ua_Ímair",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gofraid ua Ímair",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gofraid ua Ímair",
+        "extracted_source": "label",
+        "ground_truth_text": "Gofraid ua Ímair",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9396143555641174,
+      "graph_score": 0.4698071777820587,
+      "margin": 0.5132941603660583
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/olaf_guthfrithson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Olaf Guthfrithson",
+          "source": "label"
+        }
+      ],
+      "context": "Olaf Guthfrithson. has brother: Blácaire mac Gofraid. inverse has son: Gofraid ua Ímair.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Olaf_Guthfrithson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Olaf Guthfrithson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Olaf Guthfrithson",
+        "extracted_source": "label",
+        "ground_truth_text": "Olaf Guthfrithson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8946561217308044,
+      "graph_score": 0.4473280608654022,
+      "margin": 0.6409023404121399
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Amlaíb_mac_Gofraid"
+  ]
+}

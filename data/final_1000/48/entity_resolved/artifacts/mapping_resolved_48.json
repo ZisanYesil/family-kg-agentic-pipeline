@@ -1,0 +1,75 @@
+{
+  "_source_extraction_sha256": "d3fffd58d7ec235085ccd153e974a3d660fc2380aac63c7880f9bb6dfd2f8a58",
+  "entities": [
+    {
+      "id": "film_mary_janes_pa",
+      "label": "Mary Jane's Pa",
+      "type": "Film",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "person_william_keighley",
+      "label": "William Keighley",
+      "type": "Person",
+      "aliases": [
+        "William Jackson Keighley"
+      ],
+      "attributes": {
+        "hasBirthDate": "1889-08-04",
+        "hasDeathDate": "1984-06-24",
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "place_new_york_ny",
+      "label": "New York, New York",
+      "type": "Place",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "film_mary_janes_pa",
+      "predicate": "hasDirector",
+      "object": "person_william_keighley",
+      "relation_phrase": "directed by",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "film_mary_janes_pa",
+      "source_object": "person_william_keighley",
+      "endpoints_swapped": false
+    },
+    {
+      "subject": "person_william_keighley",
+      "predicate": "hasDeathPlace",
+      "object": "place_new_york_ny",
+      "relation_phrase": "died in",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "person_william_keighley",
+      "source_object": "place_new_york_ny",
+      "endpoints_swapped": false
+    }
+  ],
+  "unmapped_relations": []
+}

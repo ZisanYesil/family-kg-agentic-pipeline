@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/591/originals/extracted_591.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/591/ground_truth_591.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/mehmed_v": "http://example.org/entity/Mehmed_V",
+    "http://example.org/extracted/kamures_kadin": "http://example.org/entity/Kamures_Kadın"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/kamures_kadin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kamures Kadın",
+          "source": "label"
+        },
+        {
+          "text": "kamures kadin",
+          "source": "uri"
+        }
+      ],
+      "context": "Kamures Kadın. has spouse: Mehmed V Reşâd.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kamures_Kadın",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kamures Kadın",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kamures Kadın",
+        "extracted_source": "label",
+        "ground_truth_text": "Kamures Kadın",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9440495371818542,
+      "graph_score": 0.9720247983932495,
+      "margin": 0.6533521711826324
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mehmed_v",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mehmed V Reşâd",
+          "source": "altLabel"
+        },
+        {
+          "text": "Mehmed V",
+          "source": "label"
+        }
+      ],
+      "context": "Mehmed V Reşâd. inverse has spouse: Kamures Kadın.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mehmed_V",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mehmed V",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mehmed V",
+        "extracted_source": "label",
+        "ground_truth_text": "Mehmed V",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7590727806091309,
+      "graph_score": 0.8795363903045654,
+      "margin": 0.7122993171215057
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Istanbul"
+  ]
+}

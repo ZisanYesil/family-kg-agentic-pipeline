@@ -1,0 +1,247 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/443/originals/extracted_443.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/443/ground_truth_443.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_chandrakant_kulkarni": "http://example.org/entity/Chandrakant_Kulkarni",
+    "http://example.org/extracted/person_p_venu": "http://example.org/entity/P_Venu",
+    "http://example.org/extracted/film_family_katta": "http://example.org/entity/Family_Katta",
+    "http://example.org/extracted/film_ward_no_7": "http://example.org/entity/Ward_No_7",
+    "http://example.org/extracted/country_india": "http://example.org/entity/India"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_india",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Indian",
+          "source": "altLabel"
+        },
+        {
+          "text": "India",
+          "source": "label"
+        },
+        {
+          "text": "country india",
+          "source": "uri"
+        }
+      ],
+      "context": "Indian. inverse has nationality: Chandrakant Kulkarni. inverse has nationality: P. Venu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/India",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "India",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "India",
+        "extracted_source": "label",
+        "ground_truth_text": "India",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8931689262390137,
+      "graph_score": 0.44658446311950684,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_family_katta",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Family Katta",
+          "source": "label"
+        },
+        {
+          "text": "film family katta",
+          "source": "uri"
+        }
+      ],
+      "context": "Family Katta. has director: Chandrakant Kulkarni.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Family_Katta",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Family Katta",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Family Katta",
+        "extracted_source": "label",
+        "ground_truth_text": "Family Katta",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8308263272047043
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_ward_no_7",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ward No.7",
+          "source": "label"
+        },
+        {
+          "text": "film ward no 7",
+          "source": "uri"
+        }
+      ],
+      "context": "Ward No.7. has director: P. Venu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ward_No_7",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ward No 7",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ward No.7",
+        "extracted_source": "label",
+        "ground_truth_text": "Ward No 7",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9748234748840332,
+      "string_score": 0.949999988079071,
+      "independent_identity_support": true,
+      "context_score": 0.9757005572319031,
+      "graph_score": 0.9878503084182739,
+      "margin": 0.8328012973070145
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_chandrakant_kulkarni",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chandrakant Kulkarni",
+          "source": "label"
+        },
+        {
+          "text": "person chandrakant kulkarni",
+          "source": "uri"
+        }
+      ],
+      "context": "Chandrakant Kulkarni. has nationality: Indian. inverse has director: Family Katta.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chandrakant_Kulkarni",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chandrakant Kulkarni",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chandrakant Kulkarni",
+        "extracted_source": "label",
+        "ground_truth_text": "Chandrakant Kulkarni",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9395302534103394,
+      "graph_score": 0.6364318132400513,
+      "margin": 0.6498580276966095
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_p_venu",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "P. Venu",
+          "source": "label"
+        },
+        {
+          "text": "person p venu",
+          "source": "uri"
+        }
+      ],
+      "context": "P. Venu. has nationality: Indian. inverse has director: Ward No.7.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/P_Venu",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "P Venu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "P. Venu",
+        "extracted_source": "label",
+        "ground_truth_text": "P Venu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9209377765655518,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9110137820243835,
+      "graph_score": 0.622173547744751,
+      "margin": 0.6287614405155182
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

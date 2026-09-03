@@ -1,0 +1,35 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:michael_d_antonovich a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Michael D. Antonovich" ;
+    onto:hasOccupation data:occupation_politician .
+
+data:peter_mate_pop a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Péter Máté (pop singer)" ;
+    onto:hasOccupation data:occupation_composer,
+        data:occupation_pianist,
+        data:occupation_pop_singer ;
+    skos:altLabel "Péter Máté" .
+
+data:occupation_composer a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "composer" .
+
+data:occupation_pianist a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "pianist" .
+
+data:occupation_politician a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "politician" .
+
+data:occupation_pop_singer a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "pop singer" .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:agrippina_the_younger a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Agrippina the Younger" ;
+    onto:hasMother data:agrippina_the_elder .
+
+data:agrippina_the_elder a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Agrippina the Elder" ;
+    onto:hasCauseOfDeath data:starvation .
+
+data:starvation a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "starvation" .
+

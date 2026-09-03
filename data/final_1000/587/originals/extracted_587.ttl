@@ -1,0 +1,29 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:griha_pravesh a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Griha Pravesh" ;
+    onto:hasDirector data:basu_bhattacharya .
+
+data:aditya_bhattacharya a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Aditya Bhattacharya" .
+
+data:anwesha_arya a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Anwesha Arya" .
+
+data:basu_bhattacharya a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Basu Bhattacharya" ;
+    onto:hasDaughter data:anwesha_arya,
+        data:chimmu ;
+    onto:hasSon data:aditya_bhattacharya .
+
+data:chimmu a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Chimmu" .
+

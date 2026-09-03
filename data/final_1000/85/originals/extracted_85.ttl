@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:alexandre_3rd_prince_of_wagram a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alexandre Berthier, 3rd Prince of Wagram" ;
+    onto:hasFather data:napoleon_alexandre_berthier ;
+    skos:altLabel "Louis Philippe Marie \"Alexandre\" Berthier" .
+
+data:duchess_maria_elisabeth_in_bavaria a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Duchess Maria Elisabeth in Bavaria" .
+
+data:napoleon_alexandre_berthier a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Napoléon Alexandre Berthier" ;
+    onto:hasMother data:duchess_maria_elisabeth_in_bavaria ;
+    skos:altLabel "Napoléon Alexandre Louis Joseph Berthier" .
+

@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/662/originals/extracted_662.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/662/ground_truth_662.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/philip_iii_of_france": "http://example.org/entity/Philip_III_of_France",
+    "http://example.org/extracted/perpignan": "http://example.org/entity/Perpignan"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/perpignan",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Perpignan",
+          "source": "label"
+        }
+      ],
+      "context": "Perpignan. inverse has death place: Philip III of France.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Perpignan",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Perpignan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Perpignan",
+        "extracted_source": "label",
+        "ground_truth_text": "Perpignan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/philip_iii_of_france",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Philip III of France",
+          "source": "label"
+        }
+      ],
+      "context": "Philip III of France. has death place: Perpignan. has father: Louis of France (1264–1276).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Philip_III_of_France",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Philip III of France",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Philip III of France",
+        "extracted_source": "label",
+        "ground_truth_text": "Philip III of France",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9430068135261536,
+      "graph_score": 0.9715033769607544,
+      "margin": 0.41575759649276733
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_of_france_1264",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis of France (1264–1276)",
+          "source": "label"
+        },
+        {
+          "text": "louis of france 1264",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis of France (1264–1276). inverse has father: Philip III of France.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_of_France",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis of France",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis of France (1264–1276)",
+        "extracted_source": "label",
+        "ground_truth_text": "Louis of France",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.740889847278595,
+      "name_embedding_score": 0.8820424675941467,
+      "string_score": 0.7714285850524902,
+      "independent_identity_support": true,
+      "context_score": 0.8560919165611267,
+      "graph_score": 0.42804595828056335,
+      "margin": 0.18257087469100952
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

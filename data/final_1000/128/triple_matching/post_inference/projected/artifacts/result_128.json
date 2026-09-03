@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/128/evaluation/entity_alignment/final_extracted_aligned_128.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/128/evaluation/entity_alignment/final_ground_truth_aligned_128.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "English",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/English",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "English",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/English",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Leicester_Devereux_6th_Viscount_Hereford",
+      "predicate": "hasParent",
+      "object": "Walter_Devereux_5th_Viscount_Hereford",
+      "subject_uri": "http://example.org/entity/Leicester_Devereux_6th_Viscount_Hereford",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Walter_Devereux_5th_Viscount_Hereford"
+    },
+    {
+      "subject": "Leicester_Devereux_6th_Viscount_Hereford",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Leicester_Devereux_6th_Viscount_Hereford",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Leicester_Devereux_6th_Viscount_Hereford",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Leicester_Devereux_6th_Viscount_Hereford",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Walter_Devereux_5th_Viscount_Hereford",
+      "predicate": "hasChild",
+      "object": "Leicester_Devereux_6th_Viscount_Hereford",
+      "subject_uri": "http://example.org/entity/Walter_Devereux_5th_Viscount_Hereford",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Leicester_Devereux_6th_Viscount_Hereford"
+    },
+    {
+      "subject": "Walter_Devereux_5th_Viscount_Hereford",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Walter_Devereux_5th_Viscount_Hereford",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Walter_Devereux_5th_Viscount_Hereford",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Walter_Devereux_5th_Viscount_Hereford",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Walter_Devereux",
+      "predicate": "hasCountry",
+      "object": "English",
+      "subject_uri": "http://example.org/entity/Walter_Devereux",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/English"
+    },
+    {
+      "subject": "Walter_Devereux",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Walter_Devereux",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Walter_Devereux",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Walter_Devereux",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Walter_Devereux_5th_Viscount_Hereford",
+      "predicate": "hasCountry",
+      "object": "English",
+      "subject_uri": "http://example.org/entity/Walter_Devereux_5th_Viscount_Hereford",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/English"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 11,
+    "union_triples_in_scope": 12,
+    "true_positives": 8,
+    "false_positives": 1,
+    "false_negatives": 3,
+    "precision": 0.8888888888888888,
+    "recall": 0.7272727272727273,
+    "f1": 0.7999999999999999
+  },
+  "stage": "post_inference"
+}

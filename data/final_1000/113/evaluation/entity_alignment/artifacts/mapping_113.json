@@ -1,0 +1,234 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/113/originals/extracted_113.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/113/ground_truth_113.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/franklyn_barrett": "http://example.org/entity/Franklyn_Barrett",
+    "http://example.org/extracted/paul_scardon": "http://example.org/entity/Paul_Scardon",
+    "http://example.org/extracted/film_a_rough_passage": "http://example.org/entity/A_Rough_Passage",
+    "http://example.org/extracted/australia": "http://example.org/entity/Australian"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/australia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Australian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Australia",
+          "source": "label"
+        }
+      ],
+      "context": "Australian. inverse has nationality: Franklyn Barrett.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Australian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Australian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Australian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Australian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8318864703178406,
+      "graph_score": 0.4159432351589203,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_a_rough_passage",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A Rough Passage",
+          "source": "label"
+        },
+        {
+          "text": "film a rough passage",
+          "source": "uri"
+        }
+      ],
+      "context": "A Rough Passage. has director: Franklyn Barrett.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Rough_Passage",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Rough Passage",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Rough Passage",
+        "extracted_source": "label",
+        "ground_truth_text": "A Rough Passage",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.7178233563899994
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/franklyn_barrett",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Franklyn Barrett",
+          "source": "label"
+        }
+      ],
+      "context": "Franklyn Barrett. has nationality: Australian. inverse has director: A Rough Passage.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Franklyn_Barrett",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Franklyn Barrett",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Franklyn Barrett",
+        "extracted_source": "label",
+        "ground_truth_text": "Franklyn Barrett",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9543991684913635,
+      "graph_score": 0.643866240978241,
+      "margin": 0.6312953233718872
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/paul_scardon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Paul Scardon",
+          "source": "label"
+        }
+      ],
+      "context": "Paul Scardon. inverse has director: The Green God.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Paul_Scardon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Paul Scardon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Paul Scardon",
+        "extracted_source": "label",
+        "ground_truth_text": "Paul Scardon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7917737364768982,
+      "graph_score": 0.3958868682384491,
+      "margin": 0.6534258425235748
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_green_god",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Green God",
+          "source": "label"
+        },
+        {
+          "text": "film the green god",
+          "source": "uri"
+        }
+      ],
+      "context": "The Green God. has director: Paul Scardon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Green_God_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Green God film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film the green god",
+        "extracted_source": "uri",
+        "ground_truth_text": "The Green God film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9546777009963989,
+      "name_embedding_score": 0.9854857325553894,
+      "string_score": 0.875,
+      "independent_identity_support": true,
+      "context_score": 0.9454781413078308,
+      "graph_score": 0.9727391004562378,
+      "margin": 0.783327579498291
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

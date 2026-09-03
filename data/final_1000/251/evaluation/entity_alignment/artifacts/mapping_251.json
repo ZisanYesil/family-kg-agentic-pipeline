@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/251/originals/extracted_251.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/251/ground_truth_251.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/alam_shah": "http://example.org/entity/Alam_Shah",
+    "http://example.org/extracted/muhammad_shah": "http://example.org/entity/Muhammad_Shah",
+    "http://example.org/extracted/lodi_gardens": "http://example.org/entity/Lodi_Gardens"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alam_shah",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alam Shah",
+          "source": "label"
+        }
+      ],
+      "context": "Alam Shah. has father: Muhammad Shah.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alam_Shah",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alam Shah",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alam Shah",
+        "extracted_source": "label",
+        "ground_truth_text": "Alam Shah",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.34703320264816284
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lodi_gardens",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "New Delhi",
+          "source": "altLabel"
+        },
+        {
+          "text": "Lodi Gardens",
+          "source": "label"
+        }
+      ],
+      "context": "New Delhi. inverse has burial place: Muhammad Shah.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lodi_Gardens",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lodi Gardens",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lodi Gardens",
+        "extracted_source": "label",
+        "ground_truth_text": "Lodi Gardens",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8338215947151184,
+      "graph_score": 0.9169107675552368,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/muhammad_shah",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Muhammad Shah",
+          "source": "label"
+        }
+      ],
+      "context": "Muhammad Shah. has burial place: New Delhi. inverse has father: Alam Shah.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Muhammad_Shah",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Muhammad Shah",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Muhammad Shah",
+        "extracted_source": "label",
+        "ground_truth_text": "Muhammad Shah",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9141162037849426,
+      "graph_score": 0.9570580720901489,
+      "margin": 0.34805697202682495
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

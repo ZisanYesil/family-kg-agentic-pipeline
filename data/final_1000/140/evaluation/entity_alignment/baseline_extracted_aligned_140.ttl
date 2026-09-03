@@ -1,0 +1,25 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Duel_of_Champions> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Duel of Champions" ;
+    onto:hasCountryOfOrigin <http://example.org/entity/Italian> .
+
+<http://example.org/entity/Tarzan_the_Ape_Man_1932_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Tarzan the Ape Man (1932 film)" ;
+    onto:hasCountryOfOrigin <http://example.org/entity/American> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/Italian> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Italy" ;
+    skos:altLabel "Italian" .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:argentus a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Argentus" ;
+    onto:hasEditor data:steven_h_silver .
+
+data:hinsdale_illinois a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Hinsdale, Illinois" .
+
+data:steven_h_silver a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Steven H Silver" ;
+    onto:hasBirthPlace data:hinsdale_illinois .
+

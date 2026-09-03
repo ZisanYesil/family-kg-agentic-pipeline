@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:oveco_nunez a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Oveco Núñez" ;
+    onto:hasBrother data:bermudo_nunez .
+
+data:bermudo_nunez a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bermudo Núñez" ;
+    onto:hasSon data:fernando_bermudez_de_cea .
+
+data:fernando_bermudez_de_cea a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fernando Bermúdez de Cea" .
+

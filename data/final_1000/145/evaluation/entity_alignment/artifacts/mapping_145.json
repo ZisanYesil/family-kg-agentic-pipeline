@@ -1,0 +1,208 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/145/originals/extracted_145.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/145/ground_truth_145.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/country_argentina": "http://example.org/entity/Argentine",
+    "http://example.org/extracted/film_if_dog_rabbit": "http://example.org/entity/If_Dog_Rabbit",
+    "http://example.org/extracted/film_the_clan_2015": "http://example.org/entity/The_Clan_2015_film",
+    "http://example.org/extracted/country_us": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_argentina",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Argentine",
+          "source": "altLabel"
+        },
+        {
+          "text": "Argentina",
+          "source": "label"
+        },
+        {
+          "text": "country argentina",
+          "source": "uri"
+        }
+      ],
+      "context": "Argentine. inverse has country: The Clan (2015 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Argentine",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Argentine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Argentine",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Argentine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9614366292953491,
+      "graph_score": 0.48071831464767456,
+      "margin": 0.694227933883667
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_us",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country us",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has country: If... Dog... Rabbit....",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8983336687088013,
+      "graph_score": 0.44916683435440063,
+      "margin": 0.678825318813324
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_if_dog_rabbit",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "If... Dog... Rabbit...",
+          "source": "label"
+        },
+        {
+          "text": "film if dog rabbit",
+          "source": "uri"
+        }
+      ],
+      "context": "If... Dog... Rabbit.... has country: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/If_Dog_Rabbit",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "If Dog Rabbit",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "If... Dog... Rabbit...",
+        "extracted_source": "label",
+        "ground_truth_text": "If Dog Rabbit",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8198800683021545,
+      "string_score": 0.8842856884002686,
+      "independent_identity_support": true,
+      "context_score": 0.8575441837310791,
+      "graph_score": 0.42877209186553955,
+      "margin": 0.7840695232152939
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_clan_2015",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Clan (2015 film)",
+          "source": "label"
+        },
+        {
+          "text": "film the clan 2015",
+          "source": "uri"
+        }
+      ],
+      "context": "The Clan (2015 film). has country: Argentine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Clan_2015_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Clan 2015 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Clan (2015 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Clan 2015 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9681689143180847,
+      "string_score": 0.9763157963752747,
+      "independent_identity_support": true,
+      "context_score": 0.9553613066673279,
+      "graph_score": 0.47768065333366394,
+      "margin": 0.9226032570004463
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

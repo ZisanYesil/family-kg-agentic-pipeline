@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/519/originals/extracted_519.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/519/ground_truth_519.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/education_in_chemistry": "http://example.org/entity/Education_in_Chemistry",
+    "http://example.org/extracted/united_kingdom": "http://example.org/entity/United_Kingdom",
+    "http://example.org/extracted/royal_society_of_chemistry": "http://example.org/entity/Royal_Society_of_Chemistry"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/education_in_chemistry",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Education in Chemistry",
+          "source": "label"
+        }
+      ],
+      "context": "Education in Chemistry. has publisher: Royal Society of Chemistry.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Education_in_Chemistry",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Education in Chemistry",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Education in Chemistry",
+        "extracted_source": "label",
+        "ground_truth_text": "Education in Chemistry",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/royal_society_of_chemistry",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Royal Society of Chemistry",
+          "source": "label"
+        }
+      ],
+      "context": "Royal Society of Chemistry. has country: United Kingdom. inverse has publisher: Education in Chemistry.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Royal_Society_of_Chemistry",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Royal Society of Chemistry",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Royal Society of Chemistry",
+        "extracted_source": "label",
+        "ground_truth_text": "Royal Society of Chemistry",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "United Kingdom. inverse has country: Royal Society of Chemistry.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_Kingdom",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United Kingdom",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United Kingdom",
+        "extracted_source": "label",
+        "ground_truth_text": "United Kingdom",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

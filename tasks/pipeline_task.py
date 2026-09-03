@@ -37,6 +37,24 @@ WEBHOOK_MAX_ATTEMPTS_ENV = "WEBHOOK_MAX_ATTEMPTS"
 DEFAULT_ONTOLOGY_PATH_ENV = "DEFAULT_ONTOLOGY_PATH"
 
 
+def extraction_has_usable_facts(payload: dict[str, Any]) -> bool:
+    """Return whether an extraction can produce at least one semantic fact."""
+    entities = payload.get("entities")
+    if not isinstance(entities, list) or not entities:
+        return False
+
+    relations = payload.get("relations")
+    if isinstance(relations, list) and relations:
+        return True
+
+    return any(
+        value is not None
+        for entity in entities
+        if isinstance(entity, dict)
+        for value in (entity.get("attributes") or {}).values()
+    )
+
+
 def _max_iterations(env: Optional[Mapping[str, str]] = None) -> int:
     return _positive_int_env(MAX_ITERATIONS_ENV, DEFAULT_MAX_ITERATIONS, env)
 
@@ -212,10 +230,21 @@ def run_pipeline(self: Any, job_id: str) -> None:
 
         current_status = _transition(job_id, current_status, JobStatus.Extracting)
         try:
-            extractions = extraction_agent(job["input_text"], schema)
+            question = job.get("question")
+            if question:
+                extractions = extraction_agent(job["input_text"], schema, question=question)
+            else:
+                extractions = extraction_agent(job["input_text"], schema)
         except ExtractionAgentError as exc:
             current_status = _transition(job_id, current_status, JobStatus.Error, last_error=str(exc))
             logger.exception("extraction_agent_failed", job_id=job_id, error=str(exc))
+            _finish(job_id)
+            return
+
+        if not extraction_has_usable_facts(extractions):
+            reason = "Question-focused extraction produced no usable semantic facts"
+            current_status = _transition(job_id, current_status, JobStatus.Error, last_error=reason)
+            logger.error("pipeline_empty_extraction", job_id=job_id)
             _finish(job_id)
             return
 

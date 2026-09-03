@@ -1,0 +1,249 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/167/originals/extracted_167.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/167/ground_truth_167.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_helmut_kaeutner": "http://example.org/entity/Helmut_Käutner",
+    "http://example.org/extracted/person_georg_jacoby": "http://example.org/entity/Georg_Jacoby",
+    "http://example.org/extracted/country_germany": "http://example.org/entity/Germany",
+    "http://example.org/extracted/film_black_gravel": "http://example.org/entity/Black_Gravel",
+    "http://example.org/extracted/film_the_little_napoleon": "http://example.org/entity/The_Little_Napoleon"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 6,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "German",
+          "source": "altLabel"
+        },
+        {
+          "text": "Germany",
+          "source": "label"
+        },
+        {
+          "text": "country germany",
+          "source": "uri"
+        }
+      ],
+      "context": "German. inverse has nationality: Georg Jacoby. inverse has nationality: Helmut Käutner.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Germany",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Germany",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Germany",
+        "extracted_source": "label",
+        "ground_truth_text": "Germany",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8311876654624939,
+      "graph_score": 0.41559383273124695,
+      "margin": 0.1466752290725708
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_black_gravel",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Black Gravel",
+          "source": "label"
+        },
+        {
+          "text": "film black gravel",
+          "source": "uri"
+        }
+      ],
+      "context": "Black Gravel. has director: Helmut Käutner.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Black_Gravel",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Black Gravel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Black Gravel",
+        "extracted_source": "label",
+        "ground_truth_text": "Black Gravel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.8203327357769012
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_little_napoleon",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Little Napoleon",
+          "source": "label"
+        },
+        {
+          "text": "film the little napoleon",
+          "source": "uri"
+        }
+      ],
+      "context": "The Little Napoleon. has director: Georg Jacoby.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Little_Napoleon",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Little Napoleon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Little Napoleon",
+        "extracted_source": "label",
+        "ground_truth_text": "The Little Napoleon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.819082647562027
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_georg_jacoby",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Georg Jacoby",
+          "source": "label"
+        },
+        {
+          "text": "person georg jacoby",
+          "source": "uri"
+        }
+      ],
+      "context": "Georg Jacoby. has nationality: German. inverse has director: The Little Napoleon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Georg_Jacoby",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Georg Jacoby",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Georg Jacoby",
+        "extracted_source": "label",
+        "ground_truth_text": "Georg Jacoby",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9679813385009766,
+      "graph_score": 0.7339906692504883,
+      "margin": 0.654013991355896
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_helmut_kaeutner",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Helmut Käutner",
+          "source": "label"
+        },
+        {
+          "text": "person helmut kaeutner",
+          "source": "uri"
+        }
+      ],
+      "context": "Helmut Käutner. has nationality: German. inverse has director: Black Gravel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Helmut_Käutner",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Helmut Käutner",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Helmut Käutner",
+        "extracted_source": "label",
+        "ground_truth_text": "Helmut Käutner",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.946114718914032,
+      "graph_score": 0.6397240161895752,
+      "margin": 0.66089928150177
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/German"
+  ]
+}

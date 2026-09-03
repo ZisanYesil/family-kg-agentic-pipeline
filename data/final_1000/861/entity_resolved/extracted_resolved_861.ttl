@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:prince_christopher_of_greece_and_denmark a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Christopher of Greece and Denmark" ;
+    onto:hasFather data:king_george_i_of_greece .
+
+data:king_george_i_of_greece a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "King George I of Greece" ;
+    onto:hasDeathPlace data:thessaloniki .
+
+data:thessaloniki a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Thessaloniki" .
+

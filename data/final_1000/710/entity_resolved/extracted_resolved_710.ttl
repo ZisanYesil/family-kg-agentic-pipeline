@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_the_roller_blade_seven a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Roller Blade Seven" ;
+    onto:hasDirector data:person_donald_g_jackson .
+
+data:person_donald_g_jackson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Donald G. Jackson" ;
+    onto:hasBurialPlace data:place_westwood_village_memorial_park_cemetery .
+
+data:place_westwood_village_memorial_park_cemetery a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Westwood Village Memorial Park Cemetery" .
+

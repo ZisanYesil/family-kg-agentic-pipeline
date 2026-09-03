@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/228/evaluation/entity_alignment/baseline_extracted_aligned_228.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/228/evaluation/entity_alignment/baseline_ground_truth_aligned_228.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "2_Chainz",
+      "predicate": "hasBirthPlace",
+      "object": "College_Park_Georgia",
+      "subject_uri": "http://example.org/entity/2_Chainz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/College_Park_Georgia"
+    },
+    {
+      "subject": "Netflix",
+      "predicate": "hasPerformer",
+      "object": "2_Chainz",
+      "subject_uri": "http://example.org/entity/Netflix",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/2_Chainz"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "2_Chainz",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/2_Chainz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "2_Chainz",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/2_Chainz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "2_Chainz",
+      "predicate": "label",
+      "object": "\"Tauheed Epps\"",
+      "subject_uri": "http://example.org/entity/2_Chainz",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Tauheed Epps\""
+    },
+    {
+      "subject": "2_Chainz",
+      "predicate": "altLabel",
+      "object": "\"2 Chainz\"",
+      "subject_uri": "http://example.org/entity/2_Chainz",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"2 Chainz\""
+    },
+    {
+      "subject": "College_Park_Georgia",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/College_Park_Georgia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "College_Park_Georgia",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/College_Park_Georgia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "College_Park_Georgia",
+      "predicate": "label",
+      "object": "\"College Park, Georgia\"",
+      "subject_uri": "http://example.org/entity/College_Park_Georgia",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"College Park, Georgia\""
+    },
+    {
+      "subject": "Netflix",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Netflix",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Netflix",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Netflix",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Netflix",
+      "predicate": "label",
+      "object": "\"Netflix (song)\"",
+      "subject_uri": "http://example.org/entity/Netflix",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Netflix (song)\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

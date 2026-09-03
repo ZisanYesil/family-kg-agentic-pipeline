@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/241/originals/extracted_241.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/241/ground_truth_241.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_j_walter_ruben": "http://example.org/entity/J_Walter_Ruben",
+    "http://example.org/extracted/film_the_roadhouse_murder": "http://example.org/entity/The_Roadhouse_Murder"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_roadhouse_murder",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Roadhouse Murder",
+          "source": "label"
+        },
+        {
+          "text": "film the roadhouse murder",
+          "source": "uri"
+        }
+      ],
+      "context": "The Roadhouse Murder. has director: Jacob Walter Ruben.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Roadhouse_Murder",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Roadhouse Murder",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Roadhouse Murder",
+        "extracted_source": "label",
+        "ground_truth_text": "The Roadhouse Murder",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9805454015731812,
+      "graph_score": 0.9902727007865906,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_j_walter_ruben",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jacob Walter Ruben",
+          "source": "altLabel"
+        },
+        {
+          "text": "J. Walter Ruben",
+          "source": "label"
+        },
+        {
+          "text": "person j walter ruben",
+          "source": "uri"
+        }
+      ],
+      "context": "Jacob Walter Ruben. has burial place: Glendale's Forest Lawn Memorial Park Cemetery. inverse has director: The Roadhouse Murder.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/J_Walter_Ruben",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "J Walter Ruben",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "J. Walter Ruben",
+        "extracted_source": "label",
+        "ground_truth_text": "J Walter Ruben",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9888017177581787,
+      "string_score": 0.9844827651977539,
+      "independent_identity_support": true,
+      "context_score": 0.9473001956939697,
+      "graph_score": 0.9736500978469849,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_forest_lawn_memorial_park_cemetery",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Glendale's Forest Lawn Memorial Park Cemetery",
+          "source": "label"
+        },
+        {
+          "text": "place forest lawn memorial park cemetery",
+          "source": "uri"
+        }
+      ],
+      "context": "Glendale's Forest Lawn Memorial Park Cemetery. inverse has burial place: Jacob Walter Ruben.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Forest_Lawn_Memorial_Park",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Forest Lawn Memorial Park",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "place forest lawn memorial park cemetery",
+        "extracted_source": "uri",
+        "ground_truth_text": "Forest Lawn Memorial Park",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8976849317550659,
+      "name_embedding_score": 0.9062744379043579,
+      "string_score": 0.8128204941749573,
+      "independent_identity_support": true,
+      "context_score": 0.9307411313056946,
+      "graph_score": 0.9653705358505249,
+      "margin": 0.8976849317550659
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

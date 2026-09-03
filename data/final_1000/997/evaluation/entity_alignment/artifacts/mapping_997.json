@@ -1,0 +1,112 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/997/originals/extracted_997.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/997/ground_truth_997.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/philippe_moureaux": "http://example.org/entity/Philippe_Moureaux",
+    "http://example.org/extracted/francoise_dupuis": "http://example.org/entity/Françoise_Dupuis"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/francoise_dupuis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Françoise Dupuis",
+          "source": "label"
+        },
+        {
+          "text": "francoise dupuis",
+          "source": "uri"
+        }
+      ],
+      "context": "Françoise Dupuis. has spouse: Philippe Moureaux.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Françoise_Dupuis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Françoise Dupuis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Françoise Dupuis",
+        "extracted_source": "label",
+        "ground_truth_text": "Françoise Dupuis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.5506565868854523
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/philippe_moureaux",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Philippe Moureaux",
+          "source": "label"
+        }
+      ],
+      "context": "Philippe Moureaux. inverse has spouse: Françoise Dupuis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Philippe_Moureaux",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Philippe Moureaux",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Philippe Moureaux",
+        "extracted_source": "label",
+        "ground_truth_text": "Philippe Moureaux",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8448253273963928,
+      "graph_score": 0.922412633895874,
+      "margin": 0.5404720902442932
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Molenbeek"
+  ]
+}

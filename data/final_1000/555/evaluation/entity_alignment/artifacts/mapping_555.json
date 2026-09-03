@@ -1,0 +1,280 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/555/originals/extracted_555.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/555/ground_truth_555.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/war_book_2014": "http://example.org/entity/War_Book",
+    "http://example.org/extracted/blake_edwards": "http://example.org/entity/Blake_Edwards",
+    "http://example.org/extracted/operation_petticoat_1959": "http://example.org/entity/Operation_Petticoat",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American",
+    "http://example.org/extracted/united_kingdom": "http://example.org/entity/British",
+    "http://example.org/extracted/tom_harper": "http://example.org/entity/Tom_Harper"
+  },
+  "summary": {
+    "extracted_entities": 6,
+    "ground_truth_entities": 7,
+    "matched": 6,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/blake_edwards",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Blake Edwards",
+          "source": "label"
+        }
+      ],
+      "context": "Blake Edwards. has nationality: American. inverse has director: Operation Petticoat.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Blake_Edwards",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Blake Edwards",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Blake Edwards",
+        "extracted_source": "label",
+        "ground_truth_text": "Blake Edwards",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9433494806289673,
+      "graph_score": 0.6383414268493652,
+      "margin": 0.7000908255577087
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/operation_petticoat_1959",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Operation Petticoat",
+          "source": "label"
+        },
+        {
+          "text": "operation petticoat 1959",
+          "source": "uri"
+        }
+      ],
+      "context": "Operation Petticoat. has director: Blake Edwards.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Operation_Petticoat",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Operation Petticoat",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Operation Petticoat",
+        "extracted_source": "label",
+        "ground_truth_text": "Operation Petticoat",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7808121889829636
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tom_harper",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tom Harper",
+          "source": "label"
+        }
+      ],
+      "context": "Tom Harper. has nationality: British. inverse has director: War Book.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tom_Harper",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tom Harper",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tom Harper",
+        "extracted_source": "label",
+        "ground_truth_text": "Tom Harper",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8486164212226868,
+      "graph_score": 0.674308180809021,
+      "margin": 0.2691330313682556
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "British. inverse has nationality: Tom Harper.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "British",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8801475167274475,
+      "graph_score": 0.44007375836372375,
+      "margin": 0.6761460602283478
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has nationality: Blake Edwards.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9258599281311035,
+      "graph_score": 0.46292996406555176,
+      "margin": 0.6810945570468903
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/war_book_2014",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "War Book",
+          "source": "label"
+        },
+        {
+          "text": "war book 2014",
+          "source": "uri"
+        }
+      ],
+      "context": "War Book. has director: Tom Harper.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/War_Book",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "War Book",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "War Book",
+        "extracted_source": "label",
+        "ground_truth_text": "War Book",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.830977201461792
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Tom_Harper_director"
+  ]
+}

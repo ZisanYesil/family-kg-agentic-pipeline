@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/946/originals/extracted_946.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/946/ground_truth_946.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_alice_ofredericks": "http://example.org/entity/Alice_O_Fredericks",
+    "http://example.org/extracted/film_crime_against_joe": "http://example.org/entity/Crime_Against_Joe",
+    "http://example.org/extracted/film_vagabonderne_paa_bakkegarden": "http://example.org/entity/Vagabonderne_på_Bakkegården",
+    "http://example.org/extracted/person_lee_sholem": "http://example.org/entity/Lee_Sholem"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_crime_against_joe",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Crime Against Joe",
+          "source": "label"
+        },
+        {
+          "text": "film crime against joe",
+          "source": "uri"
+        }
+      ],
+      "context": "Crime Against Joe. has director: Lee Sholem.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Crime_Against_Joe",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Crime Against Joe",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Crime Against Joe",
+        "extracted_source": "label",
+        "ground_truth_text": "Crime Against Joe",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8358567506074905
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_vagabonderne_paa_bakkegarden",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vagabonderne på Bakkegården",
+          "source": "label"
+        },
+        {
+          "text": "film vagabonderne paa bakkegarden",
+          "source": "uri"
+        }
+      ],
+      "context": "Vagabonderne på Bakkegården. has director: Alice O'Fredericks.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vagabonderne_på_Bakkegården",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vagabonderne på Bakkegården",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vagabonderne på Bakkegården",
+        "extracted_source": "label",
+        "ground_truth_text": "Vagabonderne på Bakkegården",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8425660133361816,
+      "graph_score": 0.9212830066680908,
+      "margin": 0.7822774052619934
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_alice_ofredericks",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alice O'Fredericks",
+          "source": "label"
+        },
+        {
+          "text": "person alice ofredericks",
+          "source": "uri"
+        }
+      ],
+      "context": "Alice O'Fredericks. has death date: 1968-02-18. inverse has director: Vagabonderne på Bakkegården.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alice_O_Fredericks",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alice O Fredericks",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alice O'Fredericks",
+        "extracted_source": "label",
+        "ground_truth_text": "Alice O Fredericks",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8109886050224304,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.909892737865448,
+      "graph_score": 0.9549463987350464,
+      "margin": 0.7689806520938873
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_lee_sholem",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lee Sholem",
+          "source": "label"
+        },
+        {
+          "text": "person lee sholem",
+          "source": "uri"
+        }
+      ],
+      "context": "Lee Sholem. has death date: 2000-08-19. inverse has director: Crime Against Joe.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lee_Sholem",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lee Sholem",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lee Sholem",
+        "extracted_source": "label",
+        "ground_truth_text": "Lee Sholem",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.7576129138469696
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

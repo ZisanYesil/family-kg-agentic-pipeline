@@ -1,0 +1,247 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/79/originals/extracted_79.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/79/ground_truth_79.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_rene_barberis": "http://example.org/entity/René_Barberis",
+    "http://example.org/extracted/film_a_french_gigolo": "http://example.org/entity/A_French_Gigolo",
+    "http://example.org/extracted/country_france": "http://example.org/entity/French",
+    "http://example.org/extracted/person_josiane_balasko": "http://example.org/entity/Josiane_Balasko",
+    "http://example.org/extracted/film_temptation_1929": "http://example.org/entity/Temptation_1929_film"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        },
+        {
+          "text": "country france",
+          "source": "uri"
+        }
+      ],
+      "context": "French. inverse has nationality: Josiane Balasko. inverse has nationality: René Barberis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/French",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "French",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "French",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "French",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9381110072135925,
+      "graph_score": 0.46905550360679626,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_a_french_gigolo",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A French Gigolo",
+          "source": "label"
+        },
+        {
+          "text": "film a french gigolo",
+          "source": "uri"
+        }
+      ],
+      "context": "A French Gigolo. has director: Josiane Balasko.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_French_Gigolo",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A French Gigolo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A French Gigolo",
+        "extracted_source": "label",
+        "ground_truth_text": "A French Gigolo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6957834362983704
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_temptation_1929",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Temptation (1929 film)",
+          "source": "label"
+        },
+        {
+          "text": "film temptation 1929",
+          "source": "uri"
+        }
+      ],
+      "context": "Temptation (1929 film). has director: René Barberis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Temptation_1929_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Temptation 1929 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Temptation (1929 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Temptation 1929 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9667269587516785,
+      "string_score": 0.9785714149475098,
+      "independent_identity_support": true,
+      "context_score": 0.9858047962188721,
+      "graph_score": 0.992902398109436,
+      "margin": 0.7983344048261642
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_josiane_balasko",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Josiane Balasko",
+          "source": "label"
+        },
+        {
+          "text": "person josiane balasko",
+          "source": "uri"
+        }
+      ],
+      "context": "Josiane Balasko. has nationality: French. inverse has director: A French Gigolo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Josiane_Balasko",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Josiane Balasko",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Josiane Balasko",
+        "extracted_source": "label",
+        "ground_truth_text": "Josiane Balasko",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9586454033851624,
+      "graph_score": 0.6459893584251404,
+      "margin": 0.6944064497947693
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_rene_barberis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "René Barberis",
+          "source": "label"
+        },
+        {
+          "text": "person rene barberis",
+          "source": "uri"
+        }
+      ],
+      "context": "René Barberis. has nationality: French. inverse has director: Temptation (1929 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/René_Barberis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "René Barberis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "René Barberis",
+        "extracted_source": "label",
+        "ground_truth_text": "René Barberis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9656820297241211,
+      "graph_score": 0.6495077013969421,
+      "margin": 0.6944850087165833
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

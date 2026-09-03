@@ -1,0 +1,74 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/104/evaluation/entity_alignment/final_extracted_aligned_104.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/104/evaluation/entity_alignment/final_ground_truth_aligned_104.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Doing_It_My_Way",
+      "predicate": "hasPublicationDate",
+      "object": "\"2007\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Doing_It_My_Way",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"2007\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Doing_It_My_Way",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Doing_It_My_Way",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Doing_It_My_Way",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Doing_It_My_Way",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "No_Talking_Just_Head",
+      "predicate": "hasPublicationDate",
+      "object": "\"1996\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/No_Talking_Just_Head",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1996\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "No_Talking_Just_Head",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/No_Talking_Just_Head",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "No_Talking_Just_Head",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/No_Talking_Just_Head",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 6,
+    "union_triples_in_scope": 6,
+    "true_positives": 6,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

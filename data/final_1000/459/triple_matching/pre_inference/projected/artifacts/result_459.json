@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/459/evaluation/entity_alignment/baseline_extracted_aligned_459.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/459/evaluation/entity_alignment/baseline_ground_truth_aligned_459.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Peter_II_Count_of_Saint_Pol",
+      "predicate": "hasParent",
+      "object": "Jeanne_de_Bar_Countess_of_Marle_and_Soissons",
+      "subject_uri": "http://example.org/entity/Peter_II_Count_of_Saint_Pol",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Jeanne_de_Bar_Countess_of_Marle_and_Soissons"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Jeanne_de_Bar_suo_jure_Countess_of_Marle_and_Soissons",
+      "predicate": "hasBirthPlace",
+      "object": "French",
+      "subject_uri": "http://example.org/entity/Jeanne_de_Bar_suo_jure_Countess_of_Marle_and_Soissons",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/French"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Jeanne_de_Bar_Countess_of_Marle_and_Soissons",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jeanne_de_Bar_Countess_of_Marle_and_Soissons",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jeanne_de_Bar_Countess_of_Marle_and_Soissons",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jeanne_de_Bar_Countess_of_Marle_and_Soissons",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jeanne_de_Bar_Countess_of_Marle_and_Soissons",
+      "predicate": "label",
+      "object": "\"Jeanne de Bar, Countess of Marle and Soissons\"",
+      "subject_uri": "http://example.org/entity/Jeanne_de_Bar_Countess_of_Marle_and_Soissons",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jeanne de Bar, Countess of Marle and Soissons\""
+    },
+    {
+      "subject": "Jeanne_de_Bar_Countess_of_Marle_and_Soissons",
+      "predicate": "altLabel",
+      "object": "\"Jeanne de Bar\"",
+      "subject_uri": "http://example.org/entity/Jeanne_de_Bar_Countess_of_Marle_and_Soissons",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Jeanne de Bar\""
+    },
+    {
+      "subject": "Peter_II_Count_of_Saint_Pol",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Peter_II_Count_of_Saint_Pol",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Peter_II_Count_of_Saint_Pol",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Peter_II_Count_of_Saint_Pol",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Peter_II_Count_of_Saint_Pol",
+      "predicate": "label",
+      "object": "\"Peter II, Count of Saint-Pol\"",
+      "subject_uri": "http://example.org/entity/Peter_II_Count_of_Saint_Pol",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Peter II, Count of Saint-Pol\""
+    },
+    {
+      "subject": "Peter_II_Count_of_Saint_Pol",
+      "predicate": "altLabel",
+      "object": "\"Peter II\"",
+      "subject_uri": "http://example.org/entity/Peter_II_Count_of_Saint_Pol",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Peter II\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 1,
+    "false_positives": 8,
+    "false_negatives": 1,
+    "precision": 0.1111111111111111,
+    "recall": 0.5,
+    "f1": 0.1818181818181818
+  },
+  "stage": "pre_inference"
+}

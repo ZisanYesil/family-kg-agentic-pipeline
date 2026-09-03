@@ -1,0 +1,35 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_ides_2011 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Ides of March (2011 film)" ;
+    onto:hasDirector data:director_clooney .
+
+data:film_killers_romance a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Killer's Romance" ;
+    onto:hasDirector data:director_phillip_ko .
+
+data:country_hongkong a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Hong Kong" .
+
+data:country_usa a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+data:director_clooney a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George Clooney" ;
+    onto:hasNationality data:country_usa .
+
+data:director_phillip_ko a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Phillip Ko" ;
+    onto:hasNationality data:country_hongkong .
+

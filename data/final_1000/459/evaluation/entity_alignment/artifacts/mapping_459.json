@@ -1,0 +1,117 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/459/originals/extracted_459.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/459/ground_truth_459.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/peter_ii": "http://example.org/entity/Peter_II_Count_of_Saint_Pol",
+    "http://example.org/extracted/jeanne_de_bar": "http://example.org/entity/Jeanne_de_Bar_Countess_of_Marle_and_Soissons"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 4,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 2
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/jeanne_de_bar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jeanne de Bar",
+          "source": "altLabel"
+        },
+        {
+          "text": "Jeanne de Bar, Countess of Marle and Soissons",
+          "source": "label"
+        }
+      ],
+      "context": "Jeanne de Bar. inverse has mother: Peter II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jeanne_de_Bar_Countess_of_Marle_and_Soissons",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jeanne de Bar Countess of Marle and Soissons",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jeanne de Bar, Countess of Marle and Soissons",
+        "extracted_source": "label",
+        "ground_truth_text": "Jeanne de Bar Countess of Marle and Soissons",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9950887560844421,
+      "string_score": 0.9949437975883484,
+      "independent_identity_support": true,
+      "context_score": 0.6834774613380432,
+      "graph_score": 0.8417387008666992,
+      "margin": 0.22642236948013306
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/peter_ii",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Peter II",
+          "source": "altLabel"
+        },
+        {
+          "text": "Peter II, Count of Saint-Pol",
+          "source": "label"
+        }
+      ],
+      "context": "Peter II. has mother: Jeanne de Bar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Peter_II_Count_of_Saint_Pol",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Peter II Count of Saint Pol",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Peter II, Count of Saint-Pol",
+        "extracted_source": "label",
+        "ground_truth_text": "Peter II Count of Saint Pol",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9724995493888855,
+      "string_score": 0.975454568862915,
+      "independent_identity_support": true,
+      "context_score": 0.6665039658546448,
+      "graph_score": 0.833251953125,
+      "margin": 0.6666264533996582
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/French",
+    "http://example.org/entity/Jeanne_de_Bar_suo_jure_Countess_of_Marle_and_Soissons"
+  ]
+}

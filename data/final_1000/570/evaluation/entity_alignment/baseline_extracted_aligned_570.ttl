@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Hot_Time_in_the_Town_of_Berlin> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "(There'll Be a) Hot Time in the Town of Berlin" ;
+    onto:hasComposer <http://example.org/entity/Joe_Bushkin> .
+
+<http://example.org/entity/Joe_Bushkin> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joe Bushkin" ;
+    onto:hasDeathPlace <http://example.org/entity/Santa_Barbara> ;
+    skos:altLabel "Bushkin" .
+
+<http://example.org/entity/Santa_Barbara> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Santa Barbara, California" .
+

@@ -1,0 +1,138 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/684/originals/extracted_684.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/684/ground_truth_684.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bona_sforza": "http://example.org/entity/Bona_Sforza",
+    "http://example.org/extracted/sigismund_ii_augustus": "http://example.org/entity/Sigismund_II_Augustus"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bona_sforza",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bona Sforza",
+          "source": "label"
+        }
+      ],
+      "context": "Bona Sforza. has nationality: Italian. inverse has mother: Sigismund II Augustus.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bona_Sforza",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bona Sforza",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bona Sforza",
+        "extracted_source": "label",
+        "ground_truth_text": "Bona Sforza",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9319056868553162,
+      "graph_score": 0.9659528732299805,
+      "margin": 0.7217684984207153
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sigismund_ii_augustus",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sigismund II Augustus",
+          "source": "label"
+        }
+      ],
+      "context": "Sigismund II Augustus. has mother: Bona Sforza.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sigismund_II_Augustus",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sigismund II Augustus",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sigismund II Augustus",
+        "extracted_source": "label",
+        "ground_truth_text": "Sigismund II Augustus",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7318607568740845
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/italy",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Italian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Italy",
+          "source": "label"
+        }
+      ],
+      "context": "Italian. inverse has nationality: Bona Sforza.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Duchy_of_Milan"
+  ]
+}

@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Latin_Moon> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Latin Moon" ;
+    onto:hasPerformer data:mia_martina .
+
+data:canada a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Canada" ;
+    skos:altLabel "Canadian" .
+
+data:mia_martina a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mia Martina" ;
+    onto:hasNationality data:canada .
+

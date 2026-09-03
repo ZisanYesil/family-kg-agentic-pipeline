@@ -1,0 +1,167 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/628/originals/extracted_628.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/628/ground_truth_628.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_pugachev_1978": "http://example.org/entity/Pugachev",
+    "http://example.org/extracted/person_aleksei_saltykov": "http://example.org/entity/Aleksei_Saltykov",
+    "http://example.org/extracted/award_peoples_artist_rsfsr": "http://example.org/entity/People_s_Artist_of_the_RSFSR"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/award_peoples_artist_rsfsr",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "People's Artist of the RSFSR",
+          "source": "label"
+        },
+        {
+          "text": "award peoples artist rsfsr",
+          "source": "uri"
+        }
+      ],
+      "context": "People's Artist of the RSFSR. inverse has award received: Aleksey Aleksandrovich Saltykov.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/People_s_Artist_of_the_RSFSR",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "People s Artist of the RSFSR",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "People's Artist of the RSFSR",
+        "extracted_source": "label",
+        "ground_truth_text": "People s Artist of the RSFSR",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9746940732002258,
+      "string_score": 0.9839285612106323,
+      "independent_identity_support": true,
+      "context_score": 0.9952414631843567,
+      "graph_score": 0.49762073159217834,
+      "margin": 0.6612254977226257
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_pugachev_1978",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pugachev",
+          "source": "label"
+        },
+        {
+          "text": "film pugachev 1978",
+          "source": "uri"
+        }
+      ],
+      "context": "Pugachev. has director: Aleksey Aleksandrovich Saltykov. has publication date: 1978.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pugachev",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pugachev",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pugachev",
+        "extracted_source": "label",
+        "ground_truth_text": "Pugachev",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8936099410057068,
+      "graph_score": 0.9468050003051758,
+      "margin": 0.6720738708972931
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_aleksei_saltykov",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Aleksey Aleksandrovich Saltykov",
+          "source": "altLabel"
+        },
+        {
+          "text": "Alexey Saltykov",
+          "source": "altLabel"
+        },
+        {
+          "text": "Aleksei Saltykov",
+          "source": "label"
+        },
+        {
+          "text": "person aleksei saltykov",
+          "source": "uri"
+        }
+      ],
+      "context": "Aleksey Aleksandrovich Saltykov. has award received: People's Artist of the RSFSR. inverse has director: Pugachev.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Aleksei_Saltykov",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Aleksei Saltykov",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Aleksei Saltykov",
+        "extracted_source": "label",
+        "ground_truth_text": "Aleksei Saltykov",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8318963646888733,
+      "graph_score": 0.6659481525421143,
+      "margin": 0.07483744621276855
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Aleksey_Aleksandrovich_Saltykov"
+  ]
+}

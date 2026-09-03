@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_the_promise_1969 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Promise (1969 Film)" ;
+    onto:hasCountryOfOrigin data:country_united_kingdom .
+
+data:film_the_spell_2009 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Spell (2009 Film)" ;
+    onto:hasCountryOfOrigin data:country_united_kingdom .
+
+data:country_united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "British" .
+

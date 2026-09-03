@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:henry_of_berg_lord_of_windeck a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Henry of Berg, Lord of Windeck" ;
+    onto:hasFather data:adolf_vii_of_berg .
+
+data:adolf_vii_of_berg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Adolf VII of Berg" ;
+    onto:hasDeathPlace data:neuss .
+
+data:neuss a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Neuss" .
+

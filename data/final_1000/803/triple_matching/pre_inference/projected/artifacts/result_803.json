@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/803/evaluation/entity_alignment/baseline_extracted_aligned_803.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/803/evaluation/entity_alignment/baseline_ground_truth_aligned_803.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Craig_Hella_Johnson",
+      "predicate": "hasBirthPlace",
+      "object": "Crow_Wing_County_Minnesota",
+      "subject_uri": "http://example.org/entity/Craig_Hella_Johnson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Crow_Wing_County_Minnesota"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Conspirare",
+      "predicate": "hasMember",
+      "object": "Craig_Hella_Johnson",
+      "subject_uri": "http://example.org/entity/Conspirare",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasMember",
+      "object_term": "http://example.org/entity/Craig_Hella_Johnson"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Conspirare",
+      "predicate": "hasFounder",
+      "object": "Craig_Hella_Johnson",
+      "subject_uri": "http://example.org/entity/Conspirare",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Craig_Hella_Johnson"
+    },
+    {
+      "subject": "Conspirare",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Conspirare",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Conspirare",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Conspirare",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Conspirare",
+      "predicate": "label",
+      "object": "\"Conspirare\"",
+      "subject_uri": "http://example.org/entity/Conspirare",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Conspirare\""
+    },
+    {
+      "subject": "Craig_Hella_Johnson",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Craig_Hella_Johnson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Craig_Hella_Johnson",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Craig_Hella_Johnson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Craig_Hella_Johnson",
+      "predicate": "label",
+      "object": "\"Craig Hella Johnson\"",
+      "subject_uri": "http://example.org/entity/Craig_Hella_Johnson",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Craig Hella Johnson\""
+    },
+    {
+      "subject": "Craig_Hella_Johnson",
+      "predicate": "altLabel",
+      "object": "\"Craig Morris Hella Johnson\"",
+      "subject_uri": "http://example.org/entity/Craig_Hella_Johnson",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Craig Morris Hella Johnson\""
+    },
+    {
+      "subject": "Crow_Wing_County_Minnesota",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Crow_Wing_County_Minnesota",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Crow_Wing_County_Minnesota",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Crow_Wing_County_Minnesota",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Crow_Wing_County_Minnesota",
+      "predicate": "label",
+      "object": "\"Crow Wing County, Minnesota\"",
+      "subject_uri": "http://example.org/entity/Crow_Wing_County_Minnesota",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Crow Wing County, Minnesota\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 1,
+    "false_positives": 11,
+    "false_negatives": 1,
+    "precision": 0.08333333333333333,
+    "recall": 0.5,
+    "f1": 0.14285714285714285
+  },
+  "stage": "pre_inference"
+}

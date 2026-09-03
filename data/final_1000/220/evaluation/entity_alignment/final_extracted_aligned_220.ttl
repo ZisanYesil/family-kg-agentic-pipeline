@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Lady_Charlotte_Finch> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/entity/Thomas_Fermor> ;
+    ex:hasParent <http://example.org/entity/Thomas_Fermor> .
+
+<http://example.org/entity/Lady_Sophia_Osborne> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Thomas_Fermor> .
+
+<http://example.org/entity/Thomas_Fermor> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Lady_Charlotte_Finch> ;
+    ex:hasMother <http://example.org/entity/Lady_Sophia_Osborne> ;
+    ex:hasParent <http://example.org/entity/Lady_Sophia_Osborne> .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:marry_you a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Marry You" ;
+    onto:hasPerformer data:bruno_mars .
+
+data:bruno_mars a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bruno Mars" ;
+    onto:hasAwardReceived data:grammy_award .
+
+data:grammy_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Grammy Award" .
+

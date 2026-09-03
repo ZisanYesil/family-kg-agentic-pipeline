@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/28/originals/extracted_28.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/28/ground_truth_28.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/duchess_maria_dorothea_wurttemberg": "http://example.org/entity/Duchess_Maria_Dorothea_of_Württemberg",
+    "http://example.org/extracted/kirchheim_unter_teck": "http://example.org/entity/Kirchheim_unter_Teck",
+    "http://example.org/extracted/duke_louis_wurttemberg": "http://example.org/entity/Duke_Louis_of_Württemberg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/duchess_maria_dorothea_wurttemberg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maria Dorothea Luise Wilhelmine Caroline",
+          "source": "altLabel"
+        },
+        {
+          "text": "Duchess Maria Dorothea of Württemberg",
+          "source": "label"
+        },
+        {
+          "text": "duchess maria dorothea wurttemberg",
+          "source": "uri"
+        }
+      ],
+      "context": "Maria Dorothea Luise Wilhelmine Caroline. has father: Louis Friedrich Alexander.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Duchess_Maria_Dorothea_of_Württemberg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Duchess Maria Dorothea of Württemberg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Duchess Maria Dorothea of Württemberg",
+        "extracted_source": "label",
+        "ground_truth_text": "Duchess Maria Dorothea of Württemberg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.48036980628967285,
+      "graph_score": 0.7401849031448364,
+      "margin": 0.5129799246788025
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/duke_louis_wurttemberg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis Friedrich Alexander",
+          "source": "altLabel"
+        },
+        {
+          "text": "Duke Louis of Württemberg",
+          "source": "label"
+        },
+        {
+          "text": "duke louis wurttemberg",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis Friedrich Alexander. has death place: Kirchheim unter Teck. inverse has father: Maria Dorothea Luise Wilhelmine Caroline.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Duke_Louis_of_Württemberg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Duke Louis of Württemberg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Duke Louis of Württemberg",
+        "extracted_source": "label",
+        "ground_truth_text": "Duke Louis of Württemberg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6788644194602966,
+      "graph_score": 0.8394322395324707,
+      "margin": 0.5001302659511566
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/kirchheim_unter_teck",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kirchheim unter Teck",
+          "source": "label"
+        }
+      ],
+      "context": "Kirchheim unter Teck. inverse has death place: Louis Friedrich Alexander.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kirchheim_unter_Teck",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kirchheim unter Teck",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kirchheim unter Teck",
+        "extracted_source": "label",
+        "ground_truth_text": "Kirchheim unter Teck",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8359769582748413,
+      "graph_score": 0.9179884791374207,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

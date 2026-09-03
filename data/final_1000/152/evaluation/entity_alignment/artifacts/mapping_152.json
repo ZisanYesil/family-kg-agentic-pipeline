@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/152/originals/extracted_152.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/152/ground_truth_152.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_prasad_devineni": "http://example.org/entity/Prasad_Devineni",
+    "http://example.org/extracted/film_baahubali_2_conclusion": "http://example.org/entity/Baahubali_2_The_Conclusion",
+    "http://example.org/extracted/person_shobu_yarlagadda": "http://example.org/entity/Shobu_Yarlagadda",
+    "http://example.org/extracted/film_manhattan_night": "http://example.org/entity/Manhattan_Night"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_baahubali_2_conclusion",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Baahubali 2: The Conclusion",
+          "source": "label"
+        },
+        {
+          "text": "film baahubali 2 conclusion",
+          "source": "uri"
+        }
+      ],
+      "context": "Baahubali 2: The Conclusion. has producer: Prasad Devineni. has producer: Shobu Yarlagadda.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Baahubali_2_The_Conclusion",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Baahubali 2 The Conclusion",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Baahubali 2: The Conclusion",
+        "extracted_source": "label",
+        "ground_truth_text": "Baahubali 2 The Conclusion",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9802186489105225,
+      "string_score": 0.9915094375610352,
+      "independent_identity_support": true,
+      "context_score": 0.9954507946968079,
+      "graph_score": 0.9977253675460815,
+      "margin": 0.8323595970869064
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_manhattan_night",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Manhattan Night",
+          "source": "label"
+        },
+        {
+          "text": "film manhattan night",
+          "source": "uri"
+        }
+      ],
+      "context": "Manhattan Night.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Manhattan_Night",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Manhattan Night",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Manhattan Night",
+        "extracted_source": "label",
+        "ground_truth_text": "Manhattan Night",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5873376131057739,
+      "graph_score": 0.5873376131057739,
+      "margin": 0.8964216113090515
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_prasad_devineni",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prasad Devineni",
+          "source": "label"
+        },
+        {
+          "text": "person prasad devineni",
+          "source": "uri"
+        }
+      ],
+      "context": "Prasad Devineni. inverse has producer: Baahubali 2: The Conclusion.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prasad_Devineni",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prasad Devineni",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prasad Devineni",
+        "extracted_source": "label",
+        "ground_truth_text": "Prasad Devineni",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.995003879070282,
+      "graph_score": 0.9975019693374634,
+      "margin": 0.45876258611679077
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_shobu_yarlagadda",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shobu Yarlagadda",
+          "source": "label"
+        },
+        {
+          "text": "person shobu yarlagadda",
+          "source": "uri"
+        }
+      ],
+      "context": "Shobu Yarlagadda. inverse has producer: Baahubali 2: The Conclusion.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shobu_Yarlagadda",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shobu Yarlagadda",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shobu Yarlagadda",
+        "extracted_source": "label",
+        "ground_truth_text": "Shobu Yarlagadda",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9957752227783203,
+      "graph_score": 0.9978876113891602,
+      "margin": 0.4664742946624756
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Adrien_Brody"
+  ]
+}

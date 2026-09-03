@@ -1,0 +1,27 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/The_Famous_Mrs_Fair> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Famous Mrs. Fair" ;
+    onto:hasProducer <http://example.org/entity/Louis_B_Mayer> .
+
+<http://example.org/entity/The_Flame_Barrier> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Flame Barrier" ;
+    onto:hasProducer <http://example.org/entity/Arthur_Gardner> .
+
+<http://example.org/entity/Arthur_Gardner> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Arthur Gardner" ;
+    onto:hasBirthDate "1910-06-07"^^xsd:date ;
+    onto:hasDeathDate "2014-12-19"^^xsd:date .
+
+<http://example.org/entity/Louis_B_Mayer> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis B. Mayer" ;
+    onto:hasBirthDate "1884-07-12"^^xsd:date ;
+    onto:hasDeathDate "1957-10-29"^^xsd:date .
+

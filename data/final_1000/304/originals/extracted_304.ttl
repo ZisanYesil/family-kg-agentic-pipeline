@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_the_vanity_pool a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Vanity Pool" ;
+    onto:hasDirector data:person_ida_may_park .
+
+data:person_ida_may_park a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ida May Park" ;
+    onto:hasBirthPlace data:place_los_angeles_california .
+
+data:place_los_angeles_california a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Los Angeles, California" .
+

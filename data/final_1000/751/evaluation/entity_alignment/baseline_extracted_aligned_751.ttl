@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Splendor_in_the_Grass> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Splendor in the Grass" ;
+    onto:hasDirector <http://example.org/entity/Elia_Kazan> .
+
+<http://example.org/entity/Constantinople> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Constantinople" .
+
+<http://example.org/entity/Elia_Kazan> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Elia Kazan" ;
+    onto:hasBirthPlace <http://example.org/entity/Constantinople> .
+

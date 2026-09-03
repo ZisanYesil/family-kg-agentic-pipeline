@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/69/evaluation/entity_alignment/baseline_extracted_aligned_69.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/69/evaluation/entity_alignment/baseline_ground_truth_aligned_69.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Philippe_Solari",
+      "predicate": "hasBirthDate",
+      "object": "\"1840-05-02\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Philippe_Solari",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1840-05-02\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Philippe_Solari",
+      "predicate": "hasDeathDate",
+      "object": "\"1906-01-20\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Philippe_Solari",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1906-01-20\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Stephen_Jurika",
+      "predicate": "hasBirthDate",
+      "object": "\"1910-12-09\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Stephen_Jurika",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1910-12-09\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Stephen_Jurika",
+      "predicate": "hasDeathDate",
+      "object": "\"1993-07-15\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Stephen_Jurika",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1993-07-15\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Philippe_Solari",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Philippe_Solari",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Philippe_Solari",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Philippe_Solari",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Philippe_Solari",
+      "predicate": "label",
+      "object": "\"Philippe Solari\"",
+      "subject_uri": "http://example.org/entity/Philippe_Solari",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Philippe Solari\""
+    },
+    {
+      "subject": "Stephen_Jurika",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Stephen_Jurika",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Stephen_Jurika",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Stephen_Jurika",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Stephen_Jurika",
+      "predicate": "label",
+      "object": "\"Stephen Jurika Jr.\"",
+      "subject_uri": "http://example.org/entity/Stephen_Jurika",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Stephen Jurika Jr.\""
+    },
+    {
+      "subject": "Stephen_Jurika",
+      "predicate": "altLabel",
+      "object": "\"Stephen Jurika\"",
+      "subject_uri": "http://example.org/entity/Stephen_Jurika",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Stephen Jurika\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 11,
+    "true_positives": 4,
+    "false_positives": 7,
+    "false_negatives": 0,
+    "precision": 0.36363636363636365,
+    "recall": 1.0,
+    "f1": 0.5333333333333333
+  },
+  "stage": "pre_inference"
+}

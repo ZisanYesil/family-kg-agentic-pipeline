@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/396/originals/extracted_396.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/396/ground_truth_396.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/hermine_1827": "http://example.org/entity/Princess_Hermine_of_Waldeck_and_Pyrmont"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/hermine_1827",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Hermine of Waldeck and Pyrmont",
+          "source": "label"
+        },
+        {
+          "text": "hermine 1827",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Hermine of Waldeck and Pyrmont. inverse has daughter: George II, Prince of Waldeck and Pyrmont.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Hermine_of_Waldeck_and_Pyrmont",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Hermine of Waldeck and Pyrmont",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Hermine of Waldeck and Pyrmont",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Hermine of Waldeck and Pyrmont",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8986040353775024,
+      "graph_score": 0.8986040353775024,
+      "margin": 0.5565648376941681
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/augusta_schwarzburg_sondershausen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Countess Princess Augusta of Schwarzburg-Sondershausen",
+          "source": "label"
+        },
+        {
+          "text": "augusta schwarzburg sondershausen",
+          "source": "uri"
+        }
+      ],
+      "context": "Countess Princess Augusta of Schwarzburg-Sondershausen. inverse has mother: George II, Prince of Waldeck and Pyrmont.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Augusta_of_Schwarzburg_Sondershausen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Augusta of Schwarzburg Sondershausen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Countess Princess Augusta of Schwarzburg-Sondershausen",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Augusta of Schwarzburg Sondershausen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9063689112663269,
+      "name_embedding_score": 0.952638566493988,
+      "string_score": 0.9083333611488342,
+      "independent_identity_support": true,
+      "context_score": 0.8118650913238525,
+      "graph_score": 0.8118650913238525,
+      "margin": 0.37680184841156006
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/george_ii_1789",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George II, Prince of Waldeck and Pyrmont",
+          "source": "label"
+        },
+        {
+          "text": "george ii 1789",
+          "source": "uri"
+        }
+      ],
+      "context": "George II, Prince of Waldeck and Pyrmont. has daughter: Princess Hermine of Waldeck and Pyrmont. has mother: Countess Princess Augusta of Schwarzburg-Sondershausen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_II",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George II",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "george ii 1789",
+        "extracted_source": "uri",
+        "ground_truth_text": "George II",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6910381317138672,
+      "name_embedding_score": 0.7516867518424988,
+      "string_score": 0.8188405632972717,
+      "independent_identity_support": true,
+      "context_score": 0.8838769197463989,
+      "graph_score": 0.44193845987319946,
+      "margin": 0.12833762168884277
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

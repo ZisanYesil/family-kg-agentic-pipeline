@@ -1,0 +1,94 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "cfda8de73673b62ad784d810cc2fc68f01b5472bd0b197d22ce585c0e8e0187c",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_namma_ooru_nayagan_1988",
+        "path": null,
+        "value": "http://example.org/extracted/person_rajesh_khanna",
+        "expected": null,
+        "message": "Relation phrase 'composer of' from http://example.org/extracted/film_namma_ooru_nayagan_1988 to http://example.org/extracted/person_rajesh_khanna was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "cfda8de73673b62ad784d810cc2fc68f01b5472bd0b197d22ce585c0e8e0187c",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_namma_ooru_nayagan_1988",
+            "path": null,
+            "value": "http://example.org/extracted/person_rajesh_khanna",
+            "expected": null,
+            "message": "Relation phrase 'composer of' from http://example.org/extracted/film_namma_ooru_nayagan_1988 to http://example.org/extracted/person_rajesh_khanna was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 11,
+      "feedback_reasoning": "The source text states that the film ‘Namma Ooru Nayagan’ “had musical score by newcomer Rajesh Khanna”, which expresses that Rajesh Khanna was the composer of the film. The ontology provides the object‑property http://example.org/2wiki-ontology#hasComposer (domain CreativeWork, range Person) that exactly matches this relation. Adding this triple resolves the unmapped_relation violation.",
+      "repairs": [
+        {
+          "violation_fingerprint": "dee05afdcdc46012e850041921e7ed0e361f145b76a748319ce649c04f04b409",
+          "reasoning": "Map the implied ‘composer of’ relation to the ontology predicate hasComposer.",
+          "operations": [
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/film_namma_ooru_nayagan_1988",
+              "predicate": "http://example.org/2wiki-ontology#hasComposer",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/extracted/person_rajesh_khanna"
+              }
+            }
+          ]
+        }
+      ],
+      "edit_log": [
+        {
+          "violation_fingerprint": "dee05afdcdc46012e850041921e7ed0e361f145b76a748319ce649c04f04b409",
+          "operation_index": 0,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/film_namma_ooru_nayagan_1988",
+          "predicate": "http://example.org/2wiki-ontology#hasComposer",
+          "old_value": null,
+          "new_value": "<http://example.org/extracted/person_rajesh_khanna>",
+          "triples_before": 11,
+          "triples_after": 12
+        }
+      ],
+      "unresolved_violation_fingerprints": [],
+      "triples_after": 12,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": true,
+        "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "violations": []
+      },
+      "outcome": "conforms"
+    }
+  ],
+  "status": "repaired",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": true,
+    "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "violations": []
+  },
+  "dangling_references": []
+}

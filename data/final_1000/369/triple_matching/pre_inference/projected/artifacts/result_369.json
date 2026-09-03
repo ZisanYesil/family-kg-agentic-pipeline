@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/369/evaluation/entity_alignment/baseline_extracted_aligned_369.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/369/evaluation/entity_alignment/baseline_ground_truth_aligned_369.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Pye_Min",
+      "predicate": "hasParent",
+      "object": "Thalun",
+      "subject_uri": "http://example.org/entity/Pye_Min",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Thalun"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Thalun",
+      "predicate": "hasSibling",
+      "object": "Anaukpetlun",
+      "subject_uri": "http://example.org/entity/Thalun",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Anaukpetlun"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Pye_Min",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Pye_Min",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Pye_Min",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Pye_Min",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Pye_Min",
+      "predicate": "label",
+      "object": "\"Pye Min\"",
+      "subject_uri": "http://example.org/entity/Pye_Min",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Pye Min\""
+    },
+    {
+      "subject": "Thalun",
+      "predicate": "hasSibling",
+      "object": "minye_kyawswa_ii",
+      "subject_uri": "http://example.org/entity/Thalun",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/extracted/minye_kyawswa_ii"
+    },
+    {
+      "subject": "Thalun",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Thalun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Thalun",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Thalun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Thalun",
+      "predicate": "label",
+      "object": "\"Thalun\"",
+      "subject_uri": "http://example.org/entity/Thalun",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Thalun\""
+    },
+    {
+      "subject": "minye_kyawswa_ii",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/minye_kyawswa_ii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "minye_kyawswa_ii",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/minye_kyawswa_ii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "minye_kyawswa_ii",
+      "predicate": "label",
+      "object": "\"Minye Kyawswa II\"",
+      "subject_uri": "http://example.org/extracted/minye_kyawswa_ii",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Minye Kyawswa II\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

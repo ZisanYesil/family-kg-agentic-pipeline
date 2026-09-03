@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_the_gold_cure_1925 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Gold Cure (1925 film)" ;
+    onto:hasDirector data:person_w_p_kellino .
+
+data:person_w_p_kellino a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "W.P. Kellino" ;
+    onto:hasBirthPlace data:place_london_england ;
+    skos:altLabel "W.P. Kellino",
+        "William Philip Gislingham" .
+
+data:place_london_england a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "London, England" .
+

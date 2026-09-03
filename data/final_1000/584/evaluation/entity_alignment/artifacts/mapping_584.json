@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/584/originals/extracted_584.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/584/ground_truth_584.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/angel_song": "http://example.org/entity/Angel",
+    "http://example.org/extracted/andrew_lloyd_webber": "http://example.org/entity/Andrew_Lloyd_Webber",
+    "http://example.org/extracted/sarah_brightman": "http://example.org/entity/Sarah_Brightman"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/andrew_lloyd_webber",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Andrew Lloyd Webber",
+          "source": "label"
+        }
+      ],
+      "context": "Andrew Lloyd Webber. inverse has spouse: Sarah Brightman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Andrew_Lloyd_Webber",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Andrew Lloyd Webber",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Andrew Lloyd Webber",
+        "extracted_source": "label",
+        "ground_truth_text": "Andrew Lloyd Webber",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.7680787146091461
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/angel_song",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Angel",
+          "source": "label"
+        },
+        {
+          "text": "angel song",
+          "source": "uri"
+        }
+      ],
+      "context": "Angel. has performer: Sarah Brightman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Angel",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Angel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Angel",
+        "extracted_source": "label",
+        "ground_truth_text": "Angel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sarah_brightman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sarah Brightman",
+          "source": "label"
+        }
+      ],
+      "context": "Sarah Brightman. has spouse: Andrew Lloyd Webber. inverse has performer: Angel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sarah_Brightman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sarah Brightman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sarah Brightman",
+        "extracted_source": "label",
+        "ground_truth_text": "Sarah Brightman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7680787146091461
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

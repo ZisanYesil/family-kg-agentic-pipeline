@@ -1,0 +1,112 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/279/originals/extracted_279.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/279/ground_truth_279.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/arati_ankalikar_tikekar": "http://example.org/entity/Arati_Ankalikar_Tikekar",
+    "http://example.org/extracted/uday_tikekar": "http://example.org/entity/Uday_Tikekar"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/arati_ankalikar_tikekar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Arati Ankalikar-Tikekar",
+          "source": "altLabel"
+        },
+        {
+          "text": "arati ankalikar tikekar",
+          "source": "uri"
+        }
+      ],
+      "context": "Arati Ankalikar-Tikekar. inverse has spouse: Uday Tikekar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Arati_Ankalikar_Tikekar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Arati Ankalikar Tikekar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Arati Ankalikar-Tikekar",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Arati Ankalikar Tikekar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.961744487285614,
+      "string_score": 0.980434775352478,
+      "independent_identity_support": true,
+      "context_score": 0.7753374576568604,
+      "graph_score": 0.3876687288284302,
+      "margin": 0.4216725826263428
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/uday_tikekar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Uday Tikekar",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Uday Tikekar. has spouse: Arati Ankalikar-Tikekar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Uday_Tikekar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Uday Tikekar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Uday Tikekar",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Uday Tikekar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.651412308216095,
+      "graph_score": 0.3257061541080475,
+      "margin": 0.3620137572288513
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Swanandi_Tikekar"
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/766/originals/extracted_766.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/766/ground_truth_766.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_meek_mill": "http://example.org/entity/Meek_Mill",
+    "http://example.org/extracted/place_sc_chester": "http://example.org/entity/State_Correctional_Institution_Chester",
+    "http://example.org/extracted/song_levels_meek_mill": "http://example.org/entity/Levels"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_meek_mill",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Robert Rihmeek Williams",
+          "source": "altLabel"
+        },
+        {
+          "text": "Meek Mill",
+          "source": "label"
+        },
+        {
+          "text": "person meek mill",
+          "source": "uri"
+        }
+      ],
+      "context": "Robert Rihmeek Williams. has detention place: State Correctional Institution – Chester. inverse has performer: Levels.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Meek_Mill",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Meek Mill",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Meek Mill",
+        "extracted_source": "label",
+        "ground_truth_text": "Meek Mill",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7952534556388855,
+      "graph_score": 0.8976267576217651,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_sc_chester",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "State Correctional Institution – Chester",
+          "source": "label"
+        },
+        {
+          "text": "place sc chester",
+          "source": "uri"
+        }
+      ],
+      "context": "State Correctional Institution – Chester. inverse has detention place: Robert Rihmeek Williams.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/State_Correctional_Institution_Chester",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "State Correctional Institution Chester",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "State Correctional Institution – Chester",
+        "extracted_source": "label",
+        "ground_truth_text": "State Correctional Institution Chester",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9890970587730408,
+      "string_score": 0.9884615540504456,
+      "independent_identity_support": true,
+      "context_score": 0.8476040363311768,
+      "graph_score": 0.9238020181655884,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_levels_meek_mill",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Levels",
+          "source": "label"
+        },
+        {
+          "text": "song levels meek mill",
+          "source": "uri"
+        }
+      ],
+      "context": "Levels. has performer: Robert Rihmeek Williams.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Levels",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Levels",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Levels",
+        "extracted_source": "label",
+        "ground_truth_text": "Levels",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6558424830436707,
+      "graph_score": 0.8279212713241577,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

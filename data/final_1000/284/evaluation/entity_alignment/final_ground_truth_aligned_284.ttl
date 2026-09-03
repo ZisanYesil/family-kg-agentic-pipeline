@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Dmitri_Nikolaevich_Sheremetev a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Nikolai_Sheremetev ;
+    ex:hasParent entity:Nikolai_Sheremetev .
+
+entity:Moscow a ex:Place .
+
+entity:Nikolai_Sheremetev a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Dmitri_Nikolaevich_Sheremetev ;
+    ex:hasDeathPlace entity:Moscow .
+

@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/710/originals/extracted_710.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/710/ground_truth_710.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/place_westwood_village_memorial_park_cemetery": "http://example.org/entity/Westwood_Village_Memorial_Park_Cemetery",
+    "http://example.org/extracted/film_the_roller_blade_seven": "http://example.org/entity/The_Roller_Blade_Seven",
+    "http://example.org/extracted/person_donald_g_jackson": "http://example.org/entity/Donald_G_Jackson"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_roller_blade_seven",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Roller Blade Seven",
+          "source": "label"
+        },
+        {
+          "text": "film the roller blade seven",
+          "source": "uri"
+        }
+      ],
+      "context": "The Roller Blade Seven. has director: Donald G. Jackson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Roller_Blade_Seven",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Roller Blade Seven",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Roller Blade Seven",
+        "extracted_source": "label",
+        "ground_truth_text": "The Roller Blade Seven",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9944806098937988,
+      "graph_score": 0.9972403049468994,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_donald_g_jackson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Donald G. Jackson",
+          "source": "label"
+        },
+        {
+          "text": "person donald g jackson",
+          "source": "uri"
+        }
+      ],
+      "context": "Donald G. Jackson. has burial place: Westwood Village Memorial Park Cemetery. inverse has director: The Roller Blade Seven.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Donald_G_Jackson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Donald G Jackson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Donald G. Jackson",
+        "extracted_source": "label",
+        "ground_truth_text": "Donald G Jackson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.98948073387146,
+      "string_score": 0.9863636493682861,
+      "independent_identity_support": true,
+      "context_score": 0.9964973330497742,
+      "graph_score": 0.9982486963272095,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_westwood_village_memorial_park_cemetery",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Westwood Village Memorial Park Cemetery",
+          "source": "label"
+        },
+        {
+          "text": "place westwood village memorial park cemetery",
+          "source": "uri"
+        }
+      ],
+      "context": "Westwood Village Memorial Park Cemetery. inverse has burial place: Donald G. Jackson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Westwood_Village_Memorial_Park_Cemetery",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Westwood Village Memorial Park Cemetery",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Westwood Village Memorial Park Cemetery",
+        "extracted_source": "label",
+        "ground_truth_text": "Westwood Village Memorial Park Cemetery",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9971069097518921,
+      "graph_score": 0.998553454875946,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

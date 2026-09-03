@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_maiden_cheek a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Maiden's Cheek" ;
+    onto:hasDirector data:person_alekos_sakellarios .
+
+data:person_alekos_sakellarios a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alekos Sakellarios" ;
+    onto:hasBurialPlace data:place_first_cemetery_of_athens .
+
+data:place_first_cemetery_of_athens a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "First Cemetery of Athens" .
+

@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Anđelko_Klobučar> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Anđelko Klobučar" ;
+    onto:hasAwardReceived <http://example.org/entity/Vladimir_Nazor_Award>,
+        data:porin_lifetime_award ;
+    onto:hasBirthDate "1931-07-11"^^xsd:date ;
+    onto:hasDeathDate "2016-08-07"^^xsd:date .
+
+<http://example.org/entity/Black_Birds> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Black Birds" .
+
+<http://example.org/entity/Vladimir_Nazor_Award> a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Vladimir Nazor Award for Life Achievement in Music" .
+
+data:porin_lifetime_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Porin Lifetime Achievement Award" .
+

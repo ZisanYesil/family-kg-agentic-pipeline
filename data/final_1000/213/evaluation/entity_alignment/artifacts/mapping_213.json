@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/213/originals/extracted_213.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/213/ground_truth_213.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_dear_brat": "http://example.org/entity/Dear_Brat",
+    "http://example.org/extracted/film_eleven_pairs_of_boots": "http://example.org/entity/Eleven_Pairs_of_Boots"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_dear_brat",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dear Brat",
+          "source": "label"
+        },
+        {
+          "text": "film dear brat",
+          "source": "uri"
+        }
+      ],
+      "context": "Dear Brat. has publication date: 1951.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dear_Brat",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dear Brat",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dear Brat",
+        "extracted_source": "label",
+        "ground_truth_text": "Dear Brat",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7551663666963577
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_eleven_pairs_of_boots",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Once pares de botas",
+          "source": "altLabel"
+        },
+        {
+          "text": "Eleven Pairs of Boots",
+          "source": "label"
+        },
+        {
+          "text": "film eleven pairs of boots",
+          "source": "uri"
+        }
+      ],
+      "context": "Once pares de botas. has publication date: 1954.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eleven_Pairs_of_Boots",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eleven Pairs of Boots",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eleven Pairs of Boots",
+        "extracted_source": "label",
+        "ground_truth_text": "Eleven Pairs of Boots",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9121379852294922,
+      "graph_score": 0.9121379852294922,
+      "margin": 0.7037755846977234
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

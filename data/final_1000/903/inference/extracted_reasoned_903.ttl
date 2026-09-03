@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/song_lighter> a ex:Artifact,
+        ex:CreativeWork,
+        ex:MusicalWork ;
+    ex:hasCreator <http://example.org/extracted/person_miley_cyrus> ;
+    ex:hasPerformer <http://example.org/extracted/person_miley_cyrus> .
+
+<http://example.org/extracted/person_billy_ray_cyrus> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/person_miley_cyrus> .
+
+<http://example.org/extracted/person_miley_cyrus> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/extracted/person_billy_ray_cyrus> ;
+    ex:hasParent <http://example.org/extracted/person_billy_ray_cyrus> .
+

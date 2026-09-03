@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/63/evaluation/entity_alignment/baseline_extracted_aligned_63.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/63/evaluation/entity_alignment/baseline_ground_truth_aligned_63.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Catholic_University_of_Tachira",
+      "predicate": "hasInception",
+      "object": "\"1962\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Catholic_University_of_Tachira",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1962\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Sri_Dharmaloka_College",
+      "predicate": "hasInception",
+      "object": "\"1938\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Sri_Dharmaloka_College",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1938\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Catholic_University_of_Tachira",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Catholic_University_of_Tachira",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Catholic_University_of_Tachira",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Catholic_University_of_Tachira",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Catholic_University_of_Tachira",
+      "predicate": "label",
+      "object": "\"Catholic University Of Tachira\"",
+      "subject_uri": "http://example.org/entity/Catholic_University_of_Tachira",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Catholic University Of Tachira\""
+    },
+    {
+      "subject": "Catholic_University_of_Tachira",
+      "predicate": "altLabel",
+      "object": "\"UCAT\"",
+      "subject_uri": "http://example.org/entity/Catholic_University_of_Tachira",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"UCAT\""
+    },
+    {
+      "subject": "Catholic_University_of_Tachira",
+      "predicate": "altLabel",
+      "object": "\"Universidad Católica del Táchira\"",
+      "subject_uri": "http://example.org/entity/Catholic_University_of_Tachira",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Universidad Católica del Táchira\""
+    },
+    {
+      "subject": "Sri_Dharmaloka_College",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Sri_Dharmaloka_College",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Sri_Dharmaloka_College",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sri_Dharmaloka_College",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sri_Dharmaloka_College",
+      "predicate": "label",
+      "object": "\"Sri Dharmaloka College\"",
+      "subject_uri": "http://example.org/entity/Sri_Dharmaloka_College",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sri Dharmaloka College\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 2,
+    "false_positives": 8,
+    "false_negatives": 0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "f1": 0.33333333333333337
+  },
+  "stage": "pre_inference"
+}

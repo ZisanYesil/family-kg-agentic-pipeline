@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/16/originals/extracted_16.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/16/ground_truth_16.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jerez_de_la_frontera": "http://example.org/entity/Jerez_de_la_Frontera",
+    "http://example.org/extracted/antonio_flores_1961": "http://example.org/entity/Antonio_González_Flores",
+    "http://example.org/extracted/lola_flores": "http://example.org/entity/Lola_Flores"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/antonio_flores_1961",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Antonio Flores",
+          "source": "altLabel"
+        },
+        {
+          "text": "Antonio González Flores",
+          "source": "label"
+        },
+        {
+          "text": "antonio flores 1961",
+          "source": "uri"
+        }
+      ],
+      "context": "Antonio Flores. has mother: Lola Flores.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Antonio_González_Flores",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Antonio González Flores",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Antonio González Flores",
+        "extracted_source": "label",
+        "ground_truth_text": "Antonio González Flores",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9623866081237793,
+      "graph_score": 0.9811933040618896,
+      "margin": 0.41266167163848877
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jerez_de_la_frontera",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jerez de la Frontera",
+          "source": "label"
+        }
+      ],
+      "context": "Jerez de la Frontera. inverse has birth place: Lola Flores.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jerez_de_la_Frontera",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jerez de la Frontera",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jerez de la Frontera",
+        "extracted_source": "label",
+        "ground_truth_text": "Jerez de la Frontera",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lola_flores",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lola Flores",
+          "source": "altLabel"
+        },
+        {
+          "text": "María Dolores Flores Ruiz",
+          "source": "label"
+        }
+      ],
+      "context": "Lola Flores. has birth place: Jerez de la Frontera. inverse has mother: Antonio Flores.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lola_Flores",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lola Flores",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lola Flores",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Lola Flores",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9900446534156799,
+      "graph_score": 0.9950222969055176,
+      "margin": 0.46463680267333984
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

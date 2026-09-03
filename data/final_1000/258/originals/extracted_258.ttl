@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:margaret_simey a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Margaret Simey" ;
+    onto:hasSpouse data:tom_simey ;
+    skos:altLabel "Margaret Bayne Todd" .
+
+data:balliol_college_oxford a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Balliol College, Oxford" ;
+    skos:altLabel "Balliol College" .
+
+data:tom_simey a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tom Simey" ;
+    onto:hasEducatedAt data:balliol_college_oxford ;
+    skos:altLabel "Thomas Spensley Simey" .
+

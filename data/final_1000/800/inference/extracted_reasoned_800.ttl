@@ -1,0 +1,14 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/lawrence_kansas> a ex:Place .
+
+<http://example.org/extracted/william_s_burroughs_jr> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/extracted/william_s_burroughs_senior> ;
+    ex:hasParent <http://example.org/extracted/william_s_burroughs_senior> .
+
+<http://example.org/extracted/william_s_burroughs_senior> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/william_s_burroughs_jr> ;
+    ex:hasDeathPlace <http://example.org/extracted/lawrence_kansas> .
+

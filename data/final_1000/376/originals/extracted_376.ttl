@@ -1,0 +1,16 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:bellingham_review a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Bellingham Review" ;
+    onto:hasPublisher data:western_washington_university .
+
+data:western_washington_university a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Western Washington University" ;
+    onto:hasInception "1886"^^xsd:gYear .
+

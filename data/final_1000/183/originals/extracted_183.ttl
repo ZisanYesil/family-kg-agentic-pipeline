@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_nippu a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Nippu" ;
+    onto:hasDirector data:person_gunasekhar ;
+    skos:altLabel "Nippu" .
+
+data:award_filmfare_best_director_telugu a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Award for Best Director – Telugu" ;
+    skos:altLabel "Filmfare Award for Best Director – Telugu" .
+
+data:person_gunasekhar a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gunasekhar" ;
+    onto:hasAwardReceived data:award_filmfare_best_director_telugu ;
+    skos:altLabel "Gunasekar",
+        "Gunasekhar" .
+

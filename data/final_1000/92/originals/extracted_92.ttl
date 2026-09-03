@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_angel_square a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Angel Square" ;
+    onto:hasDirector data:anne_wheeler .
+
+data:anne_wheeler a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Anne Wheeler" ;
+    onto:hasAwardReceived data:gemini_award,
+        data:leo_award .
+
+data:gemini_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Gemini Award" .
+
+data:leo_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Leo Award" .
+

@@ -1,0 +1,120 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/194/originals/extracted_194.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/194/ground_truth_194.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_minnie_riperton": "http://example.org/entity/Minnie_Riperton",
+    "http://example.org/extracted/song_inside_my_love": "http://example.org/entity/Inside_My_Love"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_minnie_riperton",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Minnie Julia Riperton‐Rudolph",
+          "source": "altLabel"
+        },
+        {
+          "text": "Minnie Riperton",
+          "source": "label"
+        },
+        {
+          "text": "person minnie riperton",
+          "source": "uri"
+        }
+      ],
+      "context": "Minnie Julia Riperton‐Rudolph. inverse has performer: Inside My Love.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Minnie_Riperton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Minnie Riperton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Minnie Riperton",
+        "extracted_source": "label",
+        "ground_truth_text": "Minnie Riperton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7954018712043762,
+      "graph_score": 0.8977009057998657,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_inside_my_love",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Inside My Love",
+          "source": "label"
+        },
+        {
+          "text": "song inside my love",
+          "source": "uri"
+        }
+      ],
+      "context": "Inside My Love. has performer: Minnie Julia Riperton‐Rudolph.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Inside_My_Love",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Inside My Love",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Inside My Love",
+        "extracted_source": "label",
+        "ground_truth_text": "Inside My Love",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9492526650428772,
+      "graph_score": 0.9746263027191162,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Chicago"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/299/evaluation/entity_alignment/baseline_extracted_aligned_299.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/299/evaluation/entity_alignment/baseline_ground_truth_aligned_299.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "The_Gold_Cure",
+      "predicate": "hasDirector",
+      "object": "W_P_Kellino",
+      "subject_uri": "http://example.org/entity/The_Gold_Cure",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/W_P_Kellino"
+    },
+    {
+      "subject": "W_P_Kellino",
+      "predicate": "hasBirthPlace",
+      "object": "London",
+      "subject_uri": "http://example.org/entity/W_P_Kellino",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/London"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "London",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/London",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "London",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/London",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "London",
+      "predicate": "label",
+      "object": "\"London, England\"",
+      "subject_uri": "http://example.org/entity/London",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"London, England\""
+    },
+    {
+      "subject": "The_Gold_Cure",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Gold_Cure",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Gold_Cure",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Gold_Cure",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Gold_Cure",
+      "predicate": "label",
+      "object": "\"The Gold Cure (1925 film)\"",
+      "subject_uri": "http://example.org/entity/The_Gold_Cure",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Gold Cure (1925 film)\""
+    },
+    {
+      "subject": "W_P_Kellino",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/W_P_Kellino",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "W_P_Kellino",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/W_P_Kellino",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "W_P_Kellino",
+      "predicate": "label",
+      "object": "\"W.P. Kellino\"",
+      "subject_uri": "http://example.org/entity/W_P_Kellino",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"W.P. Kellino\""
+    },
+    {
+      "subject": "W_P_Kellino",
+      "predicate": "altLabel",
+      "object": "\"W.P. Kellino\"",
+      "subject_uri": "http://example.org/entity/W_P_Kellino",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"W.P. Kellino\""
+    },
+    {
+      "subject": "W_P_Kellino",
+      "predicate": "altLabel",
+      "object": "\"William Philip Gislingham\"",
+      "subject_uri": "http://example.org/entity/W_P_Kellino",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"William Philip Gislingham\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

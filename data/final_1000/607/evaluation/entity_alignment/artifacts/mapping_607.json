@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/607/originals/extracted_607.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/607/ground_truth_607.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/james_a_ryder": "http://example.org/entity/James_A_Ryder",
+    "http://example.org/extracted/arthur_kellam_tylee": "http://example.org/entity/Arthur_Kellam_Tylee"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/arthur_kellam_tylee",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Arthur Kellam Tylee",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Arthur Kellam Tylee. has birth date: 1887-04-24. has death date: 1961-04-13.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Arthur_Kellam_Tylee",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Arthur Kellam Tylee",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Arthur Kellam Tylee",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Arthur Kellam Tylee",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6140297651290894
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/james_a_ryder",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James A. Ryder",
+          "source": "altLabel"
+        },
+        {
+          "text": "james a ryder",
+          "source": "uri"
+        }
+      ],
+      "context": "James A. Ryder. has birth date: 1800-10-08. has death date: 1860-01-12.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_A_Ryder",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James A Ryder",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James A. Ryder",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "James A Ryder",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9573352336883545,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9918508529663086,
+      "graph_score": 0.9918508529663086,
+      "margin": 0.6154921352863312
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

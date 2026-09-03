@@ -1,0 +1,120 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/689/originals/extracted_689.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/689/ground_truth_689.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sybil_b_g_eysenck": "http://example.org/entity/Sybil_Bianca_Giuliett_Eysenck",
+    "http://example.org/extracted/hans_eysenck": "http://example.org/entity/Hans_Eysenck"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/hans_eysenck",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hans Eysenck",
+          "source": "altLabel"
+        },
+        {
+          "text": "Hans Jürgen Eysenck",
+          "source": "label"
+        }
+      ],
+      "context": "Hans Eysenck. inverse has spouse: Sybil B. G. Eysenck.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hans_Eysenck",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hans Eysenck",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hans Eysenck",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Hans Eysenck",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8031085133552551,
+      "graph_score": 0.9015542268753052,
+      "margin": 0.5219303071498871
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sybil_b_g_eysenck",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sybil B. G. Eysenck",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sybil Bianca Giuliett Eysenck",
+          "source": "label"
+        },
+        {
+          "text": "sybil b g eysenck",
+          "source": "uri"
+        }
+      ],
+      "context": "Sybil B. G. Eysenck. has spouse: Hans Eysenck.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sybil_Bianca_Giuliett_Eysenck",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sybil Bianca Giuliett Eysenck",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sybil Bianca Giuliett Eysenck",
+        "extracted_source": "label",
+        "ground_truth_text": "Sybil Bianca Giuliett Eysenck",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8482381105422974,
+      "graph_score": 0.9241190552711487,
+      "margin": 0.44102543592453003
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/King_s_College_London"
+  ]
+}

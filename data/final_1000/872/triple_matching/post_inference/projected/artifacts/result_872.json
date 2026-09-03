@@ -1,0 +1,84 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/872/evaluation/entity_alignment/final_extracted_aligned_872.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/872/evaluation/entity_alignment/final_ground_truth_aligned_872.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Sol_Niger_Within",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Sol_Niger_Within",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Sol_Niger_Within",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Sol_Niger_Within",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "The_Magic_Place",
+      "predicate": "hasPublicationDate",
+      "object": "\"2011-02-21\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/The_Magic_Place",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"2011-02-21\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "The_Magic_Place",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/The_Magic_Place",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "The_Magic_Place",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The_Magic_Place",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Sol_Niger_Within",
+      "predicate": "hasPublicationDate",
+      "object": "\"1999\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Sol_Niger_Within",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1999\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Sol_Niger_Within",
+      "predicate": "hasPublicationDate",
+      "object": "\"1997\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Sol_Niger_Within",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1997\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 6,
+    "union_triples_in_scope": 7,
+    "true_positives": 5,
+    "false_positives": 1,
+    "false_negatives": 1,
+    "precision": 0.8333333333333334,
+    "recall": 0.8333333333333334,
+    "f1": 0.8333333333333334
+  },
+  "stage": "post_inference"
+}

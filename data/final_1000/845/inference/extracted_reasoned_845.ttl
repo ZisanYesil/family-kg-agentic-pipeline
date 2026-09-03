@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/film_monsieur_n> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/person_antoine_de_caunes> ;
+    ex:hasDirector <http://example.org/extracted/person_antoine_de_caunes> .
+
+<http://example.org/extracted/person_emma_de_caunes> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/extracted/person_antoine_de_caunes> ;
+    ex:hasParent <http://example.org/extracted/person_antoine_de_caunes> .
+
+<http://example.org/extracted/person_antoine_de_caunes> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/person_emma_de_caunes> .
+

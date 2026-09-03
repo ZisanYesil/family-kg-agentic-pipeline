@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/302/originals/extracted_302.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/302/ground_truth_302.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/claude_fran%C3%A7oise_lorraine_1612": "http://example.org/entity/Claude_Françoise_de_Lorraine",
+    "http://example.org/extracted/nicole_duchess_of_lorraine": "http://example.org/entity/Nicole_Duchess_of_Lorraine"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/claude_fran%C3%A7oise_lorraine_1612",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Claude Françoise de Lorraine",
+          "source": "label"
+        },
+        {
+          "text": "claude françoise lorraine 1612",
+          "source": "uri"
+        }
+      ],
+      "context": "Claude Françoise de Lorraine. has sister: Nicole, Duchess of Lorraine. inverse has mother: Anne Marie Thérèse de Lorraine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Claude_Françoise_de_Lorraine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Claude Françoise de Lorraine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Claude Françoise de Lorraine",
+        "extracted_source": "label",
+        "ground_truth_text": "Claude Françoise de Lorraine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9904268383979797,
+      "graph_score": 0.49521341919898987,
+      "margin": 0.38234156370162964
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/nicole_duchess_of_lorraine",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nicole, Duchess of Lorraine",
+          "source": "label"
+        },
+        {
+          "text": "nicole duchess of lorraine",
+          "source": "uri"
+        }
+      ],
+      "context": "Nicole, Duchess of Lorraine. inverse has sister: Claude Françoise de Lorraine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nicole_Duchess_of_Lorraine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nicole Duchess of Lorraine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nicole, Duchess of Lorraine",
+        "extracted_source": "label",
+        "ground_truth_text": "Nicole Duchess of Lorraine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.982054591178894,
+      "string_score": 0.9915094375610352,
+      "independent_identity_support": true,
+      "context_score": 0.9789534211158752,
+      "graph_score": 0.4894767105579376,
+      "margin": 0.3713127374649048
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/anne_marie_therese_lorraine_1648",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anne Marie Thérèse de Lorraine",
+          "source": "label"
+        },
+        {
+          "text": "anne marie therese lorraine 1648",
+          "source": "uri"
+        }
+      ],
+      "context": "Anne Marie Thérèse de Lorraine. has mother: Claude Françoise de Lorraine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anne_Marie_Thérèse_of_Lorraine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anne Marie Thérèse of Lorraine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anne Marie Thérèse de Lorraine",
+        "extracted_source": "label",
+        "ground_truth_text": "Anne Marie Thérèse of Lorraine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9516183137893677,
+      "name_embedding_score": 0.9912230968475342,
+      "string_score": 0.8266666531562805,
+      "independent_identity_support": true,
+      "context_score": 0.9947211742401123,
+      "graph_score": 0.9973605871200562,
+      "margin": 0.2940821647644043
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

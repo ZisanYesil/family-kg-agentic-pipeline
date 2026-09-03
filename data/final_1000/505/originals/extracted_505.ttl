@@ -1,0 +1,31 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_an_ideal_woman a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "An Ideal Woman" ;
+    onto:hasDirector data:person_jean_durant .
+
+data:film_goodbye_emmanuelle a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Goodbye Emmanuelle" ;
+    onto:hasDirector data:person_francois_leterrier .
+
+data:person_francois_leterrier a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "François Leterrier" ;
+    onto:hasNationality data:country_france .
+
+data:person_jean_durant a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jean Durand" ;
+    onto:hasNationality data:country_france .
+
+data:country_france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+

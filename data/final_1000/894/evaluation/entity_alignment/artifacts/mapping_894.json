@@ -1,0 +1,151 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/894/originals/extracted_894.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/894/ground_truth_894.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/james_vincent": "http://example.org/entity/James_Vincent"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/james_vincent",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Vincent",
+          "source": "label"
+        }
+      ],
+      "context": "James Vincent. has death place: New York, New York. inverse has director: Ambition (1916 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_Vincent",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James Vincent",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James Vincent",
+        "extracted_source": "label",
+        "ground_truth_text": "James Vincent",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9443662166595459,
+      "graph_score": 0.9443662166595459,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/new_york_ny",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "New York, New York",
+          "source": "label"
+        },
+        {
+          "text": "new york ny",
+          "source": "uri"
+        }
+      ],
+      "context": "New York, New York. inverse has death place: James Vincent.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/New_York",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "New York",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "new york ny",
+        "extracted_source": "uri",
+        "ground_truth_text": "New York",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9502476453781128,
+      "name_embedding_score": 0.9815090894699097,
+      "string_score": 0.8456140160560608,
+      "independent_identity_support": true,
+      "context_score": 0.9847167134284973,
+      "graph_score": 0.9923583269119263,
+      "margin": 0.9502476453781128
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/amb_1916_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ambition (1916 film)",
+          "source": "label"
+        },
+        {
+          "text": "amb 1916 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Ambition (1916 film). has director: James Vincent.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ambition",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ambition",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ambition (1916 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Ambition",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7434890270233154,
+      "name_embedding_score": 0.6938584446907043,
+      "string_score": 0.6404761672019958,
+      "independent_identity_support": false,
+      "context_score": 0.8915263414382935,
+      "graph_score": 0.9457631707191467,
+      "margin": 0.7434890270233154
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

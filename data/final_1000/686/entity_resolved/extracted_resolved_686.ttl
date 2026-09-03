@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:awesome_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Awesome; I Fuckin' Shot That!" ;
+    onto:hasDirector data:adam_yauch .
+
+data:adam_yauch a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Adam Yauch" ;
+    onto:hasCauseOfDeath data:parotid_cancer ;
+    skos:altLabel "Adam Nathaniel Yauch" .
+
+data:parotid_cancer a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "parotid cancer" .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:marie_of_blois a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marie of Blois" ;
+    onto:hasSpouse data:louis_i_of_anjou .
+
+data:bonne_of_bohemia a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bonne of Bohemia" .
+
+data:louis_i_of_anjou a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis I of Anjou" ;
+    onto:hasMother data:bonne_of_bohemia .
+

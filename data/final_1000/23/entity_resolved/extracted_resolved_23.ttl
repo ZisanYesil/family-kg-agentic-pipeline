@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:dexter_young a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Dexter Young" ;
+    onto:hasMother data:connie_chan .
+
+data:china a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "China" .
+
+data:connie_chan a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Connie Chan" ;
+    onto:hasCountry data:china .
+

@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/basilica_of_saint_servatius_maastricht> a ex:Place .
+
+<http://example.org/extracted/charles_duke_of_lower_lorraine> a ex:Agent,
+        ex:Person ;
+    ex:hasBurialPlace <http://example.org/extracted/basilica_of_saint_servatius_maastricht> ;
+    ex:hasChild <http://example.org/extracted/louis_of_lower_lorraine> ;
+    ex:hasSon <http://example.org/extracted/louis_of_lower_lorraine> .
+
+<http://example.org/extracted/louis_of_lower_lorraine> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/extracted/charles_duke_of_lower_lorraine> ;
+    ex:isSonOf <http://example.org/extracted/charles_duke_of_lower_lorraine> .
+

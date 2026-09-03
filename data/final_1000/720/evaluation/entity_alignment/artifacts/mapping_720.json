@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/720/originals/extracted_720.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/720/ground_truth_720.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/arthur_macarthur_iv": "http://example.org/entity/Arthur_MacArthur_IV",
+    "http://example.org/extracted/douglas_macarthur": "http://example.org/entity/Douglas_MacArthur",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/arthur_macarthur_iv",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Arthur Mac Arthur IV",
+          "source": "label"
+        },
+        {
+          "text": "arthur macarthur iv",
+          "source": "uri"
+        }
+      ],
+      "context": "Arthur Mac Arthur IV. inverse has father: Douglas Mac Arthur.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Arthur_MacArthur_IV",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Arthur Mac Arthur IV",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Arthur Mac Arthur IV",
+        "extracted_source": "label",
+        "ground_truth_text": "Arthur Mac Arthur IV",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9474334120750427,
+      "graph_score": 0.47371670603752136,
+      "margin": 0.2970241904258728
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/douglas_macarthur",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Douglas Mac Arthur",
+          "source": "label"
+        },
+        {
+          "text": "douglas macarthur",
+          "source": "uri"
+        }
+      ],
+      "context": "Douglas Mac Arthur. has father: Arthur Mac Arthur IV. has nationality: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Douglas_MacArthur",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Douglas Mac Arthur",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Douglas Mac Arthur",
+        "extracted_source": "label",
+        "ground_truth_text": "Douglas Mac Arthur",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9345170855522156,
+      "graph_score": 0.4672585427761078,
+      "margin": 0.2881741523742676
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has nationality: Douglas Mac Arthur.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.929182767868042,
+      "graph_score": 0.464591383934021,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,134 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/416/originals/extracted_416.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/416/ground_truth_416.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/agnes_of_meissen": "http://example.org/entity/Agnes_of_Meissen",
+    "http://example.org/extracted/margaret_of_sicily": "http://example.org/entity/Margaret_of_Sicily"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/agnes_of_meissen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Agnes of Meissen",
+          "source": "label"
+        }
+      ],
+      "context": "Agnes of Meissen. has mother: Margaret of Sicily.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Agnes_of_Meissen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Agnes of Meissen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Agnes of Meissen",
+        "extracted_source": "label",
+        "ground_truth_text": "Agnes of Meissen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5007507503032684
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/margaret_of_sicily",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Margaret of Sicily",
+          "source": "label"
+        }
+      ],
+      "context": "Margaret of Sicily. has nationality: Sicily. inverse has mother: Agnes of Meissen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Margaret_of_Sicily",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Margaret of Sicily",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Margaret of Sicily",
+        "extracted_source": "label",
+        "ground_truth_text": "Margaret of Sicily",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9125752449035645,
+      "graph_score": 0.9562876224517822,
+      "margin": 0.4926038980484009
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sicily",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sicily",
+          "source": "label"
+        }
+      ],
+      "context": "Sicily. inverse has nationality: Margaret of Sicily.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Germany"
+  ]
+}

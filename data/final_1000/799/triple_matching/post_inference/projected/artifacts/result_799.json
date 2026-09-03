@@ -1,0 +1,148 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/799/evaluation/entity_alignment/final_extracted_aligned_799.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/799/evaluation/entity_alignment/final_ground_truth_aligned_799.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Bad_Homburg_vor_der_Höhe",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Bad_Homburg_vor_der_Höhe",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "George_Bernhard_of_Anhalt_Dessau",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/George_Bernhard_of_Anhalt_Dessau",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "George_Bernhard_of_Anhalt_Dessau",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/George_Bernhard_of_Anhalt_Dessau",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "George_Bernhard_of_Anhalt_Dessau",
+      "predicate": "hasParent",
+      "object": "Landgravine_Amalie_of_Hesse_Homburg",
+      "subject_uri": "http://example.org/entity/George_Bernhard_of_Anhalt_Dessau",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Landgravine_Amalie_of_Hesse_Homburg"
+    },
+    {
+      "subject": "Landgravine_Amalie_of_Hesse_Homburg",
+      "predicate": "hasChild",
+      "object": "George_Bernhard_of_Anhalt_Dessau",
+      "subject_uri": "http://example.org/entity/Landgravine_Amalie_of_Hesse_Homburg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/George_Bernhard_of_Anhalt_Dessau"
+    },
+    {
+      "subject": "Landgravine_Amalie_of_Hesse_Homburg",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Landgravine_Amalie_of_Hesse_Homburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Landgravine_Amalie_of_Hesse_Homburg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Landgravine_Amalie_of_Hesse_Homburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Princess_Amalie_of_Hesse_Homburg",
+      "predicate": "hasBirthPlace",
+      "object": "Bad_Homburg_vor_der_Höhe",
+      "subject_uri": "http://example.org/entity/Princess_Amalie_of_Hesse_Homburg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Bad_Homburg_vor_der_Höhe"
+    },
+    {
+      "subject": "Princess_Amalie_of_Hesse_Homburg",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Princess_Amalie_of_Hesse_Homburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Princess_Amalie_of_Hesse_Homburg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Amalie_of_Hesse_Homburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "George_Bernhard_of_Anhalt_Dessau",
+      "predicate": "hasParent",
+      "object": "amelie_of_hesse_homburg",
+      "subject_uri": "http://example.org/entity/George_Bernhard_of_Anhalt_Dessau",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/extracted/amelie_of_hesse_homburg"
+    },
+    {
+      "subject": "amelie_of_hesse_homburg",
+      "predicate": "hasBirthPlace",
+      "object": "Bad_Homburg_vor_der_Höhe",
+      "subject_uri": "http://example.org/extracted/amelie_of_hesse_homburg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Bad_Homburg_vor_der_Höhe"
+    },
+    {
+      "subject": "amelie_of_hesse_homburg",
+      "predicate": "hasChild",
+      "object": "George_Bernhard_of_Anhalt_Dessau",
+      "subject_uri": "http://example.org/extracted/amelie_of_hesse_homburg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/George_Bernhard_of_Anhalt_Dessau"
+    },
+    {
+      "subject": "amelie_of_hesse_homburg",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/amelie_of_hesse_homburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "amelie_of_hesse_homburg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/amelie_of_hesse_homburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 15,
+    "true_positives": 3,
+    "false_positives": 5,
+    "false_negatives": 7,
+    "precision": 0.375,
+    "recall": 0.3,
+    "f1": 0.33333333333333326
+  },
+  "stage": "post_inference"
+}

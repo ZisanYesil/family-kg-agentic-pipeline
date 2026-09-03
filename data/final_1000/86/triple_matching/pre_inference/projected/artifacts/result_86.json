@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/86/evaluation/entity_alignment/baseline_extracted_aligned_86.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/86/evaluation/entity_alignment/baseline_ground_truth_aligned_86.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Çesk_Zadeja",
+      "predicate": "hasBirthPlace",
+      "object": "Shkodër",
+      "subject_uri": "http://example.org/entity/Çesk_Zadeja",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Shkodër"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Tana",
+      "predicate": "hasComposer",
+      "object": "Çesk_Zadeja",
+      "subject_uri": "http://example.org/entity/Tana",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Çesk_Zadeja"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Shkodër",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Shkodër",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Shkodër",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Shkodër",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Shkodër",
+      "predicate": "label",
+      "object": "\"Shkodër\"",
+      "subject_uri": "http://example.org/entity/Shkodër",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Shkodër\""
+    },
+    {
+      "subject": "Tana",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Tana",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Tana",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Tana",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Tana",
+      "predicate": "label",
+      "object": "\"Tana\"",
+      "subject_uri": "http://example.org/entity/Tana",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Tana\""
+    },
+    {
+      "subject": "Çesk_Zadeja",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Çesk_Zadeja",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Çesk_Zadeja",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Çesk_Zadeja",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Çesk_Zadeja",
+      "predicate": "label",
+      "object": "\"Çesk Zadeja\"",
+      "subject_uri": "http://example.org/entity/Çesk_Zadeja",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Çesk Zadeja\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 1,
+    "false_positives": 9,
+    "false_negatives": 1,
+    "precision": 0.1,
+    "recall": 0.5,
+    "f1": 0.16666666666666669
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/39/evaluation/entity_alignment/baseline_extracted_aligned_39.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/39/evaluation/entity_alignment/baseline_ground_truth_aligned_39.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Die_Abfahrer",
+      "predicate": "hasDirector",
+      "object": "Adolf_Winkelmann",
+      "subject_uri": "http://example.org/entity/Die_Abfahrer",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Adolf_Winkelmann"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Adolf_Winkelmann",
+      "predicate": "hasEmployer",
+      "object": "Dortmund_University_of_Applied_Sciences_and_Arts",
+      "subject_uri": "http://example.org/entity/Adolf_Winkelmann",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/Dortmund_University_of_Applied_Sciences_and_Arts"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Adolf_Winkelmann",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Adolf_Winkelmann",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Adolf_Winkelmann",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Adolf_Winkelmann",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Adolf_Winkelmann",
+      "predicate": "label",
+      "object": "\"Adolf Winkelmann\"",
+      "subject_uri": "http://example.org/entity/Adolf_Winkelmann",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Adolf Winkelmann\""
+    },
+    {
+      "subject": "Die_Abfahrer",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Die_Abfahrer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Die_Abfahrer",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Die_Abfahrer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Die_Abfahrer",
+      "predicate": "label",
+      "object": "\"Die Abfahrer\"",
+      "subject_uri": "http://example.org/entity/Die_Abfahrer",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Die Abfahrer\""
+    },
+    {
+      "subject": "Dortmund_University_of_Applied_Sciences_and_Arts",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Dortmund_University_of_Applied_Sciences_and_Arts",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Dortmund_University_of_Applied_Sciences_and_Arts",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Dortmund_University_of_Applied_Sciences_and_Arts",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Dortmund_University_of_Applied_Sciences_and_Arts",
+      "predicate": "label",
+      "object": "\"Dortmund University of Applied Sciences and Arts\"",
+      "subject_uri": "http://example.org/entity/Dortmund_University_of_Applied_Sciences_and_Arts",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Dortmund University of Applied Sciences and Arts\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 1,
+    "false_positives": 9,
+    "false_negatives": 1,
+    "precision": 0.1,
+    "recall": 0.5,
+    "f1": 0.16666666666666669
+  },
+  "stage": "pre_inference"
+}

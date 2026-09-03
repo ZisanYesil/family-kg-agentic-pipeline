@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/636/originals/extracted_636.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/636/ground_truth_636.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_commando_leopard": "http://example.org/entity/Commando_Leopard",
+    "http://example.org/extracted/film_invasion_astro_monster": "http://example.org/entity/Invasion_of_Astro_Monster"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_commando_leopard",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Commando Leopard",
+          "source": "label"
+        },
+        {
+          "text": "film commando leopard",
+          "source": "uri"
+        }
+      ],
+      "context": "Commando Leopard. has publication date: 1985.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Commando_Leopard",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Commando Leopard",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Commando Leopard",
+        "extracted_source": "label",
+        "ground_truth_text": "Commando Leopard",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6184875667095184
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_invasion_astro_monster",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Invasion Of Astro-Monster",
+          "source": "altLabel"
+        },
+        {
+          "text": "film invasion astro monster",
+          "source": "uri"
+        }
+      ],
+      "context": "Invasion Of Astro-Monster. has publication date: 1965-12-19.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Invasion_of_Astro_Monster",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Invasion of Astro Monster",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Invasion Of Astro-Monster",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Invasion of Astro Monster",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9869371652603149,
+      "string_score": 0.9819999933242798,
+      "independent_identity_support": true,
+      "context_score": 0.94228196144104,
+      "graph_score": 0.94228196144104,
+      "margin": 0.6467003226280212
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/761/originals/extracted_761.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/761/ground_truth_761.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/wolfgang_fischer_officer": "http://example.org/entity/Wolfgang_Fischer",
+    "http://example.org/extracted/sammy_drechsel": "http://example.org/entity/Sammy_Drechsel"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/sammy_drechsel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Karl- Heinz Kamke",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sammy Drechsel",
+          "source": "label"
+        }
+      ],
+      "context": "Karl- Heinz Kamke. has birth date: 1925-04-25. has death date: 1986-01-19.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sammy_Drechsel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sammy Drechsel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sammy Drechsel",
+        "extracted_source": "label",
+        "ground_truth_text": "Sammy Drechsel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5596174597740173,
+      "graph_score": 0.5596174597740173,
+      "margin": 0.4834272861480713
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wolfgang_fischer_officer",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Wolfgang Fischer",
+          "source": "label"
+        },
+        {
+          "text": "wolfgang fischer officer",
+          "source": "uri"
+        }
+      ],
+      "context": "Wolfgang Fischer. has birth date: 1888-12-11. has death date: 1943-02-01.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Wolfgang_Fischer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Wolfgang Fischer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Wolfgang Fischer",
+        "extracted_source": "label",
+        "ground_truth_text": "Wolfgang Fischer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6789763569831848
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

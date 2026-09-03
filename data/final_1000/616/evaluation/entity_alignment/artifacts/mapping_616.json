@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/616/originals/extracted_616.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/616/ground_truth_616.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_aansoo_ban_gaye_phool": "http://example.org/entity/Aansoo_Ban_Gaye_Phool",
+    "http://example.org/extracted/film_first_7th_night": "http://example.org/entity/The_First_7th_Night"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_aansoo_ban_gaye_phool",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Aansoo Ban Gaye Phool",
+          "source": "label"
+        },
+        {
+          "text": "film aansoo ban gaye phool",
+          "source": "uri"
+        }
+      ],
+      "context": "Aansoo Ban Gaye Phool. has publication date: 1969.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Aansoo_Ban_Gaye_Phool",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Aansoo Ban Gaye Phool",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Aansoo Ban Gaye Phool",
+        "extracted_source": "label",
+        "ground_truth_text": "Aansoo Ban Gaye Phool",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7896955460309982
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_first_7th_night",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The First 7th Night",
+          "source": "label"
+        },
+        {
+          "text": "film first 7th night",
+          "source": "uri"
+        }
+      ],
+      "context": "The First 7th Night. has publication date: 2009.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_First_7th_Night",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The First 7th Night",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The First 7th Night",
+        "extracted_source": "label",
+        "ground_truth_text": "The First 7th Night",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8220981955528259
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,158 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/535/originals/extracted_535.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/535/ground_truth_535.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/robert_de_brus_4th_lord": "http://example.org/entity/Robert_de_Brus_4th_Lord_of_Annandale",
+    "http://example.org/extracted/william_de_brus_3rd_lord": "http://example.org/entity/William_de_Brus_3rd_Lord_of_Annandale"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 1,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/robert_de_brus_4th_lord",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Robert de Brus, 4th Lord of Annandale",
+          "source": "label"
+        },
+        {
+          "text": "robert de brus 4th lord",
+          "source": "uri"
+        }
+      ],
+      "context": "Robert de Brus, 4th Lord of Annandale. has father: William de Brus, 3rd Lord of Annandale.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Robert_de_Brus_4th_Lord_of_Annandale",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Robert de Brus 4th Lord of Annandale",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Robert de Brus, 4th Lord of Annandale",
+        "extracted_source": "label",
+        "ground_truth_text": "Robert de Brus 4th Lord of Annandale",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9898709654808044,
+      "string_score": 0.9938356280326843,
+      "independent_identity_support": true,
+      "context_score": 0.9927161931991577,
+      "graph_score": 0.9963580965995789,
+      "margin": 0.23080527782440186
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/william_de_brus_3rd_lord",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William de Brus, 3rd Lord of Annandale",
+          "source": "label"
+        },
+        {
+          "text": "william de brus 3rd lord",
+          "source": "uri"
+        }
+      ],
+      "context": "William de Brus, 3rd Lord of Annandale. has brother: Robert de Brus (uncle of 4th Lord of Annandale). inverse has father: Robert de Brus, 4th Lord of Annandale.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_de_Brus_3rd_Lord_of_Annandale",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William de Brus 3rd Lord of Annandale",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William de Brus, 3rd Lord of Annandale",
+        "extracted_source": "label",
+        "ground_truth_text": "William de Brus 3rd Lord of Annandale",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9890255928039551,
+      "string_score": 0.9940000176429749,
+      "independent_identity_support": true,
+      "context_score": 0.9848446249961853,
+      "graph_score": 0.992422342300415,
+      "margin": 0.23014891147613525
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/robert_de_brus_uncle",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Robert de Brus (uncle of 4th Lord of Annandale)",
+          "source": "label"
+        },
+        {
+          "text": "robert de brus uncle",
+          "source": "uri"
+        }
+      ],
+      "context": "Robert de Brus (uncle of 4th Lord of Annandale). inverse has brother: William de Brus, 3rd Lord of Annandale.",
+      "decision": "review",
+      "matched": false,
+      "ground_truth_uri": "http://example.org/entity/Robert_III_de_Brus",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Robert III de Brus",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Robert de Brus (uncle of 4th Lord of Annandale)",
+        "extracted_source": "label",
+        "ground_truth_text": "Robert III de Brus",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6152502298355103,
+      "name_embedding_score": 0.742516040802002,
+      "string_score": 0.5021795034408569,
+      "independent_identity_support": false,
+      "context_score": 0.9475787281990051,
+      "graph_score": 0.47378936409950256,
+      "margin": -0.20437628030776978
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Robert_III_de_Brus"
+  ]
+}

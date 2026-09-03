@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Grimoald_II_died_714_called_the_Younger a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Pepin_of_Herstal ;
+    ex:hasParent entity:Pepin_of_Herstal .
+
+entity:Ansegisel a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Pepin_of_Herstal .
+
+entity:Pepin_of_Herstal a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Grimoald_II_died_714_called_the_Younger ;
+    ex:hasFather entity:Ansegisel ;
+    ex:hasParent entity:Ansegisel .
+

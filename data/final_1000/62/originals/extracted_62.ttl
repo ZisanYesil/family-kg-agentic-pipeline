@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:tag_der_freiheit a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Tag der Freiheit: Unsere Wehrmacht" ;
+    onto:hasDirector data:leni_riefenstahl .
+
+data:leni_riefenstahl a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leni Riefenstahl" ;
+    onto:hasBurialPlace data:munich_waldfriedhof ;
+    skos:altLabel "Helene Bertha Amalie \"Leni\" Riefenstahl" .
+
+data:munich_waldfriedhof a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Munich Waldfriedhof" .
+

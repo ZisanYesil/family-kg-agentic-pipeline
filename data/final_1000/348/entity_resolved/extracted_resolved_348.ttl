@@ -1,0 +1,31 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_beyond_rangoon a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Beyond Rangoon" ;
+    onto:hasDirector data:person_john_boorman .
+
+data:film_ryans_daughter a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Ryan's Daughter" ;
+    onto:hasDirector data:person_david_lean .
+
+data:person_david_lean a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "David Lean" ;
+    onto:hasNationality data:country_united_kingdom .
+
+data:person_john_boorman a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Boorman" ;
+    onto:hasNationality data:country_united_kingdom .
+
+data:country_united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "English" .
+

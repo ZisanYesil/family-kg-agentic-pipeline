@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Spy_Kids_2_The_Island_of_Lost_Dreams> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Spy Kids 2: The Island of Lost Dreams" ;
+    onto:hasCountry data:united_states_country .
+
+<http://example.org/entity/The_Other_Half_2016_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Other Half (2016 film)" ;
+    onto:hasCountry <http://example.org/entity/Canadian> .
+
+<http://example.org/entity/Canadian> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Canada" .
+
+data:united_states_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" .
+

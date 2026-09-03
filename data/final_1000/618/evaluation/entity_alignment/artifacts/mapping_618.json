@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/618/originals/extracted_618.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/618/ground_truth_618.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/westwood_village_memorial_park_cemetery_place": "http://example.org/entity/Westwood_Village_Memorial_Park_Cemetery",
+    "http://example.org/extracted/station_west_film": "http://example.org/entity/Station_West",
+    "http://example.org/extracted/sidney_lanfield_person": "http://example.org/entity/Sidney_Lanfield"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/sidney_lanfield_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sidney Landfield",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sidney Lanfield",
+          "source": "label"
+        },
+        {
+          "text": "sidney lanfield person",
+          "source": "uri"
+        }
+      ],
+      "context": "Sidney Landfield. has burial place: Westwood Village Memorial Park Cemetery. inverse has director: Station West.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sidney_Lanfield",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sidney Lanfield",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sidney Lanfield",
+        "extracted_source": "label",
+        "ground_truth_text": "Sidney Lanfield",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8673021793365479,
+      "graph_score": 0.9336510896682739,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/station_west_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Station West",
+          "source": "label"
+        },
+        {
+          "text": "station west film",
+          "source": "uri"
+        }
+      ],
+      "context": "Station West. has director: Sidney Landfield.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Station_West",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Station West",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Station West",
+        "extracted_source": "label",
+        "ground_truth_text": "Station West",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7739080786705017,
+      "graph_score": 0.8869540691375732,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/westwood_village_memorial_park_cemetery_place",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Westwood Village Memorial Park Cemetery",
+          "source": "label"
+        },
+        {
+          "text": "westwood village memorial park cemetery place",
+          "source": "uri"
+        }
+      ],
+      "context": "Westwood Village Memorial Park Cemetery. inverse has burial place: Sidney Landfield.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Westwood_Village_Memorial_Park_Cemetery",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Westwood Village Memorial Park Cemetery",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Westwood Village Memorial Park Cemetery",
+        "extracted_source": "label",
+        "ground_truth_text": "Westwood Village Memorial Park Cemetery",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9032552242279053,
+      "graph_score": 0.9516276121139526,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:song_me_and_liza a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Me and Liza" ;
+    onto:hasPerformer data:person_rufus_wainwright .
+
+data:person_loudon_wainwright_iii a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Loudon Wainwright III" .
+
+data:person_rufus_wainwright a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Rufus Wainwright" ;
+    onto:hasFather data:person_loudon_wainwright_iii .
+

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/418/originals/extracted_418.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/418/ground_truth_418.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/william_h_maynard": "http://example.org/entity/William_H_Maynard",
+    "http://example.org/extracted/tsai_cheng_fu": "http://example.org/entity/Tsai_Cheng_fu"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/tsai_cheng_fu",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tsai Cheng-Fu",
+          "source": "label"
+        },
+        {
+          "text": "tsai cheng fu",
+          "source": "uri"
+        }
+      ],
+      "context": "Tsai Cheng-Fu. has birth date: 1929. has death date: 2016-07-13.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tsai_Cheng_fu",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tsai Cheng fu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tsai Cheng-Fu",
+        "extracted_source": "label",
+        "ground_truth_text": "Tsai Cheng fu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9623753428459167,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9922620058059692,
+      "graph_score": 0.9922620058059692,
+      "margin": 0.7236048579216003
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/william_h_maynard",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William H. Maynard",
+          "source": "label"
+        },
+        {
+          "text": "william h maynard",
+          "source": "uri"
+        }
+      ],
+      "context": "William H. Maynard. has birth date: 1786-11-23. has death date: 1832-08-28.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_H_Maynard",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William H Maynard",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William H. Maynard",
+        "extracted_source": "label",
+        "ground_truth_text": "William H Maynard",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9902588725090027,
+      "string_score": 0.9871428608894348,
+      "independent_identity_support": true,
+      "context_score": 0.9965000152587891,
+      "graph_score": 0.9965000152587891,
+      "margin": 0.670737236738205
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

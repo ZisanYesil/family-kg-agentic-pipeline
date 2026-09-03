@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:amb_1916_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Ambition (1916 film)" ;
+    onto:hasDirector data:james_vincent .
+
+data:james_vincent a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "James Vincent" ;
+    onto:hasDeathPlace data:new_york_ny .
+
+data:new_york_ny a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "New York, New York" .
+

@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_road_hard a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Road Hard" ;
+    onto:hasDirector data:person_adam_carolla .
+
+data:film_we_are_the_freaks a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "We Are the Freaks" ;
+    onto:hasDirector data:person_justin_edgar .
+
+data:person_adam_carolla a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Adam Carolla" ;
+    onto:hasBirthDate "1964-05-27"^^xsd:date .
+
+data:person_justin_edgar a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Justin Edgar" ;
+    onto:hasBirthDate "1971-08-18"^^xsd:date .
+

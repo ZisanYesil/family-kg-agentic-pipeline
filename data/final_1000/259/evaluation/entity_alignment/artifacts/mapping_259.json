@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/259/originals/extracted_259.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/259/ground_truth_259.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/aatma_gowravam_film": "http://example.org/entity/Aatma_Gowravam",
+    "http://example.org/extracted/vitti_dandu_film": "http://example.org/entity/Vitti_Dandu",
+    "http://example.org/extracted/ajay_devgn_person": "http://example.org/entity/Ajay_Devgn",
+    "http://example.org/extracted/madhusudhana_rao_person": "http://example.org/entity/D_Madhusudhana_Rao"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/aatma_gowravam_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Aatma Gowravam",
+          "source": "label"
+        },
+        {
+          "text": "aatma gowravam film",
+          "source": "uri"
+        }
+      ],
+      "context": "Aatma Gowravam. has producer: D. Madhusudhana Rao.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Aatma_Gowravam",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Aatma Gowravam",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Aatma Gowravam",
+        "extracted_source": "label",
+        "ground_truth_text": "Aatma Gowravam",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9954953789710999,
+      "graph_score": 0.9977476596832275,
+      "margin": 0.7366430461406708
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ajay_devgn_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ajay Devgn",
+          "source": "label"
+        },
+        {
+          "text": "ajay devgn person",
+          "source": "uri"
+        }
+      ],
+      "context": "Ajay Devgn. has birth date: 1969-04-02. inverse has producer: Vitti Dandu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ajay_Devgn",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ajay Devgn",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ajay Devgn",
+        "extracted_source": "label",
+        "ground_truth_text": "Ajay Devgn",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6783412098884583
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/madhusudhana_rao_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "D. Madhusudhana Rao",
+          "source": "label"
+        },
+        {
+          "text": "madhusudhana rao person",
+          "source": "uri"
+        }
+      ],
+      "context": "D. Madhusudhana Rao. has birth date: 1917-07-27. inverse has producer: Aatma Gowravam.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/D_Madhusudhana_Rao",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "D Madhusudhana Rao",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "D. Madhusudhana Rao",
+        "extracted_source": "label",
+        "ground_truth_text": "D Madhusudhana Rao",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9877573251724243,
+      "string_score": 0.9878378510475159,
+      "independent_identity_support": true,
+      "context_score": 0.9971437454223633,
+      "graph_score": 0.9985718727111816,
+      "margin": 0.7153544723987579
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/vitti_dandu_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vitti Dandu",
+          "source": "label"
+        },
+        {
+          "text": "vitti dandu film",
+          "source": "uri"
+        }
+      ],
+      "context": "Vitti Dandu. has producer: Ajay Devgn.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vitti_Dandu",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vitti Dandu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vitti Dandu",
+        "extracted_source": "label",
+        "ground_truth_text": "Vitti Dandu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7271774709224701
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

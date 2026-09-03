@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Jacqueline_Lee_Kennedy_Onassis a ex:Agent,
+        ex:Person ;
+    ex:hasBirthPlace entity:Southampton .
+
+entity:Caroline_Bouvier_Kennedy a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Jacqueline_Bouvier ;
+    ex:hasParent entity:Jacqueline_Bouvier .
+
+entity:Southampton a ex:Place .
+
+entity:Jacqueline_Bouvier a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Caroline_Bouvier_Kennedy .
+

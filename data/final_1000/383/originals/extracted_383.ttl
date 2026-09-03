@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_is_it_easy_to_be_young a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Is It Easy To Be Young?" ;
+    onto:hasDirector data:person_juris_podnieks ;
+    skos:altLabel "Vai viegli būt jaunam?" .
+
+data:edu_soviet_vgik_film_school a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Soviet VGIK film school" ;
+    skos:altLabel "VGIK film school" .
+
+data:person_juris_podnieks a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Juris Podnieks" ;
+    onto:hasEducatedAt data:edu_soviet_vgik_film_school .
+

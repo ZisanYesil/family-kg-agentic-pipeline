@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/315/originals/extracted_315.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/315/ground_truth_315.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_thomas_the_impostor": "http://example.org/entity/Thomas_the_Impostor",
+    "http://example.org/extracted/person_georges_franju": "http://example.org/entity/Georges_Franju"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_thomas_the_impostor",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thomas the Impostor",
+          "source": "label"
+        },
+        {
+          "text": "film thomas the impostor",
+          "source": "uri"
+        }
+      ],
+      "context": "Thomas the Impostor. has director: Georges Franju.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thomas_the_Impostor",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thomas the Impostor",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thomas the Impostor",
+        "extracted_source": "label",
+        "ground_truth_text": "Thomas the Impostor",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_georges_franju",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Georges Franju",
+          "source": "label"
+        },
+        {
+          "text": "person georges franju",
+          "source": "uri"
+        }
+      ],
+      "context": "Georges Franju. has birth place: Fougères, Ille-et-Vilaine. inverse has director: Thomas the Impostor.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Georges_Franju",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Georges Franju",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Georges Franju",
+        "extracted_source": "label",
+        "ground_truth_text": "Georges Franju",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9575890302658081,
+      "graph_score": 0.978794515132904,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_fougeres_ille_et_vilaine",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fougères, Ille-et-Vilaine",
+          "source": "label"
+        },
+        {
+          "text": "place fougeres ille et vilaine",
+          "source": "uri"
+        }
+      ],
+      "context": "Fougères, Ille-et-Vilaine. inverse has birth place: Georges Franju.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fougères",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fougères",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fougères, Ille-et-Vilaine",
+        "extracted_source": "label",
+        "ground_truth_text": "Fougères",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7100959420204163,
+      "name_embedding_score": 0.6454340815544128,
+      "string_score": 0.5806818008422852,
+      "independent_identity_support": false,
+      "context_score": 0.9376676082611084,
+      "graph_score": 0.9688338041305542,
+      "margin": 0.7100959420204163
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

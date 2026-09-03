@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/78/originals/extracted_78.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/78/ground_truth_78.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/werner_mensching": "http://example.org/entity/Werner_Mensching",
+    "http://example.org/extracted/karel_zich": "http://example.org/entity/Karel_Zich"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/karel_zich",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Karel Zich",
+          "source": "label"
+        }
+      ],
+      "context": "Karel Zich. has birth date: 1949-06-10. has death date: 2004-07-13.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Karel_Zich",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Karel Zich",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Karel Zich",
+        "extracted_source": "label",
+        "ground_truth_text": "Karel Zich",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6277668178081512
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/werner_mensching",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Werner Mensching",
+          "source": "label"
+        }
+      ],
+      "context": "Werner Mensching. has birth date: 1933-12-23. has death date: 1997-06-21.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Werner_Mensching",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Werner Mensching",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Werner Mensching",
+        "extracted_source": "label",
+        "ground_truth_text": "Werner Mensching",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6364206671714783
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

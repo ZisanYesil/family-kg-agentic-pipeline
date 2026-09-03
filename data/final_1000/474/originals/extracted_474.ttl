@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:dhoop_kinare a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Dhoop Kinare" ;
+    onto:hasCreator data:haseena_moin .
+
+data:haseena_moin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Haseena Moin" ;
+    onto:hasAwardReceived data:pride_of_performance .
+
+data:pride_of_performance a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Pride of Performance" .
+

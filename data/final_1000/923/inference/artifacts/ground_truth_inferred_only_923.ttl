@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:English a ex:Country,
+        ex:Place .
+
+entity:Paul_Foley a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Thomas_Foley .
+
+entity:Thomas_Foley a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Paul_Foley ;
+    ex:hasCountry entity:English .
+

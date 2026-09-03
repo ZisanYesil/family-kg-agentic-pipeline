@@ -1,0 +1,100 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/294/evaluation/entity_alignment/final_extracted_aligned_294.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/294/evaluation/entity_alignment/final_ground_truth_aligned_294.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Douro_Wine_Company",
+      "predicate": "hasFounder",
+      "object": "Sebastião_José_de_Carvalho_e_Melo",
+      "subject_uri": "http://example.org/entity/Douro_Wine_Company",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo"
+    },
+    {
+      "subject": "Douro_Wine_Company",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Douro_Wine_Company",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Douro_Wine_Company",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Douro_Wine_Company",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Lisbon",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Lisbon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "hasBirthPlace",
+      "object": "Lisbon",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Lisbon"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "hasBirthDate",
+      "object": "\"1699-05-13\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1699-05-13\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "hasDeathDate",
+      "object": "\"1782-05-08\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1782-05-08\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 9,
+    "true_positives": 5,
+    "false_positives": 2,
+    "false_negatives": 2,
+    "precision": 0.7142857142857143,
+    "recall": 0.7142857142857143,
+    "f1": 0.7142857142857143
+  },
+  "stage": "post_inference"
+}

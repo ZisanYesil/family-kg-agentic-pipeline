@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:philip_iii_of_france a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Philip III of France" ;
+    onto:hasDeathPlace data:perpignan ;
+    onto:hasFather data:louis_of_france_1264 .
+
+data:louis_of_france_1264 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis of France (1264–1276)" .
+
+data:perpignan a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Perpignan" .
+

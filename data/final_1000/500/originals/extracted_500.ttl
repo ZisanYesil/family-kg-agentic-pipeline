@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_say_it_in_russian a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Say it in Russian" ;
+    onto:hasDirector data:person_jeff_celentano .
+
+data:person_jeff_celentano a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jeff Celentano" ;
+    onto:hasBirthPlace data:place_pemberton_new_jersey ;
+    skos:altLabel "Jeff Weston" .
+
+data:place_pemberton_new_jersey a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Pemberton, New Jersey" .
+

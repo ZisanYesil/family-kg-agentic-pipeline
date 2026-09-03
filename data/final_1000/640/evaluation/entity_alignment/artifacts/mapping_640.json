@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/640/originals/extracted_640.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/640/ground_truth_640.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/abla_ki_shakti_1940": "http://example.org/entity/Abla_Ki_Shakti",
+    "http://example.org/extracted/l_affittacamere_1976": "http://example.org/entity/L_affittacamere"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/abla_ki_shakti_1940",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Abla Ki Shakti",
+          "source": "label"
+        },
+        {
+          "text": "abla ki shakti 1940",
+          "source": "uri"
+        }
+      ],
+      "context": "Abla Ki Shakti. has publication date: 1940.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Abla_Ki_Shakti",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Abla Ki Shakti",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Abla Ki Shakti",
+        "extracted_source": "label",
+        "ground_truth_text": "Abla Ki Shakti",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5870071053504944
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/l_affittacamere_1976",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "L'affittacamere",
+          "source": "label"
+        },
+        {
+          "text": "l affittacamere 1976",
+          "source": "uri"
+        }
+      ],
+      "context": "L'affittacamere. has publication date: 1976.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/L_affittacamere",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "L affittacamere",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "L'affittacamere",
+        "extracted_source": "label",
+        "ground_truth_text": "L affittacamere",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.6734929084777832,
+      "string_score": 0.9700000286102295,
+      "independent_identity_support": true,
+      "context_score": 0.9206509590148926,
+      "graph_score": 0.9206509590148926,
+      "margin": 0.7245312929153442
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

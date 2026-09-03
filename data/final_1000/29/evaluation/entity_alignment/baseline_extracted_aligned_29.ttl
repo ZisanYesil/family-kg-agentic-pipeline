@@ -1,0 +1,26 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Coal_City_Illinois> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Coal City, Illinois" ;
+    onto:hasCountry <http://example.org/entity/U_S> .
+
+<http://example.org/entity/Lash_Kenar_Nur> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Lash Kenar, Nur" ;
+    onto:hasCountry <http://example.org/entity/Iran> .
+
+<http://example.org/entity/Iran> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Iran" .
+
+<http://example.org/entity/U_S> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "America",
+        "U.S.",
+        "U.S.A." .
+

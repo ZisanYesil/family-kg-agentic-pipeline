@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:French a ex:Country,
+        ex:Place .
+
+entity:Myriam_Fox_Jerusalmi a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Noemie_Fox ;
+    ex:hasCountry entity:French .
+
+entity:Noemie_Fox a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Myriam_Fox_Jerusalmi .
+

@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/A_Place_of_Rage> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A Place of Rage" ;
+    onto:hasDirector <http://example.org/entity/Pratibha_Parmar> .
+
+<http://example.org/entity/Pratibha_Parmar> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Pratibha Parmar" ;
+    onto:hasAwardReceived data:lifetime_achievement_award_san_francisco_frameline,
+        data:visionary_award_one_in_ten_film_festival .
+
+data:lifetime_achievement_award_san_francisco_frameline a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "San Francisco Frameline Film Festival Lifetime Achievement Award" .
+
+data:visionary_award_one_in_ten_film_festival a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Visionary Award" .
+

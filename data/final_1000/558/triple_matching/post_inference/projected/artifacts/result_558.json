@@ -1,0 +1,106 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/558/evaluation/entity_alignment/final_extracted_aligned_558.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/558/evaluation/entity_alignment/final_ground_truth_aligned_558.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Alice_of_Normandy",
+      "predicate": "hasChild",
+      "object": "William_I_Count_of_Burgundy",
+      "subject_uri": "http://example.org/entity/Alice_of_Normandy",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/William_I_Count_of_Burgundy"
+    },
+    {
+      "subject": "Alice_of_Normandy",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Alice_of_Normandy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Alice_of_Normandy",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Alice_of_Normandy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sybilla_of_Burgundy",
+      "predicate": "hasParent",
+      "object": "William_I_Count_of_Burgundy",
+      "subject_uri": "http://example.org/entity/Sybilla_of_Burgundy",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/William_I_Count_of_Burgundy"
+    },
+    {
+      "subject": "Sybilla_of_Burgundy",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Sybilla_of_Burgundy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Sybilla_of_Burgundy",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sybilla_of_Burgundy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "William_I_Count_of_Burgundy",
+      "predicate": "hasChild",
+      "object": "Sybilla_of_Burgundy",
+      "subject_uri": "http://example.org/entity/William_I_Count_of_Burgundy",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Sybilla_of_Burgundy"
+    },
+    {
+      "subject": "William_I_Count_of_Burgundy",
+      "predicate": "hasParent",
+      "object": "Alice_of_Normandy",
+      "subject_uri": "http://example.org/entity/William_I_Count_of_Burgundy",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Alice_of_Normandy"
+    },
+    {
+      "subject": "William_I_Count_of_Burgundy",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/William_I_Count_of_Burgundy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "William_I_Count_of_Burgundy",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/William_I_Count_of_Burgundy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 10,
+    "true_positives": 10,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

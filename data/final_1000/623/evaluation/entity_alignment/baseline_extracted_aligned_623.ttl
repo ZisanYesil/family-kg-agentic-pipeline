@@ -1,0 +1,31 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Dweepa> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Dweepa" ;
+    onto:hasProducer <http://example.org/entity/Soundarya> ;
+    onto:hasPublicationDate "2002"^^xsd:gYear .
+
+<http://example.org/entity/Kalank> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Kalank" ;
+    onto:hasProducer <http://example.org/entity/Karan_Johar> ;
+    onto:hasPublicationDate "2019"^^xsd:gYear .
+
+<http://example.org/entity/Karan_Johar> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Karan Kumar Johar" ;
+    onto:hasBirthDate "1972-05-25"^^xsd:date ;
+    skos:altLabel "Karan Johar" .
+
+<http://example.org/entity/Soundarya> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Soundarya Sathyanarayana" ;
+    onto:hasBirthDate "1972-07-18"^^xsd:date ;
+    onto:hasDeathDate "2004-04-17"^^xsd:date ;
+    skos:altLabel "Soundarya" .
+

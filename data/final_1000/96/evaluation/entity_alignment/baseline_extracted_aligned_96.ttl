@@ -1,0 +1,27 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Anne_Castles> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Anne Castles" ;
+    onto:hasOccupation <http://example.org/entity/cognitive_scientist> .
+
+<http://example.org/entity/Colin_Will> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Colin Will" ;
+    onto:hasOccupation <http://example.org/entity/poet>,
+        <http://example.org/entity/publisher> .
+
+<http://example.org/entity/cognitive_scientist> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "cognitive scientist" .
+
+<http://example.org/entity/poet> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "poet" .
+
+<http://example.org/entity/publisher> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "publisher" .
+

@@ -1,0 +1,188 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/402/originals/extracted_402.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/402/ground_truth_402.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/venezuela": "http://example.org/entity/Venezuela",
+    "http://example.org/extracted/basilica_st_lucia_timotes": "http://example.org/entity/Basilica_of_St_Lucia_Timotes",
+    "http://example.org/extracted/saint_augustine_by_the_sea": "http://example.org/entity/Saint_Augustine_by_the_Sea_Catholic_Church",
+    "http://example.org/extracted/united_states": "http://example.org/entity/United_States"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/basilica_st_lucia_timotes",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Basilica of St. Lucia, Timotes",
+          "source": "label"
+        },
+        {
+          "text": "basilica st lucia timotes",
+          "source": "uri"
+        }
+      ],
+      "context": "Basilica of St. Lucia, Timotes. has country: Venezuela.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Basilica_of_St_Lucia_Timotes",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Basilica of St Lucia Timotes",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Basilica of St. Lucia, Timotes",
+        "extracted_source": "label",
+        "ground_truth_text": "Basilica of St Lucia Timotes",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9909855127334595,
+      "string_score": 0.9844827651977539,
+      "independent_identity_support": true,
+      "context_score": 0.9901596307754517,
+      "graph_score": 0.9950798153877258,
+      "margin": 0.6092576384544373
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/saint_augustine_by_the_sea",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Saint Augustine by the Sea Catholic Church",
+          "source": "label"
+        },
+        {
+          "text": "saint augustine by the sea",
+          "source": "uri"
+        }
+      ],
+      "context": "Saint Augustine by the Sea Catholic Church. has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Saint_Augustine_by_the_Sea_Catholic_Church",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Saint Augustine by the Sea Catholic Church",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Saint Augustine by the Sea Catholic Church",
+        "extracted_source": "label",
+        "ground_truth_text": "Saint Augustine by the Sea Catholic Church",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6212889552116394
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States",
+          "source": "altLabel"
+        }
+      ],
+      "context": "United States. inverse has country: Saint Augustine by the Sea Catholic Church.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_States",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United States",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "United States",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7152642011642456
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/venezuela",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Venezuela",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Venezuela. inverse has country: Basilica of St. Lucia, Timotes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Venezuela",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Venezuela",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Venezuela",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Venezuela",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9947376251220703,
+      "graph_score": 0.9973688125610352,
+      "margin": 0.7246425449848175
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

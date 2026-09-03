@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Emma_Thomas a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:Christopher_Nolan .
+
+entity:Jonathan_Nolan a ex:Agent,
+        ex:Person ;
+    ex:hasSibling entity:Christopher_Nolan .
+
+entity:Christopher_Nolan a ex:Agent,
+        ex:Person ;
+    ex:hasSibling entity:Jonathan_Nolan ;
+    ex:hasSpouse entity:Emma_Thomas .
+

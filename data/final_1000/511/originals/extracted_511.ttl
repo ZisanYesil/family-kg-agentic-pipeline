@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_mae a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Mae (Riz Ortolani song)" ;
+    onto:hasPerformer data:person_herb_alpert ;
+    skos:altLabel "Mae" .
+
+data:person_herb_alpert a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Herb Alpert" ;
+    onto:hasSpouse data:person_lani_hall ;
+    skos:altLabel "Herb Alpert" .
+
+data:person_lani_hall a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lani Hall" ;
+    skos:altLabel "Lani Hall" .
+

@@ -1,0 +1,159 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/299/originals/extracted_299.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/299/ground_truth_299.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_w_p_kellino": "http://example.org/entity/W_P_Kellino"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_w_p_kellino",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "W.P. Kellino",
+          "source": "altLabel"
+        },
+        {
+          "text": "William Philip Gislingham",
+          "source": "altLabel"
+        },
+        {
+          "text": "person w p kellino",
+          "source": "uri"
+        }
+      ],
+      "context": "W.P. Kellino. has birth place: London, England. inverse has director: The Gold Cure (1925 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/W_P_Kellino",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "W P Kellino",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "W.P. Kellino",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "W P Kellino",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.916275143623352,
+      "string_score": 0.9413043260574341,
+      "independent_identity_support": true,
+      "context_score": 0.9007945656776428,
+      "graph_score": 0.9007945656776428,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_london_england",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "London, England",
+          "source": "label"
+        },
+        {
+          "text": "place london england",
+          "source": "uri"
+        }
+      ],
+      "context": "London, England. inverse has birth place: W.P. Kellino.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/London",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "London",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "London, England",
+        "extracted_source": "label",
+        "ground_truth_text": "London",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8655466437339783,
+      "name_embedding_score": 0.9003546833992004,
+      "string_score": 0.6821428537368774,
+      "independent_identity_support": false,
+      "context_score": 0.9586688280105591,
+      "graph_score": 0.9793344140052795,
+      "margin": 0.8655466437339783
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_gold_cure_1925",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Gold Cure (1925 film)",
+          "source": "label"
+        },
+        {
+          "text": "film the gold cure 1925",
+          "source": "uri"
+        }
+      ],
+      "context": "The Gold Cure (1925 film). has director: W.P. Kellino.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Gold_Cure",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Gold Cure",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Gold Cure (1925 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Gold Cure",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.847118616104126,
+      "name_embedding_score": 0.8469945192337036,
+      "string_score": 0.75789475440979,
+      "independent_identity_support": true,
+      "context_score": 0.8731814622879028,
+      "graph_score": 0.9365907311439514,
+      "margin": 0.847118616104126
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

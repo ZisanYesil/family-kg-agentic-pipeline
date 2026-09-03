@@ -1,0 +1,142 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/980/originals/extracted_980.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/980/ground_truth_980.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/alex_lithgow": "http://example.org/entity/Alex_Lithgow",
+    "http://example.org/extracted/invercargill_march": "http://example.org/entity/Invercargill_March"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alex_lithgow",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alexander Frame Lithgow",
+          "source": "altLabel"
+        },
+        {
+          "text": "Alex Lithgow",
+          "source": "label"
+        }
+      ],
+      "context": "Alexander Frame Lithgow. has nationality: Scottish. inverse has composer: Invercargill March.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alex_Lithgow",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alex Lithgow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alex Lithgow",
+        "extracted_source": "label",
+        "ground_truth_text": "Alex Lithgow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7621017098426819,
+      "graph_score": 0.8810508251190186,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/invercargill_march",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Invercargill March",
+          "source": "label"
+        }
+      ],
+      "context": "Invercargill March. has composer: Alexander Frame Lithgow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Invercargill_March",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Invercargill March",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Invercargill March",
+        "extracted_source": "label",
+        "ground_truth_text": "Invercargill March",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9249254465103149,
+      "graph_score": 0.9624627232551575,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Scottish",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "Scottish. inverse has nationality: Alexander Frame Lithgow.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Australian"
+  ]
+}

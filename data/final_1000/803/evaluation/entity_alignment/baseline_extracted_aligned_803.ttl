@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Conspirare> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Conspirare" ;
+    onto:hasFounder <http://example.org/entity/Craig_Hella_Johnson> .
+
+<http://example.org/entity/Craig_Hella_Johnson> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Craig Hella Johnson" ;
+    onto:hasBirthPlace <http://example.org/entity/Crow_Wing_County_Minnesota> ;
+    skos:altLabel "Craig Morris Hella Johnson" .
+
+<http://example.org/entity/Crow_Wing_County_Minnesota> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Crow Wing County, Minnesota" .
+

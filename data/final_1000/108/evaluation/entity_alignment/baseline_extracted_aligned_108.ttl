@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/The_Yellow_Passport> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Yellow Passport" ;
+    onto:hasDirector <http://example.org/entity/Edwin_August> .
+
+<http://example.org/entity/Edwin_August> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edwin August" ;
+    onto:hasBurialPlace <http://example.org/entity/Valhalla_Memorial_Park_Cemetery> ;
+    skos:altLabel "Edwin August Phillip von der Butz" .
+
+<http://example.org/entity/Valhalla_Memorial_Park_Cemetery> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Valhalla Memorial Park Cemetery" .
+

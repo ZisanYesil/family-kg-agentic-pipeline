@@ -1,0 +1,91 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/541/evaluation/entity_alignment/baseline_extracted_aligned_541.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/541/evaluation/entity_alignment/baseline_ground_truth_aligned_541.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Drugstore_Cowboy",
+      "predicate": "hasPublicationDate",
+      "object": "\"1989\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Drugstore_Cowboy",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1989\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "When_the_Sea_Rises",
+      "predicate": "hasPublicationDate",
+      "object": "\"2004\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/When_the_Sea_Rises",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"2004\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Drugstore_Cowboy",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Drugstore_Cowboy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Drugstore_Cowboy",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Drugstore_Cowboy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Drugstore_Cowboy",
+      "predicate": "label",
+      "object": "\"Drugstore Cowboy\"",
+      "subject_uri": "http://example.org/entity/Drugstore_Cowboy",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Drugstore Cowboy\""
+    },
+    {
+      "subject": "When_the_Sea_Rises",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/When_the_Sea_Rises",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "When_the_Sea_Rises",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/When_the_Sea_Rises",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "When_the_Sea_Rises",
+      "predicate": "label",
+      "object": "\"When the Sea Rises\"",
+      "subject_uri": "http://example.org/entity/When_the_Sea_Rises",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"When the Sea Rises\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 8,
+    "true_positives": 2,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.25,
+    "recall": 1.0,
+    "f1": 0.4
+  },
+  "stage": "pre_inference"
+}

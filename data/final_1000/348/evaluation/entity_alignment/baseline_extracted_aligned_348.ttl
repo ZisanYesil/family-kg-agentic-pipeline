@@ -1,0 +1,30 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Beyond_Rangoon> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Beyond Rangoon" ;
+    onto:hasDirector <http://example.org/entity/John_Boorman> .
+
+<http://example.org/entity/Ryan_s_Daughter> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Ryan's Daughter" ;
+    onto:hasDirector <http://example.org/entity/David_Lean> .
+
+<http://example.org/entity/David_Lean> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "David Lean" ;
+    onto:hasNationality <http://example.org/entity/British> .
+
+<http://example.org/entity/John_Boorman> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Boorman" ;
+    onto:hasNationality <http://example.org/entity/British> .
+
+<http://example.org/entity/British> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "English" .
+

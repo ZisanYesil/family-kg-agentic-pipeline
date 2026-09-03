@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/598/originals/extracted_598.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/598/ground_truth_598.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/run_the_race_film": "http://example.org/entity/Run_the_Race",
+    "http://example.org/extracted/cup_tie_honeymoon_film": "http://example.org/entity/Cup_tie_Honeymoon"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/cup_tie_honeymoon_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cup-Tie Honeymoon",
+          "source": "label"
+        },
+        {
+          "text": "cup tie honeymoon film",
+          "source": "uri"
+        }
+      ],
+      "context": "Cup-Tie Honeymoon. has publication date: 1948.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cup_tie_Honeymoon",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cup tie Honeymoon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cup-Tie Honeymoon",
+        "extracted_source": "label",
+        "ground_truth_text": "Cup tie Honeymoon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9699856042861938,
+      "string_score": 0.9735293984413147,
+      "independent_identity_support": true,
+      "context_score": 0.9850132465362549,
+      "graph_score": 0.9850132465362549,
+      "margin": 0.831472784280777
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/run_the_race_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Run the Race",
+          "source": "label"
+        },
+        {
+          "text": "run the race film",
+          "source": "uri"
+        }
+      ],
+      "context": "Run the Race. has publication date: 2019-02-22.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Run_the_Race",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Run the Race",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Run the Race",
+        "extracted_source": "label",
+        "ground_truth_text": "Run the Race",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9720480442047119,
+      "graph_score": 0.9720480442047119,
+      "margin": 0.7985325753688812
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

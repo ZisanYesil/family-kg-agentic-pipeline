@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Back_Home a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Piers_Haggard ;
+    ex:hasDirector entity:Piers_Haggard .
+
+entity:Daisy_Haggard a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Piers_Haggard .
+
+entity:Piers_Haggard a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Daisy_Haggard .
+

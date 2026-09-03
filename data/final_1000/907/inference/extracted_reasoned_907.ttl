@@ -1,0 +1,19 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/max_uhlemann> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/extracted/friedrich_gottlob_uhlemann> ;
+    ex:hasParent <http://example.org/extracted/friedrich_gottlob_uhlemann> .
+
+<http://example.org/extracted/university_of_berlin> a ex:Agent,
+        ex:Organization .
+
+<http://example.org/extracted/university_of_leipzig> a ex:Agent,
+        ex:Organization .
+
+<http://example.org/extracted/friedrich_gottlob_uhlemann> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/max_uhlemann> ;
+    ex:hasEmployer <http://example.org/extracted/university_of_berlin>,
+        <http://example.org/extracted/university_of_leipzig> .
+

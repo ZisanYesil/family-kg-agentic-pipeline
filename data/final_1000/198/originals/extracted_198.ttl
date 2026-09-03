@@ -1,0 +1,31 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_alibi_bye_bye a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Alibi Bye Bye" ;
+    onto:hasDirector data:ben_holmes .
+
+data:film_leave_it_to_the_marines a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Leave It To The Marines" ;
+    onto:hasDirector data:sam_newfield .
+
+data:ben_holmes a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ben Holmes" ;
+    onto:hasNationality data:united_states .
+
+data:sam_newfield a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sam Newfield" ;
+    onto:hasNationality data:united_states .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

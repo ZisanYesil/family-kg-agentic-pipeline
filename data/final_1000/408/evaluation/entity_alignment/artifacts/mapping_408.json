@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/408/originals/extracted_408.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/408/ground_truth_408.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/united_kingdom": "http://example.org/entity/British",
+    "http://example.org/extracted/metropolitan_band": "http://example.org/entity/Metropolitan",
+    "http://example.org/extracted/john_masters": "http://example.org/entity/John_Masters"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/john_masters",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Masters",
+          "source": "label"
+        }
+      ],
+      "context": "John Masters. has nationality: British. inverse has member: Metropolitan (band).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Masters",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Masters",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Masters",
+        "extracted_source": "label",
+        "ground_truth_text": "John Masters",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8514282703399658,
+      "graph_score": 0.5923808217048645,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/metropolitan_band",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Metropolitan (band)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Metropolitan",
+          "source": "label"
+        },
+        {
+          "text": "metropolitan band",
+          "source": "uri"
+        }
+      ],
+      "context": "Metropolitan (band). has member: John Masters.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Metropolitan",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Metropolitan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Metropolitan",
+        "extracted_source": "label",
+        "ground_truth_text": "Metropolitan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.845403790473938,
+      "graph_score": 0.922701895236969,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "British. inverse has nationality: John Masters.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "British",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9246415495872498,
+      "graph_score": 0.4623207747936249,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

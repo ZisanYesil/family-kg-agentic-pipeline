@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/782/originals/extracted_782.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/782/ground_truth_782.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jan_karol_opalinski": "http://example.org/entity/Jan_Karol_Opaliński",
+    "http://example.org/extracted/krzysztof_opalinski": "http://example.org/entity/Krzysztof_Opaliński"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/jan_karol_opalinski",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jan Karol Opaliński",
+          "source": "label"
+        },
+        {
+          "text": "jan karol opalinski",
+          "source": "uri"
+        }
+      ],
+      "context": "Jan Karol Opaliński. has father: Krzysztof Opaliński.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jan_Karol_Opaliński",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jan Karol Opaliński",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jan Karol Opaliński",
+        "extracted_source": "label",
+        "ground_truth_text": "Jan Karol Opaliński",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.3053862452507019
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/krzysztof_opalinski",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Krzysztof Opaliński",
+          "source": "label"
+        },
+        {
+          "text": "krzysztof opalinski",
+          "source": "uri"
+        }
+      ],
+      "context": "Krzysztof Opaliński. has nationality: Polish. inverse has father: Jan Karol Opaliński.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Krzysztof_Opaliński",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Krzysztof Opaliński",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Krzysztof Opaliński",
+        "extracted_source": "label",
+        "ground_truth_text": "Krzysztof Opaliński",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9304465055465698,
+      "graph_score": 0.9652232527732849,
+      "margin": 0.29578906297683716
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/poland",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Polish",
+          "source": "altLabel"
+        },
+        {
+          "text": "Poland",
+          "source": "label"
+        }
+      ],
+      "context": "Polish. inverse has nationality: Krzysztof Opaliński.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Polish_Lithuanian_Commonwealth",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Polish Lithuanian Commonwealth",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Polish",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Polish Lithuanian Commonwealth",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5920423865318298,
+      "name_embedding_score": 0.7089326977729797,
+      "string_score": 0.5333333611488342,
+      "independent_identity_support": false,
+      "context_score": 0.833941638469696,
+      "graph_score": 0.416970819234848,
+      "margin": 0.5920423865318298
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

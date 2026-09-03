@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/96/evaluation/entity_alignment/final_extracted_aligned_96.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/96/evaluation/entity_alignment/final_ground_truth_aligned_96.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Anne_Castles",
+      "predicate": "hasOccupation",
+      "object": "cognitive_scientist",
+      "subject_uri": "http://example.org/entity/Anne_Castles",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasOccupation",
+      "object_term": "http://example.org/entity/cognitive_scientist"
+    },
+    {
+      "subject": "Anne_Castles",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Anne_Castles",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Anne_Castles",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Anne_Castles",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Colin_Will",
+      "predicate": "hasOccupation",
+      "object": "poet",
+      "subject_uri": "http://example.org/entity/Colin_Will",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasOccupation",
+      "object_term": "http://example.org/entity/poet"
+    },
+    {
+      "subject": "Colin_Will",
+      "predicate": "hasOccupation",
+      "object": "publisher",
+      "subject_uri": "http://example.org/entity/Colin_Will",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasOccupation",
+      "object_term": "http://example.org/entity/publisher"
+    },
+    {
+      "subject": "Colin_Will",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Colin_Will",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Colin_Will",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Colin_Will",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "cognitive_scientist",
+      "predicate": "type",
+      "object": "Occupation",
+      "subject_uri": "http://example.org/entity/cognitive_scientist",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Occupation"
+    },
+    {
+      "subject": "poet",
+      "predicate": "type",
+      "object": "Occupation",
+      "subject_uri": "http://example.org/entity/poet",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Occupation"
+    },
+    {
+      "subject": "publisher",
+      "predicate": "type",
+      "object": "Occupation",
+      "subject_uri": "http://example.org/entity/publisher",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Occupation"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Colin_Will",
+      "predicate": "hasOccupation",
+      "object": "librarian",
+      "subject_uri": "http://example.org/entity/Colin_Will",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasOccupation",
+      "object_term": "http://example.org/entity/librarian"
+    },
+    {
+      "subject": "librarian",
+      "predicate": "type",
+      "object": "Occupation",
+      "subject_uri": "http://example.org/entity/librarian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Occupation"
+    }
+  ],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 5,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 12,
+    "union_triples_in_scope": 12,
+    "true_positives": 10,
+    "false_positives": 0,
+    "false_negatives": 2,
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1": 0.9090909090909091
+  },
+  "stage": "post_inference"
+}

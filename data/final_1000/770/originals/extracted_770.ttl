@@ -1,0 +1,31 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_blockade_1938 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Blockade (1938 film)" ;
+    onto:hasDirector data:person_william_dieterle .
+
+data:film_woman_in_the_river_1939 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Woman in the River" ;
+    onto:hasDirector data:person_gerhard_lamprecht .
+
+data:person_gerhard_lamprecht a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gerhard Lamprecht" ;
+    onto:hasNationality data:country_germany .
+
+data:person_william_dieterle a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Dieterle" ;
+    onto:hasNationality data:country_germany .
+
+data:country_germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German" .
+

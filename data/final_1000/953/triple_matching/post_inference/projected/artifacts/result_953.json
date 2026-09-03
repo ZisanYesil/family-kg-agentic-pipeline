@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/953/evaluation/entity_alignment/final_extracted_aligned_953.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/953/evaluation/entity_alignment/final_ground_truth_aligned_953.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Hussain_Nizam_Shah_I",
+      "predicate": "hasChild",
+      "object": "Murtaza_Nizam_Shah_I",
+      "subject_uri": "http://example.org/entity/Hussain_Nizam_Shah_I",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Murtaza_Nizam_Shah_I"
+    },
+    {
+      "subject": "Hussain_Nizam_Shah_I",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Hussain_Nizam_Shah_I",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Hussain_Nizam_Shah_I",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Hussain_Nizam_Shah_I",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Murtaza_Nizam_Shah_I",
+      "predicate": "hasParent",
+      "object": "Hussain_Nizam_Shah_I",
+      "subject_uri": "http://example.org/entity/Murtaza_Nizam_Shah_I",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Hussain_Nizam_Shah_I"
+    },
+    {
+      "subject": "Murtaza_Nizam_Shah_I",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Murtaza_Nizam_Shah_I",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Murtaza_Nizam_Shah_I",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Murtaza_Nizam_Shah_I",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Ahmadnagar_Sultanate",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Ahmadnagar_Sultanate",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Ahmadnagar_Sultanate",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Ahmadnagar_Sultanate",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Hussain_Nizam_Shah_I",
+      "predicate": "hasCountry",
+      "object": "Ahmadnagar_Sultanate",
+      "subject_uri": "http://example.org/entity/Hussain_Nizam_Shah_I",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Ahmadnagar_Sultanate"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Hussain_Nizam_Shah_I",
+      "predicate": "hasCountry",
+      "object": "india",
+      "subject_uri": "http://example.org/entity/Hussain_Nizam_Shah_I",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/india"
+    },
+    {
+      "subject": "india",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/india",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "india",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/india",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 12,
+    "true_positives": 6,
+    "false_positives": 3,
+    "false_negatives": 3,
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.6666666666666666
+  },
+  "stage": "post_inference"
+}

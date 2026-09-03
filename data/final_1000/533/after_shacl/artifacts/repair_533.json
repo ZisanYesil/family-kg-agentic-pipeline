@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "f50def8739e2e459866892364d28268d295f52cfd84d0358133f9b820f51edf0",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/stephane_dion",
+        "path": null,
+        "value": "http://example.org/extracted/germany",
+        "expected": null,
+        "message": "Relation phrase 'serves as Canadian ambassador to' from http://example.org/extracted/stephane_dion to http://example.org/extracted/germany was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "f50def8739e2e459866892364d28268d295f52cfd84d0358133f9b820f51edf0",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/stephane_dion",
+            "path": null,
+            "value": "http://example.org/extracted/germany",
+            "expected": null,
+            "message": "Relation phrase 'serves as Canadian ambassador to' from http://example.org/extracted/stephane_dion to http://example.org/extracted/germany was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 10,
+      "feedback_reasoning": "The violation is an unmapped_relation indicating that a relation phrase ‘serves as Canadian ambassador to’ between data:stephane_dion and data:germany is not mapped to any ontology predicate. The ontology does not contain a predicate whose documented meaning corresponds to a diplomatic/ ambassadorial relationship. Domain/range compatibility alone (e.g., hasCountry) is insufficient because the ontology does not define the semantics of representing an ambassador role. Therefore no safe edit can be made.",
+      "repairs": [
+        {
+          "violation_fingerprint": "e27f491f551a548b58a60b518ab7139428421af982e9b2bef85f2ee336891101",
+          "reasoning": "No ontology predicate expresses the meaning ‘serves as Canadian ambassador to’; creating a new predicate or using a loosely‑compatible one would be speculative and not grounded in the supplied ontology.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "e27f491f551a548b58a60b518ab7139428421af982e9b2bef85f2ee336891101"
+      ],
+      "triples_after": 10,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "f50def8739e2e459866892364d28268d295f52cfd84d0358133f9b820f51edf0",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/stephane_dion",
+            "path": null,
+            "value": "http://example.org/extracted/germany",
+            "expected": null,
+            "message": "Relation phrase 'serves as Canadian ambassador to' from http://example.org/extracted/stephane_dion to http://example.org/extracted/germany was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "f50def8739e2e459866892364d28268d295f52cfd84d0358133f9b820f51edf0",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/stephane_dion",
+        "path": null,
+        "value": "http://example.org/extracted/germany",
+        "expected": null,
+        "message": "Relation phrase 'serves as Canadian ambassador to' from http://example.org/extracted/stephane_dion to http://example.org/extracted/germany was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/363/originals/extracted_363.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/363/ground_truth_363.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_rinki_bhattacharya": "http://example.org/entity/Rinki_Bhattacharya",
+    "http://example.org/extracted/person_basu_bhattacharya": "http://example.org/entity/Basu_Bhattacharya"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_basu_bhattacharya",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Basu Bhattacharya",
+          "source": "label"
+        },
+        {
+          "text": "person basu bhattacharya",
+          "source": "uri"
+        }
+      ],
+      "context": "Basu Bhattacharya. has spouse: Rinki Bhattacharya. inverse has director: Anubhav (1971 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Basu_Bhattacharya",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Basu Bhattacharya",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Basu Bhattacharya",
+        "extracted_source": "label",
+        "ground_truth_text": "Basu Bhattacharya",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9616053700447083,
+      "graph_score": 0.9808026552200317,
+      "margin": 0.33001643419265747
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_rinki_bhattacharya",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rinki Bhattacharya",
+          "source": "label"
+        },
+        {
+          "text": "person rinki bhattacharya",
+          "source": "uri"
+        }
+      ],
+      "context": "Rinki Bhattacharya. inverse has spouse: Basu Bhattacharya.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rinki_Bhattacharya",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rinki Bhattacharya",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rinki Bhattacharya",
+        "extracted_source": "label",
+        "ground_truth_text": "Rinki Bhattacharya",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3240991234779358
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_anubhav_1971",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anubhav (1971 film)",
+          "source": "label"
+        },
+        {
+          "text": "film anubhav 1971",
+          "source": "uri"
+        }
+      ],
+      "context": "Anubhav (1971 film). has director: Basu Bhattacharya.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anubhav",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anubhav",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anubhav (1971 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Anubhav",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7890657782554626,
+      "name_embedding_score": 0.7861324548721313,
+      "string_score": 0.6256410479545593,
+      "independent_identity_support": false,
+      "context_score": 0.9167143106460571,
+      "graph_score": 0.9583571553230286,
+      "margin": 0.7890657782554626
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

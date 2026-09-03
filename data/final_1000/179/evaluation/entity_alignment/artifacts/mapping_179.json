@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/179/originals/extracted_179.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/179/ground_truth_179.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_raymond_adolphe_sere_de_rivieres": "http://example.org/entity/Raymond_Adolphe_Séré_de_Rivières",
+    "http://example.org/extracted/person_johann_georg_tralles": "http://example.org/entity/Johann_Georg_Tralles"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_johann_georg_tralles",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Johann Georg Tralles",
+          "source": "altLabel"
+        },
+        {
+          "text": "person johann georg tralles",
+          "source": "uri"
+        }
+      ],
+      "context": "Johann Georg Tralles. has birth date: 1763-10-15. has death date: 1822-11-19.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Johann_Georg_Tralles",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Johann Georg Tralles",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Johann Georg Tralles",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Johann Georg Tralles",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.539433628320694
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_raymond_adolphe_sere_de_rivieres",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Raymond Adolphe Séré de Rivières",
+          "source": "altLabel"
+        },
+        {
+          "text": "person raymond adolphe sere de rivieres",
+          "source": "uri"
+        }
+      ],
+      "context": "Raymond Adolphe Séré de Rivières. has birth date: 1815-05-20. has death date: 1895-02-16.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Raymond_Adolphe_Séré_de_Rivières",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Raymond Adolphe Séré de Rivières",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Raymond Adolphe Séré de Rivières",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Raymond Adolphe Séré de Rivières",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.539433628320694
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

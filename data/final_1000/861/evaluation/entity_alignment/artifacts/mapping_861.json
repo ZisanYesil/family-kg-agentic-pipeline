@@ -1,0 +1,146 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/861/originals/extracted_861.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/861/ground_truth_861.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/thessaloniki": "http://example.org/entity/Thessaloniki",
+    "http://example.org/extracted/prince_christopher_of_greece_and_denmark": "http://example.org/entity/Prince_Christopher_of_Greece_and_Denmark"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/prince_christopher_of_greece_and_denmark",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prince Christopher of Greece and Denmark",
+          "source": "label"
+        }
+      ],
+      "context": "Prince Christopher of Greece and Denmark. has father: King George I of Greece.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prince_Christopher_of_Greece_and_Denmark",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prince Christopher of Greece and Denmark",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prince Christopher of Greece and Denmark",
+        "extracted_source": "label",
+        "ground_truth_text": "Prince Christopher of Greece and Denmark",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9890244007110596,
+      "graph_score": 0.9890244007110596,
+      "margin": 0.4217439293861389
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/thessaloniki",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thessaloniki",
+          "source": "label"
+        }
+      ],
+      "context": "Thessaloniki. inverse has death place: King George I of Greece.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thessaloniki",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thessaloniki",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thessaloniki",
+        "extracted_source": "label",
+        "ground_truth_text": "Thessaloniki",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9562731385231018,
+      "graph_score": 0.9562731385231018,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/king_george_i_of_greece",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "King George I of Greece",
+          "source": "label"
+        }
+      ],
+      "context": "King George I of Greece. has death place: Thessaloniki. inverse has father: Prince Christopher of Greece and Denmark.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_I_of_Greece",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George I of Greece",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "King George I of Greece",
+        "extracted_source": "label",
+        "ground_truth_text": "George I of Greece",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8770958185195923,
+      "name_embedding_score": 0.9695231318473816,
+      "string_score": 0.8951219320297241,
+      "independent_identity_support": true,
+      "context_score": 0.8484304547309875,
+      "graph_score": 0.6742151975631714,
+      "margin": 0.18120771646499634
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/George_I"
+  ]
+}

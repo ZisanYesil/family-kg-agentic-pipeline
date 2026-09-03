@@ -1,0 +1,18 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_fort_bowie a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Fort Bowie" ;
+    onto:hasDirector data:person_howard_koch .
+
+data:person_howard_koch a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Howard W. Koch" ;
+    onto:hasBirthDate "1916-04-11"^^xsd:date ;
+    skos:altLabel "Howard Winchel Koch" .
+

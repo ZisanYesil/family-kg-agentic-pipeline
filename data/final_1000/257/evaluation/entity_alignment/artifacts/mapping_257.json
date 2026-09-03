@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/257/originals/extracted_257.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/257/ground_truth_257.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/carl_ludwig_of_austria": "http://example.org/entity/Archduke_Carl_Ludwig_of_Austria",
+    "http://example.org/extracted/carl_christian_of_austria": "http://example.org/entity/Archduke_Carl_Christian_of_Austria",
+    "http://example.org/extracted/brussels": "http://example.org/entity/Brussels"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/brussels",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Brussels",
+          "source": "label"
+        }
+      ],
+      "context": "Brussels. inverse has death place: Archduke Carl Ludwig of Austria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Brussels",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Brussels",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Brussels",
+        "extracted_source": "label",
+        "ground_truth_text": "Brussels",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/carl_christian_of_austria",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Archduke Carl Christian of Austria",
+          "source": "label"
+        },
+        {
+          "text": "carl christian of austria",
+          "source": "uri"
+        }
+      ],
+      "context": "Archduke Carl Christian of Austria. has father: Archduke Carl Ludwig of Austria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Archduke_Carl_Christian_of_Austria",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Archduke Carl Christian of Austria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Archduke Carl Christian of Austria",
+        "extracted_source": "label",
+        "ground_truth_text": "Archduke Carl Christian of Austria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.28672951459884644
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/carl_ludwig_of_austria",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Archduke Carl Ludwig of Austria",
+          "source": "label"
+        },
+        {
+          "text": "carl ludwig of austria",
+          "source": "uri"
+        }
+      ],
+      "context": "Archduke Carl Ludwig of Austria. has death place: Brussels. inverse has father: Archduke Carl Christian of Austria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Archduke_Carl_Ludwig_of_Austria",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Archduke Carl Ludwig of Austria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Archduke Carl Ludwig of Austria",
+        "extracted_source": "label",
+        "ground_truth_text": "Archduke Carl Ludwig of Austria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.28672951459884644
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

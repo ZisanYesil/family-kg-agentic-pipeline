@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/675/originals/extracted_675.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/675/ground_truth_675.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/trudeliese_schmidt": "http://example.org/entity/Trudeliese_Schmidt",
+    "http://example.org/extracted/yardena_alotin": "http://example.org/entity/Yardena_Alotin"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/trudeliese_schmidt",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Trudeliese Schmidt",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Trudeliese Schmidt. has birth date: 1942-11-07. has death date: 2004-06-24.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Trudeliese_Schmidt",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Trudeliese Schmidt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Trudeliese Schmidt",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Trudeliese Schmidt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.6812710762023926
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/yardena_alotin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Yardena Alotin",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Yardena Alotin. has birth date: 1930-04-19. has death date: 1994-10-04.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Yardena_Alotin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Yardena Alotin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Yardena Alotin",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Yardena Alotin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.6812710762023926
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

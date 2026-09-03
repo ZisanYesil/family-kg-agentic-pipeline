@@ -1,0 +1,141 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/627/originals/extracted_627.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/627/ground_truth_627.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/badah_railway_station": "http://example.org/entity/Badah_railway_station",
+    "http://example.org/extracted/attock_city_junction_railway_station": "http://example.org/entity/Attock_City_Junction_railway_station",
+    "http://example.org/extracted/pakistan": "http://example.org/entity/Pakistan"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/attock_city_junction_railway_station",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Attock City Junction railway station",
+          "source": "label"
+        }
+      ],
+      "context": "Attock City Junction railway station. has country: Pakistan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Attock_City_Junction_railway_station",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Attock City Junction railway station",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Attock City Junction railway station",
+        "extracted_source": "label",
+        "ground_truth_text": "Attock City Junction railway station",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3319067358970642
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/badah_railway_station",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Badah railway station",
+          "source": "label"
+        }
+      ],
+      "context": "Badah railway station. has country: Pakistan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Badah_railway_station",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Badah railway station",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Badah railway station",
+        "extracted_source": "label",
+        "ground_truth_text": "Badah railway station",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3319067358970642
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pakistan",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pakistan",
+          "source": "label"
+        }
+      ],
+      "context": "Pakistan. inverse has country: Attock City Junction railway station. inverse has country: Badah railway station.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pakistan",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pakistan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pakistan",
+        "extracted_source": "label",
+        "ground_truth_text": "Pakistan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7968970239162445
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

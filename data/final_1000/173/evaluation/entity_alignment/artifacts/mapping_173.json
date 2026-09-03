@@ -1,0 +1,128 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/173/originals/extracted_173.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/173/ground_truth_173.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/khufu_person": "http://example.org/entity/Khufu",
+    "http://example.org/extracted/khafra_person": "http://example.org/entity/Khafra"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/khafra_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chephren",
+          "source": "altLabel"
+        },
+        {
+          "text": "Khafre",
+          "source": "altLabel"
+        },
+        {
+          "text": "Khefren",
+          "source": "altLabel"
+        },
+        {
+          "text": "Khafra",
+          "source": "label"
+        },
+        {
+          "text": "khafra person",
+          "source": "uri"
+        }
+      ],
+      "context": "Chephren. has father: Khufu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Khafra",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Khafra",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Khafra",
+        "extracted_source": "label",
+        "ground_truth_text": "Khafra",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8626282811164856,
+      "graph_score": 0.9313141107559204,
+      "margin": 0.41613060235977173
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/khufu_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Khufu",
+          "source": "label"
+        },
+        {
+          "text": "khufu person",
+          "source": "uri"
+        }
+      ],
+      "context": "Khufu. inverse has father: Chephren.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Khufu",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Khufu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Khufu",
+        "extracted_source": "label",
+        "ground_truth_text": "Khufu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6361469626426697,
+      "graph_score": 0.8180735111236572,
+      "margin": 0.402274489402771
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Great_Pyramid_of_Giza"
+  ]
+}

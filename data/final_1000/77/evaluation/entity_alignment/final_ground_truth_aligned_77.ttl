@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Alessandria a ex:Place .
+
+entity:Sean_Luca_Sogliano a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Riccardo_Sogliano ;
+    ex:hasParent entity:Riccardo_Sogliano .
+
+entity:Riccardo_Sogliano a ex:Agent,
+        ex:Person ;
+    ex:hasBirthPlace entity:Alessandria ;
+    ex:hasChild entity:Sean_Luca_Sogliano .
+

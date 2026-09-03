@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/81/originals/extracted_81.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/81/ground_truth_81.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/st_josephs_college_gregory_terrace": "http://example.org/entity/St_Joseph_s_College_Gregory_Terrace",
+    "http://example.org/extracted/saint_ignatius_college_adelaide": "http://example.org/entity/Saint_Ignatius_College_Adelaide",
+    "http://example.org/extracted/australia": "http://example.org/entity/Australia"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/australia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Australia",
+          "source": "label"
+        }
+      ],
+      "context": "Australia. inverse has country: Saint Ignatius' College, Adelaide. inverse has country: St Joseph's College, Gregory Terrace.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Australia",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Australia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Australia",
+        "extracted_source": "label",
+        "ground_truth_text": "Australia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9864393472671509,
+      "graph_score": 0.9932196736335754,
+      "margin": 0.6072250604629517
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/saint_ignatius_college_adelaide",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Saint Ignatius' College, Adelaide",
+          "source": "label"
+        },
+        {
+          "text": "saint ignatius college adelaide",
+          "source": "uri"
+        }
+      ],
+      "context": "Saint Ignatius' College, Adelaide. has country: Australia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Saint_Ignatius_College_Adelaide",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Saint Ignatius College Adelaide",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Saint Ignatius' College, Adelaide",
+        "extracted_source": "label",
+        "ground_truth_text": "Saint Ignatius College Adelaide",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9775518774986267,
+      "string_score": 0.9859374761581421,
+      "independent_identity_support": true,
+      "context_score": 0.9882752895355225,
+      "graph_score": 0.9941376447677612,
+      "margin": 0.38641977310180664
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/st_josephs_college_gregory_terrace",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "St Joseph's College, Gregory Terrace",
+          "source": "label"
+        },
+        {
+          "text": "st josephs college gregory terrace",
+          "source": "uri"
+        }
+      ],
+      "context": "St Joseph's College, Gregory Terrace. has country: Australia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/St_Joseph_s_College_Gregory_Terrace",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "St Joseph s College Gregory Terrace",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "St Joseph's College, Gregory Terrace",
+        "extracted_source": "label",
+        "ground_truth_text": "St Joseph s College Gregory Terrace",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9716733694076538,
+      "string_score": 0.9809859395027161,
+      "independent_identity_support": true,
+      "context_score": 0.984724223613739,
+      "graph_score": 0.9923621416091919,
+      "margin": 0.4238439202308655
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,27 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:pre_band a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Pre (band)" ;
+    onto:hasMember data:akiko_matsuura .
+
+data:akiko_matsuura a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Akiko Matsuura" ;
+    onto:hasBirthPlace data:osaka ;
+    skos:altLabel "Akiko \"Keex\" Matsuura" .
+
+data:japan a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Japan" ;
+    skos:altLabel "Japanese" .
+
+data:osaka a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Osaka" ;
+    onto:hasCountry data:japan .
+

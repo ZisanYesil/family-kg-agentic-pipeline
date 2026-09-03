@@ -1,0 +1,42 @@
+{
+  "cohort": "examples 1-53",
+  "symbolic_exact_correct": 25,
+  "symbolic_exact_incorrect": 28,
+  "categories": {
+    "query_planning_or_comparison": {
+      "count": 10,
+      "ids": [7, 9, 12, 21, 25, 31, 33, 36, 47, 50],
+      "description": "The final graph contains enough information, but the generated query over-constrains labels or roles, chooses the wrong path, mishandles mixed date precision, or compares dates incorrectly."
+    },
+    "answer_surface_form": {
+      "count": 12,
+      "ids": [4, 5, 10, 11, 17, 24, 40, 41, 45, 48, 49, 51],
+      "description": "The graph query returns a compatible, more specific, expanded, ISO-formatted, or country/demonym variant, but strict normalized exact match rejects it. Token F1 already gives partial credit to most of these cases."
+    },
+    "graph_content": {
+      "count": 6,
+      "ids": [14, 19, 30, 37, 38, 42],
+      "description": "The required relation is absent from the final extracted graph or the extracted value conflicts with the reference answer. Query regeneration alone cannot recover these answers without unsupported outside knowledge."
+    }
+  },
+  "empty_results": {
+    "count": 11,
+    "ids": [7, 14, 19, 21, 31, 33, 37, 38, 42, 47, 50],
+    "planner_recoverable": [7, 21, 31, 33, 47, 50],
+    "graph_fact_missing": [14, 19, 37, 38, 42]
+  },
+  "paired_outcomes": {
+    "both_correct": 23,
+    "direct_only_correct": 11,
+    "symbolic_only_correct": 2,
+    "neither_correct": 17
+  },
+  "recommended_fixes_before_full_run": [
+    "Retry a valid SELECT query when it returns no rows, supplying execution feedback and asking the planner to remove unnecessary constraints.",
+    "Give the planner explicit mixed xsd:gYear/xsd:date ordering guidance and test date/lifespan comparisons.",
+    "Prevent the planner from treating a geographic qualifier in an entity name as a third comparison entity.",
+    "Add fair answer equivalence for full-date versus textual-date formats and country versus demonym forms.",
+    "Retain exact match and token F1; add a separately reported semantic-equivalence metric for expanded names, places, and more-specific medical terms.",
+    "Report missing_graph_fact and conflicting_graph_fact separately from SPARQL planning failures."
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/352/evaluation/entity_alignment/baseline_extracted_aligned_352.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/352/evaluation/entity_alignment/baseline_ground_truth_aligned_352.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "predicate": "hasBirthDate",
+      "object": "\"1721-05-18\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1721-05-18\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "predicate": "hasDeathDate",
+      "object": "\"1799-04-29\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1799-04-29\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Jules_Brunet",
+      "predicate": "hasBirthDate",
+      "object": "\"1838-01-02\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Jules_Brunet",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1838-01-02\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Jules_Brunet",
+      "predicate": "hasDeathDate",
+      "object": "\"1911-08-12\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Jules_Brunet",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1911-08-12\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "predicate": "label",
+      "object": "\"Johann Adolf of Saxe-Gotha-Altenburg\"",
+      "subject_uri": "http://example.org/entity/Johann_Adolf_of_Saxe_Gotha_Altenburg",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Johann Adolf of Saxe-Gotha-Altenburg\""
+    },
+    {
+      "subject": "Jules_Brunet",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jules_Brunet",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jules_Brunet",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jules_Brunet",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jules_Brunet",
+      "predicate": "label",
+      "object": "\"Jules Brunet\"",
+      "subject_uri": "http://example.org/entity/Jules_Brunet",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jules Brunet\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 10,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Ingegerd_Olofsdotter_of_Sweden a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Olof_Skötkonung ;
+    ex:hasParent entity:Olof_Skötkonung .
+
+entity:Sigrid_the_Haughty a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Olof_Skötkonung .
+
+entity:Olof_Skötkonung a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Ingegerd_Olofsdotter_of_Sweden ;
+    ex:hasMother entity:Sigrid_the_Haughty ;
+    ex:hasParent entity:Sigrid_the_Haughty .
+

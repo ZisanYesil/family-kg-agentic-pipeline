@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/590/evaluation/entity_alignment/baseline_extracted_aligned_590.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/590/evaluation/entity_alignment/baseline_ground_truth_aligned_590.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Max_McGraw",
+      "predicate": "hasBirthDate",
+      "object": "\"1883-02-01\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Max_McGraw",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1883-02-01\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "McGraw_Electric",
+      "predicate": "hasFounder",
+      "object": "Max_McGraw",
+      "subject_uri": "http://example.org/entity/McGraw_Electric",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Max_McGraw"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Max_McGraw",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Max_McGraw",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Max_McGraw",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Max_McGraw",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Max_McGraw",
+      "predicate": "label",
+      "object": "\"Max McGraw\"",
+      "subject_uri": "http://example.org/entity/Max_McGraw",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Max McGraw\""
+    },
+    {
+      "subject": "McGraw_Electric",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/McGraw_Electric",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "McGraw_Electric",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/McGraw_Electric",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "McGraw_Electric",
+      "predicate": "label",
+      "object": "\"McGraw Electric\"",
+      "subject_uri": "http://example.org/entity/McGraw_Electric",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"McGraw Electric\""
+    },
+    {
+      "subject": "McGraw_Electric",
+      "predicate": "altLabel",
+      "object": "\"McGraw Electric Company\"",
+      "subject_uri": "http://example.org/entity/McGraw_Electric",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"McGraw Electric Company\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 9,
+    "true_positives": 2,
+    "false_positives": 7,
+    "false_negatives": 0,
+    "precision": 0.2222222222222222,
+    "recall": 1.0,
+    "f1": 0.3636363636363636
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Coulson_Wallop> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Coulson Wallop" ;
+    onto:hasFather <http://example.org/entity/John_Wallop_2nd_Earl_of_Portsmouth> .
+
+<http://example.org/entity/John_Wallop_2nd_Earl_of_Portsmouth> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Wallop, 2nd Earl of Portsmouth" ;
+    onto:hasEducatedAt <http://example.org/entity/Oxford> .
+
+<http://example.org/entity/Oxford> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Oxford" .
+

@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/768/originals/extracted_768.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/768/ground_truth_768.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_andrew_disney": "http://example.org/entity/Andrew_Disney"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_andrew_disney",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Andrew Disney",
+          "source": "label"
+        },
+        {
+          "text": "person andrew disney",
+          "source": "uri"
+        }
+      ],
+      "context": "Andrew Disney. has educated at: Tisch School of the Arts. inverse has director: Balls Out (2014 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Andrew_Disney",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Andrew Disney",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Andrew Disney",
+        "extracted_source": "label",
+        "ground_truth_text": "Andrew Disney",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9200025796890259,
+      "graph_score": 0.9200025796890259,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_balls_out_2014",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Balls Out (2014 film)",
+          "source": "label"
+        },
+        {
+          "text": "film balls out 2014",
+          "source": "uri"
+        }
+      ],
+      "context": "Balls Out (2014 film). has director: Andrew Disney.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Balls_Out",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Balls Out",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Balls Out (2014 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Balls Out",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8297147750854492,
+      "name_embedding_score": 0.8283536434173584,
+      "string_score": 0.6949999928474426,
+      "independent_identity_support": false,
+      "context_score": 0.9343035817146301,
+      "graph_score": 0.9671517610549927,
+      "margin": 0.8297147750854492
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/edu_tisch_school_of_the_arts",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tisch School of the Arts",
+          "source": "label"
+        },
+        {
+          "text": "edu tisch school of the arts",
+          "source": "uri"
+        }
+      ],
+      "context": "Tisch School of the Arts. inverse has educated at: Andrew Disney.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Tisch"
+  ]
+}

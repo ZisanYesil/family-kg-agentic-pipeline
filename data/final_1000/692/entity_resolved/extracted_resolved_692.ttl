@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:tibiyo_takangwa a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Tibiyo TakaNgwane" ;
+    onto:hasFounder data:sobhuza_ii .
+
+data:ngwane_v a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ngwane V" .
+
+data:sobhuza_ii a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sobhuza II" ;
+    onto:hasFather data:ngwane_v .
+

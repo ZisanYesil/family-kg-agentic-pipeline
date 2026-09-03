@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/869/originals/extracted_869.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/869/ground_truth_869.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/faile_flann_mac_aedo_duib": "http://example.org/entity/Faílbe_Flann_mac_Áedo_Duib",
+    "http://example.org/extracted/colgu_mac_faelbe_flaind": "http://example.org/entity/Colgú_mac_Faílbe_Flaind",
+    "http://example.org/extracted/fingen_mac_aedo_duib": "http://example.org/entity/Fíngen_mac_Áedo_Duib"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/colgu_mac_faelbe_flaind",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Colgú mac Faílbe Flaind",
+          "source": "label"
+        },
+        {
+          "text": "colgu mac faelbe flaind",
+          "source": "uri"
+        }
+      ],
+      "context": "Colgú mac Faílbe Flaind. has father: Faílbe Flann mac Áedo Duib.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Colgú_mac_Faílbe_Flaind",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Colgú mac Faílbe Flaind",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Colgú mac Faílbe Flaind",
+        "extracted_source": "label",
+        "ground_truth_text": "Colgú mac Faílbe Flaind",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.399258017539978
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/faile_flann_mac_aedo_duib",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Faílbe Flann mac Áedo Duib",
+          "source": "label"
+        },
+        {
+          "text": "faile flann mac aedo duib",
+          "source": "uri"
+        }
+      ],
+      "context": "Faílbe Flann mac Áedo Duib. has brother: Fíngen mac Áedo Duib. inverse has father: Colgú mac Faílbe Flaind.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Faílbe_Flann_mac_Áedo_Duib",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Faílbe Flann mac Áedo Duib",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Faílbe Flann mac Áedo Duib",
+        "extracted_source": "label",
+        "ground_truth_text": "Faílbe Flann mac Áedo Duib",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9935827255249023,
+      "graph_score": 0.6634580492973328,
+      "margin": 0.2440483570098877
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/fingen_mac_aedo_duib",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fíngen mac Áedo Duib",
+          "source": "label"
+        },
+        {
+          "text": "fingen mac aedo duib",
+          "source": "uri"
+        }
+      ],
+      "context": "Fíngen mac Áedo Duib. inverse has brother: Faílbe Flann mac Áedo Duib.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fíngen_mac_Áedo_Duib",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fíngen mac Áedo Duib",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fíngen mac Áedo Duib",
+        "extracted_source": "label",
+        "ground_truth_text": "Fíngen mac Áedo Duib",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9865644574165344,
+      "graph_score": 0.4932822287082672,
+      "margin": 0.24344879388809204
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/657/originals/extracted_657.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/657/ground_truth_657.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/michal_aviad": "http://example.org/entity/Michal_Aviad",
+    "http://example.org/extracted/working_woman_film": "http://example.org/entity/Working_Woman",
+    "http://example.org/extracted/tel_aviv_university": "http://example.org/entity/Tel_Aviv_University"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/michal_aviad",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Michal Aviad",
+          "source": "label"
+        }
+      ],
+      "context": "Michal Aviad. inverse has director: Working Woman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Michal_Aviad",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Michal Aviad",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Michal Aviad",
+        "extracted_source": "label",
+        "ground_truth_text": "Michal Aviad",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8141590356826782,
+      "graph_score": 0.6570795178413391,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tel_aviv_university",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tel Aviv University",
+          "source": "label"
+        }
+      ],
+      "context": "Tel Aviv University.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tel_Aviv_University",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tel Aviv University",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tel Aviv University",
+        "extracted_source": "label",
+        "ground_truth_text": "Tel Aviv University",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7126556634902954,
+      "graph_score": 0.3563278317451477,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/working_woman_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Working Woman",
+          "source": "label"
+        },
+        {
+          "text": "working woman film",
+          "source": "uri"
+        }
+      ],
+      "context": "Working Woman. has director: Michal Aviad.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Working_Woman",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Working Woman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Working Woman",
+        "extracted_source": "label",
+        "ground_truth_text": "Working Woman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

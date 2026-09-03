@@ -1,0 +1,134 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/323/originals/extracted_323.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/323/ground_truth_323.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/nathaniel_wallich": "http://example.org/entity/Nathaniel_Wallich",
+    "http://example.org/extracted/george_charles_wallich": "http://example.org/entity/George_Charles_Wallich"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/george_charles_wallich",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George Charles Wallich",
+          "source": "label"
+        }
+      ],
+      "context": "George Charles Wallich. inverse has father: Nathaniel Wallich.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_Charles_Wallich",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George Charles Wallich",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George Charles Wallich",
+        "extracted_source": "label",
+        "ground_truth_text": "George Charles Wallich",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8985544443130493,
+      "graph_score": 0.44927722215652466,
+      "margin": 0.41198551654815674
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/nathaniel_wallich",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nathaniel Wallich",
+          "source": "label"
+        }
+      ],
+      "context": "Nathaniel Wallich. has father: George Charles Wallich.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nathaniel_Wallich",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nathaniel Wallich",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nathaniel Wallich",
+        "extracted_source": "label",
+        "ground_truth_text": "Nathaniel Wallich",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7226015329360962,
+      "graph_score": 0.3613007664680481,
+      "margin": 0.37656164169311523
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/royal_botanical_gardens",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Royal Botanical Gardens",
+          "source": "label"
+        }
+      ],
+      "context": "Royal Botanical Gardens.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Calcutta_Botanical_Garden"
+  ]
+}

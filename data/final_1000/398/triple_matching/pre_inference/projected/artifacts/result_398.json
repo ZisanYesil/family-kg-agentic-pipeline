@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/398/evaluation/entity_alignment/baseline_extracted_aligned_398.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/398/evaluation/entity_alignment/baseline_ground_truth_aligned_398.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Bonne_of_Berry",
+      "predicate": "hasCountry",
+      "object": "France",
+      "subject_uri": "http://example.org/entity/Bonne_of_Berry",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/France"
+    },
+    {
+      "subject": "Felix_V",
+      "predicate": "hasParent",
+      "object": "Bonne_of_Berry",
+      "subject_uri": "http://example.org/entity/Felix_V",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Bonne_of_Berry"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Bonne_of_Berry",
+      "predicate": "hasParent",
+      "object": "amadeus_viii",
+      "subject_uri": "http://example.org/entity/Bonne_of_Berry",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/extracted/amadeus_viii"
+    },
+    {
+      "subject": "Bonne_of_Berry",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bonne_of_Berry",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Bonne_of_Berry",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Bonne_of_Berry",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Bonne_of_Berry",
+      "predicate": "label",
+      "object": "\"Bonne of Berry\"",
+      "subject_uri": "http://example.org/entity/Bonne_of_Berry",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bonne of Berry\""
+    },
+    {
+      "subject": "amadeus_viii",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/amadeus_viii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "amadeus_viii",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/amadeus_viii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "amadeus_viii",
+      "predicate": "label",
+      "object": "\"Amadeus VIII, Duke of Savoy\"",
+      "subject_uri": "http://example.org/extracted/amadeus_viii",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Amadeus VIII, Duke of Savoy\""
+    },
+    {
+      "subject": "amadeus_viii",
+      "predicate": "altLabel",
+      "object": "\"Amadeus VIII\"",
+      "subject_uri": "http://example.org/extracted/amadeus_viii",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Amadeus VIII\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 1,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 0,
+    "false_positives": 8,
+    "false_negatives": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "pre_inference"
+}

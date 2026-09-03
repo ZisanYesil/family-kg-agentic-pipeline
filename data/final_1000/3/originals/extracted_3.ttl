@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:jean_martin_singer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jean Martin" ;
+    onto:hasSpouse data:william_black_businessman ;
+    skos:altLabel "Jean Martin (singer)" .
+
+data:william_black_businessman a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Black" ;
+    onto:hasDeathDate "1983-03-07"^^xsd:date ;
+    skos:altLabel "William Black (businessman)" .
+

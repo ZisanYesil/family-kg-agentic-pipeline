@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:george_ii_1789 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George II, Prince of Waldeck and Pyrmont" ;
+    onto:hasDaughter data:hermine_1827 ;
+    onto:hasMother data:augusta_schwarzburg_sondershausen .
+
+data:augusta_schwarzburg_sondershausen a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Countess Princess Augusta of Schwarzburg-Sondershausen" .
+
+data:hermine_1827 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Hermine of Waldeck and Pyrmont" .
+

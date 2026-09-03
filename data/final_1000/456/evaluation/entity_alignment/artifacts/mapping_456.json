@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/456/originals/extracted_456.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/456/ground_truth_456.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ustad_hotel": "http://example.org/entity/Ustad_Hotel",
+    "http://example.org/extracted/in_bed_with_santa": "http://example.org/entity/In_Bed_with_Santa"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/in_bed_with_santa",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "In Bed With Santa",
+          "source": "label"
+        }
+      ],
+      "context": "In Bed With Santa. has publication date: 1999-11-26.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/In_Bed_with_Santa",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "In Bed with Santa",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "In Bed With Santa",
+        "extracted_source": "label",
+        "ground_truth_text": "In Bed with Santa",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9996382594108582,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9998403191566467,
+      "graph_score": 0.9998403191566467,
+      "margin": 0.7874612510204315
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ustad_hotel",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ustad Hotel",
+          "source": "label"
+        }
+      ],
+      "context": "Ustad Hotel. has publication date: 2012-07-13.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ustad_Hotel",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ustad Hotel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ustad Hotel",
+        "extracted_source": "label",
+        "ground_truth_text": "Ustad Hotel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9702057242393494,
+      "graph_score": 0.9702057242393494,
+      "margin": 0.7741909027099609
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

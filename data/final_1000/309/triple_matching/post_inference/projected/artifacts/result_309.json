@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/309/evaluation/entity_alignment/final_extracted_aligned_309.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/309/evaluation/entity_alignment/final_ground_truth_aligned_309.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Charlemagne",
+      "predicate": "hasSpouse",
+      "object": "Luitgard",
+      "subject_uri": "http://example.org/entity/Charlemagne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Luitgard"
+    },
+    {
+      "subject": "Charlemagne",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Charlemagne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Charlemagne",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Charlemagne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Luitgard",
+      "predicate": "hasSpouse",
+      "object": "Charlemagne",
+      "subject_uri": "http://example.org/entity/Luitgard",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Charlemagne"
+    },
+    {
+      "subject": "Luitgard",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Luitgard",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Luitgard",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Luitgard",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Carolingian_Empire",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Carolingian_Empire",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Carolingian_Empire",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Carolingian_Empire",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Charlemagne",
+      "predicate": "hasCountry",
+      "object": "Carolingian_Empire",
+      "subject_uri": "http://example.org/entity/Charlemagne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Carolingian_Empire"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Charlemagne",
+      "predicate": "hasCountry",
+      "object": "frankish_country",
+      "subject_uri": "http://example.org/entity/Charlemagne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/frankish_country"
+    },
+    {
+      "subject": "frankish_country",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/frankish_country",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "frankish_country",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/frankish_country",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 12,
+    "true_positives": 6,
+    "false_positives": 3,
+    "false_negatives": 3,
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.6666666666666666
+  },
+  "stage": "post_inference"
+}

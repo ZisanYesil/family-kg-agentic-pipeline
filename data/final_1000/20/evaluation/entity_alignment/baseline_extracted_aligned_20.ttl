@@ -1,0 +1,29 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Winter_Meeting> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Winter Meeting" ;
+    onto:hasDirector <http://example.org/entity/Bretaigne_Windust> .
+
+<http://example.org/entity/Year_of_the_Horse> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Year of the Horse" ;
+    onto:hasDirector <http://example.org/entity/Jim_Jarmusch> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/Bretaigne_Windust> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bretaigne Windust" .
+
+<http://example.org/entity/Jim_Jarmusch> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jim Jarmusch" ;
+    onto:hasNationality <http://example.org/entity/American> .
+

@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/83/evaluation/entity_alignment/baseline_extracted_aligned_83.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/83/evaluation/entity_alignment/baseline_ground_truth_aligned_83.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Princess_Eugénie_of_Greece_and_Denmark",
+      "predicate": "hasParent",
+      "object": "Princess_Marie_Bonaparte",
+      "subject_uri": "http://example.org/entity/Princess_Eugénie_of_Greece_and_Denmark",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Princess_Marie_Bonaparte"
+    },
+    {
+      "subject": "Princess_Marie_Bonaparte",
+      "predicate": "hasDeathDate",
+      "object": "\"1962-09-21\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Princess_Marie_Bonaparte",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1962-09-21\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Princess_Eugénie_of_Greece_and_Denmark",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Eugénie_of_Greece_and_Denmark",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Princess_Eugénie_of_Greece_and_Denmark",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Princess_Eugénie_of_Greece_and_Denmark",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Princess_Eugénie_of_Greece_and_Denmark",
+      "predicate": "label",
+      "object": "\"Princess Eugénie of Greece and Denmark\"",
+      "subject_uri": "http://example.org/entity/Princess_Eugénie_of_Greece_and_Denmark",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Princess Eugénie of Greece and Denmark\""
+    },
+    {
+      "subject": "Princess_Marie_Bonaparte",
+      "predicate": "hasBirthDate",
+      "object": "\"1882-07-02\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Princess_Marie_Bonaparte",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1882-07-02\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Princess_Marie_Bonaparte",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Marie_Bonaparte",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Princess_Marie_Bonaparte",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Princess_Marie_Bonaparte",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Princess_Marie_Bonaparte",
+      "predicate": "label",
+      "object": "\"Princess Marie Bonaparte\"",
+      "subject_uri": "http://example.org/entity/Princess_Marie_Bonaparte",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Princess Marie Bonaparte\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 9,
+    "true_positives": 2,
+    "false_positives": 7,
+    "false_negatives": 0,
+    "precision": 0.2222222222222222,
+    "recall": 1.0,
+    "f1": 0.3636363636363636
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/76/originals/extracted_76.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/76/ground_truth_76.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/siyaah_film": "http://example.org/entity/Siyaah",
+    "http://example.org/extracted/shadow_of_evil_film": "http://example.org/entity/Shadow_of_Evil"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/shadow_of_evil_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shadow of Evil",
+          "source": "label"
+        },
+        {
+          "text": "shadow of evil film",
+          "source": "uri"
+        }
+      ],
+      "context": "Shadow of Evil. has publication date: 1964.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shadow_of_Evil",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shadow of Evil",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shadow of Evil",
+        "extracted_source": "label",
+        "ground_truth_text": "Shadow of Evil",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.7374727129936218
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/siyaah_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Siyaah",
+          "source": "label"
+        },
+        {
+          "text": "siyaah film",
+          "source": "uri"
+        }
+      ],
+      "context": "Siyaah. has publication date: 2013.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Siyaah",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Siyaah",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Siyaah",
+        "extracted_source": "label",
+        "ground_truth_text": "Siyaah",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.6925758719444275
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,233 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/132/originals/extracted_132.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/132/ground_truth_132.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/pakistan_country": "http://example.org/entity/Pakistan",
+    "http://example.org/extracted/iran_country": "http://example.org/entity/Iran",
+    "http://example.org/extracted/shadi_khan_place": "http://example.org/entity/Shadikhan"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/iran_country",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Iran",
+          "source": "altLabel"
+        },
+        {
+          "text": "iran country",
+          "source": "uri"
+        }
+      ],
+      "context": "Iran. inverse has country: Karimabad. inverse has country: Silvaneh.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Iran",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Iran",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Iran",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Iran",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9351277351379395,
+      "graph_score": 0.9351277351379395,
+      "margin": 0.6232615113258362
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pakistan_country",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pakistan",
+          "source": "altLabel"
+        },
+        {
+          "text": "pakistan country",
+          "source": "uri"
+        }
+      ],
+      "context": "Pakistan. inverse has country: Shadi Khan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pakistan",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pakistan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pakistan",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Pakistan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9389383792877197,
+      "graph_score": 0.9694691896438599,
+      "margin": 0.6104256212711334
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/shadi_khan_place",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shadi Khan",
+          "source": "altLabel"
+        },
+        {
+          "text": "Shadikhan",
+          "source": "altLabel"
+        },
+        {
+          "text": "shadi khan place",
+          "source": "uri"
+        }
+      ],
+      "context": "Shadi Khan. has country: Pakistan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shadikhan",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shadikhan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shadikhan",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Shadikhan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9236146211624146,
+      "graph_score": 0.9618073105812073,
+      "margin": 0.5841355323791504
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/karimabad_place",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Karimabad",
+          "source": "altLabel"
+        },
+        {
+          "text": "Karīmābād",
+          "source": "altLabel"
+        },
+        {
+          "text": "karimabad place",
+          "source": "uri"
+        }
+      ],
+      "context": "Karimabad. has country: Iran.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Karimabad_Silvaneh",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Karimabad Silvaneh",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Karimabad",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Karimabad Silvaneh",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8356738686561584,
+      "name_embedding_score": 0.8292006850242615,
+      "string_score": 0.7250000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9185880422592163,
+      "graph_score": 0.9592940211296082,
+      "margin": 0.40166300535202026
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/silvaneh_place",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Silvaneh",
+          "source": "altLabel"
+        },
+        {
+          "text": "silvaneh place",
+          "source": "uri"
+        }
+      ],
+      "context": "Silvaneh. has country: Iran.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

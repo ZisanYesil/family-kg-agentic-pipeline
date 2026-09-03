@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/303/originals/extracted_303.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/303/ground_truth_303.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/adelaide_auxerre": "http://example.org/entity/Adelaide_of_Auxerre",
+    "http://example.org/extracted/conrad_ii_transjurane": "http://example.org/entity/Conrad_II_Duke_of_Transjurane_Burgundy",
+    "http://example.org/extracted/rudolf_france": "http://example.org/entity/Rudolph_of_France"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adelaide_auxerre",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adelaide of Auxerre",
+          "source": "label"
+        },
+        {
+          "text": "adelaide auxerre",
+          "source": "uri"
+        }
+      ],
+      "context": "Adelaide of Auxerre. has father: Conrad II, Duke of Transjurane Burgundy. inverse has mother: Rudolph of France.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adelaide_of_Auxerre",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adelaide of Auxerre",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adelaide of Auxerre",
+        "extracted_source": "label",
+        "ground_truth_text": "Adelaide of Auxerre",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9957963824272156,
+      "graph_score": 0.9978982210159302,
+      "margin": 0.693140059709549
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/conrad_ii_transjurane",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Conrad II, Duke of Transjurane Burgundy",
+          "source": "label"
+        },
+        {
+          "text": "conrad ii transjurane",
+          "source": "uri"
+        }
+      ],
+      "context": "Conrad II, Duke of Transjurane Burgundy. inverse has father: Adelaide of Auxerre.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Conrad_II_Duke_of_Transjurane_Burgundy",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Conrad II Duke of Transjurane Burgundy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Conrad II, Duke of Transjurane Burgundy",
+        "extracted_source": "label",
+        "ground_truth_text": "Conrad II Duke of Transjurane Burgundy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9929905533790588,
+      "string_score": 0.9941558241844177,
+      "independent_identity_support": true,
+      "context_score": 0.9938890337944031,
+      "graph_score": 0.9969445466995239,
+      "margin": 0.6052185595035553
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/rudolf_france",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rudolph of France",
+          "source": "label"
+        },
+        {
+          "text": "rudolf france",
+          "source": "uri"
+        }
+      ],
+      "context": "Rudolph of France. has mother: Adelaide of Auxerre.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rudolph_of_France",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rudolph of France",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rudolph of France",
+        "extracted_source": "label",
+        "ground_truth_text": "Rudolph of France",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.6138491630554199
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

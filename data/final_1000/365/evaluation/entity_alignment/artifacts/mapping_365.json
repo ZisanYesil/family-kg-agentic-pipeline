@@ -1,0 +1,141 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/365/originals/extracted_365.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/365/ground_truth_365.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jabiberi_river": "http://example.org/entity/Jabiberi_River",
+    "http://example.org/extracted/brazil": "http://example.org/entity/Brazil",
+    "http://example.org/extracted/capetinga_river": "http://example.org/entity/Capetinga_River"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/brazil",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Brazil",
+          "source": "label"
+        }
+      ],
+      "context": "Brazil. inverse has country: Capetinga River. inverse has country: Jabiberi River.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Brazil",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Brazil",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Brazil",
+        "extracted_source": "label",
+        "ground_truth_text": "Brazil",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7930391430854797
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/capetinga_river",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Capetinga River",
+          "source": "label"
+        }
+      ],
+      "context": "Capetinga River. has country: Brazil.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Capetinga_River",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Capetinga River",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Capetinga River",
+        "extracted_source": "label",
+        "ground_truth_text": "Capetinga River",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.3868916630744934
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jabiberi_river",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jabiberi River",
+          "source": "label"
+        }
+      ],
+      "context": "Jabiberi River. has country: Brazil.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jabiberi_River",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jabiberi River",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jabiberi River",
+        "extracted_source": "label",
+        "ground_truth_text": "Jabiberi River",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.39465028047561646
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

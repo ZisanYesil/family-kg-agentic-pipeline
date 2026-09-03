@@ -1,0 +1,204 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/426/originals/extracted_426.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/426/ground_truth_426.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bombshell_film": "http://example.org/entity/Bombshell_The_Hedy_Lamarr_Story",
+    "http://example.org/extracted/toman_film": "http://example.org/entity/Toman_film",
+    "http://example.org/extracted/czech_republic": "http://example.org/entity/Czech",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bombshell_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bombshell: The Hedy Lamarr Story",
+          "source": "label"
+        },
+        {
+          "text": "bombshell film",
+          "source": "uri"
+        }
+      ],
+      "context": "Bombshell: The Hedy Lamarr Story. has country: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bombshell_The_Hedy_Lamarr_Story",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bombshell The Hedy Lamarr Story",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bombshell: The Hedy Lamarr Story",
+        "extracted_source": "label",
+        "ground_truth_text": "Bombshell The Hedy Lamarr Story",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9825546145439148,
+      "string_score": 0.9928571581840515,
+      "independent_identity_support": true,
+      "context_score": 0.9530732035636902,
+      "graph_score": 0.4765366017818451,
+      "margin": 0.5629080533981323
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/czech_republic",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Czech",
+          "source": "altLabel"
+        },
+        {
+          "text": "Czech Republic",
+          "source": "label"
+        }
+      ],
+      "context": "Czech. inverse has country: Zdeněk Toman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Czech",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Czech",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Czech",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Czech",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8009523153305054,
+      "graph_score": 0.4004761576652527,
+      "margin": 0.7636321783065796
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/toman_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Zdeněk Toman",
+          "source": "altLabel"
+        },
+        {
+          "text": "Toman",
+          "source": "label"
+        },
+        {
+          "text": "toman film",
+          "source": "uri"
+        }
+      ],
+      "context": "Zdeněk Toman. has country: Czech.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Toman_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Toman film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "toman film",
+        "extracted_source": "uri",
+        "ground_truth_text": "Toman film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9974441528320312,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7558533549308777,
+      "graph_score": 0.37792667746543884,
+      "margin": 0.7901591658592224
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has country: Bombshell: The Hedy Lamarr Story.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9528424739837646,
+      "graph_score": 0.4764212369918823,
+      "margin": 0.7727508842945099
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

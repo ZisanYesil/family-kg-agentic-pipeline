@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/967/originals/extracted_967.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/967/ground_truth_967.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_earth_1957": "http://example.org/entity/Earth",
+    "http://example.org/extracted/zahari_zhandov": "http://example.org/entity/Zahari_Zhandov",
+    "http://example.org/extracted/sofia": "http://example.org/entity/Sofia"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_earth_1957",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Earth",
+          "source": "altLabel"
+        },
+        {
+          "text": "Earth (1957 film)",
+          "source": "label"
+        },
+        {
+          "text": "film earth 1957",
+          "source": "uri"
+        }
+      ],
+      "context": "Earth. has director: Zahari Zhandov.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Earth",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Earth",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Earth",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Earth",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sofia",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sofia",
+          "source": "label"
+        }
+      ],
+      "context": "Sofia. inverse has death place: Zahari Zhandov.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sofia",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sofia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sofia",
+        "extracted_source": "label",
+        "ground_truth_text": "Sofia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/zahari_zhandov",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Zahari Zhandov",
+          "source": "label"
+        }
+      ],
+      "context": "Zahari Zhandov. has death place: Sofia. inverse has director: Earth.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Zahari_Zhandov",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Zahari Zhandov",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Zahari Zhandov",
+        "extracted_source": "label",
+        "ground_truth_text": "Zahari Zhandov",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

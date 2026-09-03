@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:org_veslefrekk a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Veslefrekk" ;
+    onto:hasMember data:person_storloekken .
+
+data:person_storloekken a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ståle Storløkken" ;
+    onto:hasBirthPlace data:place_dombas .
+
+data:place_dombas a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Dombås, Norway" ;
+    skos:altLabel "Dombås" .
+

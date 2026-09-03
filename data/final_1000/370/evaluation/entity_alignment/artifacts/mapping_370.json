@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/370/originals/extracted_370.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/370/ground_truth_370.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_franz_schubert": "http://example.org/entity/Franz_Schubert",
+    "http://example.org/extracted/song_gretchen_am_spinnrade": "http://example.org/entity/Gretchen_am_Spinnrade",
+    "http://example.org/extracted/person_antonio_salieri": "http://example.org/entity/Antonio_Salieri"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_antonio_salieri",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Antonio Salieri",
+          "source": "altLabel"
+        },
+        {
+          "text": "person antonio salieri",
+          "source": "uri"
+        }
+      ],
+      "context": "Antonio Salieri. inverse has student of: Franz Peter Schubert.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Antonio_Salieri",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Antonio Salieri",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Antonio Salieri",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Antonio Salieri",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.985573947429657,
+      "graph_score": 0.9927870035171509,
+      "margin": 0.6704886257648468
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_franz_schubert",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Franz Peter Schubert",
+          "source": "altLabel"
+        },
+        {
+          "text": "Franz Schubert",
+          "source": "altLabel"
+        },
+        {
+          "text": "person franz schubert",
+          "source": "uri"
+        }
+      ],
+      "context": "Franz Peter Schubert. has student of: Antonio Salieri. inverse has composer: Gretchen am Spinnrade.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Franz_Schubert",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Franz Schubert",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Franz Schubert",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Franz Schubert",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9878914952278137,
+      "graph_score": 0.9939457178115845,
+      "margin": 0.670961320400238
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_gretchen_am_spinnrade",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gretchen am Spinnrade",
+          "source": "altLabel"
+        },
+        {
+          "text": "song gretchen am spinnrade",
+          "source": "uri"
+        }
+      ],
+      "context": "Gretchen am Spinnrade. has composer: Franz Peter Schubert.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gretchen_am_Spinnrade",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gretchen am Spinnrade",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gretchen am Spinnrade",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Gretchen am Spinnrade",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9878034591674805,
+      "graph_score": 0.9939017295837402,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

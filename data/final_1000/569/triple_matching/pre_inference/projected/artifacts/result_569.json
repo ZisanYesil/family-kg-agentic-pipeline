@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/569/evaluation/entity_alignment/baseline_extracted_aligned_569.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/569/evaluation/entity_alignment/baseline_ground_truth_aligned_569.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "L_Assiette_au_Beurre",
+      "predicate": "hasInception",
+      "object": "\"1901\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/L_Assiette_au_Beurre",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1901\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Pnai_Plus",
+      "predicate": "hasInception",
+      "object": "\"1989\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Pnai_Plus",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1989\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "lassiette_au_beurre",
+      "predicate": "hasPublicationDate",
+      "object": "\"1901\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/extracted/lassiette_au_beurre",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1901\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "lassiette_au_beurre",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/extracted/lassiette_au_beurre",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "lassiette_au_beurre",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/lassiette_au_beurre",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "lassiette_au_beurre",
+      "predicate": "label",
+      "object": "\"L'Assiette Au Beurre\"",
+      "subject_uri": "http://example.org/extracted/lassiette_au_beurre",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"L'Assiette Au Beurre\""
+    },
+    {
+      "subject": "pnai_plus",
+      "predicate": "hasPublicationDate",
+      "object": "\"1989\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/extracted/pnai_plus",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1989\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "pnai_plus",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/extracted/pnai_plus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "pnai_plus",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/pnai_plus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "pnai_plus",
+      "predicate": "label",
+      "object": "\"Pnai Plus\"",
+      "subject_uri": "http://example.org/extracted/pnai_plus",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Pnai Plus\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 0,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 0,
+    "false_positives": 8,
+    "false_negatives": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "pre_inference"
+}

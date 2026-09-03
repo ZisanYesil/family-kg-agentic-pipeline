@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Charles_Orlando_Dauphin_of_France a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Charles_VIII_of_France ;
+    ex:hasParent entity:Charles_VIII_of_France .
+
+entity:stroke a ex:CauseOfDeath .
+
+entity:Charles_VIII_of_France a ex:Agent,
+        ex:Person ;
+    ex:hasCauseOfDeath entity:stroke ;
+    ex:hasChild entity:Charles_Orlando_Dauphin_of_France .
+

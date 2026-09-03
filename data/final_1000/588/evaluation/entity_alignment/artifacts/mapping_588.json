@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/588/originals/extracted_588.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/588/ground_truth_588.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/james_b_rhoads": "http://example.org/entity/James_B_Rhoads"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/james_b_rhoads",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James B. Rhoads",
+          "source": "label"
+        },
+        {
+          "text": "james b rhoads",
+          "source": "uri"
+        }
+      ],
+      "context": "James B. Rhoads. has birth place: Sioux City, Iowa.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_B_Rhoads",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James B Rhoads",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James B. Rhoads",
+        "extracted_source": "label",
+        "ground_truth_text": "James B Rhoads",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9856848120689392,
+      "string_score": 0.9844827651977539,
+      "independent_identity_support": true,
+      "context_score": 0.7792097926139832,
+      "graph_score": 0.7792097926139832,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sioux_city_iowa",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sioux City, Iowa",
+          "source": "label"
+        },
+        {
+          "text": "sioux city iowa",
+          "source": "uri"
+        }
+      ],
+      "context": "Sioux City, Iowa. inverse has birth place: James B. Rhoads.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sioux_City",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sioux City",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sioux City, Iowa",
+        "extracted_source": "label",
+        "ground_truth_text": "Sioux City",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8732143044471741,
+      "name_embedding_score": 0.8602073192596436,
+      "string_score": 0.8128204941749573,
+      "independent_identity_support": true,
+      "context_score": 0.9192444086074829,
+      "graph_score": 0.9596222043037415,
+      "margin": 0.8732143044471741
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/prologue_magazine",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prologue (magazine)",
+          "source": "label"
+        },
+        {
+          "text": "prologue magazine",
+          "source": "uri"
+        }
+      ],
+      "context": "Prologue (magazine).",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Prologue"
+  ]
+}

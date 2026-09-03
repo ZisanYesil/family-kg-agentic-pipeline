@@ -1,0 +1,27 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/CRD> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "CRD" ;
+    onto:hasDirector <http://example.org/entity/Kranti_Kanade> .
+
+<http://example.org/entity/Kranti_Kanade> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Kranti Kanade" ;
+    onto:hasEducatedAt <http://example.org/entity/UCLA>,
+        data:edu_ftii .
+
+<http://example.org/entity/UCLA> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "University of California, Los Angeles" ;
+    skos:altLabel "UCLA" .
+
+data:edu_ftii a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Film and Television Institute of India" ;
+    skos:altLabel "FTII" .
+

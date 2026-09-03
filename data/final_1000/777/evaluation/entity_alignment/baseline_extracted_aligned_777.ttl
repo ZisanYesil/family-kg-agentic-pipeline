@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Isabel_de_la_Cerda> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Isabel de la Cerda" ;
+    onto:hasFather <http://example.org/entity/Luis_de_la_Cerda> ;
+    skos:altLabel "Isabel de la Cerda Pérez de Guzmán" .
+
+<http://example.org/entity/France> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "France" .
+
+<http://example.org/entity/Luis_de_la_Cerda> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Luis de la Cerda" ;
+    onto:hasBirthPlace <http://example.org/entity/France> .
+

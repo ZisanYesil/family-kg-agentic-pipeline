@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:rajartha_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Rajaratha" ;
+    onto:hasComposer data:anup_bhandari .
+
+data:anup_bhandari a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Anup Bhandari" ;
+    onto:hasEducatedAt data:vvi_et .
+
+data:vvi_et a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Vidya Vikas Institute of Engineering & Technology" .
+

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/188/originals/extracted_188.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/188/ground_truth_188.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_revolt_praetorians": "http://example.org/entity/Revolt_of_the_Praetorians",
+    "http://example.org/extracted/film_pyrammmid": "http://example.org/entity/The_PyraMMMid"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_pyrammmid",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Pyra MMMid",
+          "source": "label"
+        },
+        {
+          "text": "film pyrammmid",
+          "source": "uri"
+        }
+      ],
+      "context": "The Pyra MMMid. has publication date: 2011.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_PyraMMMid",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Pyra MMMid",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Pyra MMMid",
+        "extracted_source": "label",
+        "ground_truth_text": "The Pyra MMMid",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6370452046394348
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_revolt_praetorians",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Revolt of the Praetorians",
+          "source": "label"
+        },
+        {
+          "text": "film revolt praetorians",
+          "source": "uri"
+        }
+      ],
+      "context": "Revolt of the Praetorians. has publication date: 1964.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Revolt_of_the_Praetorians",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Revolt of the Praetorians",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Revolt of the Praetorians",
+        "extracted_source": "label",
+        "ground_truth_text": "Revolt of the Praetorians",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998211860657,
+      "margin": 0.6370452046394348
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

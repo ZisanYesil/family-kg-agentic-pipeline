@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/4/originals/extracted_4.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/4/ground_truth_4.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/john_midland_murry": "http://example.org/entity/John_Middleton_Murry",
+    "http://example.org/extracted/katherine_mansfield": "http://example.org/entity/Katherine_Mansfield"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/john_midland_murry",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Middleton Murry",
+          "source": "label"
+        },
+        {
+          "text": "john midland murry",
+          "source": "uri"
+        }
+      ],
+      "context": "John Middleton Murry. has spouse: Katherine Mansfield.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Middleton_Murry",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Middleton Murry",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Middleton Murry",
+        "extracted_source": "label",
+        "ground_truth_text": "John Middleton Murry",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7044239044189453
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/katherine_mansfield",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Katherine Mansfield",
+          "source": "altLabel"
+        },
+        {
+          "text": "Kathleen Mansfield Murry",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Katherine Mansfield. has cause of death: extrapulmonary tuberculosis. inverse has spouse: John Middleton Murry.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Katherine_Mansfield",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Katherine Mansfield",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Katherine Mansfield",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Katherine Mansfield",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9785259962081909,
+      "graph_score": 0.9892629981040955,
+      "margin": 0.6219636797904968
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/extrapulmonary_tuberculosis",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "extrapulmonary tuberculosis",
+          "source": "label"
+        }
+      ],
+      "context": "extrapulmonary tuberculosis. inverse has cause of death: Katherine Mansfield.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/tuberculosis",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "tuberculosis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "extrapulmonary tuberculosis",
+        "extracted_source": "label",
+        "ground_truth_text": "tuberculosis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8534995913505554,
+      "name_embedding_score": 0.8687722086906433,
+      "string_score": 0.7019230723381042,
+      "independent_identity_support": true,
+      "context_score": 0.9490617513656616,
+      "graph_score": 0.9745308756828308,
+      "margin": 0.8534995913505554
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

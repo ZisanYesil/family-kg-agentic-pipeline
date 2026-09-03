@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/692/evaluation/entity_alignment/baseline_extracted_aligned_692.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/692/evaluation/entity_alignment/baseline_ground_truth_aligned_692.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Sobhuza_II",
+      "predicate": "hasParent",
+      "object": "Ngwane_V",
+      "subject_uri": "http://example.org/entity/Sobhuza_II",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Ngwane_V"
+    },
+    {
+      "subject": "Tibiyo_TakaNgwane",
+      "predicate": "hasFounder",
+      "object": "Sobhuza_II",
+      "subject_uri": "http://example.org/entity/Tibiyo_TakaNgwane",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Sobhuza_II"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Ngwane_V",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ngwane_V",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Ngwane_V",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ngwane_V",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ngwane_V",
+      "predicate": "label",
+      "object": "\"Ngwane V\"",
+      "subject_uri": "http://example.org/entity/Ngwane_V",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ngwane V\""
+    },
+    {
+      "subject": "Sobhuza_II",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sobhuza_II",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sobhuza_II",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sobhuza_II",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sobhuza_II",
+      "predicate": "label",
+      "object": "\"Sobhuza II\"",
+      "subject_uri": "http://example.org/entity/Sobhuza_II",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sobhuza II\""
+    },
+    {
+      "subject": "Tibiyo_TakaNgwane",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Tibiyo_TakaNgwane",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Tibiyo_TakaNgwane",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Tibiyo_TakaNgwane",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Tibiyo_TakaNgwane",
+      "predicate": "label",
+      "object": "\"Tibiyo TakaNgwane\"",
+      "subject_uri": "http://example.org/entity/Tibiyo_TakaNgwane",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Tibiyo TakaNgwane\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

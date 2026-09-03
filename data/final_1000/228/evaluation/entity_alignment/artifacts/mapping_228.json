@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/228/originals/extracted_228.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/228/ground_truth_228.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/tauheed_epps": "http://example.org/entity/2_Chainz",
+    "http://example.org/extracted/college_park_georgia": "http://example.org/entity/College_Park_Georgia"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/college_park_georgia",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "College Park, Georgia",
+          "source": "label"
+        },
+        {
+          "text": "college park georgia",
+          "source": "uri"
+        }
+      ],
+      "context": "College Park, Georgia. inverse has birth place: 2 Chainz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/College_Park_Georgia",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "College Park Georgia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "college park georgia",
+        "extracted_source": "uri",
+        "ground_truth_text": "College Park Georgia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9821610450744629,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9918568134307861,
+      "graph_score": 0.9959284067153931,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tauheed_epps",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "2 Chainz",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tauheed Epps",
+          "source": "label"
+        }
+      ],
+      "context": "2 Chainz. has birth place: College Park, Georgia. inverse has performer: Netflix (song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/2_Chainz",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "2 Chainz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "2 Chainz",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "2 Chainz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9723458290100098,
+      "graph_score": 0.9861729145050049,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/netflix_song",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Netflix (song)",
+          "source": "label"
+        },
+        {
+          "text": "netflix song",
+          "source": "uri"
+        }
+      ],
+      "context": "Netflix (song). has performer: 2 Chainz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Netflix",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Netflix",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Netflix (song)",
+        "extracted_source": "label",
+        "ground_truth_text": "Netflix",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.861554741859436,
+      "name_embedding_score": 0.8682863712310791,
+      "string_score": 0.7250000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.969292402267456,
+      "graph_score": 0.984646201133728,
+      "margin": 0.861554741859436
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

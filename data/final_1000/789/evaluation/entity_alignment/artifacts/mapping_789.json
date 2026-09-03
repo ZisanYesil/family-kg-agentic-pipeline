@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/789/originals/extracted_789.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/789/ground_truth_789.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/curly_seckler": "http://example.org/entity/Curly_Seckler",
+    "http://example.org/extracted/james_flack_norris": "http://example.org/entity/James_Flack_Norris"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/curly_seckler",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Ray Sechler",
+          "source": "altLabel"
+        },
+        {
+          "text": "Curly Seckler",
+          "source": "label"
+        }
+      ],
+      "context": "John Ray Sechler. has birth date: 1919-12-25. has death date: 2017-12-27.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Curly_Seckler",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Curly Seckler",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Curly Seckler",
+        "extracted_source": "label",
+        "ground_truth_text": "Curly Seckler",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6983553767204285,
+      "graph_score": 0.6983553767204285,
+      "margin": 0.5725179612636566
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/james_flack_norris",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Flack Norris",
+          "source": "label"
+        }
+      ],
+      "context": "James Flack Norris. has birth date: 1871-01-20. has death date: 1940-08-04.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_Flack_Norris",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James Flack Norris",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James Flack Norris",
+        "extracted_source": "label",
+        "ground_truth_text": "James Flack Norris",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9954275488853455,
+      "graph_score": 0.9954275488853455,
+      "margin": 0.7469812631607056
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

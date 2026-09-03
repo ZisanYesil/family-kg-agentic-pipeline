@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-08-24",
+  "dataset": {
+    "name": "final_1000",
+    "examples": 1000,
+    "frozen_original_graphs": true
+  },
+  "pipeline": {
+    "baseline": "original extracted graph",
+    "final": "SHACL feedback output followed by ontology inference",
+    "entity_matching": "combined-score assignment above confidence margin; one mapping derived from original graphs and applied to both conditions",
+    "scoring": "projected family/country predicates with inferred rdf:type triples included",
+    "averaging": "micro and macro over the same 1000-example cohort"
+  },
+  "shacl": {
+    "not_needed": 947,
+    "repaired": 20,
+    "unresolved": 33,
+    "failed": 0
+  },
+  "inference": {
+    "completed": 1000,
+    "failed": 0
+  },
+  "entity_alignment": {
+    "completed": 1000,
+    "failed": 0,
+    "extracted_entities": 2877,
+    "ground_truth_entities": 2947,
+    "matched": 2731,
+    "review": 7,
+    "unmatched": 139,
+    "unmatched_ground_truth": 216
+  },
+  "baseline": {
+    "true_positives": 2031,
+    "false_positives": 9842,
+    "false_negatives": 326,
+    "micro_precision": 0.17106038911816726,
+    "micro_recall": 0.8616885871871023,
+    "micro_f1": 0.2854532677442024,
+    "macro_precision": 0.17709987246218334,
+    "macro_recall": 0.8494833333333333,
+    "macro_f1": 0.28834119627224986
+  },
+  "final": {
+    "true_positives": 8024,
+    "false_positives": 1243,
+    "false_negatives": 712,
+    "micro_precision": 0.8658681342397756,
+    "micro_recall": 0.9184981684981685,
+    "micro_f1": 0.8914069877242683,
+    "macro_precision": 0.8663825113826673,
+    "macro_recall": 0.9234346667221678,
+    "macro_f1": 0.8864309883262184
+  },
+  "delta": {
+    "micro_precision": 0.6948077451216084,
+    "micro_recall": 0.05680958131106617,
+    "micro_f1": 0.605953719980066,
+    "macro_precision": 0.689282638920484,
+    "macro_recall": 0.07395133338883453,
+    "macro_f1": 0.5980897920539685,
+    "improved_examples": 993,
+    "unchanged_examples": 7,
+    "decreased_examples": 0
+  },
+  "source_reports": {
+    "shacl": "../shacl_summary.json",
+    "inference": "../inference_summary.json",
+    "entity_alignment": "entity_alignment_summary.json",
+    "baseline": "triple_matching_pre_inference_projected_summary.json",
+    "final": "triple_matching_post_inference_projected_summary.json",
+    "delta": "triple_matching_inference_delta_projected.json"
+  }
+}

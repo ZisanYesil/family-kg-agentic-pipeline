@@ -1,0 +1,117 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/249/originals/extracted_249.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/249/ground_truth_249.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/wilhelmine_schr%C3%B6der_devrient_1804": "http://example.org/entity/Wilhelmine_Schröder_Devrient"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/wilhelmine_schr%C3%B6der_devrient_1804",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Wilhelmine Schröder",
+          "source": "altLabel"
+        },
+        {
+          "text": "Wilhelmine Schröder-Devrient",
+          "source": "label"
+        },
+        {
+          "text": "wilhelmine schröder devrient 1804",
+          "source": "uri"
+        }
+      ],
+      "context": "Wilhelmine Schröder. has birth date: 1804-12-06. has death date: 1860-01-26.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Wilhelmine_Schröder_Devrient",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Wilhelmine Schröder Devrient",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Wilhelmine Schröder-Devrient",
+        "extracted_source": "label",
+        "ground_truth_text": "Wilhelmine Schröder Devrient",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9736191034317017,
+      "string_score": 0.9839285612106323,
+      "independent_identity_support": true,
+      "context_score": 0.902397632598877,
+      "graph_score": 0.902397632598877,
+      "margin": 0.6879377663135529
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/clarence_moore_1865",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Clarence Moore",
+          "source": "label"
+        },
+        {
+          "text": "clarence moore 1865",
+          "source": "uri"
+        }
+      ],
+      "context": "Clarence Moore. has birth date: 1865-03-01. has death date: 1912-04-15.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Clarence_Moore_businessman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Clarence Moore businessman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Clarence Moore",
+        "extracted_source": "label",
+        "ground_truth_text": "Clarence Moore businessman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8061679601669312,
+      "name_embedding_score": 0.769045889377594,
+      "string_score": 0.7816666960716248,
+      "independent_identity_support": true,
+      "context_score": 0.9049134254455566,
+      "graph_score": 0.9049134254455566,
+      "margin": 0.45924216508865356
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

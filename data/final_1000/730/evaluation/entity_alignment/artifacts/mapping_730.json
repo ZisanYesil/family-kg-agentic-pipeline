@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/730/originals/extracted_730.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/730/ground_truth_730.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/campbell_stephen": "http://example.org/entity/Campbell_Stephen",
+    "http://example.org/extracted/dorothy_jewson": "http://example.org/entity/Dorothy_Jewson",
+    "http://example.org/extracted/girton_college_cambridge": "http://example.org/entity/Girton_College_Cambridge"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/campbell_stephen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Reverend Campbell Stephen",
+          "source": "altLabel"
+        },
+        {
+          "text": "Campbell Stephen",
+          "source": "label"
+        }
+      ],
+      "context": "Reverend Campbell Stephen. has spouse: Dorothea Jewson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Campbell_Stephen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Campbell Stephen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Campbell Stephen",
+        "extracted_source": "label",
+        "ground_truth_text": "Campbell Stephen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8821874260902405,
+      "graph_score": 0.9410936832427979,
+      "margin": 0.7666207253932953
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dorothy_jewson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dorothea Jewson",
+          "source": "altLabel"
+        },
+        {
+          "text": "Dorothy Jewson",
+          "source": "label"
+        }
+      ],
+      "context": "Dorothea Jewson. has educated at: Girton College, Cambridge. inverse has spouse: Reverend Campbell Stephen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dorothy_Jewson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dorothy Jewson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dorothy Jewson",
+        "extracted_source": "label",
+        "ground_truth_text": "Dorothy Jewson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9174240827560425,
+      "graph_score": 0.9587120413780212,
+      "margin": 0.720940113067627
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/girton_college_cambridge",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Girton College, Cambridge",
+          "source": "label"
+        },
+        {
+          "text": "girton college cambridge",
+          "source": "uri"
+        }
+      ],
+      "context": "Girton College, Cambridge. inverse has educated at: Dorothea Jewson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Girton_College_Cambridge",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Girton College Cambridge",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Girton College, Cambridge",
+        "extracted_source": "label",
+        "ground_truth_text": "Girton College Cambridge",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9875604510307312,
+      "string_score": 0.9908163547515869,
+      "independent_identity_support": true,
+      "context_score": 0.953104555606842,
+      "graph_score": 0.9765522480010986,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

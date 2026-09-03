@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/907/evaluation/entity_alignment/final_extracted_aligned_907.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/907/evaluation/entity_alignment/final_ground_truth_aligned_907.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Friedrich_Gottlob_Uhlemann",
+      "predicate": "hasChild",
+      "object": "Max_Uhlemann",
+      "subject_uri": "http://example.org/entity/Friedrich_Gottlob_Uhlemann",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Max_Uhlemann"
+    },
+    {
+      "subject": "Friedrich_Gottlob_Uhlemann",
+      "predicate": "hasEmployer",
+      "object": "University_of_Berlin",
+      "subject_uri": "http://example.org/entity/Friedrich_Gottlob_Uhlemann",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/University_of_Berlin"
+    },
+    {
+      "subject": "Friedrich_Gottlob_Uhlemann",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Friedrich_Gottlob_Uhlemann",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Friedrich_Gottlob_Uhlemann",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Friedrich_Gottlob_Uhlemann",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Max_Uhlemann",
+      "predicate": "hasParent",
+      "object": "Friedrich_Gottlob_Uhlemann",
+      "subject_uri": "http://example.org/entity/Max_Uhlemann",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Friedrich_Gottlob_Uhlemann"
+    },
+    {
+      "subject": "Max_Uhlemann",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Max_Uhlemann",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Max_Uhlemann",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Max_Uhlemann",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "University_of_Berlin",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/University_of_Berlin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "University_of_Berlin",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/University_of_Berlin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Friedrich_Gottlob_Uhlemann",
+      "predicate": "hasEmployer",
+      "object": "university_of_leipzig",
+      "subject_uri": "http://example.org/entity/Friedrich_Gottlob_Uhlemann",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/extracted/university_of_leipzig"
+    },
+    {
+      "subject": "university_of_leipzig",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/university_of_leipzig",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "university_of_leipzig",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/extracted/university_of_leipzig",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 12,
+    "true_positives": 9,
+    "false_positives": 3,
+    "false_negatives": 0,
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1": 0.8571428571428571
+  },
+  "stage": "post_inference"
+}

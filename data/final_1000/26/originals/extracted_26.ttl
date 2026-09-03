@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:song_oh_boy_oh_boy_oh_boy a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Oh boy, oh boy, oh boy!" ;
+    onto:hasPerformer data:person_lasse_dahlquist .
+
+data:cause_laryngeal_cancer a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "laryngeal cancer" .
+
+data:person_lasse_dahlquist a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lasse Dahlquist" ;
+    onto:hasCauseOfDeath data:cause_laryngeal_cancer .
+

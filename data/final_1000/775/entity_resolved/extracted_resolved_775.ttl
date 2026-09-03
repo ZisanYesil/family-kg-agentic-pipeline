@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:you_were_made_for_me_song a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "You Were Made for Me" ;
+    onto:hasPerformer data:sam_cooke .
+
+data:los_angeles a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Los Angeles" .
+
+data:sam_cooke a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sam Cooke" ;
+    onto:hasDeathPlace data:los_angeles ;
+    skos:altLabel "Samuel Cook" .
+

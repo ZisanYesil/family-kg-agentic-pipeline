@@ -1,0 +1,32 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_seabiscuit a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Seabiscuit" ;
+    onto:hasDirector data:person_gary_ross .
+
+data:film_warn_london a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Warn London" ;
+    onto:hasDirector data:person_t_hayes_hunter .
+
+data:person_gary_ross a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gary Ross" ;
+    onto:hasNationality data:country_united_states .
+
+data:person_t_hayes_hunter a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "T. Hayes Hunter" ;
+    onto:hasNationality data:country_united_states ;
+    skos:altLabel "Thomas Hayes Hunter" .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

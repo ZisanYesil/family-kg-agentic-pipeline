@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/579/originals/extracted_579.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/579/ground_truth_579.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/everything_i_like_film": "http://example.org/entity/Everything_I_Like",
+    "http://example.org/extracted/martin_sulik_person": "http://example.org/entity/Martin_Šulík",
+    "http://example.org/extracted/academy_of_performing_arts_bratislava_educational_institution": "http://example.org/entity/Academy_of_Performing_Arts_in_Bratislava"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/academy_of_performing_arts_bratislava_educational_institution",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Academy of Performing Arts in Bratislava",
+          "source": "label"
+        },
+        {
+          "text": "academy of performing arts bratislava educational institution",
+          "source": "uri"
+        }
+      ],
+      "context": "Academy of Performing Arts in Bratislava. inverse has educated at: Martin Šulík.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Academy_of_Performing_Arts_in_Bratislava",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Academy of Performing Arts in Bratislava",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Academy of Performing Arts in Bratislava",
+        "extracted_source": "label",
+        "ground_truth_text": "Academy of Performing Arts in Bratislava",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999997615814209,
+      "graph_score": 0.9999998807907104,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/everything_i_like_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Everything I Like",
+          "source": "label"
+        },
+        {
+          "text": "everything i like film",
+          "source": "uri"
+        }
+      ],
+      "context": "Everything I Like. has director: Martin Šulík.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Everything_I_Like",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Everything I Like",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Everything I Like",
+        "extracted_source": "label",
+        "ground_truth_text": "Everything I Like",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/martin_sulik_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Martin Šulík",
+          "source": "label"
+        },
+        {
+          "text": "martin sulik person",
+          "source": "uri"
+        }
+      ],
+      "context": "Martin Šulík. has educated at: Academy of Performing Arts in Bratislava. inverse has director: Everything I Like.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Martin_Šulík",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Martin Šulík",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Martin Šulík",
+        "extracted_source": "label",
+        "ground_truth_text": "Martin Šulík",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

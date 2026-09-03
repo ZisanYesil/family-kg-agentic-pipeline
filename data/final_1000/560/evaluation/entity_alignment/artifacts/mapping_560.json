@@ -1,0 +1,115 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/560/originals/extracted_560.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/560/ground_truth_560.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/gregorio_lopez_raimundo": "http://example.org/entity/Gregorio_López_Raimundo"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gregorio_lopez_raimundo",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gregorio López Raimundo",
+          "source": "label"
+        },
+        {
+          "text": "gregorio lopez raimundo",
+          "source": "uri"
+        }
+      ],
+      "context": "Gregorio López Raimundo. inverse has spouse: Teresa Pàmies.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gregorio_López_Raimundo",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gregorio López Raimundo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gregorio López Raimundo",
+        "extracted_source": "label",
+        "ground_truth_text": "Gregorio López Raimundo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6664838194847107,
+      "graph_score": 0.6664838194847107,
+      "margin": 0.6246303915977478
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/teresa_pamies",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Teresa Pàmies",
+          "source": "label"
+        },
+        {
+          "text": "teresa pamies",
+          "source": "uri"
+        }
+      ],
+      "context": "Teresa Pàmies. has spouse: Gregorio López Raimundo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Teresa_Pàmies_i_Bertran",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Teresa Pàmies i Bertran",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Teresa Pàmies",
+        "extracted_source": "label",
+        "ground_truth_text": "Teresa Pàmies i Bertran",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.711356520652771,
+      "name_embedding_score": 0.8863570690155029,
+      "string_score": 0.75,
+      "independent_identity_support": true,
+      "context_score": 0.6454241275787354,
+      "graph_score": 0.3227120637893677,
+      "margin": 0.22476541996002197
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Sergi_Pàmies"
+  ]
+}

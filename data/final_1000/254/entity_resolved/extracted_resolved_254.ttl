@@ -1,0 +1,27 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:hideout_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Hideout" ;
+    onto:hasCountryOfOrigin data:italy,
+        data:united_states .
+
+data:trieste_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Trieste mia!" ;
+    onto:hasCountryOfOrigin data:italy .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+data:italy a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Italy" ;
+    skos:altLabel "Italian" .
+

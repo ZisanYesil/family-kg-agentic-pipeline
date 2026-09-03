@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/554/originals/extracted_554.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/554/ground_truth_554.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/krakow": "http://example.org/entity/Kraków",
+    "http://example.org/extracted/casimir_i_the_restorer": "http://example.org/entity/Casimir_I_the_Restorer",
+    "http://example.org/extracted/wladyslaw_i_herman": "http://example.org/entity/Władysław_I_Herman"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/casimir_i_the_restorer",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Casimir I the Restorer",
+          "source": "label"
+        }
+      ],
+      "context": "Casimir I the Restorer. has birth place: Kraków. inverse has father: Władysław I Herman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Casimir_I_the_Restorer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Casimir I the Restorer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Casimir I the Restorer",
+        "extracted_source": "label",
+        "ground_truth_text": "Casimir I the Restorer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6068653464317322
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/krakow",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kraków",
+          "source": "label"
+        },
+        {
+          "text": "krakow",
+          "source": "uri"
+        }
+      ],
+      "context": "Kraków. inverse has birth place: Casimir I the Restorer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kraków",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kraków",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kraków",
+        "extracted_source": "label",
+        "ground_truth_text": "Kraków",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wladyslaw_i_herman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Władysław I Herman",
+          "source": "label"
+        },
+        {
+          "text": "wladyslaw i herman",
+          "source": "uri"
+        }
+      ],
+      "context": "Władysław I Herman. has father: Casimir I the Restorer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Władysław_I_Herman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Władysław I Herman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Władysław I Herman",
+        "extracted_source": "label",
+        "ground_truth_text": "Władysław I Herman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5763652324676514
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,197 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/587/originals/extracted_587.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/587/ground_truth_587.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/griha_pravesh": "http://example.org/entity/Griha_Pravesh",
+    "http://example.org/extracted/aditya_bhattacharya": "http://example.org/entity/Aditya_Bhattacharya",
+    "http://example.org/extracted/basu_bhattacharya": "http://example.org/entity/Basu_Bhattacharya"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 2,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/aditya_bhattacharya",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Aditya Bhattacharya",
+          "source": "label"
+        }
+      ],
+      "context": "Aditya Bhattacharya. inverse has son: Basu Bhattacharya.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Aditya_Bhattacharya",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Aditya Bhattacharya",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Aditya Bhattacharya",
+        "extracted_source": "label",
+        "ground_truth_text": "Aditya Bhattacharya",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9757089614868164,
+      "graph_score": 0.4878544807434082,
+      "margin": 0.30498915910720825
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/basu_bhattacharya",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Basu Bhattacharya",
+          "source": "label"
+        }
+      ],
+      "context": "Basu Bhattacharya. has daughter: Anwesha Arya. has daughter: Chimmu. has son: Aditya Bhattacharya. inverse has director: Griha Pravesh.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Basu_Bhattacharya",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Basu Bhattacharya",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Basu Bhattacharya",
+        "extracted_source": "label",
+        "ground_truth_text": "Basu Bhattacharya",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9104480147361755,
+      "graph_score": 0.621890664100647,
+      "margin": 0.31353622674942017
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/griha_pravesh",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Griha Pravesh",
+          "source": "label"
+        }
+      ],
+      "context": "Griha Pravesh. has director: Basu Bhattacharya.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Griha_Pravesh",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Griha Pravesh",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Griha Pravesh",
+        "extracted_source": "label",
+        "ground_truth_text": "Griha Pravesh",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/anwesha_arya",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anwesha Arya",
+          "source": "label"
+        }
+      ],
+      "context": "Anwesha Arya. inverse has daughter: Basu Bhattacharya.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/chimmu",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chimmu",
+          "source": "label"
+        }
+      ],
+      "context": "Chimmu. inverse has daughter: Basu Bhattacharya.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

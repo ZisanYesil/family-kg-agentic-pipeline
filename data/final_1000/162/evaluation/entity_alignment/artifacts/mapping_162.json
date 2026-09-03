@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/162/originals/extracted_162.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/162/ground_truth_162.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/come_rain_or_shine_film": "http://example.org/entity/Come_Rain_or_Shine",
+    "http://example.org/extracted/the_harrad_experiment_film": "http://example.org/entity/The_Harrad_Experiment"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/come_rain_or_shine_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Come Rain or Shine",
+          "source": "label"
+        },
+        {
+          "text": "come rain or shine film",
+          "source": "uri"
+        }
+      ],
+      "context": "Come Rain or Shine. has publication date: 1992.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Come_Rain_or_Shine",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Come Rain or Shine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Come Rain or Shine",
+        "extracted_source": "label",
+        "ground_truth_text": "Come Rain or Shine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7970174551010132
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_harrad_experiment_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Harrad Experiment",
+          "source": "label"
+        },
+        {
+          "text": "the harrad experiment film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Harrad Experiment. has publication date: 1973.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Harrad_Experiment",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Harrad Experiment",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Harrad Experiment",
+        "extracted_source": "label",
+        "ground_truth_text": "The Harrad Experiment",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999997615814209,
+      "graph_score": 0.9999997615814209,
+      "margin": 0.7689565122127533
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -10,8 +10,8 @@ import structlog
 logger = structlog.get_logger(__name__)
 
 DEFAULT_DATABASE_URL = "sqlite:///storage/jobs.db"
-CURRENT_SCHEMA_VERSION = 2
-DEFAULT_LEGACY_ONTOLOGY_PATH = "ontology/family_extended.ttl"
+CURRENT_SCHEMA_VERSION = 3
+DEFAULT_LEGACY_ONTOLOGY_PATH = "ontology/ontology.ttl"
 
 
 class DatabaseSchemaError(RuntimeError):
@@ -70,6 +70,8 @@ def _migrate_schema(conn: sqlite3.Connection) -> None:
         )
 
     job_columns = _column_names(conn, "jobs")
+    if "question" not in job_columns:
+        conn.execute("ALTER TABLE jobs ADD COLUMN question TEXT NOT NULL DEFAULT ''")
     if "ontology_path" not in job_columns:
         conn.execute("ALTER TABLE jobs ADD COLUMN ontology_path TEXT")
     legacy_path = os.getenv("DEFAULT_ONTOLOGY_PATH", DEFAULT_LEGACY_ONTOLOGY_PATH)
@@ -111,6 +113,7 @@ def init_db(db_path: str) -> None:
                     job_id TEXT PRIMARY KEY,
                     status TEXT NOT NULL,
                     input_text TEXT NOT NULL,
+                    question TEXT NOT NULL,
                     ontology_path TEXT NOT NULL,
                     current_iteration INTEGER NOT NULL DEFAULT 0,
                     max_iterations INTEGER NOT NULL,
@@ -155,6 +158,7 @@ def create_job(
     ontology_path: str,
     max_iterations: int,
     webhook_url: Optional[str],
+    question: str = "",
 ) -> None:
     now = _utc_timestamp()
     try:
@@ -162,16 +166,17 @@ def create_job(
             conn.execute(
                 """
                 INSERT INTO jobs (
-                    job_id, status, input_text, ontology_path, current_iteration,
+                    job_id, status, input_text, question, ontology_path, current_iteration,
                     max_iterations, last_error, graph_turtle, passed_validation,
                     webhook_url, webhook_delivered, created_at, updated_at
                 )
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     job_id,
                     "Pending",
                     input_text,
+                    question,
                     ontology_path,
                     0,
                     max_iterations,

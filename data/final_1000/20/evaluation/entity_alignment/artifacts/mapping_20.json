@@ -1,0 +1,229 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/20/originals/extracted_20.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/20/ground_truth_20.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bretaigne_windust": "http://example.org/entity/Bretaigne_Windust",
+    "http://example.org/extracted/year_of_the_horse": "http://example.org/entity/Year_of_the_Horse",
+    "http://example.org/extracted/winter_meeting": "http://example.org/entity/Winter_Meeting",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American",
+    "http://example.org/extracted/jim_jarmusch": "http://example.org/entity/Jim_Jarmusch"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 6,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bretaigne_windust",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bretaigne Windust",
+          "source": "label"
+        }
+      ],
+      "context": "Bretaigne Windust. inverse has director: Winter Meeting.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bretaigne_Windust",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bretaigne Windust",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bretaigne Windust",
+        "extracted_source": "label",
+        "ground_truth_text": "Bretaigne Windust",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7849368453025818,
+      "graph_score": 0.8924684524536133,
+      "margin": 0.7886383533477783
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jim_jarmusch",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jim Jarmusch",
+          "source": "label"
+        }
+      ],
+      "context": "Jim Jarmusch. has nationality: American. inverse has director: Year of the Horse.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jim_Jarmusch",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jim Jarmusch",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jim Jarmusch",
+        "extracted_source": "label",
+        "ground_truth_text": "Jim Jarmusch",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9503618478775024,
+      "graph_score": 0.6418476104736328,
+      "margin": 0.7751296758651733
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has nationality: Jim Jarmusch.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9233208298683167,
+      "graph_score": 0.4616604149341583,
+      "margin": 0.7162006199359894
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/winter_meeting",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Winter Meeting",
+          "source": "label"
+        }
+      ],
+      "context": "Winter Meeting. has director: Bretaigne Windust.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Winter_Meeting",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Winter Meeting",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Winter Meeting",
+        "extracted_source": "label",
+        "ground_truth_text": "Winter Meeting",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8164009153842926
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/year_of_the_horse",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Year of the Horse",
+          "source": "label"
+        }
+      ],
+      "context": "Year of the Horse. has director: Jim Jarmusch.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Year_of_the_Horse",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Year of the Horse",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Year of the Horse",
+        "extracted_source": "label",
+        "ground_truth_text": "Year of the Horse",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.8236589729785919
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/French"
+  ]
+}

@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:love_john_lennon_song a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Love (John Lennon song)" ;
+    onto:hasPerformer data:john_lennon ;
+    skos:altLabel "Love" .
+
+data:john_lennon a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Lennon" ;
+    onto:hasBirthPlace data:liverpool ;
+    skos:altLabel "John Winston Ono Lennon" .
+
+data:liverpool a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Liverpool" .
+

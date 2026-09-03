@@ -1,0 +1,151 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/17/originals/extracted_17.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/17/ground_truth_17.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/charles_willoughby_10th_barony": "http://example.org/entity/Charles_Willoughby_10th_Baron_Willoughby_of_Parham"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/charles_willoughby_10th_barony",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charles Willoughby, 10th Baron Willoughby of Parham",
+          "source": "label"
+        },
+        {
+          "text": "charles willoughby 10th barony",
+          "source": "uri"
+        }
+      ],
+      "context": "Charles Willoughby, 10th Baron Willoughby of Parham. has father: William Willoughby, 6th Baron Willoughby of Parham.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charles_Willoughby_10th_Baron_Willoughby_of_Parham",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charles Willoughby 10th Baron Willoughby of Parham",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charles Willoughby, 10th Baron Willoughby of Parham",
+        "extracted_source": "label",
+        "ground_truth_text": "Charles Willoughby 10th Baron Willoughby of Parham",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9955864548683167,
+      "string_score": 0.9955445528030396,
+      "independent_identity_support": true,
+      "context_score": 0.9813852906227112,
+      "graph_score": 0.9813852906227112,
+      "margin": 0.39280200004577637
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/frances_manners",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Frances Manners",
+          "source": "label"
+        }
+      ],
+      "context": "Frances Manners. inverse has mother: William Willoughby, 6th Baron Willoughby of Parham.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lady_Frances_Manners",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lady Frances Manners",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Frances Manners",
+        "extracted_source": "label",
+        "ground_truth_text": "Lady Frances Manners",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9166419506072998,
+      "name_embedding_score": 0.9516880512237549,
+      "string_score": 0.8523809313774109,
+      "independent_identity_support": true,
+      "context_score": 0.9108108282089233,
+      "graph_score": 0.9108108282089233,
+      "margin": 0.5715554356575012
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/william_willoughby_6th_barony",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William Willoughby, 6th Baron Willoughby of Parham",
+          "source": "label"
+        },
+        {
+          "text": "william willoughby 6th barony",
+          "source": "uri"
+        }
+      ],
+      "context": "William Willoughby, 6th Baron Willoughby of Parham. has mother: Frances Manners. inverse has father: Charles Willoughby, 10th Baron Willoughby of Parham.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_Willoughby",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William Willoughby",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William Willoughby, 6th Baron Willoughby of Parham",
+        "extracted_source": "label",
+        "ground_truth_text": "William Willoughby",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8243684768676758,
+      "name_embedding_score": 0.8512417674064636,
+      "string_score": 0.6215686202049255,
+      "independent_identity_support": false,
+      "context_score": 0.9468435645103455,
+      "graph_score": 0.9734218120574951,
+      "margin": 0.05199313163757324
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:lord_bernard_stewart a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lord Bernard Stewart" ;
+    onto:hasFather data:esme_stewart_3rd_duke_of_lennox ;
+    skos:altLabel "Lord Bernard Stewart" .
+
+data:esme_stewart_3rd_duke_of_lennox a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Esmé Stewart, 3rd Duke of Lennox" ;
+    onto:hasBurialPlace data:westminster_abbey ;
+    skos:altLabel "Esmé Stewart, 3rd Duke of Lennox" .
+
+data:westminster_abbey a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Westminster Abbey" ;
+    skos:altLabel "Westminster Abbey" .
+

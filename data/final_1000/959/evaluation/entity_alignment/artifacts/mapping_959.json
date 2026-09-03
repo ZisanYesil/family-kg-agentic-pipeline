@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/959/originals/extracted_959.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/959/ground_truth_959.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_paul_wendkos": "http://example.org/entity/Paul_Wendkos",
+    "http://example.org/extracted/person_basil_dearden": "http://example.org/entity/Basil_Dearden",
+    "http://example.org/extracted/film_cage_of_gold": "http://example.org/entity/Cage_of_Gold",
+    "http://example.org/extracted/film_face_of_a_fugitive": "http://example.org/entity/Face_of_a_Fugitive"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_cage_of_gold",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cage of Gold",
+          "source": "label"
+        },
+        {
+          "text": "film cage of gold",
+          "source": "uri"
+        }
+      ],
+      "context": "Cage of Gold. has director: Basil Dearden.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cage_of_Gold",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cage of Gold",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cage of Gold",
+        "extracted_source": "label",
+        "ground_truth_text": "Cage of Gold",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7028917074203491
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_face_of_a_fugitive",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Face of a Fugitive",
+          "source": "label"
+        },
+        {
+          "text": "film face of a fugitive",
+          "source": "uri"
+        }
+      ],
+      "context": "Face of a Fugitive. has director: Paul Wendkos.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Face_of_a_Fugitive",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Face of a Fugitive",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Face of a Fugitive",
+        "extracted_source": "label",
+        "ground_truth_text": "Face of a Fugitive",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.7028917074203491
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_basil_dearden",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Basil Dearden",
+          "source": "label"
+        },
+        {
+          "text": "person basil dearden",
+          "source": "uri"
+        }
+      ],
+      "context": "Basil Dearden. has death date: 1971-03-23. inverse has director: Cage of Gold.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Basil_Dearden",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Basil Dearden",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Basil Dearden",
+        "extracted_source": "label",
+        "ground_truth_text": "Basil Dearden",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6271969079971313
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_paul_wendkos",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Paul Wendkos",
+          "source": "label"
+        },
+        {
+          "text": "person paul wendkos",
+          "source": "uri"
+        }
+      ],
+      "context": "Paul Wendkos. has death date: 2009-11-12. inverse has director: Face of a Fugitive.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Paul_Wendkos",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Paul Wendkos",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Paul Wendkos",
+        "extracted_source": "label",
+        "ground_truth_text": "Paul Wendkos",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6209221482276917
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

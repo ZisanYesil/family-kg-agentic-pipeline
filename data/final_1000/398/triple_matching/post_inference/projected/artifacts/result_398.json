@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/398/evaluation/entity_alignment/final_extracted_aligned_398.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/398/evaluation/entity_alignment/final_ground_truth_aligned_398.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Bonne_of_Berry",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Bonne_of_Berry",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Bonne_of_Berry",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bonne_of_Berry",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Bonne_of_Berry",
+      "predicate": "hasChild",
+      "object": "Felix_V",
+      "subject_uri": "http://example.org/entity/Bonne_of_Berry",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Felix_V"
+    },
+    {
+      "subject": "Bonne_of_Berry",
+      "predicate": "hasCountry",
+      "object": "France",
+      "subject_uri": "http://example.org/entity/Bonne_of_Berry",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/France"
+    },
+    {
+      "subject": "Felix_V",
+      "predicate": "hasParent",
+      "object": "Bonne_of_Berry",
+      "subject_uri": "http://example.org/entity/Felix_V",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Bonne_of_Berry"
+    },
+    {
+      "subject": "Felix_V",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Felix_V",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Felix_V",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Felix_V",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "France",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "France",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Bonne_of_Berry",
+      "predicate": "hasParent",
+      "object": "amadeus_viii",
+      "subject_uri": "http://example.org/entity/Bonne_of_Berry",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/extracted/amadeus_viii"
+    },
+    {
+      "subject": "amadeus_viii",
+      "predicate": "hasChild",
+      "object": "Bonne_of_Berry",
+      "subject_uri": "http://example.org/extracted/amadeus_viii",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Bonne_of_Berry"
+    },
+    {
+      "subject": "amadeus_viii",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/amadeus_viii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "amadeus_viii",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/amadeus_viii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 1,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 4,
+    "false_negatives": 7,
+    "precision": 0.3333333333333333,
+    "recall": 0.2222222222222222,
+    "f1": 0.26666666666666666
+  },
+  "stage": "post_inference"
+}

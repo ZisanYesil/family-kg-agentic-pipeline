@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/999/originals/extracted_999.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/999/ground_truth_999.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_m_krishnan_nair": "http://example.org/entity/M_Krishnan_Nair",
+    "http://example.org/extracted/film_collector_malathy": "http://example.org/entity/Collector_Malathy",
+    "http://example.org/extracted/person_john_brahm": "http://example.org/entity/John_Brahm",
+    "http://example.org/extracted/film_the_locket_1946": "http://example.org/entity/The_Locket"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_collector_malathy",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Collector Malathy",
+          "source": "label"
+        },
+        {
+          "text": "film collector malathy",
+          "source": "uri"
+        }
+      ],
+      "context": "Collector Malathy. has director: M. Krishnan Nair.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Collector_Malathy",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Collector Malathy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Collector Malathy",
+        "extracted_source": "label",
+        "ground_truth_text": "Collector Malathy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9962324500083923,
+      "graph_score": 0.9981162548065186,
+      "margin": 0.6944794654846191
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_locket_1946",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Locket",
+          "source": "label"
+        },
+        {
+          "text": "film the locket 1946",
+          "source": "uri"
+        }
+      ],
+      "context": "The Locket. has director: John Brahm.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Locket",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Locket",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Locket",
+        "extracted_source": "label",
+        "ground_truth_text": "The Locket",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6939906477928162
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_john_brahm",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Brahm",
+          "source": "label"
+        },
+        {
+          "text": "person john brahm",
+          "source": "uri"
+        }
+      ],
+      "context": "John Brahm. has birth date: 1893-08-17. has death date: 1982-10-12. inverse has director: The Locket.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Brahm",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Brahm",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Brahm",
+        "extracted_source": "label",
+        "ground_truth_text": "John Brahm",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9439937472343445,
+      "graph_score": 0.9719969034194946,
+      "margin": 0.7466993033885956
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_m_krishnan_nair",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "M. Krishnan Nair",
+          "source": "label"
+        },
+        {
+          "text": "person m krishnan nair",
+          "source": "uri"
+        }
+      ],
+      "context": "M. Krishnan Nair. has birth date: 1926-11-02. has death date: 2001-05-10. inverse has director: Collector Malathy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/M_Krishnan_Nair",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "M Krishnan Nair",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "M. Krishnan Nair",
+        "extracted_source": "label",
+        "ground_truth_text": "M Krishnan Nair",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9874749183654785,
+      "string_score": 0.9854838848114014,
+      "independent_identity_support": true,
+      "context_score": 0.7375420331954956,
+      "graph_score": 0.8687710165977478,
+      "margin": 0.23218697309494019
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/M_Krishnan_Nair_director"
+  ]
+}

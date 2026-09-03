@@ -1,0 +1,30 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/T_I> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Clifford Joseph Harris Jr." ;
+    onto:hasOccupation <http://example.org/entity/actor>,
+        <http://example.org/entity/rapper> ;
+    skos:altLabel "T.I.",
+        "Tip" .
+
+<http://example.org/entity/Wayne_Maki> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Wayne Maki" ;
+    onto:hasOccupation <http://example.org/entity/ice_hockey_player> .
+
+<http://example.org/entity/actor> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "actor" .
+
+<http://example.org/entity/ice_hockey_player> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "ice hockey player" .
+
+<http://example.org/entity/rapper> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "rapper" .
+

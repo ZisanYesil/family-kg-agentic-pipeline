@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_minsan_pa a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Minsan Pa" ;
+    onto:hasDirector data:person_jeffrey_jeturian .
+
+data:edu_university_of_the_philippines_diliman a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "University of the Philippines Diliman" .
+
+data:person_jeffrey_jeturian a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jeffrey Jeturian" ;
+    onto:hasEducatedAt data:edu_university_of_the_philippines_diliman .
+

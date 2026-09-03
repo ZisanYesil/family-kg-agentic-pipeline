@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/516/originals/extracted_516.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/516/ground_truth_516.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_1970_twelve_chairs": "http://example.org/entity/The_Twelve_Chairs_1970_film",
+    "http://example.org/extracted/film_to_do_list": "http://example.org/entity/The_To_Do_List",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has country: The To Do List. inverse has country: The Twelve Chairs (1970 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9595345258712769,
+      "graph_score": 0.4797672629356384,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_1970_twelve_chairs",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Twelve Chairs (1970 film)",
+          "source": "label"
+        },
+        {
+          "text": "film 1970 twelve chairs",
+          "source": "uri"
+        }
+      ],
+      "context": "The Twelve Chairs (1970 film). has country: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Twelve_Chairs_1970_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Twelve Chairs 1970 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Twelve Chairs (1970 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Twelve Chairs 1970 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9771146774291992,
+      "string_score": 0.9839285612106323,
+      "independent_identity_support": true,
+      "context_score": 0.9613788723945618,
+      "graph_score": 0.4806894361972809,
+      "margin": 0.7517410814762115
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_to_do_list",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The To Do List",
+          "source": "label"
+        },
+        {
+          "text": "film to do list",
+          "source": "uri"
+        }
+      ],
+      "context": "The To Do List. has country: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_To_Do_List",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The To Do List",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The To Do List",
+        "extracted_source": "label",
+        "ground_truth_text": "The To Do List",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9342983365058899,
+      "graph_score": 0.46714916825294495,
+      "margin": 0.6498232185840607
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

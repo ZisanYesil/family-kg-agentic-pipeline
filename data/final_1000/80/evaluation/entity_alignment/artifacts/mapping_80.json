@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/80/originals/extracted_80.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/80/ground_truth_80.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_erle_c_kenton": "http://example.org/entity/Erle_C_Kenton"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_erle_c_kenton",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Erle C. Kenton",
+          "source": "label"
+        },
+        {
+          "text": "person erle c kenton",
+          "source": "uri"
+        }
+      ],
+      "context": "Erle C. Kenton. has cause of death: Parkinson's disease. inverse has director: The Devil's Playground (1937 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Erle_C_Kenton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Erle C Kenton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Erle C. Kenton",
+        "extracted_source": "label",
+        "ground_truth_text": "Erle C Kenton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9645095467567444,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9553422927856445,
+      "graph_score": 0.9553422927856445,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cause_parkinsons_disease",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Parkinson's disease",
+          "source": "label"
+        },
+        {
+          "text": "cause parkinsons disease",
+          "source": "uri"
+        }
+      ],
+      "context": "Parkinson's disease. inverse has cause of death: Erle C. Kenton.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Parkinson",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Parkinson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Parkinson's disease",
+        "extracted_source": "label",
+        "ground_truth_text": "Parkinson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8584092855453491,
+      "name_embedding_score": 0.8878726959228516,
+      "string_score": 0.6726190447807312,
+      "independent_identity_support": false,
+      "context_score": 0.9705455303192139,
+      "graph_score": 0.9852727651596069,
+      "margin": 0.8584092855453491
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_devils_playground_1937",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Devil's Playground (1937 film)",
+          "source": "label"
+        },
+        {
+          "text": "film the devils playground 1937",
+          "source": "uri"
+        }
+      ],
+      "context": "The Devil's Playground (1937 film). has director: Erle C. Kenton.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Devil_s_Playground",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Devil s Playground",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Devil's Playground (1937 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Devil s Playground",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8543320298194885,
+      "name_embedding_score": 0.8678286075592041,
+      "string_score": 0.7192307710647583,
+      "independent_identity_support": true,
+      "context_score": 0.9248804450035095,
+      "graph_score": 0.9624402523040771,
+      "margin": 0.8543320298194885
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

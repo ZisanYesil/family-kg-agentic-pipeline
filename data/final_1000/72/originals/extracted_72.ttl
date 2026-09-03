@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_pistol_whipped a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Pistol Whipped" ;
+    onto:hasDirector data:person_roel_reine .
+
+data:person_roel_reine a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Roel Reiné" ;
+    onto:hasBirthPlace data:place_eindhoven .
+
+data:place_eindhoven a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Eindhoven" .
+

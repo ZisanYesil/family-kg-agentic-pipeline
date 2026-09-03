@@ -1,0 +1,204 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/911/originals/extracted_911.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/911/ground_truth_911.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/director_maude": "http://example.org/entity/Arthur_Maude",
+    "http://example.org/extracted/film_shadow_nazareth": "http://example.org/entity/The_Shadow_of_Nazareth",
+    "http://example.org/extracted/director_gitai": "http://example.org/entity/Amos_Gitai",
+    "http://example.org/extracted/film_berlin_jerusalem": "http://example.org/entity/Berlin_Jerusalem"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/director_gitai",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Amos Gitai",
+          "source": "label"
+        },
+        {
+          "text": "director gitai",
+          "source": "uri"
+        }
+      ],
+      "context": "Amos Gitai. has birth date: 1950-10-11. inverse has director: Berlin-Jerusalem.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Amos_Gitai",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Amos Gitai",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Amos Gitai",
+        "extracted_source": "label",
+        "ground_truth_text": "Amos Gitai",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9955171346664429,
+      "graph_score": 0.9977585673332214,
+      "margin": 0.6669188141822815
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/director_maude",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Arthur John Maude",
+          "source": "altLabel"
+        },
+        {
+          "text": "Arthur Maude",
+          "source": "label"
+        },
+        {
+          "text": "director maude",
+          "source": "uri"
+        }
+      ],
+      "context": "Arthur John Maude. has birth date: 1880-07-23. inverse has director: The Shadow of Nazareth.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Arthur_Maude",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Arthur Maude",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Arthur Maude",
+        "extracted_source": "label",
+        "ground_truth_text": "Arthur Maude",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9881100058555603,
+      "graph_score": 0.9940550327301025,
+      "margin": 0.6874332427978516
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_berlin_jerusalem",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Berlin-Jerusalem",
+          "source": "label"
+        },
+        {
+          "text": "film berlin jerusalem",
+          "source": "uri"
+        }
+      ],
+      "context": "Berlin-Jerusalem. has director: Amos Gitai.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Berlin_Jerusalem",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Berlin Jerusalem",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Berlin-Jerusalem",
+        "extracted_source": "label",
+        "ground_truth_text": "Berlin Jerusalem",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9720997214317322,
+      "string_score": 0.971875011920929,
+      "independent_identity_support": true,
+      "context_score": 0.9904915690422058,
+      "graph_score": 0.9952458143234253,
+      "margin": 0.6385320425033569
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_shadow_nazareth",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Shadow of Nazareth",
+          "source": "label"
+        },
+        {
+          "text": "film shadow nazareth",
+          "source": "uri"
+        }
+      ],
+      "context": "The Shadow of Nazareth. has director: Arthur John Maude.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Shadow_of_Nazareth",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Shadow of Nazareth",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Shadow of Nazareth",
+        "extracted_source": "label",
+        "ground_truth_text": "The Shadow of Nazareth",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9908289909362793,
+      "graph_score": 0.9954144954681396,
+      "margin": 0.6711609959602356
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

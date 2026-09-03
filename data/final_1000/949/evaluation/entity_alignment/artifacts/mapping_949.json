@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/949/originals/extracted_949.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/949/ground_truth_949.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_leopoldo_torre_nilsson": "http://example.org/entity/Leopoldo_Torre_Nilsson",
+    "http://example.org/extracted/film_summer_skin": "http://example.org/entity/Summer_Skin",
+    "http://example.org/extracted/person_leopoldo_torres_rios": "http://example.org/entity/Leopoldo_Torres_Ríos"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_summer_skin",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Summer Skin",
+          "source": "label"
+        },
+        {
+          "text": "film summer skin",
+          "source": "uri"
+        }
+      ],
+      "context": "Summer Skin. has director: Leopoldo Torre Nilsson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Summer_Skin",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Summer Skin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Summer Skin",
+        "extracted_source": "label",
+        "ground_truth_text": "Summer Skin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_leopoldo_torre_nilsson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Leopoldo Torre Nilsson",
+          "source": "label"
+        },
+        {
+          "text": "person leopoldo torre nilsson",
+          "source": "uri"
+        }
+      ],
+      "context": "Leopoldo Torre Nilsson. inverse has director: Summer Skin. inverse has son: Leopoldo Torres Ríos.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Leopoldo_Torre_Nilsson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Leopoldo Torre Nilsson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Leopoldo Torre Nilsson",
+        "extracted_source": "label",
+        "ground_truth_text": "Leopoldo Torre Nilsson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9441697001457214,
+      "graph_score": 0.6387515068054199,
+      "margin": 0.4768613576889038
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_leopoldo_torres_rios",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Leopoldo Torres Ríos",
+          "source": "label"
+        },
+        {
+          "text": "person leopoldo torres rios",
+          "source": "uri"
+        }
+      ],
+      "context": "Leopoldo Torres Ríos. has son: Leopoldo Torre Nilsson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Leopoldo_Torres_Ríos",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Leopoldo Torres Ríos",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Leopoldo Torres Ríos",
+        "extracted_source": "label",
+        "ground_truth_text": "Leopoldo Torres Ríos",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9490520358085632,
+      "graph_score": 0.4745260179042816,
+      "margin": 0.4762219786643982
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/686/originals/extracted_686.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/686/ground_truth_686.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/adam_yauch": "http://example.org/entity/Adam_Yauch",
+    "http://example.org/extracted/awesome_film": "http://example.org/entity/Awesome_I_Fuckin_Shot_That"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adam_yauch",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adam Nathaniel Yauch",
+          "source": "altLabel"
+        },
+        {
+          "text": "Adam Yauch",
+          "source": "label"
+        }
+      ],
+      "context": "Adam Nathaniel Yauch. has cause of death: parotid cancer. inverse has director: Awesome; I Fuckin' Shot That!.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adam_Yauch",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adam Yauch",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adam Yauch",
+        "extracted_source": "label",
+        "ground_truth_text": "Adam Yauch",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9078031778335571,
+      "graph_score": 0.9539015889167786,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/awesome_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Awesome; I Fuckin' Shot That!",
+          "source": "label"
+        },
+        {
+          "text": "awesome film",
+          "source": "uri"
+        }
+      ],
+      "context": "Awesome; I Fuckin' Shot That!. has director: Adam Nathaniel Yauch.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Awesome_I_Fuckin_Shot_That",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Awesome I Fuckin Shot That",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Awesome; I Fuckin' Shot That!",
+        "extracted_source": "label",
+        "ground_truth_text": "Awesome I Fuckin Shot That",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.918630838394165,
+      "string_score": 0.975454568862915,
+      "independent_identity_support": true,
+      "context_score": 0.9505356550216675,
+      "graph_score": 0.9752678275108337,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/parotid_cancer",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "parotid cancer",
+          "source": "label"
+        }
+      ],
+      "context": "parotid cancer. inverse has cause of death: Adam Nathaniel Yauch.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/cancer",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "cancer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "parotid cancer",
+        "extracted_source": "label",
+        "ground_truth_text": "cancer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.773974597454071,
+      "name_embedding_score": 0.7410185933113098,
+      "string_score": 0.6949999928474426,
+      "independent_identity_support": false,
+      "context_score": 0.8377223610877991,
+      "graph_score": 0.9188611507415771,
+      "margin": 0.773974597454071
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

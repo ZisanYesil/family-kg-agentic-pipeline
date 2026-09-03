@@ -1,0 +1,37 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_golden_lotus a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Reincarnation of Golden Lotus" ;
+    onto:hasDirector data:person_clara_law .
+
+data:film_ill_get_by a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "I'll Get By" ;
+    onto:hasDirector data:person_richard_sale .
+
+data:country_hong_kong a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Hong Kong" ;
+    skos:altLabel "Hong Kong" .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+data:person_clara_law a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Clara Law" ;
+    onto:hasNationality data:country_hong_kong ;
+    skos:altLabel "Clara Law Cheuk-yiu" .
+
+data:person_richard_sale a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Richard Sale" ;
+    onto:hasNationality data:country_united_states .
+

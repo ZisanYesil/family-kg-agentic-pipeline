@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/33/originals/extracted_33.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/33/ground_truth_33.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/kingsbury_london": "http://example.org/entity/Kingsbury_London",
+    "http://example.org/extracted/xyz_english_band": "http://example.org/entity/XYZ",
+    "http://example.org/extracted/chris_squire": "http://example.org/entity/Chris_Squire"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/chris_squire",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Christopher Russell Edward Squire",
+          "source": "altLabel"
+        },
+        {
+          "text": "Chris Squire",
+          "source": "label"
+        }
+      ],
+      "context": "Christopher Russell Edward Squire. has birth place: Kingsbury, London. inverse has member: XYZ (English band).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chris_Squire",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chris Squire",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chris Squire",
+        "extracted_source": "label",
+        "ground_truth_text": "Chris Squire",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8852740526199341,
+      "graph_score": 0.942637026309967,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/kingsbury_london",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kingsbury, London",
+          "source": "label"
+        },
+        {
+          "text": "kingsbury london",
+          "source": "uri"
+        }
+      ],
+      "context": "Kingsbury, London. inverse has birth place: Christopher Russell Edward Squire.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kingsbury_London",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kingsbury London",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "kingsbury london",
+        "extracted_source": "uri",
+        "ground_truth_text": "Kingsbury London",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9781162142753601,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9292816519737244,
+      "graph_score": 0.9646408557891846,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/xyz_english_band",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "XYZ (English band)",
+          "source": "altLabel"
+        },
+        {
+          "text": "XYZ",
+          "source": "label"
+        },
+        {
+          "text": "xyz english band",
+          "source": "uri"
+        }
+      ],
+      "context": "XYZ (English band). has member: Christopher Russell Edward Squire.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/XYZ",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "XYZ",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "XYZ",
+        "extracted_source": "label",
+        "ground_truth_text": "XYZ",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8530517816543579,
+      "graph_score": 0.926525890827179,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

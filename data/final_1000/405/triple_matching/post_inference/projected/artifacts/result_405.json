@@ -1,0 +1,83 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/405/evaluation/entity_alignment/final_extracted_aligned_405.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/405/evaluation/entity_alignment/final_ground_truth_aligned_405.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Dave_Bird",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Dave_Bird",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Dave_Bird",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Dave_Bird",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Junkin_with_Val_and_Dave",
+      "predicate": "hasCreator",
+      "object": "Dave_Bird",
+      "subject_uri": "http://example.org/entity/Junkin_with_Val_and_Dave",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Dave_Bird"
+    },
+    {
+      "subject": "Junkin_with_Val_and_Dave",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Junkin_with_Val_and_Dave",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Junkin_with_Val_and_Dave",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Junkin_with_Val_and_Dave",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Dave_Bird",
+      "predicate": "hasBirthPlace",
+      "object": "Gloucester",
+      "subject_uri": "http://example.org/entity/Dave_Bird",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Gloucester"
+    },
+    {
+      "subject": "Gloucester",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Gloucester",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 5,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 7,
+    "true_positives": 5,
+    "false_positives": 0,
+    "false_negatives": 2,
+    "precision": 1.0,
+    "recall": 0.7142857142857143,
+    "f1": 0.8333333333333333
+  },
+  "stage": "post_inference"
+}

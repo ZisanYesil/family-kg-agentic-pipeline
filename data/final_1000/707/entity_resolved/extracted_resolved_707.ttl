@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:elisabeth_of_bohemia_1358 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Elisabeth of Bohemia" ;
+    onto:hasFather data:charles_iv_hre ;
+    skos:altLabel "Elisabeth of Bohemia (1358–1373)" .
+
+data:charles_iv_hre a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Charles IV" ;
+    onto:hasMother data:elisabeth_of_bohemia_1292 ;
+    skos:altLabel "Charles IV, Holy Roman Emperor" .
+
+data:elisabeth_of_bohemia_1292 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Elisabeth of Bohemia" ;
+    skos:altLabel "Elisabeth of Bohemia (1292–1330)",
+        "Elizabeth of Bohemia (1292–1330)" .
+

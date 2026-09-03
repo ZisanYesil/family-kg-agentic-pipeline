@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:isabel_de_la_cerda a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Isabel de la Cerda" ;
+    onto:hasFather data:luis_de_la_cerda ;
+    skos:altLabel "Isabel de la Cerda Pérez de Guzmán" .
+
+data:france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "France" .
+
+data:luis_de_la_cerda a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Luis de la Cerda" ;
+    onto:hasBirthPlace data:france .
+

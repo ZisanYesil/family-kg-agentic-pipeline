@@ -1,0 +1,143 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/918/originals/extracted_918.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/918/ground_truth_918.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/queen_gongye": "http://example.org/entity/Queen_Gongye"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/queen_gongye",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Queen Gongye",
+          "source": "label"
+        }
+      ],
+      "context": "Queen Gongye. has spouse: Injong of Goryeo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Queen_Gongye",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Queen Gongye",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Queen Gongye",
+        "extracted_source": "label",
+        "ground_truth_text": "Queen Gongye",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9001433253288269,
+      "graph_score": 0.9001433253288269,
+      "margin": 0.550334632396698
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/king_yejong",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "King Yejong",
+          "source": "label"
+        }
+      ],
+      "context": "King Yejong. has son: Injong of Goryeo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Yejong",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Yejong",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "King Yejong",
+        "extracted_source": "label",
+        "ground_truth_text": "Yejong",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8288792371749878,
+      "name_embedding_score": 0.8977707028388977,
+      "string_score": 0.7426470518112183,
+      "independent_identity_support": true,
+      "context_score": 0.7773285508155823,
+      "graph_score": 0.7773285508155823,
+      "margin": 0.2774779796600342
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/injong_of_goryeo",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Injong of Goryeo",
+          "source": "label"
+        }
+      ],
+      "context": "Injong of Goryeo. inverse has son: King Yejong. inverse has spouse: Queen Gongye.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Injong",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Injong",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Injong of Goryeo",
+        "extracted_source": "label",
+        "ground_truth_text": "Injong",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8162944316864014,
+      "name_embedding_score": 0.8355498313903809,
+      "string_score": 0.6287878751754761,
+      "independent_identity_support": false,
+      "context_score": 0.9305803775787354,
+      "graph_score": 0.9652901887893677,
+      "margin": 0.33094125986099243
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

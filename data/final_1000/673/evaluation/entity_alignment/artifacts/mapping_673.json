@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/673/originals/extracted_673.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/673/ground_truth_673.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/herman_frasch": "http://example.org/entity/Herman_Frasch",
+    "http://example.org/extracted/union_sulphur_company": "http://example.org/entity/Union_Sulphur_Company"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/herman_frasch",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Herman Frasch",
+          "source": "label"
+        }
+      ],
+      "context": "Herman Frasch. has birth place: Oberrot bei Gaildorf, Württemberg. inverse has founder: Union Sulphur Company.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Herman_Frasch",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Herman Frasch",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Herman Frasch",
+        "extracted_source": "label",
+        "ground_truth_text": "Herman Frasch",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8840833902359009,
+      "graph_score": 0.9420416951179504,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/union_sulphur_company",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Union Sulphur Company",
+          "source": "label"
+        }
+      ],
+      "context": "Union Sulphur Company. has founder: Herman Frasch.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Union_Sulphur_Company",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Union Sulphur Company",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Union Sulphur Company",
+        "extracted_source": "label",
+        "ground_truth_text": "Union Sulphur Company",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/oberrot_bei_gaildorf_wurttemberg",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Oberrot bei Gaildorf, Württemberg",
+          "source": "label"
+        },
+        {
+          "text": "oberrot bei gaildorf wurttemberg",
+          "source": "uri"
+        }
+      ],
+      "context": "Oberrot bei Gaildorf, Württemberg. inverse has birth place: Herman Frasch.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Oberrot",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Oberrot",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Oberrot bei Gaildorf, Württemberg",
+        "extracted_source": "label",
+        "ground_truth_text": "Oberrot",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6578552722930908,
+      "name_embedding_score": 0.5990886092185974,
+      "string_score": 0.5199999809265137,
+      "independent_identity_support": false,
+      "context_score": 0.8264877796173096,
+      "graph_score": 0.9132438898086548,
+      "margin": 0.6578552722930908
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

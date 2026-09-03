@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/The_Return_of_Luk_Siu_fung> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "The Return of Luk Siu-fung" ;
+    onto:hasCreator <http://example.org/entity/Gu_Long> .
+
+<http://example.org/entity/Gu_Long> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gu Long" ;
+    onto:hasEducatedAt <http://example.org/entity/Tamkang_University>,
+        data:cheng_kung_senior_high_school .
+
+<http://example.org/entity/Tamkang_University> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Tamkang University" .
+
+data:cheng_kung_senior_high_school a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Cheng Kung Senior High School" .
+

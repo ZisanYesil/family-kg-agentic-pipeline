@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:_normande_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Normande" ;
+    onto:hasDirector data:_gilles_carle .
+
+data:_gilles_carle a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gilles Carle" ;
+    onto:hasCauseOfDeath data:_parkinsons_complications .
+
+data:_parkinsons_complications a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "complications from Parkinson's disease" .
+

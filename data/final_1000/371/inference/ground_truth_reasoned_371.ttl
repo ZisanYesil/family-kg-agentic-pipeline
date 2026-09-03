@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Julia_Drusilla a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Gaius ;
+    ex:hasParent entity:Gaius .
+
+entity:Agrippina_the_Elder a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Gaius .
+
+entity:Gaius a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Julia_Drusilla ;
+    ex:hasMother entity:Agrippina_the_Elder ;
+    ex:hasParent entity:Agrippina_the_Elder .
+

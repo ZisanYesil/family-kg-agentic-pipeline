@@ -1,0 +1,139 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/442/evaluation/entity_alignment/baseline_extracted_aligned_442.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/442/evaluation/entity_alignment/baseline_ground_truth_aligned_442.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Eleanor_de_Clare",
+      "predicate": "hasBirthPlace",
+      "object": "Caerphilly",
+      "subject_uri": "http://example.org/entity/Eleanor_de_Clare",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Caerphilly"
+    },
+    {
+      "subject": "Hugh_le_Despenser",
+      "predicate": "hasParent",
+      "object": "Eleanor_de_Clare",
+      "subject_uri": "http://example.org/entity/Hugh_le_Despenser",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Eleanor_de_Clare"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Caerphilly",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Caerphilly",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Caerphilly",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Caerphilly",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Caerphilly",
+      "predicate": "label",
+      "object": "\"Caerphilly Castle\"",
+      "subject_uri": "http://example.org/entity/Caerphilly",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Caerphilly Castle\""
+    },
+    {
+      "subject": "Caerphilly",
+      "predicate": "altLabel",
+      "object": "\"Caerphilly Castle\"",
+      "subject_uri": "http://example.org/entity/Caerphilly",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Caerphilly Castle\""
+    },
+    {
+      "subject": "Eleanor_de_Clare",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Eleanor_de_Clare",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Eleanor_de_Clare",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Eleanor_de_Clare",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Eleanor_de_Clare",
+      "predicate": "label",
+      "object": "\"Eleanor de Clare\"",
+      "subject_uri": "http://example.org/entity/Eleanor_de_Clare",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Eleanor de Clare\""
+    },
+    {
+      "subject": "Eleanor_de_Clare",
+      "predicate": "altLabel",
+      "object": "\"Eleanor de Clare\"",
+      "subject_uri": "http://example.org/entity/Eleanor_de_Clare",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Eleanor de Clare\""
+    },
+    {
+      "subject": "Hugh_le_Despenser",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Hugh_le_Despenser",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Hugh_le_Despenser",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hugh_le_Despenser",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hugh_le_Despenser",
+      "predicate": "label",
+      "object": "\"Hugh Le Despenser, Baron Le Despenser (1338)\"",
+      "subject_uri": "http://example.org/entity/Hugh_le_Despenser",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hugh Le Despenser, Baron Le Despenser (1338)\""
+    },
+    {
+      "subject": "Hugh_le_Despenser",
+      "predicate": "altLabel",
+      "object": "\"Hugh Le Despenser, Baron Le Despenser (1338)\"",
+      "subject_uri": "http://example.org/entity/Hugh_le_Despenser",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Hugh Le Despenser, Baron Le Despenser (1338)\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 14,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 2,
+    "false_positives": 12,
+    "false_negatives": 0,
+    "precision": 0.14285714285714285,
+    "recall": 1.0,
+    "f1": 0.25
+  },
+  "stage": "pre_inference"
+}

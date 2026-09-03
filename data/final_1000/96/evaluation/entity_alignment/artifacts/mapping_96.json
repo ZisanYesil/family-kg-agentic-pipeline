@@ -1,0 +1,237 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/96/originals/extracted_96.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/96/ground_truth_96.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/occupation_poet": "http://example.org/entity/poet",
+    "http://example.org/extracted/colin_will": "http://example.org/entity/Colin_Will",
+    "http://example.org/extracted/occupation_publisher": "http://example.org/entity/publisher",
+    "http://example.org/extracted/occupation_cognitive_scientist": "http://example.org/entity/cognitive_scientist",
+    "http://example.org/extracted/anne_castles": "http://example.org/entity/Anne_Castles"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 6,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/anne_castles",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anne Castles",
+          "source": "label"
+        }
+      ],
+      "context": "Anne Castles. has occupation: cognitive scientist.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anne_Castles",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anne Castles",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anne Castles",
+        "extracted_source": "label",
+        "ground_truth_text": "Anne Castles",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8278121501207352
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/colin_will",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Colin Will",
+          "source": "label"
+        }
+      ],
+      "context": "Colin Will. has occupation: poet. has occupation: publisher.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Colin_Will",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Colin Will",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Colin Will",
+        "extracted_source": "label",
+        "ground_truth_text": "Colin Will",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.95980304479599,
+      "graph_score": 0.9799015522003174,
+      "margin": 0.8360201418399811
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_cognitive_scientist",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "cognitive scientist",
+          "source": "label"
+        },
+        {
+          "text": "occupation cognitive scientist",
+          "source": "uri"
+        }
+      ],
+      "context": "cognitive scientist. inverse has occupation: Anne Castles.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/cognitive_scientist",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "cognitive scientist",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "cognitive scientist",
+        "extracted_source": "label",
+        "ground_truth_text": "cognitive scientist",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999997019767761,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.7476004064083099
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_poet",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "poet",
+          "source": "label"
+        },
+        {
+          "text": "occupation poet",
+          "source": "uri"
+        }
+      ],
+      "context": "poet. inverse has occupation: Colin Will.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/poet",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "poet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "poet",
+        "extracted_source": "label",
+        "ground_truth_text": "poet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.47779619693756104
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_publisher",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "publisher",
+          "source": "label"
+        },
+        {
+          "text": "occupation publisher",
+          "source": "uri"
+        }
+      ],
+      "context": "publisher. inverse has occupation: Colin Will.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/publisher",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "publisher",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "publisher",
+        "extracted_source": "label",
+        "ground_truth_text": "publisher",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.38233399391174316
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/librarian"
+  ]
+}

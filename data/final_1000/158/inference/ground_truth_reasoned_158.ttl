@@ -1,0 +1,21 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Marie_of_Cleves_Duchess_of_Orléans a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Marie_of_Burgundy ;
+    ex:hasParent entity:Marie_of_Burgundy .
+
+entity:Mary_of_Burgundy_Duchess_of_Cleves a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:John_the_Fearless ;
+    ex:hasParent entity:John_the_Fearless .
+
+entity:John_the_Fearless a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Mary_of_Burgundy_Duchess_of_Cleves .
+
+entity:Marie_of_Burgundy a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Marie_of_Cleves_Duchess_of_Orléans .
+

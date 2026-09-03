@@ -1,0 +1,34 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:song_little_more_royalty a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Little More (Royalty)" ;
+    onto:hasPerformer data:person_chris_brown .
+
+data:award_bet a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "BET Award" .
+
+data:award_billboard_music a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Billboard Music Award" .
+
+data:award_grammy a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Grammy Award" .
+
+data:award_soul_train_music a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Soul Train Music Award" .
+
+data:person_chris_brown a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Chris Brown" ;
+    onto:hasAwardReceived data:award_bet,
+        data:award_billboard_music,
+        data:award_grammy,
+        data:award_soul_train_music .
+

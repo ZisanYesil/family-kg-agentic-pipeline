@@ -1,0 +1,90 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/74/evaluation/entity_alignment/final_extracted_aligned_74.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/74/evaluation/entity_alignment/final_ground_truth_aligned_74.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Buckingham_Palace",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Buckingham_Palace",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Princess_Alice_of_Battenberg",
+      "predicate": "hasChild",
+      "object": "Princess_Margarita_of_Greece_and_Denmark",
+      "subject_uri": "http://example.org/entity/Princess_Alice_of_Battenberg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Princess_Margarita_of_Greece_and_Denmark"
+    },
+    {
+      "subject": "Princess_Alice_of_Battenberg",
+      "predicate": "hasDeathPlace",
+      "object": "Buckingham_Palace",
+      "subject_uri": "http://example.org/entity/Princess_Alice_of_Battenberg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Buckingham_Palace"
+    },
+    {
+      "subject": "Princess_Alice_of_Battenberg",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Princess_Alice_of_Battenberg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Princess_Alice_of_Battenberg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Alice_of_Battenberg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Princess_Margarita_of_Greece_and_Denmark",
+      "predicate": "hasParent",
+      "object": "Princess_Alice_of_Battenberg",
+      "subject_uri": "http://example.org/entity/Princess_Margarita_of_Greece_and_Denmark",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Princess_Alice_of_Battenberg"
+    },
+    {
+      "subject": "Princess_Margarita_of_Greece_and_Denmark",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Princess_Margarita_of_Greece_and_Denmark",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Princess_Margarita_of_Greece_and_Denmark",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Margarita_of_Greece_and_Denmark",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 8,
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

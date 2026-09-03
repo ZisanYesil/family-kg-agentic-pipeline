@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Me_and_Liza a ex:Artifact,
+        ex:CreativeWork ;
+    ex:hasCreator entity:Rufus_Wainwright ;
+    ex:hasPerformer entity:Rufus_Wainwright .
+
+entity:Loudon_Wainwright_III a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Rufus_Wainwright .
+
+entity:Rufus_Wainwright a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Loudon_Wainwright_III ;
+    ex:hasParent entity:Loudon_Wainwright_III .
+

@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/563/originals/extracted_563.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/563/ground_truth_563.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/eleanor_of_aquitaine": "http://example.org/entity/Eleanor_of_Aquitaine",
+    "http://example.org/extracted/eleanor_of_vermandois_1148": "http://example.org/entity/Eleanor_of_Vermandois",
+    "http://example.org/extracted/petronilla_of_aquitaine": "http://example.org/entity/Petronilla_of_Aquitaine"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/eleanor_of_aquitaine",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eleanor of Aquitaine",
+          "source": "label"
+        }
+      ],
+      "context": "Eleanor of Aquitaine. inverse has sister: Petronilla of Aquitaine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eleanor_of_Aquitaine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eleanor of Aquitaine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eleanor of Aquitaine",
+        "extracted_source": "label",
+        "ground_truth_text": "Eleanor of Aquitaine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9839560389518738,
+      "graph_score": 0.4919780194759369,
+      "margin": 0.3861207962036133
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/eleanor_of_vermandois_1148",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eleanor of Vermandois",
+          "source": "label"
+        },
+        {
+          "text": "eleanor of vermandois 1148",
+          "source": "uri"
+        }
+      ],
+      "context": "Eleanor of Vermandois. has mother: Petronilla of Aquitaine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eleanor_of_Vermandois",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eleanor of Vermandois",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eleanor of Vermandois",
+        "extracted_source": "label",
+        "ground_truth_text": "Eleanor of Vermandois",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.39227360486984253
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/petronilla_of_aquitaine",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Petronilla of Aquitaine",
+          "source": "label"
+        }
+      ],
+      "context": "Petronilla of Aquitaine. has sister: Eleanor of Aquitaine. inverse has mother: Eleanor of Vermandois.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Petronilla_of_Aquitaine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Petronilla of Aquitaine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Petronilla of Aquitaine",
+        "extracted_source": "label",
+        "ground_truth_text": "Petronilla of Aquitaine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9921834468841553,
+      "graph_score": 0.6627584099769592,
+      "margin": 0.45404350757598877
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

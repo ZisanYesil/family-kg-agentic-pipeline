@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_stolen_identity a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Stolen Identity" ;
+    onto:hasDirector data:person_gunther_von_fritsch .
+
+data:film_them a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Them!" ;
+    onto:hasDirector data:person_gordon_douglas .
+
+data:person_gordon_douglas a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gordon Douglas" ;
+    onto:hasBirthDate "1907-12-15"^^xsd:date .
+
+data:person_gunther_von_fritsch a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gunther von Fritsch" ;
+    onto:hasBirthDate "1906-07-15"^^xsd:date .
+

@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/When_You_Were_Mine> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "When You Were Mine" ;
+    onto:hasComposer <http://example.org/entity/Prince> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/Prince> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Rogers Nelson" ;
+    onto:hasNationality <http://example.org/entity/American> ;
+    skos:altLabel "Prince" .
+

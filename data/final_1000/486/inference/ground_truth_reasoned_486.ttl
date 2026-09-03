@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Bianca_Riario a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Caterina_Sforza ;
+    ex:hasParent entity:Caterina_Sforza .
+
+entity:Galeazzo_Maria_Sforza a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Caterina_Sforza .
+
+entity:Caterina_Sforza a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Bianca_Riario ;
+    ex:hasFather entity:Galeazzo_Maria_Sforza ;
+    ex:hasParent entity:Galeazzo_Maria_Sforza .
+

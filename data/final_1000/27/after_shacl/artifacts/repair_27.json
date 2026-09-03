@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "f056c1477c15c72e96277babd4db266a8d1828f9dcb0755e9bc373de6d30bb3a",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/marc_allegret",
+        "path": null,
+        "value": "http://example.org/extracted/catherine_allegret",
+        "expected": null,
+        "message": "Relation phrase 'uncle of' from http://example.org/extracted/marc_allegret to http://example.org/extracted/catherine_allegret was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "f056c1477c15c72e96277babd4db266a8d1828f9dcb0755e9bc373de6d30bb3a",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/marc_allegret",
+            "path": null,
+            "value": "http://example.org/extracted/catherine_allegret",
+            "expected": null,
+            "message": "Relation phrase 'uncle of' from http://example.org/extracted/marc_allegret to http://example.org/extracted/catherine_allegret was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 11,
+      "feedback_reasoning": "The violation is of type **unmapped_relation** for the phrase “uncle of” between Marc Allégret and Catherine Allégret. The supplied ontology does not contain a predicate whose documented meaning corresponds to an uncle‑nephew/niece relationship (e.g., hasUncle, isUncleOf, etc.). Domain/range compatibility alone is insufficient, and no existing predicate can be safely repurposed to express this relationship without violating its semantics. Therefore no edit can be made that is justified by the source text and ontology.",
+      "repairs": [
+        {
+          "violation_fingerprint": "a03636cacb5da0207e07e82fb2e7156962c623bcd4fb19f91bacefb81027208b",
+          "reasoning": "No appropriate ontology predicate matches the relation phrase “uncle of”. The ontology lacks a predicate for uncle/niece relationships, and none of the existing predicates can be semantically stretched to cover this phrase.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "a03636cacb5da0207e07e82fb2e7156962c623bcd4fb19f91bacefb81027208b"
+      ],
+      "triples_after": 11,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "f056c1477c15c72e96277babd4db266a8d1828f9dcb0755e9bc373de6d30bb3a",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/marc_allegret",
+            "path": null,
+            "value": "http://example.org/extracted/catherine_allegret",
+            "expected": null,
+            "message": "Relation phrase 'uncle of' from http://example.org/extracted/marc_allegret to http://example.org/extracted/catherine_allegret was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "f056c1477c15c72e96277babd4db266a8d1828f9dcb0755e9bc373de6d30bb3a",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/marc_allegret",
+        "path": null,
+        "value": "http://example.org/extracted/catherine_allegret",
+        "expected": null,
+        "message": "Relation phrase 'uncle of' from http://example.org/extracted/marc_allegret to http://example.org/extracted/catherine_allegret was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

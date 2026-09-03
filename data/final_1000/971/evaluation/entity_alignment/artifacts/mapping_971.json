@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/971/originals/extracted_971.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/971/ground_truth_971.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jean_pierre_willem": "http://example.org/entity/Jean_Pierre_Willem",
+    "http://example.org/extracted/flmne": "http://example.org/entity/FLMNE"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/flmne",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "FLMNE",
+          "source": "altLabel"
+        },
+        {
+          "text": "Faculté Libre de Médecines Naturelles et d'Ethnomédecine",
+          "source": "label"
+        }
+      ],
+      "context": "FLMNE. has founder: Jean-Pierre Willem.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/FLMNE",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "FLMNE",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "FLMNE",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "FLMNE",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9922596216201782,
+      "graph_score": 0.9961298108100891,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jean_pierre_willem",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jean-Pierre Willem",
+          "source": "label"
+        },
+        {
+          "text": "jean pierre willem",
+          "source": "uri"
+        }
+      ],
+      "context": "Jean-Pierre Willem. has birth place: Sedan, France. inverse has founder: FLMNE.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jean_Pierre_Willem",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jean Pierre Willem",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jean-Pierre Willem",
+        "extracted_source": "label",
+        "ground_truth_text": "Jean Pierre Willem",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9801497459411621,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9678487181663513,
+      "graph_score": 0.983924388885498,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sedan_france",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sedan, France",
+          "source": "label"
+        },
+        {
+          "text": "sedan france",
+          "source": "uri"
+        }
+      ],
+      "context": "Sedan, France. inverse has birth place: Jean-Pierre Willem.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sedan",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sedan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sedan, France",
+        "extracted_source": "label",
+        "ground_truth_text": "Sedan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7228915691375732,
+      "name_embedding_score": 0.6206762790679932,
+      "string_score": 0.675000011920929,
+      "independent_identity_support": false,
+      "context_score": 0.9504275918006897,
+      "graph_score": 0.9752137660980225,
+      "margin": 0.7228915691375732
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

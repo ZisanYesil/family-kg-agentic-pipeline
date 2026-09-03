@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/366/originals/extracted_366.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/366/ground_truth_366.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/adolphus_island": "http://example.org/entity/Adolphus_Island",
+    "http://example.org/extracted/seal_island_victoria": "http://example.org/entity/Seal_Island_Victoria",
+    "http://example.org/extracted/australia": "http://example.org/entity/Australia"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adolphus_island",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adolphus Island",
+          "source": "label"
+        }
+      ],
+      "context": "Adolphus Island. has country: Australia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adolphus_Island",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adolphus Island",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adolphus Island",
+        "extracted_source": "label",
+        "ground_truth_text": "Adolphus Island",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.5009460747241974
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/australia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Australia",
+          "source": "label"
+        }
+      ],
+      "context": "Australia. inverse has country: Adolphus Island. inverse has country: Seal Island (Victoria).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Australia",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Australia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Australia",
+        "extracted_source": "label",
+        "ground_truth_text": "Australia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9961896538734436,
+      "graph_score": 0.9980947971343994,
+      "margin": 0.5991285145282745
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/seal_island_victoria",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Seal Island (Victoria)",
+          "source": "label"
+        },
+        {
+          "text": "seal island victoria",
+          "source": "uri"
+        }
+      ],
+      "context": "Seal Island (Victoria). has country: Australia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Seal_Island_Victoria",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Seal Island Victoria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Seal Island (Victoria)",
+        "extracted_source": "label",
+        "ground_truth_text": "Seal Island Victoria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9679239988327026,
+      "string_score": 0.9785714149475098,
+      "independent_identity_support": true,
+      "context_score": 0.9834869503974915,
+      "graph_score": 0.9917434453964233,
+      "margin": 0.46553194522857666
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

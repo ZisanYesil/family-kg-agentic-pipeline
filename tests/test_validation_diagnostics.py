@@ -69,7 +69,7 @@ UNMAPPED = UnmappedRelation(
 )
 
 
-def test_unmapped_relation_contains_type_compatible_predicate_candidates() -> None:
+def test_unmapped_relation_does_not_present_type_compatibility_as_semantics() -> None:
     violations = unmapped_relation_violations(
         (UNMAPPED,),
         ENTITIES,
@@ -84,11 +84,12 @@ def test_unmapped_relation_contains_type_compatible_predicate_candidates() -> No
     assert violation.focus_node == "http://example.com/family#known_child"
     assert violation.path is None
     assert violation.value == "http://example.com/family#known_father"
-    assert violation.expected == "http://example.com/family#hasFather"
+    assert violation.expected is None
     assert "father" in violation.message
+    assert "merely type-compatible" in violation.message
 
 
-def test_unmapped_relation_excludes_predicates_with_wrong_endpoint_types() -> None:
+def test_unmapped_relation_is_reported_even_with_wrong_endpoint_types() -> None:
     wrong_types = [
         {"id": "known_child", "type": "Man"},
         {"id": "known_father", "type": "Person"},
@@ -102,7 +103,7 @@ def test_unmapped_relation_excludes_predicates_with_wrong_endpoint_types() -> No
     )[0]
 
     assert violation.expected is None
-    assert "No ontology predicate satisfies" in violation.message
+    assert "Select a predicate only when its meaning" in violation.message
 
 
 def test_unmapped_relation_is_removed_after_feedback_adds_candidate_triple() -> None:

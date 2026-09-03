@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/480/originals/extracted_480.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/480/ground_truth_480.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/erik_ole_bye": "http://example.org/entity/Erik_Ole_Bye",
+    "http://example.org/extracted/henry_paget_2nd_marquess_anglesey": "http://example.org/entity/Henry_Paget_2nd_Marquess_of_Anglesey"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/erik_ole_bye",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Erik Ole Bye",
+          "source": "label"
+        }
+      ],
+      "context": "Erik Ole Bye. has birth date: 1883-03-20. has death date: 1953-05-17.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Erik_Ole_Bye",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Erik Ole Bye",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Erik Ole Bye",
+        "extracted_source": "label",
+        "ground_truth_text": "Erik Ole Bye",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.6998185515403748
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/henry_paget_2nd_marquess_anglesey",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henry Paget, 2nd Marquess of Anglesey",
+          "source": "label"
+        },
+        {
+          "text": "henry paget 2nd marquess anglesey",
+          "source": "uri"
+        }
+      ],
+      "context": "Henry Paget, 2nd Marquess of Anglesey. has birth date: 1797-07-06. has death date: 1869-02-07.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Henry_Paget_2nd_Marquess_of_Anglesey",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Henry Paget 2nd Marquess of Anglesey",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henry Paget, 2nd Marquess of Anglesey",
+        "extracted_source": "label",
+        "ground_truth_text": "Henry Paget 2nd Marquess of Anglesey",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9946410059928894,
+      "string_score": 0.9938356280326843,
+      "independent_identity_support": true,
+      "context_score": 0.9954538941383362,
+      "graph_score": 0.9954538941383362,
+      "margin": 0.708829790353775
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

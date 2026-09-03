@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/519/evaluation/entity_alignment/baseline_extracted_aligned_519.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/519/evaluation/entity_alignment/baseline_ground_truth_aligned_519.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Education_in_Chemistry",
+      "predicate": "hasPublisher",
+      "object": "Royal_Society_of_Chemistry",
+      "subject_uri": "http://example.org/entity/Education_in_Chemistry",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublisher",
+      "object_term": "http://example.org/entity/Royal_Society_of_Chemistry"
+    },
+    {
+      "subject": "Royal_Society_of_Chemistry",
+      "predicate": "hasCountry",
+      "object": "United_Kingdom",
+      "subject_uri": "http://example.org/entity/Royal_Society_of_Chemistry",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/United_Kingdom"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Education_in_Chemistry",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Education_in_Chemistry",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Education_in_Chemistry",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Education_in_Chemistry",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Education_in_Chemistry",
+      "predicate": "label",
+      "object": "\"Education in Chemistry\"",
+      "subject_uri": "http://example.org/entity/Education_in_Chemistry",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Education in Chemistry\""
+    },
+    {
+      "subject": "Royal_Society_of_Chemistry",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Royal_Society_of_Chemistry",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Royal_Society_of_Chemistry",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Royal_Society_of_Chemistry",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Royal_Society_of_Chemistry",
+      "predicate": "label",
+      "object": "\"Royal Society of Chemistry\"",
+      "subject_uri": "http://example.org/entity/Royal_Society_of_Chemistry",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Royal Society of Chemistry\""
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "label",
+      "object": "\"United Kingdom\"",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"United Kingdom\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

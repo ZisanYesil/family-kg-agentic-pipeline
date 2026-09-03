@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Agnes_of_Meissen> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/entity/Margaret_of_Sicily> ;
+    ex:hasParent <http://example.org/entity/Margaret_of_Sicily> .
+
+<http://example.org/entity/Margaret_of_Sicily> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Agnes_of_Meissen> ;
+    ex:hasCountry <http://example.org/extracted/sicily> ;
+    ex:hasNationality <http://example.org/extracted/sicily> .
+
+<http://example.org/extracted/sicily> a ex:Country,
+        ex:Place .
+

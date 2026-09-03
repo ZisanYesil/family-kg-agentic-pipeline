@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Rachael_Emily_Poole> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Rachael Poole" ;
+    onto:hasSpouse <http://example.org/entity/Reginald_Lane_Poole> ;
+    skos:altLabel "Rachael Emily Poole" .
+
+<http://example.org/entity/Stanley_Lane_Poole> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Stanley Lane-Poole" ;
+    onto:hasBrother <http://example.org/entity/Reginald_Lane_Poole> .
+
+<http://example.org/entity/Reginald_Lane_Poole> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Reginald Lane Poole" ;
+    skos:altLabel "Reginald Lane-Poole" .
+

@@ -1,0 +1,36 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Félicité_2017_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Félicité" ;
+    onto:hasDirector <http://example.org/entity/Alain_Gomis> .
+
+<http://example.org/entity/Villa_Amalia_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Villa Amalia" ;
+    onto:hasDirector <http://example.org/entity/Benoît_Jacquot> .
+
+<http://example.org/entity/Alain_Gomis> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alain Gomis" ;
+    onto:hasNationality <http://example.org/entity/French>,
+        <http://example.org/entity/Senegalese> .
+
+<http://example.org/entity/Benoît_Jacquot> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Benoît Jacquot" ;
+    onto:hasNationality <http://example.org/entity/French> .
+
+<http://example.org/entity/Senegalese> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Senegal" ;
+    skos:altLabel "Senegalese" .
+
+<http://example.org/entity/French> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+

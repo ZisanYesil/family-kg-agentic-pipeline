@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/486/originals/extracted_486.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/486/ground_truth_486.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/galeazzo_maria_sforza": "http://example.org/entity/Galeazzo_Maria_Sforza",
+    "http://example.org/extracted/caterina_sforza": "http://example.org/entity/Caterina_Sforza",
+    "http://example.org/extracted/bianca_riario": "http://example.org/entity/Bianca_Riario"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bianca_riario",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bianca Riario",
+          "source": "label"
+        }
+      ],
+      "context": "Bianca Riario. has mother: Caterina Sforza.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bianca_Riario",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bianca Riario",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bianca Riario",
+        "extracted_source": "label",
+        "ground_truth_text": "Bianca Riario",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5743229389190674
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/caterina_sforza",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Caterina Sforza",
+          "source": "label"
+        }
+      ],
+      "context": "Caterina Sforza. has father: Galeazzo Maria Sforza. inverse has mother: Bianca Riario.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Caterina_Sforza",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Caterina Sforza",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Caterina Sforza",
+        "extracted_source": "label",
+        "ground_truth_text": "Caterina Sforza",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3520768880844116
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/galeazzo_maria_sforza",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Galeazzo Maria Sforza",
+          "source": "label"
+        }
+      ],
+      "context": "Galeazzo Maria Sforza. inverse has father: Caterina Sforza.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Galeazzo_Maria_Sforza",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Galeazzo Maria Sforza",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Galeazzo Maria Sforza",
+        "extracted_source": "label",
+        "ground_truth_text": "Galeazzo Maria Sforza",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3520768880844116
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

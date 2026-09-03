@@ -1,0 +1,90 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/114/evaluation/entity_alignment/final_extracted_aligned_114.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/114/evaluation/entity_alignment/final_ground_truth_aligned_114.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Adolf_VII_of_Berg",
+      "predicate": "hasChild",
+      "object": "Henry_of_Berg_Lord_of_Windeck",
+      "subject_uri": "http://example.org/entity/Adolf_VII_of_Berg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Henry_of_Berg_Lord_of_Windeck"
+    },
+    {
+      "subject": "Adolf_VII_of_Berg",
+      "predicate": "hasDeathPlace",
+      "object": "Neuss",
+      "subject_uri": "http://example.org/entity/Adolf_VII_of_Berg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Neuss"
+    },
+    {
+      "subject": "Adolf_VII_of_Berg",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Adolf_VII_of_Berg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Adolf_VII_of_Berg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Adolf_VII_of_Berg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Henry_of_Berg_Lord_of_Windeck",
+      "predicate": "hasParent",
+      "object": "Adolf_VII_of_Berg",
+      "subject_uri": "http://example.org/entity/Henry_of_Berg_Lord_of_Windeck",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Adolf_VII_of_Berg"
+    },
+    {
+      "subject": "Henry_of_Berg_Lord_of_Windeck",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Henry_of_Berg_Lord_of_Windeck",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Henry_of_Berg_Lord_of_Windeck",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Henry_of_Berg_Lord_of_Windeck",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Neuss",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Neuss",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 8,
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

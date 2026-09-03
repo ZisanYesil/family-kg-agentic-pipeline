@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/795/evaluation/entity_alignment/baseline_extracted_aligned_795.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/795/evaluation/entity_alignment/baseline_ground_truth_aligned_795.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Gabrielle_Robinne",
+      "predicate": "hasCountry",
+      "object": "French",
+      "subject_uri": "http://example.org/entity/Gabrielle_Robinne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/French"
+    },
+    {
+      "subject": "Nicolas_François_Vuillaume",
+      "predicate": "hasCountry",
+      "object": "French",
+      "subject_uri": "http://example.org/entity/Nicolas_François_Vuillaume",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/French"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "French",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/French",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "French",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/French",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "French",
+      "predicate": "label",
+      "object": "\"France\"",
+      "subject_uri": "http://example.org/entity/French",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"France\""
+    },
+    {
+      "subject": "French",
+      "predicate": "altLabel",
+      "object": "\"French\"",
+      "subject_uri": "http://example.org/entity/French",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"French\""
+    },
+    {
+      "subject": "Gabrielle_Robinne",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gabrielle_Robinne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Gabrielle_Robinne",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gabrielle_Robinne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gabrielle_Robinne",
+      "predicate": "label",
+      "object": "\"Gabrielle Robinne\"",
+      "subject_uri": "http://example.org/entity/Gabrielle_Robinne",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gabrielle Robinne\""
+    },
+    {
+      "subject": "Gabrielle_Robinne",
+      "predicate": "altLabel",
+      "object": "\"Gabrielle Anna Charlotte Robinne\"",
+      "subject_uri": "http://example.org/entity/Gabrielle_Robinne",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Gabrielle Anna Charlotte Robinne\""
+    },
+    {
+      "subject": "Nicolas_François_Vuillaume",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Nicolas_François_Vuillaume",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Nicolas_François_Vuillaume",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Nicolas_François_Vuillaume",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Nicolas_François_Vuillaume",
+      "predicate": "label",
+      "object": "\"Nicolas François Vuillaume\"",
+      "subject_uri": "http://example.org/entity/Nicolas_François_Vuillaume",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Nicolas François Vuillaume\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

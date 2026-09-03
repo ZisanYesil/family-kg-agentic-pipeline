@@ -1,0 +1,235 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/198/originals/extracted_198.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/198/ground_truth_198.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sam_newfield": "http://example.org/entity/Sam_Newfield",
+    "http://example.org/extracted/film_alibi_bye_bye": "http://example.org/entity/Alibi_Bye_Bye",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American",
+    "http://example.org/extracted/film_leave_it_to_the_marines": "http://example.org/entity/Leave_It_to_the_Marines",
+    "http://example.org/extracted/ben_holmes": "http://example.org/entity/Ben_Holmes"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ben_holmes",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ben Holmes",
+          "source": "label"
+        }
+      ],
+      "context": "Ben Holmes. has nationality: American. inverse has director: Alibi Bye Bye.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ben_Holmes",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ben Holmes",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ben Holmes",
+        "extracted_source": "label",
+        "ground_truth_text": "Ben Holmes",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9624007940292358,
+      "graph_score": 0.6478670835494995,
+      "margin": 0.691293329000473
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_alibi_bye_bye",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alibi Bye Bye",
+          "source": "label"
+        },
+        {
+          "text": "film alibi bye bye",
+          "source": "uri"
+        }
+      ],
+      "context": "Alibi Bye Bye. has director: Ben Holmes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alibi_Bye_Bye",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alibi Bye Bye",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alibi Bye Bye",
+        "extracted_source": "label",
+        "ground_truth_text": "Alibi Bye Bye",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.8124106228351593
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_leave_it_to_the_marines",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Leave It To The Marines",
+          "source": "label"
+        },
+        {
+          "text": "film leave it to the marines",
+          "source": "uri"
+        }
+      ],
+      "context": "Leave It To The Marines. has director: Sam Newfield.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Leave_It_to_the_Marines",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Leave It to the Marines",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Leave It To The Marines",
+        "extracted_source": "label",
+        "ground_truth_text": "Leave It to the Marines",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9996955990791321,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9995208382606506,
+      "graph_score": 0.9997603893280029,
+      "margin": 0.8119583576917648
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sam_newfield",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sam Newfield",
+          "source": "label"
+        }
+      ],
+      "context": "Sam Newfield. has nationality: American. inverse has director: Leave It To The Marines.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sam_Newfield",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sam Newfield",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sam Newfield",
+        "extracted_source": "label",
+        "ground_truth_text": "Sam Newfield",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9563906788825989,
+      "graph_score": 0.6448619961738586,
+      "margin": 0.6973491907119751
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has nationality: Ben Holmes. inverse has nationality: Sam Newfield.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9322450757026672,
+      "graph_score": 0.4661225378513336,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

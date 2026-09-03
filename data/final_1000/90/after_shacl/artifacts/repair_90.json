@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "e126e45464fa897866db2dab5658bc796998020fb0db5e39a52d1ad47316b028",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/nafija_sarajlic",
+        "path": null,
+        "value": "http://example.org/extracted/gustav_lindau",
+        "expected": null,
+        "message": "Relation phrase 'lived longer than' from http://example.org/extracted/nafija_sarajlic to http://example.org/extracted/gustav_lindau was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "e126e45464fa897866db2dab5658bc796998020fb0db5e39a52d1ad47316b028",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/nafija_sarajlic",
+            "path": null,
+            "value": "http://example.org/extracted/gustav_lindau",
+            "expected": null,
+            "message": "Relation phrase 'lived longer than' from http://example.org/extracted/nafija_sarajlic to http://example.org/extracted/gustav_lindau was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 13,
+      "feedback_reasoning": "The violation reports an unmapped relation phrase 'lived longer than' from nafija_sarajlic to gustav_lindau. The source text contains no statement that Nafija Sarajlić lived longer than Gustav Lindau, nor any other phrase that could be sensibly mapped to an ontology predicate. Because no appropriate predicate can be inferred from the source text, the relation cannot be repaired safely.",
+      "repairs": [
+        {
+          "violation_fingerprint": "18da3373bab44dc22829a2447cfdc3359f4caeca2c78c0f336a286ca6a355867",
+          "reasoning": "No ontology predicate matches the phrase 'lived longer than' and the source text does not support this relation.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "18da3373bab44dc22829a2447cfdc3359f4caeca2c78c0f336a286ca6a355867"
+      ],
+      "triples_after": 13,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "e126e45464fa897866db2dab5658bc796998020fb0db5e39a52d1ad47316b028",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/nafija_sarajlic",
+            "path": null,
+            "value": "http://example.org/extracted/gustav_lindau",
+            "expected": null,
+            "message": "Relation phrase 'lived longer than' from http://example.org/extracted/nafija_sarajlic to http://example.org/extracted/gustav_lindau was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "e126e45464fa897866db2dab5658bc796998020fb0db5e39a52d1ad47316b028",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/nafija_sarajlic",
+        "path": null,
+        "value": "http://example.org/extracted/gustav_lindau",
+        "expected": null,
+        "message": "Relation phrase 'lived longer than' from http://example.org/extracted/nafija_sarajlic to http://example.org/extracted/gustav_lindau was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

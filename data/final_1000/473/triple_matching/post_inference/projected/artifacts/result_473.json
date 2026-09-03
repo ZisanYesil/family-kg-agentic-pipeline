@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/473/evaluation/entity_alignment/final_extracted_aligned_473.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/473/evaluation/entity_alignment/final_ground_truth_aligned_473.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Austrian",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Austrian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Austrian",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Austrian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Hans_J_Salter",
+      "predicate": "hasCountry",
+      "object": "Austrian",
+      "subject_uri": "http://example.org/entity/Hans_J_Salter",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Austrian"
+    },
+    {
+      "subject": "Hans_J_Salter",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Hans_J_Salter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Hans_J_Salter",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Hans_J_Salter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Thunder_on_the_Hill",
+      "predicate": "hasComposer",
+      "object": "Hans_J_Salter",
+      "subject_uri": "http://example.org/entity/Thunder_on_the_Hill",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Hans_J_Salter"
+    },
+    {
+      "subject": "Thunder_on_the_Hill",
+      "predicate": "hasCreator",
+      "object": "Hans_J_Salter",
+      "subject_uri": "http://example.org/entity/Thunder_on_the_Hill",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Hans_J_Salter"
+    },
+    {
+      "subject": "Thunder_on_the_Hill",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Thunder_on_the_Hill",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Thunder_on_the_Hill",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Thunder_on_the_Hill",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Hans_J_Salter",
+      "predicate": "hasCountry",
+      "object": "united_states",
+      "subject_uri": "http://example.org/entity/Hans_J_Salter",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/united_states"
+    },
+    {
+      "subject": "united_states",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/united_states",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "united_states",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/united_states",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 12,
+    "true_positives": 5,
+    "false_positives": 3,
+    "false_negatives": 4,
+    "precision": 0.625,
+    "recall": 0.5555555555555556,
+    "f1": 0.5882352941176471
+  },
+  "stage": "post_inference"
+}

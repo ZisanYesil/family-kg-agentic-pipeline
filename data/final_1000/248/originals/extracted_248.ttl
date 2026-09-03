@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:starsky_and_hutch_on_playboy_island_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Starsky and Hutch on Playboy Island" ;
+    onto:hasDirector data:george_mccowan_person .
+
+data:emphysema_cause a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "emphysema" .
+
+data:george_mccowan_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George McCowan" ;
+    onto:hasCauseOfDeath data:emphysema_cause .
+

@@ -1,0 +1,1921 @@
+{
+  "experiment": "question_only_symbolic_sparql_qa",
+  "valid_for_direct_baseline_comparison": true,
+  "model": "gpt-oss:120b",
+  "provider": "openai",
+  "prompt_version": "question_to_sparql_v1",
+  "graph_stage": "shacl_plus_inference",
+  "summary": {
+    "examples": 53,
+    "completed": 53,
+    "failed": 0,
+    "answered": 42,
+    "unanswered": 11,
+    "answer_rate": 0.7924528301886793,
+    "exact_match": 0.4716981132075472,
+    "mean_token_f1": 0.5938316400580552
+  },
+  "results": [
+    {
+      "id": 1,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Are North Marion High School (Oregon) and Seoul High School both located in the same country?",
+      "gold_answer": "no",
+      "predicted_answer": "false",
+      "normalized_prediction": "false",
+      "normalized_gold": "no",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nASK {\n  VALUES ?school1Name { \"North Marion High School (Oregon)\" }\n  VALUES ?school2Name { \"Seoul High School\" }\n  ?school1 (rdfs:label|skos:altLabel) ?school1Name .\n  ?school2 (rdfs:label|skos:altLabel) ?school2Name .\n  ?school1 <http://example.org/2wiki-ontology#hasCountry> ?c .\n  ?school2 <http://example.org/2wiki-ontology#hasCountry> ?c .\n}",
+      "planner_explanation": "The query checks whether both schools share the same country.",
+      "bindings": [
+        {
+          "answer": "false"
+        }
+      ],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.921520291,
+      "query_seconds": 0.12099554200000018,
+      "usage": {
+        "prompt_tokens": 5560,
+        "completion_tokens": 686,
+        "total_tokens": 6246
+      }
+    },
+    {
+      "id": 2,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where was the place of death of the director of film Beat Girl?",
+      "gold_answer": "Nice",
+      "predicted_answer": "Nice",
+      "normalized_prediction": "nice",
+      "normalized_gold": "nice",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT DISTINCT ?answer WHERE {\n  ?film rdfs:label \"Beat Girl\" .\n  ?film ex:hasDirector ?director .\n  ?director ex:hasDeathPlace ?place .\n  ?place rdfs:label ?answer .\n}",
+      "planner_explanation": "Retrieve the label of the death place of the director of Beat Girl.",
+      "bindings": [
+        {
+          "answer": "Nice"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/edmond_gr%C3%A9ville_person",
+          "predicate": "http://example.org/2wiki-ontology#hasDeathPlace",
+          "object": "http://example.org/extracted/nice_place"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.460460542,
+      "query_seconds": 0.006886750000001385,
+      "usage": {
+        "prompt_tokens": 5541,
+        "completion_tokens": 498,
+        "total_tokens": 6039
+      }
+    },
+    {
+      "id": 3,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "When did Jean Martin (Singer)'s husband die?",
+      "gold_answer": "1983",
+      "predicted_answer": "1983-03-07",
+      "normalized_prediction": "1983 03 07",
+      "normalized_gold": "1983",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "SELECT ?answer WHERE {\n  { ?person rdfs:label \"Jean Martin\" . }\n  UNION\n  { ?person skos:altLabel \"Jean Martin (singer)\" . }\n  ?person <http://example.org/2wiki-ontology#hasSpouse> ?spouse .\n  ?spouse <http://example.org/2wiki-ontology#hasDeathDate> ?answer .\n}",
+      "planner_explanation": "Query retrieves the death date of Jean Martin's spouse.",
+      "bindings": [
+        {
+          "answer": "1983-03-07"
+        },
+        {
+          "answer": "1983-03-07"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/william_black_businessman",
+          "predicate": "http://example.org/2wiki-ontology#hasDeathDate",
+          "object": "\"1983-03-07\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.755629334,
+      "query_seconds": 0.008024541999999357,
+      "usage": {
+        "prompt_tokens": 5514,
+        "completion_tokens": 726,
+        "total_tokens": 6240
+      }
+    },
+    {
+      "id": 4,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Why did John Middleton Murry's wife die?",
+      "gold_answer": "tuberculosis",
+      "predicted_answer": "extrapulmonary tuberculosis",
+      "normalized_prediction": "extrapulmonary tuberculosis",
+      "normalized_gold": "tuberculosis",
+      "exact_match": false,
+      "token_f1": 0.6666666666666666,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  ?john rdfs:label \"John Middleton Murry\" .\n  ?john ex:hasSpouse ?wife .\n  ?wife ex:hasCauseOfDeath ?cause .\n  ?cause rdfs:label ?answer .\n}",
+      "planner_explanation": "The query retrieves the label of the cause of death for the spouse of John Middleton Murry.",
+      "bindings": [
+        {
+          "answer": "extrapulmonary tuberculosis"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/katherine_mansfield",
+          "predicate": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+          "object": "http://example.org/extracted/extrapulmonary_tuberculosis"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.707367,
+      "query_seconds": 0.11988879100000016,
+      "usage": {
+        "prompt_tokens": 5528,
+        "completion_tokens": 601,
+        "total_tokens": 6129
+      }
+    },
+    {
+      "id": 5,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "What is the award that the performer of song Sunday Papers earned?",
+      "gold_answer": "Grammy",
+      "predicted_answer": "Grammy Award nomination",
+      "normalized_prediction": "grammy award nomination",
+      "normalized_gold": "grammy",
+      "exact_match": false,
+      "token_f1": 0.5,
+      "sparql": "SELECT DISTINCT ?answer WHERE {\n  ?song <http://www.w3.org/2000/01/rdf-schema#label> \"Sunday Papers\" .\n  ?song <http://example.org/2wiki-ontology#hasPerformer> ?performer .\n  ?performer <http://example.org/2wiki-ontology#hasAwardReceived> ?award .\n  ?award <http://www.w3.org/2000/01/rdf-schema#label> ?answer .\n}",
+      "planner_explanation": "The query retrieves the label of the award received by the performer of the song titled \"Sunday Papers\".",
+      "bindings": [
+        {
+          "answer": "Grammy Award nomination"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/joe_jackson",
+          "predicate": "http://example.org/2wiki-ontology#hasAwardReceived",
+          "object": "http://example.org/extracted/grammy_award_nomination"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 6.197070708,
+      "query_seconds": 0.006662458999999288,
+      "usage": {
+        "prompt_tokens": 5523,
+        "completion_tokens": 673,
+        "total_tokens": 6196
+      }
+    },
+    {
+      "id": 6,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Are both Nikolsk Airport and Svobodny Airport located in the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "true",
+      "normalized_prediction": "true",
+      "normalized_gold": "yes",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nASK {\n  ?airport1 rdfs:label \"Nikolsk Airport\" .\n  ?airport2 rdfs:label \"Svobodny Airport\" .\n  ?airport1 <http://example.org/2wiki-ontology#hasCountry> ?country .\n  ?airport2 <http://example.org/2wiki-ontology#hasCountry> ?country .\n}",
+      "planner_explanation": "Checks whether both airports share the same country.",
+      "bindings": [
+        {
+          "answer": "true"
+        }
+      ],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.5217741249999985,
+      "query_seconds": 0.004774041000001006,
+      "usage": {
+        "prompt_tokens": 5520,
+        "completion_tokens": 605,
+        "total_tokens": 6125
+      }
+    },
+    {
+      "id": 7,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where was the performer of song God (John Lennon Song) born?",
+      "gold_answer": "Liverpool",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "liverpool",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT DISTINCT ?answer WHERE {\n  ?song rdfs:label \"God\" .\n  ?song ex:hasComposer ?composer .\n  ?composer rdfs:label \"John Lennon\" .\n  ?song ex:hasPerformer ?performer .\n  ?performer ex:hasBirthPlace ?place .\n  ?place rdfs:label ?answer .\n}",
+      "planner_explanation": "The query retrieves the birthplace of the performer of the song \"God\" composed by John Lennon.",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 6.141998624999999,
+      "query_seconds": 0.007607833000001563,
+      "usage": {
+        "prompt_tokens": 5513,
+        "completion_tokens": 691,
+        "total_tokens": 6204
+      }
+    },
+    {
+      "id": 8,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where does Karin Stoltenberg's husband work at?",
+      "gold_answer": "United Nations",
+      "predicted_answer": "United Nations",
+      "normalized_prediction": "united nations",
+      "normalized_gold": "united nations",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?answer WHERE {\n  ?person rdfs:label \"Karin Stoltenberg\" .\n  ?person ex:hasSpouse ?spouse .\n  ?spouse ex:hasEmployer ?answer .\n}",
+      "planner_explanation": "The query retrieves the employer of Karin Stoltenberg's spouse.",
+      "bindings": [
+        {
+          "answer": "United Nations"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/thorvald_stoltenberg",
+          "predicate": "http://example.org/2wiki-ontology#hasEmployer",
+          "object": "http://example.org/extracted/united_nations"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.986060249999998,
+      "query_seconds": 0.003073792000002129,
+      "usage": {
+        "prompt_tokens": 5518,
+        "completion_tokens": 559,
+        "total_tokens": 6077
+      }
+    },
+    {
+      "id": 9,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Which film came out earlier, Emmy Of Stork'S Nest or Indira Vizha?",
+      "gold_answer": "Emmy Of Stork'S Nest",
+      "predicted_answer": "Indira Vizha",
+      "normalized_prediction": "indira vizha",
+      "normalized_gold": "emmy of stork s nest",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?answer WHERE {\n  VALUES ?filmLabel {\"Emmy of Stork's Nest\" \"Indira Vizha\"} .\n  ?film rdfs:label ?filmLabel .\n  ?film ex:hasPublicationDate ?date .\n  BIND(?filmLabel AS ?answer)\n}\nORDER BY ?date\nLIMIT 1",
+      "planner_explanation": "The query selects the title of the film with the earliest publication date.",
+      "bindings": [
+        {
+          "answer": "Indira Vizha"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/indira_vizha",
+          "predicate": "http://example.org/2wiki-ontology#hasPublicationDate",
+          "object": "\"2009-07-10\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.246559417,
+      "query_seconds": 0.010777707999999109,
+      "usage": {
+        "prompt_tokens": 5514,
+        "completion_tokens": 575,
+        "total_tokens": 6089
+      }
+    },
+    {
+      "id": 10,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "When is the lead guitarist of List Of The Dillinger Escape Plan Band Members's birthday?",
+      "gold_answer": "August 8, 1975",
+      "predicted_answer": "1975-08-08",
+      "normalized_prediction": "1975 08 08",
+      "normalized_gold": "august 8 1975",
+      "exact_match": false,
+      "token_f1": 0.3333333333333333,
+      "sparql": "SELECT ?answer WHERE {\n  ?person rdfs:label \"Benjamin Weinman\" .\n  ?person <http://example.org/2wiki-ontology#hasBirthDate> ?answer .\n}",
+      "planner_explanation": "The query retrieves the birth date of the person labeled \"Benjamin Weinman\".",
+      "bindings": [
+        {
+          "answer": "1975-08-08"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/person_benjamin_weinman",
+          "predicate": "http://example.org/2wiki-ontology#hasBirthDate",
+          "object": "\"1975-08-08\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.533855666999997,
+      "query_seconds": 0.005311290999998164,
+      "usage": {
+        "prompt_tokens": 5522,
+        "completion_tokens": 496,
+        "total_tokens": 6018
+      }
+    },
+    {
+      "id": 11,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "What is the cause of death of Alex Matthiessen's father?",
+      "gold_answer": "leukemia",
+      "predicted_answer": "acute leukemia",
+      "normalized_prediction": "acute leukemia",
+      "normalized_gold": "leukemia",
+      "exact_match": false,
+      "token_f1": 0.6666666666666666,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?answer WHERE {\n  ?alex rdfs:label \"Alex Matthiessen\" .\n  ?alex ex:hasFather ?father .\n  ?father ex:hasCauseOfDeath ?cause .\n  ?cause rdfs:label ?answer .\n}",
+      "planner_explanation": "Retrieves the label of the cause of death for Alex Matthiessen's father.",
+      "bindings": [
+        {
+          "answer": "acute leukemia"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/peter_matthiessen",
+          "predicate": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+          "object": "http://example.org/extracted/acute_leukemia"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.715178625,
+      "query_seconds": 0.0038345000000035157,
+      "usage": {
+        "prompt_tokens": 5519,
+        "completion_tokens": 634,
+        "total_tokens": 6153
+      }
+    },
+    {
+      "id": 12,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Are Tomskoye, Amur Oblast and Pleshkovo located in the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "false",
+      "normalized_prediction": "false",
+      "normalized_gold": "yes",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nASK {\n  ?tom rdfs:label \"Tomskoye\" .\n  ?tom ex:hasCountry ?c .\n  ?ple rdfs:label \"Pleshkovo\" .\n  ?ple ex:hasCountry ?c .\n  ?amur rdfs:label \"Amur Oblast\" .\n  ?amur ex:hasCountry ?c .\n}",
+      "planner_explanation": "The ASK query verifies whether all three places share the same country.",
+      "bindings": [
+        {
+          "answer": "false"
+        }
+      ],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.582986750000003,
+      "query_seconds": 0.007780833000005316,
+      "usage": {
+        "prompt_tokens": 5523,
+        "completion_tokens": 497,
+        "total_tokens": 6020
+      }
+    },
+    {
+      "id": 13,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "When was the company that published American Scientist founded?",
+      "gold_answer": "1886",
+      "predicted_answer": "1886",
+      "normalized_prediction": "1886",
+      "normalized_gold": "1886",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?answer WHERE {\n  ?work rdfs:label \"American Scientist\" .\n  ?work ex:hasPublisher ?org .\n  ?org ex:hasInception ?answer .\n}",
+      "planner_explanation": "The query finds the publisher of \"American Scientist\" and retrieves its inception date.",
+      "bindings": [
+        {
+          "answer": "1886"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/sigma_xi",
+          "predicate": "http://example.org/2wiki-ontology#hasInception",
+          "object": "\"1886\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.0863670839999955,
+      "query_seconds": 0.0061058749999958195,
+      "usage": {
+        "prompt_tokens": 5507,
+        "completion_tokens": 421,
+        "total_tokens": 5928
+      }
+    },
+    {
+      "id": 14,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where did the director of film Old Man Drinking A Glass Of Beer die?",
+      "gold_answer": "Brighton",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "brighton",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  ?film rdfs:label \"Old Man Drinking a Glass of Beer\" .\n  ?film a ex:Film .\n  ?film ex:hasDirector ?director .\n  ?director ex:hasDeathPlace ?place .\n  ?place rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds the death place label of the film's director.",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.706011957999998,
+      "query_seconds": 0.006917042000004869,
+      "usage": {
+        "prompt_tokens": 5510,
+        "completion_tokens": 521,
+        "total_tokens": 6031
+      }
+    },
+    {
+      "id": 15,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where did the director of film Desolation Angels (1995 Film) graduate from?",
+      "gold_answer": "State University of New York at Purchase",
+      "predicted_answer": "State University of New York at Purchase",
+      "normalized_prediction": "state university of new york at purchase",
+      "normalized_gold": "state university of new york at purchase",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?answer WHERE {\n  ?film rdfs:label \"Desolation Angels (1995 film)\" .\n  ?film ex:hasDirector ?director .\n  ?director ex:hasEducatedAt ?answer .\n}",
+      "planner_explanation": "The query finds the film by its label, gets its director, and returns the institution where the director was educated.",
+      "bindings": [
+        {
+          "answer": "State University of New York at Purchase"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/tim_mccann",
+          "predicate": "http://example.org/2wiki-ontology#hasEducatedAt",
+          "object": "http://example.org/extracted/state_university_of_new_york_at_purchase"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.094857124999997,
+      "query_seconds": 0.003397249999999019,
+      "usage": {
+        "prompt_tokens": 5529,
+        "completion_tokens": 437,
+        "total_tokens": 5966
+      }
+    },
+    {
+      "id": 16,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where was the mother of Antonio Flores born?",
+      "gold_answer": "Jerez de la Frontera",
+      "predicted_answer": "Jerez de la Frontera",
+      "normalized_prediction": "jerez de la frontera",
+      "normalized_gold": "jerez de la frontera",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  ?antonio (rdfs:label|skos:altLabel) ?antonioName .\n  FILTER(?antonioName = \"Antonio González Flores\" || ?antonioName = \"Antonio Flores\")\n  ?antonio ex:hasMother ?mother .\n  ?mother ex:hasBirthPlace ?place .\n  ?place rdfs:label ?answer .\n}\nLIMIT 1",
+      "planner_explanation": "The query finds Antonio Flores's mother and returns the label of her birth place.",
+      "bindings": [
+        {
+          "answer": "Jerez de la Frontera"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/lola_flores",
+          "predicate": "http://example.org/2wiki-ontology#hasBirthPlace",
+          "object": "http://example.org/extracted/jerez_de_la_frontera"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.832577624999999,
+      "query_seconds": 0.012601958000004743,
+      "usage": {
+        "prompt_tokens": 5526,
+        "completion_tokens": 644,
+        "total_tokens": 6170
+      }
+    },
+    {
+      "id": 17,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Who is Charles Willoughby, 10Th Baron Willoughby Of Parham's paternal grandmother?",
+      "gold_answer": "Lady Frances Manners",
+      "predicted_answer": "Frances Manners",
+      "normalized_prediction": "frances manners",
+      "normalized_gold": "lady frances manners",
+      "exact_match": false,
+      "token_f1": 0.8,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?answer WHERE {\n  ?person rdfs:label \"Charles Willoughby, 10th Baron Willoughby of Parham\" .\n  ?person ex:hasFather ?father .\n  ?father ex:hasMother ?grandmother .\n  ?grandmother rdfs:label ?answer .\n}",
+      "planner_explanation": "The query follows the father‑to‑mother chain to retrieve the paternal grandmother's label.",
+      "bindings": [
+        {
+          "answer": "Frances Manners"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/frances_manners",
+          "predicate": "http://example.org/2wiki-ontology#hasChild",
+          "object": "http://example.org/extracted/william_willoughby_6th_barony"
+        },
+        {
+          "subject": "http://example.org/extracted/william_willoughby_6th_barony",
+          "predicate": "http://example.org/2wiki-ontology#hasMother",
+          "object": "http://example.org/extracted/frances_manners"
+        },
+        {
+          "subject": "http://example.org/extracted/william_willoughby_6th_barony",
+          "predicate": "http://example.org/2wiki-ontology#hasParent",
+          "object": "http://example.org/extracted/frances_manners"
+        }
+      ],
+      "support_uses_inferred_triple": true,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.801539083000009,
+      "query_seconds": 0.0059029170000002296,
+      "usage": {
+        "prompt_tokens": 5550,
+        "completion_tokens": 574,
+        "total_tokens": 6124
+      }
+    },
+    {
+      "id": 18,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Who lived longer, Csaba Pálinkás or Henry Scheffé?",
+      "gold_answer": "Henry Scheffé",
+      "predicted_answer": "Henry Scheffé",
+      "normalized_prediction": "henry scheffe",
+      "normalized_gold": "henry scheffe",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?answer WHERE {\n  ?person rdfs:label ?name .\n  FILTER(?name IN (\"Csaba Pálinkás\", \"Henry Scheffé\"))\n  ?person ex:hasBirthDate ?birth .\n  ?person ex:hasDeathDate ?death .\n  BIND (YEAR(?death) - YEAR(?birth) AS ?age)\n  BIND(?name AS ?answer)\n}\nORDER BY DESC(?age)\nLIMIT 1",
+      "planner_explanation": "The query compares the lifespans of the two persons and returns the one who lived longer.",
+      "bindings": [
+        {
+          "answer": "Henry Scheffé"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/henry_scheffe",
+          "predicate": "http://example.org/2wiki-ontology#hasBirthDate",
+          "object": "\"1907-04-11\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        },
+        {
+          "subject": "http://example.org/extracted/henry_scheffe",
+          "predicate": "http://example.org/2wiki-ontology#hasDeathDate",
+          "object": "\"1977-07-05\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 7.17361320900001,
+      "query_seconds": 0.018265583000001584,
+      "usage": {
+        "prompt_tokens": 5509,
+        "completion_tokens": 1124,
+        "total_tokens": 6633
+      }
+    },
+    {
+      "id": 19,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Who is the mother of Edward I Of England?",
+      "gold_answer": "Eleanor of Provence",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "eleanor of provence",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT DISTINCT ?answer WHERE {\n  ?person rdfs:label \"Edward I of England\" .\n  ?person ex:hasMother ?mother .\n  ?mother rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds the entity labeled \"Edward I of England\" and returns the label of its mother via the hasMother property.",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 2.5404285829999935,
+      "query_seconds": 0.005015917000008585,
+      "usage": {
+        "prompt_tokens": 5517,
+        "completion_tokens": 346,
+        "total_tokens": 5863
+      }
+    },
+    {
+      "id": 20,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Do director of film Winter Meeting and director of film Year Of The Horse have the same nationality?",
+      "gold_answer": "no",
+      "predicted_answer": "false",
+      "normalized_prediction": "false",
+      "normalized_gold": "no",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nASK {\n  ?film1 rdfs:label \"Winter Meeting\" .\n  ?film1 ex:hasDirector ?dir1 .\n  ?dir1 ex:hasNationality ?nat .\n  ?film2 rdfs:label \"Year of the Horse\" .\n  ?film2 ex:hasDirector ?dir2 .\n  ?dir2 ex:hasNationality ?nat .\n}",
+      "planner_explanation": "Checks whether the two films share a director nationality.",
+      "bindings": [
+        {
+          "answer": "false"
+        }
+      ],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.522342042000005,
+      "query_seconds": 0.004762457999987646,
+      "usage": {
+        "prompt_tokens": 5553,
+        "completion_tokens": 842,
+        "total_tokens": 6395
+      }
+    },
+    {
+      "id": 21,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Which film was released earlier, Anna-Liisa or Children Underground?",
+      "gold_answer": "Anna-Liisa",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "anna liisa",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\n\nSELECT ?answer WHERE {\n  ?film1 rdfs:label \"Anna-Liisa\" .\n  ?film1 ex:hasPublicationDate ?date1 .\n  ?film2 rdfs:label \"Children Underground\" .\n  ?film2 ex:hasPublicationDate ?date2 .\n  BIND( IF( ?date1 <= ?date2, ?film1, ?film2 ) AS ?answer )\n}",
+      "planner_explanation": "The query compares the publication dates of the two films and binds the earlier one to ?answer.",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.818656583000006,
+      "query_seconds": 0.013488459000001285,
+      "usage": {
+        "prompt_tokens": 5510,
+        "completion_tokens": 722,
+        "total_tokens": 6232
+      }
+    },
+    {
+      "id": 22,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Who is the paternal grandmother of Ingegerd Olofsdotter Of Sweden?",
+      "gold_answer": "Sigrid the Haughty",
+      "predicted_answer": "Sigrid the Haughty",
+      "normalized_prediction": "sigrid haughty",
+      "normalized_gold": "sigrid haughty",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?answer WHERE {\n  ?person rdfs:label ?personLabel .\n  FILTER(?personLabel = \"Ingegerd Olofsdotter of Sweden\")\n  ?person ex:hasFather ?father .\n  ?father ex:hasMother ?paternalGrandmother .\n  ?paternalGrandmother rdfs:label ?answer .\n}",
+      "planner_explanation": "The query retrieves the mother of Ingegerd Olofsdotter of Sweden's father.",
+      "bindings": [
+        {
+          "answer": "Sigrid the Haughty"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/olof_skotkonung",
+          "predicate": "http://example.org/2wiki-ontology#hasMother",
+          "object": "http://example.org/extracted/sigrid_haughty"
+        },
+        {
+          "subject": "http://example.org/extracted/olof_skotkonung",
+          "predicate": "http://example.org/2wiki-ontology#hasParent",
+          "object": "http://example.org/extracted/sigrid_haughty"
+        },
+        {
+          "subject": "http://example.org/extracted/sigrid_haughty",
+          "predicate": "http://example.org/2wiki-ontology#hasChild",
+          "object": "http://example.org/extracted/olof_skotkonung"
+        }
+      ],
+      "support_uses_inferred_triple": true,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.007705666000007,
+      "query_seconds": 0.00921308399999532,
+      "usage": {
+        "prompt_tokens": 5586,
+        "completion_tokens": 749,
+        "total_tokens": 6335
+      }
+    },
+    {
+      "id": 23,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Which country Dexter Young's mother is from?",
+      "gold_answer": "China",
+      "predicted_answer": "China",
+      "normalized_prediction": "china",
+      "normalized_gold": "china",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  ?dexter rdfs:label \"Dexter Young\" .\n  ?dexter ex:hasMother ?mother .\n  { ?mother ex:hasCitizenship ?country }\n  UNION { ?mother ex:hasNationality ?country }\n  UNION { ?mother ex:hasCountry ?country }\n  ?country rdfs:label ?answer .\n}\nLIMIT 1",
+      "planner_explanation": "The query finds Dexter Young's mother and returns the label of the country linked to her via citizenship, nationality, or a generic country property.",
+      "bindings": [
+        {
+          "answer": "China"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/connie_chan",
+          "predicate": "http://example.org/2wiki-ontology#hasCountry",
+          "object": "http://example.org/extracted/china"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.930549124999999,
+      "query_seconds": 0.00850529199999528,
+      "usage": {
+        "prompt_tokens": 5511,
+        "completion_tokens": 912,
+        "total_tokens": 6423
+      }
+    },
+    {
+      "id": 24,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Who is Thomas Stafford, 3Rd Earl Of Stafford's father?",
+      "gold_answer": "Hugh de Stafford, 2nd Earl of Stafford",
+      "predicted_answer": "Hugh Stafford, 2nd Earl of Stafford",
+      "normalized_prediction": "hugh stafford 2nd earl of stafford",
+      "normalized_gold": "hugh de stafford 2nd earl of stafford",
+      "exact_match": false,
+      "token_f1": 0.923076923076923,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?answer WHERE {\n  ?person rdfs:label \"Thomas Stafford, 3rd Earl of Stafford\" .\n  ?person ex:hasFather ?father .\n  ?father rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds the father of the person labeled \"Thomas Stafford, 3rd Earl of Stafford\" and returns the father's label.",
+      "bindings": [
+        {
+          "answer": "Hugh Stafford, 2nd Earl of Stafford"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/hugh_stafford_2nd_earl_of_stafford",
+          "predicate": "http://example.org/2wiki-ontology#hasChild",
+          "object": "http://example.org/extracted/thomas_stafford_3rd_earl_of_stafford"
+        },
+        {
+          "subject": "http://example.org/extracted/thomas_stafford_3rd_earl_of_stafford",
+          "predicate": "http://example.org/2wiki-ontology#hasFather",
+          "object": "http://example.org/extracted/hugh_stafford_2nd_earl_of_stafford"
+        },
+        {
+          "subject": "http://example.org/extracted/thomas_stafford_3rd_earl_of_stafford",
+          "predicate": "http://example.org/2wiki-ontology#hasParent",
+          "object": "http://example.org/extracted/hugh_stafford_2nd_earl_of_stafford"
+        }
+      ],
+      "support_uses_inferred_triple": true,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.086440084000003,
+      "query_seconds": 0.005483334000004447,
+      "usage": {
+        "prompt_tokens": 5525,
+        "completion_tokens": 594,
+        "total_tokens": 6119
+      }
+    },
+    {
+      "id": 25,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Which film came out first, Ami Neta Hobo or Hood Of The Living Dead?",
+      "gold_answer": "Hood Of The Living Dead",
+      "predicted_answer": "Ami Neta Hobo",
+      "normalized_prediction": "ami neta hobo",
+      "normalized_gold": "hood of living dead",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  ?film1 rdfs:label \"Ami Neta Hobo\" ;\n          ex:hasPublicationDate ?date1 .\n  ?film2 rdfs:label \"Hood of the Living Dead\" ;\n          ex:hasPublicationDate ?date2 .\n  BIND( IF(?date1 <= ?date2, \"Ami Neta Hobo\", \"Hood of the Living Dead\") AS ?answer )\n}",
+      "planner_explanation": "The query compares the publication dates of the two films and returns the title of the earlier one.",
+      "bindings": [
+        {
+          "answer": "Ami Neta Hobo"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/ami_neta_hobo_film",
+          "predicate": "http://example.org/2wiki-ontology#hasPublicationDate",
+          "object": "\"2018-02-16\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 6.147163458999998,
+      "query_seconds": 0.013662917000004882,
+      "usage": {
+        "prompt_tokens": 5515,
+        "completion_tokens": 933,
+        "total_tokens": 6448
+      }
+    },
+    {
+      "id": 26,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "What is the cause of death of performer of song Oh Boy, Oh Boy, Oh Boy!?",
+      "gold_answer": "laryngeal cancer",
+      "predicted_answer": "laryngeal cancer",
+      "normalized_prediction": "laryngeal cancer",
+      "normalized_gold": "laryngeal cancer",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "SELECT DISTINCT ?answer WHERE {\n  ?song <http://www.w3.org/2000/01/rdf-schema#label> \"Oh boy, oh boy, oh boy!\" .\n  ?song <http://example.org/2wiki-ontology#hasPerformer> ?person .\n  ?person <http://example.org/2wiki-ontology#hasCauseOfDeath> ?cause .\n  ?cause <http://www.w3.org/2000/01/rdf-schema#label> ?answer .\n}",
+      "planner_explanation": "The query finds the cause of death of the performer of the given song.",
+      "bindings": [
+        {
+          "answer": "laryngeal cancer"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/person_lasse_dahlquist",
+          "predicate": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+          "object": "http://example.org/extracted/cause_laryngeal_cancer"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.7728837500000054,
+      "query_seconds": 0.006020750000004682,
+      "usage": {
+        "prompt_tokens": 5531,
+        "completion_tokens": 557,
+        "total_tokens": 6088
+      }
+    },
+    {
+      "id": 27,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Who is the uncle of Catherine Allégret?",
+      "gold_answer": "Marc Allégret",
+      "predicted_answer": "Marc Allégret",
+      "normalized_prediction": "marc allegret",
+      "normalized_gold": "marc allegret",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT DISTINCT ?answer WHERE {\n  ?catherine rdfs:label \"Catherine Allégret\" .\n  ?catherine (ex:hasFather|ex:hasMother)/ex:hasBrother ?answer .\n}",
+      "planner_explanation": "The query finds any person who is a brother of a parent of Catherine Allégret.",
+      "bindings": [
+        {
+          "answer": "Marc Allégret"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/marc_allegret",
+          "predicate": "http://example.org/2wiki-ontology#hasSibling",
+          "object": "http://example.org/extracted/yves_allegret"
+        },
+        {
+          "subject": "http://example.org/extracted/marc_allegret",
+          "predicate": "http://example.org/2wiki-ontology#isBrotherOf",
+          "object": "http://example.org/extracted/yves_allegret"
+        },
+        {
+          "subject": "http://example.org/extracted/yves_allegret",
+          "predicate": "http://example.org/2wiki-ontology#hasBrother",
+          "object": "http://example.org/extracted/marc_allegret"
+        },
+        {
+          "subject": "http://example.org/extracted/yves_allegret",
+          "predicate": "http://example.org/2wiki-ontology#hasSibling",
+          "object": "http://example.org/extracted/marc_allegret"
+        }
+      ],
+      "support_uses_inferred_triple": true,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.091475332999991,
+      "query_seconds": 0.00778741699998875,
+      "usage": {
+        "prompt_tokens": 5519,
+        "completion_tokens": 602,
+        "total_tokens": 6121
+      }
+    },
+    {
+      "id": 28,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where was the place of death of Duchess Maria Dorothea Of Württemberg's father?",
+      "gold_answer": "Kirchheim unter Teck",
+      "predicted_answer": "Kirchheim unter Teck",
+      "normalized_prediction": "kirchheim unter teck",
+      "normalized_gold": "kirchheim unter teck",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\n\nSELECT ?answer WHERE {\n  ?person rdfs:label \"Duchess Maria Dorothea of Württemberg\" .\n  ?person ex:hasFather ?father .\n  ?father ex:hasDeathPlace ?answer .\n}",
+      "planner_explanation": "The query finds the death place of the father of Duchess Maria Dorothea of Württemberg.",
+      "bindings": [
+        {
+          "answer": "Kirchheim unter Teck"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/duke_louis_wurttemberg",
+          "predicate": "http://example.org/2wiki-ontology#hasDeathPlace",
+          "object": "http://example.org/extracted/kirchheim_unter_teck"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.631245832999994,
+      "query_seconds": 0.005177333000006001,
+      "usage": {
+        "prompt_tokens": 5550,
+        "completion_tokens": 701,
+        "total_tokens": 6251
+      }
+    },
+    {
+      "id": 29,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Are Coal City, Illinois and Lash Kenar, Nur both located in the same country?",
+      "gold_answer": "no",
+      "predicted_answer": "false",
+      "normalized_prediction": "false",
+      "normalized_gold": "no",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "ASK WHERE {\n  ?place1 <http://www.w3.org/2000/01/rdf-schema#label> \"Coal City, Illinois\" .\n  ?place2 <http://www.w3.org/2000/01/rdf-schema#label> \"Lash Kenar, Nur\" .\n  ?place1 <http://example.org/2wiki-ontology#hasCountry> ?country .\n  ?place2 <http://example.org/2wiki-ontology#hasCountry> ?country .\n}",
+      "planner_explanation": "Checks whether both places share the same country.",
+      "bindings": [
+        {
+          "answer": "false"
+        }
+      ],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.383905999999996,
+      "query_seconds": 0.005341082999990476,
+      "usage": {
+        "prompt_tokens": 5548,
+        "completion_tokens": 660,
+        "total_tokens": 6208
+      }
+    },
+    {
+      "id": 30,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where was the director of film Los Motivos De Luz born?",
+      "gold_answer": "France",
+      "predicted_answer": "Mexico, D.F.",
+      "normalized_prediction": "mexico d f",
+      "normalized_gold": "france",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "SELECT ?answer WHERE {\n  ?film rdfs:label \"Los Motivos de Luz\" .\n  ?film <http://example.org/2wiki-ontology#hasDirector> ?director .\n  ?director <http://example.org/2wiki-ontology#hasBirthPlace> ?place .\n  ?place rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds the birth place of the director of the film Los Motivos de Luz.",
+      "bindings": [
+        {
+          "answer": "Mexico, D.F."
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/person_felipe_cazals",
+          "predicate": "http://example.org/2wiki-ontology#hasBirthPlace",
+          "object": "http://example.org/extracted/place_mexico_df"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 2.8723238750000064,
+      "query_seconds": 0.0058126250000043456,
+      "usage": {
+        "prompt_tokens": 5533,
+        "completion_tokens": 409,
+        "total_tokens": 5942
+      }
+    },
+    {
+      "id": 31,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where was the performer of song I See You (Theme From Avatar) born?",
+      "gold_answer": "London",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "london",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "SELECT ?answer WHERE {\n  # Song I See You (Theme From Avatar)\n  ?song a <http://example.org/2wiki-ontology#CreativeWork> ;\n        rdfs:label \"I See You (Theme From Avatar)\" .\n  # Performer of the song\n  ?song <http://example.org/2wiki-ontology#hasPerformer> ?perf .\n  ?perf (rdfs:label|skos:altLabel) \"Leona Lewis\" .\n  # Birth place of the performer\n  ?perf <http://example.org/2wiki-ontology#hasBirthPlace> ?place .\n  ?place (rdfs:label|skos:altLabel) ?answer .\n}",
+      "planner_explanation": "The query finds the song, its performer, and the performer’s birth place, returning the place label.",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.902307958000023,
+      "query_seconds": 0.007320208999999522,
+      "usage": {
+        "prompt_tokens": 5519,
+        "completion_tokens": 902,
+        "total_tokens": 6421
+      }
+    },
+    {
+      "id": 32,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Who lived longer, Louis-Armand-Constantin De Rohan or Adalberto Pereira Dos Santos?",
+      "gold_answer": "Adalberto Pereira Dos Santos",
+      "predicted_answer": "Adalberto Pereira dos Santos",
+      "normalized_prediction": "adalberto pereira dos santos",
+      "normalized_gold": "adalberto pereira dos santos",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  {\n    SELECT ?label ( (YEAR(xsd:dateTime(?death)) - YEAR(xsd:dateTime(?birth))) AS ?age )\n    WHERE {\n      ?person rdfs:label ?label .\n      FILTER(?label = \"Louis-Armand-Constantin de Rohan\" || ?label = \"Adalberto Pereira dos Santos\")\n      ?person ex:hasBirthDate ?birth .\n      ?person ex:hasDeathDate ?death .\n    }\n  }\n  BIND(?label AS ?answer)\n}\nORDER BY DESC(?age)\nLIMIT 1",
+      "planner_explanation": "The query computes each person's lifespan and returns the name of the one with the greater age.",
+      "bindings": [
+        {
+          "answer": "Adalberto Pereira dos Santos"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/adalberto_pereira_dos_santos",
+          "predicate": "http://example.org/2wiki-ontology#hasBirthDate",
+          "object": "\"1905-04-11\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        },
+        {
+          "subject": "http://example.org/extracted/adalberto_pereira_dos_santos",
+          "predicate": "http://example.org/2wiki-ontology#hasDeathDate",
+          "object": "\"1984-04-02\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 6.8585907499999905,
+      "query_seconds": 0.020558625000006714,
+      "usage": {
+        "prompt_tokens": 5550,
+        "completion_tokens": 1072,
+        "total_tokens": 6622
+      }
+    },
+    {
+      "id": 33,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where was the keyboardist of Xyz (English Band) born?",
+      "gold_answer": "Kingsbury, London",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "kingsbury london",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT DISTINCT ?answer WHERE {\n  # Locate the band named XYZ (English band)\n  ?band a ex:Organization .\n  ?band rdfs:label ?bandLabel .\n  FILTER(?bandLabel = \"XYZ\" || ?bandLabel = \"XYZ (English band)\")\n  # Find its members\n  ?band ex:hasMember ?person .\n  # Restrict to the person whose occupation is keyboardist\n  ?person ex:hasOccupation ?occ .\n  ?occ rdfs:label \"keyboardist\" .\n  # Get the birthplace of that person\n  ?person ex:hasBirthPlace ?place .\n  ?place rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds the XYZ band, its member with occupation keyboardist, and returns the label of that member's birth place.",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.211207416999997,
+      "query_seconds": 0.009168084000009458,
+      "usage": {
+        "prompt_tokens": 5529,
+        "completion_tokens": 800,
+        "total_tokens": 6329
+      }
+    },
+    {
+      "id": 34,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Which one was established first, Besix or Circus Herman Renz?",
+      "gold_answer": "Besix",
+      "predicted_answer": "BESIX",
+      "normalized_prediction": "besix",
+      "normalized_gold": "besix",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?answer WHERE {\n  {\n    SELECT ?org ?date ?label WHERE {\n      ?org a ex:Organization ;\n           rdfs:label ?label ;\n           ex:hasInception ?date .\n      FILTER (?label = \"BESIX\" || ?label = \"Circus Herman Renz\")\n    }\n  }\n  BIND(?label AS ?answer)\n}\nORDER BY ASC(?date)\nLIMIT 1",
+      "planner_explanation": "The query retrieves the inception dates of BESIX and Circus Herman Renz and returns the name of the organization with the earlier date.",
+      "bindings": [
+        {
+          "answer": "BESIX"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/besix_org",
+          "predicate": "http://example.org/2wiki-ontology#hasInception",
+          "object": "\"1909\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.533676499999984,
+      "query_seconds": 0.016964583000003586,
+      "usage": {
+        "prompt_tokens": 5512,
+        "completion_tokens": 685,
+        "total_tokens": 6197
+      }
+    },
+    {
+      "id": 35,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Are Bilthoven and Herveld both located in the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "true",
+      "normalized_prediction": "true",
+      "normalized_gold": "yes",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nASK WHERE {\n  ?bilthoven rdfs:label \"Bilthoven\" .\n  ?herveld rdfs:label \"Herveld\" .\n  ?bilthoven ex:hasCountry ?c .\n  ?herveld ex:hasCountry ?c .\n}",
+      "planner_explanation": "The query checks whether both Bilthoven and Herveld are linked to the same country via the ex:hasCountry property.",
+      "bindings": [
+        {
+          "answer": "true"
+        }
+      ],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.64362616599999,
+      "query_seconds": 0.006255375000023378,
+      "usage": {
+        "prompt_tokens": 5519,
+        "completion_tokens": 523,
+        "total_tokens": 6042
+      }
+    },
+    {
+      "id": 36,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Who lived longer, Huchtenburg or Benjamin Nottingham Webster?",
+      "gold_answer": "Huchtenburg",
+      "predicted_answer": "Benjamin Nottingham Webster",
+      "normalized_prediction": "benjamin nottingham webster",
+      "normalized_gold": "huchtenburg",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX exont: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  ?person rdfs:label ?personLabel .\n  FILTER(?personLabel = \"Jan van Huchtenburg\" || ?personLabel = \"Benjamin Nottingham Webster\")\n  ?person exont:hasBirthDate ?birth .\n  ?person exont:hasDeathDate ?death .\n  BIND( (xsd:integer(?death)) - (xsd:integer(?birth)) AS ?age )\n  BIND(?personLabel AS ?answer)\n}\nORDER BY DESC(?age)\nLIMIT 1",
+      "planner_explanation": "Compares the lifespans of the two people and returns the one with the greater age.",
+      "planning_attempts": [],
+      "bindings": [
+        {
+          "answer": "Benjamin Nottingham Webster"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/benjamin_nottingham_webster_1797",
+          "predicate": "http://example.org/2wiki-ontology#hasBirthDate",
+          "object": "\"1797-09-03\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        },
+        {
+          "subject": "http://example.org/extracted/benjamin_nottingham_webster_1797",
+          "predicate": "http://example.org/2wiki-ontology#hasDeathDate",
+          "object": "\"1882-07-03\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 6.669113791999999,
+      "query_seconds": 0.13739333399999953,
+      "usage": {
+        "prompt_tokens": 5515,
+        "completion_tokens": 1028,
+        "total_tokens": 6543
+      }
+    },
+    {
+      "id": 37,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where was the place of burial of Kunigunde Of Poland's father?",
+      "gold_answer": "Wawel Cathedral",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "wawel cathedral",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?answer WHERE {\n  ?kunigunde rdfs:label \"Kunigunde of Poland\" .\n  ?kunigunde ex:hasFather ?father .\n  ?father ex:hasBurialPlace ?place .\n  ?place rdfs:label ?answer .\n}",
+      "planner_explanation": "The query retrieves the burial place of the father of Kunigunde of Poland.",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.9881002919999844,
+      "query_seconds": 0.006184625000003052,
+      "usage": {
+        "prompt_tokens": 5535,
+        "completion_tokens": 594,
+        "total_tokens": 6129
+      }
+    },
+    {
+      "id": 38,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Who is the spouse of the director of film Min Kone Er Uskyldig?",
+      "gold_answer": "Annelise Hovmand",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "annelise hovmand",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?answer WHERE {\n  ?film rdfs:label \"Min kone er uskyldig\" .\n  ?film ex:hasDirector ?director .\n  ?director ex:hasSpouse ?spouse .\n  ?spouse rdfs:label ?answer .\n}",
+      "planner_explanation": "Find the spouse of the director of the film \"Min kone er uskyldig\".",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.590469249999984,
+      "query_seconds": 0.0042319160000090505,
+      "usage": {
+        "prompt_tokens": 5513,
+        "completion_tokens": 531,
+        "total_tokens": 6044
+      }
+    },
+    {
+      "id": 39,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where does the director of film Die Abfahrer work at?",
+      "gold_answer": "Dortmund University of Applied Sciences and Arts",
+      "predicted_answer": "Dortmund University of Applied Sciences and Arts",
+      "normalized_prediction": "dortmund university of applied sciences and arts",
+      "normalized_gold": "dortmund university of applied sciences and arts",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  ?film rdfs:label \"Die Abfahrer\" .\n  ?film ex:hasDirector ?director .\n  ?director rdfs:label \"Adolf Winkelmann\" .\n  ?director ex:hasEmployer ?employer .\n  ?employer rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds the employer of the director of the film \"Die Abfahrer\".",
+      "bindings": [
+        {
+          "answer": "Dortmund University of Applied Sciences and Arts"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/adolf_winkelmann",
+          "predicate": "http://example.org/2wiki-ontology#hasEmployer",
+          "object": "http://example.org/extracted/dortmund_university_of_applied_sciences_and_arts"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": true,
+      "elapsed_seconds": 4.174813999999998,
+      "query_seconds": 0.006927584000010256,
+      "usage": {
+        "prompt_tokens": 5523,
+        "completion_tokens": 614,
+        "total_tokens": 6137
+      }
+    },
+    {
+      "id": 40,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "What is the cause of death of director of film She Asked For It?",
+      "gold_answer": "Parkinson",
+      "predicted_answer": "Parkinson's disease",
+      "normalized_prediction": "parkinson s disease",
+      "normalized_gold": "parkinson",
+      "exact_match": false,
+      "token_f1": 0.5,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  ?film rdfs:label \"She Asked for It\" .\n  ?film ex:hasDirector ?person .\n  ?person rdfs:label \"Erle C. Kenton\" .\n  ?person ex:hasCauseOfDeath ?cause .\n  ?cause rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds the film’s director and returns the label of that person’s cause of death.",
+      "bindings": [
+        {
+          "answer": "Parkinson's disease"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/person_erle_c_kenton",
+          "predicate": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+          "object": "http://example.org/extracted/cause_parkinsons_disease"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.4579459999999926,
+      "query_seconds": 0.005139334000006102,
+      "usage": {
+        "prompt_tokens": 5524,
+        "completion_tokens": 509,
+        "total_tokens": 6033
+      }
+    },
+    {
+      "id": 41,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Which country Æthelwald, Ealdorman Of East Anglia's wife is from?",
+      "gold_answer": "English",
+      "predicted_answer": "England",
+      "normalized_prediction": "england",
+      "normalized_gold": "english",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  ?ealdorman rdfs:label \"Æthelwald\" .\n  ?ealdorman ex:hasSpouse ?wife .\n  ?wife rdfs:label \"Ælfthryth\" .\n  { ?wife ex:hasCitizenship ?c . }\n  UNION\n  { ?wife ex:hasNationality ?c . }\n  ?c rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds Æthelwald's spouse and returns the label of her country.",
+      "bindings": [
+        {
+          "answer": "England"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/aelfthryth",
+          "predicate": "http://example.org/2wiki-ontology#hasCountry",
+          "object": "http://example.org/extracted/england"
+        },
+        {
+          "subject": "http://example.org/extracted/aelfthryth",
+          "predicate": "http://example.org/2wiki-ontology#hasNationality",
+          "object": "http://example.org/extracted/england"
+        }
+      ],
+      "support_uses_inferred_triple": true,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 4.805041791999997,
+      "query_seconds": 0.009833874999998216,
+      "usage": {
+        "prompt_tokens": 5524,
+        "completion_tokens": 733,
+        "total_tokens": 6257
+      }
+    },
+    {
+      "id": 42,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where did Joanna, Duchess Of Durazzo's mother die?",
+      "gold_answer": "Neapolitan",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "neapolitan",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?answer WHERE {\n  ?joanna rdfs:label \"Joanna of Durazzo\" .\n  ?joanna ex:hasMother ?mother .\n  ?mother rdfs:label \"Maria of Calabria\" .\n  ?mother ex:hasDeathPlace ?place .\n  ?place rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds the mother of Joanna of Durazzo and returns the label of the place where that mother died.",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.3868662920000077,
+      "query_seconds": 0.006794708000001037,
+      "usage": {
+        "prompt_tokens": 5505,
+        "completion_tokens": 500,
+        "total_tokens": 6005
+      }
+    },
+    {
+      "id": 43,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where did the director of film Polish-Russian War (Film) study?",
+      "gold_answer": "National Film School in Łódź",
+      "predicted_answer": "National Film School in Łódź",
+      "normalized_prediction": "national film school in łodz",
+      "normalized_gold": "national film school in łodz",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  ?film rdfs:label \"Polish-Russian War\" .\n  ?film a ex:Film .\n  ?film ex:hasDirector ?director .\n  ?director rdfs:label \"Xawery Żuławski\" .\n  ?director ex:hasEducatedAt ?institution .\n  ?institution rdfs:label ?answer .\n}",
+      "planner_explanation": "Retrieves the educational institution of the film's director.",
+      "bindings": [
+        {
+          "answer": "National Film School in Łódź"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/person_xawery_zulawski",
+          "predicate": "http://example.org/2wiki-ontology#hasEducatedAt",
+          "object": "http://example.org/extracted/edu_national_film_school_lodz"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.7838284580000163,
+      "query_seconds": 0.007738709000022936,
+      "usage": {
+        "prompt_tokens": 5530,
+        "completion_tokens": 566,
+        "total_tokens": 6096
+      }
+    },
+    {
+      "id": 44,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Who lived longer, Bernhard Afinger or Melvin Kranzberg?",
+      "gold_answer": "Melvin Kranzberg",
+      "predicted_answer": "Melvin Kranzberg",
+      "normalized_prediction": "melvin kranzberg",
+      "normalized_gold": "melvin kranzberg",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  # Bernhard Afinger\n  ?person1 rdfs:label \"Bernhard Afinger\" .\n  ?person1 ex:hasBirthDate ?birth1 .\n  ?person1 ex:hasDeathDate ?death1 .\n  # Melvin Kranzberg\n  ?person2 rdfs:label \"Melvin Kranzberg\" .\n  ?person2 ex:hasBirthDate ?birth2 .\n  ?person2 ex:hasDeathDate ?death2 .\n  # Compute ages (in years)\n  BIND (YEAR(?death1) - YEAR(?birth1) AS ?age1)\n  BIND (YEAR(?death2) - YEAR(?birth2) AS ?age2)\n  FILTER(BOUND(?age1) && BOUND(?age2))\n  # Choose the longer‑lived person\n  BIND (\n    IF(?age1 > ?age2, \"Bernhard Afinger\",\n      IF(?age2 > ?age1, \"Melvin Kranzberg\", \"Tie\"))\n    AS ?answer)\n}",
+      "planner_explanation": "The query computes each person’s age from birth and death dates and selects the one with the greater age.",
+      "bindings": [
+        {
+          "answer": "Melvin Kranzberg"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/melvin_kranzberg",
+          "predicate": "http://example.org/2wiki-ontology#hasBirthDate",
+          "object": "\"1917-11-22\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        },
+        {
+          "subject": "http://example.org/extracted/melvin_kranzberg",
+          "predicate": "http://example.org/2wiki-ontology#hasDeathDate",
+          "object": "\"1995-12-06\"^^<http://www.w3.org/2001/XMLSchema#date>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.988476042000002,
+      "query_seconds": 0.025890541999984862,
+      "usage": {
+        "prompt_tokens": 5509,
+        "completion_tokens": 930,
+        "total_tokens": 6439
+      }
+    },
+    {
+      "id": 45,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Why did the director of film Normande (Film) die?",
+      "gold_answer": "Parkinson's disease",
+      "predicted_answer": "complications from Parkinson's disease",
+      "normalized_prediction": "complications from parkinson s disease",
+      "normalized_gold": "parkinson s disease",
+      "exact_match": false,
+      "token_f1": 0.7499999999999999,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\n\nSELECT ?answer WHERE {\n  ?film rdfs:label \"Normande\" .\n  ?film ex:hasDirector ?director .\n  ?director ex:hasCauseOfDeath ?cause .\n  ?cause rdfs:label ?answer .\n}",
+      "planner_explanation": "The query retrieves the cause of death of the director of the film Normande.",
+      "bindings": [
+        {
+          "answer": "complications from Parkinson's disease"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/_gilles_carle",
+          "predicate": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+          "object": "http://example.org/extracted/_parkinsons_complications"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.1983822499999803,
+      "query_seconds": 0.006193499999994856,
+      "usage": {
+        "prompt_tokens": 5520,
+        "completion_tokens": 454,
+        "total_tokens": 5974
+      }
+    },
+    {
+      "id": 46,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Are Freestylers and The Nouvelles both from the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "true",
+      "normalized_prediction": "true",
+      "normalized_gold": "yes",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nASK WHERE {\n  ?freestylers rdfs:label \"Freestylers\" .\n  ?theNouvelles rdfs:label \"The Nouvelles\" .\n  ?freestylers ex:hasCountry ?c .\n  ?theNouvelles ex:hasCountry ?c .\n}",
+      "planner_explanation": "The query checks whether Freestylers and The Nouvelles share the same country via the hasCountry property.",
+      "bindings": [
+        {
+          "answer": "true"
+        }
+      ],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.9787789169999996,
+      "query_seconds": 0.004041540999992321,
+      "usage": {
+        "prompt_tokens": 5523,
+        "completion_tokens": 588,
+        "total_tokens": 6111
+      }
+    },
+    {
+      "id": 47,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "What nationality is the singer of Pre (Band)?",
+      "gold_answer": "Japan",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "japan",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT DISTINCT ?answer WHERE {\n  ?band rdfs:label \"Pre (band)\" .\n  ?band ex:hasMember ?person .\n  ?person ex:hasNationality ?country .\n  ?country rdfs:label ?answer .\n}",
+      "planner_explanation": "Select the nationality label of any member of the band \"Pre (band)\".",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.4256126250000136,
+      "query_seconds": 0.006027999999986378,
+      "usage": {
+        "prompt_tokens": 5539,
+        "completion_tokens": 504,
+        "total_tokens": 6043
+      }
+    },
+    {
+      "id": 48,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where did the director of film Mary Jane'S Pa die?",
+      "gold_answer": "New York",
+      "predicted_answer": "New York, New York",
+      "normalized_prediction": "new york new york",
+      "normalized_gold": "new york",
+      "exact_match": false,
+      "token_f1": 0.6666666666666666,
+      "sparql": "SELECT DISTINCT ?answer WHERE {\n  ?film a <http://example.org/2wiki-ontology#Film> ;\n        rdfs:label \"Mary Jane's Pa\" ;\n        <http://example.org/2wiki-ontology#hasDirector> ?director .\n  ?director <http://example.org/2wiki-ontology#hasDeathPlace> ?place .\n  ?place rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds the death place label of the director of the film \"Mary Jane's Pa\".",
+      "bindings": [
+        {
+          "answer": "New York, New York"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/person_william_keighley",
+          "predicate": "http://example.org/2wiki-ontology#hasDeathPlace",
+          "object": "http://example.org/extracted/place_new_york_ny"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.225135042000005,
+      "query_seconds": 0.006336958000019877,
+      "usage": {
+        "prompt_tokens": 5526,
+        "completion_tokens": 469,
+        "total_tokens": 5995
+      }
+    },
+    {
+      "id": 49,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "What nationality is the composer of film Count Your Blessings (1959 Film)?",
+      "gold_answer": "German",
+      "predicted_answer": "Germany",
+      "normalized_prediction": "germany",
+      "normalized_gold": "german",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?answer WHERE {\n  ?film rdfs:label \"Count Your Blessings (1959 film)\" .\n  ?film ex:hasComposer ?composer .\n  ?composer ex:hasNationality ?country .\n  ?country rdfs:label ?answer .\n}",
+      "planner_explanation": "The query finds the film, its composer, and the composer's nationality label.",
+      "bindings": [
+        {
+          "answer": "Germany"
+        },
+        {
+          "answer": "United States"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/franz_waxman",
+          "predicate": "http://example.org/2wiki-ontology#hasCountry",
+          "object": "http://example.org/extracted/germany"
+        },
+        {
+          "subject": "http://example.org/extracted/franz_waxman",
+          "predicate": "http://example.org/2wiki-ontology#hasCountry",
+          "object": "http://example.org/extracted/united_states"
+        },
+        {
+          "subject": "http://example.org/extracted/franz_waxman",
+          "predicate": "http://example.org/2wiki-ontology#hasNationality",
+          "object": "http://example.org/extracted/germany"
+        },
+        {
+          "subject": "http://example.org/extracted/franz_waxman",
+          "predicate": "http://example.org/2wiki-ontology#hasNationality",
+          "object": "http://example.org/extracted/united_states"
+        }
+      ],
+      "support_uses_inferred_triple": true,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.475437291999981,
+      "query_seconds": 0.004779374999998254,
+      "usage": {
+        "prompt_tokens": 5541,
+        "completion_tokens": 511,
+        "total_tokens": 6052
+      }
+    },
+    {
+      "id": 50,
+      "status": "completed",
+      "execution_status": "empty_result",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Which film has the producer died earlier, The Criminal (1960 Film) or A Soldier'S Oath?",
+      "gold_answer": "A Soldier'S Oath",
+      "predicted_answer": "",
+      "normalized_prediction": "",
+      "normalized_gold": "soldier s oath",
+      "exact_match": false,
+      "token_f1": 0.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  {\n    SELECT ?film ?filmLabel ?death WHERE {\n      ?film a ex:CreativeWork .\n      ?film (rdfs:label|skos:altLabel) ?filmLabel .\n      FILTER(\n        ?filmLabel = \"The Criminal\"@en ||\n        ?filmLabel = \"The Criminal (1960 film)\"@en ||\n        ?filmLabel = \"A Soldier's Oath\"@en\n      ) .\n      ?film ex:hasProducer ?producer .\n      ?producer ex:hasDeathDate ?death .\n    }\n    ORDER BY ?death\n    LIMIT 1\n  }\n  BIND(?filmLabel AS ?answer)\n}",
+      "planner_explanation": "The query selects the film whose producer has the earliest death date.",
+      "bindings": [],
+      "supporting_triples": [],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 9.059463707999981,
+      "query_seconds": 0.01805987500000583,
+      "usage": {
+        "prompt_tokens": 5555,
+        "completion_tokens": 1441,
+        "total_tokens": 6996
+      }
+    },
+    {
+      "id": 51,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Where was the performer of song Suicide Social born?",
+      "gold_answer": "Alençon",
+      "predicted_answer": "Alençon, Orne",
+      "normalized_prediction": "alencon orne",
+      "normalized_gold": "alencon",
+      "exact_match": false,
+      "token_f1": 0.6666666666666666,
+      "sparql": "PREFIX ex: <http://example.org/2wiki-ontology#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?answer WHERE {\n  ?song rdfs:label \"Suicide social\" .\n  ?song ex:hasPerformer ?performer .\n  ?performer ex:hasBirthPlace ?answer .\n}",
+      "planner_explanation": "The query retrieves the birth place of the performer of the song \"Suicide social\".",
+      "bindings": [
+        {
+          "answer": "Alençon, Orne"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/orelsan",
+          "predicate": "http://example.org/2wiki-ontology#hasBirthPlace",
+          "object": "http://example.org/extracted/alencon_orne"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.802907833000006,
+      "query_seconds": 0.00371420900000885,
+      "usage": {
+        "prompt_tokens": 5523,
+        "completion_tokens": 567,
+        "total_tokens": 6090
+      }
+    },
+    {
+      "id": 52,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "When was the company that published The Rip Off Review Of Western Culture founded?",
+      "gold_answer": "1969",
+      "predicted_answer": "1969",
+      "normalized_prediction": "1969",
+      "normalized_gold": "1969",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "SELECT ?answer WHERE {\n  # Identify the creative work by its exact label\n  ?work rdfs:label \"The Rip Off Review of Western Culture\" .\n  # Find the publishing organization of that work\n  ?work <http://example.org/2wiki-ontology#hasPublisher> ?org .\n  # Ensure the organization matches the known company label\n  ?org rdfs:label \"Rip Off Press\" .\n  # Retrieve the founding (inception) date of the organization\n  ?org <http://example.org/2wiki-ontology#hasInception> ?answer .\n}",
+      "planner_explanation": "The query finds the work's publisher and returns its inception date.",
+      "bindings": [
+        {
+          "answer": "1969"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/rip_off_press",
+          "predicate": "http://example.org/2wiki-ontology#hasInception",
+          "object": "\"1969\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 3.6243537910000043,
+      "query_seconds": 0.007171790999990435,
+      "usage": {
+        "prompt_tokens": 5510,
+        "completion_tokens": 537,
+        "total_tokens": 6047
+      }
+    },
+    {
+      "id": 53,
+      "status": "completed",
+      "execution_status": "answered",
+      "method": "question_only_symbolic_sparql_qa",
+      "prompt_version": "question_to_sparql_v1",
+      "question": "Which film has the producer who was born earlier, Term Life or Housefull 2?",
+      "gold_answer": "Housefull 2",
+      "predicted_answer": "Housefull 2",
+      "normalized_prediction": "housefull 2",
+      "normalized_gold": "housefull 2",
+      "exact_match": true,
+      "token_f1": 1.0,
+      "sparql": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX ex: <http://example.org/2wiki-ontology#>\nSELECT ?answer WHERE {\n  {\n    SELECT ?filmLabel ?birthDate WHERE {\n      VALUES ?filmTitle { \"Term Life\" \"Housefull 2\" }\n      ?film rdfs:label ?filmTitle .\n      ?film ex:hasProducer ?producer .\n      ?producer ex:hasBirthDate ?birthDate .\n      BIND(?filmTitle AS ?filmLabel)\n    }\n    ORDER BY ?birthDate\n    LIMIT 1\n  }\n  BIND(?filmLabel AS ?answer)\n}",
+      "planner_explanation": "Select the film whose producer's birth date is earliest.",
+      "bindings": [
+        {
+          "answer": "Housefull 2"
+        }
+      ],
+      "supporting_triples": [
+        {
+          "subject": "http://example.org/extracted/film_housefull2",
+          "predicate": "http://example.org/2wiki-ontology#hasProducer",
+          "object": "http://example.org/extracted/person_sajid_nadiadwala"
+        }
+      ],
+      "support_uses_inferred_triple": false,
+      "support_uses_shacl_repair": false,
+      "elapsed_seconds": 5.472999125000001,
+      "query_seconds": 0.01401420800002029,
+      "usage": {
+        "prompt_tokens": 5546,
+        "completion_tokens": 822,
+        "total_tokens": 6368
+      }
+    }
+  ]
+}

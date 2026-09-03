@@ -1,0 +1,32 @@
+{
+  "contract_version": 1,
+  "status": "scoreable",
+  "eligible_for_graph_evaluation": true,
+  "policy": "Only structural unscoreability excludes a candidate; warning-level model errors remain measurable.",
+  "metrics": {
+    "entities": 3,
+    "active_entities": 3,
+    "raw_semantic_facts": 2,
+    "mapped_semantic_facts": 2,
+    "mapped_relations": 2,
+    "unmapped_relations": 0,
+    "question_anchor_entities": 0,
+    "ungrounded_active_entities": 1
+  },
+  "question_anchor_entity_ids": [],
+  "ungrounded_active_entity_ids": [
+    "film_1924_king_of_the_wild_horses"
+  ],
+  "issues": [
+    {
+      "code": "no_question_anchor",
+      "severity": "warning",
+      "message": "No fact-bearing extracted entity label or alias occurs in the question."
+    },
+    {
+      "code": "entities_not_source_grounded",
+      "severity": "warning",
+      "message": "Fact-bearing entity labels/aliases not found in source text: film_1924_king_of_the_wild_horses"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_runaway_2005 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Runaway (2005 film)" ;
+    onto:hasDirector data:person_tim_mccann .
+
+data:edu_suny_purchase a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "State University of New York at Purchase" .
+
+data:person_tim_mccann a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tim McCann" ;
+    onto:hasEducatedAt data:edu_suny_purchase .
+

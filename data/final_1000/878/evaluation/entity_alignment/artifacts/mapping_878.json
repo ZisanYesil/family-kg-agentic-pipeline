@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/878/originals/extracted_878.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/878/ground_truth_878.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/palencia": "http://example.org/entity/Palencia",
+    "http://example.org/extracted/berengaria_of_barcelona": "http://example.org/entity/Berengaria_of_Barcelona"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/berengaria_of_barcelona",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Berengaria of Barcelona",
+          "source": "altLabel"
+        },
+        {
+          "text": "Berenguela de Barcelona",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Berengaria of Barcelona. has death place: Palencia. inverse has mother: Sancha of Castile.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Berengaria_of_Barcelona",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Berengaria of Barcelona",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Berengaria of Barcelona",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Berengaria of Barcelona",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9638382196426392,
+      "graph_score": 0.9819191098213196,
+      "margin": 0.5889534652233124
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/palencia",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Palencia",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Palencia. inverse has death place: Berengaria of Barcelona.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Palencia",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Palencia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Palencia",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Palencia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sancha_of_castile",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sancha of Castile",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Sancha of Castile. has mother: Berengaria of Barcelona.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sancha_of_Castile_Queen_of_Navarre",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sancha of Castile Queen of Navarre",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sancha of Castile",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Sancha of Castile Queen of Navarre",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8446401357650757,
+      "name_embedding_score": 0.8313891887664795,
+      "string_score": 0.75,
+      "independent_identity_support": true,
+      "context_score": 0.9315642714500427,
+      "graph_score": 0.9657821655273438,
+      "margin": 0.3925090432167053
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

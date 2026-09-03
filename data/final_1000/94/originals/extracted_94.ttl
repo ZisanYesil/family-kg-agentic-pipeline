@@ -1,0 +1,31 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_dortoir_des_grandes a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Dortoir des grandes" ;
+    onto:hasDirector data:person_henri_decoin .
+
+data:film_is_paris_burning a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Is Paris Burning?" ;
+    onto:hasDirector data:person_rene_clement .
+
+data:person_henri_decoin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Henri Decoin" ;
+    onto:hasNationality data:country_france .
+
+data:person_rene_clement a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "René Clément" ;
+    onto:hasNationality data:country_france .
+
+data:country_france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+

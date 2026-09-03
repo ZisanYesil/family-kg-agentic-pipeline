@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:_paul_richter a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Paul Richter" ;
+    onto:hasSpouse data:_aud_egede_nissen .
+
+data:_aud_egede_nissen a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Aud Egede-Nissen" ;
+    onto:hasNationality data:_norway .
+
+data:_norway a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Norway" ;
+    skos:altLabel "Norwegian" .
+

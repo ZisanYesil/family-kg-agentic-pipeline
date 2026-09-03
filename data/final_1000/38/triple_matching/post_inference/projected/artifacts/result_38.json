@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/38/evaluation/entity_alignment/final_extracted_aligned_38.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/38/evaluation/entity_alignment/final_ground_truth_aligned_38.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Johan_Jacobsen",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Johan_Jacobsen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Johan_Jacobsen",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Johan_Jacobsen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Min_kone_er_uskyldig",
+      "predicate": "hasCreator",
+      "object": "Johan_Jacobsen",
+      "subject_uri": "http://example.org/entity/Min_kone_er_uskyldig",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Johan_Jacobsen"
+    },
+    {
+      "subject": "Min_kone_er_uskyldig",
+      "predicate": "hasDirector",
+      "object": "Johan_Jacobsen",
+      "subject_uri": "http://example.org/entity/Min_kone_er_uskyldig",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Johan_Jacobsen"
+    },
+    {
+      "subject": "Min_kone_er_uskyldig",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Min_kone_er_uskyldig",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Min_kone_er_uskyldig",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Min_kone_er_uskyldig",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Min_kone_er_uskyldig",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Min_kone_er_uskyldig",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Annelise_Hovmand",
+      "predicate": "hasSpouse",
+      "object": "Johan_Jacobsen",
+      "subject_uri": "http://example.org/entity/Annelise_Hovmand",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Johan_Jacobsen"
+    },
+    {
+      "subject": "Annelise_Hovmand",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Annelise_Hovmand",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Annelise_Hovmand",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Annelise_Hovmand",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Johan_Jacobsen",
+      "predicate": "hasSpouse",
+      "object": "Annelise_Hovmand",
+      "subject_uri": "http://example.org/entity/Johan_Jacobsen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Annelise_Hovmand"
+    }
+  ],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 11,
+    "union_triples_in_scope": 11,
+    "true_positives": 7,
+    "false_positives": 0,
+    "false_negatives": 4,
+    "precision": 1.0,
+    "recall": 0.6363636363636364,
+    "f1": 0.7777777777777778
+  },
+  "stage": "post_inference"
+}

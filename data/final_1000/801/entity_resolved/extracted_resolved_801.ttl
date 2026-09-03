@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_get_the_girl a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Get The Girl" ;
+    onto:hasDirector data:person_eric_england .
+
+data:person_eric_england a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Eric England" ;
+    onto:hasBirthPlace data:place_russellville_arkansas .
+
+data:place_russellville_arkansas a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Russellville, Arkansas" .
+

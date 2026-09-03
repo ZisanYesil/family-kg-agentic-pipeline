@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/421/evaluation/entity_alignment/final_extracted_aligned_421.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/421/evaluation/entity_alignment/final_ground_truth_aligned_421.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Bob_Graham",
+      "predicate": "hasChild",
+      "object": "Gwendolyn_Graham",
+      "subject_uri": "http://example.org/entity/Bob_Graham",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Gwendolyn_Graham"
+    },
+    {
+      "subject": "Bob_Graham",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Bob_Graham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Bob_Graham",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bob_Graham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Gwendolyn_Graham",
+      "predicate": "hasParent",
+      "object": "Bob_Graham",
+      "subject_uri": "http://example.org/entity/Gwendolyn_Graham",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Bob_Graham"
+    },
+    {
+      "subject": "Gwendolyn_Graham",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Gwendolyn_Graham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Gwendolyn_Graham",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gwendolyn_Graham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Bob_Graham",
+      "predicate": "hasEmployer",
+      "object": "Harvard",
+      "subject_uri": "http://example.org/entity/Bob_Graham",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/Harvard"
+    },
+    {
+      "subject": "Harvard",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Harvard",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Harvard",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Harvard",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Bob_Graham",
+      "predicate": "hasEmployer",
+      "object": "bob_graham_center",
+      "subject_uri": "http://example.org/entity/Bob_Graham",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/extracted/bob_graham_center"
+    },
+    {
+      "subject": "bob_graham_center",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/bob_graham_center",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "bob_graham_center",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/extracted/bob_graham_center",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 12,
+    "true_positives": 6,
+    "false_positives": 3,
+    "false_negatives": 3,
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.6666666666666666
+  },
+  "stage": "post_inference"
+}

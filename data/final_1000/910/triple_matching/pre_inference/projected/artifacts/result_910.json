@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/910/evaluation/entity_alignment/baseline_extracted_aligned_910.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/910/evaluation/entity_alignment/baseline_ground_truth_aligned_910.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Investors_Chronicle",
+      "predicate": "hasInception",
+      "object": "\"1860\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Investors_Chronicle",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1860\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "The_New_American",
+      "predicate": "hasInception",
+      "object": "\"1985\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/The_New_American",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1985\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "investors_chronicle",
+      "predicate": "hasPublicationDate",
+      "object": "\"1860\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/extracted/investors_chronicle",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1860\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "investors_chronicle",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/extracted/investors_chronicle",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "investors_chronicle",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/investors_chronicle",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "investors_chronicle",
+      "predicate": "label",
+      "object": "\"Investors Chronicle\"",
+      "subject_uri": "http://example.org/extracted/investors_chronicle",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Investors Chronicle\""
+    },
+    {
+      "subject": "the_new_american",
+      "predicate": "hasPublicationDate",
+      "object": "\"1985\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/extracted/the_new_american",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1985\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "the_new_american",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/extracted/the_new_american",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "the_new_american",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/the_new_american",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "the_new_american",
+      "predicate": "label",
+      "object": "\"The New American\"",
+      "subject_uri": "http://example.org/extracted/the_new_american",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The New American\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 0,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 0,
+    "false_positives": 8,
+    "false_negatives": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "pre_inference"
+}

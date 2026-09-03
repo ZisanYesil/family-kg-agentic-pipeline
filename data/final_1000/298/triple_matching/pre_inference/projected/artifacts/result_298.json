@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/298/evaluation/entity_alignment/baseline_extracted_aligned_298.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/298/evaluation/entity_alignment/baseline_ground_truth_aligned_298.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Borys_Lankosz",
+      "predicate": "hasEducatedAt",
+      "object": "National_Film_School_in_Łódź",
+      "subject_uri": "http://example.org/entity/Borys_Lankosz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/National_Film_School_in_Łódź"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Rewers",
+      "predicate": "hasDirector",
+      "object": "Borys_Lankosz",
+      "subject_uri": "http://example.org/entity/Rewers",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Borys_Lankosz"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Borys_Lankosz",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Borys_Lankosz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Borys_Lankosz",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Borys_Lankosz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Borys_Lankosz",
+      "predicate": "label",
+      "object": "\"Borys Lankosz\"",
+      "subject_uri": "http://example.org/entity/Borys_Lankosz",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Borys Lankosz\""
+    },
+    {
+      "subject": "National_Film_School_in_Łódź",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/National_Film_School_in_Łódź",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "National_Film_School_in_Łódź",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/National_Film_School_in_Łódź",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "National_Film_School_in_Łódź",
+      "predicate": "label",
+      "object": "\"National Film School in Łódź\"",
+      "subject_uri": "http://example.org/entity/National_Film_School_in_Łódź",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"National Film School in Łódź\""
+    },
+    {
+      "subject": "reverse_film",
+      "predicate": "hasDirector",
+      "object": "Borys_Lankosz",
+      "subject_uri": "http://example.org/extracted/reverse_film",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Borys_Lankosz"
+    },
+    {
+      "subject": "reverse_film",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/extracted/reverse_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "reverse_film",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/reverse_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "reverse_film",
+      "predicate": "label",
+      "object": "\"Reverse\"",
+      "subject_uri": "http://example.org/extracted/reverse_film",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Reverse\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

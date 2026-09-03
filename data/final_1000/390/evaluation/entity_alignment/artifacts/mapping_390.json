@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/390/originals/extracted_390.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/390/ground_truth_390.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/country_italy": "http://example.org/entity/Italian",
+    "http://example.org/extracted/film_3_avengers_1964": "http://example.org/entity/3_Avengers"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_italy",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Italian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Italy",
+          "source": "label"
+        },
+        {
+          "text": "country italy",
+          "source": "uri"
+        }
+      ],
+      "context": "Italian. inverse has country of origin: 3 Avengers. inverse has country of origin: The Redemption.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Italian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Italian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Italian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Italian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9762318730354309,
+      "graph_score": 0.9881159067153931,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_3_avengers_1964",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "3 Avengers",
+          "source": "label"
+        },
+        {
+          "text": "film 3 avengers 1964",
+          "source": "uri"
+        }
+      ],
+      "context": "3 Avengers. has country of origin: Italian.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/3_Avengers",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "3 Avengers",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "3 Avengers",
+        "extracted_source": "label",
+        "ground_truth_text": "3 Avengers",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.455924391746521
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_redemption_1924",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Redemption",
+          "source": "label"
+        },
+        {
+          "text": "film the redemption 1924",
+          "source": "uri"
+        }
+      ],
+      "context": "The Redemption. has country of origin: Italian.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Redemption_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Redemption film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film the redemption 1924",
+        "extracted_source": "uri",
+        "ground_truth_text": "The Redemption film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8928054571151733,
+      "name_embedding_score": 0.9132378697395325,
+      "string_score": 0.8014534711837769,
+      "independent_identity_support": true,
+      "context_score": 0.8865853548049927,
+      "graph_score": 0.9432926774024963,
+      "margin": 0.5153394639492035
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/372/originals/extracted_372.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/372/ground_truth_372.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jane_bennet": "http://example.org/entity/Jane_Bennet",
+    "http://example.org/extracted/john_scudamore_2nd_viscount_scudamore": "http://example.org/entity/John_Scudamore_2nd_Viscount_Scudamore",
+    "http://example.org/extracted/james_scudamore_3rd_viscount_scudamore": "http://example.org/entity/James_Scudamore_3rd_Viscount_Scudamore"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/james_scudamore_3rd_viscount_scudamore",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Scudamore, 3rd Viscount Scudamore",
+          "source": "label"
+        },
+        {
+          "text": "james scudamore 3rd viscount scudamore",
+          "source": "uri"
+        }
+      ],
+      "context": "James Scudamore, 3rd Viscount Scudamore. has father: John Scudamore, 2nd Viscount Scudamore.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_Scudamore_3rd_Viscount_Scudamore",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James Scudamore 3rd Viscount Scudamore",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James Scudamore, 3rd Viscount Scudamore",
+        "extracted_source": "label",
+        "ground_truth_text": "James Scudamore 3rd Viscount Scudamore",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9938787221908569,
+      "string_score": 0.9941558241844177,
+      "independent_identity_support": true,
+      "context_score": 0.9978626370429993,
+      "graph_score": 0.9989312887191772,
+      "margin": 0.25142818689346313
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jane_bennet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jane Bennet",
+          "source": "label"
+        }
+      ],
+      "context": "Jane Bennet. inverse has mother: John Scudamore, 2nd Viscount Scudamore.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jane_Bennet",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jane Bennet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jane Bennet",
+        "extracted_source": "label",
+        "ground_truth_text": "Jane Bennet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9985606074333191,
+      "graph_score": 0.9992803335189819,
+      "margin": 0.7734526544809341
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_scudamore_2nd_viscount_scudamore",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Scudamore, 2nd Viscount Scudamore",
+          "source": "label"
+        },
+        {
+          "text": "john scudamore 2nd viscount scudamore",
+          "source": "uri"
+        }
+      ],
+      "context": "John Scudamore, 2nd Viscount Scudamore. has mother: Jane Bennet. inverse has father: James Scudamore, 3rd Viscount Scudamore.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Scudamore_2nd_Viscount_Scudamore",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Scudamore 2nd Viscount Scudamore",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Scudamore, 2nd Viscount Scudamore",
+        "extracted_source": "label",
+        "ground_truth_text": "John Scudamore 2nd Viscount Scudamore",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9955960512161255,
+      "string_score": 0.9940000176429749,
+      "independent_identity_support": true,
+      "context_score": 0.9965214133262634,
+      "graph_score": 0.9982607364654541,
+      "margin": 0.2503601908683777
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

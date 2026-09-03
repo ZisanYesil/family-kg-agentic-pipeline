@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/855/originals/extracted_855.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/855/ground_truth_855.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/faces_in_the_dark_film": "http://example.org/entity/Faces_in_the_Dark",
+    "http://example.org/extracted/lew_landers": "http://example.org/entity/Lew_Landers",
+    "http://example.org/extracted/condemned_women_film": "http://example.org/entity/Condemned_Women",
+    "http://example.org/extracted/david_edy": "http://example.org/entity/David_Eady"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/condemned_women_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Condemned Women",
+          "source": "label"
+        },
+        {
+          "text": "condemned women film",
+          "source": "uri"
+        }
+      ],
+      "context": "Condemned Women. has director: Louis Friedlander.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Condemned_Women",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Condemned Women",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Condemned Women",
+        "extracted_source": "label",
+        "ground_truth_text": "Condemned Women",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7527469992637634,
+      "graph_score": 0.8763735294342041,
+      "margin": 0.8271936029195786
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/david_edy",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Eady",
+          "source": "label"
+        },
+        {
+          "text": "david edy",
+          "source": "uri"
+        }
+      ],
+      "context": "David Eady. has birth date: 1924-04-22. has death date: 2009-04-05. inverse has director: Faces in the Dark.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/David_Eady",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "David Eady",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "David Eady",
+        "extracted_source": "label",
+        "ground_truth_text": "David Eady",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7332679629325867,
+      "graph_score": 0.8666340112686157,
+      "margin": 0.35898613929748535
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/faces_in_the_dark_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Faces in the Dark",
+          "source": "label"
+        },
+        {
+          "text": "faces in the dark film",
+          "source": "uri"
+        }
+      ],
+      "context": "Faces in the Dark. has director: David Eady.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Faces_in_the_Dark",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Faces in the Dark",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Faces in the Dark",
+        "extracted_source": "label",
+        "ground_truth_text": "Faces in the Dark",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.853093683719635
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lew_landers",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis Friedlander",
+          "source": "altLabel"
+        },
+        {
+          "text": "Lew Landers",
+          "source": "label"
+        }
+      ],
+      "context": "Louis Friedlander. has birth date: 1901-01-02. has death date: 1962-12-16. inverse has director: Condemned Women.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lew_Landers",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lew Landers",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lew Landers",
+        "extracted_source": "label",
+        "ground_truth_text": "Lew Landers",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6522916555404663,
+      "graph_score": 0.8261458277702332,
+      "margin": 0.710637241601944
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/David_Eady_film_director"
+  ]
+}

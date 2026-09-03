@@ -1,0 +1,35 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_c_man a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "C-Man" ;
+    onto:hasDirector data:person_joseph_lerner .
+
+data:film_greencastle a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Greencastle" ;
+    onto:hasDirector data:person_koran_dunbar .
+
+data:country_canada a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Canada" .
+
+data:country_usa a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+data:person_joseph_lerner a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joseph Lerner" ;
+    onto:hasNationality data:country_canada .
+
+data:person_koran_dunbar a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Koran Dunbar" ;
+    onto:hasNationality data:country_usa .
+

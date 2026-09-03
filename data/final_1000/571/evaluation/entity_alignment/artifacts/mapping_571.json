@@ -1,0 +1,115 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/571/originals/extracted_571.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/571/ground_truth_571.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/conrad_ii_hre": "http://example.org/entity/Conrad_II"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/conrad_ii_hre",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Conrad II",
+          "source": "label"
+        },
+        {
+          "text": "conrad ii hre",
+          "source": "uri"
+        }
+      ],
+      "context": "Conrad II. inverse has father: Henry III, Holy Roman Emperor.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Conrad_II",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Conrad II",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Conrad II",
+        "extracted_source": "label",
+        "ground_truth_text": "Conrad II",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.773047149181366,
+      "graph_score": 0.773047149181366,
+      "margin": 0.4673636555671692
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/henry_iii_hre",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henry III, Holy Roman Emperor",
+          "source": "label"
+        },
+        {
+          "text": "henry iii hre",
+          "source": "uri"
+        }
+      ],
+      "context": "Henry III, Holy Roman Emperor. has father: Conrad II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Henry_III",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Henry III",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henry III, Holy Roman Emperor",
+        "extracted_source": "label",
+        "ground_truth_text": "Henry III",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8006062507629395,
+      "name_embedding_score": 0.8127660751342773,
+      "string_score": 0.6131578683853149,
+      "independent_identity_support": false,
+      "context_score": 0.9274702072143555,
+      "graph_score": 0.9637351036071777,
+      "margin": 0.3954351246356964
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Speyer"
+  ]
+}

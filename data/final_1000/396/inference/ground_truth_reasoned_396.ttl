@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Princess_Hermine_of_Waldeck_and_Pyrmont a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:George_II ;
+    ex:hasParent entity:George_II .
+
+entity:Princess_Augusta_of_Schwarzburg_Sondershausen a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:George_II .
+
+entity:George_II a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Princess_Hermine_of_Waldeck_and_Pyrmont ;
+    ex:hasMother entity:Princess_Augusta_of_Schwarzburg_Sondershausen ;
+    ex:hasParent entity:Princess_Augusta_of_Schwarzburg_Sondershausen .
+

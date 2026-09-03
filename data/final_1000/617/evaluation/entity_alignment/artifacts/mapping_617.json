@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/617/originals/extracted_617.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/617/ground_truth_617.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_fred_fisher": "http://example.org/entity/Fred_Fisher",
+    "http://example.org/extracted/song_oui_oui_marie": "http://example.org/entity/Oui_Oui_Marie",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has nationality: Alfred Breitenbach.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.577487051486969,
+      "graph_score": 0.2887435257434845,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_fred_fisher",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alfred Breitenbach",
+          "source": "altLabel"
+        },
+        {
+          "text": "Fred Fisher",
+          "source": "label"
+        },
+        {
+          "text": "person fred fisher",
+          "source": "uri"
+        }
+      ],
+      "context": "Alfred Breitenbach. has nationality: American. inverse has composer: Oui, Oui, Marie.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fred_Fisher",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fred Fisher",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fred Fisher",
+        "extracted_source": "label",
+        "ground_truth_text": "Fred Fisher",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5769446492195129,
+      "graph_score": 0.4551389813423157,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_oui_oui_marie",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Oui, Oui, Marie",
+          "source": "label"
+        },
+        {
+          "text": "song oui oui marie",
+          "source": "uri"
+        }
+      ],
+      "context": "Oui, Oui, Marie. has composer: Alfred Breitenbach.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Oui_Oui_Marie",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Oui Oui Marie",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Oui, Oui, Marie",
+        "extracted_source": "label",
+        "ground_truth_text": "Oui Oui Marie",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9839707016944885,
+      "string_score": 0.9678571224212646,
+      "independent_identity_support": true,
+      "context_score": 0.5231361389160156,
+      "graph_score": 0.7615680694580078,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

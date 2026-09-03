@@ -1,0 +1,208 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/623/originals/extracted_623.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/623/ground_truth_623.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_kalank": "http://example.org/entity/Kalank",
+    "http://example.org/extracted/person_soundarya": "http://example.org/entity/Soundarya",
+    "http://example.org/extracted/person_karan_johar": "http://example.org/entity/Karan_Johar",
+    "http://example.org/extracted/film_dweepa": "http://example.org/entity/Dweepa"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_dweepa",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dweepa",
+          "source": "label"
+        },
+        {
+          "text": "film dweepa",
+          "source": "uri"
+        }
+      ],
+      "context": "Dweepa. has producer: Soundarya. has publication date: 2002.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dweepa",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dweepa",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dweepa",
+        "extracted_source": "label",
+        "ground_truth_text": "Dweepa",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8896313309669495,
+      "graph_score": 0.9448156356811523,
+      "margin": 0.636532336473465
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_kalank",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kalank",
+          "source": "label"
+        },
+        {
+          "text": "film kalank",
+          "source": "uri"
+        }
+      ],
+      "context": "Kalank. has producer: Karan Johar. has publication date: 2019.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kalank",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kalank",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kalank",
+        "extracted_source": "label",
+        "ground_truth_text": "Kalank",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8436458706855774,
+      "graph_score": 0.9218229055404663,
+      "margin": 0.6394619643688202
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_karan_johar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Karan Johar",
+          "source": "altLabel"
+        },
+        {
+          "text": "Karan Kumar Johar",
+          "source": "label"
+        },
+        {
+          "text": "person karan johar",
+          "source": "uri"
+        }
+      ],
+      "context": "Karan Johar. has birth date: 1972-05-25. inverse has producer: Kalank.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Karan_Johar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Karan Johar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Karan Johar",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Karan Johar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.67537721991539
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_soundarya",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Soundarya",
+          "source": "altLabel"
+        },
+        {
+          "text": "Soundarya Sathyanarayana",
+          "source": "label"
+        },
+        {
+          "text": "person soundarya",
+          "source": "uri"
+        }
+      ],
+      "context": "Soundarya. has birth date: 1972-07-18. has death date: 2004-04-17. inverse has producer: Dweepa.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Soundarya",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Soundarya",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Soundarya",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Soundarya",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9471211433410645,
+      "graph_score": 0.9735605716705322,
+      "margin": 0.6411910355091095
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

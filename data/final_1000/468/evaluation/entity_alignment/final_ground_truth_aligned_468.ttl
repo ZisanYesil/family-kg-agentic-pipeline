@@ -1,0 +1,33 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Félicité_2017_film a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Alain_Gomis ;
+    ex:hasDirector entity:Alain_Gomis .
+
+entity:Villa_Amalia_film a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Benoît_Jacquot ;
+    ex:hasDirector entity:Benoît_Jacquot .
+
+entity:Alain_Gomis a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:French,
+        entity:Senegalese ;
+    ex:hasCountry entity:French,
+        entity:Senegalese .
+
+entity:Benoît_Jacquot a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:French ;
+    ex:hasCountry entity:French .
+
+entity:Senegalese a ex:Country,
+        ex:Place .
+
+entity:French a ex:Country,
+        ex:Place .
+

@@ -1,0 +1,28 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:A_South_Sea_Bubble a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:T_Hayes_Hunter ;
+    ex:hasDirector entity:T_Hayes_Hunter .
+
+entity:The_Young_Animals a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Maury_Dexter ;
+    ex:hasDirector entity:Maury_Dexter .
+
+entity:Maury_Dexter a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:American ;
+    ex:hasCountry entity:American .
+
+entity:T_Hayes_Hunter a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:American ;
+    ex:hasCountry entity:American .
+
+entity:American a ex:Country,
+        ex:Place .
+

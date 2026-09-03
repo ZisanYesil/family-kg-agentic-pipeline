@@ -1,0 +1,91 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/121/evaluation/entity_alignment/baseline_extracted_aligned_121.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/121/evaluation/entity_alignment/baseline_ground_truth_aligned_121.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "The_Return_of_East_Atlanta_Santa",
+      "predicate": "hasPublicationDate",
+      "object": "\"2016-12-16\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/The_Return_of_East_Atlanta_Santa",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"2016-12-16\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "The_Thorn_in_Mrs_Rose_s_Side",
+      "predicate": "hasPublicationDate",
+      "object": "\"1968\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/The_Thorn_in_Mrs_Rose_s_Side",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1968\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "The_Return_of_East_Atlanta_Santa",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The_Return_of_East_Atlanta_Santa",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "The_Return_of_East_Atlanta_Santa",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Return_of_East_Atlanta_Santa",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Return_of_East_Atlanta_Santa",
+      "predicate": "label",
+      "object": "\"The Return of East Atlanta Santa\"",
+      "subject_uri": "http://example.org/entity/The_Return_of_East_Atlanta_Santa",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Return of East Atlanta Santa\""
+    },
+    {
+      "subject": "The_Thorn_in_Mrs_Rose_s_Side",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The_Thorn_in_Mrs_Rose_s_Side",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "The_Thorn_in_Mrs_Rose_s_Side",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Thorn_in_Mrs_Rose_s_Side",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Thorn_in_Mrs_Rose_s_Side",
+      "predicate": "label",
+      "object": "\"The Thorn in Mrs. Rose's Side\"",
+      "subject_uri": "http://example.org/entity/The_Thorn_in_Mrs_Rose_s_Side",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Thorn in Mrs. Rose's Side\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 8,
+    "true_positives": 2,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.25,
+    "recall": 1.0,
+    "f1": 0.4
+  },
+  "stage": "pre_inference"
+}

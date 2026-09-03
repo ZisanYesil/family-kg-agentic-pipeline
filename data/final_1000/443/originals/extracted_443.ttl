@@ -1,0 +1,31 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_family_katta a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Family Katta" ;
+    onto:hasDirector data:person_chandrakant_kulkarni .
+
+data:film_ward_no_7 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Ward No.7" ;
+    onto:hasDirector data:person_p_venu .
+
+data:person_chandrakant_kulkarni a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Chandrakant Kulkarni" ;
+    onto:hasNationality data:country_india .
+
+data:person_p_venu a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "P. Venu" ;
+    onto:hasNationality data:country_india .
+
+data:country_india a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "India" ;
+    skos:altLabel "Indian" .
+

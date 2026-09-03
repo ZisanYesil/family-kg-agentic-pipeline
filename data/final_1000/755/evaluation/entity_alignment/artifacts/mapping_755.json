@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/755/originals/extracted_755.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/755/ground_truth_755.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/before_the_streets_2016": "http://example.org/entity/Before_the_Streets",
+    "http://example.org/extracted/buchanan_rides_alone_1958": "http://example.org/entity/Buchanan_Rides_Alone",
+    "http://example.org/extracted/canada": "http://example.org/entity/Canadian",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/before_the_streets_2016",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Before the Streets",
+          "source": "label"
+        },
+        {
+          "text": "before the streets 2016",
+          "source": "uri"
+        }
+      ],
+      "context": "Before the Streets. has country of origin: Canadian.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Before_the_Streets",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Before the Streets",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Before the Streets",
+        "extracted_source": "label",
+        "ground_truth_text": "Before the Streets",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.8548332154750824
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/buchanan_rides_alone_1958",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Buchanan Rides Alone",
+          "source": "label"
+        },
+        {
+          "text": "buchanan rides alone 1958",
+          "source": "uri"
+        }
+      ],
+      "context": "Buchanan Rides Alone. has country of origin: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Buchanan_Rides_Alone",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Buchanan Rides Alone",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Buchanan Rides Alone",
+        "extracted_source": "label",
+        "ground_truth_text": "Buchanan Rides Alone",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8255311846733093
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/canada",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Canadian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Canada",
+          "source": "label"
+        }
+      ],
+      "context": "Canadian. inverse has country of origin: Before the Streets.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Canadian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Canadian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Canadian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Canadian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6839728057384491
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has country of origin: Buchanan Rides Alone.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6878644526004791
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

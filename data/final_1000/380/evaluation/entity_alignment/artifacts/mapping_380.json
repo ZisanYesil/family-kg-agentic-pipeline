@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/380/originals/extracted_380.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/380/ground_truth_380.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_kizhakke_varum_paattu": "http://example.org/entity/Kizhakke_Varum_Paattu",
+    "http://example.org/extracted/film_le_maitre_d_ecole": "http://example.org/entity/Le_Maître_d_école"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_kizhakke_varum_paattu",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kizhakke Varum Paattu",
+          "source": "label"
+        },
+        {
+          "text": "film kizhakke varum paattu",
+          "source": "uri"
+        }
+      ],
+      "context": "Kizhakke Varum Paattu. has publication date: 1993.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kizhakke_Varum_Paattu",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kizhakke Varum Paattu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kizhakke Varum Paattu",
+        "extracted_source": "label",
+        "ground_truth_text": "Kizhakke Varum Paattu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6142813563346863
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_le_maitre_d_ecole",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Le Maître d'école",
+          "source": "label"
+        },
+        {
+          "text": "film le maitre d ecole",
+          "source": "uri"
+        }
+      ],
+      "context": "Le Maître d'école. has publication date: 1981.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Le_Maître_d_école",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Le Maître d école",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Le Maître d'école",
+        "extracted_source": "label",
+        "ground_truth_text": "Le Maître d école",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9990125298500061,
+      "string_score": 0.9735293984413147,
+      "independent_identity_support": true,
+      "context_score": 0.9949420094490051,
+      "graph_score": 0.9949420094490051,
+      "margin": 0.6218783259391785
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

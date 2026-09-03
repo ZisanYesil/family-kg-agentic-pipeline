@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_candy_1944 a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Candy (1944 song)" ;
+    onto:hasComposer data:person_alex_kramer .
+
+data:person_alex_kramer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alex Kramer" ;
+    onto:hasBirthPlace data:place_montreal_canada ;
+    skos:altLabel "Alex J. Kramer" .
+
+data:place_montreal_canada a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Montreal, Quebec, Canada" .
+

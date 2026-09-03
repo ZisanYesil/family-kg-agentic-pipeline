@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:joanna_sophia_of_bavaria a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joanna Sophia of Bavaria" ;
+    onto:hasSpouse data:albert_iv_duke_of_austria .
+
+data:albert_iv_duke_of_austria a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Albert IV, Duke of Austria" ;
+    onto:hasBurialPlace data:ducal_crypt_stephansdom_vienna .
+
+data:ducal_crypt_stephansdom_vienna a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Ducal Crypt in the Stephansdom, Vienna" .
+

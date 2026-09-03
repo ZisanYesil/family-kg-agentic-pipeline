@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Mary_Capel_Countess_of_Essex> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mary Capel, Countess of Essex" ;
+    onto:hasFather <http://example.org/entity/William_Bentinck_1st_Earl_of_Portland> .
+
+<http://example.org/entity/Buckinghamshire> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bulstrode Park, Buckinghamshire" .
+
+<http://example.org/entity/William_Bentinck_1st_Earl_of_Portland> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Bentinck, 1st Earl of Portland" ;
+    onto:hasDeathPlace <http://example.org/entity/Buckinghamshire> .
+

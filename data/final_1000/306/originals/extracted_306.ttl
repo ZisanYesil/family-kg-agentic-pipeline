@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:rajiv_gandhi a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Rajiv Gandhi" ;
+    onto:hasBrother data:sanjay_gandhi ;
+    onto:hasChild data:priyanka_gandhi .
+
+data:priyanka_gandhi a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Priyanka Gandhi" ;
+    skos:altLabel "Priyanka Gandhi Vadra" .
+
+data:sanjay_gandhi a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sanjay Gandhi" .
+

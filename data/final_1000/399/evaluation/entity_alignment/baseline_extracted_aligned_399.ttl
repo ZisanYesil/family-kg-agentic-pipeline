@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Saga_Africa> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Saga Africa" ;
+    onto:hasPerformer <http://example.org/entity/Yannick_Noah> .
+
+<http://example.org/entity/Joakim_Noah> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joakim Noah" .
+
+<http://example.org/entity/Yannick_Noah> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Yannick Noah" ;
+    onto:hasChild <http://example.org/entity/Joakim_Noah> .
+

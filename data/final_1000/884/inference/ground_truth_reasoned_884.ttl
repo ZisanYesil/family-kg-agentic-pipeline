@@ -1,0 +1,14 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Alexander_Hugh_Baring_4th_Baron_Ashburton a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Francis_Baring_3rd_Baron_Ashburton ;
+    ex:hasParent entity:Francis_Baring_3rd_Baron_Ashburton .
+
+entity:Francis_Baring_3rd_Baron_Ashburton a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Alexander_Hugh_Baring_4th_Baron_Ashburton ;
+    ex:hasDeathDate "1868-09-06"^^xsd:date .
+

@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Alexandre_Berthier_3rd_Prince_of_Wagram a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Napoléon_Alexandre_Berthier .
+
+entity:Duchess_Maria_Elisabeth_in_Bavaria a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Napoléon_Alexandre_Berthier .
+
+entity:Napoléon_Alexandre_Berthier a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Alexandre_Berthier_3rd_Prince_of_Wagram ;
+    ex:hasParent entity:Duchess_Maria_Elisabeth_in_Bavaria .
+

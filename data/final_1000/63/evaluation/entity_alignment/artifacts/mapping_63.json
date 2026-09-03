@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/63/originals/extracted_63.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/63/ground_truth_63.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sri_dharmaloka_college": "http://example.org/entity/Sri_Dharmaloka_College",
+    "http://example.org/extracted/catholic_university_of_tachira": "http://example.org/entity/Catholic_University_of_Tachira"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/catholic_university_of_tachira",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "UCAT",
+          "source": "altLabel"
+        },
+        {
+          "text": "Universidad Católica del Táchira",
+          "source": "altLabel"
+        },
+        {
+          "text": "Catholic University Of Tachira",
+          "source": "label"
+        }
+      ],
+      "context": "UCAT. has inception: 1962.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Catholic_University_of_Tachira",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Catholic University of Tachira",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Catholic University Of Tachira",
+        "extracted_source": "label",
+        "ground_truth_text": "Catholic University of Tachira",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9997921586036682,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6308053135871887,
+      "graph_score": 0.6308053135871887,
+      "margin": 0.6341915726661682
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sri_dharmaloka_college",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sri Dharmaloka College",
+          "source": "label"
+        }
+      ],
+      "context": "Sri Dharmaloka College. has inception: 1938.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sri_Dharmaloka_College",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sri Dharmaloka College",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sri Dharmaloka College",
+        "extracted_source": "label",
+        "ground_truth_text": "Sri Dharmaloka College",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6275038719177246
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

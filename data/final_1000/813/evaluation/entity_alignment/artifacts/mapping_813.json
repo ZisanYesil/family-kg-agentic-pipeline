@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/813/originals/extracted_813.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/813/ground_truth_813.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_henry_chan": "http://example.org/entity/Henry_Chan",
+    "http://example.org/extracted/award_primetime_emmy": "http://example.org/entity/Primetime_Emmy_Award"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/award_primetime_emmy",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Primetime Emmy Award",
+          "source": "label"
+        },
+        {
+          "text": "award primetime emmy",
+          "source": "uri"
+        }
+      ],
+      "context": "Primetime Emmy Award. inverse has award received: Henry Chan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Primetime_Emmy_Award",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Primetime Emmy Award",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Primetime Emmy Award",
+        "extracted_source": "label",
+        "ground_truth_text": "Primetime Emmy Award",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_henry_chan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henry Chan",
+          "source": "label"
+        },
+        {
+          "text": "person henry chan",
+          "source": "uri"
+        }
+      ],
+      "context": "Henry Chan. has award received: Primetime Emmy Award. inverse has director: Gas (2004 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Henry_Chan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Henry Chan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henry Chan",
+        "extracted_source": "label",
+        "ground_truth_text": "Henry Chan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9482528567314148,
+      "graph_score": 0.9741264581680298,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_gas_2004",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gas (2004 film)",
+          "source": "label"
+        },
+        {
+          "text": "film gas 2004",
+          "source": "uri"
+        }
+      ],
+      "context": "Gas (2004 film). has director: Henry Chan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gas",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gas",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gas (2004 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Gas",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7634211778640747,
+      "name_embedding_score": 0.7923203110694885,
+      "string_score": 0.5333333611488342,
+      "independent_identity_support": false,
+      "context_score": 0.8714210987091064,
+      "graph_score": 0.9357105493545532,
+      "margin": 0.7634211778640747
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

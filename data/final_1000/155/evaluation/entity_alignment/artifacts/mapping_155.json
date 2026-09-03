@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/155/originals/extracted_155.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/155/ground_truth_155.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/cameranotes": "http://example.org/entity/Camera_Notes",
+    "http://example.org/extracted/alfred_stieglitz": "http://example.org/entity/Alfred_Stieglitz",
+    "http://example.org/extracted/georgia_okeefe": "http://example.org/entity/Georgia_O_Keeffe"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alfred_stieglitz",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alfred Stieglitz",
+          "source": "label"
+        }
+      ],
+      "context": "Alfred Stieglitz. has spouse: Georgia O'Keeffe. inverse has editor: Camera Notes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alfred_Stieglitz",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alfred Stieglitz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alfred Stieglitz",
+        "extracted_source": "label",
+        "ground_truth_text": "Alfred Stieglitz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9905325174331665,
+      "graph_score": 0.9952662587165833,
+      "margin": 0.7422435879707336
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cameranotes",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Camera Notes",
+          "source": "label"
+        },
+        {
+          "text": "cameranotes",
+          "source": "uri"
+        }
+      ],
+      "context": "Camera Notes. has editor: Alfred Stieglitz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Camera_Notes",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Camera Notes",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Camera Notes",
+        "extracted_source": "label",
+        "ground_truth_text": "Camera Notes",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/georgia_okeefe",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Georgia O'Keeffe",
+          "source": "label"
+        },
+        {
+          "text": "georgia okeefe",
+          "source": "uri"
+        }
+      ],
+      "context": "Georgia O'Keeffe. inverse has spouse: Alfred Stieglitz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Georgia_O_Keeffe",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Georgia O Keeffe",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Georgia O'Keeffe",
+        "extracted_source": "label",
+        "ground_truth_text": "Georgia O Keeffe",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9519037008285522,
+      "string_score": 0.971875011920929,
+      "independent_identity_support": true,
+      "context_score": 0.9811729788780212,
+      "graph_score": 0.990586519241333,
+      "margin": 0.7342397570610046
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

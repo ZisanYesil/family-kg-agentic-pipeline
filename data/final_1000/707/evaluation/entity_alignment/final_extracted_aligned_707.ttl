@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Elisabeth_of_Bohemia> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/entity/Charles_IV> ;
+    ex:hasParent <http://example.org/entity/Charles_IV> .
+
+<http://example.org/extracted/elisabeth_of_bohemia_1292> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Charles_IV> .
+
+<http://example.org/entity/Charles_IV> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Elisabeth_of_Bohemia> ;
+    ex:hasMother <http://example.org/extracted/elisabeth_of_bohemia_1292> ;
+    ex:hasParent <http://example.org/extracted/elisabeth_of_bohemia_1292> .
+

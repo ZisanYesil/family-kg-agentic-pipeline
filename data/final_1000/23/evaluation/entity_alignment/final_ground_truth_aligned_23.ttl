@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Dexter_Young a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Connie_Chan ;
+    ex:hasParent entity:Connie_Chan .
+
+entity:China a ex:Country,
+        ex:Place .
+
+entity:Connie_Chan a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Dexter_Young ;
+    ex:hasCitizenship entity:China ;
+    ex:hasCountry entity:China .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:b_boy_song a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "B Boy" ;
+    onto:hasPerformer data:meek_mill .
+
+data:meek_mill a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Meek Mill" ;
+    onto:hasDetentionPlace data:state_correctional_institution_chester .
+
+data:state_correctional_institution_chester a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "State Correctional Institution – Chester" .
+

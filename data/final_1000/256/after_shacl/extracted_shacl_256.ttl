@@ -1,0 +1,18 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_howrah_bridge a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Howrah Bridge" .
+
+data:person_op_nayyar a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "O. P. Nayyar" ;
+    onto:hasAwardReceived data:award_filmfare_best_music_director_1958 .
+
+data:award_filmfare_best_music_director_1958 a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Award for Best Music Director" .
+

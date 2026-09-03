@@ -1,0 +1,208 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/1/originals/extracted_1.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/1/ground_truth_1.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/south_korea": "http://example.org/entity/South_Korea",
+    "http://example.org/extracted/seoul_hs": "http://example.org/entity/Seoul_High_School",
+    "http://example.org/extracted/north_marion_hs_oregon": "http://example.org/entity/North_Marion_High_School_Oregon",
+    "http://example.org/extracted/united_states": "http://example.org/entity/United_States"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/north_marion_hs_oregon",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "North Marion High School",
+          "source": "altLabel"
+        },
+        {
+          "text": "North Marion High School (Oregon)",
+          "source": "label"
+        },
+        {
+          "text": "north marion hs oregon",
+          "source": "uri"
+        }
+      ],
+      "context": "North Marion High School. has country: U.S..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/North_Marion_High_School_Oregon",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "North Marion High School Oregon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "North Marion High School (Oregon)",
+        "extracted_source": "label",
+        "ground_truth_text": "North Marion High School Oregon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9043704271316528,
+      "string_score": 0.9859374761581421,
+      "independent_identity_support": true,
+      "context_score": 0.8818327188491821,
+      "graph_score": 0.9409163594245911,
+      "margin": 0.46550506353378296
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/seoul_hs",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Seoul High School",
+          "source": "label"
+        },
+        {
+          "text": "seoul hs",
+          "source": "uri"
+        }
+      ],
+      "context": "Seoul High School. has country: Republic of Korea.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Seoul_High_School",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Seoul High School",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Seoul High School",
+        "extracted_source": "label",
+        "ground_truth_text": "Seoul High School",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.970521867275238,
+      "graph_score": 0.9852609634399414,
+      "margin": 0.5504669845104218
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/south_korea",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Republic of Korea",
+          "source": "altLabel"
+        },
+        {
+          "text": "South Korea",
+          "source": "label"
+        }
+      ],
+      "context": "Republic of Korea. inverse has country: Seoul High School.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/South_Korea",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "South Korea",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "South Korea",
+        "extracted_source": "label",
+        "ground_truth_text": "South Korea",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9801028370857239,
+      "graph_score": 0.9900513887405396,
+      "margin": 0.5059776604175568
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "U.S.",
+          "source": "altLabel"
+        },
+        {
+          "text": "U.S.A.",
+          "source": "altLabel"
+        },
+        {
+          "text": "USA",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "U.S.. inverse has country: North Marion High School.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_States",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United States",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "label",
+        "ground_truth_text": "United States",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8911182284355164,
+      "graph_score": 0.9455591440200806,
+      "margin": 0.7043331265449524
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

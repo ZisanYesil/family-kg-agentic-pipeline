@@ -1,0 +1,83 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/401/evaluation/entity_alignment/final_extracted_aligned_401.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/401/evaluation/entity_alignment/final_ground_truth_aligned_401.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Moscow",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Moscow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Nikolay_Novikov",
+      "predicate": "hasDeathPlace",
+      "object": "Moscow",
+      "subject_uri": "http://example.org/entity/Nikolay_Novikov",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Moscow"
+    },
+    {
+      "subject": "Nikolay_Novikov",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Nikolay_Novikov",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Nikolay_Novikov",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Nikolay_Novikov",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Truten",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Truten",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Truten",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Truten",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Truten",
+      "predicate": "hasEditor",
+      "object": "Nikolay_Novikov",
+      "subject_uri": "http://example.org/entity/Truten",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEditor",
+      "object_term": "http://example.org/entity/Nikolay_Novikov"
+    }
+  ],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 7,
+    "true_positives": 6,
+    "false_positives": 0,
+    "false_negatives": 1,
+    "precision": 1.0,
+    "recall": 0.8571428571428571,
+    "f1": 0.923076923076923
+  },
+  "stage": "post_inference"
+}

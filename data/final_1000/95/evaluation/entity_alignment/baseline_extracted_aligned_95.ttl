@@ -1,0 +1,30 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Kalloori_Vaasal> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Kalloori Vaasal" ;
+    onto:hasDirector <http://example.org/entity/Pavithran> .
+
+<http://example.org/entity/Lakshmi_s_NTR> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Lakshmi's NTR" ;
+    onto:hasDirector <http://example.org/entity/Ram_Gopal_Varma> .
+
+<http://example.org/entity/Pavithran> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Pavithran" ;
+    onto:hasNationality <http://example.org/entity/Indian> .
+
+<http://example.org/entity/Ram_Gopal_Varma> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ram Gopal Varma" ;
+    onto:hasNationality <http://example.org/entity/Indian> .
+
+<http://example.org/entity/Indian> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "India" ;
+    skos:altLabel "Indian" .
+

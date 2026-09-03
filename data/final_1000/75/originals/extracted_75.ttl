@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:sancha_of_castile a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sancha of Castile, Queen of Aragon" ;
+    onto:hasSpouse data:alfonso_ii_of_aragon ;
+    skos:altLabel "Sancha of Castile" .
+
+data:alfonso_ii_of_aragon a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alfonso II of Aragon" ;
+    onto:hasFather data:ramon_berenguer_iv ;
+    skos:altLabel "Alfonso II" .
+
+data:ramon_berenguer_iv a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ramon Berenguer IV of Barcelona" ;
+    skos:altLabel "Count Ramon Berenguer IV of Barcelona" .
+

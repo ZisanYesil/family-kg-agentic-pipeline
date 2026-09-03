@@ -1,0 +1,144 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/11/originals/extracted_11.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/11/ground_truth_11.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/peter_matthiessen": "http://example.org/entity/Peter_Matthiessen",
+    "http://example.org/extracted/alex_matthiessen": "http://example.org/entity/Alex_Matthiessen"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alex_matthiessen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alex Matthiessen",
+          "source": "label"
+        }
+      ],
+      "context": "Alex Matthiessen. has father: Peter Matthiessen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alex_Matthiessen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alex Matthiessen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alex Matthiessen",
+        "extracted_source": "label",
+        "ground_truth_text": "Alex Matthiessen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3462834358215332
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/peter_matthiessen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Peter Matthiessen",
+          "source": "label"
+        }
+      ],
+      "context": "Peter Matthiessen. has cause of death: acute leukemia. inverse has father: Alex Matthiessen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Peter_Matthiessen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Peter Matthiessen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Peter Matthiessen",
+        "extracted_source": "label",
+        "ground_truth_text": "Peter Matthiessen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9937724471092224,
+      "graph_score": 0.9968862533569336,
+      "margin": 0.3477877974510193
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/acute_leukemia",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "acute leukemia",
+          "source": "label"
+        }
+      ],
+      "context": "acute leukemia. inverse has cause of death: Peter Matthiessen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/leukemia",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "leukemia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "acute leukemia",
+        "extracted_source": "label",
+        "ground_truth_text": "leukemia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.899076521396637,
+      "name_embedding_score": 0.925941526889801,
+      "string_score": 0.7522727251052856,
+      "independent_identity_support": true,
+      "context_score": 0.9843007326126099,
+      "graph_score": 0.9921503663063049,
+      "margin": 0.899076521396637
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

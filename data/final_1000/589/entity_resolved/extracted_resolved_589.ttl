@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:margaret_lloyd_george a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Margaret Lloyd George" ;
+    onto:hasSpouse data:david_lloyd_george ;
+    skos:altLabel "Dame Margaret Lloyd George" .
+
+data:david_lloyd_george a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "David Lloyd George" ;
+    onto:hasBirthPlace data:manchester .
+
+data:manchester a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Manchester" .
+

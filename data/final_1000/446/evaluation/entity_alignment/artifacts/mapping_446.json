@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/446/originals/extracted_446.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/446/ground_truth_446.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/franjo_markovic": "http://example.org/entity/Franjo_Marković",
+    "http://example.org/extracted/emilio_drake": "http://example.org/entity/Emilio_Drake_1st_Marquess_of_Cañada_Honda"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/emilio_drake",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Emilio María Juan Crisostomo Drake y de la Cerda",
+          "source": "altLabel"
+        },
+        {
+          "text": "Emilio Drake, 1st Marquess of Cañada Honda",
+          "source": "label"
+        },
+        {
+          "text": "emilio drake",
+          "source": "uri"
+        }
+      ],
+      "context": "Emilio María Juan Crisostomo Drake y de la Cerda. has birth date: 1855-01-27. has death date: 1915-07-02.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Emilio_Drake_1st_Marquess_of_Cañada_Honda",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Emilio Drake 1st Marquess of Cañada Honda",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Emilio Drake, 1st Marquess of Cañada Honda",
+        "extracted_source": "label",
+        "ground_truth_text": "Emilio Drake 1st Marquess of Cañada Honda",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9963762760162354,
+      "string_score": 0.9945783019065857,
+      "independent_identity_support": true,
+      "context_score": 0.7497619986534119,
+      "graph_score": 0.7497619986534119,
+      "margin": 0.5690822601318359
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/franjo_markovic",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Franjo Marković",
+          "source": "altLabel"
+        },
+        {
+          "text": "franjo markovic",
+          "source": "uri"
+        }
+      ],
+      "context": "Franjo Marković. has birth date: 1845-07-26. has death date: 1914-09-15.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Franjo_Marković",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Franjo Marković",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Franjo Marković",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Franjo Marković",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998211860657,
+      "margin": 0.7222335338592529
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,204 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/53/originals/extracted_53.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/53/ground_truth_53.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_housefull2": "http://example.org/entity/Housefull_2",
+    "http://example.org/extracted/film_term_life": "http://example.org/entity/Term_Life",
+    "http://example.org/extracted/person_vince_vaughn": "http://example.org/entity/Vince_Vaughn",
+    "http://example.org/extracted/person_sajid_nadiadwala": "http://example.org/entity/Sajid_Nadiadwala"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_housefull2",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Housefull 2",
+          "source": "label"
+        },
+        {
+          "text": "film housefull2",
+          "source": "uri"
+        }
+      ],
+      "context": "Housefull 2. has producer: Sajid Nadiadwala.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Housefull_2",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Housefull 2",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Housefull 2",
+        "extracted_source": "label",
+        "ground_truth_text": "Housefull 2",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8310001343488693
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_term_life",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Term Life",
+          "source": "label"
+        },
+        {
+          "text": "film term life",
+          "source": "uri"
+        }
+      ],
+      "context": "Term Life. has producer: Vincent Anthony Vaughn.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Term_Life",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Term Life",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Term Life",
+        "extracted_source": "label",
+        "ground_truth_text": "Term Life",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9679263234138489,
+      "graph_score": 0.983963131904602,
+      "margin": 0.8314323872327805
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_sajid_nadiadwala",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sajid Nadiadwala",
+          "source": "label"
+        },
+        {
+          "text": "person sajid nadiadwala",
+          "source": "uri"
+        }
+      ],
+      "context": "Sajid Nadiadwala. has birth date: 1966-02-18. inverse has producer: Housefull 2.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sajid_Nadiadwala",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sajid Nadiadwala",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sajid Nadiadwala",
+        "extracted_source": "label",
+        "ground_truth_text": "Sajid Nadiadwala",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7451336979866028
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_vince_vaughn",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vincent Anthony Vaughn",
+          "source": "altLabel"
+        },
+        {
+          "text": "Vince Vaughn",
+          "source": "label"
+        },
+        {
+          "text": "person vince vaughn",
+          "source": "uri"
+        }
+      ],
+      "context": "Vincent Anthony Vaughn. has birth date: 1970-03-28. inverse has producer: Term Life.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vince_Vaughn",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vince Vaughn",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vince Vaughn",
+        "extracted_source": "label",
+        "ground_truth_text": "Vince Vaughn",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.964418888092041,
+      "graph_score": 0.9822094440460205,
+      "margin": 0.67988121509552
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

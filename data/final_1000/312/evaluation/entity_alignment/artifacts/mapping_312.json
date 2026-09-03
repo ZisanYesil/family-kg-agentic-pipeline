@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/312/originals/extracted_312.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/312/ground_truth_312.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/american_radio_relay_league": "http://example.org/entity/American_Radio_Relay_League",
+    "http://example.org/extracted/national_contest_journal": "http://example.org/entity/National_Contest_Journal"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/american_radio_relay_league",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "ARRL",
+          "source": "altLabel"
+        },
+        {
+          "text": "American Radio Relay League",
+          "source": "label"
+        }
+      ],
+      "context": "ARRL. has inception: 1914-04-06. inverse has publisher: National Contest Journal.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American_Radio_Relay_League",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American Radio Relay League",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American Radio Relay League",
+        "extracted_source": "label",
+        "ground_truth_text": "American Radio Relay League",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5836217999458313,
+      "graph_score": 0.7918108701705933,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/national_contest_journal",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "National Contest Journal",
+          "source": "label"
+        }
+      ],
+      "context": "National Contest Journal. has publisher: ARRL.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/National_Contest_Journal",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "National Contest Journal",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "National Contest Journal",
+        "extracted_source": "label",
+        "ground_truth_text": "National Contest Journal",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5879964232444763,
+      "graph_score": 0.7939982414245605,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

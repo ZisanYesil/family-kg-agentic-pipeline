@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/964/originals/extracted_964.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/964/ground_truth_964.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/louis_jean_marie_de_bourbon": "http://example.org/entity/Louis_Jean_Marie_de_Bourbon",
+    "http://example.org/extracted/france": "http://example.org/entity/France",
+    "http://example.org/extracted/louis_alexandre_prince_of_lamballe": "http://example.org/entity/Louis_Alexandre_Prince_of_Lamballe"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        }
+      ],
+      "context": "French. inverse has nationality: Louis Jean Marie de Bourbon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/France",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "France",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "France",
+        "extracted_source": "label",
+        "ground_truth_text": "France",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.934773325920105,
+      "graph_score": 0.4673866629600525,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_alexandre_prince_of_lamballe",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis Alexandre de Bourbon",
+          "source": "label"
+        },
+        {
+          "text": "louis alexandre prince of lamballe",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis Alexandre de Bourbon. inverse has son: Louis Jean Marie de Bourbon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_Alexandre_Prince_of_Lamballe",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis Alexandre Prince of Lamballe",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "louis alexandre prince of lamballe",
+        "extracted_source": "uri",
+        "ground_truth_text": "Louis Alexandre Prince of Lamballe",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.809529721736908,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7846828699111938,
+      "graph_score": 0.3923414349555969,
+      "margin": 0.2738763689994812
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_jean_marie_de_bourbon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis Jean Marie de Bourbon",
+          "source": "label"
+        }
+      ],
+      "context": "Louis Jean Marie de Bourbon. has nationality: French. has son: Louis Alexandre de Bourbon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_Jean_Marie_de_Bourbon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis Jean Marie de Bourbon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis Jean Marie de Bourbon",
+        "extracted_source": "label",
+        "ground_truth_text": "Louis Jean Marie de Bourbon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8437166213989258,
+      "graph_score": 0.4218583106994629,
+      "margin": 0.5871544182300568
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

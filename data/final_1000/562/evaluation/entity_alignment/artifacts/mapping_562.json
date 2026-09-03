@@ -1,0 +1,171 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/562/originals/extracted_562.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/562/ground_truth_562.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/nicholas_eliot_9th_earl": "http://example.org/entity/Nicholas_Richard_Michael_Eliot_9th_Earl_of_St_Germans"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/nicholas_eliot_9th_earl",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nicholas Eliot",
+          "source": "altLabel"
+        },
+        {
+          "text": "Nicholas Richard Michael Eliot",
+          "source": "altLabel"
+        },
+        {
+          "text": "Nicholas Richard Michael Eliot, 9th Earl of St Germans",
+          "source": "label"
+        },
+        {
+          "text": "nicholas eliot 9th earl",
+          "source": "uri"
+        }
+      ],
+      "context": "Nicholas Eliot. has father: Montague Eliot.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nicholas_Richard_Michael_Eliot_9th_Earl_of_St_Germans",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nicholas Richard Michael Eliot 9th Earl of St Germans",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nicholas Richard Michael Eliot, 9th Earl of St Germans",
+        "extracted_source": "label",
+        "ground_truth_text": "Nicholas Richard Michael Eliot 9th Earl of St Germans",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9942964315414429,
+      "string_score": 0.995794415473938,
+      "independent_identity_support": true,
+      "context_score": 0.6550833582878113,
+      "graph_score": 0.6550833582878113,
+      "margin": 0.24005824327468872
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/montague_eliot_8th_earl",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Montague Eliot",
+          "source": "altLabel"
+        },
+        {
+          "text": "Montague Charles Eliot, 8th Earl of St Germans",
+          "source": "label"
+        },
+        {
+          "text": "montague eliot 8th earl",
+          "source": "uri"
+        }
+      ],
+      "context": "Montague Eliot. has brother: Granville Eliot. inverse has father: Nicholas Eliot.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Montague_Eliot_8th_Earl_of_St_Germans",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Montague Eliot 8th Earl of St Germans",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Montague Charles Eliot, 8th Earl of St Germans",
+        "extracted_source": "label",
+        "ground_truth_text": "Montague Eliot 8th Earl of St Germans",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9389548301696777,
+      "name_embedding_score": 0.9888119101524353,
+      "string_score": 0.9199548363685608,
+      "independent_identity_support": true,
+      "context_score": 0.7164810299873352,
+      "graph_score": 0.8582404851913452,
+      "margin": 0.22207099199295044
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/granville_eliot_7th_earl",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Granville Eliot",
+          "source": "altLabel"
+        },
+        {
+          "text": "Granville John Eliot, 7th Earl of St Germans",
+          "source": "label"
+        },
+        {
+          "text": "granville eliot 7th earl",
+          "source": "uri"
+        }
+      ],
+      "context": "Granville Eliot. inverse has brother: Montague Eliot.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Granville_Eliot_7th_Earl_of_St_Germans",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Granville Eliot 7th Earl of St Germans",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Granville John Eliot, 7th Earl of St Germans",
+        "extracted_source": "label",
+        "ground_truth_text": "Granville Eliot 7th Earl of St Germans",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9054322838783264,
+      "name_embedding_score": 0.982589066028595,
+      "string_score": 0.9358231425285339,
+      "independent_identity_support": true,
+      "context_score": 0.7207278609275818,
+      "graph_score": 0.7207278609275818,
+      "margin": 0.1346490979194641
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/129/evaluation/entity_alignment/baseline_extracted_aligned_129.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/129/evaluation/entity_alignment/baseline_ground_truth_aligned_129.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "I_Believe_in_Your_Sweet_Love",
+      "predicate": "hasPerformer",
+      "object": "Bonnie_Tyler",
+      "subject_uri": "http://example.org/entity/I_Believe_in_Your_Sweet_Love",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Bonnie_Tyler"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Bonnie_Tyler",
+      "predicate": "hasCountry",
+      "object": "United_Kingdom",
+      "subject_uri": "http://example.org/entity/Bonnie_Tyler",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/United_Kingdom"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Bonnie_Tyler",
+      "predicate": "hasCountry",
+      "object": "wales",
+      "subject_uri": "http://example.org/entity/Bonnie_Tyler",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/wales"
+    },
+    {
+      "subject": "Bonnie_Tyler",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bonnie_Tyler",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Bonnie_Tyler",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Bonnie_Tyler",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Bonnie_Tyler",
+      "predicate": "label",
+      "object": "\"Bonnie Tyler\"",
+      "subject_uri": "http://example.org/entity/Bonnie_Tyler",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bonnie Tyler\""
+    },
+    {
+      "subject": "I_Believe_in_Your_Sweet_Love",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/I_Believe_in_Your_Sweet_Love",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "I_Believe_in_Your_Sweet_Love",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/I_Believe_in_Your_Sweet_Love",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "I_Believe_in_Your_Sweet_Love",
+      "predicate": "label",
+      "object": "\"I Believe in Your Sweet Love\"",
+      "subject_uri": "http://example.org/entity/I_Believe_in_Your_Sweet_Love",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"I Believe in Your Sweet Love\""
+    },
+    {
+      "subject": "wales",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/wales",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "wales",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/wales",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "wales",
+      "predicate": "label",
+      "object": "\"Wales\"",
+      "subject_uri": "http://example.org/extracted/wales",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Wales\""
+    },
+    {
+      "subject": "wales",
+      "predicate": "altLabel",
+      "object": "\"Welsh\"",
+      "subject_uri": "http://example.org/extracted/wales",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Welsh\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 1,
+    "false_positives": 11,
+    "false_negatives": 1,
+    "precision": 0.08333333333333333,
+    "recall": 0.5,
+    "f1": 0.14285714285714285
+  },
+  "stage": "pre_inference"
+}

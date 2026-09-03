@@ -1,0 +1,91 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/772/evaluation/entity_alignment/final_extracted_aligned_772.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/772/evaluation/entity_alignment/final_ground_truth_aligned_772.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Eastern_Economic_Journal",
+      "predicate": "hasPublisher",
+      "object": "Palgrave",
+      "subject_uri": "http://example.org/entity/Eastern_Economic_Journal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublisher",
+      "object_term": "http://example.org/entity/Palgrave"
+    },
+    {
+      "subject": "Eastern_Economic_Journal",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Eastern_Economic_Journal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Eastern_Economic_Journal",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Eastern_Economic_Journal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Palgrave",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Palgrave",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Palgrave",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Palgrave",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Palgrave",
+      "predicate": "hasCountry",
+      "object": "United_Kingdom",
+      "subject_uri": "http://example.org/entity/Palgrave",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/United_Kingdom"
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 5,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 8,
+    "true_positives": 5,
+    "false_positives": 0,
+    "false_negatives": 3,
+    "precision": 1.0,
+    "recall": 0.625,
+    "f1": 0.7692307692307693
+  },
+  "stage": "post_inference"
+}

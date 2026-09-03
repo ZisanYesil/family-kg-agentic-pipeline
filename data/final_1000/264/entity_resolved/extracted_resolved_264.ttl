@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:buckaroo_song a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Buckaroo" ;
+    onto:hasPerformer data:lee_ann_womack .
+
+data:aubrie_sellers a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Aubrie Sellers" .
+
+data:lee_ann_womack a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lee Ann Womack" ;
+    onto:hasDaughter data:aubrie_sellers .
+

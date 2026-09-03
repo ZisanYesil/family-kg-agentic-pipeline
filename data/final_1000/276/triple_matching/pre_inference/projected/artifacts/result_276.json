@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/276/evaluation/entity_alignment/baseline_extracted_aligned_276.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/276/evaluation/entity_alignment/baseline_ground_truth_aligned_276.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Nicolae_Ceaușescu",
+      "predicate": "hasCauseOfDeath",
+      "object": "firing_squad",
+      "subject_uri": "http://example.org/entity/Nicolae_Ceaușescu",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+      "object_term": "http://example.org/entity/firing_squad"
+    },
+    {
+      "subject": "Zoia_Ceaușescu",
+      "predicate": "hasParent",
+      "object": "Nicolae_Ceaușescu",
+      "subject_uri": "http://example.org/entity/Zoia_Ceaușescu",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Nicolae_Ceaușescu"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Nicolae_Ceaușescu",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Nicolae_Ceaușescu",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Nicolae_Ceaușescu",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Nicolae_Ceaușescu",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Nicolae_Ceaușescu",
+      "predicate": "label",
+      "object": "\"Nicolae Ceaușescu\"",
+      "subject_uri": "http://example.org/entity/Nicolae_Ceaușescu",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Nicolae Ceaușescu\""
+    },
+    {
+      "subject": "Zoia_Ceaușescu",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Zoia_Ceaușescu",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Zoia_Ceaușescu",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Zoia_Ceaușescu",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Zoia_Ceaușescu",
+      "predicate": "label",
+      "object": "\"Zoia Ceaușescu\"",
+      "subject_uri": "http://example.org/entity/Zoia_Ceaușescu",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Zoia Ceaușescu\""
+    },
+    {
+      "subject": "firing_squad",
+      "predicate": "type",
+      "object": "CauseOfDeath",
+      "subject_uri": "http://example.org/entity/firing_squad",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CauseOfDeath"
+    },
+    {
+      "subject": "firing_squad",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/firing_squad",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "firing_squad",
+      "predicate": "label",
+      "object": "\"execution by firing squad\"",
+      "subject_uri": "http://example.org/entity/firing_squad",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"execution by firing squad\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

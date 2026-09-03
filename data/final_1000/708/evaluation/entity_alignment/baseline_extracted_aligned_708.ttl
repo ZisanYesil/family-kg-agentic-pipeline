@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Carl_von_Fersen> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Carl von Fersen" ;
+    onto:hasFather <http://example.org/entity/Hans_Reinhold_von_Fersen> .
+
+<http://example.org/entity/Hans_Reinhold_von_Fersen> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Hans Reinhold von Fersen" ;
+    onto:hasDeathPlace <http://example.org/entity/Stockholm> .
+
+<http://example.org/entity/Stockholm> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Stockholm" .
+

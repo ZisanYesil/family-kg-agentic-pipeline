@@ -1,0 +1,186 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/826/originals/extracted_826.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/826/ground_truth_826.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/song_maana_ke_hum_yaar_nahin_2017": "http://example.org/entity/Maana_Ke_Hum_Yaar_Nahin",
+    "http://example.org/extracted/person_parineeti_chopra": "http://example.org/entity/Parineeti_Chopra"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_parineeti_chopra",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Parineeti Chopra",
+          "source": "label"
+        },
+        {
+          "text": "person parineeti chopra",
+          "source": "uri"
+        }
+      ],
+      "context": "Parineeti Chopra. has award received: Filmfare Award. has award received: National Film Award. inverse has performer: Maana Ke Hum Yaar Nahin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Parineeti_Chopra",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Parineeti Chopra",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Parineeti Chopra",
+        "extracted_source": "label",
+        "ground_truth_text": "Parineeti Chopra",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9035178422927856,
+      "graph_score": 0.9517589211463928,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_maana_ke_hum_yaar_nahin_2017",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maana Ke Hum Yaar Nahin",
+          "source": "label"
+        },
+        {
+          "text": "song maana ke hum yaar nahin 2017",
+          "source": "uri"
+        }
+      ],
+      "context": "Maana Ke Hum Yaar Nahin. has performer: Parineeti Chopra.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maana_Ke_Hum_Yaar_Nahin",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maana Ke Hum Yaar Nahin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maana Ke Hum Yaar Nahin",
+        "extracted_source": "label",
+        "ground_truth_text": "Maana Ke Hum Yaar Nahin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/award_filmfare",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Filmfare Award",
+          "source": "label"
+        },
+        {
+          "text": "award filmfare",
+          "source": "uri"
+        }
+      ],
+      "context": "Filmfare Award. inverse has award received: Parineeti Chopra.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Filmfare_Award_for_Best_Female_Debut",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Filmfare Award for Best Female Debut",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Filmfare Award",
+        "extracted_source": "label",
+        "ground_truth_text": "Filmfare Award for Best Female Debut",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.735278844833374,
+      "name_embedding_score": 0.6958821415901184,
+      "string_score": 0.6353333592414856,
+      "independent_identity_support": false,
+      "context_score": 0.8280354738235474,
+      "graph_score": 0.9140177369117737,
+      "margin": 0.735278844833374
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/award_national_film",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "National Film Award",
+          "source": "label"
+        },
+        {
+          "text": "award national film",
+          "source": "uri"
+        }
+      ],
+      "context": "National Film Award. inverse has award received: Parineeti Chopra.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

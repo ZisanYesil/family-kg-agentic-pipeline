@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/375/originals/extracted_375.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/375/ground_truth_375.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/iroquois_river": "http://example.org/entity/Iroquois_River_Saint_John_River_tributary",
+    "http://example.org/extracted/canada": "http://example.org/entity/Canada",
+    "http://example.org/extracted/capousacataca_river": "http://example.org/entity/Capousacataca_River"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/canada",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Canada",
+          "source": "label"
+        }
+      ],
+      "context": "Canada. inverse has country: Capousacataca River. inverse has country: Iroquois River (Saint John River tributary).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Canada",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Canada",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Canada",
+        "extracted_source": "label",
+        "ground_truth_text": "Canada",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9980559349060059,
+      "graph_score": 0.9990279674530029,
+      "margin": 0.7886543869972229
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/capousacataca_river",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Capousacataca River",
+          "source": "label"
+        }
+      ],
+      "context": "Capousacataca River. has country: Canada.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Capousacataca_River",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Capousacataca River",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Capousacataca River",
+        "extracted_source": "label",
+        "ground_truth_text": "Capousacataca River",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.42275750637054443
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/iroquois_river",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Iroquois River (Saint John River tributary)",
+          "source": "label"
+        },
+        {
+          "text": "iroquois river",
+          "source": "uri"
+        }
+      ],
+      "context": "Iroquois River (Saint John River tributary). has country: Canada.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Iroquois_River_Saint_John_River_tributary",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Iroquois River Saint John River tributary",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Iroquois River (Saint John River tributary)",
+        "extracted_source": "label",
+        "ground_truth_text": "Iroquois River Saint John River tributary",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9845083355903625,
+      "string_score": 0.9892857074737549,
+      "independent_identity_support": true,
+      "context_score": 0.9828432202339172,
+      "graph_score": 0.9914215803146362,
+      "margin": 0.3189799189567566
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

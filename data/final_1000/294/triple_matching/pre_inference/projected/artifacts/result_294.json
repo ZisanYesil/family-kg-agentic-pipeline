@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/294/evaluation/entity_alignment/baseline_extracted_aligned_294.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/294/evaluation/entity_alignment/baseline_ground_truth_aligned_294.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Douro_Wine_Company",
+      "predicate": "hasFounder",
+      "object": "Sebastião_José_de_Carvalho_e_Melo",
+      "subject_uri": "http://example.org/entity/Douro_Wine_Company",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "hasBirthPlace",
+      "object": "Lisbon",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Lisbon"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Douro_Wine_Company",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Douro_Wine_Company",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Douro_Wine_Company",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Douro_Wine_Company",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Douro_Wine_Company",
+      "predicate": "label",
+      "object": "\"Douro Wine Company\"",
+      "subject_uri": "http://example.org/entity/Douro_Wine_Company",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Douro Wine Company\""
+    },
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "hasBirthDate",
+      "object": "\"1699-05-13\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1699-05-13\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "hasDeathDate",
+      "object": "\"1782-05-08\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1782-05-08\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "label",
+      "object": "\"Sebastião José de Carvalho e Melo\"",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sebastião José de Carvalho e Melo\""
+    },
+    {
+      "subject": "Sebastião_José_de_Carvalho_e_Melo",
+      "predicate": "altLabel",
+      "object": "\"Marquis of Pombal\"",
+      "subject_uri": "http://example.org/entity/Sebastião_José_de_Carvalho_e_Melo",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Marquis of Pombal\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 1,
+    "false_positives": 9,
+    "false_negatives": 1,
+    "precision": 0.1,
+    "recall": 0.5,
+    "f1": 0.16666666666666669
+  },
+  "stage": "pre_inference"
+}

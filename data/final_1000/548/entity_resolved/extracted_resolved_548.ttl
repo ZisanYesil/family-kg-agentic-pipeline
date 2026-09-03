@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:mary_tappan_wright a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mary Tappan Wright" ;
+    onto:hasSpouse data:john_henry_wright .
+
+data:dartmouth_college a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Dartmouth College" .
+
+data:john_henry_wright a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Henry Wright" ;
+    onto:hasEducatedAt data:dartmouth_college .
+

@@ -1,0 +1,94 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "3ac2455d18942cb6d6184dfbe750f34f16fba70786b79ef72a11d10fbb2dbabb",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_diamond_head",
+        "path": null,
+        "value": "http://example.org/extracted/person_john_williams",
+        "expected": null,
+        "message": "Relation phrase 'composer of' from http://example.org/extracted/film_diamond_head to http://example.org/extracted/person_john_williams was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "3ac2455d18942cb6d6184dfbe750f34f16fba70786b79ef72a11d10fbb2dbabb",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_diamond_head",
+            "path": null,
+            "value": "http://example.org/extracted/person_john_williams",
+            "expected": null,
+            "message": "Relation phrase 'composer of' from http://example.org/extracted/film_diamond_head to http://example.org/extracted/person_john_williams was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 11,
+      "feedback_reasoning": "The source text states that “The original music score was composed by John Williams” for the film *Diamond Head*. This matches the ontology predicate **onto:hasComposer** (domain CreativeWork, range Person) whose meaning – ‘composer of a creative work’ – aligns with the phrase “composer of”. Adding this triple resolves the unmapped_relation violation.",
+      "repairs": [
+        {
+          "violation_fingerprint": "0a2d3cb2ccb41db153173d3d41da3eb0f3bd45c8e72bc2c40fa34c22f75856b5",
+          "reasoning": "Map the relation ‘composer of’ to the ontology predicate onto:hasComposer.",
+          "operations": [
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/film_diamond_head",
+              "predicate": "http://example.org/2wiki-ontology#hasComposer",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/extracted/person_john_williams"
+              }
+            }
+          ]
+        }
+      ],
+      "edit_log": [
+        {
+          "violation_fingerprint": "0a2d3cb2ccb41db153173d3d41da3eb0f3bd45c8e72bc2c40fa34c22f75856b5",
+          "operation_index": 0,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/film_diamond_head",
+          "predicate": "http://example.org/2wiki-ontology#hasComposer",
+          "old_value": null,
+          "new_value": "<http://example.org/extracted/person_john_williams>",
+          "triples_before": 11,
+          "triples_after": 12
+        }
+      ],
+      "unresolved_violation_fingerprints": [],
+      "triples_after": 12,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": true,
+        "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "violations": []
+      },
+      "outcome": "conforms"
+    }
+  ],
+  "status": "repaired",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": true,
+    "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "violations": []
+  },
+  "dangling_references": []
+}

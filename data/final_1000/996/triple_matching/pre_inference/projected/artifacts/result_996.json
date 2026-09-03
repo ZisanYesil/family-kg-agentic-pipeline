@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/996/evaluation/entity_alignment/baseline_extracted_aligned_996.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/996/evaluation/entity_alignment/baseline_ground_truth_aligned_996.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "There_s_No_Tomorrow",
+      "predicate": "hasDirector",
+      "object": "Max_Ophüls",
+      "subject_uri": "http://example.org/entity/There_s_No_Tomorrow",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Max_Ophüls"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Max_Ophüls",
+      "predicate": "hasBirthPlace",
+      "object": "Saarbrücken",
+      "subject_uri": "http://example.org/entity/Max_Ophüls",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Saarbrücken"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Max_Ophüls",
+      "predicate": "hasBirthPlace",
+      "object": "country_germany",
+      "subject_uri": "http://example.org/entity/Max_Ophüls",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/extracted/country_germany"
+    },
+    {
+      "subject": "Max_Ophüls",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Max_Ophüls",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Max_Ophüls",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Max_Ophüls",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Max_Ophüls",
+      "predicate": "label",
+      "object": "\"Max Ophüls\"",
+      "subject_uri": "http://example.org/entity/Max_Ophüls",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Max Ophüls\""
+    },
+    {
+      "subject": "Max_Ophüls",
+      "predicate": "altLabel",
+      "object": "\"Maximillian Oppenheimer\"",
+      "subject_uri": "http://example.org/entity/Max_Ophüls",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Maximillian Oppenheimer\""
+    },
+    {
+      "subject": "There_s_No_Tomorrow",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/There_s_No_Tomorrow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "There_s_No_Tomorrow",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/There_s_No_Tomorrow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "There_s_No_Tomorrow",
+      "predicate": "label",
+      "object": "\"There's No Tomorrow\"",
+      "subject_uri": "http://example.org/entity/There_s_No_Tomorrow",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"There's No Tomorrow\""
+    },
+    {
+      "subject": "country_germany",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/country_germany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "country_germany",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/country_germany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "country_germany",
+      "predicate": "label",
+      "object": "\"Germany\"",
+      "subject_uri": "http://example.org/extracted/country_germany",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Germany\""
+    },
+    {
+      "subject": "country_germany",
+      "predicate": "altLabel",
+      "object": "\"German\"",
+      "subject_uri": "http://example.org/extracted/country_germany",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"German\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 1,
+    "false_positives": 12,
+    "false_negatives": 1,
+    "precision": 0.07692307692307693,
+    "recall": 0.5,
+    "f1": 0.13333333333333336
+  },
+  "stage": "pre_inference"
+}

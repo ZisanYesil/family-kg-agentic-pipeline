@@ -1,0 +1,139 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/345/evaluation/entity_alignment/baseline_extracted_aligned_345.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/345/evaluation/entity_alignment/baseline_ground_truth_aligned_345.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Pleasure_1931_film",
+      "predicate": "hasCountry",
+      "object": "American",
+      "subject_uri": "http://example.org/entity/Pleasure_1931_film",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/American"
+    },
+    {
+      "subject": "Ten_Thousand_Dollars_for_a_Massacre",
+      "predicate": "hasCountry",
+      "object": "Italian",
+      "subject_uri": "http://example.org/entity/Ten_Thousand_Dollars_for_a_Massacre",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Italian"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "American",
+      "predicate": "label",
+      "object": "\"United States\"",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"United States\""
+    },
+    {
+      "subject": "Italian",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Italian",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Italian",
+      "predicate": "label",
+      "object": "\"Italy\"",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Italy\""
+    },
+    {
+      "subject": "Pleasure_1931_film",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Pleasure_1931_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Pleasure_1931_film",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Pleasure_1931_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Pleasure_1931_film",
+      "predicate": "label",
+      "object": "\"Pleasure\"",
+      "subject_uri": "http://example.org/entity/Pleasure_1931_film",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Pleasure\""
+    },
+    {
+      "subject": "Ten_Thousand_Dollars_for_a_Massacre",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Ten_Thousand_Dollars_for_a_Massacre",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Ten_Thousand_Dollars_for_a_Massacre",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ten_Thousand_Dollars_for_a_Massacre",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ten_Thousand_Dollars_for_a_Massacre",
+      "predicate": "label",
+      "object": "\"Ten Thousand Dollars for a Massacre\"",
+      "subject_uri": "http://example.org/entity/Ten_Thousand_Dollars_for_a_Massacre",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ten Thousand Dollars for a Massacre\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 4,
+    "extracted_triples_in_scope": 14,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 2,
+    "false_positives": 12,
+    "false_negatives": 0,
+    "precision": 0.14285714285714285,
+    "recall": 1.0,
+    "f1": 0.25
+  },
+  "stage": "pre_inference"
+}

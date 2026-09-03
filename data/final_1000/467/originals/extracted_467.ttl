@@ -1,0 +1,25 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:eleonore_of_liechtenstein a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Maria Eleonore of Liechtenstein" ;
+    onto:hasSpouse data:karl_borromaus_of_liechtenstein ;
+    skos:altLabel "Eleonore of Liechtenstein",
+        "Maria Eleonore of Liechtenstein née Oettingen-Oettingen and Oettingen-Spielberg" .
+
+data:franz_joseph_i_of_liechtenstein a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Franz Joseph I, Prince of Liechtenstein" ;
+    skos:altLabel "Franz Joseph I" .
+
+data:karl_borromaus_of_liechtenstein a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Karl Borromäus of Liechtenstein" ;
+    onto:hasBrother data:franz_joseph_i_of_liechtenstein ;
+    skos:altLabel "Karl Borromäus",
+        "Prince Karl (Karl Borromäus) Michael Joseph of Liechtenstein" .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:_michele_mari a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Michele Mari" ;
+    onto:hasFather data:_enzo_mari .
+
+data:_brera_academy a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Brera Academy" .
+
+data:_enzo_mari a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Enzo Mari" ;
+    onto:hasEducatedAt data:_brera_academy .
+

@@ -1,0 +1,27 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:John_Baxter_director a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1896-12-31"^^xsd:date .
+
+entity:Talking_Feet a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:John_Baxter ;
+    ex:hasDirector entity:John_Baxter .
+
+entity:The_Third_Miracle a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Agnieszka_Holland ;
+    ex:hasDirector entity:Agnieszka_Holland .
+
+entity:Agnieszka_Holland a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1948-11-28"^^xsd:date .
+
+entity:John_Baxter a ex:Agent,
+        ex:Person .
+

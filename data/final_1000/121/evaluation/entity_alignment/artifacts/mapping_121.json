@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/121/originals/extracted_121.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/121/ground_truth_121.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/the_return_of_east_atlanta_santa": "http://example.org/entity/The_Return_of_East_Atlanta_Santa",
+    "http://example.org/extracted/the_thorn_in_mrs_rose_side": "http://example.org/entity/The_Thorn_in_Mrs_Rose_s_Side"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/the_return_of_east_atlanta_santa",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Return of East Atlanta Santa",
+          "source": "label"
+        }
+      ],
+      "context": "The Return of East Atlanta Santa. has publication date: 2016-12-16.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Return_of_East_Atlanta_Santa",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Return of East Atlanta Santa",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Return of East Atlanta Santa",
+        "extracted_source": "label",
+        "ground_truth_text": "The Return of East Atlanta Santa",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8105343878269196
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_thorn_in_mrs_rose_side",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Thorn in Mrs. Rose's Side",
+          "source": "label"
+        },
+        {
+          "text": "the thorn in mrs rose side",
+          "source": "uri"
+        }
+      ],
+      "context": "The Thorn in Mrs. Rose's Side. has publication date: 1968.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Thorn_in_Mrs_Rose_s_Side",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Thorn in Mrs Rose s Side",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Thorn in Mrs. Rose's Side",
+        "extracted_source": "label",
+        "ground_truth_text": "The Thorn in Mrs Rose s Side",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9865363240242004,
+      "string_score": 0.9763157963752747,
+      "independent_identity_support": true,
+      "context_score": 0.9875443577766418,
+      "graph_score": 0.9875443577766418,
+      "margin": 0.7913190424442291
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

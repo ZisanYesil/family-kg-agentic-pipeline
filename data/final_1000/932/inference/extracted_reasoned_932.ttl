@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/wallace_south_dakota> a ex:Place .
+
+<http://example.org/extracted/hubert_humphrey_jr> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthPlace <http://example.org/extracted/wallace_south_dakota> ;
+    ex:hasChild <http://example.org/extracted/skip_humphrey> ;
+    ex:hasSon <http://example.org/extracted/skip_humphrey> .
+
+<http://example.org/extracted/skip_humphrey> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/extracted/hubert_humphrey_jr> ;
+    ex:isSonOf <http://example.org/extracted/hubert_humphrey_jr> .
+

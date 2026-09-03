@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Jonathan_Nolan> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jonathan Nolan" ;
+    onto:hasBrother <http://example.org/entity/Christopher_Nolan> .
+
+<http://example.org/entity/Christopher_Nolan> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Christopher Nolan" ;
+    onto:hasSpouse <http://example.org/entity/Emma_Thomas> .
+
+<http://example.org/entity/Emma_Thomas> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Emma Thomas" .
+

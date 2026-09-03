@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/822/originals/extracted_822.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/822/ground_truth_822.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/srey_santhor": "http://example.org/entity/Srey_Santhor",
+    "http://example.org/extracted/ang_em_1674": "http://example.org/entity/Ang_Em",
+    "http://example.org/extracted/ang_nan_1654": "http://example.org/entity/Ang_Nan"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ang_em_1674",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Barom Reameathiptei",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ang Em",
+          "source": "label"
+        },
+        {
+          "text": "ang em 1674",
+          "source": "uri"
+        }
+      ],
+      "context": "Barom Reameathiptei. has birth date: 1674-01-01. has death date: 1731-01-01. inverse has son: Ang Nan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ang_Em",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ang Em",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ang Em",
+        "extracted_source": "label",
+        "ground_truth_text": "Ang Em",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.4338565170764923,
+      "graph_score": 0.21692825853824615,
+      "margin": 0.42381173372268677
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ang_nan_1654",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ang Nan",
+          "source": "label"
+        },
+        {
+          "text": "ang nan 1654",
+          "source": "uri"
+        }
+      ],
+      "context": "Ang Nan. has birth date: 1654-01-01. has death date: 1691-01-01. has death place: Srey Santhor. has son: Barom Reameathiptei.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ang_Nan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ang Nan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ang Nan",
+        "extracted_source": "label",
+        "ground_truth_text": "Ang Nan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7724202275276184,
+      "graph_score": 0.5528767704963684,
+      "margin": 0.4115384817123413
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/srey_santhor",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Srey Santhor",
+          "source": "label"
+        }
+      ],
+      "context": "Srey Santhor. inverse has death place: Ang Nan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Srey_Santhor",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Srey Santhor",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Srey Santhor",
+        "extracted_source": "label",
+        "ground_truth_text": "Srey Santhor",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

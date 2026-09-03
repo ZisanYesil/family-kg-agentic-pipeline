@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/677/originals/extracted_677.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/677/ground_truth_677.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/uta_of_passau": "http://example.org/entity/Uta_of_Passau",
+    "http://example.org/extracted/matilda_of_carinthia": "http://example.org/entity/Matilda_of_Carinthia",
+    "http://example.org/extracted/theobald_ii_count_of_champagne": "http://example.org/entity/Theobald_II_Count_of_Champagne"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/matilda_of_carinthia",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mathilde of Sponheim",
+          "source": "altLabel"
+        },
+        {
+          "text": "Matilda of Carinthia",
+          "source": "label"
+        }
+      ],
+      "context": "Mathilde of Sponheim. has mother: Uta of Passau. inverse has spouse: Theobald the Great.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Matilda_of_Carinthia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Matilda of Carinthia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Matilda of Carinthia",
+        "extracted_source": "label",
+        "ground_truth_text": "Matilda of Carinthia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.630022406578064,
+      "graph_score": 0.815011203289032,
+      "margin": 0.708227276802063
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/theobald_ii_count_of_champagne",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Theobald the Great",
+          "source": "altLabel"
+        },
+        {
+          "text": "Thibaut de Blois",
+          "source": "altLabel"
+        },
+        {
+          "text": "Theobald II, Count of Champagne",
+          "source": "label"
+        },
+        {
+          "text": "theobald ii count of champagne",
+          "source": "uri"
+        }
+      ],
+      "context": "Theobald the Great. has spouse: Mathilde of Sponheim.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Theobald_II_Count_of_Champagne",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Theobald II Count of Champagne",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Theobald II, Count of Champagne",
+        "extracted_source": "label",
+        "ground_truth_text": "Theobald II Count of Champagne",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.98734050989151,
+      "string_score": 0.992622971534729,
+      "independent_identity_support": true,
+      "context_score": 0.5257453918457031,
+      "graph_score": 0.7628726959228516,
+      "margin": 0.7015374302864075
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/uta_of_passau",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Uta of Passau",
+          "source": "label"
+        }
+      ],
+      "context": "Uta of Passau. inverse has mother: Mathilde of Sponheim.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Uta_of_Passau",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Uta of Passau",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Uta of Passau",
+        "extracted_source": "label",
+        "ground_truth_text": "Uta of Passau",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6660712361335754,
+      "graph_score": 0.8330355882644653,
+      "margin": 0.7631877958774567
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

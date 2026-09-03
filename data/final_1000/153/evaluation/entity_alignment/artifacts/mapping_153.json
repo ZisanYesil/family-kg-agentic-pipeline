@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/153/originals/extracted_153.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/153/ground_truth_153.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/song_g%C3%A5_och_g%C3%B6m_dig": "http://example.org/entity/Gå_och_göm_dig_Åke_Tråk",
+    "http://example.org/extracted/country_sweden": "http://example.org/entity/Sweden",
+    "http://example.org/extracted/person_mona_wessman": "http://example.org/entity/Mona_Wessman"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_sweden",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Swedish",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sweden",
+          "source": "label"
+        },
+        {
+          "text": "country sweden",
+          "source": "uri"
+        }
+      ],
+      "context": "Swedish. inverse has nationality: Mona Wessman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sweden",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sweden",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sweden",
+        "extracted_source": "label",
+        "ground_truth_text": "Sweden",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8875813484191895,
+      "graph_score": 0.4437906742095947,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_mona_wessman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mona Wessman",
+          "source": "label"
+        },
+        {
+          "text": "person mona wessman",
+          "source": "uri"
+        }
+      ],
+      "context": "Mona Wessman. has nationality: Swedish. inverse has performer: Gå och göm dig, Åke Tråk.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mona_Wessman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mona Wessman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mona Wessman",
+        "extracted_source": "label",
+        "ground_truth_text": "Mona Wessman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9065800905227661,
+      "graph_score": 0.6199567317962646,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_g%C3%A5_och_g%C3%B6m_dig",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gå och göm dig, Åke Tråk",
+          "source": "label"
+        },
+        {
+          "text": "song gå och göm dig",
+          "source": "uri"
+        }
+      ],
+      "context": "Gå och göm dig, Åke Tråk. has performer: Mona Wessman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gå_och_göm_dig_Åke_Tråk",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gå och göm dig Åke Tråk",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gå och göm dig, Åke Tråk",
+        "extracted_source": "label",
+        "ground_truth_text": "Gå och göm dig Åke Tråk",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9732866883277893,
+      "string_score": 0.9904255270957947,
+      "independent_identity_support": true,
+      "context_score": 0.9871000647544861,
+      "graph_score": 0.9935500621795654,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/903/originals/extracted_903.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/903/ground_truth_903.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_miley_cyrus": "http://example.org/entity/Miley_Cyrus",
+    "http://example.org/extracted/person_billy_ray_cyrus": "http://example.org/entity/Billy_Ray_Cyrus",
+    "http://example.org/extracted/song_lighter": "http://example.org/entity/Lighter"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_billy_ray_cyrus",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Billy Ray Cyrus",
+          "source": "label"
+        },
+        {
+          "text": "person billy ray cyrus",
+          "source": "uri"
+        }
+      ],
+      "context": "Billy Ray Cyrus. inverse has father: Destiny Hope Cyrus.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Billy_Ray_Cyrus",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Billy Ray Cyrus",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Billy Ray Cyrus",
+        "extracted_source": "label",
+        "ground_truth_text": "Billy Ray Cyrus",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8357794880867004,
+      "graph_score": 0.9178897142410278,
+      "margin": 0.4246337413787842
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_miley_cyrus",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Destiny Hope Cyrus",
+          "source": "altLabel"
+        },
+        {
+          "text": "Miley Ray Hemsworth",
+          "source": "altLabel"
+        },
+        {
+          "text": "Miley Cyrus",
+          "source": "label"
+        },
+        {
+          "text": "person miley cyrus",
+          "source": "uri"
+        }
+      ],
+      "context": "Destiny Hope Cyrus. has father: Billy Ray Cyrus. inverse has performer: Lighter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Miley_Cyrus",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Miley Cyrus",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Miley Cyrus",
+        "extracted_source": "label",
+        "ground_truth_text": "Miley Cyrus",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8049041032791138,
+      "graph_score": 0.9024520516395569,
+      "margin": 0.42946237325668335
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_lighter",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lighter",
+          "source": "label"
+        },
+        {
+          "text": "song lighter",
+          "source": "uri"
+        }
+      ],
+      "context": "Lighter. has performer: Destiny Hope Cyrus.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lighter",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lighter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lighter",
+        "extracted_source": "label",
+        "ground_truth_text": "Lighter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8047478795051575,
+      "graph_score": 0.9023739099502563,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

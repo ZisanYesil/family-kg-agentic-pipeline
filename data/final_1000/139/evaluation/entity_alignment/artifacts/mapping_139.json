@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/139/originals/extracted_139.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/139/ground_truth_139.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/old_and_new_dreams": "http://example.org/entity/Old_and_New_Dreams",
+    "http://example.org/extracted/new_orleans_louisiana": "http://example.org/entity/New_Orleans_Louisiana",
+    "http://example.org/extracted/ed_blackwell": "http://example.org/entity/Ed_Blackwell"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ed_blackwell",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edward Joseph Blackwell",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ed Blackwell",
+          "source": "label"
+        }
+      ],
+      "context": "Edward Joseph Blackwell. has birth place: New Orleans, Louisiana. inverse has member: Old and New Dreams.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ed_Blackwell",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ed Blackwell",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ed Blackwell",
+        "extracted_source": "label",
+        "ground_truth_text": "Ed Blackwell",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9274882078170776,
+      "graph_score": 0.9637441039085388,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/new_orleans_louisiana",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "New Orleans, Louisiana",
+          "source": "label"
+        },
+        {
+          "text": "new orleans louisiana",
+          "source": "uri"
+        }
+      ],
+      "context": "New Orleans, Louisiana. inverse has birth place: Edward Joseph Blackwell.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/New_Orleans_Louisiana",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "New Orleans Louisiana",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "New Orleans, Louisiana",
+        "extracted_source": "label",
+        "ground_truth_text": "New Orleans Louisiana",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.956460177898407,
+      "string_score": 0.989534854888916,
+      "independent_identity_support": true,
+      "context_score": 0.9473268985748291,
+      "graph_score": 0.9736634492874146,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/old_and_new_dreams",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Old and New Dreams",
+          "source": "label"
+        }
+      ],
+      "context": "Old and New Dreams. has member: Edward Joseph Blackwell.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Old_and_New_Dreams",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Old and New Dreams",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Old and New Dreams",
+        "extracted_source": "label",
+        "ground_truth_text": "Old and New Dreams",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9434447884559631,
+      "graph_score": 0.9717223644256592,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

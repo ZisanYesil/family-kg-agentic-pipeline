@@ -1,0 +1,16 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Old_Man_Drinking_a_Glass_of_Beer> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Old Man Drinking a Glass of Beer" ;
+    onto:hasDirector <http://example.org/entity/George_Albert_Smith> .
+
+<http://example.org/entity/George_Albert_Smith> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George Albert Smith" ;
+    onto:hasBirthDate "1864-01-04"^^xsd:date ;
+    onto:hasDeathDate "1959-05-17"^^xsd:date .
+

@@ -1,0 +1,98 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/41/evaluation/entity_alignment/final_extracted_aligned_41.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/41/evaluation/entity_alignment/final_ground_truth_aligned_41.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "English",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/English",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "English",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/English",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Ælfthryth",
+      "predicate": "hasCountry",
+      "object": "English",
+      "subject_uri": "http://example.org/entity/Ælfthryth",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/English"
+    },
+    {
+      "subject": "Ælfthryth",
+      "predicate": "hasSpouse",
+      "object": "Æthelwald_died_962_was_ealdorman_of_East_Anglia",
+      "subject_uri": "http://example.org/entity/Ælfthryth",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Æthelwald_died_962_was_ealdorman_of_East_Anglia"
+    },
+    {
+      "subject": "Ælfthryth",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Ælfthryth",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Ælfthryth",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ælfthryth",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Æthelwald_died_962_was_ealdorman_of_East_Anglia",
+      "predicate": "hasSpouse",
+      "object": "Ælfthryth",
+      "subject_uri": "http://example.org/entity/Æthelwald_died_962_was_ealdorman_of_East_Anglia",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Ælfthryth"
+    },
+    {
+      "subject": "Æthelwald_died_962_was_ealdorman_of_East_Anglia",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Æthelwald_died_962_was_ealdorman_of_East_Anglia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Æthelwald_died_962_was_ealdorman_of_East_Anglia",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Æthelwald_died_962_was_ealdorman_of_East_Anglia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 9,
+    "true_positives": 9,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

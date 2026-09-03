@@ -1,0 +1,76 @@
+{
+  "_source_extraction_sha256": "7da2c6eda0b345e9cc770937c9e5fe74500f2856b175748819f77aac8522e7a8",
+  "entities": [
+    {
+      "id": "film_pugachev_1978",
+      "label": "Pugachev",
+      "type": "Film",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": "1978"
+      }
+    },
+    {
+      "id": "person_aleksei_saltykov",
+      "label": "Aleksei Saltykov",
+      "type": "Person",
+      "aliases": [
+        "Alexey Saltykov",
+        "Aleksey Aleksandrovich Saltykov"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "award_peoples_artist_rsfsr",
+      "label": "People's Artist of the RSFSR",
+      "type": "Award",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "film_pugachev_1978",
+      "predicate": "hasDirector",
+      "object": "person_aleksei_saltykov",
+      "relation_phrase": "directed by",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "film_pugachev_1978",
+      "source_object": "person_aleksei_saltykov",
+      "endpoints_swapped": false
+    },
+    {
+      "subject": "person_aleksei_saltykov",
+      "predicate": "hasAwardReceived",
+      "object": "award_peoples_artist_rsfsr",
+      "relation_phrase": "received award",
+      "qualifiers": {
+        "year": 1980,
+        "note": null
+      },
+      "source_subject": "person_aleksei_saltykov",
+      "source_object": "award_peoples_artist_rsfsr",
+      "endpoints_swapped": false
+    }
+  ],
+  "unmapped_relations": []
+}

@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_gretchen_am_spinnrade a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Gretchen am Spinnrade" ;
+    onto:hasComposer data:person_franz_schubert ;
+    skos:altLabel "Gretchen am Spinnrade" .
+
+data:person_antonio_salieri a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Antonio Salieri" ;
+    skos:altLabel "Antonio Salieri" .
+
+data:person_franz_schubert a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Franz Schubert" ;
+    onto:hasStudentOf data:person_antonio_salieri ;
+    skos:altLabel "Franz Peter Schubert",
+        "Franz Schubert" .
+

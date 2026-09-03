@@ -1,0 +1,119 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/31/originals/extracted_31.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/31/ground_truth_31.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/leona_lewis": "http://example.org/entity/Leona_Lewis"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/leona_lewis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Leona Louise Lewis",
+          "source": "altLabel"
+        },
+        {
+          "text": "Leona Lewis",
+          "source": "label"
+        }
+      ],
+      "context": "Leona Louise Lewis. has birth place: London Borough of Islington.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Leona_Lewis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Leona Lewis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Leona Lewis",
+        "extracted_source": "label",
+        "ground_truth_text": "Leona Lewis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6484844088554382,
+      "graph_score": 0.6484844088554382,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/islington_london",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "London Borough of Islington",
+          "source": "altLabel"
+        },
+        {
+          "text": "Islington, London",
+          "source": "label"
+        },
+        {
+          "text": "islington london",
+          "source": "uri"
+        }
+      ],
+      "context": "London Borough of Islington. inverse has birth place: Leona Louise Lewis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/London",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "London",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "islington london",
+        "extracted_source": "uri",
+        "ground_truth_text": "London",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8242266178131104,
+      "name_embedding_score": 0.8486615419387817,
+      "string_score": 0.6704545617103577,
+      "independent_identity_support": false,
+      "context_score": 0.8582577705383301,
+      "graph_score": 0.929128885269165,
+      "margin": 0.8242266178131104
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/I_See_You"
+  ]
+}

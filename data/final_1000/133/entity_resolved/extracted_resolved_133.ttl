@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:bolivarian_military_university_of_venezuela a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Bolivarian Military University of Venezuela" ;
+    onto:hasFounder data:hugo_chavez .
+
+data:hugo_chavez a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Hugo Chávez" ;
+    onto:hasBirthPlace data:sabaneta_barinas ;
+    skos:altLabel "Hugo Rafael Chávez Frías" .
+
+data:sabaneta_barinas a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Sabaneta, Barinas" .
+

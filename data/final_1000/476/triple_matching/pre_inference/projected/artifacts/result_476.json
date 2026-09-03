@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/476/evaluation/entity_alignment/baseline_extracted_aligned_476.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/476/evaluation/entity_alignment/baseline_ground_truth_aligned_476.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Edouard_Brissaud",
+      "predicate": "hasBirthPlace",
+      "object": "Besançon",
+      "subject_uri": "http://example.org/entity/Edouard_Brissaud",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Besançon"
+    },
+    {
+      "subject": "Pierre_Brissaud",
+      "predicate": "hasParent",
+      "object": "Edouard_Brissaud",
+      "subject_uri": "http://example.org/entity/Pierre_Brissaud",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Edouard_Brissaud"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Besançon",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Besançon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Besançon",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Besançon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Besançon",
+      "predicate": "label",
+      "object": "\"Besançon\"",
+      "subject_uri": "http://example.org/entity/Besançon",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Besançon\""
+    },
+    {
+      "subject": "Edouard_Brissaud",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Edouard_Brissaud",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Edouard_Brissaud",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Edouard_Brissaud",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Edouard_Brissaud",
+      "predicate": "label",
+      "object": "\"Édouard Brissaud\"",
+      "subject_uri": "http://example.org/entity/Edouard_Brissaud",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Édouard Brissaud\""
+    },
+    {
+      "subject": "Edouard_Brissaud",
+      "predicate": "altLabel",
+      "object": "\"Edouard Brissaud\"",
+      "subject_uri": "http://example.org/entity/Edouard_Brissaud",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Edouard Brissaud\""
+    },
+    {
+      "subject": "Pierre_Brissaud",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Pierre_Brissaud",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Pierre_Brissaud",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Pierre_Brissaud",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Pierre_Brissaud",
+      "predicate": "label",
+      "object": "\"Pierre Brissaud\"",
+      "subject_uri": "http://example.org/entity/Pierre_Brissaud",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Pierre Brissaud\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

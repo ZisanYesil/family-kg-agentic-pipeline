@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/795/originals/extracted_795.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/795/ground_truth_795.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_nicolas_francois_vuillaume": "http://example.org/entity/Nicolas_François_Vuillaume",
+    "http://example.org/extracted/country_france": "http://example.org/entity/French",
+    "http://example.org/extracted/person_gabrielle_robinne": "http://example.org/entity/Gabrielle_Robinne"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        },
+        {
+          "text": "country france",
+          "source": "uri"
+        }
+      ],
+      "context": "French. inverse has nationality: Gabrielle Anna Charlotte Robinne. inverse has nationality: Nicolas François Vuillaume.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/French",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "French",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "French",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "French",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9189267754554749,
+      "graph_score": 0.4594633877277374,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_gabrielle_robinne",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gabrielle Anna Charlotte Robinne",
+          "source": "altLabel"
+        },
+        {
+          "text": "Gabrielle Robinne",
+          "source": "label"
+        },
+        {
+          "text": "person gabrielle robinne",
+          "source": "uri"
+        }
+      ],
+      "context": "Gabrielle Anna Charlotte Robinne. has nationality: French.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gabrielle_Robinne",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gabrielle Robinne",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gabrielle Robinne",
+        "extracted_source": "label",
+        "ground_truth_text": "Gabrielle Robinne",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9176045060157776,
+      "graph_score": 0.4588022530078888,
+      "margin": 0.7637203335762024
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_nicolas_francois_vuillaume",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nicolas François Vuillaume",
+          "source": "label"
+        },
+        {
+          "text": "person nicolas francois vuillaume",
+          "source": "uri"
+        }
+      ],
+      "context": "Nicolas François Vuillaume. has nationality: French.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nicolas_François_Vuillaume",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nicolas François Vuillaume",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nicolas François Vuillaume",
+        "extracted_source": "label",
+        "ground_truth_text": "Nicolas François Vuillaume",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.936366081237793,
+      "graph_score": 0.4681830406188965,
+      "margin": 0.7482561767101288
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

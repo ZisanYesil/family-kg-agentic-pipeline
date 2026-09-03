@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/845/originals/extracted_845.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/845/ground_truth_845.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_antoine_de_caunes": "http://example.org/entity/Antoine_de_Caunes",
+    "http://example.org/extracted/person_emma_de_caunes": "http://example.org/entity/Emma_de_Caunes",
+    "http://example.org/extracted/film_monsieur_n": "http://example.org/entity/Monsieur_N"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_monsieur_n",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Monsieur N.",
+          "source": "label"
+        },
+        {
+          "text": "film monsieur n",
+          "source": "uri"
+        }
+      ],
+      "context": "Monsieur N.. has director: Antoine de Caunes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Monsieur_N",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Monsieur N",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Monsieur N.",
+        "extracted_source": "label",
+        "ground_truth_text": "Monsieur N",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9799156188964844,
+      "string_score": 0.9785714149475098,
+      "independent_identity_support": true,
+      "context_score": 0.9979074597358704,
+      "graph_score": 0.9989537000656128,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_antoine_de_caunes",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Antoine de Caunes",
+          "source": "label"
+        },
+        {
+          "text": "person antoine de caunes",
+          "source": "uri"
+        }
+      ],
+      "context": "Antoine de Caunes. inverse has director: Monsieur N.. inverse has father: Emma de Caunes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Antoine_de_Caunes",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Antoine de Caunes",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Antoine de Caunes",
+        "extracted_source": "label",
+        "ground_truth_text": "Antoine de Caunes",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9390145540237427,
+      "graph_score": 0.6361739635467529,
+      "margin": 0.41949474811553955
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_emma_de_caunes",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Emma de Caunes",
+          "source": "label"
+        },
+        {
+          "text": "person emma de caunes",
+          "source": "uri"
+        }
+      ],
+      "context": "Emma de Caunes. has father: Antoine de Caunes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Emma_de_Caunes",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Emma de Caunes",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Emma de Caunes",
+        "extracted_source": "label",
+        "ground_truth_text": "Emma de Caunes",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8825638294219971,
+      "graph_score": 0.44128191471099854,
+      "margin": 0.42319220304489136
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

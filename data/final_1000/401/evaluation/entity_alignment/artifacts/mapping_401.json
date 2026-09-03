@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/401/originals/extracted_401.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/401/ground_truth_401.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/nikolay_novikov": "http://example.org/entity/Nikolay_Novikov",
+    "http://example.org/extracted/truten": "http://example.org/entity/Truten"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/nikolay_novikov",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nikolay Ivanovich Novikov",
+          "source": "altLabel"
+        },
+        {
+          "text": "Nikolay Novikov",
+          "source": "label"
+        }
+      ],
+      "context": "Nikolay Ivanovich Novikov. has death place: Moscow Governorate.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nikolay_Novikov",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nikolay Novikov",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nikolay Novikov",
+        "extracted_source": "label",
+        "ground_truth_text": "Nikolay Novikov",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8082578182220459,
+      "graph_score": 0.40412890911102295,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/truten",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Truten",
+          "source": "label"
+        }
+      ],
+      "context": "Truten.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Truten",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Truten",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Truten",
+        "extracted_source": "label",
+        "ground_truth_text": "Truten",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.15884360671043396,
+      "graph_score": 0.07942180335521698,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/moscow_governorate",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Moscow Governorate",
+          "source": "label"
+        }
+      ],
+      "context": "Moscow Governorate. inverse has death place: Nikolay Ivanovich Novikov.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Moscow",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Moscow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Moscow Governorate",
+        "extracted_source": "label",
+        "ground_truth_text": "Moscow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8603730201721191,
+      "name_embedding_score": 0.9107515215873718,
+      "string_score": 0.6499999761581421,
+      "independent_identity_support": false,
+      "context_score": 0.9399778842926025,
+      "graph_score": 0.9699889421463013,
+      "margin": 0.8603730201721191
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

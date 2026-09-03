@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/216/originals/extracted_216.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/216/ground_truth_216.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_one_day_in_europe": "http://example.org/entity/One_Day_in_Europe",
+    "http://example.org/extracted/institution_deutsche_film_und_fernsehakademie_berlin": "http://example.org/entity/Deutsche_Film_und_Fernsehakademie_Berlin",
+    "http://example.org/extracted/person_hannes_stoehr": "http://example.org/entity/Hannes_Stöhr"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_one_day_in_europe",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "One Day in Europe",
+          "source": "label"
+        },
+        {
+          "text": "film one day in europe",
+          "source": "uri"
+        }
+      ],
+      "context": "One Day in Europe. has director: Hannes Stöhr.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/One_Day_in_Europe",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "One Day in Europe",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "One Day in Europe",
+        "extracted_source": "label",
+        "ground_truth_text": "One Day in Europe",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/institution_deutsche_film_und_fernsehakademie_berlin",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Deutsche Film- und Fernsehakademie Berlin",
+          "source": "label"
+        },
+        {
+          "text": "institution deutsche film und fernsehakademie berlin",
+          "source": "uri"
+        }
+      ],
+      "context": "Deutsche Film- und Fernsehakademie Berlin. inverse has educated at: Hannes Stöhr.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Deutsche_Film_und_Fernsehakademie_Berlin",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Deutsche Film und Fernsehakademie Berlin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Deutsche Film- und Fernsehakademie Berlin",
+        "extracted_source": "label",
+        "ground_truth_text": "Deutsche Film und Fernsehakademie Berlin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9973017573356628,
+      "string_score": 0.9944444298744202,
+      "independent_identity_support": true,
+      "context_score": 0.9973436594009399,
+      "graph_score": 0.99867182970047,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_hannes_stoehr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hannes Stöhr",
+          "source": "label"
+        },
+        {
+          "text": "person hannes stoehr",
+          "source": "uri"
+        }
+      ],
+      "context": "Hannes Stöhr. has educated at: Deutsche Film- und Fernsehakademie Berlin. inverse has director: One Day in Europe.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hannes_Stöhr",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hannes Stöhr",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hannes Stöhr",
+        "extracted_source": "label",
+        "ground_truth_text": "Hannes Stöhr",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9987952709197998,
+      "graph_score": 0.9993976354598999,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

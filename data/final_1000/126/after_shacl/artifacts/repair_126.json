@@ -1,0 +1,94 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "2718eae570d13a34d7f1b6b8450fb78e0ca8b030a2831cae9b3c19d5304bd361",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_machi",
+        "path": null,
+        "value": "http://example.org/extracted/person_ar_reihana",
+        "expected": null,
+        "message": "Relation phrase 'musical score by' from http://example.org/extracted/film_machi to http://example.org/extracted/person_ar_reihana was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "2718eae570d13a34d7f1b6b8450fb78e0ca8b030a2831cae9b3c19d5304bd361",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_machi",
+            "path": null,
+            "value": "http://example.org/extracted/person_ar_reihana",
+            "expected": null,
+            "message": "Relation phrase 'musical score by' from http://example.org/extracted/film_machi to http://example.org/extracted/person_ar_reihana was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 15,
+      "feedback_reasoning": "The phrase “musical score by” indicates that A. R. Reihana composed the music for the film *Machi*. In the ontology the appropriate predicate for a CreativeWork (Film) having a composer (Person) is `onto:hasComposer`. Adding this triple satisfies the unmapped‑relation violation.",
+      "repairs": [
+        {
+          "violation_fingerprint": "2357ca19f1b9551d16a2be9a560efa0bd631ecf229af108ab99e7d4ae23ce1cd",
+          "reasoning": "Map the unmapped relation to the ontology predicate `http://example.org/2wiki-ontology#hasComposer` which matches the meaning of “musical score by”.",
+          "operations": [
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/film_machi",
+              "predicate": "http://example.org/2wiki-ontology#hasComposer",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/extracted/person_ar_reihana"
+              }
+            }
+          ]
+        }
+      ],
+      "edit_log": [
+        {
+          "violation_fingerprint": "2357ca19f1b9551d16a2be9a560efa0bd631ecf229af108ab99e7d4ae23ce1cd",
+          "operation_index": 0,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/film_machi",
+          "predicate": "http://example.org/2wiki-ontology#hasComposer",
+          "old_value": null,
+          "new_value": "<http://example.org/extracted/person_ar_reihana>",
+          "triples_before": 15,
+          "triples_after": 16
+        }
+      ],
+      "unresolved_violation_fingerprints": [],
+      "triples_after": 16,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": true,
+        "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "violations": []
+      },
+      "outcome": "conforms"
+    }
+  ],
+  "status": "repaired",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": true,
+    "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "violations": []
+  },
+  "dangling_references": []
+}

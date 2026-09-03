@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/626/originals/extracted_626.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/626/ground_truth_626.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/st_teresas_national_secondary_school_malaysia": "http://example.org/entity/St_Teresa_s_National_Secondary_School",
+    "http://example.org/extracted/kyebambe_girls_secondary_school_uganda": "http://example.org/entity/Kyebambe_Girls_Secondary_School"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/kyebambe_girls_secondary_school_uganda",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kyebambe Girls' Secondary School",
+          "source": "label"
+        },
+        {
+          "text": "kyebambe girls secondary school uganda",
+          "source": "uri"
+        }
+      ],
+      "context": "Kyebambe Girls' Secondary School. has inception: 1910.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kyebambe_Girls_Secondary_School",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kyebambe Girls Secondary School",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kyebambe Girls' Secondary School",
+        "extracted_source": "label",
+        "ground_truth_text": "Kyebambe Girls Secondary School",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9942178130149841,
+      "string_score": 0.9928571581840515,
+      "independent_identity_support": true,
+      "context_score": 0.9949724674224854,
+      "graph_score": 0.9949724674224854,
+      "margin": 0.4788517951965332
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/st_teresas_national_secondary_school_malaysia",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "St. Teresa's National Secondary School",
+          "source": "label"
+        },
+        {
+          "text": "st teresas national secondary school malaysia",
+          "source": "uri"
+        }
+      ],
+      "context": "St. Teresa's National Secondary School. has inception: 1885.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/St_Teresa_s_National_Secondary_School",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "St Teresa s National Secondary School",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "St. Teresa's National Secondary School",
+        "extracted_source": "label",
+        "ground_truth_text": "St Teresa s National Secondary School",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9804186820983887,
+      "string_score": 0.9819999933242798,
+      "independent_identity_support": true,
+      "context_score": 0.9886862635612488,
+      "graph_score": 0.9886862635612488,
+      "margin": 0.4757664203643799
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

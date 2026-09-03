@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_everything_ducky a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Everything's Ducky" ;
+    onto:hasDirector data:person_don_taylor .
+
+data:film_karthika a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Karthika" ;
+    onto:hasDirector data:person_m_krishnan_nair .
+
+data:person_don_taylor a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Don Taylor" ;
+    onto:hasDeathDate "1998-12-29"^^xsd:date .
+
+data:person_m_krishnan_nair a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "M. Krishnan Nair" ;
+    onto:hasDeathDate "2001-05-10"^^xsd:date .
+

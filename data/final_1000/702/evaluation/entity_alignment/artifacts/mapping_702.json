@@ -1,0 +1,164 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/702/originals/extracted_702.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/702/ground_truth_702.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/charlotte_hesse_kassel": "http://example.org/entity/Charlotte_of_Hesse_Kassel",
+    "http://example.org/extracted/charles_i_louis_palatin": "http://example.org/entity/Charles_I_Louis_Elector_Palatine"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/charles_i_louis_palatin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charles Louis, Elector Palatine",
+          "source": "altLabel"
+        },
+        {
+          "text": "Charles I Louis, Elector Palatine",
+          "source": "label"
+        },
+        {
+          "text": "charles i louis palatin",
+          "source": "uri"
+        }
+      ],
+      "context": "Charles Louis, Elector Palatine. inverse has son: Frederick V of the Palatinate. inverse has spouse: Landgravine Charlotte of Hesse-Kassel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charles_I_Louis_Elector_Palatine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charles I Louis Elector Palatine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charles I Louis, Elector Palatine",
+        "extracted_source": "label",
+        "ground_truth_text": "Charles I Louis Elector Palatine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9845824837684631,
+      "string_score": 0.9930769205093384,
+      "independent_identity_support": true,
+      "context_score": 0.9168959259986877,
+      "graph_score": 0.9584479331970215,
+      "margin": 0.5781213641166687
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/charlotte_hesse_kassel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Landgravine Charlotte of Hesse-Kassel",
+          "source": "altLabel"
+        },
+        {
+          "text": "Charlotte of Hesse-Kassel",
+          "source": "label"
+        },
+        {
+          "text": "charlotte hesse kassel",
+          "source": "uri"
+        }
+      ],
+      "context": "Landgravine Charlotte of Hesse-Kassel. has spouse: Charles Louis, Elector Palatine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charlotte_of_Hesse_Kassel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charlotte of Hesse Kassel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charlotte of Hesse-Kassel",
+        "extracted_source": "label",
+        "ground_truth_text": "Charlotte of Hesse Kassel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9808973670005798,
+      "string_score": 0.9819999933242798,
+      "independent_identity_support": true,
+      "context_score": 0.886628270149231,
+      "graph_score": 0.9433141350746155,
+      "margin": 0.6552594900131226
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/frederick_v_palatin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Frederick V of the Palatinate",
+          "source": "label"
+        },
+        {
+          "text": "frederick v palatin",
+          "source": "uri"
+        }
+      ],
+      "context": "Frederick V of the Palatinate. has son: Charles Louis, Elector Palatine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Frederick_V",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Frederick V",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Frederick V of the Palatinate",
+        "extracted_source": "label",
+        "ground_truth_text": "Frederick V",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6744510531425476,
+      "name_embedding_score": 0.8250914812088013,
+      "string_score": 0.6474999785423279,
+      "independent_identity_support": false,
+      "context_score": 0.8002424836158752,
+      "graph_score": 0.4001212418079376,
+      "margin": 0.13523703813552856
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,14 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/buckingham_palace> a ex:Place .
+
+<http://example.org/extracted/princess_margarita_greece_denmark> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/extracted/princess_alice_battenberg> ;
+    ex:hasParent <http://example.org/extracted/princess_alice_battenberg> .
+
+<http://example.org/extracted/princess_alice_battenberg> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/princess_margarita_greece_denmark> ;
+    ex:hasDeathPlace <http://example.org/extracted/buckingham_palace> .
+

@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Louis_Count_of_Verdun a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Otto_I_Count_of_Chiny ;
+    ex:hasParent entity:Otto_I_Count_of_Chiny .
+
+entity:Gerberge_of_Lorraine a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Otto_I_Count_of_Chiny .
+
+entity:Otto_I_Count_of_Chiny a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Louis_Count_of_Verdun ;
+    ex:hasMother entity:Gerberge_of_Lorraine ;
+    ex:hasParent entity:Gerberge_of_Lorraine .
+

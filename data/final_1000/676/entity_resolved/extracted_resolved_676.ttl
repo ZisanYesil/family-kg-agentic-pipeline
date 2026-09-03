@@ -1,0 +1,36 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:rock_the_kasbah a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Rock the Kasbah" ;
+    onto:hasDirector data:barry_levinson .
+
+data:the_irish_in_america a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Irish in America" ;
+    onto:hasDirector data:sidney_olcott .
+
+data:barry_levinson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Barry Levinson" ;
+    onto:hasNationality data:united_states .
+
+data:canada a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Canada" ;
+    skos:altLabel "Canadian" .
+
+data:sidney_olcott a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sidney Olcott" ;
+    onto:hasNationality data:canada .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

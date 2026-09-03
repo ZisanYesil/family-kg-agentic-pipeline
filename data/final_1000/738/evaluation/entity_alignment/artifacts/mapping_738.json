@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/738/originals/extracted_738.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/738/ground_truth_738.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/cimetiere_notre_dame_de_belmont": "http://example.org/entity/Cimetière_Notre_Dame_de_Belmont",
+    "http://example.org/extracted/auguste_tessier_1853": "http://example.org/entity/Auguste_Tessier",
+    "http://example.org/extracted/ulric_joseph_tessier_1817": "http://example.org/entity/Ulric_Joseph_Tessier"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/auguste_tessier_1853",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Auguste Tessier",
+          "source": "label"
+        },
+        {
+          "text": "auguste tessier 1853",
+          "source": "uri"
+        }
+      ],
+      "context": "Auguste Tessier. has father: Ulric-Joseph Tessier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Auguste_Tessier",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Auguste Tessier",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Auguste Tessier",
+        "extracted_source": "label",
+        "ground_truth_text": "Auguste Tessier",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.98909991979599,
+      "graph_score": 0.9945499897003174,
+      "margin": 0.3594828248023987
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cimetiere_notre_dame_de_belmont",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cimetière Notre-Dame-de-Belmont",
+          "source": "label"
+        },
+        {
+          "text": "cimetiere notre dame de belmont",
+          "source": "uri"
+        }
+      ],
+      "context": "Cimetière Notre-Dame-de-Belmont. inverse has burial place: Ulric-Joseph Tessier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cimetière_Notre_Dame_de_Belmont",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cimetière Notre Dame de Belmont",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cimetière Notre-Dame-de-Belmont",
+        "extracted_source": "label",
+        "ground_truth_text": "Cimetière Notre Dame de Belmont",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8248903155326843,
+      "string_score": 0.9564515948295593,
+      "independent_identity_support": true,
+      "context_score": 0.8998077511787415,
+      "graph_score": 0.9499038457870483,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ulric_joseph_tessier_1817",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ulric-Joseph Tessier",
+          "source": "label"
+        },
+        {
+          "text": "ulric joseph tessier 1817",
+          "source": "uri"
+        }
+      ],
+      "context": "Ulric-Joseph Tessier. has burial place: Cimetière Notre-Dame-de-Belmont. inverse has father: Auguste Tessier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ulric_Joseph_Tessier",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ulric Joseph Tessier",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ulric-Joseph Tessier",
+        "extracted_source": "label",
+        "ground_truth_text": "Ulric Joseph Tessier",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.940975546836853,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.9486451745033264,
+      "graph_score": 0.9743225574493408,
+      "margin": 0.3702930808067322
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

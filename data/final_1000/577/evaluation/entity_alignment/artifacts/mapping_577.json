@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/577/originals/extracted_577.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/577/ground_truth_577.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/louis_antoine_ranvier": "http://example.org/entity/Louis_Antoine_Ranvier",
+    "http://example.org/extracted/ernst_dullberg": "http://example.org/entity/Ernst_Düllberg"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ernst_dullberg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ernst Düllberg",
+          "source": "label"
+        },
+        {
+          "text": "ernst dullberg",
+          "source": "uri"
+        }
+      ],
+      "context": "Ernst Düllberg. has birth date: 1913-03-28. has death date: 1984-07-27.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ernst_Düllberg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ernst Düllberg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ernst Düllberg",
+        "extracted_source": "label",
+        "ground_truth_text": "Ernst Düllberg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5362503528594971
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_antoine_ranvier",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis-Antoine Ranvier",
+          "source": "label"
+        },
+        {
+          "text": "louis antoine ranvier",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis-Antoine Ranvier. has birth date: 1835-10-02. has death date: 1922-03-22.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_Antoine_Ranvier",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis Antoine Ranvier",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis-Antoine Ranvier",
+        "extracted_source": "label",
+        "ground_truth_text": "Louis Antoine Ranvier",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.942449688911438,
+      "string_score": 0.9785714149475098,
+      "independent_identity_support": true,
+      "context_score": 0.9686223864555359,
+      "graph_score": 0.9686223864555359,
+      "margin": 0.5550225377082825
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

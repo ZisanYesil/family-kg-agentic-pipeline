@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/661/originals/extracted_661.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/661/ground_truth_661.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/paris": "http://example.org/entity/Paris",
+    "http://example.org/extracted/cyril_hanouna": "http://example.org/entity/Cyril_Hanouna",
+    "http://example.org/extracted/its_only_tv": "http://example.org/entity/It_s_Only_TV"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/cyril_hanouna",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cyril Valéry Hanouna",
+          "source": "altLabel"
+        },
+        {
+          "text": "Cyril Hanouna",
+          "source": "label"
+        }
+      ],
+      "context": "Cyril Valéry Hanouna. has birth date: 1974-09-23. has birth place: Paris. inverse has creator: Touche pas à mon poste !.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cyril_Hanouna",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cyril Hanouna",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cyril Hanouna",
+        "extracted_source": "label",
+        "ground_truth_text": "Cyril Hanouna",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.705355703830719,
+      "graph_score": 0.8526778221130371,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/its_only_tv",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Touche pas à mon poste !",
+          "source": "altLabel"
+        },
+        {
+          "text": "It's Only TV",
+          "source": "label"
+        },
+        {
+          "text": "its only tv",
+          "source": "uri"
+        }
+      ],
+      "context": "Touche pas à mon poste !. has creator: Cyril Valéry Hanouna.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/It_s_Only_TV",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "It s Only TV",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "It's Only TV",
+        "extracted_source": "label",
+        "ground_truth_text": "It s Only TV",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9745058417320251,
+      "string_score": 0.9624999761581421,
+      "independent_identity_support": true,
+      "context_score": 0.618811845779419,
+      "graph_score": 0.8094059228897095,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/paris",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Paris",
+          "source": "label"
+        }
+      ],
+      "context": "Paris. inverse has birth place: Cyril Valéry Hanouna.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Paris",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Paris",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Paris",
+        "extracted_source": "label",
+        "ground_truth_text": "Paris",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9379478693008423,
+      "graph_score": 0.9689739346504211,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

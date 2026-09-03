@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/202/originals/extracted_202.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/202/ground_truth_202.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_mark_mothersbaugh": "http://example.org/entity/Mark_Mothersbaugh",
+    "http://example.org/extracted/institution_kent_state_university": "http://example.org/entity/Kent_State_University",
+    "http://example.org/extracted/film_mamas_boy_2007": "http://example.org/entity/Mama_s_Boy"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_mamas_boy_2007",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mama's Boy",
+          "source": "altLabel"
+        },
+        {
+          "text": "film mamas boy 2007",
+          "source": "uri"
+        }
+      ],
+      "context": "Mama's Boy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mama_s_Boy",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mama s Boy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mama's Boy",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Mama s Boy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9331083297729492,
+      "string_score": 0.9549999833106995,
+      "independent_identity_support": true,
+      "context_score": 0.7023006677627563,
+      "graph_score": 0.3511503338813782,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/institution_kent_state_university",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kent State University",
+          "source": "altLabel"
+        },
+        {
+          "text": "institution kent state university",
+          "source": "uri"
+        }
+      ],
+      "context": "Kent State University. inverse has educated at: Mark Allen Mothersbaugh.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kent_State_University",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kent State University",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kent State University",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Kent State University",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9748370051383972,
+      "graph_score": 0.987418532371521,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_mark_mothersbaugh",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mark Allen Mothersbaugh",
+          "source": "altLabel"
+        },
+        {
+          "text": "Mark Mothersbaugh",
+          "source": "label"
+        },
+        {
+          "text": "person mark mothersbaugh",
+          "source": "uri"
+        }
+      ],
+      "context": "Mark Allen Mothersbaugh. has educated at: Kent State University.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mark_Mothersbaugh",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mark Mothersbaugh",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mark Mothersbaugh",
+        "extracted_source": "label",
+        "ground_truth_text": "Mark Mothersbaugh",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7628653645515442,
+      "graph_score": 0.6314326524734497,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_cage_of_gold a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Cage of Gold" ;
+    onto:hasDirector data:person_basil_dearden .
+
+data:film_face_of_a_fugitive a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Face of a Fugitive" ;
+    onto:hasDirector data:person_paul_wendkos .
+
+data:person_basil_dearden a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Basil Dearden" ;
+    onto:hasDeathDate "1971-03-23"^^xsd:date .
+
+data:person_paul_wendkos a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Paul Wendkos" ;
+    onto:hasDeathDate "2009-11-12"^^xsd:date .
+

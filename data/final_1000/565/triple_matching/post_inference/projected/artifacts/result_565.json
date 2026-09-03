@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/565/evaluation/entity_alignment/final_extracted_aligned_565.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/565/evaluation/entity_alignment/final_ground_truth_aligned_565.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Eduard_Künneke",
+      "predicate": "hasChild",
+      "object": "Evelyn_Künneke",
+      "subject_uri": "http://example.org/entity/Eduard_Künneke",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Evelyn_Künneke"
+    },
+    {
+      "subject": "Eduard_Künneke",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Eduard_Künneke",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Eduard_Künneke",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Eduard_Künneke",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Evelyn_Künneke",
+      "predicate": "hasParent",
+      "object": "Eduard_Künneke",
+      "subject_uri": "http://example.org/entity/Evelyn_Künneke",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Eduard_Künneke"
+    },
+    {
+      "subject": "Evelyn_Künneke",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Evelyn_Künneke",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Evelyn_Künneke",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Evelyn_Künneke",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "The_Cousin_from_Nowhere",
+      "predicate": "hasComposer",
+      "object": "Eduard_Künneke",
+      "subject_uri": "http://example.org/entity/The_Cousin_from_Nowhere",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Eduard_Künneke"
+    },
+    {
+      "subject": "The_Cousin_from_Nowhere",
+      "predicate": "hasCreator",
+      "object": "Eduard_Künneke",
+      "subject_uri": "http://example.org/entity/The_Cousin_from_Nowhere",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Eduard_Künneke"
+    },
+    {
+      "subject": "The_Cousin_from_Nowhere",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/The_Cousin_from_Nowhere",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "The_Cousin_from_Nowhere",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The_Cousin_from_Nowhere",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Eduard_Künneke",
+      "predicate": "hasBirthDate",
+      "object": "\"1885-01-27\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Eduard_Künneke",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1885-01-27\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Eduard_Künneke",
+      "predicate": "hasDeathDate",
+      "object": "\"1953-10-27\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Eduard_Künneke",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1953-10-27\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "The_Cousin_from_Nowhere",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Cousin_from_Nowhere",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 13,
+    "true_positives": 10,
+    "false_positives": 3,
+    "false_negatives": 0,
+    "precision": 0.7692307692307693,
+    "recall": 1.0,
+    "f1": 0.8695652173913044
+  },
+  "stage": "post_inference"
+}

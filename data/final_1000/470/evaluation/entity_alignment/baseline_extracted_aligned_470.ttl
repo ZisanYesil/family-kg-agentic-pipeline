@@ -1,0 +1,25 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Baby_Face_Morgan> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Baby Face Morgan" ;
+    onto:hasProducer <http://example.org/entity/Jack_Schwarz> .
+
+<http://example.org/entity/The_Seventh_Victim> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Seventh Victim" ;
+    onto:hasProducer <http://example.org/entity/Val_Lewton> .
+
+<http://example.org/entity/Jack_Schwarz> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jack Schwarz" ;
+    onto:hasBirthDate "1896-12-19"^^xsd:date .
+
+<http://example.org/entity/Val_Lewton> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Val Lewton" ;
+    onto:hasBirthDate "1904-05-07"^^xsd:date .
+

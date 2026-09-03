@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "fddbb46d57f892a0993b03b829c1a0a1d92bdb71df3e5963103d47c5b75a924e",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/hood_of_the_living_dead_film",
+        "path": null,
+        "value": "http://example.org/extracted/ami_neta_hobo_film",
+        "expected": null,
+        "message": "Relation phrase 'released before' from http://example.org/extracted/hood_of_the_living_dead_film to http://example.org/extracted/ami_neta_hobo_film was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "fddbb46d57f892a0993b03b829c1a0a1d92bdb71df3e5963103d47c5b75a924e",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/hood_of_the_living_dead_film",
+            "path": null,
+            "value": "http://example.org/extracted/ami_neta_hobo_film",
+            "expected": null,
+            "message": "Relation phrase 'released before' from http://example.org/extracted/hood_of_the_living_dead_film to http://example.org/extracted/ami_neta_hobo_film was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 8,
+      "feedback_reasoning": "The violation is an **unmapped_relation** asking for a predicate that captures the phrase “released before”. The supplied ontology does not contain any predicate whose documented semantics correspond to a temporal ordering relationship such as “was released before”. Domain/range compatibility alone is insufficient, and no suitable predicate can be inferred from the source text. Therefore no safe edit can be made.",
+      "repairs": [
+        {
+          "violation_fingerprint": "b0f6b14c1811388f4091cabd6d82135577a7ea7df0fb9523bba47d029387dab3",
+          "reasoning": "No ontology predicate matches the meaning of “released before”; cannot add, replace, or remove a triple.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "b0f6b14c1811388f4091cabd6d82135577a7ea7df0fb9523bba47d029387dab3"
+      ],
+      "triples_after": 8,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "fddbb46d57f892a0993b03b829c1a0a1d92bdb71df3e5963103d47c5b75a924e",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/hood_of_the_living_dead_film",
+            "path": null,
+            "value": "http://example.org/extracted/ami_neta_hobo_film",
+            "expected": null,
+            "message": "Relation phrase 'released before' from http://example.org/extracted/hood_of_the_living_dead_film to http://example.org/extracted/ami_neta_hobo_film was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "fddbb46d57f892a0993b03b829c1a0a1d92bdb71df3e5963103d47c5b75a924e",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/hood_of_the_living_dead_film",
+        "path": null,
+        "value": "http://example.org/extracted/ami_neta_hobo_film",
+        "expected": null,
+        "message": "Relation phrase 'released before' from http://example.org/extracted/hood_of_the_living_dead_film to http://example.org/extracted/ami_neta_hobo_film was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

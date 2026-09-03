@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/747/originals/extracted_747.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/747/ground_truth_747.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/_matilda_of_tuscany": "http://example.org/entity/Matilda_of_Tuscany",
+    "http://example.org/extracted/_godfrey_iv_duke_of_lower_lorraine": "http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine",
+    "http://example.org/extracted/_ida_of_lorraine": "http://example.org/entity/Ida_of_Lorraine"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/_godfrey_iv_duke_of_lower_lorraine",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Godfrey IV, Duke of Lower Lorraine",
+          "source": "label"
+        },
+        {
+          "text": "godfrey iv duke of lower lorraine",
+          "source": "uri"
+        }
+      ],
+      "context": "Godfrey IV, Duke of Lower Lorraine. has spouse: Matilda of Tuscany. inverse has brother: Ida of Lorraine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Godfrey IV Duke of Lower Lorraine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Godfrey IV, Duke of Lower Lorraine",
+        "extracted_source": "label",
+        "ground_truth_text": "Godfrey IV Duke of Lower Lorraine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9943844079971313,
+      "string_score": 0.9932835698127747,
+      "independent_identity_support": true,
+      "context_score": 0.9943596720695496,
+      "graph_score": 0.663846492767334,
+      "margin": 0.48396384716033936
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_ida_of_lorraine",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ida of Lorraine",
+          "source": "label"
+        }
+      ],
+      "context": "Ida of Lorraine. has brother: Godfrey IV, Duke of Lower Lorraine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ida_of_Lorraine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ida of Lorraine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ida of Lorraine",
+        "extracted_source": "label",
+        "ground_truth_text": "Ida of Lorraine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9904201030731201,
+      "graph_score": 0.49521005153656006,
+      "margin": 0.4798949956893921
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_matilda_of_tuscany",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Matilda of Tuscany",
+          "source": "label"
+        }
+      ],
+      "context": "Matilda of Tuscany. inverse has spouse: Godfrey IV, Duke of Lower Lorraine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Matilda_of_Tuscany",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Matilda of Tuscany",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Matilda of Tuscany",
+        "extracted_source": "label",
+        "ground_truth_text": "Matilda of Tuscany",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9966432452201843,
+      "graph_score": 0.9983216524124146,
+      "margin": 0.5702274441719055
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

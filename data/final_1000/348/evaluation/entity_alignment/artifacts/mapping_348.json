@@ -1,0 +1,246 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/348/originals/extracted_348.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/348/ground_truth_348.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_ryans_daughter": "http://example.org/entity/Ryan_s_Daughter",
+    "http://example.org/extracted/person_david_lean": "http://example.org/entity/David_Lean",
+    "http://example.org/extracted/film_beyond_rangoon": "http://example.org/entity/Beyond_Rangoon",
+    "http://example.org/extracted/person_john_boorman": "http://example.org/entity/John_Boorman"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_beyond_rangoon",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Beyond Rangoon",
+          "source": "label"
+        },
+        {
+          "text": "film beyond rangoon",
+          "source": "uri"
+        }
+      ],
+      "context": "Beyond Rangoon. has director: John Boorman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Beyond_Rangoon",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Beyond Rangoon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Beyond Rangoon",
+        "extracted_source": "label",
+        "ground_truth_text": "Beyond Rangoon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.8222949802875519
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_ryans_daughter",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ryan's Daughter",
+          "source": "label"
+        },
+        {
+          "text": "film ryans daughter",
+          "source": "uri"
+        }
+      ],
+      "context": "Ryan's Daughter. has director: David Lean.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ryan_s_Daughter",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ryan s Daughter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ryan's Daughter",
+        "extracted_source": "label",
+        "ground_truth_text": "Ryan s Daughter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9497653841972351,
+      "string_score": 0.9700000286102295,
+      "independent_identity_support": true,
+      "context_score": 0.9885579347610474,
+      "graph_score": 0.9942789673805237,
+      "margin": 0.8122815489768982
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_david_lean",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Lean",
+          "source": "label"
+        },
+        {
+          "text": "person david lean",
+          "source": "uri"
+        }
+      ],
+      "context": "David Lean. has nationality: English. inverse has director: Ryan's Daughter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/David_Lean",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "David Lean",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "David Lean",
+        "extracted_source": "label",
+        "ground_truth_text": "David Lean",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9341598749160767,
+      "graph_score": 0.9670799374580383,
+      "margin": 0.6245011985301971
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_john_boorman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Boorman",
+          "source": "label"
+        },
+        {
+          "text": "person john boorman",
+          "source": "uri"
+        }
+      ],
+      "context": "John Boorman. has nationality: English. inverse has director: Beyond Rangoon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Boorman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Boorman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Boorman",
+        "extracted_source": "label",
+        "ground_truth_text": "John Boorman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9239581823348999,
+      "graph_score": 0.96197909116745,
+      "margin": 0.6327532529830933
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "English",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        },
+        {
+          "text": "country united kingdom",
+          "source": "uri"
+        }
+      ],
+      "context": "English. inverse has nationality: David Lean. inverse has nationality: John Boorman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United Kingdom",
+        "extracted_source": "label",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.572697639465332,
+      "name_embedding_score": 0.8579878211021423,
+      "string_score": 0.12857143580913544,
+      "independent_identity_support": false,
+      "context_score": 0.8924869894981384,
+      "graph_score": 0.4462434947490692,
+      "margin": 0.572697639465332
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

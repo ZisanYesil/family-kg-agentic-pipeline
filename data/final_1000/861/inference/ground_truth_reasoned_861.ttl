@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:George_I a ex:Agent,
+        ex:Person ;
+    ex:hasDeathPlace entity:Thessaloniki .
+
+entity:Prince_Christopher_of_Greece_and_Denmark a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:George_I_of_Greece ;
+    ex:hasParent entity:George_I_of_Greece .
+
+entity:Thessaloniki a ex:Place .
+
+entity:George_I_of_Greece a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Prince_Christopher_of_Greece_and_Denmark .
+

@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:noemie_fox a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Noemie Fox" ;
+    onto:hasMother data:myriam_fox_jerusalmi .
+
+data:france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+
+data:myriam_fox_jerusalmi a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Myriam Fox-Jerusalmi" ;
+    onto:hasNationality data:france .
+

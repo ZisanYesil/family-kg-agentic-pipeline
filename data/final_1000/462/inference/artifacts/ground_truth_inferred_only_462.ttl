@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Hong_Ra_hee a ex:Agent,
+        ex:Person .
+
+entity:Lee_Byung_chul a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Lee_Kun_hee .
+
+entity:Lee_Kun_hee a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Lee_Byung_chul ;
+    ex:hasSpouse entity:Hong_Ra_hee .
+

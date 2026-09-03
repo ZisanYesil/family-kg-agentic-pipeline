@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_life_without_soul a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Life Without Soul" ;
+    onto:hasDirector data:person_joseph_w_smiley .
+
+data:person_joseph_w_smiley a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joseph W. Smiley" ;
+    onto:hasDeathPlace data:place_new_york_city_new_york_usa .
+
+data:place_new_york_city_new_york_usa a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "New York City, New York, USA" ;
+    skos:altLabel "New York City" .
+

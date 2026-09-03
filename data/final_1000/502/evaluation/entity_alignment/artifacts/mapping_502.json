@@ -1,0 +1,115 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/502/originals/extracted_502.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/502/ground_truth_502.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/gorm_the_old": "http://example.org/entity/Gorm_the_Old"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gorm_the_old",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gorm the Old",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Gorm the Old. inverse has father: Toke.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gorm_the_Old",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gorm the Old",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gorm the Old",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Gorm the Old",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7606562972068787,
+      "graph_score": 0.7606562972068787,
+      "margin": 0.7595372498035431
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/val_toke_gormsson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Toke",
+          "source": "altLabel"
+        },
+        {
+          "text": "Valtoke Gormsson",
+          "source": "altLabel"
+        },
+        {
+          "text": "val toke gormsson",
+          "source": "uri"
+        }
+      ],
+      "context": "Toke. has father: Gorm the Old.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Toke_also_known_as_Valtoke",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Toke also known as Valtoke",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Valtoke Gormsson",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Toke also known as Valtoke",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5839040279388428,
+      "name_embedding_score": 0.5501667261123657,
+      "string_score": 0.34166666865348816,
+      "independent_identity_support": false,
+      "context_score": 0.7872319221496582,
+      "graph_score": 0.8936159610748291,
+      "margin": 0.18975099921226501
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Jelling"
+  ]
+}

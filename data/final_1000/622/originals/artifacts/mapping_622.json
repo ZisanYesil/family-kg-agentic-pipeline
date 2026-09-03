@@ -1,0 +1,103 @@
+{
+  "_source_extraction_sha256": "e41e55a2225e0f88cf6239298341f61000c974139f20dcdd0103b2d68859dc21",
+  "entities": [
+    {
+      "id": "film_crd",
+      "label": "CRD",
+      "type": "Film",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "person_kranti_kanade",
+      "label": "Kranti Kanade",
+      "type": "Person",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "edu_ucla",
+      "label": "University of California, Los Angeles",
+      "type": "EducationalInstitution",
+      "aliases": [
+        "UCLA"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "edu_ftii",
+      "label": "Film and Television Institute of India",
+      "type": "EducationalInstitution",
+      "aliases": [
+        "FTII"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "film_crd",
+      "predicate": "hasDirector",
+      "object": "person_kranti_kanade",
+      "relation_phrase": "directed by",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "film_crd",
+      "source_object": "person_kranti_kanade",
+      "endpoints_swapped": false
+    },
+    {
+      "subject": "person_kranti_kanade",
+      "predicate": "hasEducatedAt",
+      "object": "edu_ucla",
+      "relation_phrase": "studied at",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "person_kranti_kanade",
+      "source_object": "edu_ucla",
+      "endpoints_swapped": false
+    },
+    {
+      "subject": "person_kranti_kanade",
+      "predicate": "hasEducatedAt",
+      "object": "edu_ftii",
+      "relation_phrase": "studied at",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "person_kranti_kanade",
+      "source_object": "edu_ftii",
+      "endpoints_swapped": false
+    }
+  ],
+  "unmapped_relations": []
+}

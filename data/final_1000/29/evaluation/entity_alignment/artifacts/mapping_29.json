@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/29/originals/extracted_29.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/29/ground_truth_29.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/lash_kenar_nur": "http://example.org/entity/Lash_Kenar_Nur",
+    "http://example.org/extracted/iran": "http://example.org/entity/Iran",
+    "http://example.org/extracted/united_states": "http://example.org/entity/U_S",
+    "http://example.org/extracted/coal_city_illinois": "http://example.org/entity/Coal_City_Illinois"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/coal_city_illinois",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Coal City, Illinois",
+          "source": "label"
+        },
+        {
+          "text": "coal city illinois",
+          "source": "uri"
+        }
+      ],
+      "context": "Coal City, Illinois. has country: America.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Coal_City_Illinois",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Coal City Illinois",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Coal City, Illinois",
+        "extracted_source": "label",
+        "ground_truth_text": "Coal City Illinois",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9863983392715454,
+      "string_score": 0.9878378510475159,
+      "independent_identity_support": true,
+      "context_score": 0.9571298360824585,
+      "graph_score": 0.9785649180412292,
+      "margin": 0.782415121793747
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/iran",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Iran",
+          "source": "label"
+        }
+      ],
+      "context": "Iran. inverse has country: Lash Kenar, Nur.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Iran",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Iran",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Iran",
+        "extracted_source": "label",
+        "ground_truth_text": "Iran",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9946606159210205,
+      "graph_score": 0.9973303079605103,
+      "margin": 0.7616204023361206
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lash_kenar_nur",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lash Kenar, Nur",
+          "source": "label"
+        },
+        {
+          "text": "lash kenar nur",
+          "source": "uri"
+        }
+      ],
+      "context": "Lash Kenar, Nur. has country: Iran.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lash_Kenar_Nur",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lash Kenar Nur",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lash Kenar, Nur",
+        "extracted_source": "label",
+        "ground_truth_text": "Lash Kenar Nur",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.985504686832428,
+      "string_score": 0.9844827651977539,
+      "independent_identity_support": true,
+      "context_score": 0.9921746850013733,
+      "graph_score": 0.9960873126983643,
+      "margin": 0.7083284854888916
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "America",
+          "source": "altLabel"
+        },
+        {
+          "text": "U.S.",
+          "source": "altLabel"
+        },
+        {
+          "text": "U.S.A.",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "America. inverse has country: Coal City, Illinois.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/U_S",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "U S",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "U.S.",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "U S",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.708045482635498,
+      "string_score": 0.8071428537368774,
+      "independent_identity_support": true,
+      "context_score": 0.963518500328064,
+      "graph_score": 0.981759250164032,
+      "margin": 0.7244335114955902
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

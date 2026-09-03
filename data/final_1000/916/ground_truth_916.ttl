@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1068
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:Hospital_Massacre ex:hasDirector inst:Boaz_Davidson .  # director
+inst:Searching_for_Monica ex:hasDirector inst:José_María_Forqué .  # director
+inst:Boaz_Davidson ex:hasBirthDate "1943-11-08"^^xsd:date .  # date of birth -> "8 November 1943"
+inst:José_María_Forqué ex:hasBirthDate "1923-03-08"^^xsd:date .  # date of birth -> "8 March 1923"

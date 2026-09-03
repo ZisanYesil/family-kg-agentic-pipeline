@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/608/originals/extracted_608.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/608/ground_truth_608.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/antonieta_film": "http://example.org/entity/Antonieta",
+    "http://example.org/extracted/autumn_milk_film": "http://example.org/entity/Autumn_Milk"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/antonieta_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Antonieta",
+          "source": "label"
+        },
+        {
+          "text": "antonieta film",
+          "source": "uri"
+        }
+      ],
+      "context": "Antonieta. has publication date: 1982.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Antonieta",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Antonieta",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Antonieta",
+        "extracted_source": "label",
+        "ground_truth_text": "Antonieta",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997019767761,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7906192094087601
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/autumn_milk_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Autumn Milk",
+          "source": "label"
+        },
+        {
+          "text": "autumn milk film",
+          "source": "uri"
+        }
+      ],
+      "context": "Autumn Milk. has publication date: 1988.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Autumn_Milk",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Autumn Milk",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Autumn Milk",
+        "extracted_source": "label",
+        "ground_truth_text": "Autumn Milk",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7977512776851654
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

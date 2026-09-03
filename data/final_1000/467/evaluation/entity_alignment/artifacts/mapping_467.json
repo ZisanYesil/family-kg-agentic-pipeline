@@ -1,0 +1,173 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/467/originals/extracted_467.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/467/ground_truth_467.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/eleonore_of_liechtenstein": "http://example.org/entity/Eleonore_of_Liechtenstein",
+    "http://example.org/extracted/franz_joseph_i_of_liechtenstein": "http://example.org/entity/Franz_Joseph_I",
+    "http://example.org/extracted/karl_borromaus_of_liechtenstein": "http://example.org/entity/Prince_Karl_Borromäus_of_Liechtenstein"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/eleonore_of_liechtenstein",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eleonore of Liechtenstein",
+          "source": "altLabel"
+        },
+        {
+          "text": "Maria Eleonore of Liechtenstein née Oettingen-Oettingen and Oettingen-Spielberg",
+          "source": "altLabel"
+        },
+        {
+          "text": "Maria Eleonore of Liechtenstein",
+          "source": "label"
+        }
+      ],
+      "context": "Eleonore of Liechtenstein. has spouse: Karl Borromäus.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eleonore_of_Liechtenstein",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eleonore of Liechtenstein",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eleonore of Liechtenstein",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Eleonore of Liechtenstein",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9466437697410583,
+      "graph_score": 0.9733219146728516,
+      "margin": 0.42799317836761475
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/franz_joseph_i_of_liechtenstein",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Franz Joseph I",
+          "source": "altLabel"
+        },
+        {
+          "text": "Franz Joseph I, Prince of Liechtenstein",
+          "source": "label"
+        },
+        {
+          "text": "franz joseph i of liechtenstein",
+          "source": "uri"
+        }
+      ],
+      "context": "Franz Joseph I. inverse has brother: Karl Borromäus.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Franz_Joseph_I",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Franz Joseph I",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Franz Joseph I",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Franz Joseph I",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8897945880889893,
+      "graph_score": 0.44489729404449463,
+      "margin": 0.3682665228843689
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/karl_borromaus_of_liechtenstein",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Karl Borromäus",
+          "source": "altLabel"
+        },
+        {
+          "text": "Prince Karl (Karl Borromäus) Michael Joseph of Liechtenstein",
+          "source": "altLabel"
+        },
+        {
+          "text": "Prince Karl Borromäus of Liechtenstein",
+          "source": "label"
+        },
+        {
+          "text": "karl borromaus of liechtenstein",
+          "source": "uri"
+        }
+      ],
+      "context": "Karl Borromäus. has brother: Franz Joseph I. inverse has spouse: Eleonore of Liechtenstein.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prince_Karl_Borromäus_of_Liechtenstein",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prince Karl Borromäus of Liechtenstein",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prince Karl Borromäus of Liechtenstein",
+        "extracted_source": "label",
+        "ground_truth_text": "Prince Karl Borromäus of Liechtenstein",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.944391667842865,
+      "graph_score": 0.6388624906539917,
+      "margin": 0.39174914360046387
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Candy> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Candy (1944 song)" ;
+    onto:hasComposer <http://example.org/entity/Alex_Kramer> .
+
+<http://example.org/entity/Alex_Kramer> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alex Kramer" ;
+    onto:hasBirthPlace <http://example.org/entity/Montreal_Quebec> ;
+    skos:altLabel "Alex J. Kramer" .
+
+<http://example.org/entity/Montreal_Quebec> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Montreal, Quebec, Canada" .
+

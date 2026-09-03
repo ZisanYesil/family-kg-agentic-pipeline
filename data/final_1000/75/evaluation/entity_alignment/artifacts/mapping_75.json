@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/75/originals/extracted_75.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/75/ground_truth_75.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sancha_of_castile": "http://example.org/entity/Sancha_of_Castile_Queen_of_Aragon",
+    "http://example.org/extracted/alfonso_ii_of_aragon": "http://example.org/entity/Alfonso_II_of_Aragon",
+    "http://example.org/extracted/ramon_berenguer_iv": "http://example.org/entity/Ramon_Berenguer_IV"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alfonso_ii_of_aragon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alfonso II",
+          "source": "altLabel"
+        },
+        {
+          "text": "Alfonso II of Aragon",
+          "source": "label"
+        }
+      ],
+      "context": "Alfonso II. has father: Count Ramon Berenguer IV of Barcelona. inverse has spouse: Sancha of Castile.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alfonso_II_of_Aragon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alfonso II of Aragon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alfonso II of Aragon",
+        "extracted_source": "label",
+        "ground_truth_text": "Alfonso II of Aragon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9142337441444397,
+      "graph_score": 0.9571168422698975,
+      "margin": 0.439491331577301
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ramon_berenguer_iv",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Count Ramon Berenguer IV of Barcelona",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ramon Berenguer IV of Barcelona",
+          "source": "label"
+        },
+        {
+          "text": "ramon berenguer iv",
+          "source": "uri"
+        }
+      ],
+      "context": "Count Ramon Berenguer IV of Barcelona. inverse has father: Alfonso II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ramon_Berenguer_IV",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ramon Berenguer IV",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ramon Berenguer IV of Barcelona",
+        "extracted_source": "label",
+        "ground_truth_text": "Ramon Berenguer IV",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8524239659309387,
+      "string_score": 0.7806122303009033,
+      "independent_identity_support": true,
+      "context_score": 0.9000422358512878,
+      "graph_score": 0.9500211477279663,
+      "margin": 0.5705799758434296
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sancha_of_castile",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sancha of Castile",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sancha of Castile, Queen of Aragon",
+          "source": "label"
+        }
+      ],
+      "context": "Sancha of Castile. has spouse: Alfonso II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sancha_of_Castile_Queen_of_Aragon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sancha of Castile Queen of Aragon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sancha of Castile, Queen of Aragon",
+        "extracted_source": "label",
+        "ground_truth_text": "Sancha of Castile Queen of Aragon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9965218305587769,
+      "string_score": 0.9932835698127747,
+      "independent_identity_support": true,
+      "context_score": 0.8862000703811646,
+      "graph_score": 0.9431000351905823,
+      "margin": 0.4274119734764099
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

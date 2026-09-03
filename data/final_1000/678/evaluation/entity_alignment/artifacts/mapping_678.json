@@ -1,0 +1,113 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/678/originals/extracted_678.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/678/ground_truth_678.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/max_finkelstein": "http://example.org/entity/Max_Finkelstein"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/max_finkelstein",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Max Finkelstein",
+          "source": "label"
+        }
+      ],
+      "context": "Max Finkelstein. has birth date: 1884-03-05. has death date: 1940-05-03.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Max_Finkelstein",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Max Finkelstein",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Max Finkelstein",
+        "extracted_source": "label",
+        "ground_truth_text": "Max Finkelstein",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.5415643453598022
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/joseph_boyer_jr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Joe Boyer",
+          "source": "altLabel"
+        },
+        {
+          "text": "Joseph Boyer, Jr.",
+          "source": "label"
+        },
+        {
+          "text": "joseph boyer jr",
+          "source": "uri"
+        }
+      ],
+      "context": "Joe Boyer. has birth date: 1890-05-30. has death date: 1924-09-02.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Joseph_Boyer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Joseph Boyer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Joseph Boyer, Jr.",
+        "extracted_source": "label",
+        "ground_truth_text": "Joseph Boyer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.891998291015625,
+      "name_embedding_score": 0.9178052544593811,
+      "string_score": 0.8390804529190063,
+      "independent_identity_support": true,
+      "context_score": 0.8933022618293762,
+      "graph_score": 0.8933022618293762,
+      "margin": 0.42333149909973145
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

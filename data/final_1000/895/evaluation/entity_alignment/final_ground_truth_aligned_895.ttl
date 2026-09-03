@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Bel_Air a ex:Place .
+
+entity:Patricia_Ann_Davis a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Nancy_Davis_Reagan ;
+    ex:hasParent entity:Nancy_Davis_Reagan .
+
+entity:Nancy_Davis_Reagan a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Patricia_Ann_Davis ;
+    ex:hasDeathPlace entity:Bel_Air .
+

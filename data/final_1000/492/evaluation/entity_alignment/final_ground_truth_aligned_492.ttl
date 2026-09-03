@@ -1,0 +1,33 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Lovers_1999_film a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Jean_Marc_Barr ;
+    ex:hasDirector entity:Jean_Marc_Barr .
+
+entity:Pitch_Perfect_3 a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Trish_Sie ;
+    ex:hasDirector entity:Trish_Sie .
+
+entity:French a ex:Country,
+        ex:Place .
+
+entity:Jean_Marc_Barr a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:American,
+        entity:French ;
+    ex:hasCountry entity:American,
+        entity:French .
+
+entity:Trish_Sie a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:American ;
+    ex:hasCountry entity:American .
+
+entity:American a ex:Country,
+        ex:Place .
+

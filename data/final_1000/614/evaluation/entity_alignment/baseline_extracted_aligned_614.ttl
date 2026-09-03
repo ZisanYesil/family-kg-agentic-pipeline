@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Bratuku_Teruvu> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Bratuku Teruvu" ;
+    onto:hasDirector <http://example.org/entity/P_S_Ramakrishna_Rao> .
+
+<http://example.org/entity/Bhanumathi_Ramakrishna> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bhanumathi Ramakrishna" .
+
+<http://example.org/entity/P_S_Ramakrishna_Rao> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "P. S. Ramakrishna Rao" ;
+    onto:hasBirthDate "1918-10-12"^^xsd:date ;
+    onto:hasDeathDate "1986-09-07"^^xsd:date ;
+    onto:hasSpouse <http://example.org/entity/Bhanumathi_Ramakrishna> .
+

@@ -1,0 +1,27 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Gordon_Douglas_director a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1907-12-15"^^xsd:date .
+
+entity:Stolen_Identity a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Gunther_von_Fritsch ;
+    ex:hasDirector entity:Gunther_von_Fritsch .
+
+entity:Them a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Gordon_Douglas ;
+    ex:hasDirector entity:Gordon_Douglas .
+
+entity:Gordon_Douglas a ex:Agent,
+        ex:Person .
+
+entity:Gunther_von_Fritsch a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1906-07-15"^^xsd:date .
+

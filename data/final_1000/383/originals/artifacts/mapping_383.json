@@ -1,0 +1,77 @@
+{
+  "_source_extraction_sha256": "ab0243010f668dd0bf4af4ffd494cbf548da2f209363ad5ae7194bba8a31fdc3",
+  "entities": [
+    {
+      "id": "film_is_it_easy_to_be_young",
+      "label": "Is It Easy To Be Young?",
+      "type": "Film",
+      "aliases": [
+        "Vai viegli būt jaunam?"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "person_juris_podnieks",
+      "label": "Juris Podnieks",
+      "type": "Person",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "edu_soviet_vgik_film_school",
+      "label": "Soviet VGIK film school",
+      "type": "EducationalInstitution",
+      "aliases": [
+        "VGIK film school"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "film_is_it_easy_to_be_young",
+      "predicate": "hasDirector",
+      "object": "person_juris_podnieks",
+      "relation_phrase": "directed by",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "film_is_it_easy_to_be_young",
+      "source_object": "person_juris_podnieks",
+      "endpoints_swapped": false
+    },
+    {
+      "subject": "person_juris_podnieks",
+      "predicate": "hasEducatedAt",
+      "object": "edu_soviet_vgik_film_school",
+      "relation_phrase": "graduated from",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "person_juris_podnieks",
+      "source_object": "edu_soviet_vgik_film_school",
+      "endpoints_swapped": false
+    }
+  ],
+  "unmapped_relations": []
+}

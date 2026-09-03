@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/559/originals/extracted_559.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/559/ground_truth_559.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/unseen_forces_film": "http://example.org/entity/Unseen_Forces",
+    "http://example.org/extracted/breaking_dawn_part1_film": "http://example.org/entity/The_Twilight_Saga_Breaking_Dawn_Part_1"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/breaking_dawn_part1_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Twilight Saga: Breaking Dawn – Part 1",
+          "source": "label"
+        },
+        {
+          "text": "breaking dawn part1 film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Twilight Saga: Breaking Dawn – Part 1. has publication date: 2011-11-18.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Twilight_Saga_Breaking_Dawn_Part_1",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Twilight Saga Breaking Dawn Part 1",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Twilight Saga: Breaking Dawn – Part 1",
+        "extracted_source": "label",
+        "ground_truth_text": "The Twilight Saga Breaking Dawn Part 1",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9885971546173096,
+      "string_score": 0.9829114079475403,
+      "independent_identity_support": true,
+      "context_score": 0.951373279094696,
+      "graph_score": 0.951373279094696,
+      "margin": 0.7871362566947937
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/unseen_forces_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Unseen Forces",
+          "source": "label"
+        },
+        {
+          "text": "unseen forces film",
+          "source": "uri"
+        }
+      ],
+      "context": "Unseen Forces. has publication date: 1920.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Unseen_Forces",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Unseen Forces",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Unseen Forces",
+        "extracted_source": "label",
+        "ground_truth_text": "Unseen Forces",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.7810554951429367
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

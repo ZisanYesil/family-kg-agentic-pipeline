@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:conspirare_org a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Conspirare" ;
+    onto:hasFounder data:craig_hella_johnson .
+
+data:craig_hella_johnson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Craig Hella Johnson" ;
+    onto:hasBirthPlace data:crow_wing_county_mn ;
+    skos:altLabel "Craig Morris Hella Johnson" .
+
+data:crow_wing_county_mn a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Crow Wing County, Minnesota" .
+

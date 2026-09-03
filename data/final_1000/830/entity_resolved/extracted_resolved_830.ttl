@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:arthur_plantagenet a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Arthur Plantagenet, 1st Viscount Lisle" ;
+    onto:hasFather data:edward_iv .
+
+data:edward_iv a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edward IV of England" ;
+    onto:hasSpouse data:elizabeth_woodville .
+
+data:elizabeth_woodville a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Elizabeth Woodville" .
+

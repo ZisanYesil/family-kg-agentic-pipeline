@@ -1,0 +1,18 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Buckaroo> a ex:Artifact,
+        ex:CreativeWork,
+        ex:MusicalWork ;
+    ex:hasCreator <http://example.org/entity/Lee_Ann_Womack> ;
+    ex:hasPerformer <http://example.org/entity/Lee_Ann_Womack> .
+
+<http://example.org/entity/Aubrie_Sellers> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/entity/Lee_Ann_Womack> ;
+    ex:isDaughterOf <http://example.org/entity/Lee_Ann_Womack> .
+
+<http://example.org/entity/Lee_Ann_Womack> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Aubrie_Sellers> ;
+    ex:hasDaughter <http://example.org/entity/Aubrie_Sellers> .
+

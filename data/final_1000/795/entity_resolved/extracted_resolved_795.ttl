@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:person_gabrielle_robinne a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gabrielle Robinne" ;
+    onto:hasNationality data:country_france ;
+    skos:altLabel "Gabrielle Anna Charlotte Robinne" .
+
+data:person_nicolas_francois_vuillaume a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Nicolas François Vuillaume" ;
+    onto:hasNationality data:country_france .
+
+data:country_france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+

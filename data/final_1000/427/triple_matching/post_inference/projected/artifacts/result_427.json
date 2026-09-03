@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/427/evaluation/entity_alignment/final_extracted_aligned_427.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/427/evaluation/entity_alignment/final_ground_truth_aligned_427.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Enrique_Iglesias",
+      "predicate": "hasCountry",
+      "object": "Spanish",
+      "subject_uri": "http://example.org/entity/Enrique_Iglesias",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Spanish"
+    },
+    {
+      "subject": "Enrique_Iglesias",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Enrique_Iglesias",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Enrique_Iglesias",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Enrique_Iglesias",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Heart_Attack",
+      "predicate": "hasCreator",
+      "object": "Enrique_Iglesias",
+      "subject_uri": "http://example.org/entity/Heart_Attack",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Enrique_Iglesias"
+    },
+    {
+      "subject": "Heart_Attack",
+      "predicate": "hasPerformer",
+      "object": "Enrique_Iglesias",
+      "subject_uri": "http://example.org/entity/Heart_Attack",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Enrique_Iglesias"
+    },
+    {
+      "subject": "Heart_Attack",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Heart_Attack",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Heart_Attack",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Heart_Attack",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Spanish",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Spanish",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Spanish",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Spanish",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Enrique_Iglesias",
+      "predicate": "hasCountry",
+      "object": "country_philippines",
+      "subject_uri": "http://example.org/entity/Enrique_Iglesias",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/country_philippines"
+    },
+    {
+      "subject": "country_philippines",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/country_philippines",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "country_philippines",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/country_philippines",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 12,
+    "true_positives": 9,
+    "false_positives": 3,
+    "false_negatives": 0,
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1": 0.8571428571428571
+  },
+  "stage": "post_inference"
+}

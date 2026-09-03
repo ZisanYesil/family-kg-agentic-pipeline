@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/52/originals/extracted_52.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/52/ground_truth_52.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/rip_off_press": "http://example.org/entity/Rip_Off_Press",
+    "http://example.org/extracted/rip_off_review_of_western_culture": "http://example.org/entity/The_Rip_Off_Review_of_Western_Culture"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/rip_off_press",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rip Off Press",
+          "source": "label"
+        }
+      ],
+      "context": "Rip Off Press. has inception: 1969. inverse has publisher: The Rip Off Review of Western Culture.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rip_Off_Press",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rip Off Press",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rip Off Press",
+        "extracted_source": "label",
+        "ground_truth_text": "Rip Off Press",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/rip_off_review_of_western_culture",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Rip Off Review of Western Culture",
+          "source": "label"
+        },
+        {
+          "text": "rip off review of western culture",
+          "source": "uri"
+        }
+      ],
+      "context": "The Rip Off Review of Western Culture. has publisher: Rip Off Press.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Rip_Off_Review_of_Western_Culture",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Rip Off Review of Western Culture",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Rip Off Review of Western Culture",
+        "extracted_source": "label",
+        "ground_truth_text": "The Rip Off Review of Western Culture",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

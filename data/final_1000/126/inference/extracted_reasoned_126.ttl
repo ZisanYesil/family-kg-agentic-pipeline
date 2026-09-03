@@ -1,0 +1,23 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/film_machi> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasComposer <http://example.org/extracted/person_ar_reihana> ;
+    ex:hasCreator <http://example.org/extracted/person_ar_reihana> .
+
+<http://example.org/extracted/person_bhavani_sree> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/extracted/person_ar_reihana> ;
+    ex:hasParent <http://example.org/extracted/person_ar_reihana> .
+
+<http://example.org/extracted/person_gv_prakash_kumar> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/extracted/person_ar_reihana> ;
+    ex:hasParent <http://example.org/extracted/person_ar_reihana> .
+
+<http://example.org/extracted/person_ar_reihana> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/person_bhavani_sree>,
+        <http://example.org/extracted/person_gv_prakash_kumar> .
+

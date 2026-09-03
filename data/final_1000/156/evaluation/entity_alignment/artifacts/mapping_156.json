@@ -1,0 +1,188 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/156/originals/extracted_156.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/156/ground_truth_156.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/other_half_2016_film": "http://example.org/entity/The_Other_Half_2016_film",
+    "http://example.org/extracted/spy_kids_2_film": "http://example.org/entity/Spy_Kids_2_The_Island_of_Lost_Dreams"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/other_half_2016_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Other Half (2016 film)",
+          "source": "label"
+        },
+        {
+          "text": "other half 2016 film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Other Half (2016 film). has country: Canada.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Other_Half_2016_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Other Half 2016 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Other Half (2016 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Other Half 2016 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9414757490158081,
+      "string_score": 0.9819999933242798,
+      "independent_identity_support": true,
+      "context_score": 0.9196558594703674,
+      "graph_score": 0.9196558594703674,
+      "margin": 0.71065753698349
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/spy_kids_2_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Spy Kids 2: The Island of Lost Dreams",
+          "source": "label"
+        },
+        {
+          "text": "spy kids 2 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Spy Kids 2: The Island of Lost Dreams. has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Spy_Kids_2_The_Island_of_Lost_Dreams",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Spy Kids 2 The Island of Lost Dreams",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Spy Kids 2: The Island of Lost Dreams",
+        "extracted_source": "label",
+        "ground_truth_text": "Spy Kids 2 The Island of Lost Dreams",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9859775304794312,
+      "string_score": 0.9938356280326843,
+      "independent_identity_support": true,
+      "context_score": 0.9433627128601074,
+      "graph_score": 0.9433627128601074,
+      "margin": 0.5977432131767273
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/canada_country",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Canada",
+          "source": "label"
+        },
+        {
+          "text": "canada country",
+          "source": "uri"
+        }
+      ],
+      "context": "Canada. inverse has country: The Other Half (2016 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Canadian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Canadian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Canada",
+        "extracted_source": "label",
+        "ground_truth_text": "Canadian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7019298672676086,
+      "name_embedding_score": 0.980833113193512,
+      "string_score": 0.3857142925262451,
+      "independent_identity_support": false,
+      "context_score": 0.920677661895752,
+      "graph_score": 0.460338830947876,
+      "margin": 0.39035600423812866
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states_country",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "united states country",
+          "source": "uri"
+        }
+      ],
+      "context": "United States. inverse has country: Spy Kids 2: The Island of Lost Dreams.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/American"
+  ]
+}

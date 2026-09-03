@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Felix_V a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Bonne_of_Berry ;
+    ex:hasParent entity:Bonne_of_Berry .
+
+entity:Bonne_of_Berry a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Felix_V ;
+    ex:hasCitizenship entity:France ;
+    ex:hasCountry entity:France .
+
+entity:France a ex:Country,
+        ex:Place .
+

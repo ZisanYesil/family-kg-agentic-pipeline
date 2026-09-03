@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_show_da_world a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Show da World" ;
+    onto:hasPerformer data:person_boosie_badazz .
+
+data:person_boosie_badazz a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Boosie Badazz" ;
+    onto:hasBirthPlace data:place_baton_rouge_louisiana ;
+    skos:altLabel "Lil Boosie",
+        "Torrence Hatch Jr." .
+
+data:place_baton_rouge_louisiana a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Baton Rouge, Louisiana" .
+

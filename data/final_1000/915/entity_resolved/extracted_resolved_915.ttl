@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:queen_insun a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Queen Insun" ;
+    onto:hasSpouse data:king_myeongjong .
+
+data:king_myeongjong a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Myeongjong of Joseon" ;
+    onto:hasMother data:queen_munjeong .
+
+data:queen_munjeong a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Queen Munjeong" .
+

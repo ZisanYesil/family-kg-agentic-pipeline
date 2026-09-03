@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/39/originals/extracted_39.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/39/ground_truth_39.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/die_abfahrer": "http://example.org/entity/Die_Abfahrer",
+    "http://example.org/extracted/dortmund_university_of_applied_sciences_and_arts": "http://example.org/entity/Dortmund_University_of_Applied_Sciences_and_Arts",
+    "http://example.org/extracted/adolf_winkelmann": "http://example.org/entity/Adolf_Winkelmann"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adolf_winkelmann",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adolf Winkelmann",
+          "source": "label"
+        }
+      ],
+      "context": "Adolf Winkelmann. inverse has director: Die Abfahrer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adolf_Winkelmann",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adolf Winkelmann",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adolf Winkelmann",
+        "extracted_source": "label",
+        "ground_truth_text": "Adolf Winkelmann",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7455055713653564,
+      "graph_score": 0.6227527856826782,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/die_abfahrer",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Die Abfahrer",
+          "source": "label"
+        }
+      ],
+      "context": "Die Abfahrer. has director: Adolf Winkelmann.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Die_Abfahrer",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Die Abfahrer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Die Abfahrer",
+        "extracted_source": "label",
+        "ground_truth_text": "Die Abfahrer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dortmund_university_of_applied_sciences_and_arts",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dortmund University of Applied Sciences and Arts",
+          "source": "label"
+        }
+      ],
+      "context": "Dortmund University of Applied Sciences and Arts.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dortmund_University_of_Applied_Sciences_and_Arts",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dortmund University of Applied Sciences and Arts",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dortmund University of Applied Sciences and Arts",
+        "extracted_source": "label",
+        "ground_truth_text": "Dortmund University of Applied Sciences and Arts",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7180242538452148,
+      "graph_score": 0.3590121269226074,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

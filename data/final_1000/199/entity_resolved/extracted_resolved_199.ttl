@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:sand_and_sorrow a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Sand And Sorrow" ;
+    onto:hasDirector data:paul_freedman .
+
+data:paul_freedman a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Paul Freedman" ;
+    onto:hasEmployer data:yale_university .
+
+data:yale_university a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Yale University" .
+

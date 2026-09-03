@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/51/originals/extracted_51.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/51/ground_truth_51.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/suicide_social": "http://example.org/entity/Suicide_social",
+    "http://example.org/extracted/orelsan": "http://example.org/entity/Orelsan"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/orelsan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Aurélien Cotentin",
+          "source": "altLabel"
+        },
+        {
+          "text": "Orelsan",
+          "source": "label"
+        }
+      ],
+      "context": "Aurélien Cotentin. has birth place: Alençon, Orne. inverse has performer: Suicide social.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Orelsan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Orelsan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Orelsan",
+        "extracted_source": "label",
+        "ground_truth_text": "Orelsan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.847978949546814,
+      "graph_score": 0.923989474773407,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/suicide_social",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Suicide social",
+          "source": "label"
+        }
+      ],
+      "context": "Suicide social. has performer: Aurélien Cotentin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Suicide_social",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Suicide social",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Suicide social",
+        "extracted_source": "label",
+        "ground_truth_text": "Suicide social",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8827692866325378,
+      "graph_score": 0.9413846731185913,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/alencon_orne",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alençon, Orne",
+          "source": "label"
+        },
+        {
+          "text": "alencon orne",
+          "source": "uri"
+        }
+      ],
+      "context": "Alençon, Orne. inverse has birth place: Aurélien Cotentin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alençon",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alençon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alençon, Orne",
+        "extracted_source": "label",
+        "ground_truth_text": "Alençon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8323982954025269,
+      "name_embedding_score": 0.8429899215698242,
+      "string_score": 0.7400000095367432,
+      "independent_identity_support": true,
+      "context_score": 0.8072265982627869,
+      "graph_score": 0.9036133289337158,
+      "margin": 0.8323982954025269
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

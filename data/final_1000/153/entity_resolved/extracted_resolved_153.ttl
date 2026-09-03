@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_g%C3%A5_och_g%C3%B6m_dig a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Gå och göm dig, Åke Tråk" ;
+    onto:hasPerformer data:person_mona_wessman .
+
+data:country_sweden a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Sweden" ;
+    skos:altLabel "Swedish" .
+
+data:person_mona_wessman a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mona Wessman" ;
+    onto:hasNationality data:country_sweden .
+

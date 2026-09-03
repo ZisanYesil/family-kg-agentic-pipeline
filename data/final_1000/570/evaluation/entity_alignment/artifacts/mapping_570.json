@@ -1,0 +1,159 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/570/originals/extracted_570.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/570/ground_truth_570.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_joe_bushkin": "http://example.org/entity/Joe_Bushkin"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_joe_bushkin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bushkin",
+          "source": "altLabel"
+        },
+        {
+          "text": "Joe Bushkin",
+          "source": "label"
+        },
+        {
+          "text": "person joe bushkin",
+          "source": "uri"
+        }
+      ],
+      "context": "Bushkin. has death place: Santa Barbara, California. inverse has composer: (There'll Be a) Hot Time in the Town of Berlin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Joe_Bushkin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Joe Bushkin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Joe Bushkin",
+        "extracted_source": "label",
+        "ground_truth_text": "Joe Bushkin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9373159408569336,
+      "graph_score": 0.9373159408569336,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_hot_time_berlin",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "(There'll Be a) Hot Time in the Town of Berlin",
+          "source": "label"
+        },
+        {
+          "text": "song hot time berlin",
+          "source": "uri"
+        }
+      ],
+      "context": "(There'll Be a) Hot Time in the Town of Berlin. has composer: Bushkin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hot_Time_in_the_Town_of_Berlin",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hot Time in the Town of Berlin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "(There'll Be a) Hot Time in the Town of Berlin",
+        "extracted_source": "label",
+        "ground_truth_text": "Hot Time in the Town of Berlin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9116977453231812,
+      "name_embedding_score": 0.9293597936630249,
+      "string_score": 0.8143540620803833,
+      "independent_identity_support": true,
+      "context_score": 0.9474345445632935,
+      "graph_score": 0.9737172722816467,
+      "margin": 0.9116977453231812
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_santa_barbara_california",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Santa Barbara, California",
+          "source": "label"
+        },
+        {
+          "text": "place santa barbara california",
+          "source": "uri"
+        }
+      ],
+      "context": "Santa Barbara, California. inverse has death place: Bushkin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Santa_Barbara",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Santa Barbara",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Santa Barbara, California",
+        "extracted_source": "label",
+        "ground_truth_text": "Santa Barbara",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8940180540084839,
+      "name_embedding_score": 0.9202311635017395,
+      "string_score": 0.7745614051818848,
+      "independent_identity_support": true,
+      "context_score": 0.9220972061157227,
+      "graph_score": 0.9610486030578613,
+      "margin": 0.8940180540084839
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

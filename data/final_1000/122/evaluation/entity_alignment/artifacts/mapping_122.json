@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/122/originals/extracted_122.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/122/ground_truth_122.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/guido_lauri": "http://example.org/entity/Guido_Lauri",
+    "http://example.org/extracted/joris_van_severen": "http://example.org/entity/Joris_Van_Severen"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/guido_lauri",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Guido Lauri",
+          "source": "label"
+        }
+      ],
+      "context": "Guido Lauri. has birth date: 1922-11-23. has death date: 2019-10-27.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Guido_Lauri",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Guido Lauri",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Guido Lauri",
+        "extracted_source": "label",
+        "ground_truth_text": "Guido Lauri",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5954131484031677
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/joris_van_severen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Joris Van Severen",
+          "source": "label"
+        }
+      ],
+      "context": "Joris Van Severen. has birth date: 1894-07-19. has death date: 1940-05-20.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Joris_Van_Severen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Joris Van Severen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Joris Van Severen",
+        "extracted_source": "label",
+        "ground_truth_text": "Joris Van Severen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.5954131484031677
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

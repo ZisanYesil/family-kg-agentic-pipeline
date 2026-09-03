@@ -1,0 +1,144 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/790/originals/extracted_790.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/790/ground_truth_790.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/william_i_van_brederode": "http://example.org/entity/William_I_van_Brederode",
+    "http://example.org/extracted/velsen": "http://example.org/entity/Velsen"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/velsen",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Velsen",
+          "source": "label"
+        }
+      ],
+      "context": "Velsen. inverse has death place: William I van Brederode.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Velsen",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Velsen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Velsen",
+        "extracted_source": "label",
+        "ground_truth_text": "Velsen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/william_i_van_brederode",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William I van Brederode",
+          "source": "label"
+        }
+      ],
+      "context": "William I van Brederode. has death place: Velsen. inverse has father: Dirk II van Brederode.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_I_van_Brederode",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William I van Brederode",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William I van Brederode",
+        "extracted_source": "label",
+        "ground_truth_text": "William I van Brederode",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9935289621353149,
+      "graph_score": 0.9967644810676575,
+      "margin": 0.3584396243095398
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dirk_ii_van_brederode",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dirk II van Brederode",
+          "source": "label"
+        }
+      ],
+      "context": "Dirk II van Brederode. has father: William I van Brederode.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dirk_van_Brederode",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dirk van Brederode",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dirk II van Brederode",
+        "extracted_source": "label",
+        "ground_truth_text": "Dirk van Brederode",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.931366503238678,
+      "name_embedding_score": 0.9160361289978027,
+      "string_score": 0.9028846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9810185432434082,
+      "graph_score": 0.9905092716217041,
+      "margin": 0.27386826276779175
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

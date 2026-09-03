@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Tlilpotoncatzin> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tlilpotoncatzin" ;
+    onto:hasFather <http://example.org/entity/Tlacaelel> ;
+    skos:altLabel "Tlilpotonqui" .
+
+<http://example.org/entity/Chimalpopoca> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Chimalpopoca" .
+
+<http://example.org/entity/Tlacaelel> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tlacaelel" ;
+    onto:hasBrother <http://example.org/entity/Chimalpopoca>,
+        data:moctezuma_i .
+
+data:moctezuma_i a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Moctezuma I" .
+

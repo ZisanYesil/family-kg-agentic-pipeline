@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:james_scudamore_3rd_viscount_scudamore a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "James Scudamore, 3rd Viscount Scudamore" ;
+    onto:hasFather data:john_scudamore_2nd_viscount_scudamore .
+
+data:jane_bennet a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jane Bennet" .
+
+data:john_scudamore_2nd_viscount_scudamore a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Scudamore, 2nd Viscount Scudamore" ;
+    onto:hasMother data:jane_bennet .
+

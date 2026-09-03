@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:song_forget_about_the_world a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Forget About the World" ;
+    onto:hasPerformer data:gabrielle_1969 .
+
+data:gabrielle_1969 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gabrielle" ;
+    onto:hasBirthDate "1969-07-19"^^xsd:date ;
+    onto:hasBirthPlace data:hackney_london ;
+    skos:altLabel "Louisa Gabrielle Bobb" .
+
+data:hackney_london a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Hackney, London" .
+

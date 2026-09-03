@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/945/originals/extracted_945.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/945/ground_truth_945.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_spencer_gordon_bennet": "http://example.org/entity/Spencer_Gordon_Bennet",
+    "http://example.org/extracted/film_luckiest_girl_1936": "http://example.org/entity/The_Luckiest_Girl_in_the_World",
+    "http://example.org/extracted/person_edward_buzzell": "http://example.org/entity/Edward_Buzzell",
+    "http://example.org/extracted/film_tigers_shadow_1928": "http://example.org/entity/The_Tiger_s_Shadow"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_luckiest_girl_1936",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Luckiest Girl in the World",
+          "source": "label"
+        },
+        {
+          "text": "film luckiest girl 1936",
+          "source": "uri"
+        }
+      ],
+      "context": "The Luckiest Girl in the World. has director: Edward Buzzell.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Luckiest_Girl_in_the_World",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Luckiest Girl in the World",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Luckiest Girl in the World",
+        "extracted_source": "label",
+        "ground_truth_text": "The Luckiest Girl in the World",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.8547054976224899
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_tigers_shadow_1928",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Tiger's Shadow",
+          "source": "label"
+        },
+        {
+          "text": "film tigers shadow 1928",
+          "source": "uri"
+        }
+      ],
+      "context": "The Tiger's Shadow. has director: Spencer Gordon Bennet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Tiger_s_Shadow",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Tiger s Shadow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Tiger's Shadow",
+        "extracted_source": "label",
+        "ground_truth_text": "The Tiger s Shadow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9932517409324646,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.994152307510376,
+      "graph_score": 0.997076153755188,
+      "margin": 0.8497384190559387
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_edward_buzzell",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edward Buzzell",
+          "source": "label"
+        },
+        {
+          "text": "person edward buzzell",
+          "source": "uri"
+        }
+      ],
+      "context": "Edward Buzzell. has birth date: 1895-11-13. has death date: 1985-01-11. inverse has director: The Luckiest Girl in the World.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Edward_Buzzell",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Edward Buzzell",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Edward Buzzell",
+        "extracted_source": "label",
+        "ground_truth_text": "Edward Buzzell",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9360387921333313,
+      "graph_score": 0.9680193662643433,
+      "margin": 0.6582462787628174
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_spencer_gordon_bennet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Spencer Gordon Bennet",
+          "source": "label"
+        },
+        {
+          "text": "person spencer gordon bennet",
+          "source": "uri"
+        }
+      ],
+      "context": "Spencer Gordon Bennet. has birth date: 1893-01-05. has death date: 1987-10-08. inverse has director: The Tiger's Shadow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Spencer_Gordon_Bennet",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Spencer Gordon Bennet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Spencer Gordon Bennet",
+        "extracted_source": "label",
+        "ground_truth_text": "Spencer Gordon Bennet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9326357245445251,
+      "graph_score": 0.966317892074585,
+      "margin": 0.6543983221054077
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

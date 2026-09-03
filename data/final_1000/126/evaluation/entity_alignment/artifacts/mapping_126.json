@@ -1,0 +1,191 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/126/originals/extracted_126.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/126/ground_truth_126.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_ar_reihana": "http://example.org/entity/A_R_Reihana",
+    "http://example.org/extracted/person_gv_prakash_kumar": "http://example.org/entity/G_V_Prakash_Kumar",
+    "http://example.org/extracted/film_machi": "http://example.org/entity/Machi"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_machi",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Machi",
+          "source": "label"
+        },
+        {
+          "text": "film machi",
+          "source": "uri"
+        }
+      ],
+      "context": "Machi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Machi",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Machi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Machi",
+        "extracted_source": "label",
+        "ground_truth_text": "Machi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.34926486015319824,
+      "graph_score": 0.17463243007659912,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_ar_reihana",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rayhanah",
+          "source": "altLabel"
+        },
+        {
+          "text": "A. R. Reihana",
+          "source": "label"
+        },
+        {
+          "text": "person ar reihana",
+          "source": "uri"
+        }
+      ],
+      "context": "Rayhanah. inverse has mother: Bhavani Sree. inverse has mother: G. V. Prakash Kumar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_R_Reihana",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A R Reihana",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A. R. Reihana",
+        "extracted_source": "label",
+        "ground_truth_text": "A R Reihana",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8794696927070618,
+      "string_score": 0.9624999761581421,
+      "independent_identity_support": true,
+      "context_score": 0.6844809651374817,
+      "graph_score": 0.34224048256874084,
+      "margin": 0.6190287470817566
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_gv_prakash_kumar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "G. V. Prakash Kumar",
+          "source": "label"
+        },
+        {
+          "text": "person gv prakash kumar",
+          "source": "uri"
+        }
+      ],
+      "context": "G. V. Prakash Kumar. has mother: Rayhanah.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/G_V_Prakash_Kumar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "G V Prakash Kumar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "G. V. Prakash Kumar",
+        "extracted_source": "label",
+        "ground_truth_text": "G V Prakash Kumar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.971642792224884,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.726949155330658,
+      "graph_score": 0.363474577665329,
+      "margin": 0.5999455749988556
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_bhavani_sree",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bhavani Sree",
+          "source": "label"
+        },
+        {
+          "text": "person bhavani sree",
+          "source": "uri"
+        }
+      ],
+      "context": "Bhavani Sree. has mother: Rayhanah.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/735/originals/extracted_735.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/735/ground_truth_735.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/lydia_flood_jackson": "http://example.org/entity/Lydia_Flood_Jackson",
+    "http://example.org/extracted/alexander_orenstein": "http://example.org/entity/Alexander_Jeremiah_Orenstein"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alexander_orenstein",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alexander Jeremiah Orenstein",
+          "source": "label"
+        },
+        {
+          "text": "alexander orenstein",
+          "source": "uri"
+        }
+      ],
+      "context": "Alexander Jeremiah Orenstein. has birth date: 1879-09-26. has death date: 1972-07-07.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alexander_Jeremiah_Orenstein",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alexander Jeremiah Orenstein",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alexander Jeremiah Orenstein",
+        "extracted_source": "label",
+        "ground_truth_text": "Alexander Jeremiah Orenstein",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7060758769512177
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lydia_flood_jackson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lydia Flood Jackson",
+          "source": "label"
+        }
+      ],
+      "context": "Lydia Flood Jackson. has birth date: 1862-06-06. has death date: 1963-07-08.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lydia_Flood_Jackson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lydia Flood Jackson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lydia Flood Jackson",
+        "extracted_source": "label",
+        "ground_truth_text": "Lydia Flood Jackson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7613292634487152
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

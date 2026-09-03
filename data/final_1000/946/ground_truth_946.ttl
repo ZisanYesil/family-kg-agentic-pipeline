@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1101
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:Crime_Against_Joe ex:hasDirector inst:Lee_Sholem .  # director
+inst:Vagabonderne_på_Bakkegården ex:hasDirector inst:Alice_O_Fredericks .  # director
+inst:Lee_Sholem ex:hasDeathDate "2000-08-19"^^xsd:date .  # date of death -> "August 19, 2000"
+inst:Alice_O_Fredericks ex:hasDeathDate "1968-02-18"^^xsd:date .  # date of death -> "18 February 1968"

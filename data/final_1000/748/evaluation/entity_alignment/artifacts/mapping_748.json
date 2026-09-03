@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/748/originals/extracted_748.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/748/ground_truth_748.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/michael_davitt_poet": "http://example.org/entity/Michael_Davitt",
+    "http://example.org/extracted/varoujan_hakhbandian": "http://example.org/entity/Varoujan_Hakhbandian"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/michael_davitt_poet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Michael Davitt",
+          "source": "label"
+        },
+        {
+          "text": "michael davitt poet",
+          "source": "uri"
+        }
+      ],
+      "context": "Michael Davitt. has birth date: 1950-04-20. has death date: 2005-06-19.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Michael_Davitt",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Michael Davitt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Michael Davitt",
+        "extracted_source": "label",
+        "ground_truth_text": "Michael Davitt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9367154240608215,
+      "graph_score": 0.9367154240608215,
+      "margin": 0.522475391626358
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/varoujan_hakhbandian",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Varoujan Hakhbandian",
+          "source": "label"
+        }
+      ],
+      "context": "Varoujan Hakhbandian. has birth date: 1936-12-04. has death date: 1977-09-17.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Varoujan_Hakhbandian",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Varoujan Hakhbandian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Varoujan Hakhbandian",
+        "extracted_source": "label",
+        "ground_truth_text": "Varoujan Hakhbandian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.5583853125572205
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

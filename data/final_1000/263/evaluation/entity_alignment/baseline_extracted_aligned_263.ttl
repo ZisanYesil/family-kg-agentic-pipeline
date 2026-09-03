@@ -1,0 +1,23 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/The_Lantern> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Lantern" ;
+    onto:hasDirector <http://example.org/entity/Karel_Lamač> ;
+    skos:altLabel "The Lantern" .
+
+<http://example.org/entity/Hamburg_Germany> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Hamburg, Germany" ;
+    skos:altLabel "Hamburg",
+        "Hamburg, Germany" .
+
+<http://example.org/entity/Karel_Lamač> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Karel Lamač" ;
+    onto:hasDeathPlace <http://example.org/entity/Hamburg_Germany> ;
+    skos:altLabel "Karel Lamač" .
+

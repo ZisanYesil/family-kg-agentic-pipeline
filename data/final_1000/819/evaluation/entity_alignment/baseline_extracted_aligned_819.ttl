@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Sällskapsresan_2_Snowroller> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Sällskapsresan 2 – Snowroller" ;
+    onto:hasDirector <http://example.org/entity/Lasse_Åberg> .
+
+<http://example.org/entity/Konstfack> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Konstfack" .
+
+<http://example.org/entity/Lasse_Åberg> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lasse Åberg" ;
+    onto:hasEducatedAt <http://example.org/entity/Konstfack> ;
+    skos:altLabel "Lars Gunnar Åberg" .
+

@@ -1,0 +1,91 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/37/evaluation/entity_alignment/final_extracted_aligned_37.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/37/evaluation/entity_alignment/final_ground_truth_aligned_37.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Kunigunde_of_Poland",
+      "predicate": "hasParent",
+      "object": "Władysław_I_the_Elbow_high",
+      "subject_uri": "http://example.org/entity/Kunigunde_of_Poland",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Władysław_I_the_Elbow_high"
+    },
+    {
+      "subject": "Kunigunde_of_Poland",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Kunigunde_of_Poland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Kunigunde_of_Poland",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Kunigunde_of_Poland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Władysław_I_the_Elbow_high",
+      "predicate": "hasChild",
+      "object": "Kunigunde_of_Poland",
+      "subject_uri": "http://example.org/entity/Władysław_I_the_Elbow_high",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Kunigunde_of_Poland"
+    },
+    {
+      "subject": "Władysław_I_the_Elbow_high",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Władysław_I_the_Elbow_high",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Władysław_I_the_Elbow_high",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Władysław_I_the_Elbow_high",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Wawel_Cathedral",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Wawel_Cathedral",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Władysław_I_the_Elbow_high",
+      "predicate": "hasBurialPlace",
+      "object": "Wawel_Cathedral",
+      "subject_uri": "http://example.org/entity/Władysław_I_the_Elbow_high",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://example.org/entity/Wawel_Cathedral"
+    }
+  ],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 8,
+    "true_positives": 6,
+    "false_positives": 0,
+    "false_negatives": 2,
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571428571428571
+  },
+  "stage": "post_inference"
+}

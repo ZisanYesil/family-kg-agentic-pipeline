@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/250/evaluation/entity_alignment/baseline_extracted_aligned_250.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/250/evaluation/entity_alignment/baseline_ground_truth_aligned_250.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Motu_Hafoka",
+      "predicate": "hasBirthDate",
+      "object": "\"1987-03-13\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Motu_Hafoka",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1987-03-13\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Motu_Hafoka",
+      "predicate": "hasDeathDate",
+      "object": "\"2012-06-30\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Motu_Hafoka",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"2012-06-30\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Wilhelm_Meise",
+      "predicate": "hasBirthDate",
+      "object": "\"1901-09-12\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Wilhelm_Meise",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1901-09-12\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Wilhelm_Meise",
+      "predicate": "hasDeathDate",
+      "object": "\"2002-08-24\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Wilhelm_Meise",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"2002-08-24\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Motu_Hafoka",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Motu_Hafoka",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Motu_Hafoka",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Motu_Hafoka",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Motu_Hafoka",
+      "predicate": "label",
+      "object": "\"Motu Hafoka\"",
+      "subject_uri": "http://example.org/entity/Motu_Hafoka",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Motu Hafoka\""
+    },
+    {
+      "subject": "Wilhelm_Meise",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Wilhelm_Meise",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Wilhelm_Meise",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Wilhelm_Meise",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Wilhelm_Meise",
+      "predicate": "label",
+      "object": "\"Wilhelm Meise\"",
+      "subject_uri": "http://example.org/entity/Wilhelm_Meise",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Wilhelm Meise\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 10,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715
+  },
+  "stage": "pre_inference"
+}

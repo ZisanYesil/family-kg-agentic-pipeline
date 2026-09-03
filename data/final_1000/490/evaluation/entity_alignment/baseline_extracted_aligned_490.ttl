@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Juan_Carlos_Gumucio> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Juan Carlos Gumucio" ;
+    onto:hasSpouse <http://example.org/entity/Marie_Colvin> .
+
+<http://example.org/entity/Marie_Colvin> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marie Colvin" ;
+    onto:hasEmployer <http://example.org/entity/Sunday_Times> ;
+    skos:altLabel "Marie Catherine Colvin" .
+
+<http://example.org/entity/Sunday_Times> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "The Sunday Times" .
+

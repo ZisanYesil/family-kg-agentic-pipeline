@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:mugain a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mugain" ;
+    onto:hasSpouse data:conchobar_mac_nessa .
+
+data:conchobar_mac_nessa a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Conchobar mac Nessa" ;
+    onto:hasMother data:ness .
+
+data:ness a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ness" .
+

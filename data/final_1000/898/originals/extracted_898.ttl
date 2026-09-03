@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:cuando_cielo_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Cuando en el cielo pasen lista" ;
+    onto:hasDirector data:carlos_borcosque .
+
+data:legend_fall_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Legends of the Fall" ;
+    onto:hasDirector data:edward_zwick .
+
+data:carlos_borcosque a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Carlos F. Borcosque" ;
+    onto:hasBirthDate "1894-09-09"^^xsd:date .
+
+data:edward_zwick a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edward Zwick" ;
+    onto:hasBirthDate "1952-10-08"^^xsd:date .
+

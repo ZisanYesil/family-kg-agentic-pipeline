@@ -1,0 +1,206 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/913/originals/extracted_913.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/913/ground_truth_913.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_min_marion": "http://example.org/entity/Min_Marion",
+    "http://example.org/extracted/director_nils_r_muller": "http://example.org/entity/Nils_R_Müller",
+    "http://example.org/extracted/director_robert_day": "http://example.org/entity/Robert_Day",
+    "http://example.org/extracted/film_corridors_of_blood": "http://example.org/entity/Corridors_of_Blood"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/director_nils_r_muller",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nils R. Müller",
+          "source": "label"
+        },
+        {
+          "text": "director nils r muller",
+          "source": "uri"
+        }
+      ],
+      "context": "Nils R. Müller. has birth date: 1921-01-17. has death date: 2007-03-06. inverse has director: Min Marion.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nils_R_Müller",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nils R Müller",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nils R. Müller",
+        "extracted_source": "label",
+        "ground_truth_text": "Nils R Müller",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9879675507545471,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9382796883583069,
+      "graph_score": 0.969139814376831,
+      "margin": 0.679008275270462
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/director_robert_day",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Robert Frederick Day",
+          "source": "altLabel"
+        },
+        {
+          "text": "Robert Day",
+          "source": "label"
+        },
+        {
+          "text": "director robert day",
+          "source": "uri"
+        }
+      ],
+      "context": "Robert Frederick Day. has birth date: 1922-09-11. has death date: 2017-03-17. inverse has director: Corridors of Blood.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Robert_Day",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Robert Day",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Robert Day",
+        "extracted_source": "label",
+        "ground_truth_text": "Robert Day",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6821569204330444,
+      "graph_score": 0.8410784602165222,
+      "margin": 0.2733585834503174
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_corridors_of_blood",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Corridors of Blood",
+          "source": "label"
+        },
+        {
+          "text": "film corridors of blood",
+          "source": "uri"
+        }
+      ],
+      "context": "Corridors of Blood. has director: Robert Frederick Day.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Corridors_of_Blood",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Corridors of Blood",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Corridors of Blood",
+        "extracted_source": "label",
+        "ground_truth_text": "Corridors of Blood",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9327394366264343,
+      "graph_score": 0.9663697481155396,
+      "margin": 0.8468798995018005
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_min_marion",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Min Marion",
+          "source": "label"
+        },
+        {
+          "text": "film min marion",
+          "source": "uri"
+        }
+      ],
+      "context": "Min Marion. has director: Nils R. Müller. has publication date: 1975.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Min_Marion",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Min Marion",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Min Marion",
+        "extracted_source": "label",
+        "ground_truth_text": "Min Marion",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8584492802619934,
+      "graph_score": 0.9292246103286743,
+      "margin": 0.9146935492753983
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Robert_Day_director"
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/647/originals/extracted_647.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/647/ground_truth_647.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_david_salle": "http://example.org/entity/David_Salle",
+    "http://example.org/extracted/edu_california_institute_of_the_arts": "http://example.org/entity/California_Institute_of_the_Arts"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/edu_california_institute_of_the_arts",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "California Institute of the Arts",
+          "source": "label"
+        },
+        {
+          "text": "edu california institute of the arts",
+          "source": "uri"
+        }
+      ],
+      "context": "California Institute of the Arts. inverse has educated at: David Salle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/California_Institute_of_the_Arts",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "California Institute of the Arts",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "California Institute of the Arts",
+        "extracted_source": "label",
+        "ground_truth_text": "California Institute of the Arts",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_david_salle",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Salle",
+          "source": "label"
+        },
+        {
+          "text": "person david salle",
+          "source": "uri"
+        }
+      ],
+      "context": "David Salle. has educated at: California Institute of the Arts. inverse has director: Search and Destroy (1995 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/David_Salle",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "David Salle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "David Salle",
+        "extracted_source": "label",
+        "ground_truth_text": "David Salle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9402403235435486,
+      "graph_score": 0.9701201915740967,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_search_and_destroy_1995",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Search and Destroy (1995 film)",
+          "source": "label"
+        },
+        {
+          "text": "film search and destroy 1995",
+          "source": "uri"
+        }
+      ],
+      "context": "Search and Destroy (1995 film). has director: David Salle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Search_and_Destroy",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Search and Destroy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Search and Destroy (1995 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Search and Destroy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8000114560127258,
+      "name_embedding_score": 0.737688422203064,
+      "string_score": 0.7875000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.8743375539779663,
+      "graph_score": 0.9371687769889832,
+      "margin": 0.8000114560127258
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/713/originals/extracted_713.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/713/ground_truth_713.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/adolf_of_germany": "http://example.org/entity/Adolf_of_Germany",
+    "http://example.org/extracted/gollheim": "http://example.org/entity/Göllheim",
+    "http://example.org/extracted/imagina_of_issenburg_limburg": "http://example.org/entity/Imagina_of_Isenburg_Limburg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adolf_of_germany",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adolf of Germany",
+          "source": "label"
+        }
+      ],
+      "context": "Adolf of Germany. has death place: Göllheim. inverse has spouse: Imagina of Isenburg-Limburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adolf_of_Germany",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adolf of Germany",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adolf of Germany",
+        "extracted_source": "label",
+        "ground_truth_text": "Adolf of Germany",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8849795460700989,
+      "graph_score": 0.692489743232727,
+      "margin": 0.3449844717979431
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/gollheim",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Göllheim",
+          "source": "label"
+        },
+        {
+          "text": "gollheim",
+          "source": "uri"
+        }
+      ],
+      "context": "Göllheim. inverse has death place: Adolf of Germany.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Göllheim",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Göllheim",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Göllheim",
+        "extracted_source": "label",
+        "ground_truth_text": "Göllheim",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/imagina_of_issenburg_limburg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Imagina of Isenburg-Limburg",
+          "source": "label"
+        },
+        {
+          "text": "imagina of issenburg limburg",
+          "source": "uri"
+        }
+      ],
+      "context": "Imagina of Isenburg-Limburg. has spouse: Adolf of Germany.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Imagina_of_Isenburg_Limburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Imagina of Isenburg Limburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Imagina of Isenburg-Limburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Imagina of Isenburg Limburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8009246587753296,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.7459883093833923,
+      "graph_score": 0.37299415469169617,
+      "margin": 0.5931724309921265
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Adolf_of_Nassau"
+  ]
+}

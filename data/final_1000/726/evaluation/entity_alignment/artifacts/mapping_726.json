@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/726/originals/extracted_726.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/726/ground_truth_726.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_loudon_wainwright_iii": "http://example.org/entity/Loudon_Wainwright_III",
+    "http://example.org/extracted/person_rufus_wainwright": "http://example.org/entity/Rufus_Wainwright",
+    "http://example.org/extracted/song_me_and_liza": "http://example.org/entity/Me_and_Liza"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_loudon_wainwright_iii",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Loudon Wainwright III",
+          "source": "label"
+        },
+        {
+          "text": "person loudon wainwright iii",
+          "source": "uri"
+        }
+      ],
+      "context": "Loudon Wainwright III. inverse has father: Rufus Wainwright.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Loudon_Wainwright_III",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Loudon Wainwright III",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Loudon Wainwright III",
+        "extracted_source": "label",
+        "ground_truth_text": "Loudon Wainwright III",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999996423721313,
+      "graph_score": 0.9999998211860657,
+      "margin": 0.36061131954193115
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_rufus_wainwright",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rufus Wainwright",
+          "source": "label"
+        },
+        {
+          "text": "person rufus wainwright",
+          "source": "uri"
+        }
+      ],
+      "context": "Rufus Wainwright. has father: Loudon Wainwright III. inverse has performer: Me and Liza.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rufus_Wainwright",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rufus Wainwright",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rufus Wainwright",
+        "extracted_source": "label",
+        "ground_truth_text": "Rufus Wainwright",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.36061131954193115
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_me_and_liza",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Me and Liza",
+          "source": "label"
+        },
+        {
+          "text": "song me and liza",
+          "source": "uri"
+        }
+      ],
+      "context": "Me and Liza. has performer: Rufus Wainwright.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Me_and_Liza",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Me and Liza",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Me and Liza",
+        "extracted_source": "label",
+        "ground_truth_text": "Me and Liza",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

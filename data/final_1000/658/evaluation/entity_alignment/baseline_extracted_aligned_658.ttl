@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/The_Next_List> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "The Next List" ;
+    onto:hasPresenter <http://example.org/entity/Sanjay_Gupta> .
+
+<http://example.org/entity/Sanjay_Gupta> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sanjay Gupta" ;
+    onto:hasEmployer data:cnn .
+
+data:cnn a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "CNN" .
+

@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Grand_Duchess_Natalya_Alexeyevna_of_Russia a ex:Agent,
+        ex:Person ;
+    ex:hasSibling entity:Peter_II_of_Russia .
+
+entity:Charlotte_Christine_of_Brunswick_Lüneburg a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Peter_II_of_Russia .
+
+entity:Peter_II_of_Russia a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Charlotte_Christine_of_Brunswick_Lüneburg ;
+    ex:hasParent entity:Charlotte_Christine_of_Brunswick_Lüneburg ;
+    ex:hasSibling entity:Grand_Duchess_Natalya_Alexeyevna_of_Russia .
+

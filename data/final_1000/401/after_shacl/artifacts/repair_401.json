@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "9c1f047364698df00c3347b648eba8ee14bab071cf02424d2a2fc92796719c19",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/truten",
+        "path": null,
+        "value": "http://example.org/extracted/nikolay_novikov",
+        "expected": null,
+        "message": "Relation phrase 'published by' from http://example.org/extracted/truten to http://example.org/extracted/nikolay_novikov was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "9c1f047364698df00c3347b648eba8ee14bab071cf02424d2a2fc92796719c19",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/truten",
+            "path": null,
+            "value": "http://example.org/extracted/nikolay_novikov",
+            "expected": null,
+            "message": "Relation phrase 'published by' from http://example.org/extracted/truten to http://example.org/extracted/nikolay_novikov was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 11,
+      "feedback_reasoning": "The violation concerns the unmapped relation phrase “published by” linking the CreativeWork http://example.org/extracted/truten to the Person http://example.org/extracted/nikolay_novikov. The ontology provides object properties such as `onto:hasCreator`, `onto:hasEditor`, and `onto:hasPublisher`. None of these predicates has a documented meaning that corresponds to the phrase “published by”. `onto:hasCreator` denotes the creator of a work, which is not the same as the publisher, and `onto:hasPublisher` expects an Organization, not a Person. Since no ontology predicate cleanly matches the required semantics, we cannot safely add or replace a triple. Therefore the violation remains unresolved.",
+      "repairs": [
+        {
+          "violation_fingerprint": "3e909f0507c86f441a139c987e4aec53003ba21efa844f05a1bb239c8bed1964",
+          "reasoning": "No ontology predicate matches the relation phrase “published by” with a Person as object; the available predicates either have a different meaning or require an Organization.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "3e909f0507c86f441a139c987e4aec53003ba21efa844f05a1bb239c8bed1964"
+      ],
+      "triples_after": 11,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "9c1f047364698df00c3347b648eba8ee14bab071cf02424d2a2fc92796719c19",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/truten",
+            "path": null,
+            "value": "http://example.org/extracted/nikolay_novikov",
+            "expected": null,
+            "message": "Relation phrase 'published by' from http://example.org/extracted/truten to http://example.org/extracted/nikolay_novikov was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "9c1f047364698df00c3347b648eba8ee14bab071cf02424d2a2fc92796719c19",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/truten",
+        "path": null,
+        "value": "http://example.org/extracted/nikolay_novikov",
+        "expected": null,
+        "message": "Relation phrase 'published by' from http://example.org/extracted/truten to http://example.org/extracted/nikolay_novikov was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

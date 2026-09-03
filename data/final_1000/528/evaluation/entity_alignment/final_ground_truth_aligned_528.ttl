@@ -1,0 +1,20 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Sir_Walter_Acton a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:English ;
+    ex:hasCountry entity:English .
+
+entity:Sir_Edward_Acton_3rd_Baronet a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Sir_Walter_Acton_2nd_Baronet ;
+    ex:hasParent entity:Sir_Walter_Acton_2nd_Baronet .
+
+entity:English a ex:Country,
+        ex:Place .
+
+entity:Sir_Walter_Acton_2nd_Baronet a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Sir_Edward_Acton_3rd_Baronet .
+

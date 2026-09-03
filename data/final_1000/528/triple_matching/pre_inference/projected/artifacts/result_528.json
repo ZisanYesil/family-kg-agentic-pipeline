@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/528/evaluation/entity_alignment/baseline_extracted_aligned_528.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/528/evaluation/entity_alignment/baseline_ground_truth_aligned_528.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Sir_Edward_Acton_3rd_Baronet",
+      "predicate": "hasParent",
+      "object": "Sir_Walter_Acton_2nd_Baronet",
+      "subject_uri": "http://example.org/entity/Sir_Edward_Acton_3rd_Baronet",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Sir_Walter_Acton_2nd_Baronet"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Sir_Walter_Acton",
+      "predicate": "hasCountry",
+      "object": "English",
+      "subject_uri": "http://example.org/entity/Sir_Walter_Acton",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/English"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "English",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/English",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "English",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/English",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "English",
+      "predicate": "label",
+      "object": "\"United Kingdom\"",
+      "subject_uri": "http://example.org/entity/English",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"United Kingdom\""
+    },
+    {
+      "subject": "English",
+      "predicate": "altLabel",
+      "object": "\"English\"",
+      "subject_uri": "http://example.org/entity/English",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"English\""
+    },
+    {
+      "subject": "Sir_Edward_Acton_3rd_Baronet",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sir_Edward_Acton_3rd_Baronet",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sir_Edward_Acton_3rd_Baronet",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sir_Edward_Acton_3rd_Baronet",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sir_Edward_Acton_3rd_Baronet",
+      "predicate": "label",
+      "object": "\"Sir Edward Acton, 3rd Baronet\"",
+      "subject_uri": "http://example.org/entity/Sir_Edward_Acton_3rd_Baronet",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sir Edward Acton, 3rd Baronet\""
+    },
+    {
+      "subject": "Sir_Walter_Acton_2nd_Baronet",
+      "predicate": "hasCountry",
+      "object": "English",
+      "subject_uri": "http://example.org/entity/Sir_Walter_Acton_2nd_Baronet",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/English"
+    },
+    {
+      "subject": "Sir_Walter_Acton_2nd_Baronet",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sir_Walter_Acton_2nd_Baronet",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sir_Walter_Acton_2nd_Baronet",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sir_Walter_Acton_2nd_Baronet",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sir_Walter_Acton_2nd_Baronet",
+      "predicate": "label",
+      "object": "\"Sir Walter Acton, 2nd Baronet\"",
+      "subject_uri": "http://example.org/entity/Sir_Walter_Acton_2nd_Baronet",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sir Walter Acton, 2nd Baronet\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 1,
+    "false_positives": 11,
+    "false_negatives": 1,
+    "precision": 0.08333333333333333,
+    "recall": 0.5,
+    "f1": 0.14285714285714285
+  },
+  "stage": "pre_inference"
+}

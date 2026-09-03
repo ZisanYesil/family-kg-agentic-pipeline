@@ -1,0 +1,177 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/937/originals/extracted_937.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/937/ground_truth_937.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/adud_al_dawla": "http://example.org/entity/Adud_al_Dawla",
+    "http://example.org/extracted/baha_al_dawla": "http://example.org/entity/Baha_al_Dawla",
+    "http://example.org/extracted/musharrif_al_dawla": "http://example.org/entity/Musharrif_al_Dawla"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adud_al_dawla",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "'Adud al-Dawla",
+          "source": "altLabel"
+        },
+        {
+          "text": "Adud al-Dawla",
+          "source": "altLabel"
+        },
+        {
+          "text": "Fannā Khusraw",
+          "source": "altLabel"
+        },
+        {
+          "text": "Panāh Khusraw",
+          "source": "altLabel"
+        },
+        {
+          "text": "adud al dawla",
+          "source": "uri"
+        }
+      ],
+      "context": "'Adud al-Dawla. inverse has father: Abu Nasr Firuz Kharshadh.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adud_al_Dawla",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adud al Dawla",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adud al-Dawla",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Adud al Dawla",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9711387753486633,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.8204638957977295,
+      "graph_score": 0.9102319478988647,
+      "margin": 0.39127635955810547
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/baha_al_dawla",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Abu Nasr Firuz Kharshadh",
+          "source": "altLabel"
+        },
+        {
+          "text": "Baha al-Dawla",
+          "source": "altLabel"
+        },
+        {
+          "text": "baha al dawla",
+          "source": "uri"
+        }
+      ],
+      "context": "Abu Nasr Firuz Kharshadh. has father: 'Adud al-Dawla. inverse has father: Abu 'Ali.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Baha_al_Dawla",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Baha al Dawla",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Baha al-Dawla",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Baha al Dawla",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9809941053390503,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.8122224807739258,
+      "graph_score": 0.9061112403869629,
+      "margin": 0.354955792427063
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/musharrif_al_dawla",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Abu 'Ali",
+          "source": "altLabel"
+        },
+        {
+          "text": "Musharrif al-Dawla",
+          "source": "altLabel"
+        },
+        {
+          "text": "musharrif al dawla",
+          "source": "uri"
+        }
+      ],
+      "context": "Abu 'Ali. has father: Abu Nasr Firuz Kharshadh.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Musharrif_al_Dawla",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Musharrif al Dawla",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Musharrif al-Dawla",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Musharrif al Dawla",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9439384937286377,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.6542413830757141,
+      "graph_score": 0.8271206617355347,
+      "margin": 0.4040364623069763
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

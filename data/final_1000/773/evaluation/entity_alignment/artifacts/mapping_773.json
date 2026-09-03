@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/773/originals/extracted_773.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/773/ground_truth_773.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/gu_changwei": "http://example.org/entity/Gu_Changwei",
+    "http://example.org/extracted/love_on_the_cloud": "http://example.org/entity/Love_on_the_Cloud"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gu_changwei",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gu Changwei",
+          "source": "label"
+        }
+      ],
+      "context": "Gu Changwei. has birth place: Xi'an, Shaanxi, People's Republic of China. inverse has director: Love on the Cloud.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gu_Changwei",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gu Changwei",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gu Changwei",
+        "extracted_source": "label",
+        "ground_truth_text": "Gu Changwei",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9337024092674255,
+      "graph_score": 0.9668512344360352,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/love_on_the_cloud",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Love on the Cloud",
+          "source": "label"
+        }
+      ],
+      "context": "Love on the Cloud. has director: Gu Changwei.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Love_on_the_Cloud",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Love on the Cloud",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Love on the Cloud",
+        "extracted_source": "label",
+        "ground_truth_text": "Love on the Cloud",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/xian_shaanxi_china",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Xi'an, Shaanxi, People's Republic of China",
+          "source": "label"
+        },
+        {
+          "text": "xian shaanxi china",
+          "source": "uri"
+        }
+      ],
+      "context": "Xi'an, Shaanxi, People's Republic of China. inverse has birth place: Gu Changwei.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Xi_an",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Xi an",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Xi'an, Shaanxi, People's Republic of China",
+        "extracted_source": "label",
+        "ground_truth_text": "Xi an",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6875195503234863,
+      "name_embedding_score": 0.6780206561088562,
+      "string_score": 0.43909573554992676,
+      "independent_identity_support": false,
+      "context_score": 0.9098825454711914,
+      "graph_score": 0.9549412727355957,
+      "margin": 0.6875195503234863
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

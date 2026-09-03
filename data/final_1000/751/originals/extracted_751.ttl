@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:splendor_in_the_grass a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Splendor in the Grass" ;
+    onto:hasDirector data:elia_kazan .
+
+data:constantinople a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Constantinople" .
+
+data:elia_kazan a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Elia Kazan" ;
+    onto:hasBirthPlace data:constantinople .
+

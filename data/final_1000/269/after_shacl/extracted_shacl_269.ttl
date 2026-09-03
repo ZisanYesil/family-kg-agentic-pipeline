@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_the_straw_hat a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Straw Hat" ;
+    onto:hasComposer data:isaac_schwartz .
+
+data:isaac_schwartz a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Isaac Schwartz" ;
+    onto:hasDeathPlace data:siversky ;
+    skos:altLabel "Isaac Iosifovich Schwartz" .
+
+data:siversky a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Siversky" ;
+    skos:altLabel "Siversky, near Saint Petersburg, Russian Federation" .
+

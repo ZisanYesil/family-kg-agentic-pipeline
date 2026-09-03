@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:The_Cousin_from_Nowhere a ex:Artifact,
+        ex:CreativeWork ;
+    ex:hasComposer entity:Eduard_Künneke ;
+    ex:hasCreator entity:Eduard_Künneke .
+
+entity:Evelyn_Künneke a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Eduard_Künneke .
+
+entity:Eduard_Künneke a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Evelyn_Künneke .
+

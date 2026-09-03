@@ -1,0 +1,15 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Duke_Georg_Alexander_of_Mecklenburg_Strelitz> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Duke Georg Alexander of Mecklenburg-Strelitz" ;
+    onto:hasMother <http://example.org/entity/Grand_Duchess_Catherine_Mikhailovna_of_Russia> .
+
+<http://example.org/entity/Grand_Duchess_Catherine_Mikhailovna_of_Russia> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Grand Duchess Catherine Mikhailovna of Russia" ;
+    onto:hasBirthDate "1827-08-28"^^xsd:date .
+

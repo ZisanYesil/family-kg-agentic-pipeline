@@ -1,0 +1,91 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/928/evaluation/entity_alignment/baseline_extracted_aligned_928.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/928/evaluation/entity_alignment/baseline_ground_truth_aligned_928.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "China_Bound",
+      "predicate": "hasPublicationDate",
+      "object": "\"1929\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/China_Bound",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1929\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Return_of_the_Jedi",
+      "predicate": "hasPublicationDate",
+      "object": "\"1983\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Return_of_the_Jedi",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1983\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "China_Bound",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/China_Bound",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "China_Bound",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/China_Bound",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "China_Bound",
+      "predicate": "label",
+      "object": "\"China Bound\"",
+      "subject_uri": "http://example.org/entity/China_Bound",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"China Bound\""
+    },
+    {
+      "subject": "Return_of_the_Jedi",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Return_of_the_Jedi",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Return_of_the_Jedi",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Return_of_the_Jedi",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Return_of_the_Jedi",
+      "predicate": "label",
+      "object": "\"Return of the Jedi\"",
+      "subject_uri": "http://example.org/entity/Return_of_the_Jedi",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Return of the Jedi\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 8,
+    "true_positives": 2,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.25,
+    "recall": 1.0,
+    "f1": 0.4
+  },
+  "stage": "pre_inference"
+}

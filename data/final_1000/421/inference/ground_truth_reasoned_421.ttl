@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Gwendolyn_Graham a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Bob_Graham ;
+    ex:hasParent entity:Bob_Graham .
+
+entity:Harvard a ex:Agent,
+        ex:Organization .
+
+entity:Bob_Graham a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Gwendolyn_Graham ;
+    ex:hasEmployer entity:Harvard .
+

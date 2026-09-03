@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Ramiro_I_of_Aragon a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:Ermesinda_of_Bigorre .
+
+entity:Sancho_Ramírez a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Ermesinda_of_Bigorre ;
+    ex:hasParent entity:Ermesinda_of_Bigorre .
+
+entity:Ermesinda_of_Bigorre a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Sancho_Ramírez ;
+    ex:hasSpouse entity:Ramiro_I_of_Aragon .
+

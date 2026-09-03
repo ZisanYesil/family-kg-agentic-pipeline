@@ -1,0 +1,17 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/McGraw_Electric> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "McGraw Electric" ;
+    onto:hasFounder <http://example.org/entity/Max_McGraw> ;
+    skos:altLabel "McGraw Electric Company" .
+
+<http://example.org/entity/Max_McGraw> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Max McGraw" ;
+    onto:hasBirthDate "1883-02-01"^^xsd:date .
+

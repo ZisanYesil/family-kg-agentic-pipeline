@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:max_uhlemann a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Max Uhlemann" ;
+    onto:hasFather data:friedrich_gottlob_uhlemann ;
+    skos:altLabel "Maximilian Adolph Uhlemann" .
+
+data:friedrich_gottlob_uhlemann a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Friedrich Gottlob Uhlemann" ;
+    onto:hasEmployer data:university_of_berlin,
+        data:university_of_leipzig .
+
+data:university_of_berlin a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "University of Berlin" .
+
+data:university_of_leipzig a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "University of Leipzig" .
+

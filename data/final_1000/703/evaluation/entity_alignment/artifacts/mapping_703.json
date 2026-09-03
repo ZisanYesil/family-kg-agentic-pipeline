@@ -1,0 +1,250 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/703/originals/extracted_703.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/703/ground_truth_703.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_pauper_millionaire_1922": "http://example.org/entity/The_Pauper_Millionaire",
+    "http://example.org/extracted/person_frank_hall_crane": "http://example.org/entity/Frank_Hall_Crane",
+    "http://example.org/extracted/person_joe_simon": "http://example.org/entity/Joe_Simon",
+    "http://example.org/extracted/film_simha_jodi_1980": "http://example.org/entity/Simha_Jodi"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_pauper_millionaire_1922",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Pauper Millionaire",
+          "source": "label"
+        },
+        {
+          "text": "film pauper millionaire 1922",
+          "source": "uri"
+        }
+      ],
+      "context": "The Pauper Millionaire. has director: Frank Hall Crane.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Pauper_Millionaire",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Pauper Millionaire",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Pauper Millionaire",
+        "extracted_source": "label",
+        "ground_truth_text": "The Pauper Millionaire",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.8240838646888733
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_simha_jodi_1980",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Simha Jodi",
+          "source": "label"
+        },
+        {
+          "text": "film simha jodi 1980",
+          "source": "uri"
+        }
+      ],
+      "context": "Simha Jodi. has director: Joseph Henry Simon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Simha_Jodi",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Simha Jodi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Simha Jodi",
+        "extracted_source": "label",
+        "ground_truth_text": "Simha Jodi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9636861681938171,
+      "graph_score": 0.981843113899231,
+      "margin": 0.7671971470117569
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_frank_hall_crane",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Frank Hall Crane",
+          "source": "label"
+        },
+        {
+          "text": "person frank hall crane",
+          "source": "uri"
+        }
+      ],
+      "context": "Frank Hall Crane. has nationality: American. inverse has director: The Pauper Millionaire.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Frank_Hall_Crane",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Frank Hall Crane",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Frank Hall Crane",
+        "extracted_source": "label",
+        "ground_truth_text": "Frank Hall Crane",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9396188259124756,
+      "graph_score": 0.9698094129562378,
+      "margin": 0.7602262794971466
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_joe_simon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Joseph Henry Simon",
+          "source": "altLabel"
+        },
+        {
+          "text": "Joe Simon",
+          "source": "label"
+        },
+        {
+          "text": "person joe simon",
+          "source": "uri"
+        }
+      ],
+      "context": "Joseph Henry Simon. has nationality: American. inverse has director: Simha Jodi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Joe_Simon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Joe Simon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Joe Simon",
+        "extracted_source": "label",
+        "ground_truth_text": "Joe Simon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9056988954544067,
+      "graph_score": 0.9528494477272034,
+      "margin": 0.7189337611198425
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has nationality: Frank Hall Crane. inverse has nationality: Joseph Henry Simon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/America",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "America",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "America",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6898679137229919,
+      "name_embedding_score": 0.9436457753181458,
+      "string_score": 0.41999998688697815,
+      "independent_identity_support": false,
+      "context_score": 0.9043601751327515,
+      "graph_score": 0.45218008756637573,
+      "margin": 0.6898679137229919
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

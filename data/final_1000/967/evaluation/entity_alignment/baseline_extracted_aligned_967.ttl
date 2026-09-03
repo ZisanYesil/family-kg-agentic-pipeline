@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Earth> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Earth (1957 film)" ;
+    onto:hasDirector <http://example.org/entity/Zahari_Zhandov> ;
+    skos:altLabel "Earth" .
+
+<http://example.org/entity/Sofia> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Sofia" .
+
+<http://example.org/entity/Zahari_Zhandov> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Zahari Zhandov" ;
+    onto:hasDeathPlace <http://example.org/entity/Sofia> .
+

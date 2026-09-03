@@ -1,0 +1,24 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/extracted/film_dweepa> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasProducer <http://example.org/extracted/person_soundarya> ;
+    ex:hasPublicationDate "2002"^^xsd:gYear .
+
+<http://example.org/extracted/film_kalank> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasProducer <http://example.org/extracted/person_karan_johar> ;
+    ex:hasPublicationDate "2019"^^xsd:gYear .
+
+<http://example.org/extracted/person_karan_johar> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1972-05-25"^^xsd:date .
+
+<http://example.org/extracted/person_soundarya> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1972-07-18"^^xsd:date ;
+    ex:hasDeathDate "2004-04-17"^^xsd:date .
+

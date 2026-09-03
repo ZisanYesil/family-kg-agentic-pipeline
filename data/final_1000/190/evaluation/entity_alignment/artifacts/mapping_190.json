@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/190/originals/extracted_190.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/190/ground_truth_190.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/san_clemente_brescia": "http://example.org/entity/San_Clemente_Brescia",
+    "http://example.org/extracted/italy": "http://example.org/entity/Italy",
+    "http://example.org/extracted/santi_apostoli_naples": "http://example.org/entity/Santi_Apostoli_Naples"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/italy",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Italy",
+          "source": "label"
+        }
+      ],
+      "context": "Italy. inverse has country: San Clemente, Brescia. inverse has country: Santi Apostoli, Naples.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Italy",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Italy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Italy",
+        "extracted_source": "label",
+        "ground_truth_text": "Italy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9927034974098206,
+      "graph_score": 0.9963517189025879,
+      "margin": 0.6051812171936035
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/san_clemente_brescia",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "San Clemente, Brescia",
+          "source": "label"
+        },
+        {
+          "text": "san clemente brescia",
+          "source": "uri"
+        }
+      ],
+      "context": "San Clemente, Brescia. has country: Italy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/San_Clemente_Brescia",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "San Clemente Brescia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "San Clemente, Brescia",
+        "extracted_source": "label",
+        "ground_truth_text": "San Clemente Brescia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9727404713630676,
+      "string_score": 0.9890244007110596,
+      "independent_identity_support": true,
+      "context_score": 0.9833160042762756,
+      "graph_score": 0.9916579723358154,
+      "margin": 0.4859328269958496
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/santi_apostoli_naples",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Santi Apostoli, Naples",
+          "source": "label"
+        },
+        {
+          "text": "santi apostoli naples",
+          "source": "uri"
+        }
+      ],
+      "context": "Santi Apostoli, Naples. has country: Italy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Santi_Apostoli_Naples",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Santi Apostoli Naples",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Santi Apostoli, Naples",
+        "extracted_source": "label",
+        "ground_truth_text": "Santi Apostoli Naples",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9409832954406738,
+      "string_score": 0.989534854888916,
+      "independent_identity_support": true,
+      "context_score": 0.9938141107559204,
+      "graph_score": 0.9969070553779602,
+      "margin": 0.4349555969238281
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

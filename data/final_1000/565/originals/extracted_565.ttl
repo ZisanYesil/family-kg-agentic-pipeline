@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_the_cousin_from_nowhere_1953 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Cousin From Nowhere (1953 film)" .
+
+data:person_eduard_kunke a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Eduard Künneke" ;
+    onto:hasBirthDate "1885-01-27"^^xsd:date ;
+    onto:hasDaughter data:person_evelyn_kunke ;
+    onto:hasDeathDate "1953-10-27"^^xsd:date .
+
+data:person_evelyn_kunke a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Evelyn Künneke" .
+

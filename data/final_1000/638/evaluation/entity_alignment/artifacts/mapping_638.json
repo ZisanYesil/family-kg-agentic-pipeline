@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/638/originals/extracted_638.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/638/ground_truth_638.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/karl_von_habsburg": "http://example.org/entity/Karl_von_Habsburg",
+    "http://example.org/extracted/austria": "http://example.org/entity/Austria",
+    "http://example.org/extracted/francesca_von_habsburg": "http://example.org/entity/Francesca_von_Habsburg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/austria",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Austrian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Austria",
+          "source": "label"
+        }
+      ],
+      "context": "Austrian. inverse has nationality: Karl von Habsburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Austria",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Austria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Austria",
+        "extracted_source": "label",
+        "ground_truth_text": "Austria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9251939654350281,
+      "graph_score": 0.46259698271751404,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/francesca_von_habsburg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Francesca von Habsburg",
+          "source": "label"
+        }
+      ],
+      "context": "Francesca von Habsburg. has spouse: Karl von Habsburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Francesca_von_Habsburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Francesca von Habsburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Francesca von Habsburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Francesca von Habsburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.31837111711502075
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/karl_von_habsburg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Karl von Habsburg",
+          "source": "label"
+        }
+      ],
+      "context": "Karl von Habsburg. has nationality: Austrian. inverse has spouse: Francesca von Habsburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Karl_von_Habsburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Karl von Habsburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Karl von Habsburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Karl von Habsburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.968527615070343,
+      "graph_score": 0.6509304642677307,
+      "margin": 0.3136361837387085
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

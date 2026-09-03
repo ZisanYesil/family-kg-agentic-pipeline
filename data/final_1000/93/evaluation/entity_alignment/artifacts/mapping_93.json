@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/93/originals/extracted_93.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/93/ground_truth_93.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jack_robertson_1902": "http://example.org/entity/Jack_Robertson_footballer_born_1902",
+    "http://example.org/extracted/australia": "http://example.org/entity/Australian",
+    "http://example.org/extracted/peter_levy": "http://example.org/entity/Peter_Levy_cinematographer"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/australia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Australian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Australia",
+          "source": "label"
+        }
+      ],
+      "context": "Australian. inverse has nationality: Jack Robertson (footballer, born 1902). inverse has nationality: Peter Levy (cinematographer).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Australian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Australian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Australian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Australian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9140753746032715,
+      "graph_score": 0.45703768730163574,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jack_robertson_1902",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jack Robertson (footballer, born 1902)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Jack Robertson",
+          "source": "label"
+        },
+        {
+          "text": "jack robertson 1902",
+          "source": "uri"
+        }
+      ],
+      "context": "Jack Robertson (footballer, born 1902). has nationality: Australian.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jack_Robertson_footballer_born_1902",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jack Robertson footballer born 1902",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jack Robertson (footballer, born 1902)",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Jack Robertson footballer born 1902",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9707793593406677,
+      "string_score": 0.9815068244934082,
+      "independent_identity_support": true,
+      "context_score": 0.9591270685195923,
+      "graph_score": 0.47956353425979614,
+      "margin": 0.7226883172988892
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/peter_levy",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Peter Levy (cinematographer)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Peter Levy",
+          "source": "label"
+        }
+      ],
+      "context": "Peter Levy (cinematographer). has nationality: Australian.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Peter_Levy_cinematographer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Peter Levy cinematographer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Peter Levy (cinematographer)",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Peter Levy cinematographer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.926365852355957,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9017060399055481,
+      "graph_score": 0.45085301995277405,
+      "margin": 0.7670286297798157
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

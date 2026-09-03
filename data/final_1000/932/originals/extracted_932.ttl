@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:hubert_humphrey_jr a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Hubert Horatio Humphrey Jr." ;
+    onto:hasBirthPlace data:wallace_south_dakota ;
+    onto:hasSon data:skip_humphrey ;
+    skos:altLabel "Hubert Humphrey" .
+
+data:skip_humphrey a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Hubert Horatio \"Skip\" Humphrey III" ;
+    skos:altLabel "Skip Humphrey" .
+
+data:wallace_south_dakota a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Wallace, South Dakota" .
+

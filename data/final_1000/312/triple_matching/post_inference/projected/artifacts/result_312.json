@@ -1,0 +1,74 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/312/evaluation/entity_alignment/final_extracted_aligned_312.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/312/evaluation/entity_alignment/final_ground_truth_aligned_312.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "American_Radio_Relay_League",
+      "predicate": "hasInception",
+      "object": "\"1914\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/American_Radio_Relay_League",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1914\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "American_Radio_Relay_League",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/American_Radio_Relay_League",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "American_Radio_Relay_League",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/American_Radio_Relay_League",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "National_Contest_Journal",
+      "predicate": "hasPublisher",
+      "object": "American_Radio_Relay_League",
+      "subject_uri": "http://example.org/entity/National_Contest_Journal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublisher",
+      "object_term": "http://example.org/entity/American_Radio_Relay_League"
+    },
+    {
+      "subject": "National_Contest_Journal",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/National_Contest_Journal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "National_Contest_Journal",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/National_Contest_Journal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 6,
+    "union_triples_in_scope": 6,
+    "true_positives": 6,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

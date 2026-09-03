@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/728/evaluation/entity_alignment/baseline_extracted_aligned_728.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/728/evaluation/entity_alignment/baseline_ground_truth_aligned_728.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Feng_Xiaoning",
+      "predicate": "hasBirthPlace",
+      "object": "Xi_an",
+      "subject_uri": "http://example.org/entity/Feng_Xiaoning",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Xi_an"
+    },
+    {
+      "subject": "Lover_s_Grief_over_the_Yellow_River",
+      "predicate": "hasDirector",
+      "object": "Feng_Xiaoning",
+      "subject_uri": "http://example.org/entity/Lover_s_Grief_over_the_Yellow_River",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Feng_Xiaoning"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Feng_Xiaoning",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Feng_Xiaoning",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Feng_Xiaoning",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Feng_Xiaoning",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Feng_Xiaoning",
+      "predicate": "label",
+      "object": "\"Feng Xiaoning\"",
+      "subject_uri": "http://example.org/entity/Feng_Xiaoning",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Feng Xiaoning\""
+    },
+    {
+      "subject": "Lover_s_Grief_over_the_Yellow_River",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Lover_s_Grief_over_the_Yellow_River",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Lover_s_Grief_over_the_Yellow_River",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lover_s_Grief_over_the_Yellow_River",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lover_s_Grief_over_the_Yellow_River",
+      "predicate": "label",
+      "object": "\"Lover's Grief over the Yellow River\"",
+      "subject_uri": "http://example.org/entity/Lover_s_Grief_over_the_Yellow_River",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Lover's Grief over the Yellow River\""
+    },
+    {
+      "subject": "Xi_an",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Xi_an",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Xi_an",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Xi_an",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Xi_an",
+      "predicate": "label",
+      "object": "\"Xi'an\"",
+      "subject_uri": "http://example.org/entity/Xi_an",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Xi'an\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

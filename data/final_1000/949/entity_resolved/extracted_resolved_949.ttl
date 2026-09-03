@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_summer_skin a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Summer Skin" ;
+    onto:hasDirector data:person_leopoldo_torre_nilsson .
+
+data:person_leopoldo_torres_rios a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leopoldo Torres Ríos" ;
+    onto:hasSon data:person_leopoldo_torre_nilsson .
+
+data:person_leopoldo_torre_nilsson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leopoldo Torre Nilsson" .
+

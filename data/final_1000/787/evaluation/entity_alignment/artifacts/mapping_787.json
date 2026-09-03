@@ -1,0 +1,187 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/787/originals/extracted_787.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/787/ground_truth_787.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/canada": "http://example.org/entity/Canada",
+    "http://example.org/extracted/devils_lake_north_dakota": "http://example.org/entity/Devils_Lake_North_Dakota",
+    "http://example.org/extracted/mcleod_lake_alberta": "http://example.org/entity/McLeod_Lake_Alberta"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/canada",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Canada",
+          "source": "label"
+        }
+      ],
+      "context": "Canada. inverse has country: Mc Leod Lake (Alberta).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Canada",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Canada",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Canada",
+        "extracted_source": "label",
+        "ground_truth_text": "Canada",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9794724583625793,
+      "graph_score": 0.9897361993789673,
+      "margin": 0.5949737131595612
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/devils_lake_north_dakota",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Devils Lake (North Dakota)",
+          "source": "label"
+        },
+        {
+          "text": "devils lake north dakota",
+          "source": "uri"
+        }
+      ],
+      "context": "Devils Lake (North Dakota). has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Devils_Lake_North_Dakota",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Devils Lake North Dakota",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "devils lake north dakota",
+        "extracted_source": "uri",
+        "ground_truth_text": "Devils Lake North Dakota",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9876863360404968,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9510000944137573,
+      "graph_score": 0.9510000944137573,
+      "margin": 0.5731358826160431
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mcleod_lake_alberta",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mc Leod Lake (Alberta)",
+          "source": "label"
+        },
+        {
+          "text": "mcleod lake alberta",
+          "source": "uri"
+        }
+      ],
+      "context": "Mc Leod Lake (Alberta). has country: Canada.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/McLeod_Lake_Alberta",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mc Leod Lake Alberta",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mc Leod Lake (Alberta)",
+        "extracted_source": "label",
+        "ground_truth_text": "Mc Leod Lake Alberta",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8991117477416992,
+      "string_score": 0.9785714149475098,
+      "independent_identity_support": true,
+      "context_score": 0.9628013968467712,
+      "graph_score": 0.981400728225708,
+      "margin": 0.5657082796096802
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "United States. inverse has country: Devils Lake (North Dakota).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/U_S",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "U S",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "label",
+        "ground_truth_text": "U S",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5970972180366516,
+      "name_embedding_score": 0.6191919445991516,
+      "string_score": 0.16875000298023224,
+      "independent_identity_support": false,
+      "context_score": 0.9625097513198853,
+      "graph_score": 0.9812548756599426,
+      "margin": 0.2980461120605469
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

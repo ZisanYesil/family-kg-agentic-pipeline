@@ -1,0 +1,197 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/345/originals/extracted_345.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/345/ground_truth_345.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_ten_thousand_dollars_for_a_massacre_1967": "http://example.org/entity/Ten_Thousand_Dollars_for_a_Massacre"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_ten_thousand_dollars_for_a_massacre_1967",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ten Thousand Dollars for a Massacre",
+          "source": "label"
+        },
+        {
+          "text": "film ten thousand dollars for a massacre 1967",
+          "source": "uri"
+        }
+      ],
+      "context": "Ten Thousand Dollars for a Massacre. has country: Italy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ten_Thousand_Dollars_for_a_Massacre",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ten Thousand Dollars for a Massacre",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ten Thousand Dollars for a Massacre",
+        "extracted_source": "label",
+        "ground_truth_text": "Ten Thousand Dollars for a Massacre",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9655580520629883,
+      "graph_score": 0.9655580520629883,
+      "margin": 0.7811633944511414
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_pleasure_1931",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pleasure",
+          "source": "label"
+        },
+        {
+          "text": "film pleasure 1931",
+          "source": "uri"
+        }
+      ],
+      "context": "Pleasure. has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pleasure_1931_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pleasure 1931 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film pleasure 1931",
+        "extracted_source": "uri",
+        "ground_truth_text": "Pleasure 1931 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8818291425704956,
+      "name_embedding_score": 0.963224470615387,
+      "string_score": 0.875,
+      "independent_identity_support": true,
+      "context_score": 0.7258678078651428,
+      "graph_score": 0.7258678078651428,
+      "margin": 0.7796629667282104
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_italy",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Italy",
+          "source": "label"
+        },
+        {
+          "text": "country italy",
+          "source": "uri"
+        }
+      ],
+      "context": "Italy. inverse has country: Ten Thousand Dollars for a Massacre.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Italian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Italian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Italy",
+        "extracted_source": "label",
+        "ground_truth_text": "Italian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.665576696395874,
+      "name_embedding_score": 0.9419815540313721,
+      "string_score": 0.30000001192092896,
+      "independent_identity_support": false,
+      "context_score": 0.9566872715950012,
+      "graph_score": 0.4783436357975006,
+      "margin": 0.47821515798568726
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "United States. inverse has country: Pleasure.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "label",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6227822303771973,
+      "name_embedding_score": 0.8290619850158691,
+      "string_score": 0.04285714402794838,
+      "independent_identity_support": false,
+      "context_score": 0.7901479005813599,
+      "graph_score": 0.7901479005813599,
+      "margin": 0.4210236668586731
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

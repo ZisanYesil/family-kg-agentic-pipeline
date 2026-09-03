@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/514/originals/extracted_514.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/514/ground_truth_514.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/countess_anna_of_nassau": "http://example.org/entity/Countess_Anna_of_Nassau",
+    "http://example.org/extracted/anna_of_saxony": "http://example.org/entity/Anna_of_Saxony"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/anna_of_saxony",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anna of Saxony",
+          "source": "label"
+        }
+      ],
+      "context": "Anna of Saxony. has birth date: 1544-12-23. inverse has mother: Countess Anna of Nassau.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anna_of_Saxony",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anna of Saxony",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anna of Saxony",
+        "extracted_source": "label",
+        "ground_truth_text": "Anna of Saxony",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4341687560081482
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/countess_anna_of_nassau",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Countess Anna of Nassau",
+          "source": "label"
+        }
+      ],
+      "context": "Countess Anna of Nassau. has mother: Anna of Saxony.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Countess_Anna_of_Nassau",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Countess Anna of Nassau",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Countess Anna of Nassau",
+        "extracted_source": "label",
+        "ground_truth_text": "Countess Anna of Nassau",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4341687560081482
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

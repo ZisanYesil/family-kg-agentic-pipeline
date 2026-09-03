@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Karin_Stoltenberg> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Karin Stoltenberg" ;
+    onto:hasSpouse <http://example.org/entity/Thorvald_Stoltenberg> .
+
+<http://example.org/entity/Thorvald_Stoltenberg> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Thorvald Stoltenberg" ;
+    onto:hasEmployer <http://example.org/entity/United_Nations> .
+
+<http://example.org/entity/United_Nations> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "United Nations" .
+

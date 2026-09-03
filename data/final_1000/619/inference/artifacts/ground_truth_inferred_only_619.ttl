@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Dalida a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Lisa_Azuelos .
+
+entity:Marie_Laforêt a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Lisa_Azuelos .
+
+entity:Lisa_Azuelos a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Marie_Laforêt .
+

@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/580/originals/extracted_580.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/580/ground_truth_580.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bjorn_helland_hansen": "http://example.org/entity/Bjørn_Helland_Hansen",
+    "http://example.org/extracted/eigil_helland_hansen": "http://example.org/entity/Eigil_Helland_Hansen"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bjorn_helland_hansen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bjørn Helland-Hansen",
+          "source": "label"
+        },
+        {
+          "text": "bjorn helland hansen",
+          "source": "uri"
+        }
+      ],
+      "context": "Bjørn Helland-Hansen. has employer: Bergen Museum. inverse has father: Eigil Helland-Hansen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bjørn_Helland_Hansen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bjørn Helland Hansen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bjørn Helland-Hansen",
+        "extracted_source": "label",
+        "ground_truth_text": "Bjørn Helland Hansen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8858463168144226,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.8611406683921814,
+      "graph_score": 0.9305703639984131,
+      "margin": 0.3430589437484741
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/eigil_helland_hansen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eigil Helland-Hansen",
+          "source": "label"
+        },
+        {
+          "text": "eigil helland hansen",
+          "source": "uri"
+        }
+      ],
+      "context": "Eigil Helland-Hansen. has father: Bjørn Helland-Hansen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eigil_Helland_Hansen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eigil Helland Hansen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eigil Helland-Hansen",
+        "extracted_source": "label",
+        "ground_truth_text": "Eigil Helland Hansen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8349868059158325,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.8348888754844666,
+      "graph_score": 0.9174444675445557,
+      "margin": 0.3770160675048828
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/bergen_museum",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bergen Museum",
+          "source": "label"
+        }
+      ],
+      "context": "Bergen Museum. inverse has employer: Bjørn Helland-Hansen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/University_of_Bergen",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "University of Bergen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bergen Museum",
+        "extracted_source": "label",
+        "ground_truth_text": "University of Bergen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7389296889305115,
+      "name_embedding_score": 0.8248224258422852,
+      "string_score": 0.3761363625526428,
+      "independent_identity_support": false,
+      "context_score": 0.8598752617835999,
+      "graph_score": 0.9299376010894775,
+      "margin": 0.7389296889305115
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

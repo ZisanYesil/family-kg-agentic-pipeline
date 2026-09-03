@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/292/originals/extracted_292.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/292/ground_truth_292.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/niccolo_iii_d_este": "http://example.org/entity/Niccolò_III_d_Este",
+    "http://example.org/extracted/ginevra_d_este": "http://example.org/entity/Ginevra_d_Este"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ginevra_d_este",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ginevra d'Este",
+          "source": "altLabel"
+        },
+        {
+          "text": "ginevra d este",
+          "source": "uri"
+        }
+      ],
+      "context": "Ginevra d'Este. has father: Niccolò III d'Este.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ginevra_d_Este",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ginevra d Este",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ginevra d'Este",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Ginevra d Este",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9189804792404175,
+      "string_score": 0.9678571224212646,
+      "independent_identity_support": true,
+      "context_score": 0.9394398927688599,
+      "graph_score": 0.9697199463844299,
+      "margin": 0.45303434133529663
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/niccolo_iii_d_este",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Niccolò III d'Este",
+          "source": "altLabel"
+        },
+        {
+          "text": "niccolo iii d este",
+          "source": "uri"
+        }
+      ],
+      "context": "Niccolò III d'Este. inverse has father: Ginevra d'Este.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Niccolò_III_d_Este",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Niccolò III d Este",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Niccolò III d'Este",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Niccolò III d Este",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9522072672843933,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.8577540516853333,
+      "graph_score": 0.9288769960403442,
+      "margin": 0.4350004196166992
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Ferrara"
+  ]
+}

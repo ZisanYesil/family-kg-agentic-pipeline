@@ -1,0 +1,182 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/49/originals/extracted_49.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/49/ground_truth_49.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/franz_waxman": "http://example.org/entity/Franz_Waxman",
+    "http://example.org/extracted/germany": "http://example.org/entity/German"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/franz_waxman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Franz Waxman",
+          "source": "label"
+        }
+      ],
+      "context": "Franz Waxman. has nationality: American. has nationality: German.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Franz_Waxman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Franz Waxman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Franz Waxman",
+        "extracted_source": "label",
+        "ground_truth_text": "Franz Waxman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8100395798683167,
+      "graph_score": 0.4050197899341583,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "German",
+          "source": "altLabel"
+        },
+        {
+          "text": "Germany",
+          "source": "label"
+        }
+      ],
+      "context": "German. inverse has nationality: Franz Waxman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/German",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "German",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "German",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "German",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9339425563812256,
+      "graph_score": 0.4669712781906128,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/count_your_blessings_1959_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Count Your Blessings (1959 film)",
+          "source": "label"
+        },
+        {
+          "text": "count your blessings 1959 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Count Your Blessings (1959 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Count_Your_Blessings",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Count Your Blessings",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Count Your Blessings (1959 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Count Your Blessings",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6601861715316772,
+      "name_embedding_score": 0.7804741859436035,
+      "string_score": 0.7961538434028625,
+      "independent_identity_support": true,
+      "context_score": 0.5672850608825684,
+      "graph_score": 0.2836425304412842,
+      "margin": 0.6601861715316772
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has nationality: Franz Waxman.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

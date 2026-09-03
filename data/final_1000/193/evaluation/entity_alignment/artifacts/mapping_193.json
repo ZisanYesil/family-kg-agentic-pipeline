@@ -1,0 +1,208 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/193/originals/extracted_193.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/193/ground_truth_193.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/country_united_kingdom": "http://example.org/entity/British",
+    "http://example.org/extracted/film_his_wifes_husband_1922": "http://example.org/entity/His_Wife_s_Husband",
+    "http://example.org/extracted/film_slaves_in_bondage_1937": "http://example.org/entity/Slaves_in_Bondage",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        },
+        {
+          "text": "country united kingdom",
+          "source": "uri"
+        }
+      ],
+      "context": "British. inverse has country: His Wife's Husband.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "British",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9524920582771301,
+      "graph_score": 0.47624602913856506,
+      "margin": 0.680955171585083
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has country: Slaves in Bondage.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9705542325973511,
+      "graph_score": 0.48527711629867554,
+      "margin": 0.6843373477458954
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_his_wifes_husband_1922",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "His Wife's Husband",
+          "source": "label"
+        },
+        {
+          "text": "film his wifes husband 1922",
+          "source": "uri"
+        }
+      ],
+      "context": "His Wife's Husband. has country: British.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/His_Wife_s_Husband",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "His Wife s Husband",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "His Wife's Husband",
+        "extracted_source": "label",
+        "ground_truth_text": "His Wife s Husband",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9752768278121948,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9632719159126282,
+      "graph_score": 0.4816359579563141,
+      "margin": 0.8225886076688766
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_slaves_in_bondage_1937",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Slaves in Bondage",
+          "source": "label"
+        },
+        {
+          "text": "film slaves in bondage 1937",
+          "source": "uri"
+        }
+      ],
+      "context": "Slaves in Bondage. has country: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Slaves_in_Bondage",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Slaves in Bondage",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Slaves in Bondage",
+        "extracted_source": "label",
+        "ground_truth_text": "Slaves in Bondage",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9700430035591125,
+      "graph_score": 0.4850215017795563,
+      "margin": 0.8019433915615082
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/521/evaluation/entity_alignment/baseline_extracted_aligned_521.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/521/evaluation/entity_alignment/baseline_ground_truth_aligned_521.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "ULTRA_Diamonds",
+      "predicate": "hasCountry",
+      "object": "United_States",
+      "subject_uri": "http://example.org/entity/ULTRA_Diamonds",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/United_States"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Dillon_Dam_Brewery",
+      "predicate": "hasCountry",
+      "object": "U_S_A",
+      "subject_uri": "http://example.org/entity/Dillon_Dam_Brewery",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/U_S_A"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Dillon_Dam_Brewery",
+      "predicate": "hasCountry",
+      "object": "United_States",
+      "subject_uri": "http://example.org/entity/Dillon_Dam_Brewery",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/United_States"
+    },
+    {
+      "subject": "Dillon_Dam_Brewery",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Dillon_Dam_Brewery",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Dillon_Dam_Brewery",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Dillon_Dam_Brewery",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Dillon_Dam_Brewery",
+      "predicate": "label",
+      "object": "\"Dillon Dam Brewery\"",
+      "subject_uri": "http://example.org/entity/Dillon_Dam_Brewery",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Dillon Dam Brewery\""
+    },
+    {
+      "subject": "ULTRA_Diamonds",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/ULTRA_Diamonds",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "ULTRA_Diamonds",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/ULTRA_Diamonds",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "ULTRA_Diamonds",
+      "predicate": "label",
+      "object": "\"ULTRA Diamonds\"",
+      "subject_uri": "http://example.org/entity/ULTRA_Diamonds",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"ULTRA Diamonds\""
+    },
+    {
+      "subject": "United_States",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/United_States",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "United_States",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/United_States",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "United_States",
+      "predicate": "label",
+      "object": "\"United States\"",
+      "subject_uri": "http://example.org/entity/United_States",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"United States\""
+    },
+    {
+      "subject": "United_States",
+      "predicate": "altLabel",
+      "object": "\"U.S.A.\"",
+      "subject_uri": "http://example.org/entity/United_States",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"U.S.A.\""
+    },
+    {
+      "subject": "United_States",
+      "predicate": "altLabel",
+      "object": "\"United States of America\"",
+      "subject_uri": "http://example.org/entity/United_States",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"United States of America\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 1,
+    "false_positives": 12,
+    "false_negatives": 1,
+    "precision": 0.07692307692307693,
+    "recall": 0.5,
+    "f1": 0.13333333333333336
+  },
+  "stage": "pre_inference"
+}

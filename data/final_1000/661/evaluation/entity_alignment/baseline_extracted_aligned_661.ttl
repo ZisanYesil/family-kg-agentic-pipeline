@@ -1,0 +1,23 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/It_s_Only_TV> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "It's Only TV" ;
+    onto:hasCreator <http://example.org/entity/Cyril_Hanouna> ;
+    skos:altLabel "Touche pas à mon poste !" .
+
+<http://example.org/entity/Cyril_Hanouna> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Cyril Hanouna" ;
+    onto:hasBirthDate "1974-09-23"^^xsd:date ;
+    onto:hasBirthPlace <http://example.org/entity/Paris> ;
+    skos:altLabel "Cyril Valéry Hanouna" .
+
+<http://example.org/entity/Paris> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Paris" .
+

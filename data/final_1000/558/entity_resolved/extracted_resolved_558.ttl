@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:sibylla_of_burgundy_duchess_1065 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sybilla of Burgundy" ;
+    onto:hasFather data:william_i_count_of_burgundy ;
+    skos:altLabel "Sibylla of Burgundy",
+        "Sybilla of Burgundy" .
+
+data:alice_of_normandy a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alice of Normandy" ;
+    skos:altLabel "Alice of Normandy" .
+
+data:william_i_count_of_burgundy a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William I, Count of Burgundy" ;
+    onto:hasMother data:alice_of_normandy ;
+    skos:altLabel "William I, Count of Burgundy" .
+

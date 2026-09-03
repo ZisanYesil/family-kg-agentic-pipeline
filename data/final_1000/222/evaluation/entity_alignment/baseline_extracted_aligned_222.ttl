@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Red_Riding_Hood> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Red Riding Hood (2003 film)" ;
+    onto:hasDirector <http://example.org/entity/Giacomo_Cimini> .
+
+<http://example.org/entity/Giacomo_Cimini> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Giacomo Cimini" ;
+    onto:hasEducatedAt <http://example.org/entity/London_Film_School> .
+
+<http://example.org/entity/London_Film_School> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "London Film School" .
+

@@ -1,0 +1,186 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/836/originals/extracted_836.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/836/ground_truth_836.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_luc_besson": "http://example.org/entity/Luc_Besson",
+    "http://example.org/extracted/film_extrordinary_adelle_blancsec": "http://example.org/entity/The_Extraordinary_Adventures_of_Adèle_Blanc_Sec"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_extrordinary_adelle_blancsec",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Extraordinary Adventures of Adèle Blanc‐Sec",
+          "source": "label"
+        },
+        {
+          "text": "film extrordinary adelle blancsec",
+          "source": "uri"
+        }
+      ],
+      "context": "The Extraordinary Adventures of Adèle Blanc‐Sec. has director: Luc Besson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Extraordinary Adventures of Adèle Blanc Sec",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Extraordinary Adventures of Adèle Blanc‐Sec",
+        "extracted_source": "label",
+        "ground_truth_text": "The Extraordinary Adventures of Adèle Blanc Sec",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9573009014129639,
+      "string_score": 0.9904255270957947,
+      "independent_identity_support": true,
+      "context_score": 0.9744743704795837,
+      "graph_score": 0.9872372150421143,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_luc_besson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Luc Besson",
+          "source": "label"
+        },
+        {
+          "text": "person luc besson",
+          "source": "uri"
+        }
+      ],
+      "context": "Luc Besson. has award received: Best Director. has award received: Best French Director. inverse has director: The Extraordinary Adventures of Adèle Blanc‐Sec.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Luc_Besson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Luc Besson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Luc Besson",
+        "extracted_source": "label",
+        "ground_truth_text": "Luc Besson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9036505818367004,
+      "graph_score": 0.9518252611160278,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/award_best_director",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Best Director",
+          "source": "label"
+        },
+        {
+          "text": "award best director",
+          "source": "uri"
+        }
+      ],
+      "context": "Best Director. inverse has award received: Luc Besson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/César_Award_for_Best_Director",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "César Award for Best Director",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "award best director",
+        "extracted_source": "uri",
+        "ground_truth_text": "César Award for Best Director",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8470916748046875,
+      "name_embedding_score": 0.809798538684845,
+      "string_score": 0.8062499761581421,
+      "independent_identity_support": true,
+      "context_score": 0.9250389933586121,
+      "graph_score": 0.9625195264816284,
+      "margin": 0.8470916748046875
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/award_best_french_director",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Best French Director",
+          "source": "label"
+        },
+        {
+          "text": "award best french director",
+          "source": "uri"
+        }
+      ],
+      "context": "Best French Director. inverse has award received: Luc Besson.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

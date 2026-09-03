@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Crazy_Heart> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Crazy Heart" ;
+    onto:hasCountry <http://example.org/entity/American> .
+
+<http://example.org/entity/Dragon_Eyes> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Dragon Eyes" ;
+    onto:hasCountry <http://example.org/entity/American> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

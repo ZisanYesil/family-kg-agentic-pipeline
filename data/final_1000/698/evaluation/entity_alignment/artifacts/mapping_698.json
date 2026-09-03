@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/698/originals/extracted_698.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/698/ground_truth_698.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ahmose_nebetta": "http://example.org/entity/Ahmose_Nebetta",
+    "http://example.org/extracted/seqenenre_tao": "http://example.org/entity/Seqenenre_Tao",
+    "http://example.org/extracted/tetisheri": "http://example.org/entity/Tetisheri"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ahmose_nebetta",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ahmose-Nebta",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ahmose-Nebetta",
+          "source": "label"
+        },
+        {
+          "text": "ahmose nebetta",
+          "source": "uri"
+        }
+      ],
+      "context": "Ahmose-Nebta. has father: Seqenenre Tao.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ahmose_Nebetta",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ahmose Nebetta",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ahmose-Nebetta",
+        "extracted_source": "label",
+        "ground_truth_text": "Ahmose Nebetta",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.882003903388977,
+      "string_score": 0.9678571224212646,
+      "independent_identity_support": true,
+      "context_score": 0.9674908518791199,
+      "graph_score": 0.9837454557418823,
+      "margin": 0.5157078504562378
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/seqenenre_tao",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Seqenenre Tao",
+          "source": "label"
+        }
+      ],
+      "context": "Seqenenre Tao. has mother: Tetisheri. inverse has father: Ahmose-Nebta.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Seqenenre_Tao",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Seqenenre Tao",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Seqenenre Tao",
+        "extracted_source": "label",
+        "ground_truth_text": "Seqenenre Tao",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9895195364952087,
+      "graph_score": 0.9947597980499268,
+      "margin": 0.540647566318512
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tetisheri",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tetisheri",
+          "source": "label"
+        }
+      ],
+      "context": "Tetisheri. inverse has mother: Seqenenre Tao.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tetisheri",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tetisheri",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tetisheri",
+        "extracted_source": "label",
+        "ground_truth_text": "Tetisheri",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6029162406921387
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

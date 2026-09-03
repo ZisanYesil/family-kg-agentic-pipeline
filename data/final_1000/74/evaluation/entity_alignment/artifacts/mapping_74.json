@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/74/originals/extracted_74.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/74/ground_truth_74.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/princess_margarita_greece_denmark": "http://example.org/entity/Princess_Margarita_of_Greece_and_Denmark",
+    "http://example.org/extracted/buckingham_palace": "http://example.org/entity/Buckingham_Palace",
+    "http://example.org/extracted/princess_alice_battenberg": "http://example.org/entity/Princess_Alice_of_Battenberg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/buckingham_palace",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Buckingham Palace",
+          "source": "label"
+        }
+      ],
+      "context": "Buckingham Palace. inverse has death place: Princess Alice of Battenberg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Buckingham_Palace",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Buckingham Palace",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Buckingham Palace",
+        "extracted_source": "label",
+        "ground_truth_text": "Buckingham Palace",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/princess_alice_battenberg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Alice of Battenberg",
+          "source": "label"
+        },
+        {
+          "text": "princess alice battenberg",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Alice of Battenberg. has death place: Buckingham Palace. inverse has mother: Princess Margarita of Greece and Denmark.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Alice_of_Battenberg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Alice of Battenberg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Alice of Battenberg",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Alice of Battenberg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.47479426860809326
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/princess_margarita_greece_denmark",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Margarita of Greece and Denmark",
+          "source": "label"
+        },
+        {
+          "text": "princess margarita greece denmark",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Margarita of Greece and Denmark. has mother: Princess Alice of Battenberg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Margarita_of_Greece_and_Denmark",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Margarita of Greece and Denmark",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Margarita of Greece and Denmark",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Margarita of Greece and Denmark",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.47479426860809326
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

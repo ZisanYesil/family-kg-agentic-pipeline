@@ -1,0 +1,22 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Margaret_Simey> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Margaret Simey" ;
+    onto:hasSpouse <http://example.org/entity/Tom_Simey> ;
+    skos:altLabel "Margaret Bayne Todd" .
+
+<http://example.org/entity/Balliol_College> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Balliol College, Oxford" ;
+    skos:altLabel "Balliol College" .
+
+<http://example.org/entity/Tom_Simey> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tom Simey" ;
+    onto:hasEducatedAt <http://example.org/entity/Balliol_College> ;
+    skos:altLabel "Thomas Spensley Simey" .
+

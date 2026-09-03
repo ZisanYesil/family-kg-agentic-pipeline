@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/88/originals/extracted_88.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/88/ground_truth_88.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/oslo": "http://example.org/entity/Oslo",
+    "http://example.org/extracted/karin_stoltenberg": "http://example.org/entity/Karin_Stoltenberg",
+    "http://example.org/extracted/thorvald_stoltenberg": "http://example.org/entity/Thorvald_Stoltenberg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/karin_stoltenberg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Karin Stoltenberg",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Karin Stoltenberg. has spouse: Thorvald Stoltenberg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Karin_Stoltenberg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Karin Stoltenberg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Karin Stoltenberg",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Karin Stoltenberg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.4086678624153137
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/oslo",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Oslo",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Oslo. inverse has birth place: Thorvald Stoltenberg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Oslo",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Oslo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Oslo",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Oslo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/thorvald_stoltenberg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thorvald Stoltenberg",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Thorvald Stoltenberg. has birth place: Oslo. inverse has spouse: Karin Stoltenberg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thorvald_Stoltenberg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thorvald Stoltenberg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thorvald Stoltenberg",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Thorvald Stoltenberg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4086678624153137
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

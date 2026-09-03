@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:harald_iii_of_denmark a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Harald III of Denmark" ;
+    onto:hasSpouse data:margareta_hasbjorns_datter ;
+    skos:altLabel "Harald III",
+        "Harald the Whetstone" .
+
+data:margareta_hasbjorns_datter a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Margareta Hasbjørnsdatter" ;
+    onto:hasBurialPlace data:roskilde_cathedral ;
+    skos:altLabel "Estrid",
+        "Margareta Asbjørnsdatter" .
+
+data:roskilde_cathedral a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Roskilde Cathedral" .
+

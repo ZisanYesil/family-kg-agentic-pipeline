@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/212/originals/extracted_212.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/212/ground_truth_212.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bakers_hawk_film": "http://example.org/entity/Baker_s_Hawk",
+    "http://example.org/extracted/majority_film": "http://example.org/entity/Majority_film"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bakers_hawk_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Baker's Hawk",
+          "source": "label"
+        },
+        {
+          "text": "bakers hawk film",
+          "source": "uri"
+        }
+      ],
+      "context": "Baker's Hawk. has publication date: 1976.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Baker_s_Hawk",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Baker s Hawk",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Baker's Hawk",
+        "extracted_source": "label",
+        "ground_truth_text": "Baker s Hawk",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9727962613105774,
+      "string_score": 0.9624999761581421,
+      "independent_identity_support": true,
+      "context_score": 0.9901430010795593,
+      "graph_score": 0.9901430010795593,
+      "margin": 0.6685816645622253
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/majority_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Majority",
+          "source": "label"
+        },
+        {
+          "text": "majority film",
+          "source": "uri"
+        }
+      ],
+      "context": "Majority. has publication date: 2010.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Majority_film",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Majority film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "majority film",
+        "extracted_source": "uri",
+        "ground_truth_text": "Majority film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9763534069061279,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7907735109329224,
+      "graph_score": 0.7907735109329224,
+      "margin": 0.8302945643663406
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

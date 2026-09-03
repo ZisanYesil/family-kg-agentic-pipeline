@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/327/originals/extracted_327.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/327/ground_truth_327.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bernadette_ofarrell": "http://example.org/entity/Bernadette_O_Farrell",
+    "http://example.org/extracted/frank_launder": "http://example.org/entity/Frank_Launder",
+    "http://example.org/extracted/folly_to_be_wise_film": "http://example.org/entity/Folly_to_Be_Wise"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bernadette_ofarrell",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bernadette O'Farrell",
+          "source": "label"
+        },
+        {
+          "text": "bernadette ofarrell",
+          "source": "uri"
+        }
+      ],
+      "context": "Bernadette O'Farrell. inverse has spouse: Frank Launder.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bernadette_O_Farrell",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bernadette O Farrell",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bernadette O'Farrell",
+        "extracted_source": "label",
+        "ground_truth_text": "Bernadette O Farrell",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9525761008262634,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.9799234867095947,
+      "graph_score": 0.9899617433547974,
+      "margin": 0.6813377737998962
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/folly_to_be_wise_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Folly to Be Wise",
+          "source": "label"
+        },
+        {
+          "text": "folly to be wise film",
+          "source": "uri"
+        }
+      ],
+      "context": "Folly to Be Wise. has director: Frank Launder.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Folly_to_Be_Wise",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Folly to Be Wise",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Folly to Be Wise",
+        "extracted_source": "label",
+        "ground_truth_text": "Folly to Be Wise",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/frank_launder",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Frank Launder",
+          "source": "label"
+        }
+      ],
+      "context": "Frank Launder. has spouse: Bernadette O'Farrell. inverse has director: Folly to Be Wise.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Frank_Launder",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Frank Launder",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Frank Launder",
+        "extracted_source": "label",
+        "ground_truth_text": "Frank Launder",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9903115630149841,
+      "graph_score": 0.9951558113098145,
+      "margin": 0.6794306635856628
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

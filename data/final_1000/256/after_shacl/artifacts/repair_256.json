@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "b488b5f9c6ebae98a923ebfac95372ba801f3bed1ec3a9ab8b190996ade848b0",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_howrah_bridge",
+        "path": null,
+        "value": "http://example.org/extracted/person_op_nayyar",
+        "expected": null,
+        "message": "Relation phrase 'music director of' from http://example.org/extracted/film_howrah_bridge to http://example.org/extracted/person_op_nayyar was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "b488b5f9c6ebae98a923ebfac95372ba801f3bed1ec3a9ab8b190996ade848b0",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_howrah_bridge",
+            "path": null,
+            "value": "http://example.org/extracted/person_op_nayyar",
+            "expected": null,
+            "message": "Relation phrase 'music director of' from http://example.org/extracted/film_howrah_bridge to http://example.org/extracted/person_op_nayyar was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 10,
+      "feedback_reasoning": "The violation concerns an unmapped relation phrase “music director of” from the film Howrah Bridge to the person O. P. Nayyar. The ontology does not define a predicate whose documented meaning corresponds to the role “music director”. Available predicates such as onto:hasComposer, onto:hasDirector, etc., refer to composer or director, which are not equivalent to a music director. Because no ontology predicate matches the semantic meaning of the phrase, we cannot safely add or modify a triple.",
+      "repairs": [
+        {
+          "violation_fingerprint": "3d9c6f76bcf853b170dcc1c5242e9f5152470959c2a8b85aa0ebdd492e644269",
+          "reasoning": "No suitable ontology predicate exists for the relation “music director of”.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "3d9c6f76bcf853b170dcc1c5242e9f5152470959c2a8b85aa0ebdd492e644269"
+      ],
+      "triples_after": 10,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "b488b5f9c6ebae98a923ebfac95372ba801f3bed1ec3a9ab8b190996ade848b0",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_howrah_bridge",
+            "path": null,
+            "value": "http://example.org/extracted/person_op_nayyar",
+            "expected": null,
+            "message": "Relation phrase 'music director of' from http://example.org/extracted/film_howrah_bridge to http://example.org/extracted/person_op_nayyar was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "b488b5f9c6ebae98a923ebfac95372ba801f3bed1ec3a9ab8b190996ade848b0",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_howrah_bridge",
+        "path": null,
+        "value": "http://example.org/extracted/person_op_nayyar",
+        "expected": null,
+        "message": "Relation phrase 'music director of' from http://example.org/extracted/film_howrah_bridge to http://example.org/extracted/person_op_nayyar was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

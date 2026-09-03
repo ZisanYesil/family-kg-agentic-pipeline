@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/821/originals/extracted_821.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/821/ground_truth_821.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/roskilde_cathedral": "http://example.org/entity/Roskilde_Cathedral",
+    "http://example.org/extracted/margareta_hasbjorns_datter": "http://example.org/entity/Margareta_Hasbjörnsdatter",
+    "http://example.org/extracted/harald_iii_of_denmark": "http://example.org/entity/Harald_III_of_Denmark"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/harald_iii_of_denmark",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Harald III",
+          "source": "altLabel"
+        },
+        {
+          "text": "Harald the Whetstone",
+          "source": "altLabel"
+        },
+        {
+          "text": "Harald III of Denmark",
+          "source": "label"
+        }
+      ],
+      "context": "Harald III. has spouse: Estrid.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Harald_III_of_Denmark",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Harald III of Denmark",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Harald III of Denmark",
+        "extracted_source": "label",
+        "ground_truth_text": "Harald III of Denmark",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6769932508468628,
+      "graph_score": 0.8384966254234314,
+      "margin": 0.7832639515399933
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/margareta_hasbjorns_datter",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Estrid",
+          "source": "altLabel"
+        },
+        {
+          "text": "Margareta Asbjørnsdatter",
+          "source": "altLabel"
+        },
+        {
+          "text": "Margareta Hasbjørnsdatter",
+          "source": "label"
+        },
+        {
+          "text": "margareta hasbjorns datter",
+          "source": "uri"
+        }
+      ],
+      "context": "Estrid. has burial place: Roskilde Cathedral. inverse has spouse: Harald III.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Margareta_Hasbjörnsdatter",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Margareta Hasbjörnsdatter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Margareta Hasbjørnsdatter",
+        "extracted_source": "label",
+        "ground_truth_text": "Margareta Hasbjörnsdatter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9868658185005188,
+      "string_score": 0.6653333306312561,
+      "independent_identity_support": true,
+      "context_score": 0.7966989874839783,
+      "graph_score": 0.8983495235443115,
+      "margin": 0.7675927877426147
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/roskilde_cathedral",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Roskilde Cathedral",
+          "source": "label"
+        }
+      ],
+      "context": "Roskilde Cathedral. inverse has burial place: Estrid.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Roskilde_Cathedral",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Roskilde Cathedral",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Roskilde Cathedral",
+        "extracted_source": "label",
+        "ground_truth_text": "Roskilde Cathedral",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8147331476211548,
+      "graph_score": 0.9073665738105774,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

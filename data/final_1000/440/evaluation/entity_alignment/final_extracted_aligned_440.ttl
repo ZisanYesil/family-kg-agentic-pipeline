@@ -1,0 +1,18 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/John_Manners_Sutton> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/entity/Lord_George_Manners_Sutton> ;
+    ex:hasParent <http://example.org/entity/Lord_George_Manners_Sutton> .
+
+<http://example.org/extracted/john_manners_marquess_of_granby> a ex:Agent,
+        ex:Person ;
+    ex:hasSibling <http://example.org/entity/Lord_George_Manners_Sutton> ;
+    ex:isBrotherOf <http://example.org/entity/Lord_George_Manners_Sutton> .
+
+<http://example.org/entity/Lord_George_Manners_Sutton> a ex:Agent,
+        ex:Person ;
+    ex:hasBrother <http://example.org/extracted/john_manners_marquess_of_granby> ;
+    ex:hasChild <http://example.org/entity/John_Manners_Sutton> ;
+    ex:hasSibling <http://example.org/extracted/john_manners_marquess_of_granby> .
+

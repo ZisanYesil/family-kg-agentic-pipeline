@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:desolation_angels_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Desolation Angels (1995 film)" ;
+    onto:hasDirector data:tim_mccann .
+
+data:state_university_of_new_york_at_purchase a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "State University of New York at Purchase" .
+
+data:tim_mccann a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tim McCann" ;
+    onto:hasEducatedAt data:state_university_of_new_york_at_purchase .
+

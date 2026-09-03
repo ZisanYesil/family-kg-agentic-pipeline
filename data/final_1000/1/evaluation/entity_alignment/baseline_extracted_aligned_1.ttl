@@ -1,0 +1,28 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/North_Marion_High_School_Oregon> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "North Marion High School (Oregon)" ;
+    onto:hasCountry <http://example.org/entity/United_States> ;
+    skos:altLabel "North Marion High School" .
+
+<http://example.org/entity/Seoul_High_School> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Seoul High School" ;
+    onto:hasCountry <http://example.org/entity/South_Korea> .
+
+<http://example.org/entity/South_Korea> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "South Korea" ;
+    skos:altLabel "Republic of Korea" .
+
+<http://example.org/entity/United_States> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "U.S.",
+        "U.S.A.",
+        "USA" .
+

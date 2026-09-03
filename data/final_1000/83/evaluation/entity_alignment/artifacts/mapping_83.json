@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/83/originals/extracted_83.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/83/ground_truth_83.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/eugenie_greece_denmark": "http://example.org/entity/Princess_Eugénie_of_Greece_and_Denmark",
+    "http://example.org/extracted/marie_bonaparte": "http://example.org/entity/Princess_Marie_Bonaparte"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/eugenie_greece_denmark",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Eugénie of Greece and Denmark",
+          "source": "label"
+        },
+        {
+          "text": "eugenie greece denmark",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Eugénie of Greece and Denmark. has mother: Princess Marie Bonaparte.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Eugénie_of_Greece_and_Denmark",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Eugénie of Greece and Denmark",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Eugénie of Greece and Denmark",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Eugénie of Greece and Denmark",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.5045702755451202
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/marie_bonaparte",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Marie Bonaparte",
+          "source": "label"
+        },
+        {
+          "text": "marie bonaparte",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Marie Bonaparte. has birth date: 1882-07-02. has death date: 1962-09-21. inverse has mother: Princess Eugénie of Greece and Denmark.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Marie_Bonaparte",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Marie Bonaparte",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Marie Bonaparte",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Marie Bonaparte",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9601476192474365,
+      "graph_score": 0.9800738096237183,
+      "margin": 0.5259901881217957
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

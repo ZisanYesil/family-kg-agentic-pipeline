@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/481/originals/extracted_481.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/481/ground_truth_481.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/country_soviet_union": "http://example.org/entity/Soviet",
+    "http://example.org/extracted/film_come_and_see": "http://example.org/entity/Come_and_See",
+    "http://example.org/extracted/film_the_diplomatic_pouch": "http://example.org/entity/The_Diplomatic_Pouch"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_soviet_union",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Soviet",
+          "source": "altLabel"
+        },
+        {
+          "text": "Soviet Union",
+          "source": "label"
+        },
+        {
+          "text": "country soviet union",
+          "source": "uri"
+        }
+      ],
+      "context": "Soviet. inverse has country of origin: Come And See. inverse has country of origin: The Diplomatic Pouch.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Soviet",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Soviet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Soviet",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Soviet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9998167753219604,
+      "graph_score": 0.9999083876609802,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_come_and_see",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Come And See",
+          "source": "label"
+        },
+        {
+          "text": "film come and see",
+          "source": "uri"
+        }
+      ],
+      "context": "Come And See. has country of origin: Soviet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Come_and_See",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Come and See",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Come And See",
+        "extracted_source": "label",
+        "ground_truth_text": "Come and See",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9983366131782532,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9998091459274292,
+      "graph_score": 0.9999045729637146,
+      "margin": 0.5600716769695282
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_diplomatic_pouch",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Diplomatic Pouch",
+          "source": "label"
+        },
+        {
+          "text": "film the diplomatic pouch",
+          "source": "uri"
+        }
+      ],
+      "context": "The Diplomatic Pouch. has country of origin: Soviet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Diplomatic_Pouch",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Diplomatic Pouch",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Diplomatic Pouch",
+        "extracted_source": "label",
+        "ground_truth_text": "The Diplomatic Pouch",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.5509982705116272
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

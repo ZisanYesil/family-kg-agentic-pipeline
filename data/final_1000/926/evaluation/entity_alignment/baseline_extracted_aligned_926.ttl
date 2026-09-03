@@ -1,0 +1,27 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Codine> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Codine" ;
+    onto:hasDirector <http://example.org/entity/Henri_Colpi> .
+
+<http://example.org/entity/Gold_Frankincense_and_Myrrh> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Gold, Frankincense and Myrrh" ;
+    onto:hasDirector <http://example.org/entity/Ante_Babaja> .
+
+<http://example.org/entity/Ante_Babaja> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ante Babaja" ;
+    onto:hasBirthDate "1927-10-06"^^xsd:date ;
+    onto:hasDeathDate "2010-01-14"^^xsd:date .
+
+<http://example.org/entity/Henri_Colpi> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Henri Colpi" ;
+    onto:hasBirthDate "1921-07-15"^^xsd:date ;
+    onto:hasDeathDate "2006-01-14"^^xsd:date .
+

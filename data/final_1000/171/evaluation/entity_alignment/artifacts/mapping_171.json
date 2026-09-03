@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/171/originals/extracted_171.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/171/ground_truth_171.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/prunella_scales": "http://example.org/entity/Prunella_Scales",
+    "http://example.org/extracted/lockwood_west": "http://example.org/entity/Lockwood_West",
+    "http://example.org/extracted/timothy_west": "http://example.org/entity/Timothy_West"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/lockwood_west",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Harry Lockwood West",
+          "source": "altLabel"
+        },
+        {
+          "text": "Lockwood West",
+          "source": "label"
+        }
+      ],
+      "context": "Harry Lockwood West. inverse has father: Timothy Lancaster West.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lockwood_West",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lockwood West",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lockwood West",
+        "extracted_source": "label",
+        "ground_truth_text": "Lockwood West",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7908464074134827,
+      "graph_score": 0.39542320370674133,
+      "margin": 0.530736118555069
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/prunella_scales",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prunella Scales",
+          "source": "label"
+        }
+      ],
+      "context": "Prunella Scales. inverse has spouse: Timothy Lancaster West.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prunella_Scales",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prunella Scales",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prunella Scales",
+        "extracted_source": "label",
+        "ground_truth_text": "Prunella Scales",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9482738375663757,
+      "graph_score": 0.9741369485855103,
+      "margin": 0.8329934179782867
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/timothy_west",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Timothy Lancaster West",
+          "source": "altLabel"
+        },
+        {
+          "text": "Timothy West",
+          "source": "label"
+        }
+      ],
+      "context": "Timothy Lancaster West. has father: Harry Lockwood West. has spouse: Prunella Scales.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Timothy_West",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Timothy West",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Timothy West",
+        "extracted_source": "label",
+        "ground_truth_text": "Timothy West",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8564803600311279,
+      "graph_score": 0.5949068665504456,
+      "margin": 0.5266532003879547
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

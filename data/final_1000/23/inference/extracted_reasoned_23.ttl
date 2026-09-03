@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/china> a ex:Country,
+        ex:Place .
+
+<http://example.org/extracted/dexter_young> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/extracted/connie_chan> ;
+    ex:hasParent <http://example.org/extracted/connie_chan> .
+
+<http://example.org/extracted/connie_chan> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/dexter_young> ;
+    ex:hasCountry <http://example.org/extracted/china> .
+

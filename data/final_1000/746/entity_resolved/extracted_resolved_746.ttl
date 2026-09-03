@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:_de_contrabando a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "De Contrabando" ;
+    onto:hasPerformer data:_jenni_rivera .
+
+data:_jenni_rivera a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jenni Rivera" ;
+    onto:hasDeathPlace data:_monterrey .
+
+data:_monterrey a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Monterrey" .
+

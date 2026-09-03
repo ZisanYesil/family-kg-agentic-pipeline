@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/778/originals/extracted_778.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/778/ground_truth_778.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/zeev_jabotinsky": "http://example.org/entity/Ze_ev_Jabotinsky",
+    "http://example.org/extracted/eri_jabotinsky": "http://example.org/entity/Eri_Jabotinsky"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/eri_jabotinsky",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eri Jabotinsky",
+          "source": "label"
+        }
+      ],
+      "context": "Eri Jabotinsky. has father: Ze'ev Jabotinsky.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eri_Jabotinsky",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eri Jabotinsky",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eri Jabotinsky",
+        "extracted_source": "label",
+        "ground_truth_text": "Eri Jabotinsky",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9804500341415405,
+      "graph_score": 0.9902250170707703,
+      "margin": 0.3045310974121094
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/zeev_jabotinsky",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ze'ev Jabotinsky",
+          "source": "label"
+        },
+        {
+          "text": "zeev jabotinsky",
+          "source": "uri"
+        }
+      ],
+      "context": "Ze'ev Jabotinsky. has death place: Hunter, New York. inverse has father: Eri Jabotinsky.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ze_ev_Jabotinsky",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ze ev Jabotinsky",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ze'ev Jabotinsky",
+        "extracted_source": "label",
+        "ground_truth_text": "Ze ev Jabotinsky",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8892775774002075,
+      "string_score": 0.971875011920929,
+      "independent_identity_support": true,
+      "context_score": 0.9122621417045593,
+      "graph_score": 0.956131100654602,
+      "margin": 0.30412983894348145
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/hunter_new_york",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hunter, New York",
+          "source": "label"
+        },
+        {
+          "text": "hunter new york",
+          "source": "uri"
+        }
+      ],
+      "context": "Hunter, New York. inverse has death place: Ze'ev Jabotinsky.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hunter",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hunter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "hunter new york",
+        "extracted_source": "uri",
+        "ground_truth_text": "Hunter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7545645833015442,
+      "name_embedding_score": 0.7181732654571533,
+      "string_score": 0.6404761672019958,
+      "independent_identity_support": false,
+      "context_score": 0.8828710317611694,
+      "graph_score": 0.9414355158805847,
+      "margin": 0.7545645833015442
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

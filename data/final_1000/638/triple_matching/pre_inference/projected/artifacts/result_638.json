@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/638/evaluation/entity_alignment/baseline_extracted_aligned_638.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/638/evaluation/entity_alignment/baseline_ground_truth_aligned_638.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Francesca_von_Habsburg",
+      "predicate": "hasSpouse",
+      "object": "Karl_von_Habsburg",
+      "subject_uri": "http://example.org/entity/Francesca_von_Habsburg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Karl_von_Habsburg"
+    },
+    {
+      "subject": "Karl_von_Habsburg",
+      "predicate": "hasCountry",
+      "object": "Austria",
+      "subject_uri": "http://example.org/entity/Karl_von_Habsburg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Austria"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Austria",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Austria",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Austria",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Austria",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Austria",
+      "predicate": "label",
+      "object": "\"Austria\"",
+      "subject_uri": "http://example.org/entity/Austria",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Austria\""
+    },
+    {
+      "subject": "Austria",
+      "predicate": "altLabel",
+      "object": "\"Austrian\"",
+      "subject_uri": "http://example.org/entity/Austria",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Austrian\""
+    },
+    {
+      "subject": "Francesca_von_Habsburg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Francesca_von_Habsburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Francesca_von_Habsburg",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Francesca_von_Habsburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Francesca_von_Habsburg",
+      "predicate": "label",
+      "object": "\"Francesca von Habsburg\"",
+      "subject_uri": "http://example.org/entity/Francesca_von_Habsburg",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Francesca von Habsburg\""
+    },
+    {
+      "subject": "Karl_von_Habsburg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Karl_von_Habsburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Karl_von_Habsburg",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Karl_von_Habsburg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Karl_von_Habsburg",
+      "predicate": "label",
+      "object": "\"Karl von Habsburg\"",
+      "subject_uri": "http://example.org/entity/Karl_von_Habsburg",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Karl von Habsburg\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

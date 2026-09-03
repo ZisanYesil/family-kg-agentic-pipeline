@@ -1,0 +1,28 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/The_Indian_Fighter> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Indian Fighter" ;
+    onto:hasProducer <http://example.org/entity/Kirk_Douglas> ;
+    onto:hasPublicationDate "1955"^^xsd:gYear .
+
+<http://example.org/entity/The_Story_of_Three_Loves> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Story Of Three Loves" ;
+    onto:hasProducer <http://example.org/entity/Sidney_Franklin> ;
+    onto:hasPublicationDate "1953"^^xsd:gYear .
+
+<http://example.org/entity/Kirk_Douglas> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Kirk Douglas" ;
+    onto:hasBirthDate "1916-12-09"^^xsd:date .
+
+<http://example.org/entity/Sidney_Franklin> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sidney Franklin" ;
+    onto:hasBirthDate "1893-03-21"^^xsd:date ;
+    onto:hasDeathDate "1972-05-18"^^xsd:date .
+

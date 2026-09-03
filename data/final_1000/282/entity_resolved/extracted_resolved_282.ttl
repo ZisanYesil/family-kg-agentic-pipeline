@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:foulques_prince a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Foulques of Orléans, Duke of Aumale" ;
+    onto:hasFather data:jacques_prince .
+
+data:isabelle_prince a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Isabelle of Orléans-Braganza" .
+
+data:jacques_prince a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Jacques of Orléans, Duke of Orléans" ;
+    onto:hasMother data:isabelle_prince .
+

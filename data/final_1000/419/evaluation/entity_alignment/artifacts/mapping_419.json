@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/419/originals/extracted_419.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/419/ground_truth_419.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/stanley_lane_poole": "http://example.org/entity/Stanley_Lane_Poole",
+    "http://example.org/extracted/reginald_lane_poole": "http://example.org/entity/Reginald_Lane_Poole",
+    "http://example.org/extracted/rachael_poole": "http://example.org/entity/Rachael_Emily_Poole"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/rachael_poole",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rachael Emily Poole",
+          "source": "altLabel"
+        },
+        {
+          "text": "Rachael Poole",
+          "source": "label"
+        }
+      ],
+      "context": "Rachael Emily Poole. has spouse: Reginald Lane-Poole.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rachael_Emily_Poole",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rachael Emily Poole",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rachael Emily Poole",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Rachael Emily Poole",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9534661769866943,
+      "graph_score": 0.9767330884933472,
+      "margin": 0.4313393831253052
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/reginald_lane_poole",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Reginald Lane-Poole",
+          "source": "altLabel"
+        },
+        {
+          "text": "Reginald Lane Poole",
+          "source": "label"
+        }
+      ],
+      "context": "Reginald Lane-Poole. inverse has brother: Stanley Lane-Poole. inverse has spouse: Rachael Emily Poole.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Reginald_Lane_Poole",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Reginald Lane Poole",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Reginald Lane Poole",
+        "extracted_source": "label",
+        "ground_truth_text": "Reginald Lane Poole",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8335803151130676,
+      "graph_score": 0.583456814289093,
+      "margin": 0.30974793434143066
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/stanley_lane_poole",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stanley Lane-Poole",
+          "source": "label"
+        },
+        {
+          "text": "stanley lane poole",
+          "source": "uri"
+        }
+      ],
+      "context": "Stanley Lane-Poole. has brother: Reginald Lane-Poole.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stanley_Lane_Poole",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stanley Lane Poole",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stanley Lane-Poole",
+        "extracted_source": "label",
+        "ground_truth_text": "Stanley Lane Poole",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.7807382941246033,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.6592839956283569,
+      "graph_score": 0.32964199781417847,
+      "margin": 0.4345291256904602
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

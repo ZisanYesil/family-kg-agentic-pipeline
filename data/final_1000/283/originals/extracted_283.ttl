@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:madeleine_frieden_kinnen a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Madeleine Frieden-Kinnen" ;
+    onto:hasSpouse data:pierre_frieden .
+
+data:pierre_frieden a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Pierre Frieden" ;
+    onto:hasDeathPlace data:zurich .
+
+data:zurich a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Zürich" .
+

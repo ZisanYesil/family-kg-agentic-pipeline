@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/130/originals/extracted_130.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/130/ground_truth_130.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/_film_daawat_e_ishq": "http://example.org/entity/Daawat_e_Ishq",
+    "http://example.org/extracted/_person_habib_faisal": "http://example.org/entity/Habib_Faisal",
+    "http://example.org/extracted/_institution_jamia_millia_islamia": "http://example.org/entity/Jamia_Millia_Islamia"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/_film_daawat_e_ishq",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Daawat-e-Ishq",
+          "source": "label"
+        },
+        {
+          "text": "film daawat e ishq",
+          "source": "uri"
+        }
+      ],
+      "context": "Daawat-e-Ishq. has director: Habib Faisal.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Daawat_e_Ishq",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Daawat e Ishq",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Daawat-e-Ishq",
+        "extracted_source": "label",
+        "ground_truth_text": "Daawat e Ishq",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.7279382348060608,
+      "string_score": 0.9307692050933838,
+      "independent_identity_support": true,
+      "context_score": 0.9490161538124084,
+      "graph_score": 0.9745080471038818,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_institution_jamia_millia_islamia",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jamia Millia Islamia",
+          "source": "label"
+        },
+        {
+          "text": "institution jamia millia islamia",
+          "source": "uri"
+        }
+      ],
+      "context": "Jamia Millia Islamia. inverse has educated at: Habib Faisal.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jamia_Millia_Islamia",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jamia Millia Islamia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jamia Millia Islamia",
+        "extracted_source": "label",
+        "ground_truth_text": "Jamia Millia Islamia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_person_habib_faisal",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Habib Faisal",
+          "source": "label"
+        },
+        {
+          "text": "person habib faisal",
+          "source": "uri"
+        }
+      ],
+      "context": "Habib Faisal. has educated at: Jamia Millia Islamia. inverse has director: Daawat-e-Ishq.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Habib_Faisal",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Habib Faisal",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Habib Faisal",
+        "extracted_source": "label",
+        "ground_truth_text": "Habib Faisal",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9845202565193176,
+      "graph_score": 0.9922600984573364,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

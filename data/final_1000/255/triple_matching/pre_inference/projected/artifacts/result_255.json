@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/255/evaluation/entity_alignment/baseline_extracted_aligned_255.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/255/evaluation/entity_alignment/baseline_ground_truth_aligned_255.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Aud_Egede_Nissen",
+      "predicate": "hasCountry",
+      "object": "Norwegian",
+      "subject_uri": "http://example.org/entity/Aud_Egede_Nissen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Norwegian"
+    },
+    {
+      "subject": "Paul_Richter",
+      "predicate": "hasSpouse",
+      "object": "Aud_Egede_Nissen",
+      "subject_uri": "http://example.org/entity/Paul_Richter",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Aud_Egede_Nissen"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Aud_Egede_Nissen",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Aud_Egede_Nissen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Aud_Egede_Nissen",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Aud_Egede_Nissen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Aud_Egede_Nissen",
+      "predicate": "label",
+      "object": "\"Aud Egede-Nissen\"",
+      "subject_uri": "http://example.org/entity/Aud_Egede_Nissen",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Aud Egede-Nissen\""
+    },
+    {
+      "subject": "Norwegian",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Norwegian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Norwegian",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Norwegian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Norwegian",
+      "predicate": "label",
+      "object": "\"Norway\"",
+      "subject_uri": "http://example.org/entity/Norwegian",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Norway\""
+    },
+    {
+      "subject": "Norwegian",
+      "predicate": "altLabel",
+      "object": "\"Norwegian\"",
+      "subject_uri": "http://example.org/entity/Norwegian",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Norwegian\""
+    },
+    {
+      "subject": "Paul_Richter",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Paul_Richter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Paul_Richter",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Paul_Richter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Paul_Richter",
+      "predicate": "label",
+      "object": "\"Paul Richter\"",
+      "subject_uri": "http://example.org/entity/Paul_Richter",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Paul Richter\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

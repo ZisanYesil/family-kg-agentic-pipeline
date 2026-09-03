@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_alfons_zitterbacke a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Alfons Zitterbacke" ;
+    onto:hasCountryOfOrigin data:country_east_germany .
+
+data:film_almighty_dollar_1923 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Almighty Dollar (1923 film)" ;
+    onto:hasCountryOfOrigin data:country_germany .
+
+data:country_east_germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "East Germany" ;
+    skos:altLabel "East German" .
+
+data:country_germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German" .
+

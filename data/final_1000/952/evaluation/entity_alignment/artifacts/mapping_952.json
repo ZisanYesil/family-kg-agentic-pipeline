@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/952/originals/extracted_952.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/952/ground_truth_952.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ruqayyah_bint_husayn": "http://example.org/entity/Ruqayyah_bint_Husayn",
+    "http://example.org/extracted/husayn_ibn_ali": "http://example.org/entity/Husayn_ibn_Ali"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/husayn_ibn_ali",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Husayn ibn Ali",
+          "source": "label"
+        }
+      ],
+      "context": "Husayn ibn Ali. has cause of death: killed in the Battle of Karbala. inverse has father: Ruqayyah bint Al-Ḥusayn.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Husayn_ibn_Ali",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Husayn ibn Ali",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Husayn ibn Ali",
+        "extracted_source": "label",
+        "ground_truth_text": "Husayn ibn Ali",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9794468283653259,
+      "graph_score": 0.9897234439849854,
+      "margin": 0.5100995898246765
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ruqayyah_bint_husayn",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ruqayyah bint Al-Ḥusayn",
+          "source": "label"
+        },
+        {
+          "text": "ruqayyah bint husayn",
+          "source": "uri"
+        }
+      ],
+      "context": "Ruqayyah bint Al-Ḥusayn. has father: Husayn ibn Ali.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ruqayyah_bint_Husayn",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ruqayyah bint Husayn",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "ruqayyah bint husayn",
+        "extracted_source": "uri",
+        "ground_truth_text": "Ruqayyah bint Husayn",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8126438856124878,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.968214750289917,
+      "graph_score": 0.9841073751449585,
+      "margin": 0.5233049392700195
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cause_battle_of_karbala",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "killed in the Battle of Karbala",
+          "source": "label"
+        },
+        {
+          "text": "cause battle of karbala",
+          "source": "uri"
+        }
+      ],
+      "context": "killed in the Battle of Karbala. inverse has cause of death: Husayn ibn Ali.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Battle_of_Karbala",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Battle of Karbala",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "cause battle of karbala",
+        "extracted_source": "uri",
+        "ground_truth_text": "Battle of Karbala",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.928947925567627,
+      "name_embedding_score": 0.9290665984153748,
+      "string_score": 0.8700000047683716,
+      "independent_identity_support": true,
+      "context_score": 0.9753170609474182,
+      "graph_score": 0.9876585006713867,
+      "margin": 0.928947925567627
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

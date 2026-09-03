@@ -1,0 +1,106 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/941/evaluation/entity_alignment/final_extracted_aligned_941.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/941/evaluation/entity_alignment/final_ground_truth_aligned_941.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Dog_Pound",
+      "predicate": "hasCreator",
+      "object": "Kim_Chapiron",
+      "subject_uri": "http://example.org/entity/Dog_Pound",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Kim_Chapiron"
+    },
+    {
+      "subject": "Dog_Pound",
+      "predicate": "hasDirector",
+      "object": "Kim_Chapiron",
+      "subject_uri": "http://example.org/entity/Dog_Pound",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Kim_Chapiron"
+    },
+    {
+      "subject": "Dog_Pound",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Dog_Pound",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Dog_Pound",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Dog_Pound",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Dog_Pound",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Dog_Pound",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "France",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "France",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Kim_Chapiron",
+      "predicate": "hasCountry",
+      "object": "France",
+      "subject_uri": "http://example.org/entity/Kim_Chapiron",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/France"
+    },
+    {
+      "subject": "Kim_Chapiron",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Kim_Chapiron",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Kim_Chapiron",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Kim_Chapiron",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 10,
+    "true_positives": 10,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1006
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:The_Crime_Doctor_s_Courage ex:hasDirector inst:George_Sherman .  # director
+inst:Vasantha_Sena_1967_film ex:hasDirector inst:B_S_Ranga .  # director
+inst:George_Sherman ex:hasDeathDate "1991-03-15"^^xsd:date .  # date of death -> "March 15, 1991"
+inst:B_S_Ranga ex:hasDeathDate "2010-12-12"^^xsd:date .  # date of death -> "12 December 2010"

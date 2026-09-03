@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/359/originals/extracted_359.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/359/ground_truth_359.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/princess_mary_of_great_britain": "http://example.org/entity/Princess_Mary_of_Great_Britain",
+    "http://example.org/extracted/marie_friederike_of_hesse_kassel": "http://example.org/entity/Marie_Frederike_of_Hesse_Kassel",
+    "http://example.org/extracted/william_i_elector_of_hesse": "http://example.org/entity/William_I_Elector_of_Hesse"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/marie_friederike_of_hesse_kassel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marie Friederike of Hesse-Kassel",
+          "source": "altLabel"
+        },
+        {
+          "text": "Marie Frederike of Hesse-Kassel",
+          "source": "label"
+        },
+        {
+          "text": "marie friederike of hesse kassel",
+          "source": "uri"
+        }
+      ],
+      "context": "Marie Friederike of Hesse-Kassel. has father: William I, Elector of Hesse.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marie_Frederike_of_Hesse_Kassel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marie Frederike of Hesse Kassel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marie Frederike of Hesse-Kassel",
+        "extracted_source": "label",
+        "ground_truth_text": "Marie Frederike of Hesse Kassel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9876421689987183,
+      "string_score": 0.9854838848114014,
+      "independent_identity_support": true,
+      "context_score": 0.8457409739494324,
+      "graph_score": 0.9228705167770386,
+      "margin": 0.4858438968658447
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/princess_mary_of_great_britain",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Mary of Great Britain",
+          "source": "label"
+        }
+      ],
+      "context": "Princess Mary of Great Britain. inverse has mother: William I, Elector of Hesse.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Mary_of_Great_Britain",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Mary of Great Britain",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Mary of Great Britain",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Mary of Great Britain",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9955319762229919,
+      "graph_score": 0.9977660179138184,
+      "margin": 0.6936566233634949
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/william_i_elector_of_hesse",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William I, Elector of Hesse",
+          "source": "label"
+        },
+        {
+          "text": "william i elector of hesse",
+          "source": "uri"
+        }
+      ],
+      "context": "William I, Elector of Hesse. has mother: Princess Mary of Great Britain. inverse has father: Marie Friederike of Hesse-Kassel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_I_Elector_of_Hesse",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William I Elector of Hesse",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William I, Elector of Hesse",
+        "extracted_source": "label",
+        "ground_truth_text": "William I Elector of Hesse",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9922429323196411,
+      "string_score": 0.9915094375610352,
+      "independent_identity_support": true,
+      "context_score": 0.9513487219810486,
+      "graph_score": 0.9756743907928467,
+      "margin": 0.4832051396369934
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

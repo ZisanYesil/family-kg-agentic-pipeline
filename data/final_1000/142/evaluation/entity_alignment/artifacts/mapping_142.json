@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/142/originals/extracted_142.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/142/ground_truth_142.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/macrianus_major": "http://example.org/entity/Macrianus_Major",
+    "http://example.org/extracted/macrianus_minor": "http://example.org/entity/Macrianus_Minor",
+    "http://example.org/extracted/thrace": "http://example.org/entity/Thrace"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/macrianus_major",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Macrianus Major",
+          "source": "altLabel"
+        },
+        {
+          "text": "Fulvius Macrianus",
+          "source": "label"
+        }
+      ],
+      "context": "Macrianus Major. has death place: Thrace. inverse has father: Macrianus Minor.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Macrianus_Major",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Macrianus Major",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Macrianus Major",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Macrianus Major",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997019767761,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.31934577226638794
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/macrianus_minor",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Macrianus Minor",
+          "source": "altLabel"
+        },
+        {
+          "text": "Titus Fulvius Iunius Macrianus",
+          "source": "label"
+        }
+      ],
+      "context": "Macrianus Minor. has father: Macrianus Major.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Macrianus_Minor",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Macrianus Minor",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Macrianus Minor",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Macrianus Minor",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.31934577226638794
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/thrace",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thrace",
+          "source": "label"
+        }
+      ],
+      "context": "Thrace. inverse has death place: Macrianus Major.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thrace",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thrace",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thrace",
+        "extracted_source": "label",
+        "ground_truth_text": "Thrace",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

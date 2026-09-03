@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:alexander_hugh_baring_4th_baron_ashburton a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alexander Hugh Baring, 4th Baron Ashburton" ;
+    onto:hasFather data:francis_baring_3rd_baron_ashburton ;
+    skos:altLabel "Alexander Hugh Baring" .
+
+data:francis_baring_3rd_baron_ashburton a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Francis Baring, 3rd Baron Ashburton" ;
+    onto:hasDeathDate "1868-09-06"^^xsd:date ;
+    skos:altLabel "Francis Baring" .
+

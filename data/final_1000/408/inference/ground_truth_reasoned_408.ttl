@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Metropolitan a ex:Agent,
+        ex:Organization ;
+    ex:hasMember entity:John_Masters .
+
+entity:John_Masters a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:British ;
+    ex:hasCountry entity:British .
+
+entity:British a ex:Country,
+        ex:Place .
+

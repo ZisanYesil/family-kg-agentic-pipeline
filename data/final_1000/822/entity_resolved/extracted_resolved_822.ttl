@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:ang_nan_1654 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ang Nan" ;
+    onto:hasBirthDate "1654-01-01"^^xsd:date ;
+    onto:hasDeathDate "1691-01-01"^^xsd:date ;
+    onto:hasDeathPlace data:srey_santhor ;
+    onto:hasSon data:ang_em_1674 .
+
+data:ang_em_1674 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ang Em" ;
+    onto:hasBirthDate "1674-01-01"^^xsd:date ;
+    onto:hasDeathDate "1731-01-01"^^xsd:date ;
+    skos:altLabel "Barom Reameathiptei" .
+
+data:srey_santhor a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Srey Santhor" .
+

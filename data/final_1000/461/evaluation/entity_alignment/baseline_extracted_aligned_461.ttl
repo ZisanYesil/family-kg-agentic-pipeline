@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Louise_Marie_Thérèse_d_Artois> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louise Marie Thérèse d'Artois" ;
+    onto:hasMother <http://example.org/entity/Princess_Caroline_of_Naples_and_Sicily> .
+
+<http://example.org/entity/Princess_Caroline_of_Naples_and_Sicily> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Caroline of Naples and Sicily" ;
+    onto:hasCountry data:naples_and_sicily .
+
+data:naples_and_sicily a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Naples and Sicily" ;
+    skos:altLabel "Naples",
+        "Sicily" .
+

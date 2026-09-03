@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/988/originals/extracted_988.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/988/ground_truth_988.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_north_of_arizona": "http://example.org/entity/North_of_Arizona",
+    "http://example.org/extracted/film_hsm_el_desafio": "http://example.org/entity/High_School_Musical_El_Desafío"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_hsm_el_desafio",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "High School Musical: El Desafío",
+          "source": "label"
+        },
+        {
+          "text": "film hsm el desafio",
+          "source": "uri"
+        }
+      ],
+      "context": "High School Musical: El Desafío. has publication date: 2008-07-17.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/High_School_Musical_El_Desafío",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "High School Musical El Desafío",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "High School Musical: El Desafío",
+        "extracted_source": "label",
+        "ground_truth_text": "High School Musical El Desafío",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9829997420310974,
+      "string_score": 0.992622971534729,
+      "independent_identity_support": true,
+      "context_score": 0.9683119058609009,
+      "graph_score": 0.9683119058609009,
+      "margin": 0.8719800710678101
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_north_of_arizona",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "North of Arizona",
+          "source": "label"
+        },
+        {
+          "text": "film north of arizona",
+          "source": "uri"
+        }
+      ],
+      "context": "North of Arizona. has publication date: 1935.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/North_of_Arizona",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "North of Arizona",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "North of Arizona",
+        "extracted_source": "label",
+        "ground_truth_text": "North of Arizona",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8687234669923782
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

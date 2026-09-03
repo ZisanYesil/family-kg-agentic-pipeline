@@ -1,0 +1,90 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/804/evaluation/entity_alignment/final_extracted_aligned_804.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/804/evaluation/entity_alignment/final_ground_truth_aligned_804.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Augustus_II_the_Strong",
+      "predicate": "hasBurialPlace",
+      "object": "Wawel_Cathedral",
+      "subject_uri": "http://example.org/entity/Augustus_II_the_Strong",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://example.org/entity/Wawel_Cathedral"
+    },
+    {
+      "subject": "Augustus_II_the_Strong",
+      "predicate": "hasChild",
+      "object": "Maurice_de_Saxe",
+      "subject_uri": "http://example.org/entity/Augustus_II_the_Strong",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Maurice_de_Saxe"
+    },
+    {
+      "subject": "Augustus_II_the_Strong",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Augustus_II_the_Strong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Augustus_II_the_Strong",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Augustus_II_the_Strong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Maurice_de_Saxe",
+      "predicate": "hasParent",
+      "object": "Augustus_II_the_Strong",
+      "subject_uri": "http://example.org/entity/Maurice_de_Saxe",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Augustus_II_the_Strong"
+    },
+    {
+      "subject": "Maurice_de_Saxe",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Maurice_de_Saxe",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Maurice_de_Saxe",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Maurice_de_Saxe",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Wawel_Cathedral",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Wawel_Cathedral",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 8,
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

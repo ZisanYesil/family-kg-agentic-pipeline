@@ -1,0 +1,22 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Forget_About_the_World> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Forget About the World" ;
+    onto:hasPerformer <http://example.org/entity/Gabrielle> .
+
+<http://example.org/entity/Gabrielle> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gabrielle" ;
+    onto:hasBirthDate "1969-07-19"^^xsd:date ;
+    onto:hasBirthPlace <http://example.org/entity/Hackney> ;
+    skos:altLabel "Louisa Gabrielle Bobb" .
+
+<http://example.org/entity/Hackney> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Hackney, London" .
+

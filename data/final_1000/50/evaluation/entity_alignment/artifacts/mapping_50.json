@@ -1,0 +1,210 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/50/originals/extracted_50.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/50/ground_truth_50.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_a_soldiers_oath": "http://example.org/entity/A_Soldier_s_Oath",
+    "http://example.org/extracted/film_the_criminal": "http://example.org/entity/The_Criminal_1960_film",
+    "http://example.org/extracted/person_william_fox": "http://example.org/entity/William_Fox",
+    "http://example.org/extracted/person_nat_cohen": "http://example.org/entity/Nat_Cohen"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_a_soldiers_oath",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A Soldier's Oath",
+          "source": "label"
+        },
+        {
+          "text": "film a soldiers oath",
+          "source": "uri"
+        }
+      ],
+      "context": "A Soldier's Oath. has producer: Vilmos Fuchs.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Soldier_s_Oath",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Soldier s Oath",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Soldier's Oath",
+        "extracted_source": "label",
+        "ground_truth_text": "A Soldier s Oath",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9727246165275574,
+      "string_score": 0.971875011920929,
+      "independent_identity_support": true,
+      "context_score": 0.7500438094139099,
+      "graph_score": 0.8750219345092773,
+      "margin": 0.6974468231201172
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_criminal",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Criminal (1960 film)",
+          "source": "altLabel"
+        },
+        {
+          "text": "The Criminal",
+          "source": "label"
+        },
+        {
+          "text": "film the criminal",
+          "source": "uri"
+        }
+      ],
+      "context": "The Criminal (1960 film). has producer: Nat Cohen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Criminal_1960_film",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Criminal 1960 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Criminal (1960 film)",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "The Criminal 1960 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9734630584716797,
+      "string_score": 0.980434775352478,
+      "independent_identity_support": true,
+      "context_score": 0.9823050498962402,
+      "graph_score": 0.9911525249481201,
+      "margin": 0.7515991628170013
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_nat_cohen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nat Cohen",
+          "source": "label"
+        },
+        {
+          "text": "person nat cohen",
+          "source": "uri"
+        }
+      ],
+      "context": "Nat Cohen. has birth date: 1905-12-23. has death date: 1988-02-10. inverse has producer: The Criminal (1960 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nat_Cohen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nat Cohen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nat Cohen",
+        "extracted_source": "label",
+        "ground_truth_text": "Nat Cohen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9294450283050537,
+      "graph_score": 0.9647225141525269,
+      "margin": 0.6711947917938232
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_william_fox",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vilmos Fuchs",
+          "source": "altLabel"
+        },
+        {
+          "text": "William Fox",
+          "source": "altLabel"
+        },
+        {
+          "text": "person william fox",
+          "source": "uri"
+        }
+      ],
+      "context": "Vilmos Fuchs. has birth date: 1879-01-01. has death date: 1952-05-08. inverse has producer: A Soldier's Oath.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_Fox",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William Fox",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William Fox",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "William Fox",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.4217086434364319,
+      "graph_score": 0.7108542919158936,
+      "margin": 0.3351318836212158
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/William_Fox_producer"
+  ]
+}

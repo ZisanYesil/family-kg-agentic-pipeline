@@ -1,0 +1,24 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Cage_of_Gold a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Basil_Dearden ;
+    ex:hasDirector entity:Basil_Dearden .
+
+entity:Face_of_a_Fugitive a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Paul_Wendkos ;
+    ex:hasDirector entity:Paul_Wendkos .
+
+entity:Basil_Dearden a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "1971-03-23"^^xsd:date .
+
+entity:Paul_Wendkos a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "2009-11-12"^^xsd:date .
+

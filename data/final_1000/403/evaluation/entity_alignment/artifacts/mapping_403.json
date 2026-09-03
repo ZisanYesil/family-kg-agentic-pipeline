@@ -1,0 +1,182 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/403/originals/extracted_403.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/403/ground_truth_403.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ash_koosha": "http://example.org/entity/Ash_Koosha",
+    "http://example.org/extracted/take_it_easy_hospital": "http://example.org/entity/Take_It_Easy_Hospital"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ash_koosha",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ash Koosha",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ashkan Kooshanejad",
+          "source": "label"
+        }
+      ],
+      "context": "Ash Koosha. has nationality: British. has nationality: Iranian. inverse has founder: Take It Easy Hospital.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ash_Koosha",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ash Koosha",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ash Koosha",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Ash Koosha",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9270599484443665,
+      "graph_score": 0.4635299742221832,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/take_it_easy_hospital",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Take It Easy Hospital",
+          "source": "label"
+        }
+      ],
+      "context": "Take It Easy Hospital. has founder: Ash Koosha.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Take_It_Easy_Hospital",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Take It Easy Hospital",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Take It Easy Hospital",
+        "extracted_source": "label",
+        "ground_truth_text": "Take It Easy Hospital",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9452130198478699,
+      "graph_score": 0.47260650992393494,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/iran",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Iranian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Iran",
+          "source": "label"
+        }
+      ],
+      "context": "Iranian. inverse has nationality: Ash Koosha.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British_Iranian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British Iranian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Iranian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "British Iranian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7107375860214233,
+      "name_embedding_score": 0.8401697874069214,
+      "string_score": 0.7113636136054993,
+      "independent_identity_support": true,
+      "context_score": 0.9024941921234131,
+      "graph_score": 0.45124709606170654,
+      "margin": 0.7107375860214233
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "British. inverse has nationality: Ash Koosha.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

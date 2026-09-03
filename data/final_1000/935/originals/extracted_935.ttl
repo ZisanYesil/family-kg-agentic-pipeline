@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:we_write_the_story a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "We Write the Story" ;
+    onto:hasComposer data:avicii .
+
+data:avicii a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tim Bergling" ;
+    onto:hasDeathPlace data:muscat_oman ;
+    skos:altLabel "Avicii" .
+
+data:muscat_oman a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Muscat, Oman" .
+

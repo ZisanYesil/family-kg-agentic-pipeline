@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:mukhyamantri_1996_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Mukhyamantri (1996 film)" ;
+    onto:hasDirector data:anjan_choudhury .
+
+data:anjan_choudhury a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Anjan Choudhury" ;
+    onto:hasChild data:sandip_choudhury .
+
+data:sandip_choudhury a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sandip Choudhury" .
+

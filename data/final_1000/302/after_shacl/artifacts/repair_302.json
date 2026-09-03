@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "e250f0a1454574ebc053e1f368aa8028b44a7b60d5e062ac4e7418d237e93145",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/anne_marie_therese_lorraine_1648",
+        "path": null,
+        "value": "http://example.org/extracted/nicole_duchess_of_lorraine",
+        "expected": null,
+        "message": "Relation phrase 'has aunt' from http://example.org/extracted/anne_marie_therese_lorraine_1648 to http://example.org/extracted/nicole_duchess_of_lorraine was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "e250f0a1454574ebc053e1f368aa8028b44a7b60d5e062ac4e7418d237e93145",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/anne_marie_therese_lorraine_1648",
+            "path": null,
+            "value": "http://example.org/extracted/nicole_duchess_of_lorraine",
+            "expected": null,
+            "message": "Relation phrase 'has aunt' from http://example.org/extracted/anne_marie_therese_lorraine_1648 to http://example.org/extracted/nicole_duchess_of_lorraine was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 11,
+      "feedback_reasoning": "The validation reports an unmapped_relation for the phrase “has aunt” linking Anne Marie Thérèse de Lorraine to Nicole, Duchess of Lorraine. The ontology provides no predicate whose meaning corresponds to “has aunt”, and the source text does not assert any aunt relationship between these two individuals. Because the offending triple’s predicate IRI is not known (it is the unmapped relation itself), we cannot safely remove or replace the triple without risking deletion of correct data. Consequently the violation cannot be repaired with a concrete operation.",
+      "repairs": [
+        {
+          "violation_fingerprint": "939e97c60b2d46e827fcb0d1c21ed339265d7d11bf50a21ff5640cff35926a7d",
+          "reasoning": "No suitable ontology predicate matches the relation phrase “has aunt”, and the source text provides no evidence for such a relation. The predicate IRI of the offending triple is unknown, so we cannot target it for removal or replacement.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "939e97c60b2d46e827fcb0d1c21ed339265d7d11bf50a21ff5640cff35926a7d"
+      ],
+      "triples_after": 11,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "e250f0a1454574ebc053e1f368aa8028b44a7b60d5e062ac4e7418d237e93145",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/anne_marie_therese_lorraine_1648",
+            "path": null,
+            "value": "http://example.org/extracted/nicole_duchess_of_lorraine",
+            "expected": null,
+            "message": "Relation phrase 'has aunt' from http://example.org/extracted/anne_marie_therese_lorraine_1648 to http://example.org/extracted/nicole_duchess_of_lorraine was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "e250f0a1454574ebc053e1f368aa8028b44a7b60d5e062ac4e7418d237e93145",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/anne_marie_therese_lorraine_1648",
+        "path": null,
+        "value": "http://example.org/extracted/nicole_duchess_of_lorraine",
+        "expected": null,
+        "message": "Relation phrase 'has aunt' from http://example.org/extracted/anne_marie_therese_lorraine_1648 to http://example.org/extracted/nicole_duchess_of_lorraine was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

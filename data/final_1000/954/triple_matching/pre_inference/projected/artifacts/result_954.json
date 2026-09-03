@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/954/evaluation/entity_alignment/baseline_extracted_aligned_954.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/954/evaluation/entity_alignment/baseline_ground_truth_aligned_954.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Jack_Klugman",
+      "predicate": "hasBirthDate",
+      "object": "\"1922-04-27\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Jack_Klugman",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1922-04-27\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Jack_Klugman",
+      "predicate": "hasDeathDate",
+      "object": "\"2012-12-24\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Jack_Klugman",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"2012-12-24\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Rembrandt_Bugatti",
+      "predicate": "hasBirthDate",
+      "object": "\"1884-10-16\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Rembrandt_Bugatti",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1884-10-16\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Rembrandt_Bugatti",
+      "predicate": "hasDeathDate",
+      "object": "\"1916-01-08\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Rembrandt_Bugatti",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1916-01-08\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Jack_Klugman",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jack_Klugman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jack_Klugman",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jack_Klugman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jack_Klugman",
+      "predicate": "label",
+      "object": "\"Jack Klugman\"",
+      "subject_uri": "http://example.org/entity/Jack_Klugman",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jack Klugman\""
+    },
+    {
+      "subject": "Rembrandt_Bugatti",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Rembrandt_Bugatti",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Rembrandt_Bugatti",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Rembrandt_Bugatti",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Rembrandt_Bugatti",
+      "predicate": "label",
+      "object": "\"Rembrandt Bugatti\"",
+      "subject_uri": "http://example.org/entity/Rembrandt_Bugatti",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Rembrandt Bugatti\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 10,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/158/originals/extracted_158.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/158/ground_truth_158.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/john_the_fearless": "http://example.org/entity/John_the_Fearless"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/john_the_fearless",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John the Fearless",
+          "source": "label"
+        }
+      ],
+      "context": "John the Fearless. inverse has father: Marie of Burgundy, Duchess of Cleves.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_the_Fearless",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John the Fearless",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John the Fearless",
+        "extracted_source": "label",
+        "ground_truth_text": "John the Fearless",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9416282176971436,
+      "graph_score": 0.9416282176971436,
+      "margin": 0.6665133237838745
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mary_of_burgundy",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marie of Burgundy, Duchess of Cleves",
+          "source": "altLabel"
+        },
+        {
+          "text": "Mary of Burgundy",
+          "source": "label"
+        }
+      ],
+      "context": "Marie of Burgundy, Duchess of Cleves. has father: John the Fearless. inverse has mother: Marie of Cleves.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mary_of_Burgundy_Duchess_of_Cleves",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mary of Burgundy Duchess of Cleves",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marie of Burgundy, Duchess of Cleves",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Mary of Burgundy Duchess of Cleves",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9024911522865295,
+      "name_embedding_score": 0.9295375943183899,
+      "string_score": 0.8309524059295654,
+      "independent_identity_support": true,
+      "context_score": 0.8398738503456116,
+      "graph_score": 0.9199368953704834,
+      "margin": 0.17628228664398193
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/marie_of_cleves",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marie of Cleves",
+          "source": "label"
+        }
+      ],
+      "context": "Marie of Cleves. has mother: Marie of Burgundy, Duchess of Cleves.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marie_of_Cleves_Duchess_of_Orléans",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marie of Cleves Duchess of Orléans",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marie of Cleves",
+        "extracted_source": "label",
+        "ground_truth_text": "Marie of Cleves Duchess of Orléans",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.829645037651062,
+      "name_embedding_score": 0.8591533899307251,
+      "string_score": 0.7255101799964905,
+      "independent_identity_support": true,
+      "context_score": 0.8747633695602417,
+      "graph_score": 0.8747633695602417,
+      "margin": 0.1401970386505127
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Marie_of_Burgundy"
+  ]
+}

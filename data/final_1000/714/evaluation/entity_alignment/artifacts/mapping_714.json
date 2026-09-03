@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/714/originals/extracted_714.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/714/ground_truth_714.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/pizhma_river_komi": "http://example.org/entity/Pizhma_River_Komi_Republic",
+    "http://example.org/extracted/russia": "http://example.org/entity/Russia",
+    "http://example.org/extracted/lyutenge_river": "http://example.org/entity/Lyutenge_River"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/lyutenge_river",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lyutenge River",
+          "source": "label"
+        }
+      ],
+      "context": "Lyutenge River. has country: Russia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lyutenge_River",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lyutenge River",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lyutenge River",
+        "extracted_source": "label",
+        "ground_truth_text": "Lyutenge River",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.48950105905532837
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pizhma_river_komi",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pizhma River (Komi Republic)",
+          "source": "label"
+        },
+        {
+          "text": "pizhma river komi",
+          "source": "uri"
+        }
+      ],
+      "context": "Pizhma River (Komi Republic). has country: Russia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pizhma_River_Komi_Republic",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pizhma River Komi Republic",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pizhma River (Komi Republic)",
+        "extracted_source": "label",
+        "ground_truth_text": "Pizhma River Komi Republic",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9500989317893982,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.982902467250824,
+      "graph_score": 0.9914512634277344,
+      "margin": 0.45372337102890015
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/russia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Russia",
+          "source": "label"
+        }
+      ],
+      "context": "Russia. inverse has country: Lyutenge River. inverse has country: Pizhma River (Komi Republic).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Russia",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Russia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Russia",
+        "extracted_source": "label",
+        "ground_truth_text": "Russia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9965564012527466,
+      "graph_score": 0.9982782006263733,
+      "margin": 0.7246420979499817
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

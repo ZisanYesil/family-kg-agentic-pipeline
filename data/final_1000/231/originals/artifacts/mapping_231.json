@@ -1,0 +1,69 @@
+{
+  "_source_extraction_sha256": "f31130e40ae4f862e123c0da2ef3a64330b5921bac65a98f1a13f14098bd15db",
+  "entities": [
+    {
+      "id": "film_diamond_head",
+      "label": "Diamond Head",
+      "type": "Film",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "person_john_williams",
+      "label": "John Williams",
+      "type": "Person",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "country_united_states",
+      "label": "United States",
+      "type": "Country",
+      "aliases": [
+        "American"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "person_john_williams",
+      "predicate": "hasNationality",
+      "object": "country_united_states",
+      "relation_phrase": "has nationality",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "person_john_williams",
+      "source_object": "country_united_states",
+      "endpoints_swapped": false
+    }
+  ],
+  "unmapped_relations": [
+    {
+      "subject": "film_diamond_head",
+      "object": "person_john_williams",
+      "relation_phrase": "composer of",
+      "reason": "relation_phrase did not match any ontology predicate"
+    }
+  ]
+}

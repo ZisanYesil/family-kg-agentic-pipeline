@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:tommys_organization a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Tommys" ;
+    onto:hasCountry data:finland_country .
+
+data:vocal_spectrum_organization a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Vocal Spectrum" ;
+    onto:hasCountry data:united_states_country .
+
+data:finland_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Finland" .
+
+data:united_states_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" .
+

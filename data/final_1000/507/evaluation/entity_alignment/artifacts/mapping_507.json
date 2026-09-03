@@ -1,0 +1,235 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/507/originals/extracted_507.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/507/ground_truth_507.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/occupation_swimmer": "http://example.org/entity/swimmer",
+    "http://example.org/extracted/occupation_illuminator": "http://example.org/entity/manuscript_illuminator",
+    "http://example.org/extracted/occupation_politician": "http://example.org/entity/politician",
+    "http://example.org/extracted/dunois_master": "http://example.org/entity/Dunois_Master",
+    "http://example.org/extracted/dawn_fraser": "http://example.org/entity/Dawn_Fraser"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/dawn_fraser",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dawn Fraser",
+          "source": "label"
+        }
+      ],
+      "context": "Dawn Fraser. has birth date: 1937-09-04. has occupation: politician. has occupation: swimmer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dawn_Fraser",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dawn Fraser",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dawn Fraser",
+        "extracted_source": "label",
+        "ground_truth_text": "Dawn Fraser",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.802794337272644,
+      "graph_score": 0.901397168636322,
+      "margin": 0.7762215882539749
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dunois_master",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dunois Master",
+          "source": "label"
+        }
+      ],
+      "context": "Dunois Master. has occupation: manuscript illuminator.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dunois_Master",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dunois Master",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dunois Master",
+        "extracted_source": "label",
+        "ground_truth_text": "Dunois Master",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7594579011201859
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_illuminator",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "manuscript illuminator",
+          "source": "label"
+        },
+        {
+          "text": "occupation illuminator",
+          "source": "uri"
+        }
+      ],
+      "context": "manuscript illuminator. inverse has occupation: Dunois Master.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/manuscript_illuminator",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "manuscript illuminator",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "manuscript illuminator",
+        "extracted_source": "label",
+        "ground_truth_text": "manuscript illuminator",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.7710884660482407
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_politician",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "politician",
+          "source": "label"
+        },
+        {
+          "text": "occupation politician",
+          "source": "uri"
+        }
+      ],
+      "context": "politician. inverse has occupation: Dawn Fraser.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/politician",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "politician",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "politician",
+        "extracted_source": "label",
+        "ground_truth_text": "politician",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7485075294971466
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_swimmer",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "swimmer",
+          "source": "label"
+        },
+        {
+          "text": "occupation swimmer",
+          "source": "uri"
+        }
+      ],
+      "context": "swimmer. inverse has occupation: Dawn Fraser.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/swimmer",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "swimmer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "swimmer",
+        "extracted_source": "label",
+        "ground_truth_text": "swimmer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7099579274654388
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

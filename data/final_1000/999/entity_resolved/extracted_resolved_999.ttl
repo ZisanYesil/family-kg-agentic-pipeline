@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_collector_malathy a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Collector Malathy" ;
+    onto:hasDirector data:person_m_krishnan_nair .
+
+data:film_the_locket_1946 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Locket" ;
+    onto:hasDirector data:person_john_brahm .
+
+data:person_john_brahm a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Brahm" ;
+    onto:hasBirthDate "1893-08-17"^^xsd:date ;
+    onto:hasDeathDate "1982-10-12"^^xsd:date .
+
+data:person_m_krishnan_nair a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "M. Krishnan Nair" ;
+    onto:hasBirthDate "1926-11-02"^^xsd:date ;
+    onto:hasDeathDate "2001-05-10"^^xsd:date .
+

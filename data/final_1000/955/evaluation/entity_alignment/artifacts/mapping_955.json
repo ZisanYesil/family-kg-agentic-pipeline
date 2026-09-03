@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/955/originals/extracted_955.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/955/ground_truth_955.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/prince_maurits_of_orange_nassau_van_vollenhoven": "http://example.org/entity/Prince_Maurits_of_Orange_Nassau_van_Vollenhoven",
+    "http://example.org/extracted/pieter_van_vollenhoven": "http://example.org/entity/Pieter_van_Vollenhoven"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/pieter_van_vollenhoven",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pieter van Vollenhoven Jr.",
+          "source": "altLabel"
+        },
+        {
+          "text": "Pieter van Vollenhoven",
+          "source": "label"
+        }
+      ],
+      "context": "Pieter van Vollenhoven Jr.. has birth date: 1939-04-30. inverse has father: Prince Maurits of Orange-Nassau, van Vollenhoven.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pieter_van_Vollenhoven",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pieter van Vollenhoven",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pieter van Vollenhoven",
+        "extracted_source": "label",
+        "ground_truth_text": "Pieter van Vollenhoven",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9733660221099854,
+      "graph_score": 0.9866830110549927,
+      "margin": 0.5185766518115997
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/prince_maurits_of_orange_nassau_van_vollenhoven",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prince Maurits of Orange-Nassau, van Vollenhoven",
+          "source": "altLabel"
+        },
+        {
+          "text": "Prince Maurits Willem Pieter Hendrik of Orange-Nassau, van Vollenhoven",
+          "source": "label"
+        },
+        {
+          "text": "prince maurits of orange nassau van vollenhoven",
+          "source": "uri"
+        }
+      ],
+      "context": "Prince Maurits of Orange-Nassau, van Vollenhoven. has father: Pieter van Vollenhoven Jr..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prince_Maurits_of_Orange_Nassau_van_Vollenhoven",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prince Maurits of Orange Nassau van Vollenhoven",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prince Maurits of Orange-Nassau, van Vollenhoven",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Prince Maurits of Orange Nassau van Vollenhoven",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9461721777915955,
+      "string_score": 0.9857894778251648,
+      "independent_identity_support": true,
+      "context_score": 0.9665560126304626,
+      "graph_score": 0.9832780361175537,
+      "margin": 0.4013998508453369
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

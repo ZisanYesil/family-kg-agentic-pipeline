@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/694/originals/extracted_694.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/694/ground_truth_694.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/chilperic_i": "http://example.org/entity/Chilperic_I",
+    "http://example.org/extracted/aregumd": "http://example.org/entity/Aregund",
+    "http://example.org/extracted/fredegund": "http://example.org/entity/Fredegund"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/aregumd",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Aregund",
+          "source": "altLabel"
+        },
+        {
+          "text": "aregumd",
+          "source": "uri"
+        }
+      ],
+      "context": "Aregund. inverse has mother: Chilperic I.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Aregund",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Aregund",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Aregund",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Aregund",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.538425862789154
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/chilperic_i",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chilperic I",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Chilperic I. has mother: Aregund. inverse has spouse: Fredegund.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chilperic_I",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chilperic I",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chilperic I",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Chilperic I",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6398981809616089
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/fredegund",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fredegund",
+          "source": "altLabel"
+        },
+        {
+          "text": "Fredegunda",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Fredegund. has death date: 0597-12-08. has spouse: Chilperic I.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fredegund",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fredegund",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fredegund",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Fredegund",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8166583180427551,
+      "graph_score": 0.9083291292190552,
+      "margin": 0.5328671634197235
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

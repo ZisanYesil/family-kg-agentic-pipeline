@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_ang_padrino a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Ang Padrino" ;
+    onto:hasDirector data:person_fernando_poe_jr .
+
+data:award_national_artist_philippines_film a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "National Artist of the Philippines for Film" .
+
+data:person_fernando_poe_jr a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fernando Poe Jr." ;
+    onto:hasAwardReceived data:award_national_artist_philippines_film ;
+    skos:altLabel "Da King",
+        "FPJ",
+        "Ronald Allan Kelley Poe",
+        "Ronwaldo Reyes" .
+

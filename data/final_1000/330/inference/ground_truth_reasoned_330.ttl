@@ -1,0 +1,20 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Drogo_of_Champagne a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Plectrudis ;
+    ex:hasParent entity:Plectrudis .
+
+entity:Pepin_of_Herstal a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:Plectrude .
+
+entity:Plectrude a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:Pepin_of_Herstal .
+
+entity:Plectrudis a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Drogo_of_Champagne .
+

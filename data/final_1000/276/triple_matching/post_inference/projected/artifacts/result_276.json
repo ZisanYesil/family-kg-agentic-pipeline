@@ -1,0 +1,90 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/276/evaluation/entity_alignment/final_extracted_aligned_276.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/276/evaluation/entity_alignment/final_ground_truth_aligned_276.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Nicolae_Ceaușescu",
+      "predicate": "hasCauseOfDeath",
+      "object": "firing_squad",
+      "subject_uri": "http://example.org/entity/Nicolae_Ceaușescu",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+      "object_term": "http://example.org/entity/firing_squad"
+    },
+    {
+      "subject": "Nicolae_Ceaușescu",
+      "predicate": "hasChild",
+      "object": "Zoia_Ceaușescu",
+      "subject_uri": "http://example.org/entity/Nicolae_Ceaușescu",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Zoia_Ceaușescu"
+    },
+    {
+      "subject": "Nicolae_Ceaușescu",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Nicolae_Ceaușescu",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Nicolae_Ceaușescu",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Nicolae_Ceaușescu",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Zoia_Ceaușescu",
+      "predicate": "hasParent",
+      "object": "Nicolae_Ceaușescu",
+      "subject_uri": "http://example.org/entity/Zoia_Ceaușescu",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Nicolae_Ceaușescu"
+    },
+    {
+      "subject": "Zoia_Ceaușescu",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Zoia_Ceaușescu",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Zoia_Ceaușescu",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Zoia_Ceaușescu",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "firing_squad",
+      "predicate": "type",
+      "object": "CauseOfDeath",
+      "subject_uri": "http://example.org/entity/firing_squad",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CauseOfDeath"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 8,
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

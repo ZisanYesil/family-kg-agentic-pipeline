@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Kon_Khon> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Kon Khon" ;
+    onto:hasDirector <http://example.org/entity/Sarunyoo_Wongkrachang> .
+
+<http://example.org/entity/Bang_Khonthi> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bang Khonthi District, Samut Songkhram Province, Thailand" .
+
+<http://example.org/entity/Sarunyoo_Wongkrachang> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sarunyoo Wongkrachang" ;
+    onto:hasBirthPlace <http://example.org/entity/Bang_Khonthi> ;
+    skos:altLabel "Sarunyu Wongkrachang" .
+

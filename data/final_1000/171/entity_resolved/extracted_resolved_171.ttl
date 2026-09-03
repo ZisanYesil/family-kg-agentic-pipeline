@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:timothy_west a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Timothy West" ;
+    onto:hasFather data:lockwood_west ;
+    onto:hasSpouse data:prunella_scales ;
+    skos:altLabel "Timothy Lancaster West" .
+
+data:lockwood_west a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lockwood West" ;
+    skos:altLabel "Harry Lockwood West" .
+
+data:prunella_scales a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prunella Scales" .
+

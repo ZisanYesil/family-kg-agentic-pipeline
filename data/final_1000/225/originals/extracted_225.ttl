@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:lady_sarah_chatto a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lady Sarah Chatto" ;
+    onto:hasMother data:princess_margaret .
+
+data:princess_margaret a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Margaret, Countess of Snowdon" ;
+    onto:hasCauseOfDeath data:stroke .
+
+data:stroke a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "stroke" .
+

@@ -1,0 +1,325 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/534/originals/extracted_534.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/534/ground_truth_534.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/occupation_actor": "http://example.org/entity/actor",
+    "http://example.org/extracted/occupation_poet": "http://example.org/entity/poet",
+    "http://example.org/extracted/occupation_model": "http://example.org/entity/model",
+    "http://example.org/extracted/occupation_dramatist": "http://example.org/entity/dramatist",
+    "http://example.org/extracted/amir_hossein_arman": "http://example.org/entity/Amir_Hossein_Arman",
+    "http://example.org/extracted/inbakavi": "http://example.org/entity/Inbakavi",
+    "http://example.org/extracted/occupation_singer": "http://example.org/entity/singer"
+  },
+  "summary": {
+    "extracted_entities": 7,
+    "ground_truth_entities": 7,
+    "matched": 7,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/amir_hossein_arman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Amir Hossein Arman",
+          "source": "label"
+        }
+      ],
+      "context": "Amir Hossein Arman. has occupation: actor. has occupation: model. has occupation: singer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Amir_Hossein_Arman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Amir Hossein Arman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Amir Hossein Arman",
+        "extracted_source": "label",
+        "ground_truth_text": "Amir Hossein Arman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.6424517631530762
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/inbakavi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Xavier Henric Leam",
+          "source": "altLabel"
+        },
+        {
+          "text": "Inbakavi",
+          "source": "label"
+        }
+      ],
+      "context": "Xavier Henric Leam. has occupation: dramatist. has occupation: poet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Inbakavi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Inbakavi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Inbakavi",
+        "extracted_source": "label",
+        "ground_truth_text": "Inbakavi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.709865927696228,
+      "graph_score": 0.854932963848114,
+      "margin": 0.6510934829711914
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_actor",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "actor",
+          "source": "label"
+        },
+        {
+          "text": "occupation actor",
+          "source": "uri"
+        }
+      ],
+      "context": "actor. inverse has occupation: Amir Hossein Arman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/actor",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "actor",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "actor",
+        "extracted_source": "label",
+        "ground_truth_text": "actor",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.507269024848938
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_dramatist",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "dramatist",
+          "source": "label"
+        },
+        {
+          "text": "occupation dramatist",
+          "source": "uri"
+        }
+      ],
+      "context": "dramatist. inverse has occupation: Xavier Henric Leam.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/dramatist",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "dramatist",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "dramatist",
+        "extracted_source": "label",
+        "ground_truth_text": "dramatist",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7295610904693604,
+      "graph_score": 0.8647805452346802,
+      "margin": 0.5264935493469238
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_model",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "model",
+          "source": "label"
+        },
+        {
+          "text": "occupation model",
+          "source": "uri"
+        }
+      ],
+      "context": "model. inverse has occupation: Amir Hossein Arman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/model",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "model",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "model",
+        "extracted_source": "label",
+        "ground_truth_text": "model",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.5804194808006287
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_poet",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "poet",
+          "source": "label"
+        },
+        {
+          "text": "occupation poet",
+          "source": "uri"
+        }
+      ],
+      "context": "poet. inverse has occupation: Xavier Henric Leam.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/poet",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "poet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "poet",
+        "extracted_source": "label",
+        "ground_truth_text": "poet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6783121228218079,
+      "graph_score": 0.8391560316085815,
+      "margin": 0.5213441848754883
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_singer",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "singer",
+          "source": "label"
+        },
+        {
+          "text": "occupation singer",
+          "source": "uri"
+        }
+      ],
+      "context": "singer. inverse has occupation: Amir Hossein Arman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/singer",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "singer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "singer",
+        "extracted_source": "label",
+        "ground_truth_text": "singer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.507269024848938
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,24 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/William_S_Burroughs_Jr> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William S. Burroughs Jr." ;
+    onto:hasFather <http://example.org/entity/William_Seward_Burroughs_II> ;
+    skos:altLabel "Billy Burroughs",
+        "William S. Burroughs Jr.",
+        "William Seward Burroughs III" .
+
+<http://example.org/entity/Lawrence> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Lawrence, Kansas" .
+
+<http://example.org/entity/William_Seward_Burroughs_II> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William S. Burroughs" ;
+    onto:hasDeathPlace <http://example.org/entity/Lawrence> ;
+    skos:altLabel "William S. Burroughs",
+        "William Seward Burroughs II" .
+

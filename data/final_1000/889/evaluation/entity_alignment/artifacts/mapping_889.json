@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/889/originals/extracted_889.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/889/ground_truth_889.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_edwin_l_marin": "http://example.org/entity/Edwin_L_Marin",
+    "http://example.org/extracted/film_henry_goes_arizona": "http://example.org/entity/Henry_Goes_Arizona",
+    "http://example.org/extracted/film_tex_and_the_lord_of_the_deep": "http://example.org/entity/Tex_and_the_Lord_of_the_Deep",
+    "http://example.org/extracted/person_duccio_tessari": "http://example.org/entity/Duccio_Tessari"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_henry_goes_arizona",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henry Goes Arizona",
+          "source": "label"
+        },
+        {
+          "text": "film henry goes arizona",
+          "source": "uri"
+        }
+      ],
+      "context": "Henry Goes Arizona. has director: Edwin L. Marin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Henry_Goes_Arizona",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Henry Goes Arizona",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henry Goes Arizona",
+        "extracted_source": "label",
+        "ground_truth_text": "Henry Goes Arizona",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9955564737319946,
+      "graph_score": 0.9977782368659973,
+      "margin": 0.8266781270503998
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_tex_and_the_lord_of_the_deep",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tex and the Lord of the Deep",
+          "source": "label"
+        },
+        {
+          "text": "film tex and the lord of the deep",
+          "source": "uri"
+        }
+      ],
+      "context": "Tex and the Lord of the Deep. has director: Duccio Tessari.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tex_and_the_Lord_of_the_Deep",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tex and the Lord of the Deep",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tex and the Lord of the Deep",
+        "extracted_source": "label",
+        "ground_truth_text": "Tex and the Lord of the Deep",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.9042527079582214
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_duccio_tessari",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Duccio Tessari",
+          "source": "label"
+        },
+        {
+          "text": "person duccio tessari",
+          "source": "uri"
+        }
+      ],
+      "context": "Duccio Tessari. has death date: 1994-09-06. inverse has director: Tex and the Lord of the Deep.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Duccio_Tessari",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Duccio Tessari",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Duccio Tessari",
+        "extracted_source": "label",
+        "ground_truth_text": "Duccio Tessari",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6548939645290375
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_edwin_l_marin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edwin L. Marin",
+          "source": "label"
+        },
+        {
+          "text": "person edwin l marin",
+          "source": "uri"
+        }
+      ],
+      "context": "Edwin L. Marin. has death date: 1951-05-02. inverse has director: Henry Goes Arizona.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Edwin_L_Marin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Edwin L Marin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Edwin L. Marin",
+        "extracted_source": "label",
+        "ground_truth_text": "Edwin L Marin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9814965724945068,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9962244629859924,
+      "graph_score": 0.9981122016906738,
+      "margin": 0.699868381023407
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

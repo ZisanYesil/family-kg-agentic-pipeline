@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/923/originals/extracted_923.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/923/ground_truth_923.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/thomas_foley_1617": "http://example.org/entity/Thomas_Foley",
+    "http://example.org/extracted/england": "http://example.org/entity/English",
+    "http://example.org/extracted/paul_foley_ironmaster": "http://example.org/entity/Paul_Foley"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/england",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "English",
+          "source": "altLabel"
+        },
+        {
+          "text": "England",
+          "source": "label"
+        }
+      ],
+      "context": "English. inverse has nationality: Thomas Foley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/English",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "English",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "English",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "English",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9300022721290588,
+      "graph_score": 0.4650011360645294,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/paul_foley_ironmaster",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Paul Foley",
+          "source": "label"
+        },
+        {
+          "text": "paul foley ironmaster",
+          "source": "uri"
+        }
+      ],
+      "context": "Paul Foley. has father: Thomas Foley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Paul_Foley",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Paul Foley",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Paul Foley",
+        "extracted_source": "label",
+        "ground_truth_text": "Paul Foley",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.2923054099082947
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/thomas_foley_1617",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thomas Foley",
+          "source": "label"
+        },
+        {
+          "text": "thomas foley 1617",
+          "source": "uri"
+        }
+      ],
+      "context": "Thomas Foley. has nationality: English. inverse has father: Paul Foley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thomas_Foley",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thomas Foley",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thomas Foley",
+        "extracted_source": "label",
+        "ground_truth_text": "Thomas Foley",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9588019847869873,
+      "graph_score": 0.6460676789283752,
+      "margin": 0.2839071750640869
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

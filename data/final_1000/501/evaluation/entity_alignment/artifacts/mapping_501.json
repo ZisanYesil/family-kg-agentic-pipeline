@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/501/originals/extracted_501.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/501/ground_truth_501.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/willy_alberti": "http://example.org/entity/Willy_Alberti",
+    "http://example.org/extracted/ajax_ole_ole_ole_song": "http://example.org/entity/Ajax_Olé_Olé_Olé",
+    "http://example.org/extracted/willeke_alberti": "http://example.org/entity/Willeke_Alberti"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ajax_ole_ole_ole_song",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ajax, Olé Olé Olé",
+          "source": "label"
+        },
+        {
+          "text": "ajax ole ole ole song",
+          "source": "uri"
+        }
+      ],
+      "context": "Ajax, Olé Olé Olé. has performer: Carel Verbrugge.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ajax_Olé_Olé_Olé",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ajax Olé Olé Olé",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ajax, Olé Olé Olé",
+        "extracted_source": "label",
+        "ground_truth_text": "Ajax Olé Olé Olé",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9750992059707642,
+      "string_score": 0.9863636493682861,
+      "independent_identity_support": true,
+      "context_score": 0.792039692401886,
+      "graph_score": 0.8960198163986206,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/willeke_alberti",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Willeke Alberti",
+          "source": "label"
+        }
+      ],
+      "context": "Willeke Alberti. inverse has child: Carel Verbrugge.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Willeke_Alberti",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Willeke Alberti",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Willeke Alberti",
+        "extracted_source": "label",
+        "ground_truth_text": "Willeke Alberti",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8718522787094116,
+      "graph_score": 0.9359261393547058,
+      "margin": 0.36309170722961426
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/willy_alberti",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Carel Verbrugge",
+          "source": "altLabel"
+        },
+        {
+          "text": "Willy Alberti",
+          "source": "label"
+        }
+      ],
+      "context": "Carel Verbrugge. has child: Willeke Alberti. inverse has performer: Ajax, Olé Olé Olé.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Willy_Alberti",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Willy Alberti",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Willy Alberti",
+        "extracted_source": "label",
+        "ground_truth_text": "Willy Alberti",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8863170742988586,
+      "graph_score": 0.9431585073471069,
+      "margin": 0.36607468128204346
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

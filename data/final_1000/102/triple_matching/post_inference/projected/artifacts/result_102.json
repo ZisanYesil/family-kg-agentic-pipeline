@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/102/evaluation/entity_alignment/final_extracted_aligned_102.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/102/evaluation/entity_alignment/final_ground_truth_aligned_102.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Hurlingham_Reggae_Band",
+      "predicate": "hasMember",
+      "object": "Luca_Prodan",
+      "subject_uri": "http://example.org/entity/Hurlingham_Reggae_Band",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasMember",
+      "object_term": "http://example.org/entity/Luca_Prodan"
+    },
+    {
+      "subject": "Hurlingham_Reggae_Band",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Hurlingham_Reggae_Band",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Hurlingham_Reggae_Band",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Hurlingham_Reggae_Band",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Italian_Scottish",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Italian_Scottish",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Italian_Scottish",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Italian_Scottish",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Luca_Prodan",
+      "predicate": "hasCountry",
+      "object": "Italian_Scottish",
+      "subject_uri": "http://example.org/entity/Luca_Prodan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Italian_Scottish"
+    },
+    {
+      "subject": "Luca_Prodan",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Luca_Prodan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Luca_Prodan",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Luca_Prodan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Luca_Prodan",
+      "predicate": "hasCountry",
+      "object": "italy",
+      "subject_uri": "http://example.org/entity/Luca_Prodan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/italy"
+    },
+    {
+      "subject": "italy",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/italy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "italy",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/italy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 11,
+    "true_positives": 8,
+    "false_positives": 3,
+    "false_negatives": 0,
+    "precision": 0.7272727272727273,
+    "recall": 1.0,
+    "f1": 0.8421052631578948
+  },
+  "stage": "post_inference"
+}

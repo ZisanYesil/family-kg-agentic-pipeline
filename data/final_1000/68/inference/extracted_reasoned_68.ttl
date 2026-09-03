@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/marie_of_waldeck_and_pyrmont> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/extracted/helena_of_nassau> ;
+    ex:hasParent <http://example.org/extracted/helena_of_nassau> .
+
+<http://example.org/extracted/william_duke_of_nassau> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/helena_of_nassau> .
+
+<http://example.org/extracted/helena_of_nassau> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/marie_of_waldeck_and_pyrmont> ;
+    ex:hasFather <http://example.org/extracted/william_duke_of_nassau> ;
+    ex:hasParent <http://example.org/extracted/william_duke_of_nassau> .
+

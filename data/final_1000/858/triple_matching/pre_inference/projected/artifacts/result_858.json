@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/858/evaluation/entity_alignment/baseline_extracted_aligned_858.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/858/evaluation/entity_alignment/baseline_ground_truth_aligned_858.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "William_Douglas_2nd_Earl_of_Angus",
+      "predicate": "hasBirthPlace",
+      "object": "Tantallon_Castle",
+      "subject_uri": "http://example.org/entity/William_Douglas_2nd_Earl_of_Angus",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Tantallon_Castle"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "James_Douglas_3rd_Earl_of_Angus",
+      "predicate": "hasParent",
+      "object": "William_Douglas_2nd_Earl_of_Angus",
+      "subject_uri": "http://example.org/entity/James_Douglas_3rd_Earl_of_Angus",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/William_Douglas_2nd_Earl_of_Angus"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "James_Douglas_3rd_Earl_of_Angus",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/James_Douglas_3rd_Earl_of_Angus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "James_Douglas_3rd_Earl_of_Angus",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/James_Douglas_3rd_Earl_of_Angus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "James_Douglas_3rd_Earl_of_Angus",
+      "predicate": "label",
+      "object": "\"James Douglas, 3rd Earl of Angus\"",
+      "subject_uri": "http://example.org/entity/James_Douglas_3rd_Earl_of_Angus",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"James Douglas, 3rd Earl of Angus\""
+    },
+    {
+      "subject": "Tantallon_Castle",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Tantallon_Castle",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Tantallon_Castle",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Tantallon_Castle",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Tantallon_Castle",
+      "predicate": "label",
+      "object": "\"Tantallon Castle\"",
+      "subject_uri": "http://example.org/entity/Tantallon_Castle",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Tantallon Castle\""
+    },
+    {
+      "subject": "William_Douglas_2nd_Earl_of_Angus",
+      "predicate": "hasChild",
+      "object": "James_Douglas_3rd_Earl_of_Angus",
+      "subject_uri": "http://example.org/entity/William_Douglas_2nd_Earl_of_Angus",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/James_Douglas_3rd_Earl_of_Angus"
+    },
+    {
+      "subject": "William_Douglas_2nd_Earl_of_Angus",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/William_Douglas_2nd_Earl_of_Angus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "William_Douglas_2nd_Earl_of_Angus",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/William_Douglas_2nd_Earl_of_Angus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "William_Douglas_2nd_Earl_of_Angus",
+      "predicate": "label",
+      "object": "\"William Douglas, 2nd Earl of Angus\"",
+      "subject_uri": "http://example.org/entity/William_Douglas_2nd_Earl_of_Angus",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"William Douglas, 2nd Earl of Angus\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

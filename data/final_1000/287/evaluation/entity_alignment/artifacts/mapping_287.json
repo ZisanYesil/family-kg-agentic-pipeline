@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/287/originals/extracted_287.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/287/ground_truth_287.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/lucretia": "http://example.org/entity/Lucretia",
+    "http://example.org/extracted/spurius_lucretius_tricipitinus": "http://example.org/entity/Spurius_Lucretius_Tricipitinus",
+    "http://example.org/extracted/lucius_tarquinius_collatinus": "http://example.org/entity/Lucius_Tarquinius_Collatinus"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/lucius_tarquinius_collatinus",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lucius Tarquinius Collatinus",
+          "source": "label"
+        }
+      ],
+      "context": "Lucius Tarquinius Collatinus. inverse has spouse: Lucretia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lucius_Tarquinius_Collatinus",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lucius Tarquinius Collatinus",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lucius Tarquinius Collatinus",
+        "extracted_source": "label",
+        "ground_truth_text": "Lucius Tarquinius Collatinus",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.5763712525367737
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lucretia",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lucretia",
+          "source": "label"
+        }
+      ],
+      "context": "Lucretia. has father: Spurius Lucretius Tricipitinus. has spouse: Lucius Tarquinius Collatinus.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lucretia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lucretia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lucretia",
+        "extracted_source": "label",
+        "ground_truth_text": "Lucretia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9593519568443298,
+      "graph_score": 0.6463426351547241,
+      "margin": 0.5693943798542023
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/spurius_lucretius_tricipitinus",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Spurius Lucretius Tricipitinus",
+          "source": "label"
+        }
+      ],
+      "context": "Spurius Lucretius Tricipitinus. inverse has father: Lucretia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Spurius_Lucretius_Tricipitinus",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Spurius Lucretius Tricipitinus",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Spurius Lucretius Tricipitinus",
+        "extracted_source": "label",
+        "ground_truth_text": "Spurius Lucretius Tricipitinus",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9307147860527039,
+      "graph_score": 0.46535739302635193,
+      "margin": 0.5684553682804108
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Bunty_Aur_Babli> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Bunty Aur Babli" ;
+    onto:hasDirector <http://example.org/entity/Shaad_Ali> .
+
+<http://example.org/entity/Lawrence_School_Sanawar> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Lawrence School, Sanawar" .
+
+<http://example.org/entity/Shaad_Ali> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Shaad Ali" ;
+    onto:hasEducatedAt <http://example.org/entity/Lawrence_School_Sanawar>,
+        data:welham_boys_school_educational_institution ;
+    skos:altLabel "Shaad Ali Sehgal" .
+
+data:welham_boys_school_educational_institution a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Welham Boys' School" .
+

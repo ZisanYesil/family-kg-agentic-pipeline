@@ -1,0 +1,164 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/383/originals/extracted_383.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/383/ground_truth_383.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_is_it_easy_to_be_young": "http://example.org/entity/Vai_viegli_būt_jaunam",
+    "http://example.org/extracted/person_juris_podnieks": "http://example.org/entity/Juris_Podnieks"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_is_it_easy_to_be_young",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vai viegli būt jaunam?",
+          "source": "altLabel"
+        },
+        {
+          "text": "Is It Easy To Be Young?",
+          "source": "label"
+        },
+        {
+          "text": "film is it easy to be young",
+          "source": "uri"
+        }
+      ],
+      "context": "Vai viegli būt jaunam?. has director: Juris Podnieks.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vai_viegli_būt_jaunam",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vai viegli būt jaunam",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vai viegli būt jaunam?",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Vai viegli būt jaunam",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9773141145706177,
+      "string_score": 0.989534854888916,
+      "independent_identity_support": true,
+      "context_score": 0.9838084578514099,
+      "graph_score": 0.9919042587280273,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_juris_podnieks",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Juris Podnieks",
+          "source": "label"
+        },
+        {
+          "text": "person juris podnieks",
+          "source": "uri"
+        }
+      ],
+      "context": "Juris Podnieks. has educated at: VGIK film school. inverse has director: Vai viegli būt jaunam?.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Juris_Podnieks",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Juris Podnieks",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Juris Podnieks",
+        "extracted_source": "label",
+        "ground_truth_text": "Juris Podnieks",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8342099785804749,
+      "graph_score": 0.917104959487915,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/edu_soviet_vgik_film_school",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "VGIK film school",
+          "source": "altLabel"
+        },
+        {
+          "text": "Soviet VGIK film school",
+          "source": "label"
+        },
+        {
+          "text": "edu soviet vgik film school",
+          "source": "uri"
+        }
+      ],
+      "context": "VGIK film school. inverse has educated at: Juris Podnieks.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/VGIK",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "VGIK",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "VGIK film school",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "VGIK",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6598414182662964,
+      "name_embedding_score": 0.5746111273765564,
+      "string_score": 0.5633333325386047,
+      "independent_identity_support": false,
+      "context_score": 0.8536202311515808,
+      "graph_score": 0.9268101453781128,
+      "margin": 0.6598414182662964
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

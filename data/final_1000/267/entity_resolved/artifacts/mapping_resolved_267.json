@@ -1,0 +1,73 @@
+{
+  "_source_extraction_sha256": "54fb92f76f6a32b74163287133a84973906d01cd125d3caa621ef1bcd9343290",
+  "entities": [
+    {
+      "id": "song_jihad",
+      "label": "Jihad",
+      "type": "MusicalWork",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "performer_slayer",
+      "label": "Slayer",
+      "type": "Organization",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "award_grammy",
+      "label": "Grammy Award",
+      "type": "Award",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "song_jihad",
+      "predicate": "hasPerformer",
+      "object": "performer_slayer",
+      "relation_phrase": "performed by",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "song_jihad",
+      "source_object": "performer_slayer",
+      "endpoints_swapped": false
+    },
+    {
+      "subject": "performer_slayer",
+      "predicate": "hasAwardReceived",
+      "object": "award_grammy",
+      "relation_phrase": "won",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "performer_slayer",
+      "source_object": "award_grammy",
+      "endpoints_swapped": false
+    }
+  ],
+  "unmapped_relations": []
+}

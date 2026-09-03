@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/192/originals/extracted_192.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/192/ground_truth_192.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/erminea_frezzolini": "http://example.org/entity/Erminia_Frezzolini",
+    "http://example.org/extracted/giuseppe_frezzolini": "http://example.org/entity/Giuseppe_Frezzolini",
+    "http://example.org/extracted/antonio_poggi": "http://example.org/entity/Antonio_Poggi"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/antonio_poggi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Antonio Poggi",
+          "source": "label"
+        }
+      ],
+      "context": "Antonio Poggi. inverse has spouse: Erminia Frezzolini.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Antonio_Poggi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Antonio Poggi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Antonio Poggi",
+        "extracted_source": "label",
+        "ground_truth_text": "Antonio Poggi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.6256867349147797
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/erminea_frezzolini",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Erminia Frezzolini",
+          "source": "label"
+        },
+        {
+          "text": "erminea frezzolini",
+          "source": "uri"
+        }
+      ],
+      "context": "Erminia Frezzolini. has spouse: Antonio Poggi. inverse has child: Giuseppe Frezzolini.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Erminia_Frezzolini",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Erminia Frezzolini",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Erminia Frezzolini",
+        "extracted_source": "label",
+        "ground_truth_text": "Erminia Frezzolini",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.43093258142471313
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/giuseppe_frezzolini",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Giuseppe Frezzolini",
+          "source": "label"
+        }
+      ],
+      "context": "Giuseppe Frezzolini. has child: Erminia Frezzolini.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Giuseppe_Frezzolini",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Giuseppe Frezzolini",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Giuseppe Frezzolini",
+        "extracted_source": "label",
+        "ground_truth_text": "Giuseppe Frezzolini",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.43093258142471313
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Francesca_von_Habsburg> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Francesca von Habsburg" ;
+    onto:hasSpouse <http://example.org/entity/Karl_von_Habsburg> .
+
+<http://example.org/entity/Austria> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Austria" ;
+    skos:altLabel "Austrian" .
+
+<http://example.org/entity/Karl_von_Habsburg> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Karl von Habsburg" ;
+    onto:hasNationality <http://example.org/entity/Austria> .
+

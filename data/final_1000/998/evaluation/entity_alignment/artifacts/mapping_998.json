@@ -1,0 +1,108 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/998/originals/extracted_998.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/998/ground_truth_998.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/finn_jarle_s%C3%A6le": "http://example.org/entity/Finn_Jarle_Sæle",
+    "http://example.org/extracted/finn_%C3%B8rjan_s%C3%A6le": "http://example.org/entity/Finn_Ørjan_Sæle"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/finn_%C3%B8rjan_s%C3%A6le",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Finn Ørjan Sæle",
+          "source": "label"
+        }
+      ],
+      "context": "Finn Ørjan Sæle. inverse has son: Finn Jarle Sæle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Finn_Ørjan_Sæle",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Finn Ørjan Sæle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Finn Ørjan Sæle",
+        "extracted_source": "label",
+        "ground_truth_text": "Finn Ørjan Sæle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8187335729598999,
+      "graph_score": 0.40936678647994995,
+      "margin": 0.28504347801208496
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/finn_jarle_s%C3%A6le",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Finn Jarle Sæle",
+          "source": "label"
+        }
+      ],
+      "context": "Finn Jarle Sæle. has son: Finn Ørjan Sæle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Finn_Jarle_Sæle",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Finn Jarle Sæle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Finn Jarle Sæle",
+        "extracted_source": "label",
+        "ground_truth_text": "Finn Jarle Sæle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8162549734115601,
+      "graph_score": 0.40812748670578003,
+      "margin": 0.2888858914375305
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Anita_Apelthun_Sæle"
+  ]
+}

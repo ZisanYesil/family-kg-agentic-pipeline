@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Charterhouse_School a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+entity:Herbert_Giles a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Lionel_Giles .
+
+entity:Lionel_Giles a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Herbert_Giles .
+

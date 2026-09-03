@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/970/originals/extracted_970.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/970/ground_truth_970.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_geography_club": "http://example.org/entity/Geography_Club",
+    "http://example.org/extracted/person_gary_entin": "http://example.org/entity/Gary_Entin",
+    "http://example.org/extracted/place_miami_florida": "http://example.org/entity/Miami_Florida"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_geography_club",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Geography Club",
+          "source": "label"
+        },
+        {
+          "text": "film geography club",
+          "source": "uri"
+        }
+      ],
+      "context": "Geography Club. has director: Gary Entin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Geography_Club",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Geography Club",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Geography Club",
+        "extracted_source": "label",
+        "ground_truth_text": "Geography Club",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_gary_entin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gary Entin",
+          "source": "label"
+        },
+        {
+          "text": "person gary entin",
+          "source": "uri"
+        }
+      ],
+      "context": "Gary Entin. has birth place: Miami, Florida. inverse has director: Geography Club.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gary_Entin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gary Entin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gary Entin",
+        "extracted_source": "label",
+        "ground_truth_text": "Gary Entin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9936531186103821,
+      "graph_score": 0.9968265295028687,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_miami_florida",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Miami, Florida",
+          "source": "label"
+        },
+        {
+          "text": "place miami florida",
+          "source": "uri"
+        }
+      ],
+      "context": "Miami, Florida. inverse has birth place: Gary Entin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Miami_Florida",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Miami Florida",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Miami, Florida",
+        "extracted_source": "label",
+        "ground_truth_text": "Miami Florida",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9447370767593384,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.980313241481781,
+      "graph_score": 0.9901566505432129,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

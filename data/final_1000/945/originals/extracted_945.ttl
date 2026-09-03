@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_luckiest_girl_1936 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Luckiest Girl in the World" ;
+    onto:hasDirector data:person_edward_buzzell .
+
+data:film_tigers_shadow_1928 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Tiger's Shadow" ;
+    onto:hasDirector data:person_spencer_gordon_bennet .
+
+data:person_edward_buzzell a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edward Buzzell" ;
+    onto:hasBirthDate "1895-11-13"^^xsd:date ;
+    onto:hasDeathDate "1985-01-11"^^xsd:date .
+
+data:person_spencer_gordon_bennet a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Spencer Gordon Bennet" ;
+    onto:hasBirthDate "1893-01-05"^^xsd:date ;
+    onto:hasDeathDate "1987-10-08"^^xsd:date .
+

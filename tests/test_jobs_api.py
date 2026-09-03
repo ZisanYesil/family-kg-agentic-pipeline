@@ -34,6 +34,7 @@ class _FakeStorage:
         ontology_path: str,
         max_iterations: int,
         webhook_url: str | None,
+        question: str = "",
     ) -> None:
         self.created_jobs.append(
             {
@@ -42,6 +43,7 @@ class _FakeStorage:
                 "ontology_path": ontology_path,
                 "max_iterations": max_iterations,
                 "webhook_url": webhook_url,
+                "question": question,
             }
         )
         if self._read_after_create:
@@ -100,7 +102,7 @@ def test_create_kg_extraction_job_persists_and_dispatches(monkeypatch) -> None:
     )
 
     response = create_kg_extraction_job(
-        JobCreateRequest(text="Jane Doe was born in 1900 and married John Doe."),
+        JobCreateRequest(text="Jane Doe was born in 1900 and married John Doe.", question="When was Jane Doe born?",),
         db=storage,
     )
 
@@ -109,6 +111,7 @@ def test_create_kg_extraction_job_persists_and_dispatches(monkeypatch) -> None:
         {
             "job_id": response.job_id,
             "input_text": "Jane Doe was born in 1900 and married John Doe.",
+            "question": "When was Jane Doe born?",
             "ontology_path": "ontology/family_extended.ttl",
             "max_iterations": 7,
             "webhook_url": None,
@@ -127,6 +130,7 @@ def test_create_kg_extraction_job_uses_request_ontology_path_when_given(
     create_kg_extraction_job(
         JobCreateRequest(
             text="Jane Doe was born in 1900 and married John Doe.",
+            question="When was Jane Doe born?",
             ontology_path="ontology/custom.ttl",
         ),
         db=storage,
@@ -144,7 +148,7 @@ def test_create_kg_extraction_job_422s_when_no_ontology_path_available(
 
     with pytest.raises(HTTPException) as exc_info:
         create_kg_extraction_job(
-            JobCreateRequest(text="Jane Doe was born in 1900 and married John Doe."),
+            JobCreateRequest(text="Jane Doe was born in 1900 and married John Doe.", question="When was Jane Doe born?",),
             db=storage,
         )
 
@@ -161,7 +165,7 @@ def test_create_kg_extraction_job_errors_when_created_job_cannot_be_read(
 
     with pytest.raises(HTTPException) as exc_info:
         create_kg_extraction_job(
-            JobCreateRequest(text="Jane Doe was born in 1900 and married John Doe."),
+            JobCreateRequest(text="Jane Doe was born in 1900 and married John Doe.", question="When was Jane Doe born?",),
             db=storage,
         )
 

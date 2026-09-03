@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1125
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:Texas_Gun_Fighter ex:hasDirector inst:Phil_Rosen .  # director
+inst:What_Will_People_Say ex:hasDirector inst:Alice_Guy .  # director
+inst:Phil_Rosen ex:hasBirthDate "1888-05-08"^^xsd:date .  # date of birth -> "May 8, 1888"
+inst:Alice_Guy_Blaché ex:hasBirthDate "1873-07-01"^^xsd:date .  # date of birth -> "July 1, 1873"

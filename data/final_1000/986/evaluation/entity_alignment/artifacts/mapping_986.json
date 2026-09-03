@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/986/originals/extracted_986.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/986/ground_truth_986.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/crazy_heart_film_2009": "http://example.org/entity/Crazy_Heart",
+    "http://example.org/extracted/dragon_eyes_film_2012": "http://example.org/entity/Dragon_Eyes",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/crazy_heart_film_2009",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Crazy Heart",
+          "source": "label"
+        },
+        {
+          "text": "crazy heart film 2009",
+          "source": "uri"
+        }
+      ],
+      "context": "Crazy Heart. has country: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Crazy_Heart",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Crazy Heart",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Crazy Heart",
+        "extracted_source": "label",
+        "ground_truth_text": "Crazy Heart",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9128723740577698,
+      "graph_score": 0.4564361870288849,
+      "margin": 0.7364431917667389
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dragon_eyes_film_2012",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dragon Eyes",
+          "source": "label"
+        },
+        {
+          "text": "dragon eyes film 2012",
+          "source": "uri"
+        }
+      ],
+      "context": "Dragon Eyes. has country: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dragon_Eyes",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dragon Eyes",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dragon Eyes",
+        "extracted_source": "label",
+        "ground_truth_text": "Dragon Eyes",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9392505884170532,
+      "graph_score": 0.4696252942085266,
+      "margin": 0.7197175920009613
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has country: Crazy Heart. inverse has country: Dragon Eyes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9426421523094177,
+      "graph_score": 0.47132107615470886,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

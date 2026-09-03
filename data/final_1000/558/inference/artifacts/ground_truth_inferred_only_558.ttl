@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Alice_of_Normandy a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:William_I_Count_of_Burgundy .
+
+entity:Sybilla_of_Burgundy a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:William_I_Count_of_Burgundy .
+
+entity:William_I_Count_of_Burgundy a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Sybilla_of_Burgundy ;
+    ex:hasParent entity:Alice_of_Normandy .
+

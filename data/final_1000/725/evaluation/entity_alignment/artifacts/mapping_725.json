@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/725/originals/extracted_725.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/725/ground_truth_725.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_jacques_jaccard": "http://example.org/entity/Jacques_Jaccard",
+    "http://example.org/extracted/place_los_angeles_california": "http://example.org/entity/Los_Angeles_California",
+    "http://example.org/extracted/film_riders_of_the_plains": "http://example.org/entity/Riders_of_the_Plains"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_riders_of_the_plains",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Riders of the Plains",
+          "source": "label"
+        },
+        {
+          "text": "film riders of the plains",
+          "source": "uri"
+        }
+      ],
+      "context": "Riders of the Plains. has director: Jacques Jaccard.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Riders_of_the_Plains",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Riders of the Plains",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Riders of the Plains",
+        "extracted_source": "label",
+        "ground_truth_text": "Riders of the Plains",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_jacques_jaccard",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jacques Jaccard",
+          "source": "label"
+        },
+        {
+          "text": "person jacques jaccard",
+          "source": "uri"
+        }
+      ],
+      "context": "Jacques Jaccard. has death place: Los Angeles, California. inverse has director: Riders of the Plains.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jacques_Jaccard",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jacques Jaccard",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jacques Jaccard",
+        "extracted_source": "label",
+        "ground_truth_text": "Jacques Jaccard",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.992219090461731,
+      "graph_score": 0.9961095452308655,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_los_angeles_california",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Los Angeles, California",
+          "source": "label"
+        },
+        {
+          "text": "place los angeles california",
+          "source": "uri"
+        }
+      ],
+      "context": "Los Angeles, California. inverse has death place: Jacques Jaccard.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Los_Angeles_California",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Los Angeles California",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Los Angeles, California",
+        "extracted_source": "label",
+        "ground_truth_text": "Los Angeles California",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9462375044822693,
+      "string_score": 0.9900000095367432,
+      "independent_identity_support": true,
+      "context_score": 0.9900060892105103,
+      "graph_score": 0.9950030446052551,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

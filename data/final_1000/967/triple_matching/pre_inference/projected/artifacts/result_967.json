@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/967/evaluation/entity_alignment/baseline_extracted_aligned_967.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/967/evaluation/entity_alignment/baseline_ground_truth_aligned_967.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Earth",
+      "predicate": "hasDirector",
+      "object": "Zahari_Zhandov",
+      "subject_uri": "http://example.org/entity/Earth",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Zahari_Zhandov"
+    },
+    {
+      "subject": "Zahari_Zhandov",
+      "predicate": "hasDeathPlace",
+      "object": "Sofia",
+      "subject_uri": "http://example.org/entity/Zahari_Zhandov",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Sofia"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Earth",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Earth",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Earth",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Earth",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Earth",
+      "predicate": "label",
+      "object": "\"Earth (1957 film)\"",
+      "subject_uri": "http://example.org/entity/Earth",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Earth (1957 film)\""
+    },
+    {
+      "subject": "Earth",
+      "predicate": "altLabel",
+      "object": "\"Earth\"",
+      "subject_uri": "http://example.org/entity/Earth",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Earth\""
+    },
+    {
+      "subject": "Sofia",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Sofia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Sofia",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sofia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sofia",
+      "predicate": "label",
+      "object": "\"Sofia\"",
+      "subject_uri": "http://example.org/entity/Sofia",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sofia\""
+    },
+    {
+      "subject": "Zahari_Zhandov",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Zahari_Zhandov",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Zahari_Zhandov",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Zahari_Zhandov",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Zahari_Zhandov",
+      "predicate": "label",
+      "object": "\"Zahari Zhandov\"",
+      "subject_uri": "http://example.org/entity/Zahari_Zhandov",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Zahari Zhandov\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

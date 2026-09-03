@@ -1,0 +1,30 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:winter_meeting a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Winter Meeting" ;
+    onto:hasDirector data:bretaigne_windust .
+
+data:year_of_the_horse a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Year of the Horse" ;
+    onto:hasDirector data:jim_jarmusch .
+
+data:bretaigne_windust a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bretaigne Windust" .
+
+data:jim_jarmusch a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jim Jarmusch" ;
+    onto:hasNationality data:united_states .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

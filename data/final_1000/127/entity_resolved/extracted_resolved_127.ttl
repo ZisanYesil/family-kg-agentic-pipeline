@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:wee_wee_hours a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Wee Wee Hours" ;
+    onto:hasPerformer data:chuck_berry .
+
+data:chuck_berry a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Chuck Berry" ;
+    onto:hasBirthPlace data:st_louis_missouri .
+
+data:st_louis_missouri a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "St. Louis, Missouri" .
+

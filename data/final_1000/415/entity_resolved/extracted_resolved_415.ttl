@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:jennifer_siebel_newson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jennifer Siebel Newsom" ;
+    onto:hasSpouse data:gavin_newson ;
+    skos:altLabel "Jennifer Lynn Siebel" .
+
+data:gavin_newson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gavin Newsom" ;
+    onto:hasEducatedAt data:santa_clara_university ;
+    skos:altLabel "Gavin Christopher Newsom" .
+
+data:santa_clara_university a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Santa Clara University" .
+

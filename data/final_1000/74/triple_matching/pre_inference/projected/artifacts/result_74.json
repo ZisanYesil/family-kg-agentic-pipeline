@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/74/evaluation/entity_alignment/baseline_extracted_aligned_74.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/74/evaluation/entity_alignment/baseline_ground_truth_aligned_74.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Princess_Alice_of_Battenberg",
+      "predicate": "hasDeathPlace",
+      "object": "Buckingham_Palace",
+      "subject_uri": "http://example.org/entity/Princess_Alice_of_Battenberg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Buckingham_Palace"
+    },
+    {
+      "subject": "Princess_Margarita_of_Greece_and_Denmark",
+      "predicate": "hasParent",
+      "object": "Princess_Alice_of_Battenberg",
+      "subject_uri": "http://example.org/entity/Princess_Margarita_of_Greece_and_Denmark",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Princess_Alice_of_Battenberg"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Buckingham_Palace",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Buckingham_Palace",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Buckingham_Palace",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Buckingham_Palace",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Buckingham_Palace",
+      "predicate": "label",
+      "object": "\"Buckingham Palace\"",
+      "subject_uri": "http://example.org/entity/Buckingham_Palace",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Buckingham Palace\""
+    },
+    {
+      "subject": "Princess_Alice_of_Battenberg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Alice_of_Battenberg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Princess_Alice_of_Battenberg",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Princess_Alice_of_Battenberg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Princess_Alice_of_Battenberg",
+      "predicate": "label",
+      "object": "\"Princess Alice of Battenberg\"",
+      "subject_uri": "http://example.org/entity/Princess_Alice_of_Battenberg",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Princess Alice of Battenberg\""
+    },
+    {
+      "subject": "Princess_Margarita_of_Greece_and_Denmark",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Margarita_of_Greece_and_Denmark",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Princess_Margarita_of_Greece_and_Denmark",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Princess_Margarita_of_Greece_and_Denmark",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Princess_Margarita_of_Greece_and_Denmark",
+      "predicate": "label",
+      "object": "\"Princess Margarita of Greece and Denmark\"",
+      "subject_uri": "http://example.org/entity/Princess_Margarita_of_Greece_and_Denmark",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Princess Margarita of Greece and Denmark\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

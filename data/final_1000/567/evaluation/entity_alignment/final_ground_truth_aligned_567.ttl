@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Sophia_I a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Theophanu ;
+    ex:hasParent entity:Theophanu .
+
+entity:Roman_Empire a ex:Country,
+        ex:Place .
+
+entity:Theophanu a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Sophia_I ;
+    ex:hasCitizenship entity:Roman_Empire ;
+    ex:hasCountry entity:Roman_Empire .
+

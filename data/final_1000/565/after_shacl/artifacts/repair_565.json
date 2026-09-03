@@ -1,0 +1,94 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "f5e9d5f5469939a62e5695f85f0814240c9f77f83d324a821cbf5f3f1ea82661",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_the_cousin_from_nowhere_1953",
+        "path": null,
+        "value": "http://example.org/extracted/person_eduard_kunke",
+        "expected": null,
+        "message": "Relation phrase 'composer of' from http://example.org/extracted/film_the_cousin_from_nowhere_1953 to http://example.org/extracted/person_eduard_kunke was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "f5e9d5f5469939a62e5695f85f0814240c9f77f83d324a821cbf5f3f1ea82661",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_the_cousin_from_nowhere_1953",
+            "path": null,
+            "value": "http://example.org/extracted/person_eduard_kunke",
+            "expected": null,
+            "message": "Relation phrase 'composer of' from http://example.org/extracted/film_the_cousin_from_nowhere_1953 to http://example.org/extracted/person_eduard_kunke was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 12,
+      "feedback_reasoning": "The source text states that Eduard Künneke composed the operetta on which the 1953 film is based. The ontology defines the predicate onto:hasComposer (domain CreativeWork, range Person) which matches the relation phrase “composer of”. Adding this triple satisfies the unmapped_relation violation.",
+      "repairs": [
+        {
+          "violation_fingerprint": "9264a094dd2adaa2224da513babf9f9f6b0b7db5900c88700ecee5638dacd7f9",
+          "reasoning": "Map the phrase “composer of” to the ontology predicate onto:hasComposer.",
+          "operations": [
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/film_the_cousin_from_nowhere_1953",
+              "predicate": "http://example.org/2wiki-ontology#hasComposer",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/extracted/person_eduard_kunke"
+              }
+            }
+          ]
+        }
+      ],
+      "edit_log": [
+        {
+          "violation_fingerprint": "9264a094dd2adaa2224da513babf9f9f6b0b7db5900c88700ecee5638dacd7f9",
+          "operation_index": 0,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/film_the_cousin_from_nowhere_1953",
+          "predicate": "http://example.org/2wiki-ontology#hasComposer",
+          "old_value": null,
+          "new_value": "<http://example.org/extracted/person_eduard_kunke>",
+          "triples_before": 12,
+          "triples_after": 13
+        }
+      ],
+      "unresolved_violation_fingerprints": [],
+      "triples_after": 13,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": true,
+        "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "violations": []
+      },
+      "outcome": "conforms"
+    }
+  ],
+  "status": "repaired",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": true,
+    "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "violations": []
+  },
+  "dangling_references": []
+}

@@ -1,0 +1,16 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:gero_ii a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gero II" ;
+    onto:hasFather <http://example.org/entity/Thietmar_Margrave_of_Meissen> .
+
+<http://example.org/entity/Thietmar_Margrave_of_Meissen> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Thietmar" ;
+    onto:hasDeathDate "0979-08-03"^^xsd:date .
+

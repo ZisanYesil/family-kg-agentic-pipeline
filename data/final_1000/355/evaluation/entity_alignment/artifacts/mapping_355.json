@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/355/originals/extracted_355.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/355/ground_truth_355.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/marling_school_educationalinstitution": "http://example.org/entity/Marling_School",
+    "http://example.org/extracted/jack_lee_person": "http://example.org/entity/Jack_Lee",
+    "http://example.org/extracted/circle_of_deception_film": "http://example.org/entity/Circle_of_Deception"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/circle_of_deception_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Circle of Deception",
+          "source": "label"
+        },
+        {
+          "text": "circle of deception film",
+          "source": "uri"
+        }
+      ],
+      "context": "Circle of Deception. has director: Jack Lee.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Circle_of_Deception",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Circle of Deception",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Circle of Deception",
+        "extracted_source": "label",
+        "ground_truth_text": "Circle of Deception",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jack_lee_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jack Lee",
+          "source": "label"
+        },
+        {
+          "text": "jack lee person",
+          "source": "uri"
+        }
+      ],
+      "context": "Jack Lee. has educated at: Marling School. inverse has director: Circle of Deception.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jack_Lee",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jack Lee",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jack Lee",
+        "extracted_source": "label",
+        "ground_truth_text": "Jack Lee",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/marling_school_educationalinstitution",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marling School",
+          "source": "label"
+        },
+        {
+          "text": "marling school educationalinstitution",
+          "source": "uri"
+        }
+      ],
+      "context": "Marling School. inverse has educated at: Jack Lee.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marling_School",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marling School",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marling School",
+        "extracted_source": "label",
+        "ground_truth_text": "Marling School",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

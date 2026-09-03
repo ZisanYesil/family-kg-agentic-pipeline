@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Arthur_MacArthur_IV a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Douglas_MacArthur ;
+    ex:hasParent entity:Douglas_MacArthur .
+
+entity:American a ex:Country,
+        ex:Place .
+
+entity:Douglas_MacArthur a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Arthur_MacArthur_IV ;
+    ex:hasCitizenship entity:American ;
+    ex:hasCountry entity:American .
+

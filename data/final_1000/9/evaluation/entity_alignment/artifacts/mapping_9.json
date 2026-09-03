@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/9/originals/extracted_9.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/9/ground_truth_9.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/indira_vizha": "http://example.org/entity/Indira_Vizha",
+    "http://example.org/extracted/emmy_of_storks_nest": "http://example.org/entity/Emmy_of_Stork_s_Nest"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/emmy_of_storks_nest",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Emmy of Stork's Nest",
+          "source": "label"
+        },
+        {
+          "text": "emmy of storks nest",
+          "source": "uri"
+        }
+      ],
+      "context": "Emmy of Stork's Nest. has publication date: 1915.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Emmy_of_Stork_s_Nest",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Emmy of Stork s Nest",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Emmy of Stork's Nest",
+        "extracted_source": "label",
+        "ground_truth_text": "Emmy of Stork s Nest",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9640427231788635,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.9911258816719055,
+      "graph_score": 0.9911258816719055,
+      "margin": 0.8577087819576263
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/indira_vizha",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Indira Vizha",
+          "source": "label"
+        }
+      ],
+      "context": "Indira Vizha. has publication date: 2009-07-10.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Indira_Vizha",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Indira Vizha",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Indira Vizha",
+        "extracted_source": "label",
+        "ground_truth_text": "Indira Vizha",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9785418510437012,
+      "graph_score": 0.9785418510437012,
+      "margin": 0.8649984300136566
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

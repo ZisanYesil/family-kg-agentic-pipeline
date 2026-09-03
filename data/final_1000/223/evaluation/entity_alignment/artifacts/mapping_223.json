@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/223/originals/extracted_223.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/223/ground_truth_223.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jaguarizinho_river": "http://example.org/entity/Jaguarizinho_River",
+    "http://example.org/extracted/brazil": "http://example.org/entity/Brazil",
+    "http://example.org/extracted/dos_patos_river_iva%C3%AD": "http://example.org/entity/Dos_Patos_River_Ivaí_River"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/brazil",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Brazil",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Brazil. inverse has country: Dos Patos River (Ivaí River). inverse has country: Jaguarizinho River.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Brazil",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Brazil",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Brazil",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Brazil",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.996192216873169,
+      "graph_score": 0.9980961084365845,
+      "margin": 0.7290126383304596
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dos_patos_river_iva%C3%AD",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dos Patos River (Ivaí River)",
+          "source": "altLabel"
+        },
+        {
+          "text": "dos patos river ivaí",
+          "source": "uri"
+        }
+      ],
+      "context": "Dos Patos River (Ivaí River). has country: Brazil.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dos_Patos_River_Ivaí_River",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dos Patos River Ivaí River",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dos Patos River (Ivaí River)",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Dos Patos River Ivaí River",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9810988306999207,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9866759777069092,
+      "graph_score": 0.9933379888534546,
+      "margin": 0.4008094072341919
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jaguarizinho_river",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jaguarizinho River",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Jaguarizinho River. has country: Brazil.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jaguarizinho_River",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jaguarizinho River",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jaguarizinho River",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Jaguarizinho River",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3792424201965332
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

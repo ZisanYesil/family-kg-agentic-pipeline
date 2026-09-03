@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/951/originals/extracted_951.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/951/ground_truth_951.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/gerald_fitzgerald_3rd_earl_desmond": "http://example.org/entity/Gerald_FitzGerald_3rd_Earl_of_Desmond",
+    "http://example.org/extracted/james_fitzgerald_6th_earl_desmond": "http://example.org/entity/James_FitzGerald_6th_Earl_of_Desmond",
+    "http://example.org/extracted/maurice_fitzgerald_2nd_earl_desmond": "http://example.org/entity/Maurice_FitzGerald_2nd_Earl_of_Desmond"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gerald_fitzgerald_3rd_earl_desmond",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gerald Fitz Gerald, 3rd Earl of Desmond",
+          "source": "label"
+        },
+        {
+          "text": "gerald fitzgerald 3rd earl desmond",
+          "source": "uri"
+        }
+      ],
+      "context": "Gerald Fitz Gerald, 3rd Earl of Desmond. has brother: Maurice Fitz Gerald, 2nd Earl of Desmond. inverse has father: James Fitz Gerald, 6th Earl of Desmond.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gerald_FitzGerald_3rd_Earl_of_Desmond",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gerald Fitz Gerald 3rd Earl of Desmond",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gerald Fitz Gerald, 3rd Earl of Desmond",
+        "extracted_source": "label",
+        "ground_truth_text": "Gerald Fitz Gerald 3rd Earl of Desmond",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9894164800643921,
+      "string_score": 0.9941558241844177,
+      "independent_identity_support": true,
+      "context_score": 0.9841881990432739,
+      "graph_score": 0.6587607860565186,
+      "margin": 0.2252446413040161
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/james_fitzgerald_6th_earl_desmond",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Fitz Gerald, 6th Earl of Desmond",
+          "source": "label"
+        },
+        {
+          "text": "james fitzgerald 6th earl desmond",
+          "source": "uri"
+        }
+      ],
+      "context": "James Fitz Gerald, 6th Earl of Desmond. has father: Gerald Fitz Gerald, 3rd Earl of Desmond.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_FitzGerald_6th_Earl_of_Desmond",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James Fitz Gerald 6th Earl of Desmond",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James Fitz Gerald, 6th Earl of Desmond",
+        "extracted_source": "label",
+        "ground_truth_text": "James Fitz Gerald 6th Earl of Desmond",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9851877093315125,
+      "string_score": 0.9940000176429749,
+      "independent_identity_support": true,
+      "context_score": 0.9843882322311401,
+      "graph_score": 0.9921941161155701,
+      "margin": 0.21447324752807617
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/maurice_fitzgerald_2nd_earl_desmond",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maurice Fitz Gerald, 2nd Earl of Desmond",
+          "source": "label"
+        },
+        {
+          "text": "maurice fitzgerald 2nd earl desmond",
+          "source": "uri"
+        }
+      ],
+      "context": "Maurice Fitz Gerald, 2nd Earl of Desmond. inverse has brother: Gerald Fitz Gerald, 3rd Earl of Desmond.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maurice_FitzGerald_2nd_Earl_of_Desmond",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maurice Fitz Gerald 2nd Earl of Desmond",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maurice Fitz Gerald, 2nd Earl of Desmond",
+        "extracted_source": "label",
+        "ground_truth_text": "Maurice Fitz Gerald 2nd Earl of Desmond",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9879217743873596,
+      "string_score": 0.994303822517395,
+      "independent_identity_support": true,
+      "context_score": 0.9785927534103394,
+      "graph_score": 0.4892963767051697,
+      "margin": 0.22058415412902832
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

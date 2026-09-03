@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Saadia> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Saadia" ;
+    onto:hasDirector <http://example.org/entity/Albert_Lewin> .
+
+<http://example.org/entity/Albert_Lewin> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Albert Lewin" ;
+    onto:hasEducatedAt <http://example.org/entity/Harvard> .
+
+<http://example.org/entity/Harvard> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Harvard" .
+

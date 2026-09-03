@@ -1,0 +1,91 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/785/evaluation/entity_alignment/baseline_extracted_aligned_785.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/785/evaluation/entity_alignment/baseline_ground_truth_aligned_785.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Lester_del_Rey",
+      "predicate": "hasDeathDate",
+      "object": "\"1993-05-10\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Lester_del_Rey",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1993-05-10\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Science_Fiction_Adventures",
+      "predicate": "hasEditor",
+      "object": "Lester_del_Rey",
+      "subject_uri": "http://example.org/entity/Science_Fiction_Adventures",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEditor",
+      "object_term": "http://example.org/entity/Lester_del_Rey"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Lester_del_Rey",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Lester_del_Rey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Lester_del_Rey",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lester_del_Rey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lester_del_Rey",
+      "predicate": "label",
+      "object": "\"Lester del Rey\"",
+      "subject_uri": "http://example.org/entity/Lester_del_Rey",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Lester del Rey\""
+    },
+    {
+      "subject": "Science_Fiction_Adventures",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Science_Fiction_Adventures",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Science_Fiction_Adventures",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Science_Fiction_Adventures",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Science_Fiction_Adventures",
+      "predicate": "label",
+      "object": "\"Science Fiction Adventures (1952 magazine)\"",
+      "subject_uri": "http://example.org/entity/Science_Fiction_Adventures",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Science Fiction Adventures (1952 magazine)\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 8,
+    "true_positives": 2,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.25,
+    "recall": 1.0,
+    "f1": 0.4
+  },
+  "stage": "pre_inference"
+}

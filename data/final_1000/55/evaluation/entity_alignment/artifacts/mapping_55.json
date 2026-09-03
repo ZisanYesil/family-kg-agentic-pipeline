@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/55/originals/extracted_55.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/55/ground_truth_55.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/carl_gustaf_creutz": "http://example.org/entity/Carl_Gustaf_Creutz",
+    "http://example.org/extracted/lorentz_creutz_sr": "http://example.org/entity/Lorentz_Creutz"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/carl_gustaf_creutz",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Carl Gustaf Creutz",
+          "source": "label"
+        }
+      ],
+      "context": "Carl Gustaf Creutz. inverse has father: Lorentz Creutz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Carl_Gustaf_Creutz",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Carl Gustaf Creutz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Carl Gustaf Creutz",
+        "extracted_source": "label",
+        "ground_truth_text": "Carl Gustaf Creutz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9237657189369202,
+      "graph_score": 0.4618828594684601,
+      "margin": 0.4252468943595886
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lorentz_creutz_sr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lorentz Creutz",
+          "source": "altLabel"
+        },
+        {
+          "text": "Lorentz Creutz Sr.",
+          "source": "label"
+        },
+        {
+          "text": "lorentz creutz sr",
+          "source": "uri"
+        }
+      ],
+      "context": "Lorentz Creutz. has death place: Battle of Öland. has father: Carl Gustaf Creutz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lorentz_Creutz",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lorentz Creutz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lorentz Creutz",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Lorentz Creutz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8925264477729797,
+      "graph_score": 0.44626322388648987,
+      "margin": 0.42248618602752686
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/battle_of_oland",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Battle of Öland",
+          "source": "label"
+        },
+        {
+          "text": "battle of oland",
+          "source": "uri"
+        }
+      ],
+      "context": "Battle of Öland. inverse has death place: Lorentz Creutz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Öland",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Öland",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Battle of Öland",
+        "extracted_source": "label",
+        "ground_truth_text": "Öland",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6945993900299072,
+      "name_embedding_score": 0.6162503361701965,
+      "string_score": 0.6083333492279053,
+      "independent_identity_support": false,
+      "context_score": 0.875127375125885,
+      "graph_score": 0.9375636577606201,
+      "margin": 0.6945993900299072
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

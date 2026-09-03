@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/524/originals/extracted_524.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/524/ground_truth_524.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/david_de_haan": "http://example.org/entity/David_Bierens_de_Haan",
+    "http://example.org/extracted/catherine_osborne": "http://example.org/entity/Catherine_Isabella_Osborne"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/catherine_osborne",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Catherine Isabella Osborne",
+          "source": "label"
+        },
+        {
+          "text": "catherine osborne",
+          "source": "uri"
+        }
+      ],
+      "context": "Catherine Isabella Osborne. has birth date: 1818-06-30. has death date: 1880-06-21.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Catherine_Isabella_Osborne",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Catherine Isabella Osborne",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Catherine Isabella Osborne",
+        "extracted_source": "label",
+        "ground_truth_text": "Catherine Isabella Osborne",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7443610429763794
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/david_de_haan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Bierens de Haan",
+          "source": "label"
+        },
+        {
+          "text": "david de haan",
+          "source": "uri"
+        }
+      ],
+      "context": "David Bierens de Haan. has birth date: 1822-05-03. has death date: 1895-08-12.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/David_Bierens_de_Haan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "David Bierens de Haan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "David Bierens de Haan",
+        "extracted_source": "label",
+        "ground_truth_text": "David Bierens de Haan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6883119344711304
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

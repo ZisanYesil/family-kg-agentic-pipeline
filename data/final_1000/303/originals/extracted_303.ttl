@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:rudolf_france a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Rudolph of France" ;
+    onto:hasMother data:adelaide_auxerre .
+
+data:adelaide_auxerre a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Adelaide of Auxerre" ;
+    onto:hasFather data:conrad_ii_transjurane .
+
+data:conrad_ii_transjurane a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Conrad II, Duke of Transjurane Burgundy" .
+

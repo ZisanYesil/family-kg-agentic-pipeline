@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/133/evaluation/entity_alignment/baseline_extracted_aligned_133.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/133/evaluation/entity_alignment/baseline_ground_truth_aligned_133.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Hugo_Chávez",
+      "predicate": "hasBirthPlace",
+      "object": "Sabaneta",
+      "subject_uri": "http://example.org/entity/Hugo_Chávez",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Sabaneta"
+    },
+    {
+      "subject": "Universidad_Militar_Bolivariana_de_Venezuela",
+      "predicate": "hasFounder",
+      "object": "Hugo_Chávez",
+      "subject_uri": "http://example.org/entity/Universidad_Militar_Bolivariana_de_Venezuela",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Hugo_Chávez"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Hugo_Chávez",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Hugo_Chávez",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Hugo_Chávez",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hugo_Chávez",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hugo_Chávez",
+      "predicate": "label",
+      "object": "\"Hugo Chávez\"",
+      "subject_uri": "http://example.org/entity/Hugo_Chávez",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hugo Chávez\""
+    },
+    {
+      "subject": "Hugo_Chávez",
+      "predicate": "altLabel",
+      "object": "\"Hugo Rafael Chávez Frías\"",
+      "subject_uri": "http://example.org/entity/Hugo_Chávez",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Hugo Rafael Chávez Frías\""
+    },
+    {
+      "subject": "Sabaneta",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Sabaneta",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Sabaneta",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sabaneta",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sabaneta",
+      "predicate": "label",
+      "object": "\"Sabaneta, Barinas\"",
+      "subject_uri": "http://example.org/entity/Sabaneta",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sabaneta, Barinas\""
+    },
+    {
+      "subject": "Universidad_Militar_Bolivariana_de_Venezuela",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Universidad_Militar_Bolivariana_de_Venezuela",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Universidad_Militar_Bolivariana_de_Venezuela",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Universidad_Militar_Bolivariana_de_Venezuela",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Universidad_Militar_Bolivariana_de_Venezuela",
+      "predicate": "label",
+      "object": "\"Bolivarian Military University of Venezuela\"",
+      "subject_uri": "http://example.org/entity/Universidad_Militar_Bolivariana_de_Venezuela",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bolivarian Military University of Venezuela\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

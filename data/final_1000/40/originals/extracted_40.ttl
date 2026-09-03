@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_she_asked_for_it a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "She Asked for It" ;
+    onto:hasDirector data:person_erle_c_kenton .
+
+data:cause_parkinsons_disease a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "Parkinson's disease" .
+
+data:person_erle_c_kenton a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Erle C. Kenton" ;
+    onto:hasCauseOfDeath data:cause_parkinsons_disease .
+

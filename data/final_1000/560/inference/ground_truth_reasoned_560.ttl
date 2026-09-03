@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Teresa_Pàmies_i_Bertran a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Sergi_Pàmies .
+
+entity:Gregorio_López_Raimundo a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Sergi_Pàmies .
+
+entity:Sergi_Pàmies a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Gregorio_López_Raimundo ;
+    ex:hasParent entity:Gregorio_López_Raimundo,
+        entity:Teresa_Pàmies_i_Bertran .
+

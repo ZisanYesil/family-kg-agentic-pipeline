@@ -1,0 +1,20 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_namma_ooru_nayagan_1988 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Namma Ooru Nayagan" .
+
+data:person_rajesh_khanna a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Rajesh Khanna" ;
+    onto:hasSpouse data:person_dimple_kapadia ;
+    skos:altLabel "Jatin Khanna" .
+
+data:person_dimple_kapadia a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Dimple Kapadia" .
+

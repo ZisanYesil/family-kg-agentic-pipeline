@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/174/originals/extracted_174.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/174/ground_truth_174.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ogro": "http://example.org/entity/Ogro",
+    "http://example.org/extracted/kalavar_king": "http://example.org/entity/Kalavar_King"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/kalavar_king",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kalavar King",
+          "source": "label"
+        }
+      ],
+      "context": "Kalavar King. has publication date: 2010-02-26.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kalavar_King",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kalavar King",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kalavar King",
+        "extracted_source": "label",
+        "ground_truth_text": "Kalavar King",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9410660266876221,
+      "graph_score": 0.9410660266876221,
+      "margin": 0.6580118834972382
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ogro",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Operación Ogro",
+          "source": "label"
+        },
+        {
+          "text": "ogro",
+          "source": "uri"
+        }
+      ],
+      "context": "Operación Ogro. has publication date: 1979.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ogro",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ogro",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "ogro",
+        "extracted_source": "uri",
+        "ground_truth_text": "Ogro",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.7291184663772583,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8910958170890808,
+      "graph_score": 0.8910958170890808,
+      "margin": 0.7066981494426727
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

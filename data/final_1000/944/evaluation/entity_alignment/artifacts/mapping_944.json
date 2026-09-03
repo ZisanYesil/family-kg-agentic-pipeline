@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/944/originals/extracted_944.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/944/ground_truth_944.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_madleen_kane": "http://example.org/entity/Madleen_Kane",
+    "http://example.org/extracted/country_sweden": "http://example.org/entity/Sweden",
+    "http://example.org/extracted/song_you_can": "http://example.org/entity/You_Can"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_sweden",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Swedish",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sweden",
+          "source": "label"
+        },
+        {
+          "text": "country sweden",
+          "source": "uri"
+        }
+      ],
+      "context": "Swedish. inverse has nationality: Madleen Kane.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sweden",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sweden",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sweden",
+        "extracted_source": "label",
+        "ground_truth_text": "Sweden",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8922132253646851,
+      "graph_score": 0.44610661268234253,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_madleen_kane",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Madleen Kane",
+          "source": "label"
+        },
+        {
+          "text": "person madleen kane",
+          "source": "uri"
+        }
+      ],
+      "context": "Madleen Kane. has nationality: Swedish. inverse has performer: You Can.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Madleen_Kane",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Madleen Kane",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Madleen Kane",
+        "extracted_source": "label",
+        "ground_truth_text": "Madleen Kane",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.936758279800415,
+      "graph_score": 0.6350458264350891,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_you_can",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "You Can",
+          "source": "label"
+        },
+        {
+          "text": "song you can",
+          "source": "uri"
+        }
+      ],
+      "context": "You Can. has performer: Madleen Kane.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/You_Can",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "You Can",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "You Can",
+        "extracted_source": "label",
+        "ground_truth_text": "You Can",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

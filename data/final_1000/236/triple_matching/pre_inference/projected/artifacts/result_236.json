@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/236/evaluation/entity_alignment/baseline_extracted_aligned_236.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/236/evaluation/entity_alignment/baseline_ground_truth_aligned_236.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Don_t_Knock_the_Ox",
+      "predicate": "hasDirector",
+      "object": "Tony_Ianzelo",
+      "subject_uri": "http://example.org/entity/Don_t_Knock_the_Ox",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Tony_Ianzelo"
+    },
+    {
+      "subject": "Tony_Ianzelo",
+      "predicate": "hasEducatedAt",
+      "object": "Ryerson_University",
+      "subject_uri": "http://example.org/entity/Tony_Ianzelo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Ryerson_University"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Don_t_Knock_the_Ox",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Don_t_Knock_the_Ox",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Don_t_Knock_the_Ox",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Don_t_Knock_the_Ox",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Don_t_Knock_the_Ox",
+      "predicate": "label",
+      "object": "\"Don't Knock the Ox\"",
+      "subject_uri": "http://example.org/entity/Don_t_Knock_the_Ox",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Don't Knock the Ox\""
+    },
+    {
+      "subject": "Ryerson_University",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Ryerson_University",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Ryerson_University",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ryerson_University",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ryerson_University",
+      "predicate": "label",
+      "object": "\"Ryerson Polytechnical School\"",
+      "subject_uri": "http://example.org/entity/Ryerson_University",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ryerson Polytechnical School\""
+    },
+    {
+      "subject": "Ryerson_University",
+      "predicate": "altLabel",
+      "object": "\"Ryerson University\"",
+      "subject_uri": "http://example.org/entity/Ryerson_University",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Ryerson University\""
+    },
+    {
+      "subject": "Ryerson_University",
+      "predicate": "altLabel",
+      "object": "\"Toronto’s Ryerson Polytechnical School\"",
+      "subject_uri": "http://example.org/entity/Ryerson_University",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Toronto’s Ryerson Polytechnical School\""
+    },
+    {
+      "subject": "Tony_Ianzelo",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Tony_Ianzelo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Tony_Ianzelo",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Tony_Ianzelo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Tony_Ianzelo",
+      "predicate": "label",
+      "object": "\"Tony Ianzelo\"",
+      "subject_uri": "http://example.org/entity/Tony_Ianzelo",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Tony Ianzelo\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

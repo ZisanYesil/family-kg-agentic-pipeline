@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/131/originals/extracted_131.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/131/ground_truth_131.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/the_bounce_back_film": "http://example.org/entity/The_Bounce_Back",
+    "http://example.org/extracted/the_sick_stockrider_film": "http://example.org/entity/The_Sick_Stockrider"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/the_bounce_back_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Bounce Back",
+          "source": "label"
+        },
+        {
+          "text": "the bounce back film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Bounce Back. has publication date: 2016-12-09.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Bounce_Back",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Bounce Back",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Bounce Back",
+        "extracted_source": "label",
+        "ground_truth_text": "The Bounce Back",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9773374795913696,
+      "graph_score": 0.9773374795913696,
+      "margin": 0.7014756500720978
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_sick_stockrider_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Sick Stockrider",
+          "source": "label"
+        },
+        {
+          "text": "the sick stockrider film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Sick Stockrider. has publication date: 1913.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Sick_Stockrider",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Sick Stockrider",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Sick Stockrider",
+        "extracted_source": "label",
+        "ground_truth_text": "The Sick Stockrider",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.7182344198226929
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

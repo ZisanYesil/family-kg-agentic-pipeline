@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "f35044aa8350d448f442dfeec024fbe92630cd74adf359f1cbd39f565911c26c",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/john_manners_sutton_1752",
+        "path": null,
+        "value": "http://example.org/extracted/john_manners_marquess_of_granby",
+        "expected": null,
+        "message": "Relation phrase 'has uncle' from http://example.org/extracted/john_manners_sutton_1752 to http://example.org/extracted/john_manners_marquess_of_granby was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "f35044aa8350d448f442dfeec024fbe92630cd74adf359f1cbd39f565911c26c",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/john_manners_sutton_1752",
+            "path": null,
+            "value": "http://example.org/extracted/john_manners_marquess_of_granby",
+            "expected": null,
+            "message": "Relation phrase 'has uncle' from http://example.org/extracted/john_manners_sutton_1752 to http://example.org/extracted/john_manners_marquess_of_granby was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 11,
+      "feedback_reasoning": "The violation reports an unmapped relation phrase “has uncle” from data:john_manners_sutton_1752 to data:john_manners_marquess_of_granby. The supplied ontology lists object properties, but none correspond to the semantic meaning of an “uncle” relationship (e.g., hasUncle, hasAunt, hasParentSibling, etc.). Since no predicate in the ontology matches the phrase, we cannot safely add or replace a triple. Consequently the violation cannot be repaired with the given ontology.",
+      "repairs": [
+        {
+          "violation_fingerprint": "b1d772c4fc8f2ea5fcedf25354d453ad68dbb5515bd50616ec1774a377375963",
+          "reasoning": "No appropriate ontology predicate exists for the ‘has uncle’ relation; adding an unrelated predicate would violate the instruction to select only predicates whose documented meaning matches the relation phrase.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "b1d772c4fc8f2ea5fcedf25354d453ad68dbb5515bd50616ec1774a377375963"
+      ],
+      "triples_after": 11,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "f35044aa8350d448f442dfeec024fbe92630cd74adf359f1cbd39f565911c26c",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/john_manners_sutton_1752",
+            "path": null,
+            "value": "http://example.org/extracted/john_manners_marquess_of_granby",
+            "expected": null,
+            "message": "Relation phrase 'has uncle' from http://example.org/extracted/john_manners_sutton_1752 to http://example.org/extracted/john_manners_marquess_of_granby was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "f35044aa8350d448f442dfeec024fbe92630cd74adf359f1cbd39f565911c26c",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/john_manners_sutton_1752",
+        "path": null,
+        "value": "http://example.org/extracted/john_manners_marquess_of_granby",
+        "expected": null,
+        "message": "Relation phrase 'has uncle' from http://example.org/extracted/john_manners_sutton_1752 to http://example.org/extracted/john_manners_marquess_of_granby was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

@@ -1,0 +1,150 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/760/originals/extracted_760.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/760/ground_truth_760.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/amado_v_hernandez": "http://example.org/entity/Amado_V_Hernandez",
+    "http://example.org/extracted/atang_de_la_rama": "http://example.org/entity/Atang_de_la_Rama"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/amado_v_hernandez",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Amado V. Hernandez",
+          "source": "altLabel"
+        },
+        {
+          "text": "Amado Vera Hernandez",
+          "source": "altLabel"
+        },
+        {
+          "text": "amado v hernandez",
+          "source": "uri"
+        }
+      ],
+      "context": "Amado V. Hernandez. has birth place: Tondo, Manila. inverse has spouse: Atang de la Rama.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Amado_V_Hernandez",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Amado V Hernandez",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Amado V. Hernandez",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Amado V Hernandez",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9640346169471741,
+      "string_score": 0.9871428608894348,
+      "independent_identity_support": true,
+      "context_score": 0.8867548704147339,
+      "graph_score": 0.9433774352073669,
+      "margin": 0.6434093117713928
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/atang_de_la_rama",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Atang de la Rama",
+          "source": "altLabel"
+        },
+        {
+          "text": "Honorata de la Rama-Hernandez",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Atang de la Rama. has spouse: Amado V. Hernandez.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Atang_de_la_Rama",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Atang de la Rama",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Atang de la Rama",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Atang de la Rama",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9921546578407288,
+      "graph_score": 0.996077299118042,
+      "margin": 0.49950146675109863
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tondo_manila",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tondo, Manila",
+          "source": "altLabel"
+        },
+        {
+          "text": "tondo manila",
+          "source": "uri"
+        }
+      ],
+      "context": "Tondo, Manila. inverse has birth place: Amado V. Hernandez.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Hagonoy"
+  ]
+}

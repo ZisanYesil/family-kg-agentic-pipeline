@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:reunion_at_fairborough_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Reunion at Fairborough" ;
+    onto:hasDirector data:herbert_wise .
+
+data:charlie_walker_wise a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Charlie Walker-Wise" .
+
+data:herbert_wise a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Herbert Wise" ;
+    onto:hasChild data:charlie_walker_wise,
+        data:susannah_wise .
+
+data:susannah_wise a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Susannah Wise" .
+

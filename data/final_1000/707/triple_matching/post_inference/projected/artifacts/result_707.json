@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/707/evaluation/entity_alignment/final_extracted_aligned_707.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/707/evaluation/entity_alignment/final_ground_truth_aligned_707.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Charles_IV",
+      "predicate": "hasChild",
+      "object": "Elisabeth_of_Bohemia",
+      "subject_uri": "http://example.org/entity/Charles_IV",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Elisabeth_of_Bohemia"
+    },
+    {
+      "subject": "Charles_IV",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Charles_IV",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Charles_IV",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Charles_IV",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Elisabeth_of_Bohemia",
+      "predicate": "hasParent",
+      "object": "Charles_IV",
+      "subject_uri": "http://example.org/entity/Elisabeth_of_Bohemia",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Charles_IV"
+    },
+    {
+      "subject": "Elisabeth_of_Bohemia",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Elisabeth_of_Bohemia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Elisabeth_of_Bohemia",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Elisabeth_of_Bohemia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Charles_IV",
+      "predicate": "hasParent",
+      "object": "Elizabeth_of_Bohemia",
+      "subject_uri": "http://example.org/entity/Charles_IV",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Elizabeth_of_Bohemia"
+    },
+    {
+      "subject": "Elizabeth_of_Bohemia",
+      "predicate": "hasChild",
+      "object": "Charles_IV",
+      "subject_uri": "http://example.org/entity/Elizabeth_of_Bohemia",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Charles_IV"
+    },
+    {
+      "subject": "Elizabeth_of_Bohemia",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Elizabeth_of_Bohemia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Elizabeth_of_Bohemia",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Elizabeth_of_Bohemia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Charles_IV",
+      "predicate": "hasParent",
+      "object": "elisabeth_of_bohemia_1292",
+      "subject_uri": "http://example.org/entity/Charles_IV",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/extracted/elisabeth_of_bohemia_1292"
+    },
+    {
+      "subject": "elisabeth_of_bohemia_1292",
+      "predicate": "hasChild",
+      "object": "Charles_IV",
+      "subject_uri": "http://example.org/extracted/elisabeth_of_bohemia_1292",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Charles_IV"
+    },
+    {
+      "subject": "elisabeth_of_bohemia_1292",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/elisabeth_of_bohemia_1292",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "elisabeth_of_bohemia_1292",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/elisabeth_of_bohemia_1292",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 14,
+    "true_positives": 6,
+    "false_positives": 4,
+    "false_negatives": 4,
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1": 0.6
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/166/originals/extracted_166.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/166/ground_truth_166.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bandar_e_anzali": "http://example.org/entity/Bandar_e_Anzali_Gilan_Iran",
+    "http://example.org/extracted/antikarisma": "http://example.org/entity/Antikarisma",
+    "http://example.org/extracted/shahin_najafi": "http://example.org/entity/Shahin_Najafi"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/antikarisma",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Antikarisma",
+          "source": "label"
+        }
+      ],
+      "context": "Antikarisma. has founder: Shahin Najafi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Antikarisma",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Antikarisma",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Antikarisma",
+        "extracted_source": "label",
+        "ground_truth_text": "Antikarisma",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9644384980201721,
+      "graph_score": 0.48221924901008606,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/bandar_e_anzali",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bandar-e Anzali, Gilan, Iran",
+          "source": "label"
+        },
+        {
+          "text": "bandar e anzali",
+          "source": "uri"
+        }
+      ],
+      "context": "Bandar-e Anzali, Gilan, Iran. inverse has birth place: Shahin Najafi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bandar_e_Anzali_Gilan_Iran",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bandar e Anzali Gilan Iran",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bandar-e Anzali, Gilan, Iran",
+        "extracted_source": "label",
+        "ground_truth_text": "Bandar e Anzali Gilan Iran",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.870415449142456,
+      "string_score": 0.9666666388511658,
+      "independent_identity_support": true,
+      "context_score": 0.9760757684707642,
+      "graph_score": 0.9880378842353821,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/shahin_najafi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shahin Najafi",
+          "source": "label"
+        }
+      ],
+      "context": "Shahin Najafi. has birth place: Bandar-e Anzali, Gilan, Iran. inverse has founder: Antikarisma.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shahin_Najafi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shahin Najafi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shahin Najafi",
+        "extracted_source": "label",
+        "ground_truth_text": "Shahin Najafi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9670490026473999,
+      "graph_score": 0.6501911878585815,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

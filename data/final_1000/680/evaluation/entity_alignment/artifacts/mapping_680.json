@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/680/originals/extracted_680.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/680/ground_truth_680.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/united_kingdom": "http://example.org/entity/British",
+    "http://example.org/extracted/joseph_amazing_technicolor_dreamcoat_film": "http://example.org/entity/Joseph_and_the_Amazing_Technicolor_Dreamcoat_film",
+    "http://example.org/extracted/four_eyed_monsters_film": "http://example.org/entity/Four_Eyed_Monsters",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/four_eyed_monsters_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Four Eyed Monsters",
+          "source": "label"
+        },
+        {
+          "text": "four eyed monsters film",
+          "source": "uri"
+        }
+      ],
+      "context": "Four Eyed Monsters. has country: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Four_Eyed_Monsters",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Four Eyed Monsters",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Four Eyed Monsters",
+        "extracted_source": "label",
+        "ground_truth_text": "Four Eyed Monsters",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9425620436668396,
+      "graph_score": 0.4712810218334198,
+      "margin": 0.6393114328384399
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/joseph_amazing_technicolor_dreamcoat_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Joseph and the Amazing Technicolor Dreamcoat (film)",
+          "source": "label"
+        },
+        {
+          "text": "joseph amazing technicolor dreamcoat film",
+          "source": "uri"
+        }
+      ],
+      "context": "Joseph and the Amazing Technicolor Dreamcoat (film). has country: British.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Joseph_and_the_Amazing_Technicolor_Dreamcoat_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Joseph and the Amazing Technicolor Dreamcoat film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Joseph and the Amazing Technicolor Dreamcoat (film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Joseph and the Amazing Technicolor Dreamcoat film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9861265420913696,
+      "string_score": 0.9909999966621399,
+      "independent_identity_support": true,
+      "context_score": 0.9647014737129211,
+      "graph_score": 0.48235073685646057,
+      "margin": 0.7508344203233719
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "British. inverse has country: Joseph and the Amazing Technicolor Dreamcoat (film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "British",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9674692153930664,
+      "graph_score": 0.4837346076965332,
+      "margin": 0.6791143119335175
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has country: Four Eyed Monsters.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9489796757698059,
+      "graph_score": 0.47448983788490295,
+      "margin": 0.6807841956615448
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

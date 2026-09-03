@@ -1,0 +1,14 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/acute_leukemia> a ex:CauseOfDeath .
+
+<http://example.org/extracted/alex_matthiessen> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/extracted/peter_matthiessen> ;
+    ex:hasParent <http://example.org/extracted/peter_matthiessen> .
+
+<http://example.org/extracted/peter_matthiessen> a ex:Agent,
+        ex:Person ;
+    ex:hasCauseOfDeath <http://example.org/extracted/acute_leukemia> ;
+    ex:hasChild <http://example.org/extracted/alex_matthiessen> .
+

@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Carl_von_Fersen a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Hans_Reinhold_von_Fersen ;
+    ex:hasParent entity:Hans_Reinhold_von_Fersen .
+
+entity:Stockholm a ex:Place .
+
+entity:Hans_Reinhold_von_Fersen a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Carl_von_Fersen ;
+    ex:hasDeathPlace entity:Stockholm .
+

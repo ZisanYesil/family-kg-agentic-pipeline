@@ -1,0 +1,30 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_a_rough_passage a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A Rough Passage" ;
+    onto:hasDirector data:franklyn_barrett .
+
+data:film_the_green_god a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Green God" ;
+    onto:hasDirector data:paul_scardon .
+
+data:australia a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Australia" ;
+    skos:altLabel "Australian" .
+
+data:franklyn_barrett a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Franklyn Barrett" ;
+    onto:hasNationality data:australia .
+
+data:paul_scardon a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Paul Scardon" .
+

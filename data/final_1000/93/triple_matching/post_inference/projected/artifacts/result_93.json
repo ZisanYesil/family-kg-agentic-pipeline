@@ -1,0 +1,90 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/93/evaluation/entity_alignment/final_extracted_aligned_93.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/93/evaluation/entity_alignment/final_ground_truth_aligned_93.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Australian",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Australian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Australian",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Australian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Jack_Robertson_footballer_born_1902",
+      "predicate": "hasCountry",
+      "object": "Australian",
+      "subject_uri": "http://example.org/entity/Jack_Robertson_footballer_born_1902",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Australian"
+    },
+    {
+      "subject": "Jack_Robertson_footballer_born_1902",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Jack_Robertson_footballer_born_1902",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Jack_Robertson_footballer_born_1902",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jack_Robertson_footballer_born_1902",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Peter_Levy_cinematographer",
+      "predicate": "hasCountry",
+      "object": "Australian",
+      "subject_uri": "http://example.org/entity/Peter_Levy_cinematographer",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Australian"
+    },
+    {
+      "subject": "Peter_Levy_cinematographer",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Peter_Levy_cinematographer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Peter_Levy_cinematographer",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Peter_Levy_cinematographer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 8,
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

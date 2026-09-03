@@ -1,0 +1,19 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/My_Three_Merry_Widows> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/entity/Fernando_Cortés> ;
+    ex:hasDirector <http://example.org/entity/Fernando_Cortés> .
+
+<http://example.org/entity/Mapy_Cortés> a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse <http://example.org/entity/Fernando_Cortés> .
+
+<http://example.org/entity/Fernando_Cortés> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1909-10-04"^^xsd:date ;
+    ex:hasDeathDate "1979"^^xsd:gYear ;
+    ex:hasSpouse <http://example.org/entity/Mapy_Cortés> .
+

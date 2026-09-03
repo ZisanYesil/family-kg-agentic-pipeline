@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_world_and_time_enough a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "World And Time Enough" ;
+    onto:hasDirector data:eric_mueller .
+
+data:eric_mueller a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Eric Mueller" ;
+    onto:hasNationality data:united_states .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" .
+

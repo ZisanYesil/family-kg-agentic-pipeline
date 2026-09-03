@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/782/evaluation/entity_alignment/baseline_extracted_aligned_782.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/782/evaluation/entity_alignment/baseline_ground_truth_aligned_782.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Jan_Karol_Opaliński",
+      "predicate": "hasParent",
+      "object": "Krzysztof_Opaliński",
+      "subject_uri": "http://example.org/entity/Jan_Karol_Opaliński",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Krzysztof_Opaliński"
+    },
+    {
+      "subject": "Krzysztof_Opaliński",
+      "predicate": "hasCountry",
+      "object": "Polish_Lithuanian_Commonwealth",
+      "subject_uri": "http://example.org/entity/Krzysztof_Opaliński",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Polish_Lithuanian_Commonwealth"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Jan_Karol_Opaliński",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jan_Karol_Opaliński",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jan_Karol_Opaliński",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jan_Karol_Opaliński",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jan_Karol_Opaliński",
+      "predicate": "label",
+      "object": "\"Jan Karol Opaliński\"",
+      "subject_uri": "http://example.org/entity/Jan_Karol_Opaliński",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jan Karol Opaliński\""
+    },
+    {
+      "subject": "Krzysztof_Opaliński",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Krzysztof_Opaliński",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Krzysztof_Opaliński",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Krzysztof_Opaliński",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Krzysztof_Opaliński",
+      "predicate": "label",
+      "object": "\"Krzysztof Opaliński\"",
+      "subject_uri": "http://example.org/entity/Krzysztof_Opaliński",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Krzysztof Opaliński\""
+    },
+    {
+      "subject": "Polish_Lithuanian_Commonwealth",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Polish_Lithuanian_Commonwealth",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Polish_Lithuanian_Commonwealth",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Polish_Lithuanian_Commonwealth",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Polish_Lithuanian_Commonwealth",
+      "predicate": "label",
+      "object": "\"Poland\"",
+      "subject_uri": "http://example.org/entity/Polish_Lithuanian_Commonwealth",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Poland\""
+    },
+    {
+      "subject": "Polish_Lithuanian_Commonwealth",
+      "predicate": "altLabel",
+      "object": "\"Polish\"",
+      "subject_uri": "http://example.org/entity/Polish_Lithuanian_Commonwealth",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Polish\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

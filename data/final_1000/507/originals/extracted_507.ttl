@@ -1,0 +1,30 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:dawn_fraser a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Dawn Fraser" ;
+    onto:hasBirthDate "1937-09-04"^^xsd:date ;
+    onto:hasOccupation data:occupation_politician,
+        data:occupation_swimmer .
+
+data:dunois_master a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Dunois Master" ;
+    onto:hasOccupation data:occupation_illuminator .
+
+data:occupation_illuminator a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "manuscript illuminator" .
+
+data:occupation_politician a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "politician" .
+
+data:occupation_swimmer a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "swimmer" .
+

@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/522/originals/extracted_522.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/522/ground_truth_522.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_denis_sanders": "http://example.org/entity/Denis_Sanders",
+    "http://example.org/extracted/institution_ucla": "http://example.org/entity/UCLA"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/institution_ucla",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "UCLA",
+          "source": "label"
+        },
+        {
+          "text": "institution ucla",
+          "source": "uri"
+        }
+      ],
+      "context": "UCLA. inverse has educated at: Denis Sanders.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/UCLA",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "UCLA",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "UCLA",
+        "extracted_source": "label",
+        "ground_truth_text": "UCLA",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_denis_sanders",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Denis Sanders",
+          "source": "label"
+        },
+        {
+          "text": "person denis sanders",
+          "source": "uri"
+        }
+      ],
+      "context": "Denis Sanders. has educated at: UCLA. inverse has director: Shock Treatment (1964 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Denis_Sanders",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Denis Sanders",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Denis Sanders",
+        "extracted_source": "label",
+        "ground_truth_text": "Denis Sanders",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9460045099258423,
+      "graph_score": 0.9730022549629211,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_shock_treatment_1964",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shock Treatment (1964 film)",
+          "source": "label"
+        },
+        {
+          "text": "film shock treatment 1964",
+          "source": "uri"
+        }
+      ],
+      "context": "Shock Treatment (1964 film). has director: Denis Sanders.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shock_Treatment",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shock Treatment",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shock Treatment (1964 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Shock Treatment",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8291580677032471,
+      "name_embedding_score": 0.8104912042617798,
+      "string_score": 0.7464285492897034,
+      "independent_identity_support": true,
+      "context_score": 0.8984427452087402,
+      "graph_score": 0.9492213726043701,
+      "margin": 0.8291580677032471
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

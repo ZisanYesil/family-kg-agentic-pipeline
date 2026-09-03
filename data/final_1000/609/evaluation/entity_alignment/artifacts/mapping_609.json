@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/609/originals/extracted_609.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/609/ground_truth_609.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/when_the_angels_sleep": "http://example.org/entity/When_the_Angels_Sleep",
+    "http://example.org/extracted/strevicky_slecny_pavliny": "http://example.org/entity/Střevíčky_slečny_Pavlíny"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/strevicky_slecny_pavliny",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Střevíčky slečny Pavlíny",
+          "source": "label"
+        },
+        {
+          "text": "strevicky slecny pavliny",
+          "source": "uri"
+        }
+      ],
+      "context": "Střevíčky slečny Pavlíny. has publication date: 1941.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Střevíčky_slečny_Pavlíny",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Střevíčky slečny Pavlíny",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Střevíčky slečny Pavlíny",
+        "extracted_source": "label",
+        "ground_truth_text": "Střevíčky slečny Pavlíny",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7448636591434479
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/when_the_angels_sleep",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cuando los ángeles duermen",
+          "source": "altLabel"
+        },
+        {
+          "text": "When The Angels Sleep",
+          "source": "label"
+        }
+      ],
+      "context": "Cuando los ángeles duermen. has publication date: 1947.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/When_the_Angels_Sleep",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "When the Angels Sleep",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "When The Angels Sleep",
+        "extracted_source": "label",
+        "ground_truth_text": "When the Angels Sleep",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.999934732913971,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8888214826583862,
+      "graph_score": 0.8888214826583862,
+      "margin": 0.7365601062774658
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

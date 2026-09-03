@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:hurlingham_reggae_band a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Hurlingham Reggae Band" ;
+    onto:hasMember data:luca_prodan .
+
+data:italy a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Italy" .
+
+data:luca_prodan a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Luca Prodan" ;
+    onto:hasNationality data:italy,
+        data:scotland .
+
+data:scotland a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Scotland" .
+

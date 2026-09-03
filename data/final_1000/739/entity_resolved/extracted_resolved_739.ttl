@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_jo_jeeta_wohi_sikandar_1992 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Jo Jeeta Wohi Sikandar" ;
+    onto:hasDirector data:person_mansoor_khan .
+
+data:award_filmfare_award_best_director a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Award for Best Director" .
+
+data:award_national_film_award_best_popular_film_providing_wholesome_entertainment a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "National Film Award for Best Popular Film Providing Wholesome Entertainment" .
+
+data:person_mansoor_khan a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mansoor Khan" ;
+    onto:hasAwardReceived data:award_filmfare_award_best_director,
+        data:award_national_film_award_best_popular_film_providing_wholesome_entertainment .
+

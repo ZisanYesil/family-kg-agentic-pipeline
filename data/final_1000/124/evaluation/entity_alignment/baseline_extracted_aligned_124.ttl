@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Boulton_Watt> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Boulton & Watt" ;
+    onto:hasFounder <http://example.org/entity/Matthew_Boulton>,
+        data:james_watt_1736 ;
+    skos:altLabel "Boulton and Watt" .
+
+<http://example.org/entity/Matthew_Boulton> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Matthew Boulton" ;
+    onto:hasDeathDate "1809-08-17"^^xsd:date .
+
+data:james_watt_1736 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "James Watt" ;
+    onto:hasDeathDate "1819-08-25"^^xsd:date .
+

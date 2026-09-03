@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Macrianus_Minor a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Macrianus_Major ;
+    ex:hasParent entity:Macrianus_Major .
+
+entity:Thrace a ex:Place .
+
+entity:Macrianus_Major a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Macrianus_Minor ;
+    ex:hasDeathPlace entity:Thrace .
+

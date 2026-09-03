@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Jeevan_Mukt> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Jeevan Mukt" ;
+    onto:hasDirector <http://example.org/entity/Sudhendu_Roy> .
+
+<http://example.org/entity/Filmfare_Award> a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Award for Best Art Direction" .
+
+<http://example.org/entity/Sudhendu_Roy> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sudhendu Roy" ;
+    onto:hasAwardReceived <http://example.org/entity/Filmfare_Award> .
+

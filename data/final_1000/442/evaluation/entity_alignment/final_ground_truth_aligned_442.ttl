@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Caerphilly a ex:Place .
+
+entity:Hugh_le_Despenser a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Eleanor_de_Clare ;
+    ex:hasParent entity:Eleanor_de_Clare .
+
+entity:Eleanor_de_Clare a ex:Agent,
+        ex:Person ;
+    ex:hasBirthPlace entity:Caerphilly ;
+    ex:hasChild entity:Hugh_le_Despenser .
+

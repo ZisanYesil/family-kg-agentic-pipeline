@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_not_of_this_earth_1988 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Not of This Earth (1988 film)" ;
+    onto:hasDirector data:jim_wynorski .
+
+data:glen_cove_long_island_new_york a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Glen Cove, Long Island, New York" .
+
+data:jim_wynorski a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jim Wynorski" ;
+    onto:hasBirthPlace data:glen_cove_long_island_new_york .
+

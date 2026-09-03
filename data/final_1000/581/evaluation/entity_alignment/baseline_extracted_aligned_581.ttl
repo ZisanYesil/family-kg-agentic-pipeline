@@ -1,0 +1,22 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Barbara_Babe_Cushing_Mortimer_Paley> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Barbara \"Babe\" Cushing Mortimer Paley" ;
+    onto:hasSpouse <http://example.org/entity/William_S_Paley> ;
+    skos:altLabel "Babe Paley" .
+
+<http://example.org/entity/Columbia_Broadcasting_System> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Columbia Broadcasting System" ;
+    skos:altLabel "CBS" .
+
+<http://example.org/entity/William_S_Paley> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Samuel Paley" ;
+    onto:hasEmployer <http://example.org/entity/Columbia_Broadcasting_System> ;
+    skos:altLabel "William S. Paley" .
+

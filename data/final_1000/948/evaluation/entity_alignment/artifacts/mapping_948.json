@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/948/originals/extracted_948.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/948/ground_truth_948.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_william_clemens": "http://example.org/entity/William_Clemens",
+    "http://example.org/extracted/film_calling_philo_vance": "http://example.org/entity/Calling_Philo_Vance",
+    "http://example.org/extracted/film_the_witchs_curse": "http://example.org/entity/The_Witch_s_Curse",
+    "http://example.org/extracted/person_riccardo_freda": "http://example.org/entity/Riccardo_Freda"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_calling_philo_vance",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Calling Philo Vance",
+          "source": "altLabel"
+        },
+        {
+          "text": "film calling philo vance",
+          "source": "uri"
+        }
+      ],
+      "context": "Calling Philo Vance. has director: William Clemens.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Calling_Philo_Vance",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Calling Philo Vance",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Calling Philo Vance",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Calling Philo Vance",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8767274916172028
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_witchs_curse",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Witch's Curse",
+          "source": "altLabel"
+        },
+        {
+          "text": "film the witchs curse",
+          "source": "uri"
+        }
+      ],
+      "context": "The Witch's Curse. has director: Riccardo Freda.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Witch_s_Curse",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Witch s Curse",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Witch's Curse",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "The Witch s Curse",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9908926486968994,
+      "string_score": 0.9735293984413147,
+      "independent_identity_support": true,
+      "context_score": 0.9923213124275208,
+      "graph_score": 0.996160626411438,
+      "margin": 0.8974636942148209
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_riccardo_freda",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Riccardo Freda",
+          "source": "altLabel"
+        },
+        {
+          "text": "person riccardo freda",
+          "source": "uri"
+        }
+      ],
+      "context": "Riccardo Freda. has death date: 1999-12-20. inverse has director: The Witch's Curse.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Riccardo_Freda",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Riccardo Freda",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Riccardo Freda",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Riccardo Freda",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9945115447044373,
+      "graph_score": 0.997255802154541,
+      "margin": 0.7203244864940643
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_william_clemens",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William Clemens",
+          "source": "altLabel"
+        },
+        {
+          "text": "person william clemens",
+          "source": "uri"
+        }
+      ],
+      "context": "William Clemens. has death date: 1980-04-29. inverse has director: Calling Philo Vance.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_Clemens",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William Clemens",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William Clemens",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "William Clemens",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8428436517715454,
+      "graph_score": 0.9214218258857727,
+      "margin": 0.3378280997276306
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/William_Clemens_film_director"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/256/evaluation/entity_alignment/final_extracted_aligned_256.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/256/evaluation/entity_alignment/final_ground_truth_aligned_256.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Filmfare_Award",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/Filmfare_Award",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "Howrah_Bridge",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Howrah_Bridge",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Howrah_Bridge",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Howrah_Bridge",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "O_P_Nayyar",
+      "predicate": "hasAwardReceived",
+      "object": "Filmfare_Award",
+      "subject_uri": "http://example.org/entity/O_P_Nayyar",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Filmfare_Award"
+    },
+    {
+      "subject": "O_P_Nayyar",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/O_P_Nayyar",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "O_P_Nayyar",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/O_P_Nayyar",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Howrah_Bridge",
+      "predicate": "hasComposer",
+      "object": "O_P_Nayyar",
+      "subject_uri": "http://example.org/entity/Howrah_Bridge",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/O_P_Nayyar"
+    },
+    {
+      "subject": "Howrah_Bridge",
+      "predicate": "hasCreator",
+      "object": "O_P_Nayyar",
+      "subject_uri": "http://example.org/entity/Howrah_Bridge",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/O_P_Nayyar"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Howrah_Bridge",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Howrah_Bridge",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 9,
+    "true_positives": 6,
+    "false_positives": 1,
+    "false_negatives": 2,
+    "precision": 0.8571428571428571,
+    "recall": 0.75,
+    "f1": 0.7999999999999999
+  },
+  "stage": "post_inference"
+}

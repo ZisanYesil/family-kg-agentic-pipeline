@@ -1,0 +1,37 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/I_ll_Get_By_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "I'll Get By" ;
+    onto:hasDirector <http://example.org/entity/Richard_Sale> .
+
+<http://example.org/entity/The_Reincarnation_of_Golden_Lotus> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Reincarnation of Golden Lotus" ;
+    onto:hasDirector <http://example.org/entity/Clara_Law> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/Clara_Law> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Clara Law" ;
+    onto:hasNationality data:country_hong_kong ;
+    skos:altLabel "Clara Law Cheuk-yiu" .
+
+<http://example.org/entity/Richard_Sale> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Richard Sale" ;
+    onto:hasNationality <http://example.org/entity/American> .
+
+data:country_hong_kong a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Hong Kong" ;
+    skos:altLabel "Hong Kong" .
+

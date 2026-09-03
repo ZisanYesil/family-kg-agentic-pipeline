@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/500/originals/extracted_500.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/500/ground_truth_500.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_say_it_in_russian": "http://example.org/entity/Say_it_in_Russian",
+    "http://example.org/extracted/person_jeff_celentano": "http://example.org/entity/Jeff_Celentano",
+    "http://example.org/extracted/place_pemberton_new_jersey": "http://example.org/entity/Pemberton_New_Jersey"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_say_it_in_russian",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Say it in Russian",
+          "source": "label"
+        },
+        {
+          "text": "film say it in russian",
+          "source": "uri"
+        }
+      ],
+      "context": "Say it in Russian. has director: Jeff Weston.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Say_it_in_Russian",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Say it in Russian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Say it in Russian",
+        "extracted_source": "label",
+        "ground_truth_text": "Say it in Russian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8176758885383606,
+      "graph_score": 0.9088379144668579,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_jeff_celentano",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jeff Weston",
+          "source": "altLabel"
+        },
+        {
+          "text": "Jeff Celentano",
+          "source": "label"
+        },
+        {
+          "text": "person jeff celentano",
+          "source": "uri"
+        }
+      ],
+      "context": "Jeff Weston. has birth place: Pemberton, New Jersey. inverse has director: Say it in Russian.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jeff_Celentano",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jeff Celentano",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jeff Celentano",
+        "extracted_source": "label",
+        "ground_truth_text": "Jeff Celentano",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.832947850227356,
+      "graph_score": 0.916473925113678,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_pemberton_new_jersey",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pemberton, New Jersey",
+          "source": "label"
+        },
+        {
+          "text": "place pemberton new jersey",
+          "source": "uri"
+        }
+      ],
+      "context": "Pemberton, New Jersey. inverse has birth place: Jeff Weston.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pemberton_New_Jersey",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pemberton New Jersey",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pemberton, New Jersey",
+        "extracted_source": "label",
+        "ground_truth_text": "Pemberton New Jersey",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9494534730911255,
+      "string_score": 0.9890244007110596,
+      "independent_identity_support": true,
+      "context_score": 0.8353136777877808,
+      "graph_score": 0.9176568388938904,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,69 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "ed741a3754361407b8a29423602421f4cad7d6b4657fe8d2f002b9e3ef81b915",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/the_sparrow_fluttering_film",
+        "path": null,
+        "value": "http://example.org/extracted/lucio_dalla",
+        "expected": null,
+        "message": "Relation phrase 'theme song by' from http://example.org/extracted/the_sparrow_fluttering_film to http://example.org/extracted/lucio_dalla was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "ed741a3754361407b8a29423602421f4cad7d6b4657fe8d2f002b9e3ef81b915",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/the_sparrow_fluttering_film",
+            "path": null,
+            "value": "http://example.org/extracted/lucio_dalla",
+            "expected": null,
+            "message": "Relation phrase 'theme song by' from http://example.org/extracted/the_sparrow_fluttering_film to http://example.org/extracted/lucio_dalla was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 8,
+      "outcome": "feedback_error",
+      "error": "Model returned an invalid feedback plan: 2 validation errors for FeedbackPlan\nrepairs.0.operations.0.add_triple.subject\n  Value error, must be an absolute IRI with a URI scheme [type=value_error, input_value=\"{'value':'http://example...ing_film','kind':'iri'}\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error\nrepairs.0.operations.0.add_triple.predicate\n  Value error, must be an absolute IRI with a URI scheme [type=value_error, input_value=\"{'value':'http://example...Composer','kind':'iri'}\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "triples_after": 8
+    }
+  ],
+  "status": "feedback_error",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "ed741a3754361407b8a29423602421f4cad7d6b4657fe8d2f002b9e3ef81b915",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/the_sparrow_fluttering_film",
+        "path": null,
+        "value": "http://example.org/extracted/lucio_dalla",
+        "expected": null,
+        "message": "Relation phrase 'theme song by' from http://example.org/extracted/the_sparrow_fluttering_film to http://example.org/extracted/lucio_dalla was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

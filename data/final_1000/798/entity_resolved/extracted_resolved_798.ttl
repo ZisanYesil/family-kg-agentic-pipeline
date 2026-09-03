@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:prince_albert a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Albert of Schleswig-Holstein-Sonderburg-Glücksburg" ;
+    onto:hasFather data:friedrich_duke .
+
+data:friedrich_duke a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Friedrich, Duke of Schleswig-Holstein-Sonderburg-Glücksburg" ;
+    onto:hasMother data:louise_caroline .
+
+data:louise_caroline a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Louise Caroline of Hesse-Kassel" .
+

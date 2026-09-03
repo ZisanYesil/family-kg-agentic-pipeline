@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Back_Home> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Back Home" ;
+    onto:hasDirector <http://example.org/entity/Piers_Haggard> .
+
+<http://example.org/entity/Daisy_Haggard> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Daisy Haggard" .
+
+<http://example.org/entity/Piers_Haggard> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Piers Haggard" ;
+    onto:hasChild <http://example.org/entity/Daisy_Haggard> .
+

@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/417/originals/extracted_417.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/417/ground_truth_417.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/catalpa_farm": "http://example.org/entity/Catalpa_Farm",
+    "http://example.org/extracted/temple_adath_israel_owensboro": "http://example.org/entity/Temple_Adath_Israel_Owensboro_Kentucky",
+    "http://example.org/extracted/united_states": "http://example.org/entity/United_States"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/catalpa_farm",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Catalpa Farm",
+          "source": "label"
+        }
+      ],
+      "context": "Catalpa Farm. has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Catalpa_Farm",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Catalpa Farm",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Catalpa Farm",
+        "extracted_source": "label",
+        "ground_truth_text": "Catalpa Farm",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.6995296478271484
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/temple_adath_israel_owensboro",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Temple Adath Israel",
+          "source": "altLabel"
+        },
+        {
+          "text": "Temple Adath Israel (Owensboro, Kentucky)",
+          "source": "label"
+        },
+        {
+          "text": "temple adath israel owensboro",
+          "source": "uri"
+        }
+      ],
+      "context": "Temple Adath Israel. has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Temple_Adath_Israel_Owensboro_Kentucky",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Temple Adath Israel Owensboro Kentucky",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Temple Adath Israel (Owensboro, Kentucky)",
+        "extracted_source": "label",
+        "ground_truth_text": "Temple Adath Israel Owensboro Kentucky",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8436279296875,
+      "string_score": 0.9829114079475403,
+      "independent_identity_support": true,
+      "context_score": 0.7495284080505371,
+      "graph_score": 0.8747642040252686,
+      "margin": 0.6648021340370178
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "United States. inverse has country: Catalpa Farm. inverse has country: Temple Adath Israel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_States",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United States",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "label",
+        "ground_truth_text": "United States",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.946051299571991,
+      "graph_score": 0.9730256795883179,
+      "margin": 0.8068665862083435
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

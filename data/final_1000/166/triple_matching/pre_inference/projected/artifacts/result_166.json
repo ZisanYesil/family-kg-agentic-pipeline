@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/166/evaluation/entity_alignment/baseline_extracted_aligned_166.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/166/evaluation/entity_alignment/baseline_ground_truth_aligned_166.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Shahin_Najafi",
+      "predicate": "hasBirthPlace",
+      "object": "Bandar_e_Anzali_Gilan_Iran",
+      "subject_uri": "http://example.org/entity/Shahin_Najafi",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Bandar_e_Anzali_Gilan_Iran"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Antikarisma",
+      "predicate": "hasMember",
+      "object": "Shahin_Najafi",
+      "subject_uri": "http://example.org/entity/Antikarisma",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasMember",
+      "object_term": "http://example.org/entity/Shahin_Najafi"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Antikarisma",
+      "predicate": "hasFounder",
+      "object": "Shahin_Najafi",
+      "subject_uri": "http://example.org/entity/Antikarisma",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Shahin_Najafi"
+    },
+    {
+      "subject": "Antikarisma",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Antikarisma",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Antikarisma",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Antikarisma",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Antikarisma",
+      "predicate": "label",
+      "object": "\"Antikarisma\"",
+      "subject_uri": "http://example.org/entity/Antikarisma",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Antikarisma\""
+    },
+    {
+      "subject": "Bandar_e_Anzali_Gilan_Iran",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Bandar_e_Anzali_Gilan_Iran",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Bandar_e_Anzali_Gilan_Iran",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Bandar_e_Anzali_Gilan_Iran",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Bandar_e_Anzali_Gilan_Iran",
+      "predicate": "label",
+      "object": "\"Bandar-e Anzali, Gilan, Iran\"",
+      "subject_uri": "http://example.org/entity/Bandar_e_Anzali_Gilan_Iran",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bandar-e Anzali, Gilan, Iran\""
+    },
+    {
+      "subject": "Shahin_Najafi",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Shahin_Najafi",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Shahin_Najafi",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Shahin_Najafi",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Shahin_Najafi",
+      "predicate": "label",
+      "object": "\"Shahin Najafi\"",
+      "subject_uri": "http://example.org/entity/Shahin_Najafi",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Shahin Najafi\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

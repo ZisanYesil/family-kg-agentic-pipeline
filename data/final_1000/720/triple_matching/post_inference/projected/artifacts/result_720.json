@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/720/evaluation/entity_alignment/final_extracted_aligned_720.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/720/evaluation/entity_alignment/final_ground_truth_aligned_720.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Arthur_MacArthur_IV",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Arthur_MacArthur_IV",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Arthur_MacArthur_IV",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Arthur_MacArthur_IV",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Douglas_MacArthur",
+      "predicate": "hasCountry",
+      "object": "American",
+      "subject_uri": "http://example.org/entity/Douglas_MacArthur",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/American"
+    },
+    {
+      "subject": "Douglas_MacArthur",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Douglas_MacArthur",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Douglas_MacArthur",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Douglas_MacArthur",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Arthur_MacArthur_IV",
+      "predicate": "hasParent",
+      "object": "Douglas_MacArthur",
+      "subject_uri": "http://example.org/entity/Arthur_MacArthur_IV",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Douglas_MacArthur"
+    },
+    {
+      "subject": "Douglas_MacArthur",
+      "predicate": "hasChild",
+      "object": "Arthur_MacArthur_IV",
+      "subject_uri": "http://example.org/entity/Douglas_MacArthur",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Arthur_MacArthur_IV"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Arthur_MacArthur_IV",
+      "predicate": "hasChild",
+      "object": "Douglas_MacArthur",
+      "subject_uri": "http://example.org/entity/Arthur_MacArthur_IV",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Douglas_MacArthur"
+    },
+    {
+      "subject": "Douglas_MacArthur",
+      "predicate": "hasParent",
+      "object": "Arthur_MacArthur_IV",
+      "subject_uri": "http://example.org/entity/Douglas_MacArthur",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Arthur_MacArthur_IV"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 11,
+    "true_positives": 7,
+    "false_positives": 2,
+    "false_negatives": 2,
+    "precision": 0.7777777777777778,
+    "recall": 0.7777777777777778,
+    "f1": 0.7777777777777778
+  },
+  "stage": "post_inference"
+}

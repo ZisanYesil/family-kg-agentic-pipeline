@@ -1,0 +1,123 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/308/originals/extracted_308.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/308/ground_truth_308.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/juliana_netherlands": "http://example.org/entity/Juliana_of_the_Netherlands"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/juliana_netherlands",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Juliana",
+          "source": "altLabel"
+        },
+        {
+          "text": "Juliana of the Netherlands",
+          "source": "label"
+        },
+        {
+          "text": "juliana netherlands",
+          "source": "uri"
+        }
+      ],
+      "context": "Juliana. has father: Henry of Mecklenburg-Schwerin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Juliana_of_the_Netherlands",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Juliana of the Netherlands",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Juliana of the Netherlands",
+        "extracted_source": "label",
+        "ground_truth_text": "Juliana of the Netherlands",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5772784352302551,
+      "graph_score": 0.5772784352302551,
+      "margin": 0.5491260290145874
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/prince_henry_mecklenburg_schwerin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henry of Mecklenburg-Schwerin",
+          "source": "altLabel"
+        },
+        {
+          "text": "Prince Henry of Mecklenburg-Schwerin",
+          "source": "label"
+        },
+        {
+          "text": "prince henry mecklenburg schwerin",
+          "source": "uri"
+        }
+      ],
+      "context": "Henry of Mecklenburg-Schwerin. inverse has father: Juliana.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Duke_Henry_of_Mecklenburg_Schwerin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Duke Henry of Mecklenburg Schwerin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henry of Mecklenburg-Schwerin",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Duke Henry of Mecklenburg Schwerin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7747645378112793,
+      "name_embedding_score": 0.912414014339447,
+      "string_score": 0.8999999761581421,
+      "independent_identity_support": true,
+      "context_score": 0.7484605312347412,
+      "graph_score": 0.3742302656173706,
+      "margin": 0.4212459623813629
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Wilhelmina"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/533/originals/extracted_533.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/533/ground_truth_533.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/janine_krieber": "http://example.org/entity/Janine_Krieber",
+    "http://example.org/extracted/stephane_dion": "http://example.org/entity/Stéphane_Dion"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/janine_krieber",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Janine Krieber",
+          "source": "label"
+        }
+      ],
+      "context": "Janine Krieber. has spouse: Stéphane Dion.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Janine_Krieber",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Janine Krieber",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Janine Krieber",
+        "extracted_source": "label",
+        "ground_truth_text": "Janine Krieber",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6655983030796051
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/stephane_dion",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stéphane Dion",
+          "source": "label"
+        },
+        {
+          "text": "stephane dion",
+          "source": "uri"
+        }
+      ],
+      "context": "Stéphane Dion. inverse has spouse: Janine Krieber.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stéphane_Dion",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stéphane Dion",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stéphane Dion",
+        "extracted_source": "label",
+        "ground_truth_text": "Stéphane Dion",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8512697815895081,
+      "graph_score": 0.9256348609924316,
+      "margin": 0.581170380115509
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Germany",
+          "source": "label"
+        }
+      ],
+      "context": "Germany.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Université_de_Montréal"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/810/originals/extracted_810.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/810/ground_truth_810.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/caroline_kennedy": "http://example.org/entity/Caroline_Bouvier_Kennedy",
+    "http://example.org/extracted/jacqueline_kennedy_onassis": "http://example.org/entity/Jacqueline_Lee_Kennedy_Onassis"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/caroline_kennedy",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Caroline Bouvier Kennedy",
+          "source": "label"
+        },
+        {
+          "text": "caroline kennedy",
+          "source": "uri"
+        }
+      ],
+      "context": "Caroline Bouvier Kennedy. has mother: Jacqueline Bouvier Kennedy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Caroline_Bouvier_Kennedy",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Caroline Bouvier Kennedy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Caroline Bouvier Kennedy",
+        "extracted_source": "label",
+        "ground_truth_text": "Caroline Bouvier Kennedy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9656121730804443,
+      "graph_score": 0.48280608654022217,
+      "margin": 0.42178797721862793
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jacqueline_kennedy_onassis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jacqueline Bouvier Kennedy",
+          "source": "altLabel"
+        },
+        {
+          "text": "Jacqueline Lee Kennedy Onassis",
+          "source": "label"
+        },
+        {
+          "text": "jacqueline kennedy onassis",
+          "source": "uri"
+        }
+      ],
+      "context": "Jacqueline Bouvier Kennedy. has birth place: Southampton, New York. inverse has mother: Caroline Bouvier Kennedy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jacqueline_Lee_Kennedy_Onassis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jacqueline Lee Kennedy Onassis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jacqueline Lee Kennedy Onassis",
+        "extracted_source": "label",
+        "ground_truth_text": "Jacqueline Lee Kennedy Onassis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7218368649482727,
+      "graph_score": 0.36091843247413635,
+      "margin": 0.1837143898010254
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/southampton_new_york",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Southampton, New York",
+          "source": "label"
+        },
+        {
+          "text": "southampton new york",
+          "source": "uri"
+        }
+      ],
+      "context": "Southampton, New York. inverse has birth place: Jacqueline Bouvier Kennedy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Southampton",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Southampton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Southampton, New York",
+        "extracted_source": "label",
+        "ground_truth_text": "Southampton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8121983408927917,
+      "name_embedding_score": 0.8199676871299744,
+      "string_score": 0.6927083134651184,
+      "independent_identity_support": false,
+      "context_score": 0.8322993516921997,
+      "graph_score": 0.9161496758460999,
+      "margin": 0.8121983408927917
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Jacqueline_Bouvier"
+  ]
+}

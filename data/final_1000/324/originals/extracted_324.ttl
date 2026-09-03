@@ -1,0 +1,37 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:fine_by_me_song a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Fine by Me" ;
+    onto:hasPerformer data:chris_brown ;
+    skos:altLabel "Fine by Me (Chris Brown song)" .
+
+data:bet_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "BET Award" .
+
+data:billboard_music_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Billboard Music Award" .
+
+data:chris_brown a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Chris Brown" ;
+    onto:hasAwardReceived data:bet_award,
+        data:billboard_music_award,
+        data:grammy_award,
+        data:soul_train_award ;
+    skos:altLabel "Christopher Maurice Brown" .
+
+data:grammy_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Grammy Award" .
+
+data:soul_train_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Soul Train Music Award" .
+

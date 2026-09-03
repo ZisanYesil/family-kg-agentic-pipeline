@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/One_But_a_Lion> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "One, But a Lion!" ;
+    onto:hasDirector <http://example.org/entity/Gustaf_Molander> .
+
+<http://example.org/entity/Gustaf_Molander> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gustaf Molander" ;
+    onto:hasBirthPlace <http://example.org/entity/Helsingfors> .
+
+<http://example.org/entity/Helsingfors> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Helsingfors" ;
+    skos:altLabel "Helsinki" .
+

@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Guilty_of_Treason> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Guilty of Treason" ;
+    onto:hasDirector <http://example.org/entity/Felix_E_Feist> ;
+    skos:altLabel "Treason" .
+
+<http://example.org/entity/Felix_E_Feist> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Felix E. Feist" ;
+    onto:hasBirthPlace <http://example.org/entity/New_York> ;
+    skos:altLabel "Felix Ellison Feist" .
+
+<http://example.org/entity/New_York> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "New York City" .
+

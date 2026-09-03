@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/342/evaluation/entity_alignment/baseline_extracted_aligned_342.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/342/evaluation/entity_alignment/baseline_ground_truth_aligned_342.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Miriam_Adelson",
+      "predicate": "hasSpouse",
+      "object": "Sheldon_Adelson",
+      "subject_uri": "http://example.org/entity/Miriam_Adelson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Sheldon_Adelson"
+    },
+    {
+      "subject": "Sheldon_Adelson",
+      "predicate": "hasEmployer",
+      "object": "Las_Vegas_Sands",
+      "subject_uri": "http://example.org/entity/Sheldon_Adelson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/Las_Vegas_Sands"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Las_Vegas_Sands",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Las_Vegas_Sands",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Las_Vegas_Sands",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Las_Vegas_Sands",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Las_Vegas_Sands",
+      "predicate": "label",
+      "object": "\"Las Vegas Sands Corporation\"",
+      "subject_uri": "http://example.org/entity/Las_Vegas_Sands",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Las Vegas Sands Corporation\""
+    },
+    {
+      "subject": "Miriam_Adelson",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Miriam_Adelson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Miriam_Adelson",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Miriam_Adelson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Miriam_Adelson",
+      "predicate": "label",
+      "object": "\"Miriam Adelson\"",
+      "subject_uri": "http://example.org/entity/Miriam_Adelson",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Miriam Adelson\""
+    },
+    {
+      "subject": "Sheldon_Adelson",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sheldon_Adelson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sheldon_Adelson",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sheldon_Adelson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sheldon_Adelson",
+      "predicate": "label",
+      "object": "\"Sheldon Adelson\"",
+      "subject_uri": "http://example.org/entity/Sheldon_Adelson",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sheldon Adelson\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

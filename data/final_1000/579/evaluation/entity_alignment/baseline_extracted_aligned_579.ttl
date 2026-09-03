@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Everything_I_Like> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Everything I Like" ;
+    onto:hasDirector <http://example.org/entity/Martin_Šulík> .
+
+<http://example.org/entity/Academy_of_Performing_Arts_in_Bratislava> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Academy of Performing Arts in Bratislava" .
+
+<http://example.org/entity/Martin_Šulík> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Martin Šulík" ;
+    onto:hasEducatedAt <http://example.org/entity/Academy_of_Performing_Arts_in_Bratislava> .
+

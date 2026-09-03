@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Clodia_Pulchra a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Fulvia ;
+    ex:hasParent entity:Fulvia .
+
+entity:Roman a ex:Place .
+
+entity:Fulvia a ex:Agent,
+        ex:Person ;
+    ex:hasBirthPlace entity:Roman ;
+    ex:hasChild entity:Clodia_Pulchra .
+

@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/List_of_The_Dillinger_Escape_Plan_band_members> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "The Dillinger Escape Plan" ;
+    onto:hasMember <http://example.org/entity/Ben_Weinman> .
+
+<http://example.org/entity/Ben_Weinman> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Benjamin Weinman" ;
+    onto:hasBirthDate "1975-08-08"^^xsd:date ;
+    skos:altLabel "Ben Weinman",
+        "Benjamin A. Weinman" .
+

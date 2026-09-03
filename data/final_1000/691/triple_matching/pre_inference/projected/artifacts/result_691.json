@@ -1,0 +1,188 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/691/evaluation/entity_alignment/baseline_extracted_aligned_691.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/691/evaluation/entity_alignment/baseline_ground_truth_aligned_691.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Kirk_Douglas",
+      "predicate": "hasBirthDate",
+      "object": "\"1916-12-09\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Kirk_Douglas",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1916-12-09\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "The_Indian_Fighter",
+      "predicate": "hasProducer",
+      "object": "Kirk_Douglas",
+      "subject_uri": "http://example.org/entity/The_Indian_Fighter",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasProducer",
+      "object_term": "http://example.org/entity/Kirk_Douglas"
+    },
+    {
+      "subject": "The_Story_of_Three_Loves",
+      "predicate": "hasProducer",
+      "object": "Sidney_Franklin",
+      "subject_uri": "http://example.org/entity/The_Story_of_Three_Loves",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasProducer",
+      "object_term": "http://example.org/entity/Sidney_Franklin"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Sidney_Franklin_director",
+      "predicate": "hasBirthDate",
+      "object": "\"1893-03-21\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Sidney_Franklin_director",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1893-03-21\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Kirk_Douglas",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Kirk_Douglas",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Kirk_Douglas",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Kirk_Douglas",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Kirk_Douglas",
+      "predicate": "label",
+      "object": "\"Kirk Douglas\"",
+      "subject_uri": "http://example.org/entity/Kirk_Douglas",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Kirk Douglas\""
+    },
+    {
+      "subject": "Sidney_Franklin",
+      "predicate": "hasBirthDate",
+      "object": "\"1893-03-21\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Sidney_Franklin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1893-03-21\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Sidney_Franklin",
+      "predicate": "hasDeathDate",
+      "object": "\"1972-05-18\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Sidney_Franklin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1972-05-18\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Sidney_Franklin",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sidney_Franklin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sidney_Franklin",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sidney_Franklin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sidney_Franklin",
+      "predicate": "label",
+      "object": "\"Sidney Franklin\"",
+      "subject_uri": "http://example.org/entity/Sidney_Franklin",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sidney Franklin\""
+    },
+    {
+      "subject": "The_Indian_Fighter",
+      "predicate": "hasPublicationDate",
+      "object": "\"1955\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/The_Indian_Fighter",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1955\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "The_Indian_Fighter",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Indian_Fighter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Indian_Fighter",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Indian_Fighter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Indian_Fighter",
+      "predicate": "label",
+      "object": "\"The Indian Fighter\"",
+      "subject_uri": "http://example.org/entity/The_Indian_Fighter",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Indian Fighter\""
+    },
+    {
+      "subject": "The_Story_of_Three_Loves",
+      "predicate": "hasPublicationDate",
+      "object": "\"1953\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/The_Story_of_Three_Loves",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1953\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "The_Story_of_Three_Loves",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Story_of_Three_Loves",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Story_of_Three_Loves",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Story_of_Three_Loves",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Story_of_Three_Loves",
+      "predicate": "label",
+      "object": "\"The Story Of Three Loves\"",
+      "subject_uri": "http://example.org/entity/The_Story_of_Three_Loves",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Story Of Three Loves\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 4,
+    "extracted_triples_in_scope": 19,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 20,
+    "true_positives": 3,
+    "false_positives": 16,
+    "false_negatives": 1,
+    "precision": 0.15789473684210525,
+    "recall": 0.75,
+    "f1": 0.2608695652173913
+  },
+  "stage": "pre_inference"
+}

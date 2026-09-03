@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Ajax_Olé_Olé_Olé> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Ajax, Olé Olé Olé" ;
+    onto:hasPerformer <http://example.org/entity/Willy_Alberti> .
+
+<http://example.org/entity/Willeke_Alberti> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Willeke Alberti" .
+
+<http://example.org/entity/Willy_Alberti> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Willy Alberti" ;
+    onto:hasChild <http://example.org/entity/Willeke_Alberti> ;
+    skos:altLabel "Carel Verbrugge" .
+

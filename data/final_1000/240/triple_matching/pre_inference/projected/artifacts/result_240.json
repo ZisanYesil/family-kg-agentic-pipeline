@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/240/evaluation/entity_alignment/baseline_extracted_aligned_240.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/240/evaluation/entity_alignment/baseline_ground_truth_aligned_240.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Bronislav_Gimpel",
+      "predicate": "hasBirthDate",
+      "object": "\"1911-01-29\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Bronislav_Gimpel",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1911-01-29\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Bronislav_Gimpel",
+      "predicate": "hasDeathDate",
+      "object": "\"1979-05-01\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Bronislav_Gimpel",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1979-05-01\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Lilavati_Singh",
+      "predicate": "hasBirthDate",
+      "object": "\"1868-12-14\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Lilavati_Singh",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1868-12-14\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Lilavati_Singh",
+      "predicate": "hasDeathDate",
+      "object": "\"1909-05-09\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Lilavati_Singh",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1909-05-09\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Bronislav_Gimpel",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bronislav_Gimpel",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Bronislav_Gimpel",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Bronislav_Gimpel",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Bronislav_Gimpel",
+      "predicate": "label",
+      "object": "\"Bronislav Gimpel\"",
+      "subject_uri": "http://example.org/entity/Bronislav_Gimpel",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bronislav Gimpel\""
+    },
+    {
+      "subject": "Lilavati_Singh",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Lilavati_Singh",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Lilavati_Singh",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lilavati_Singh",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lilavati_Singh",
+      "predicate": "label",
+      "object": "\"Lilavati Singh\"",
+      "subject_uri": "http://example.org/entity/Lilavati_Singh",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Lilavati Singh\""
+    },
+    {
+      "subject": "Lilavati_Singh",
+      "predicate": "altLabel",
+      "object": "\"Lilivati Singh\"",
+      "subject_uri": "http://example.org/entity/Lilavati_Singh",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Lilivati Singh\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 11,
+    "true_positives": 4,
+    "false_positives": 7,
+    "false_negatives": 0,
+    "precision": 0.36363636363636365,
+    "recall": 1.0,
+    "f1": 0.5333333333333333
+  },
+  "stage": "pre_inference"
+}

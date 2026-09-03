@@ -1,0 +1,23 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Stolen_Identity> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/entity/Gunther_von_Fritsch> ;
+    ex:hasDirector <http://example.org/entity/Gunther_von_Fritsch> .
+
+<http://example.org/entity/Them> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/entity/Gordon_Douglas> ;
+    ex:hasDirector <http://example.org/entity/Gordon_Douglas> .
+
+<http://example.org/entity/Gordon_Douglas> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1907-12-15"^^xsd:date .
+
+<http://example.org/entity/Gunther_von_Fritsch> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1906-07-15"^^xsd:date .
+

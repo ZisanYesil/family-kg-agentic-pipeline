@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/897/originals/extracted_897.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/897/ground_truth_897.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/fred_jackman": "http://example.org/entity/Fred_Jackman"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/fred_jackman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fred Jackman",
+          "source": "altLabel"
+        },
+        {
+          "text": "Fred Wood Jackman Sr.",
+          "source": "label"
+        }
+      ],
+      "context": "Fred Jackman. has death place: Hollywood, California. inverse has director: The King of the Wild Horses (1924 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fred_Jackman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fred Jackman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fred Jackman",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Fred Jackman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.95158851146698,
+      "graph_score": 0.95158851146698,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_1924_king_of_the_wild_horses",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The King of the Wild Horses (1924 film)",
+          "source": "label"
+        },
+        {
+          "text": "film 1924 king of the wild horses",
+          "source": "uri"
+        }
+      ],
+      "context": "The King of the Wild Horses (1924 film). has director: Fred Jackman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_King_of_the_Wild_Horses",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The King of the Wild Horses",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The King of the Wild Horses (1924 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The King of the Wild Horses",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8885151743888855,
+      "name_embedding_score": 0.8684553503990173,
+      "string_score": 0.8467532396316528,
+      "independent_identity_support": true,
+      "context_score": 0.9407936334609985,
+      "graph_score": 0.9703968167304993,
+      "margin": 0.8885151743888855
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/hollywood_california",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hollywood, California",
+          "source": "label"
+        },
+        {
+          "text": "hollywood california",
+          "source": "uri"
+        }
+      ],
+      "context": "Hollywood, California. inverse has death place: Fred Jackman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hollywood",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hollywood",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "hollywood california",
+        "extracted_source": "uri",
+        "ground_truth_text": "Hollywood",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8468184471130371,
+      "name_embedding_score": 0.8537368774414062,
+      "string_score": 0.7043103575706482,
+      "independent_identity_support": true,
+      "context_score": 0.9509795308113098,
+      "graph_score": 0.9754897356033325,
+      "margin": 0.8468184471130371
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

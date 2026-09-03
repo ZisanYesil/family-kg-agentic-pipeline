@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Oui_Oui_Marie> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Oui, Oui, Marie" ;
+    onto:hasComposer <http://example.org/entity/Fred_Fisher> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/Fred_Fisher> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fred Fisher" ;
+    onto:hasNationality <http://example.org/entity/American> ;
+    skos:altLabel "Alfred Breitenbach" .
+

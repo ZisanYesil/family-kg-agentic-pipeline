@@ -1,0 +1,164 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/867/originals/extracted_867.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/867/ground_truth_867.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_namie_amuro": "http://example.org/entity/Namie_Amuro",
+    "http://example.org/extracted/song_fast_car": "http://example.org/entity/Fast_Car"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_namie_amuro",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Amuro",
+          "source": "altLabel"
+        },
+        {
+          "text": "Namie Amuro",
+          "source": "label"
+        },
+        {
+          "text": "person namie amuro",
+          "source": "uri"
+        }
+      ],
+      "context": "Amuro. has birth place: Naha, Okinawa, Japan. inverse has performer: Fast Car (Namie Amuro song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Namie_Amuro",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Namie Amuro",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Namie Amuro",
+        "extracted_source": "label",
+        "ground_truth_text": "Namie Amuro",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8250600695610046,
+      "graph_score": 0.9125300645828247,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_fast_car",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fast Car (Namie Amuro song)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Fast Car",
+          "source": "label"
+        },
+        {
+          "text": "song fast car",
+          "source": "uri"
+        }
+      ],
+      "context": "Fast Car (Namie Amuro song). has performer: Amuro.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fast_Car",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fast Car",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fast Car",
+        "extracted_source": "label",
+        "ground_truth_text": "Fast Car",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.857847273349762,
+      "graph_score": 0.9289236068725586,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_naha_okinawa_japan",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Naha, Okinawa, Japan",
+          "source": "label"
+        },
+        {
+          "text": "place naha okinawa japan",
+          "source": "uri"
+        }
+      ],
+      "context": "Naha, Okinawa, Japan. inverse has birth place: Amuro.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Naha_Okinawa",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Naha Okinawa",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Naha, Okinawa, Japan",
+        "extracted_source": "label",
+        "ground_truth_text": "Naha Okinawa",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8816357851028442,
+      "name_embedding_score": 0.8951631784439087,
+      "string_score": 0.8041666746139526,
+      "independent_identity_support": true,
+      "context_score": 0.8641006946563721,
+      "graph_score": 0.932050347328186,
+      "margin": 0.8816357851028442
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,14 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Princess_Sophia_Alexandrovna_Duleep_Singh a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Bamba_Müller ;
+    ex:hasParent entity:Bamba_Müller .
+
+entity:Bamba_Müller a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Princess_Sophia_Alexandrovna_Duleep_Singh ;
+    ex:hasDeathDate "1887-09-18"^^xsd:date .
+

@@ -1,0 +1,195 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/622/originals/extracted_622.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/622/ground_truth_622.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_kranti_kanade": "http://example.org/entity/Kranti_Kanade",
+    "http://example.org/extracted/film_crd": "http://example.org/entity/CRD",
+    "http://example.org/extracted/edu_ucla": "http://example.org/entity/UCLA"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/edu_ucla",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "UCLA",
+          "source": "altLabel"
+        },
+        {
+          "text": "University of California, Los Angeles",
+          "source": "label"
+        },
+        {
+          "text": "edu ucla",
+          "source": "uri"
+        }
+      ],
+      "context": "UCLA. inverse has educated at: Kranti Kanade.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/UCLA",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "UCLA",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "UCLA",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "UCLA",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_crd",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "CRD",
+          "source": "label"
+        },
+        {
+          "text": "film crd",
+          "source": "uri"
+        }
+      ],
+      "context": "CRD. has director: Kranti Kanade.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/CRD",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "CRD",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "CRD",
+        "extracted_source": "label",
+        "ground_truth_text": "CRD",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_kranti_kanade",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kranti Kanade",
+          "source": "label"
+        },
+        {
+          "text": "person kranti kanade",
+          "source": "uri"
+        }
+      ],
+      "context": "Kranti Kanade. has educated at: FTII. has educated at: UCLA. inverse has director: CRD.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kranti_Kanade",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kranti Kanade",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kranti Kanade",
+        "extracted_source": "label",
+        "ground_truth_text": "Kranti Kanade",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9495730400085449,
+      "graph_score": 0.9747865200042725,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/edu_ftii",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "FTII",
+          "source": "altLabel"
+        },
+        {
+          "text": "Film and Television Institute of India",
+          "source": "label"
+        },
+        {
+          "text": "edu ftii",
+          "source": "uri"
+        }
+      ],
+      "context": "FTII. inverse has educated at: Kranti Kanade.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

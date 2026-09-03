@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:station_west_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Station West" ;
+    onto:hasDirector data:sidney_lanfield_person .
+
+data:sidney_lanfield_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sidney Lanfield" ;
+    onto:hasBurialPlace data:westwood_village_memorial_park_cemetery_place ;
+    skos:altLabel "Sidney Landfield" .
+
+data:westwood_village_memorial_park_cemetery_place a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Westwood Village Memorial Park Cemetery" .
+

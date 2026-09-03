@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/106/originals/extracted_106.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/106/ground_truth_106.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/piero_campelli": "http://example.org/entity/Piero_Campelli",
+    "http://example.org/extracted/peder_per_veggum": "http://example.org/entity/Peder_Per_Veggum"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/peder_per_veggum",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Peder Per Veggum",
+          "source": "label"
+        }
+      ],
+      "context": "Peder Per Veggum. has birth date: 1768-04-11. has death date: 1836-04-15.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Peder_Per_Veggum",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Peder Per Veggum",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Peder Per Veggum",
+        "extracted_source": "label",
+        "ground_truth_text": "Peder Per Veggum",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7790752649307251
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/piero_campelli",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Piero Campelli",
+          "source": "label"
+        }
+      ],
+      "context": "Piero Campelli. has birth date: 1893-12-20. has death date: 1946-10-20.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Piero_Campelli",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Piero Campelli",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Piero Campelli",
+        "extracted_source": "label",
+        "ground_truth_text": "Piero Campelli",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7490752637386322
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/59/originals/extracted_59.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/59/ground_truth_59.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/asa_griggs_candler_1851": "http://example.org/entity/Asa_Griggs_Candler",
+    "http://example.org/extracted/lucy_beall_candler_1883": "http://example.org/entity/Lucy_Beall_Candler_Owens_Heinz_Leide"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/asa_griggs_candler_1851",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Asa Griggs Candler",
+          "source": "label"
+        },
+        {
+          "text": "asa griggs candler 1851",
+          "source": "uri"
+        }
+      ],
+      "context": "Asa Griggs Candler. inverse has father: Lucy Beall Candler Owens Heinz Leide.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Asa_Griggs_Candler",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Asa Griggs Candler",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Asa Griggs Candler",
+        "extracted_source": "label",
+        "ground_truth_text": "Asa Griggs Candler",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7906836867332458,
+      "graph_score": 0.8953418731689453,
+      "margin": 0.6245569586753845
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lucy_beall_candler_1883",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lucy Beall Candler Owens Heinz Leide",
+          "source": "label"
+        },
+        {
+          "text": "lucy beall candler 1883",
+          "source": "uri"
+        }
+      ],
+      "context": "Lucy Beall Candler Owens Heinz Leide. has father: Asa Griggs Candler.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lucy_Beall_Candler_Owens_Heinz_Leide",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lucy Beall Candler Owens Heinz Leide",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lucy Beall Candler Owens Heinz Leide",
+        "extracted_source": "label",
+        "ground_truth_text": "Lucy Beall Candler Owens Heinz Leide",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4752296805381775
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Georgia"
+  ]
+}

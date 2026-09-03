@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/985/originals/extracted_985.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/985/ground_truth_985.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/elisabeth_magdalena_of_pomerania": "http://example.org/entity/Elisabeth_Magdalena_of_Pomerania",
+    "http://example.org/extracted/ernst_ludwig_duke_of_pomerania": "http://example.org/entity/Ernst_Ludwig_Duke_of_Pomerania",
+    "http://example.org/extracted/wolgast": "http://example.org/entity/Wolgast"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/elisabeth_magdalena_of_pomerania",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Elisabeth Magdalena Of Pomerania",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Elisabeth Magdalena Of Pomerania. has father: Ernst Ludwig, Duke of Pomerania.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Elisabeth_Magdalena_of_Pomerania",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Elisabeth Magdalena of Pomerania",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Elisabeth Magdalena Of Pomerania",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Elisabeth Magdalena of Pomerania",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9960451126098633,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.981525182723999,
+      "graph_score": 0.9907625913619995,
+      "margin": 0.5382643342018127
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ernst_ludwig_duke_of_pomerania",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ernst Ludwig, Duke of Pomerania",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ernst Ludwig",
+          "source": "label"
+        },
+        {
+          "text": "ernst ludwig duke of pomerania",
+          "source": "uri"
+        }
+      ],
+      "context": "Ernst Ludwig, Duke of Pomerania. has birth place: Wolgast. inverse has father: Elisabeth Magdalena Of Pomerania.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ernst_Ludwig_Duke_of_Pomerania",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ernst Ludwig Duke of Pomerania",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ernst Ludwig, Duke of Pomerania",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Ernst Ludwig Duke of Pomerania",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9497020840644836,
+      "string_score": 0.992622971534729,
+      "independent_identity_support": true,
+      "context_score": 0.9735980033874512,
+      "graph_score": 0.9867990016937256,
+      "margin": 0.5421967804431915
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wolgast",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Wolgast",
+          "source": "label"
+        }
+      ],
+      "context": "Wolgast. inverse has birth place: Ernst Ludwig, Duke of Pomerania.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Wolgast",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Wolgast",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Wolgast",
+        "extracted_source": "label",
+        "ground_truth_text": "Wolgast",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9757280945777893,
+      "graph_score": 0.9878640174865723,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

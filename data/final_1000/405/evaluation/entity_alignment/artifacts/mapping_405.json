@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/405/originals/extracted_405.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/405/ground_truth_405.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/junkin_with_val_and_dave": "http://example.org/entity/Junkin_with_Val_and_Dave",
+    "http://example.org/extracted/dave_bird": "http://example.org/entity/Dave_Bird"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/dave_bird",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Alan \"Dave\" Bird",
+          "source": "altLabel"
+        },
+        {
+          "text": "Dave Bird",
+          "source": "label"
+        }
+      ],
+      "context": "David Alan \"Dave\" Bird. inverse has creator: Junkin' with Val and Dave.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dave_Bird",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dave Bird",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dave Bird",
+        "extracted_source": "label",
+        "ground_truth_text": "Dave Bird",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7723826766014099,
+      "graph_score": 0.8861913681030273,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/junkin_with_val_and_dave",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Junkin' with Val and Dave",
+          "source": "label"
+        },
+        {
+          "text": "junkin with val and dave",
+          "source": "uri"
+        }
+      ],
+      "context": "Junkin' with Val and Dave. has creator: David Alan \"Dave\" Bird.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Junkin_with_Val_and_Dave",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Junkin with Val and Dave",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Junkin' with Val and Dave",
+        "extracted_source": "label",
+        "ground_truth_text": "Junkin with Val and Dave",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9831814765930176,
+      "string_score": 0.9908163547515869,
+      "independent_identity_support": true,
+      "context_score": 0.9201855659484863,
+      "graph_score": 0.9600927829742432,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Gloucester"
+  ]
+}

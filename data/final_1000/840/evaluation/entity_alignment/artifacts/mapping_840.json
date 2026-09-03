@@ -1,0 +1,182 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/840/originals/extracted_840.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/840/ground_truth_840.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/manoranjan_film": "http://example.org/entity/Manoranjan",
+    "http://example.org/extracted/shammi_kapoor": "http://example.org/entity/Shammi_Kapoor"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/manoranjan_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Manoranjan",
+          "source": "label"
+        },
+        {
+          "text": "manoranjan film",
+          "source": "uri"
+        }
+      ],
+      "context": "Manoranjan. has director: Shammi Kapoor.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Manoranjan",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Manoranjan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Manoranjan",
+        "extracted_source": "label",
+        "ground_truth_text": "Manoranjan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/shammi_kapoor",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shammi Kapoor",
+          "source": "label"
+        }
+      ],
+      "context": "Shammi Kapoor. has award received: Filmfare Award for Best Supporting Actor. has award received: Filmfare Best Actor Award. inverse has director: Manoranjan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shammi_Kapoor",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shammi Kapoor",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shammi Kapoor",
+        "extracted_source": "label",
+        "ground_truth_text": "Shammi Kapoor",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9240118265151978,
+      "graph_score": 0.9620059132575989,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/filmfare_best_actor_award_1968",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Filmfare Best Actor Award",
+          "source": "label"
+        },
+        {
+          "text": "filmfare best actor award 1968",
+          "source": "uri"
+        }
+      ],
+      "context": "Filmfare Best Actor Award. inverse has award received: Shammi Kapoor.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Filmfare_Award",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Filmfare Award",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Filmfare Best Actor Award",
+        "extracted_source": "label",
+        "ground_truth_text": "Filmfare Award",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8337854743003845,
+      "name_embedding_score": 0.8063979148864746,
+      "string_score": 0.7480769157409668,
+      "independent_identity_support": true,
+      "context_score": 0.9485384225845337,
+      "graph_score": 0.9742692112922668,
+      "margin": 0.8337854743003845
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/filmfare_best_supporting_actor_award_1982",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Filmfare Award for Best Supporting Actor",
+          "source": "label"
+        },
+        {
+          "text": "filmfare best supporting actor award 1982",
+          "source": "uri"
+        }
+      ],
+      "context": "Filmfare Award for Best Supporting Actor. inverse has award received: Shammi Kapoor.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

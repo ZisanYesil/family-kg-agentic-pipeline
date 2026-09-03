@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/816/originals/extracted_816.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/816/ground_truth_816.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/albert_terrien_de_lacouperie": "http://example.org/entity/Albert_Terrien_de_Lacouperie",
+    "http://example.org/extracted/gustav_von_hufner": "http://example.org/entity/Gustav_von_Hüfner"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/albert_terrien_de_lacouperie",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Albert Terrien de Lacouperie",
+          "source": "altLabel"
+        },
+        {
+          "text": "Albert Étienne Jean-Baptiste Terrien de Lacouperie",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Albert Terrien de Lacouperie. has birth date: 1844-11-23. has death date: 1894-10-11.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Albert_Terrien_de_Lacouperie",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Albert Terrien de Lacouperie",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Albert Terrien de Lacouperie",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Albert Terrien de Lacouperie",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5112769603729248
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/gustav_von_hufner",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gustav von Hüfner",
+          "source": "altLabel"
+        },
+        {
+          "text": "gustav von hufner",
+          "source": "uri"
+        }
+      ],
+      "context": "Gustav von Hüfner. has birth date: 1840-05-13. has death date: 1908-03-14.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gustav_von_Hüfner",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gustav von Hüfner",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gustav von Hüfner",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Gustav von Hüfner",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5349220931529999
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:charles_willoughby_10th_barony a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Charles Willoughby, 10th Baron Willoughby of Parham" ;
+    onto:hasFather data:william_willoughby_6th_barony .
+
+data:frances_manners a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Frances Manners" .
+
+data:william_willoughby_6th_barony a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Willoughby, 6th Baron Willoughby of Parham" ;
+    onto:hasMother data:frances_manners .
+

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/808/originals/extracted_808.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/808/ground_truth_808.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/eto_basc_hocu_album": "http://example.org/entity/Eto_Baš_hoću",
+    "http://example.org/extracted/colonel_abrams_album": "http://example.org/entity/Colonel_Abrams_album"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/colonel_abrams_album",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Colonel Abrams",
+          "source": "altLabel"
+        },
+        {
+          "text": "colonel abrams album",
+          "source": "uri"
+        }
+      ],
+      "context": "Colonel Abrams. has publication date: 1985.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Colonel_Abrams_album",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Colonel Abrams album",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Colonel Abrams",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Colonel Abrams album",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8287307024002075,
+      "string_score": 0.8372548818588257,
+      "independent_identity_support": true,
+      "context_score": 0.9115371108055115,
+      "graph_score": 0.9115371108055115,
+      "margin": 0.7330676913261414
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/eto_basc_hocu_album",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eto! Baš hoću!",
+          "source": "altLabel"
+        },
+        {
+          "text": "eto basc hocu album",
+          "source": "uri"
+        }
+      ],
+      "context": "Eto! Baš hoću!. has publication date: 1976.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eto_Baš_hoću",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eto Baš hoću",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eto! Baš hoću!",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Eto Baš hoću",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8850137591362,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9351998567581177,
+      "graph_score": 0.9351998567581177,
+      "margin": 0.5560351014137268
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

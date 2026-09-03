@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:its_only_tv a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "It's Only TV" ;
+    onto:hasCreator data:cyril_hanouna ;
+    skos:altLabel "Touche pas à mon poste !" .
+
+data:cyril_hanouna a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Cyril Hanouna" ;
+    onto:hasBirthDate "1974-09-23"^^xsd:date ;
+    onto:hasBirthPlace data:paris ;
+    skos:altLabel "Cyril Valéry Hanouna" .
+
+data:paris a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Paris" .
+

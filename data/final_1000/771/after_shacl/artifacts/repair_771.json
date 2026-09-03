@@ -1,0 +1,94 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "395858a347c80f8b9010825f2f4650a575bad3a0f9e68cd5e41104f5082b8c3c",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_billy_elliot",
+        "path": null,
+        "value": "http://example.org/extracted/person_stephen_warbeck",
+        "expected": null,
+        "message": "Relation phrase 'music composed by' from http://example.org/extracted/film_billy_elliot to http://example.org/extracted/person_stephen_warbeck was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "395858a347c80f8b9010825f2f4650a575bad3a0f9e68cd5e41104f5082b8c3c",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_billy_elliot",
+            "path": null,
+            "value": "http://example.org/extracted/person_stephen_warbeck",
+            "expected": null,
+            "message": "Relation phrase 'music composed by' from http://example.org/extracted/film_billy_elliot to http://example.org/extracted/person_stephen_warbeck was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 10,
+      "feedback_reasoning": "The source text states that the film *Billy Elliot* “music composed by Stephen Warbeck”. The ontology provides the object property **onto:hasComposer** (domain CreativeWork, range Person) whose semantics match the phrase “music composed by”. No existing triple links the film to the composer, so the appropriate repair is to add this triple.",
+      "repairs": [
+        {
+          "violation_fingerprint": "d20aa453dca1d16b8c491e057d56ecd7dbd8152191a204b1fa8a9a0e3901f6c1",
+          "reasoning": "Map the unmapped relation to the ontology predicate `onto:hasComposer` which captures the meaning of “music composed by”.",
+          "operations": [
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/film_billy_elliot",
+              "predicate": "http://example.org/2wiki-ontology#hasComposer",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/extracted/person_stephen_warbeck"
+              }
+            }
+          ]
+        }
+      ],
+      "edit_log": [
+        {
+          "violation_fingerprint": "d20aa453dca1d16b8c491e057d56ecd7dbd8152191a204b1fa8a9a0e3901f6c1",
+          "operation_index": 0,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/film_billy_elliot",
+          "predicate": "http://example.org/2wiki-ontology#hasComposer",
+          "old_value": null,
+          "new_value": "<http://example.org/extracted/person_stephen_warbeck>",
+          "triples_before": 10,
+          "triples_after": 11
+        }
+      ],
+      "unresolved_violation_fingerprints": [],
+      "triples_after": 11,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": true,
+        "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "violations": []
+      },
+      "outcome": "conforms"
+    }
+  ],
+  "status": "repaired",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": true,
+    "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "violations": []
+  },
+  "dangling_references": []
+}

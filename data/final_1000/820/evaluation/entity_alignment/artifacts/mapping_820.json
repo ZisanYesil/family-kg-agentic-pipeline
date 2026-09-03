@@ -1,0 +1,122 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/820/originals/extracted_820.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/820/ground_truth_820.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/cornelis_steenis_1901": "http://example.org/entity/Cornelis_Gijsbert_Gerrit_Jan_van_Steenis",
+    "http://example.org/extracted/tarsem_king_1937": "http://example.org/entity/Tarsem_King_Baron_King_of_West_Bromwich"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/cornelis_steenis_1901",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cornelis Gijsbert Gerrit Jan Van Steenis",
+          "source": "altLabel"
+        },
+        {
+          "text": "cornelis steenis 1901",
+          "source": "uri"
+        }
+      ],
+      "context": "Cornelis Gijsbert Gerrit Jan Van Steenis. has birth date: 1901-10-31. has death date: 1986-05-14.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cornelis_Gijsbert_Gerrit_Jan_van_Steenis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cornelis Gijsbert Gerrit Jan van Steenis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cornelis Gijsbert Gerrit Jan Van Steenis",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Cornelis Gijsbert Gerrit Jan van Steenis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9796906113624573,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9984346032142639,
+      "graph_score": 0.9984346032142639,
+      "margin": 0.6122361421585083
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tarsem_king_1937",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Baron King of West Bromwich",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tarsem King",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tarsem King, Baron King of West Bromwich",
+          "source": "label"
+        },
+        {
+          "text": "tarsem king 1937",
+          "source": "uri"
+        }
+      ],
+      "context": "Baron King of West Bromwich. has birth date: 1937-04-24. has death date: 2013-01-09.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tarsem_King_Baron_King_of_West_Bromwich",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tarsem King Baron King of West Bromwich",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tarsem King, Baron King of West Bromwich",
+        "extracted_source": "label",
+        "ground_truth_text": "Tarsem King Baron King of West Bromwich",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9889055490493774,
+      "string_score": 0.994303822517395,
+      "independent_identity_support": true,
+      "context_score": 0.9327598214149475,
+      "graph_score": 0.9327598214149475,
+      "margin": 0.6074588894844055
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

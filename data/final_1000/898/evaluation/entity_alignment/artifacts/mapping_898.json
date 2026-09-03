@@ -1,0 +1,196 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/898/originals/extracted_898.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/898/ground_truth_898.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/carlos_borcosque": "http://example.org/entity/Carlos_F_Borcosque",
+    "http://example.org/extracted/edward_zwick": "http://example.org/entity/Edward_Zwick",
+    "http://example.org/extracted/legend_fall_film": "http://example.org/entity/Legends_of_the_Fall",
+    "http://example.org/extracted/cuando_cielo_film": "http://example.org/entity/Cuando_en_el_cielo_pasen_lista"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/carlos_borcosque",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Carlos F. Borcosque",
+          "source": "label"
+        },
+        {
+          "text": "carlos borcosque",
+          "source": "uri"
+        }
+      ],
+      "context": "Carlos F. Borcosque. has birth date: 1894-09-09. inverse has director: Cuando en el cielo pasen lista.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Carlos_F_Borcosque",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Carlos F Borcosque",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Carlos F. Borcosque",
+        "extracted_source": "label",
+        "ground_truth_text": "Carlos F Borcosque",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.983762264251709,
+      "string_score": 0.9878378510475159,
+      "independent_identity_support": true,
+      "context_score": 0.9967343807220459,
+      "graph_score": 0.998367190361023,
+      "margin": 0.7176473736763
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cuando_cielo_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cuando en el cielo pasen lista",
+          "source": "label"
+        },
+        {
+          "text": "cuando cielo film",
+          "source": "uri"
+        }
+      ],
+      "context": "Cuando en el cielo pasen lista. has director: Carlos F. Borcosque.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cuando_en_el_cielo_pasen_lista",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cuando en el cielo pasen lista",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cuando en el cielo pasen lista",
+        "extracted_source": "label",
+        "ground_truth_text": "Cuando en el cielo pasen lista",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9919885396957397,
+      "graph_score": 0.9959942698478699,
+      "margin": 0.6905795335769653
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/edward_zwick",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edward Zwick",
+          "source": "label"
+        }
+      ],
+      "context": "Edward Zwick. has birth date: 1952-10-08. inverse has director: Legends of the Fall.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Edward_Zwick",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Edward Zwick",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Edward Zwick",
+        "extracted_source": "label",
+        "ground_truth_text": "Edward Zwick",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7162898778915405
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/legend_fall_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Legends of the Fall",
+          "source": "label"
+        },
+        {
+          "text": "legend fall film",
+          "source": "uri"
+        }
+      ],
+      "context": "Legends of the Fall. has director: Edward Zwick.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Legends_of_the_Fall",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Legends of the Fall",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Legends of the Fall",
+        "extracted_source": "label",
+        "ground_truth_text": "Legends of the Fall",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.7006106078624725
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

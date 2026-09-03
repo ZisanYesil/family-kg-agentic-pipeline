@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/572/originals/extracted_572.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/572/ground_truth_572.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/kardam_prince_of_turnovo": "http://example.org/entity/Kardam_Prince_of_Turnovo",
+    "http://example.org/extracted/boris_prince_of_turnovo": "http://example.org/entity/Boris_Prince_of_Turnovo"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/boris_prince_of_turnovo",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Boris, Prince of Turnovo",
+          "source": "label"
+        },
+        {
+          "text": "boris prince of turnovo",
+          "source": "uri"
+        }
+      ],
+      "context": "Boris, Prince of Turnovo. has father: Kardam, Prince of Turnovo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Boris_Prince_of_Turnovo",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Boris Prince of Turnovo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Boris, Prince of Turnovo",
+        "extracted_source": "label",
+        "ground_truth_text": "Boris Prince of Turnovo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9747141003608704,
+      "string_score": 0.9904255270957947,
+      "independent_identity_support": true,
+      "context_score": 0.9886019825935364,
+      "graph_score": 0.9943009614944458,
+      "margin": 0.3528100848197937
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/kardam_prince_of_turnovo",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kardam, Prince of Turnovo",
+          "source": "label"
+        },
+        {
+          "text": "kardam prince of turnovo",
+          "source": "uri"
+        }
+      ],
+      "context": "Kardam, Prince of Turnovo. has educated at: Penn State University. inverse has father: Boris, Prince of Turnovo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kardam_Prince_of_Turnovo",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kardam Prince of Turnovo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kardam, Prince of Turnovo",
+        "extracted_source": "label",
+        "ground_truth_text": "Kardam Prince of Turnovo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9914939999580383,
+      "string_score": 0.9908163547515869,
+      "independent_identity_support": true,
+      "context_score": 0.981562077999115,
+      "graph_score": 0.9907810688018799,
+      "margin": 0.3332827091217041
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/penn_state_university",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Penn State University",
+          "source": "label"
+        }
+      ],
+      "context": "Penn State University. inverse has educated at: Kardam, Prince of Turnovo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Penn_State",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Penn State",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Penn State University",
+        "extracted_source": "label",
+        "ground_truth_text": "Penn State",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9012759327888489,
+      "name_embedding_score": 0.9299150109291077,
+      "string_score": 0.7569892406463623,
+      "independent_identity_support": true,
+      "context_score": 0.9765687584877014,
+      "graph_score": 0.9882843494415283,
+      "margin": 0.9012759327888489
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

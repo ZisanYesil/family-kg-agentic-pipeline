@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:coalition_of_the_willing_band a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "The Coalition of the Willing" ;
+    onto:hasMember data:bobby_previte .
+
+data:bobby_previte a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bobby Previte" ;
+    onto:hasBirthPlace data:niagara_falls_new_york .
+
+data:niagara_falls_new_york a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Niagara Falls, New York" .
+

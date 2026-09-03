@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/64/originals/extracted_64.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/64/ground_truth_64.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/pons_count_of_tripoli": "http://example.org/entity/Pons",
+    "http://example.org/extracted/cecile_of_france": "http://example.org/entity/Cecile_of_France",
+    "http://example.org/extracted/bertrand_count_of_toulouse": "http://example.org/entity/Bertrand_of_Toulouse"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bertrand_count_of_toulouse",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bertrand of Toulouse",
+          "source": "altLabel"
+        },
+        {
+          "text": "Bertrand, Count of Toulouse",
+          "source": "label"
+        },
+        {
+          "text": "bertrand count of toulouse",
+          "source": "uri"
+        }
+      ],
+      "context": "Bertrand of Toulouse. inverse has father: Pons.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bertrand_of_Toulouse",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bertrand of Toulouse",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bertrand of Toulouse",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Bertrand of Toulouse",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9087785482406616,
+      "graph_score": 0.4543892741203308,
+      "margin": 0.4718632102012634
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cecile_of_france",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cecile",
+          "source": "altLabel"
+        },
+        {
+          "text": "Cecile of France",
+          "source": "label"
+        }
+      ],
+      "context": "Cecile. inverse has spouse: Pons.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cecile_of_France",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cecile of France",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cecile of France",
+        "extracted_source": "label",
+        "ground_truth_text": "Cecile of France",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9176232814788818,
+      "graph_score": 0.9588116407394409,
+      "margin": 0.5024770498275757
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pons_count_of_tripoli",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pons",
+          "source": "altLabel"
+        },
+        {
+          "text": "Pons, Count of Tripoli",
+          "source": "label"
+        },
+        {
+          "text": "pons count of tripoli",
+          "source": "uri"
+        }
+      ],
+      "context": "Pons. has father: Bertrand of Toulouse. has spouse: Cecile.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pons",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pons",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pons",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Pons",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9461617469787598,
+      "graph_score": 0.6397475600242615,
+      "margin": 0.6541010439395905
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

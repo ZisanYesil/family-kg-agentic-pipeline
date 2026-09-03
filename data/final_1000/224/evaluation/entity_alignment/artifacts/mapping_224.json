@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/224/originals/extracted_224.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/224/ground_truth_224.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/charles_wheatstone": "http://example.org/entity/Charles_Wheatstone",
+    "http://example.org/extracted/jean_claude_lauzon": "http://example.org/entity/Jean_Claude_Lauzon"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/charles_wheatstone",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charles Wheatstone",
+          "source": "label"
+        }
+      ],
+      "context": "Charles Wheatstone. has birth date: 1802-02-06. has death date: 1875-10-19.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charles_Wheatstone",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charles Wheatstone",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charles Wheatstone",
+        "extracted_source": "label",
+        "ground_truth_text": "Charles Wheatstone",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6061962246894836
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jean_claude_lauzon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jean-Claude Lauzon",
+          "source": "label"
+        },
+        {
+          "text": "jean claude lauzon",
+          "source": "uri"
+        }
+      ],
+      "context": "Jean-Claude Lauzon. has birth date: 1953-09-29. has death date: 1997-08-10.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jean_Claude_Lauzon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jean Claude Lauzon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jean-Claude Lauzon",
+        "extracted_source": "label",
+        "ground_truth_text": "Jean Claude Lauzon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9894394874572754,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9960407614707947,
+      "graph_score": 0.9960407614707947,
+      "margin": 0.6060855090618134
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

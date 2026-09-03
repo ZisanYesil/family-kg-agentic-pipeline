@@ -1,0 +1,206 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/901/originals/extracted_901.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/901/ground_truth_901.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_red_sundown": "http://example.org/entity/Red_Sundown",
+    "http://example.org/extracted/director_geethapriya": "http://example.org/entity/Geethapriya",
+    "http://example.org/extracted/director_jack_arnold": "http://example.org/entity/Jack_Arnold",
+    "http://example.org/extracted/film_suvarna_sethuve": "http://example.org/entity/Suvarna_Sethuve"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/director_geethapriya",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lakshman Rao Mohite",
+          "source": "altLabel"
+        },
+        {
+          "text": "Geethapriya",
+          "source": "label"
+        },
+        {
+          "text": "director geethapriya",
+          "source": "uri"
+        }
+      ],
+      "context": "Lakshman Rao Mohite. has death date: 2016-01-17. inverse has director: Suvarna Sethuve.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Geethapriya",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Geethapriya",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Geethapriya",
+        "extracted_source": "label",
+        "ground_truth_text": "Geethapriya",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8360967636108398,
+      "graph_score": 0.9180483818054199,
+      "margin": 0.6479735374450684
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/director_jack_arnold",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jack Arnold",
+          "source": "label"
+        },
+        {
+          "text": "director jack arnold",
+          "source": "uri"
+        }
+      ],
+      "context": "Jack Arnold. has death date: 1992-03-17. inverse has director: Red Sundown.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jack_Arnold",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jack Arnold",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jack Arnold",
+        "extracted_source": "label",
+        "ground_truth_text": "Jack Arnold",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.809332549571991,
+      "graph_score": 0.9046663045883179,
+      "margin": 0.2663957476615906
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_red_sundown",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Red Sundown",
+          "source": "label"
+        },
+        {
+          "text": "film red sundown",
+          "source": "uri"
+        }
+      ],
+      "context": "Red Sundown. has director: Jack Arnold.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Red_Sundown",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Red Sundown",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Red Sundown",
+        "extracted_source": "label",
+        "ground_truth_text": "Red Sundown",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7743894159793854
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_suvarna_sethuve",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Suvarna Sethuve",
+          "source": "label"
+        },
+        {
+          "text": "film suvarna sethuve",
+          "source": "uri"
+        }
+      ],
+      "context": "Suvarna Sethuve. has director: Lakshman Rao Mohite.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Suvarna_Sethuve",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Suvarna Sethuve",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Suvarna Sethuve",
+        "extracted_source": "label",
+        "ground_truth_text": "Suvarna Sethuve",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8245095610618591,
+      "graph_score": 0.912254810333252,
+      "margin": 0.7798977643251419
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Jack_Arnold_director"
+  ]
+}

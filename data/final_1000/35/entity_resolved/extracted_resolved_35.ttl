@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:bilthoven_place a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bilthoven" ;
+    onto:hasCountry data:netherlands_country .
+
+data:herveld_place a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Herveld" ;
+    onto:hasCountry data:netherlands_country .
+
+data:netherlands_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Netherlands" ;
+    skos:altLabel "Dutch" .
+

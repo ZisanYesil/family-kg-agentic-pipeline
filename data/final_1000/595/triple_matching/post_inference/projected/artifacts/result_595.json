@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/595/evaluation/entity_alignment/final_extracted_aligned_595.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/595/evaluation/entity_alignment/final_ground_truth_aligned_595.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Australian",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Australian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Australian",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Australian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Gordon_Elliott",
+      "predicate": "hasCountry",
+      "object": "Australian",
+      "subject_uri": "http://example.org/entity/Gordon_Elliott",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Australian"
+    },
+    {
+      "subject": "Gordon_Elliott",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Gordon_Elliott",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Gordon_Elliott",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gordon_Elliott",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Road_Tasted",
+      "predicate": "hasCreator",
+      "object": "Gordon_Elliott",
+      "subject_uri": "http://example.org/entity/Road_Tasted",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Gordon_Elliott"
+    },
+    {
+      "subject": "Road_Tasted",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Road_Tasted",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Road_Tasted",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Road_Tasted",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Gordon_Elliott",
+      "predicate": "hasCountry",
+      "object": "united_kingdom",
+      "subject_uri": "http://example.org/entity/Gordon_Elliott",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/united_kingdom"
+    },
+    {
+      "subject": "united_kingdom",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/united_kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "united_kingdom",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/united_kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 11,
+    "true_positives": 8,
+    "false_positives": 3,
+    "false_negatives": 0,
+    "precision": 0.7272727272727273,
+    "recall": 1.0,
+    "f1": 0.8421052631578948
+  },
+  "stage": "post_inference"
+}

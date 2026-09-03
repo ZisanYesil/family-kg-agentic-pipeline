@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_dont_let_me_down_leona_lewis a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Don't Let Me Down (Leona Lewis song)" ;
+    onto:hasPerformer data:person_leona_lewis .
+
+data:person_leona_lewis a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leona Lewis" ;
+    onto:hasBirthPlace data:place_islington ;
+    skos:altLabel "Leona Louise Lewis" .
+
+data:place_islington a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "London Borough of Islington" ;
+    skos:altLabel "Islington" .
+

@@ -1,0 +1,142 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/509/originals/extracted_509.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/509/ground_truth_509.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/charles_viii_of_france": "http://example.org/entity/Charles_VIII_of_France",
+    "http://example.org/extracted/charles_orlando_dauphin_of_france": "http://example.org/entity/Charles_Orlando_Dauphin_of_France"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/charles_orlando_dauphin_of_france",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charles Orlando, Dauphin of France",
+          "source": "label"
+        },
+        {
+          "text": "charles orlando dauphin of france",
+          "source": "uri"
+        }
+      ],
+      "context": "Charles Orlando, Dauphin of France. has father: Charles VIII of France.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charles_Orlando_Dauphin_of_France",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charles Orlando Dauphin of France",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charles Orlando, Dauphin of France",
+        "extracted_source": "label",
+        "ground_truth_text": "Charles Orlando Dauphin of France",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9317118525505066,
+      "string_score": 0.9932835698127747,
+      "independent_identity_support": true,
+      "context_score": 0.928442656993866,
+      "graph_score": 0.9642213582992554,
+      "margin": 0.4393845796585083
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/charles_viii_of_france",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charles VIII of France",
+          "source": "label"
+        }
+      ],
+      "context": "Charles VIII of France. has cause of death: accidental head injury (struck head on door lintel). inverse has father: Charles Orlando, Dauphin of France.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charles_VIII_of_France",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charles VIII of France",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charles VIII of France",
+        "extracted_source": "label",
+        "ground_truth_text": "Charles VIII of France",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8491573929786682,
+      "graph_score": 0.9245786666870117,
+      "margin": 0.40777093172073364
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/accidental_head_injury",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "accidental head injury (struck head on door lintel)",
+          "source": "label"
+        },
+        {
+          "text": "accidental head injury",
+          "source": "uri"
+        }
+      ],
+      "context": "accidental head injury (struck head on door lintel). inverse has cause of death: Charles VIII of France.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/stroke"
+  ]
+}

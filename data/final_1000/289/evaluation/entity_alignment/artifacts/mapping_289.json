@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/289/originals/extracted_289.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/289/ground_truth_289.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/twenty_one_savage": "http://example.org/entity/21_Savage",
+    "http://example.org/extracted/united_kingdom": "http://example.org/entity/United_Kingdom",
+    "http://example.org/extracted/red_opps": "http://example.org/entity/Red_Opps"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/red_opps",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Red Opps",
+          "source": "label"
+        }
+      ],
+      "context": "Red Opps. has performer: Shéyaa Bin Abraham-Joseph.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Red_Opps",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Red Opps",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Red Opps",
+        "extracted_source": "label",
+        "ground_truth_text": "Red Opps",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6010088920593262,
+      "graph_score": 0.8005044460296631,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/twenty_one_savage",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shéyaa Bin Abraham-Joseph",
+          "source": "altLabel"
+        },
+        {
+          "text": "21 Savage",
+          "source": "label"
+        },
+        {
+          "text": "twenty one savage",
+          "source": "uri"
+        }
+      ],
+      "context": "Shéyaa Bin Abraham-Joseph. has citizenship: United Kingdom. inverse has performer: Red Opps.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/21_Savage",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "21 Savage",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "21 Savage",
+        "extracted_source": "label",
+        "ground_truth_text": "21 Savage",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7221850156784058,
+      "graph_score": 0.8610925078392029,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "United Kingdom. inverse has citizenship: Shéyaa Bin Abraham-Joseph.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_Kingdom",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United Kingdom",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United Kingdom",
+        "extracted_source": "label",
+        "ground_truth_text": "United Kingdom",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.724814772605896,
+      "graph_score": 0.862407386302948,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:giuseppe_frezzolini a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Giuseppe Frezzolini" ;
+    onto:hasChild data:erminea_frezzolini .
+
+data:antonio_poggi a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Antonio Poggi" .
+
+data:erminea_frezzolini a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Erminia Frezzolini" ;
+    onto:hasSpouse data:antonio_poggi .
+

@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/france> a ex:Country,
+        ex:Place .
+
+<http://example.org/extracted/louis_alexandre_prince_of_lamballe> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/extracted/louis_jean_marie_de_bourbon> ;
+    ex:isSonOf <http://example.org/extracted/louis_jean_marie_de_bourbon> .
+
+<http://example.org/extracted/louis_jean_marie_de_bourbon> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/louis_alexandre_prince_of_lamballe> ;
+    ex:hasCountry <http://example.org/extracted/france> ;
+    ex:hasNationality <http://example.org/extracted/france> ;
+    ex:hasSon <http://example.org/extracted/louis_alexandre_prince_of_lamballe> .
+

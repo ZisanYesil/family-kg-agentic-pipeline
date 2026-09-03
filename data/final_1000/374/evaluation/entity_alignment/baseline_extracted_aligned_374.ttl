@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Julia_Bracken_Wendt> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Julia Bracken Wendt" ;
+    onto:hasSpouse <http://example.org/entity/William_Wendt> .
+
+<http://example.org/entity/William_Wendt> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Wendt" ;
+    onto:hasBirthPlace data:bentzen_kingdom_of_prussia .
+
+data:bentzen_kingdom_of_prussia a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bentzen, Kingdom of Prussia" .
+

@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/876/originals/extracted_876.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/876/ground_truth_876.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/marie_agba_otikpo": "http://example.org/entity/Marie_Agba_Otikpo",
+    "http://example.org/extracted/mariam_el_masri": "http://example.org/entity/Mariam_El_Masri"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/mariam_el_masri",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mariam El Masri",
+          "source": "altLabel"
+        },
+        {
+          "text": "Mariam El-Masri",
+          "source": "label"
+        }
+      ],
+      "context": "Mariam El Masri. has birth date: 1991-06-20.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mariam_El_Masri",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mariam El Masri",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mariam El Masri",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Mariam El Masri",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.529419481754303
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/marie_agba_otikpo",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marie Belkine",
+          "source": "altLabel"
+        },
+        {
+          "text": "Marie Agba-Otikpo",
+          "source": "label"
+        },
+        {
+          "text": "marie agba otikpo",
+          "source": "uri"
+        }
+      ],
+      "context": "Marie Belkine. has birth date: 1948-12-01.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marie_Agba_Otikpo",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marie Agba Otikpo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marie Agba-Otikpo",
+        "extracted_source": "label",
+        "ground_truth_text": "Marie Agba Otikpo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9774133563041687,
+      "string_score": 0.9735293984413147,
+      "independent_identity_support": true,
+      "context_score": 0.5793238878250122,
+      "graph_score": 0.5793238878250122,
+      "margin": 0.510219931602478
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

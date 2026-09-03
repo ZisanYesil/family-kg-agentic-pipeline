@@ -1,0 +1,27 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_butterfly_on_a_wheel a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Butterfly on a Wheel" ;
+    onto:hasProducer data:person_william_morrissey .
+
+data:film_reach_the_rock a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Reach the Rock" ;
+    onto:hasProducer data:person_john_hughes .
+
+data:person_john_hughes a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Hughes" ;
+    onto:hasBirthDate "1950-02-18"^^xsd:date ;
+    skos:altLabel "John Wilden Hughes Jr." .
+
+data:person_william_morrissey a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Morrissey" .
+

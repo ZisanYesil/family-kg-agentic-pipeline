@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/I_Love_You_Beth_Cooper> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "I Love You, Beth Cooper" ;
+    onto:hasDirector <http://example.org/entity/Chris_Columbus> ;
+    skos:altLabel "I Love You, Beth Cooper (film)" .
+
+<http://example.org/entity/Chris_Columbus> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Chris Columbus" ;
+    onto:hasEducatedAt data:tisch_school_of_the_arts_educational_institution ;
+    skos:altLabel "Chris Joseph Columbus" .
+
+data:tisch_school_of_the_arts_educational_institution a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Tisch School of the Arts" .
+

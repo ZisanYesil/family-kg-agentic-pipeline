@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/141/originals/extracted_141.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/141/ground_truth_141.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/russian_souvenir_film": "http://example.org/entity/Russian_Souvenir",
+    "http://example.org/extracted/lady_in_a_cage_film": "http://example.org/entity/Lady_in_a_Cage"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/lady_in_a_cage_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lady in a Cage",
+          "source": "label"
+        },
+        {
+          "text": "lady in a cage film",
+          "source": "uri"
+        }
+      ],
+      "context": "Lady in a Cage. has publication date: 1964.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lady_in_a_Cage",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lady in a Cage",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lady in a Cage",
+        "extracted_source": "label",
+        "ground_truth_text": "Lady in a Cage",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8257718235254288
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/russian_souvenir_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Russian Souvenir",
+          "source": "label"
+        },
+        {
+          "text": "russian souvenir film",
+          "source": "uri"
+        }
+      ],
+      "context": "Russian Souvenir. has publication date: 1960.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Russian_Souvenir",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Russian Souvenir",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Russian Souvenir",
+        "extracted_source": "label",
+        "ground_truth_text": "Russian Souvenir",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8444311022758484
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

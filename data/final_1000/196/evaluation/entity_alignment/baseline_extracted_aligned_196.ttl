@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/You_Changed_Me> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "You Changed Me" ;
+    onto:hasPerformer <http://example.org/entity/Jamie_Foxx> .
+
+<http://example.org/entity/Jamie_Foxx> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jamie Foxx" ;
+    onto:hasAwardReceived data:award_grammy ;
+    skos:altLabel "Eric Marlon Bishop" .
+
+data:award_grammy a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Grammy Award" .
+

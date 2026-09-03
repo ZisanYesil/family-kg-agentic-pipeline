@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/930/evaluation/entity_alignment/final_extracted_aligned_930.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/930/evaluation/entity_alignment/final_ground_truth_aligned_930.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Irina_Berezina",
+      "predicate": "hasBirthPlace",
+      "object": "Kiev",
+      "subject_uri": "http://example.org/entity/Irina_Berezina",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Kiev"
+    },
+    {
+      "subject": "Irina_Berezina",
+      "predicate": "hasSpouse",
+      "object": "Vladimir_Feldman",
+      "subject_uri": "http://example.org/entity/Irina_Berezina",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Vladimir_Feldman"
+    },
+    {
+      "subject": "Irina_Berezina",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Irina_Berezina",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Irina_Berezina",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Irina_Berezina",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Kiev",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Kiev",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Vladimir_Feldman",
+      "predicate": "hasSpouse",
+      "object": "Irina_Berezina",
+      "subject_uri": "http://example.org/entity/Vladimir_Feldman",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Irina_Berezina"
+    },
+    {
+      "subject": "Vladimir_Feldman",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Vladimir_Feldman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Vladimir_Feldman",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Vladimir_Feldman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Irina_Berezina",
+      "predicate": "hasBirthDate",
+      "object": "\"1965-07-07\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Irina_Berezina",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1965-07-07\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 9,
+    "true_positives": 8,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1": 0.9411764705882353
+  },
+  "stage": "post_inference"
+}

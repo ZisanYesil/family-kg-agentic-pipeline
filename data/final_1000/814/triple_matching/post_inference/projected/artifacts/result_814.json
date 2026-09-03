@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/814/evaluation/entity_alignment/final_extracted_aligned_814.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/814/evaluation/entity_alignment/final_ground_truth_aligned_814.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Bernadine",
+      "predicate": "hasCreator",
+      "object": "Pat_Boone",
+      "subject_uri": "http://example.org/entity/Bernadine",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Pat_Boone"
+    },
+    {
+      "subject": "Bernadine",
+      "predicate": "hasPerformer",
+      "object": "Pat_Boone",
+      "subject_uri": "http://example.org/entity/Bernadine",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Pat_Boone"
+    },
+    {
+      "subject": "Bernadine",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Bernadine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Bernadine",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Bernadine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Gospel_Music_Hall_of_Fame",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/Gospel_Music_Hall_of_Fame",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "Pat_Boone",
+      "predicate": "hasAwardReceived",
+      "object": "Gospel_Music_Hall_of_Fame",
+      "subject_uri": "http://example.org/entity/Pat_Boone",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Gospel_Music_Hall_of_Fame"
+    },
+    {
+      "subject": "Pat_Boone",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Pat_Boone",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Bernadine",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Bernadine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    },
+    {
+      "subject": "Pat_Boone",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Pat_Boone",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 9,
+    "true_positives": 7,
+    "false_positives": 2,
+    "false_negatives": 0,
+    "precision": 0.7777777777777778,
+    "recall": 1.0,
+    "f1": 0.8750000000000001
+  },
+  "stage": "post_inference"
+}

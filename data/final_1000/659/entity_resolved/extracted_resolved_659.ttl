@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_a_bullet_is_waiting a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A Bullet Is Waiting" ;
+    onto:hasDirector data:person_john_farrow .
+
+data:person_john_farrow a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Farrow" ;
+    onto:hasSpouse data:person_maureen_osullivan .
+
+data:person_maureen_osullivan a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Maureen O'Sullivan" .
+

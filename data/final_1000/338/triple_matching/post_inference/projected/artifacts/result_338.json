@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/338/evaluation/entity_alignment/final_extracted_aligned_338.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/338/evaluation/entity_alignment/final_ground_truth_aligned_338.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Francis_William_Thring",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Francis_William_Thring",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Francis_William_Thring",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Francis_William_Thring",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "His_Royal_Highness",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/His_Royal_Highness",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "His_Royal_Highness",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/His_Royal_Highness",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "His_Royal_Highness",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/His_Royal_Highness",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "F_W_Thring",
+      "predicate": "hasChild",
+      "object": "Francis_William_Thring",
+      "subject_uri": "http://example.org/entity/F_W_Thring",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Francis_William_Thring"
+    },
+    {
+      "subject": "F_W_Thring",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/F_W_Thring",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "F_W_Thring",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/F_W_Thring",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Francis_William_Thring",
+      "predicate": "hasParent",
+      "object": "F_W_Thring",
+      "subject_uri": "http://example.org/entity/Francis_William_Thring",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/F_W_Thring"
+    },
+    {
+      "subject": "His_Royal_Highness",
+      "predicate": "hasCreator",
+      "object": "F_W_Thring",
+      "subject_uri": "http://example.org/entity/His_Royal_Highness",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/F_W_Thring"
+    },
+    {
+      "subject": "His_Royal_Highness",
+      "predicate": "hasDirector",
+      "object": "F_W_Thring",
+      "subject_uri": "http://example.org/entity/His_Royal_Highness",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/F_W_Thring"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "His_Royal_Highness",
+      "predicate": "hasCreator",
+      "object": "Francis_William_Thring",
+      "subject_uri": "http://example.org/entity/His_Royal_Highness",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Francis_William_Thring"
+    },
+    {
+      "subject": "His_Royal_Highness",
+      "predicate": "hasDirector",
+      "object": "Francis_William_Thring",
+      "subject_uri": "http://example.org/entity/His_Royal_Highness",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Francis_William_Thring"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 11,
+    "union_triples_in_scope": 13,
+    "true_positives": 5,
+    "false_positives": 2,
+    "false_negatives": 6,
+    "precision": 0.7142857142857143,
+    "recall": 0.45454545454545453,
+    "f1": 0.5555555555555556
+  },
+  "stage": "post_inference"
+}

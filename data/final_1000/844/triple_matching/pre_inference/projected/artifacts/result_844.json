@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/844/evaluation/entity_alignment/baseline_extracted_aligned_844.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/844/evaluation/entity_alignment/baseline_ground_truth_aligned_844.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Gillian_Blake",
+      "predicate": "hasSpouse",
+      "object": "Peter_Whitbread",
+      "subject_uri": "http://example.org/entity/Gillian_Blake",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Peter_Whitbread"
+    },
+    {
+      "subject": "Peter_Whitbread",
+      "predicate": "hasEducatedAt",
+      "object": "Gresham_s_School",
+      "subject_uri": "http://example.org/entity/Peter_Whitbread",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Gresham_s_School"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Gillian_Blake",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gillian_Blake",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Gillian_Blake",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gillian_Blake",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gillian_Blake",
+      "predicate": "label",
+      "object": "\"Gillian Blake\"",
+      "subject_uri": "http://example.org/entity/Gillian_Blake",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gillian Blake\""
+    },
+    {
+      "subject": "Gresham_s_School",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Gresham_s_School",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Gresham_s_School",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gresham_s_School",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gresham_s_School",
+      "predicate": "label",
+      "object": "\"Gresham's School\"",
+      "subject_uri": "http://example.org/entity/Gresham_s_School",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gresham's School\""
+    },
+    {
+      "subject": "Gresham_s_School",
+      "predicate": "altLabel",
+      "object": "\"Gresham's School, Holt, Norfolk\"",
+      "subject_uri": "http://example.org/entity/Gresham_s_School",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Gresham's School, Holt, Norfolk\""
+    },
+    {
+      "subject": "Peter_Whitbread",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Peter_Whitbread",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Peter_Whitbread",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Peter_Whitbread",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Peter_Whitbread",
+      "predicate": "label",
+      "object": "\"Peter Whitbread\"",
+      "subject_uri": "http://example.org/entity/Peter_Whitbread",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Peter Whitbread\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/930/originals/extracted_930.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/930/ground_truth_930.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/vladimir_feldman": "http://example.org/entity/Vladimir_Feldman",
+    "http://example.org/extracted/irina_berezina": "http://example.org/entity/Irina_Berezina",
+    "http://example.org/extracted/kiev": "http://example.org/entity/Kiev"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/irina_berezina",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Irina Berezina-Feldman",
+          "source": "altLabel"
+        },
+        {
+          "text": "Irina Feldman",
+          "source": "altLabel"
+        },
+        {
+          "text": "Irina Berezina",
+          "source": "label"
+        }
+      ],
+      "context": "Irina Berezina-Feldman. has birth date: 1965-07-07. has birth place: Kiev. inverse has spouse: Vladimir Feldman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Irina_Berezina",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Irina Berezina",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Irina Berezina",
+        "extracted_source": "label",
+        "ground_truth_text": "Irina Berezina",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9367735385894775,
+      "graph_score": 0.9683867692947388,
+      "margin": 0.3905147910118103
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/kiev",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kiev",
+          "source": "label"
+        }
+      ],
+      "context": "Kiev. inverse has birth place: Irina Berezina-Feldman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kiev",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kiev",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kiev",
+        "extracted_source": "label",
+        "ground_truth_text": "Kiev",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9779365062713623,
+      "graph_score": 0.9889682531356812,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/vladimir_feldman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vladimir Feldman",
+          "source": "label"
+        }
+      ],
+      "context": "Vladimir Feldman. has spouse: Irina Berezina-Feldman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vladimir_Feldman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vladimir Feldman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vladimir Feldman",
+        "extracted_source": "label",
+        "ground_truth_text": "Vladimir Feldman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.97665935754776,
+      "graph_score": 0.9883296489715576,
+      "margin": 0.7636734247207642
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

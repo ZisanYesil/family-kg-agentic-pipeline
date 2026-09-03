@@ -1,0 +1,23 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Lady_Charlotte_Finch> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lady Charlotte Finch" ;
+    onto:hasFather <http://example.org/entity/Thomas_Fermor> ;
+    skos:altLabel "Charlotte Finch",
+        "née Fermor" .
+
+<http://example.org/entity/Lady_Sophia_Osborne> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lady Sophia Osborne" ;
+    skos:altLabel "Sophia Osborne" .
+
+<http://example.org/entity/Thomas_Fermor> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Thomas Fermor, 1st Earl of Pomfret" ;
+    onto:hasMother <http://example.org/entity/Lady_Sophia_Osborne> ;
+    skos:altLabel "Thomas Fermor" .
+

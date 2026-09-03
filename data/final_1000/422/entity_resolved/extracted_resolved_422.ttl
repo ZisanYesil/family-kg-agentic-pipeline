@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_ab_dilli_dur_nahin a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Ab Dilli Dur Nahin" ;
+    onto:hasProducer data:person_raj_kapoor .
+
+data:film_rarandoi_veduka_chudham a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Rarandoi Veduka Chudham" ;
+    onto:hasProducer data:person_akkineni_nagarjuna .
+
+data:person_akkineni_nagarjuna a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Akkineni Nagarjuna" ;
+    onto:hasBirthDate "1959-08-29"^^xsd:date .
+
+data:person_raj_kapoor a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Raj Kapoor" ;
+    onto:hasBirthDate "1924-12-14"^^xsd:date .
+

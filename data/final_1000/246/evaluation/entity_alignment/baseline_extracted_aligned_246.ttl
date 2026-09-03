@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Argentus> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Argentus" ;
+    onto:hasEditor <http://example.org/entity/Steven_H_Silver> .
+
+<http://example.org/entity/Hinsdale> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Hinsdale, Illinois" .
+
+<http://example.org/entity/Steven_H_Silver> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Steven H Silver" ;
+    onto:hasBirthPlace <http://example.org/entity/Hinsdale> .
+

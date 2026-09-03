@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:beautiful_mexico_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Beautiful Mexico" ;
+    onto:hasDirector data:ramon_pereda_person .
+
+data:adriana_lamar_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Adriana Lamar" .
+
+data:maria_antonieta_pons_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "María Antonieta Pons" .
+
+data:ramon_pereda_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ramón Pereda" ;
+    onto:hasSpouse data:adriana_lamar_person,
+        data:maria_antonieta_pons_person .
+

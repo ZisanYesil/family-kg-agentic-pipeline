@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "9d6de9cb125276eaed9f09ab48c08737f6dfd115ba8a12784990ea62cf0d4f8b",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/talking_feet_1937",
+        "path": null,
+        "value": "http://example.org/extracted/the_third_miracle_1999",
+        "expected": null,
+        "message": "Relation phrase 'director is older than' from http://example.org/extracted/talking_feet_1937 to http://example.org/extracted/the_third_miracle_1999 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "9d6de9cb125276eaed9f09ab48c08737f6dfd115ba8a12784990ea62cf0d4f8b",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/talking_feet_1937",
+            "path": null,
+            "value": "http://example.org/extracted/the_third_miracle_1999",
+            "expected": null,
+            "message": "Relation phrase 'director is older than' from http://example.org/extracted/talking_feet_1937 to http://example.org/extracted/the_third_miracle_1999 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 17,
+      "feedback_reasoning": "The validation reports an unmapped_relation for the phrase “director is older than” between the films talking_feet_1937 and the_third_miracle_1999. The ontology contains no predicate that captures a comparative age relationship (e.g., *olderThan*). Adding a new predicate or using a loosely‑typed existing one would invent semantics not supported by the source text or the ontology, which the repair policy forbids. Consequently the violation cannot be safely fixed.",
+      "repairs": [
+        {
+          "violation_fingerprint": "00b4267f978e12453e60cbd3113d45682a5228cbd612f750af3d20c57c987d7a",
+          "reasoning": "No ontology predicate matches the meaning of the phrase “director is older than”.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "00b4267f978e12453e60cbd3113d45682a5228cbd612f750af3d20c57c987d7a"
+      ],
+      "triples_after": 17,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "9d6de9cb125276eaed9f09ab48c08737f6dfd115ba8a12784990ea62cf0d4f8b",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/talking_feet_1937",
+            "path": null,
+            "value": "http://example.org/extracted/the_third_miracle_1999",
+            "expected": null,
+            "message": "Relation phrase 'director is older than' from http://example.org/extracted/talking_feet_1937 to http://example.org/extracted/the_third_miracle_1999 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "9d6de9cb125276eaed9f09ab48c08737f6dfd115ba8a12784990ea62cf0d4f8b",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/talking_feet_1937",
+        "path": null,
+        "value": "http://example.org/extracted/the_third_miracle_1999",
+        "expected": null,
+        "message": "Relation phrase 'director is older than' from http://example.org/extracted/talking_feet_1937 to http://example.org/extracted/the_third_miracle_1999 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

@@ -25,7 +25,7 @@ from rdflib import Graph
 
 from core.logging_config import configure_logging
 
-ONTOLOGY_PATH = Path(__file__).resolve().parent / "family_orig.owl"
+ONTOLOGY_PATH = Path(__file__).resolve().parent / "ontology.ttl"
 SUMMARY_PATH = Path(__file__).resolve().parent / "ontology_summary.md"
 
 RESTRICTION_TYPES = {
@@ -245,7 +245,7 @@ def build_summary(ontology: object) -> str:
 def diagnose_with_rdflib(logger: structlog.stdlib.BoundLogger) -> None:
     graph = Graph()
     try:
-        graph.parse(ONTOLOGY_PATH, format="xml")
+        graph.parse(ONTOLOGY_PATH, format="turtle")
     except Exception as exc:
         logger.error("rdflib_parse_failed", error=str(exc), exc_info=True)
         print("\nrdflib parse failed with this error:")

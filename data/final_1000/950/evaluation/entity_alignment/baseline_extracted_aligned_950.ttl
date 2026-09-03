@@ -1,0 +1,28 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Fame_1936_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Fame (1936 film)" ;
+    onto:hasDirector <http://example.org/entity/Leslie_S_Hiscott> .
+
+<http://example.org/entity/It_s_All_About_Love> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "It's All About Love" ;
+    onto:hasDirector <http://example.org/entity/Thomas_Vinterberg> .
+
+<http://example.org/entity/Leslie_S_Hiscott> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leslie S. Hiscott" ;
+    onto:hasBirthDate "1894-07-25"^^xsd:date ;
+    onto:hasDeathDate "1968-05-03"^^xsd:date ;
+    skos:altLabel "Leslie Stephenson Hiscott" .
+
+<http://example.org/entity/Thomas_Vinterberg> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Thomas Vinterberg" ;
+    onto:hasBirthDate "1969-05-19"^^xsd:date .
+

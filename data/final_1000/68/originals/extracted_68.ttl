@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:marie_of_waldeck_and_pyrmont a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Marie of Waldeck and Pyrmont" ;
+    onto:hasMother data:helena_of_nassau ;
+    skos:altLabel "Georgine Henriette Marie" .
+
+data:helena_of_nassau a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Helena of Nassau" ;
+    onto:hasFather data:william_duke_of_nassau .
+
+data:william_duke_of_nassau a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William, Duke of Nassau" .
+

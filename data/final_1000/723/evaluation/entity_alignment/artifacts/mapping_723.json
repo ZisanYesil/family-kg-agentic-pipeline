@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/723/originals/extracted_723.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/723/ground_truth_723.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/renny_ottolina": "http://example.org/entity/Renny_Ottolina",
+    "http://example.org/extracted/el_show_de_renny": "http://example.org/entity/El_Show_de_Renny"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/el_show_de_renny",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "El Show De Renny",
+          "source": "label"
+        }
+      ],
+      "context": "El Show De Renny. has presenter: Renaldo José Ottolina Pinto.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/El_Show_de_Renny",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "El Show de Renny",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "El Show De Renny",
+        "extracted_source": "label",
+        "ground_truth_text": "El Show de Renny",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9233942031860352,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8542457818984985,
+      "graph_score": 0.9271228909492493,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/renny_ottolina",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Renaldo José Ottolina Pinto",
+          "source": "altLabel"
+        },
+        {
+          "text": "Renny Ottolina",
+          "source": "label"
+        }
+      ],
+      "context": "Renaldo José Ottolina Pinto. has birth place: Valencia, Carabobo. inverse has presenter: El Show De Renny.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Renny_Ottolina",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Renny Ottolina",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Renny Ottolina",
+        "extracted_source": "label",
+        "ground_truth_text": "Renny Ottolina",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8403310179710388,
+      "graph_score": 0.9201655387878418,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/valencia_carabobo",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Valencia, Carabobo",
+          "source": "label"
+        },
+        {
+          "text": "valencia carabobo",
+          "source": "uri"
+        }
+      ],
+      "context": "Valencia, Carabobo. inverse has birth place: Renaldo José Ottolina Pinto.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Valencia",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Valencia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Valencia, Carabobo",
+        "extracted_source": "label",
+        "ground_truth_text": "Valencia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8113834857940674,
+      "name_embedding_score": 0.8258037567138672,
+      "string_score": 0.7019230723381042,
+      "independent_identity_support": true,
+      "context_score": 0.7840064167976379,
+      "graph_score": 0.8920031785964966,
+      "margin": 0.8113834857940674
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

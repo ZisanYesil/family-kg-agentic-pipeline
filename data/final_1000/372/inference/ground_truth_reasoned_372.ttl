@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:James_Scudamore_3rd_Viscount_Scudamore a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:John_Scudamore_2nd_Viscount_Scudamore ;
+    ex:hasParent entity:John_Scudamore_2nd_Viscount_Scudamore .
+
+entity:Jane_Bennet a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:John_Scudamore_2nd_Viscount_Scudamore .
+
+entity:John_Scudamore_2nd_Viscount_Scudamore a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:James_Scudamore_3rd_Viscount_Scudamore ;
+    ex:hasMother entity:Jane_Bennet ;
+    ex:hasParent entity:Jane_Bennet .
+

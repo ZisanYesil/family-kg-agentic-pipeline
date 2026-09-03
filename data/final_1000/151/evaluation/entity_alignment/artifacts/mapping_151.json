@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/151/originals/extracted_151.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/151/ground_truth_151.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jimmy_wales": "http://example.org/entity/Jimmy_Wales",
+    "http://example.org/extracted/huntsville_alabama": "http://example.org/entity/Huntsville_Alabama",
+    "http://example.org/extracted/wikitribune": "http://example.org/entity/WikiTribune"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/huntsville_alabama",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Huntsville, Alabama",
+          "source": "label"
+        },
+        {
+          "text": "huntsville alabama",
+          "source": "uri"
+        }
+      ],
+      "context": "Huntsville, Alabama. inverse has birth place: Jimmy Wales.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Huntsville_Alabama",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Huntsville Alabama",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Huntsville, Alabama",
+        "extracted_source": "label",
+        "ground_truth_text": "Huntsville Alabama",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9630622863769531,
+      "string_score": 0.9878378510475159,
+      "independent_identity_support": true,
+      "context_score": 0.9864546656608582,
+      "graph_score": 0.9932273626327515,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jimmy_wales",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jimmy Wales",
+          "source": "label"
+        }
+      ],
+      "context": "Jimmy Wales. has birth place: Huntsville, Alabama. inverse has founder: Wiki Tribune.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jimmy_Wales",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jimmy Wales",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jimmy Wales",
+        "extracted_source": "label",
+        "ground_truth_text": "Jimmy Wales",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9937247633934021,
+      "graph_score": 0.9968624114990234,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wikitribune",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Wiki Tribune",
+          "source": "label"
+        },
+        {
+          "text": "wikitribune",
+          "source": "uri"
+        }
+      ],
+      "context": "Wiki Tribune. has founder: Jimmy Wales.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/WikiTribune",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Wiki Tribune",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Wiki Tribune",
+        "extracted_source": "label",
+        "ground_truth_text": "Wiki Tribune",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/525/originals/extracted_525.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/525/ground_truth_525.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/rajartha_film": "http://example.org/entity/Rajaratha",
+    "http://example.org/extracted/anup_bhandari": "http://example.org/entity/Anup_Bhandari"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/anup_bhandari",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anup Bhandari",
+          "source": "label"
+        }
+      ],
+      "context": "Anup Bhandari. has educated at: Vidya Vikas Institute of Engineering & Technology.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anup_Bhandari",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anup Bhandari",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anup Bhandari",
+        "extracted_source": "label",
+        "ground_truth_text": "Anup Bhandari",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8228050470352173,
+      "graph_score": 0.41140252351760864,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/rajartha_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rajaratha",
+          "source": "label"
+        },
+        {
+          "text": "rajartha film",
+          "source": "uri"
+        }
+      ],
+      "context": "Rajaratha.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rajaratha",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rajaratha",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rajaratha",
+        "extracted_source": "label",
+        "ground_truth_text": "Rajaratha",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6960617303848267,
+      "graph_score": 0.34803086519241333,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/vvi_et",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vidya Vikas Institute of Engineering & Technology",
+          "source": "label"
+        },
+        {
+          "text": "vvi et",
+          "source": "uri"
+        }
+      ],
+      "context": "Vidya Vikas Institute of Engineering & Technology. inverse has educated at: Anup Bhandari.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vidya_Vikas_Institute_of_Engineering_Technology_VVIET",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vidya Vikas Institute of Engineering Technology VVIET",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vidya Vikas Institute of Engineering & Technology",
+        "extracted_source": "label",
+        "ground_truth_text": "Vidya Vikas Institute of Engineering Technology VVIET",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9594494104385376,
+      "name_embedding_score": 0.958915114402771,
+      "string_score": 0.9289916157722473,
+      "independent_identity_support": true,
+      "context_score": 0.9819517731666565,
+      "graph_score": 0.9909758567810059,
+      "margin": 0.9594494104385376
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

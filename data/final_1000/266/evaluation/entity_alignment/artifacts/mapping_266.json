@@ -1,0 +1,168 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/266/originals/extracted_266.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/266/ground_truth_266.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/maude_smith_skater": "http://example.org/entity/Maude_Smith",
+    "http://example.org/extracted/john_a_mcdougald": "http://example.org/entity/John_A_McDougald"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/john_a_mcdougald",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bud Mc Dougald",
+          "source": "altLabel"
+        },
+        {
+          "text": "John Angus \"Bud\" Mc Dougald",
+          "source": "altLabel"
+        },
+        {
+          "text": "John A. Mc Dougald",
+          "source": "label"
+        },
+        {
+          "text": "john a mcdougald",
+          "source": "uri"
+        }
+      ],
+      "context": "Bud Mc Dougald. has death place: Palm Beach, Florida. inverse has spouse: Hedley Maude Smith.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_A_McDougald",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John A Mc Dougald",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John A. Mc Dougald",
+        "extracted_source": "label",
+        "ground_truth_text": "John A Mc Dougald",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9820899963378906,
+      "string_score": 0.9871428608894348,
+      "independent_identity_support": true,
+      "context_score": 0.8702470660209656,
+      "graph_score": 0.9351235628128052,
+      "margin": 0.7365772128105164
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/maude_smith_skater",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hedley Maude Smith",
+          "source": "altLabel"
+        },
+        {
+          "text": "Maude Smith",
+          "source": "altLabel"
+        },
+        {
+          "text": "maude smith skater",
+          "source": "uri"
+        }
+      ],
+      "context": "Hedley Maude Smith. has spouse: Bud Mc Dougald.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maude_Smith",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maude Smith",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maude Smith",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Maude Smith",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8699268698692322,
+      "graph_score": 0.9349634647369385,
+      "margin": 0.6930112838745117
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/palm_beach_florida",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Palm Beach, Florida",
+          "source": "label"
+        },
+        {
+          "text": "palm beach florida",
+          "source": "uri"
+        }
+      ],
+      "context": "Palm Beach, Florida. inverse has death place: Bud Mc Dougald.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Palm_Beach",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Palm Beach",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "palm beach florida",
+        "extracted_source": "uri",
+        "ground_truth_text": "Palm Beach",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8913913369178772,
+      "name_embedding_score": 0.9153065085411072,
+      "string_score": 0.788095235824585,
+      "independent_identity_support": true,
+      "context_score": 0.8937144875526428,
+      "graph_score": 0.946857213973999,
+      "margin": 0.8913913369178772
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

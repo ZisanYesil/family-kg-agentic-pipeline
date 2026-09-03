@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/450/originals/extracted_450.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/450/ground_truth_450.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/truth_or_consequences_nm_film": "http://example.org/entity/Truth_or_Consequences_N_M",
+    "http://example.org/extracted/sarah_sutherland": "http://example.org/entity/Sarah_Sutherland",
+    "http://example.org/extracted/kiefer_sutherland": "http://example.org/entity/Kiefer_Sutherland"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/kiefer_sutherland",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kiefer Sutherland",
+          "source": "label"
+        }
+      ],
+      "context": "Kiefer Sutherland. inverse has director: Truth or Consequences, N.M.. inverse has father: Sarah Sutherland.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kiefer_Sutherland",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kiefer Sutherland",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kiefer Sutherland",
+        "extracted_source": "label",
+        "ground_truth_text": "Kiefer Sutherland",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9391161203384399,
+      "graph_score": 0.6362247467041016,
+      "margin": 0.4109337329864502
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sarah_sutherland",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sarah Sutherland",
+          "source": "label"
+        }
+      ],
+      "context": "Sarah Sutherland. has father: Kiefer Sutherland.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sarah_Sutherland",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sarah Sutherland",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sarah Sutherland",
+        "extracted_source": "label",
+        "ground_truth_text": "Sarah Sutherland",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8833072781562805,
+      "graph_score": 0.44165363907814026,
+      "margin": 0.41568583250045776
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/truth_or_consequences_nm_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Truth or Consequences, N.M.",
+          "source": "label"
+        },
+        {
+          "text": "truth or consequences nm film",
+          "source": "uri"
+        }
+      ],
+      "context": "Truth or Consequences, N.M.. has director: Kiefer Sutherland.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Truth_or_Consequences_N_M",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Truth or Consequences N M",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Truth or Consequences, N.M.",
+        "extracted_source": "label",
+        "ground_truth_text": "Truth or Consequences N M",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9127748608589172,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.985706627368927,
+      "graph_score": 0.9928532838821411,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,23 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Mary_Jane_s_Pa> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Mary Jane's Pa" ;
+    onto:hasDirector <http://example.org/entity/William_Keighley> .
+
+<http://example.org/entity/New_York> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "New York, New York" .
+
+<http://example.org/entity/William_Keighley> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Keighley" ;
+    onto:hasBirthDate "1889-08-04"^^xsd:date ;
+    onto:hasDeathDate "1984-06-24"^^xsd:date ;
+    onto:hasDeathPlace <http://example.org/entity/New_York> ;
+    skos:altLabel "William Jackson Keighley" .
+

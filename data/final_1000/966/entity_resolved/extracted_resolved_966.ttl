@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:louis_ix_of_hesse-darmstadt a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis IX, Landgrave of Hesse-Darmstadt" ;
+    onto:hasDeathPlace data:pirmasens ;
+    onto:hasFather data:princess_caroline_of_hesse-darmstadt_1746 ;
+    skos:altLabel "Louis IX" .
+
+data:pirmasens a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Pirmasens" .
+
+data:princess_caroline_of_hesse-darmstadt_1746 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Caroline of Hesse-Darmstadt" ;
+    skos:altLabel "Princess Caroline of Hesse-Darmstadt" .
+

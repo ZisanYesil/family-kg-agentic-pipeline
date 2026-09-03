@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/493/originals/extracted_493.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/493/ground_truth_493.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/tim_buckley": "http://example.org/entity/Tim_Buckley",
+    "http://example.org/extracted/song_to_the_siren": "http://example.org/entity/Song_to_the_Siren"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/song_to_the_siren",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Song to the Siren",
+          "source": "label"
+        }
+      ],
+      "context": "Song to the Siren. has performer: Timothy Charles Buckley III.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Song_to_the_Siren",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Song to the Siren",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Song to the Siren",
+        "extracted_source": "label",
+        "ground_truth_text": "Song to the Siren",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9236444234848022,
+      "graph_score": 0.9618222117424011,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tim_buckley",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Timothy Charles Buckley III",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tim Buckley",
+          "source": "label"
+        }
+      ],
+      "context": "Timothy Charles Buckley III. has cause of death: heroin overdose. inverse has performer: Song to the Siren.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tim_Buckley",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tim Buckley",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tim Buckley",
+        "extracted_source": "label",
+        "ground_truth_text": "Tim Buckley",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8938174247741699,
+      "graph_score": 0.946908712387085,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/heroin_overdose",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "heroin overdose",
+          "source": "label"
+        }
+      ],
+      "context": "heroin overdose. inverse has cause of death: Timothy Charles Buckley III.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/overdose",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "overdose",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "heroin overdose",
+        "extracted_source": "label",
+        "ground_truth_text": "overdose",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8460447788238525,
+      "name_embedding_score": 0.8578228950500488,
+      "string_score": 0.738043487071991,
+      "independent_identity_support": true,
+      "context_score": 0.8609796762466431,
+      "graph_score": 0.9304898381233215,
+      "margin": 0.8460447788238525
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

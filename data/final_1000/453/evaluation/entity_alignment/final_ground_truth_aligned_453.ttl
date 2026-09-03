@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Esmé_Stewart_3rd_Duke_of_Lennox a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Esmé_Stewart_1st_Duke_of_Lennox ;
+    ex:hasParent entity:Esmé_Stewart_1st_Duke_of_Lennox .
+
+entity:Anne_de_la_Queuille a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Esmé_Stewart_1st_Duke_of_Lennox .
+
+entity:Esmé_Stewart_1st_Duke_of_Lennox a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Esmé_Stewart_3rd_Duke_of_Lennox ;
+    ex:hasMother entity:Anne_de_la_Queuille ;
+    ex:hasParent entity:Anne_de_la_Queuille .
+

@@ -57,7 +57,7 @@ ex:Artifact a owl:Class ;
 ex:CreativeWork a owl:Class ;
     rdfs:subClassOf ex:Artifact ;
     rdfs:label "Creative Work" ;
-    rdfs:comment "A film, book, musical work, TV program, video game, or other authored work. Deliberately kept as a single class rather than split into Film/TelevisionProgram/WrittenWork/etc. subclasses: type is not scored by this project's evaluation, and no property in this ontology narrows its domain/range to any such subclass, so a finer split would only add classification risk for the extraction LLM with no downstream benefit. MusicalWork is the one exception kept as a real subclass, since hasComposer's domain is narrowed to it specifically." ;
+    rdfs:comment "A film, book, musical work, TV program, video game, or other authored work. Deliberately kept as a broad superclass because creative-role properties apply across several work categories and a needlessly narrow domain would add classification risk without improving downstream reasoning." ;
     rdfs:seeAlso wd:Q386724 .
 
 ex:Film a owl:Class ;
@@ -68,7 +68,7 @@ ex:Film a owl:Class ;
 ex:MusicalWork a owl:Class ;
     rdfs:subClassOf ex:CreativeWork ;
     rdfs:label "Musical Work" ;
-    rdfs:comment "Kept as a distinct CreativeWork subclass because hasComposer's domain is narrowed specifically to MusicalWork; this is the only CreativeWork subclass a property actually depends on." .
+    rdfs:comment "A song, composition, album, or other musical creative work. Retained as a useful descriptive subtype, but creative-role properties do not require this narrower classification." .
 
 ex:Product a owl:Class ;
     rdfs:subClassOf ex:Artifact ;
@@ -368,9 +368,9 @@ ex:hasDirector a owl:ObjectProperty ;
 ex:hasComposer a owl:ObjectProperty ;
     rdfs:label "has composer" ;
     rdfs:subPropertyOf ex:hasCreator ;
-    rdfs:domain ex:MusicalWork ;
+    rdfs:domain ex:CreativeWork ;
     rdfs:range ex:Person ;
-    rdfs:comment "The person who wrote the music for the work. Applies specifically to musical works, not films or other creative works in general." ;
+    rdfs:comment "The person who wrote the music for a creative work, including a song, composition, film, television programme, or other work with an attributed score or music." ;
     ex:directPhrase "composed by" ;
     ex:inversePhrase "composer of" ;
     skos:exactMatch wdt:P86 .

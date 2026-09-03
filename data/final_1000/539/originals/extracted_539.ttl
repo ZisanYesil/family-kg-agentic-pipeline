@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:buttercup_chain a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Buttercup Chain" ;
+    onto:hasCountryOfOrigin data:united_kingdom .
+
+data:happy_is_the_bride a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Happy Is the Bride" ;
+    onto:hasCountryOfOrigin data:united_kingdom .
+
+data:united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "British" .
+

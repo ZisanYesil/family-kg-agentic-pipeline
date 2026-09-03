@@ -1,0 +1,141 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/724/originals/extracted_724.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/724/ground_truth_724.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/city_industrial_complex": "http://example.org/entity/City_Industrial_Complex",
+    "http://example.org/extracted/iran": "http://example.org/entity/Iran",
+    "http://example.org/extracted/karju": "http://example.org/entity/Karju"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/city_industrial_complex",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "City Industrial Complex",
+          "source": "altLabel"
+        }
+      ],
+      "context": "City Industrial Complex. has country: Iran.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/City_Industrial_Complex",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "City Industrial Complex",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "City Industrial Complex",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "City Industrial Complex",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7125747203826904
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/iran",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Iran",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Iran. inverse has country: City Industrial Complex. inverse has country: Karju.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Iran",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Iran",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Iran",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Iran",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.6892365515232086
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/karju",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Karju",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Karju. has country: Iran.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Karju",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Karju",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Karju",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Karju",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.6892365515232086
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

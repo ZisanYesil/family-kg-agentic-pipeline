@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/603/originals/extracted_603.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/603/ground_truth_603.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/chungakkarum_veshyakalum_film": "http://example.org/entity/Chungakkarum_Veshyakalum",
+    "http://example.org/extracted/a_touch_of_zen_film": "http://example.org/entity/A_Touch_of_Zen"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/a_touch_of_zen_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A Touch of Zen",
+          "source": "label"
+        },
+        {
+          "text": "a touch of zen film",
+          "source": "uri"
+        }
+      ],
+      "context": "A Touch of Zen. has publication date: 1971.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Touch_of_Zen",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Touch of Zen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Touch of Zen",
+        "extracted_source": "label",
+        "ground_truth_text": "A Touch of Zen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7513428330421448
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/chungakkarum_veshyakalum_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chungakkarum Veshyakalum",
+          "source": "label"
+        },
+        {
+          "text": "chungakkarum veshyakalum film",
+          "source": "uri"
+        }
+      ],
+      "context": "Chungakkarum Veshyakalum. has publication date: 2011.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chungakkarum_Veshyakalum",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chungakkarum Veshyakalum",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chungakkarum Veshyakalum",
+        "extracted_source": "label",
+        "ground_truth_text": "Chungakkarum Veshyakalum",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7006186842918396
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

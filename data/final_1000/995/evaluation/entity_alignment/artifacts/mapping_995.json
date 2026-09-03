@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/995/originals/extracted_995.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/995/ground_truth_995.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/killing_on_adrenaline": "http://example.org/entity/Killing_on_Adrenaline",
+    "http://example.org/extracted/the_notorious_kim": "http://example.org/entity/The_Notorious_K_I_M"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/killing_on_adrenaline",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Killing on Adrenaline",
+          "source": "label"
+        }
+      ],
+      "context": "Killing on Adrenaline. has publication date: 1998.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Killing_on_Adrenaline",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Killing on Adrenaline",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Killing on Adrenaline",
+        "extracted_source": "label",
+        "ground_truth_text": "Killing on Adrenaline",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.8288465142250061
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_notorious_kim",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Notorious K.I.M.",
+          "source": "label"
+        },
+        {
+          "text": "the notorious kim",
+          "source": "uri"
+        }
+      ],
+      "context": "The Notorious K.I.M.. has publication date: 2000-06-27.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Notorious_K_I_M",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Notorious K I M",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Notorious K.I.M.",
+        "extracted_source": "label",
+        "ground_truth_text": "The Notorious K I M",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9567482471466064,
+      "string_score": 0.942307710647583,
+      "independent_identity_support": true,
+      "context_score": 0.9299094080924988,
+      "graph_score": 0.9299094080924988,
+      "margin": 0.8143013119697571
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:sancha_of_castile a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sancha of Castile" ;
+    onto:hasMother data:berengaria_of_barcelona ;
+    skos:altLabel "Sancha of Castile" .
+
+data:berengaria_of_barcelona a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Berengaria of Barcelona" ;
+    onto:hasDeathPlace data:palencia ;
+    skos:altLabel "Berengaria of Barcelona",
+        "Berenguela de Barcelona" .
+
+data:palencia a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Palencia" ;
+    skos:altLabel "Palencia" .
+

@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/802/evaluation/entity_alignment/baseline_extracted_aligned_802.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/802/evaluation/entity_alignment/baseline_ground_truth_aligned_802.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Thep_Kasattri",
+      "predicate": "hasParent",
+      "object": "Maha_Chakkraphat",
+      "subject_uri": "http://example.org/entity/Thep_Kasattri",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Maha_Chakkraphat"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Maha_Chakkraphat",
+      "predicate": "hasDeathPlace",
+      "object": "Ayutthaya",
+      "subject_uri": "http://example.org/entity/Maha_Chakkraphat",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Ayutthaya"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Maha_Chakkraphat",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Maha_Chakkraphat",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Maha_Chakkraphat",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Maha_Chakkraphat",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Maha_Chakkraphat",
+      "predicate": "label",
+      "object": "\"Maha Chakkraphat\"",
+      "subject_uri": "http://example.org/entity/Maha_Chakkraphat",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Maha Chakkraphat\""
+    },
+    {
+      "subject": "Maha_Chakkraphat",
+      "predicate": "altLabel",
+      "object": "\"Maha Chakkraphat\"",
+      "subject_uri": "http://example.org/entity/Maha_Chakkraphat",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Maha Chakkraphat\""
+    },
+    {
+      "subject": "Thep_Kasattri",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Thep_Kasattri",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Thep_Kasattri",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Thep_Kasattri",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Thep_Kasattri",
+      "predicate": "label",
+      "object": "\"Thep Kasattri\"",
+      "subject_uri": "http://example.org/entity/Thep_Kasattri",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Thep Kasattri\""
+    },
+    {
+      "subject": "Thep_Kasattri",
+      "predicate": "altLabel",
+      "object": "\"Thep Kasat Chao\"",
+      "subject_uri": "http://example.org/entity/Thep_Kasattri",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Thep Kasat Chao\""
+    },
+    {
+      "subject": "Thep_Kasattri",
+      "predicate": "altLabel",
+      "object": "\"Thep Kasattri\"",
+      "subject_uri": "http://example.org/entity/Thep_Kasattri",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Thep Kasattri\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 1,
+    "false_positives": 9,
+    "false_negatives": 1,
+    "precision": 0.1,
+    "recall": 0.5,
+    "f1": 0.16666666666666669
+  },
+  "stage": "pre_inference"
+}

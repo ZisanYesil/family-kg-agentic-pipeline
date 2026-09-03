@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/458/originals/extracted_458.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/458/ground_truth_458.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/a_summer_you_will_never_forget_1959": "http://example.org/entity/A_Summer_You_Will_Never_Forget",
+    "http://example.org/extracted/alfred_von_ingelheim_dramatic_life_1921": "http://example.org/entity/Alfred_von_Ingelheim_s_Dramatic_Life",
+    "http://example.org/extracted/germany": "http://example.org/entity/German"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/a_summer_you_will_never_forget_1959",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A Summer You Will Never Forget",
+          "source": "label"
+        },
+        {
+          "text": "a summer you will never forget 1959",
+          "source": "uri"
+        }
+      ],
+      "context": "A Summer You Will Never Forget. has country: German.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Summer_You_Will_Never_Forget",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Summer You Will Never Forget",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Summer You Will Never Forget",
+        "extracted_source": "label",
+        "ground_truth_text": "A Summer You Will Never Forget",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9688804745674133,
+      "graph_score": 0.48444023728370667,
+      "margin": 0.7854732275009155
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/alfred_von_ingelheim_dramatic_life_1921",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alfred von Ingelheim's Dramatic Life",
+          "source": "label"
+        },
+        {
+          "text": "alfred von ingelheim dramatic life 1921",
+          "source": "uri"
+        }
+      ],
+      "context": "Alfred von Ingelheim's Dramatic Life. has country: German.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alfred_von_Ingelheim_s_Dramatic_Life",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alfred von Ingelheim s Dramatic Life",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alfred von Ingelheim's Dramatic Life",
+        "extracted_source": "label",
+        "ground_truth_text": "Alfred von Ingelheim s Dramatic Life",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9970729351043701,
+      "string_score": 0.987500011920929,
+      "independent_identity_support": true,
+      "context_score": 0.9781285524368286,
+      "graph_score": 0.4890642762184143,
+      "margin": 0.8221061527729034
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "German",
+          "source": "altLabel"
+        },
+        {
+          "text": "West German",
+          "source": "altLabel"
+        },
+        {
+          "text": "Germany",
+          "source": "label"
+        }
+      ],
+      "context": "German. inverse has country: A Summer You Will Never Forget. inverse has country: Alfred von Ingelheim's Dramatic Life.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/German",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "German",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "German",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "German",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.958593487739563,
+      "graph_score": 0.4792967438697815,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

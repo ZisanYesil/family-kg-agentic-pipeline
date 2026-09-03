@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:everything_i_like_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Everything I Like" ;
+    onto:hasDirector data:martin_sulik_person .
+
+data:academy_of_performing_arts_bratislava_educational_institution a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Academy of Performing Arts in Bratislava" .
+
+data:martin_sulik_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Martin Šulík" ;
+    onto:hasEducatedAt data:academy_of_performing_arts_bratislava_educational_institution .
+

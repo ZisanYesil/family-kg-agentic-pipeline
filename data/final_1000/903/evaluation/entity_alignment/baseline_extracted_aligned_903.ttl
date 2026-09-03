@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Lighter> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Lighter" ;
+    onto:hasPerformer <http://example.org/entity/Miley_Cyrus> .
+
+<http://example.org/entity/Billy_Ray_Cyrus> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Billy Ray Cyrus" .
+
+<http://example.org/entity/Miley_Cyrus> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Miley Cyrus" ;
+    onto:hasFather <http://example.org/entity/Billy_Ray_Cyrus> ;
+    skos:altLabel "Destiny Hope Cyrus",
+        "Miley Ray Hemsworth" .
+

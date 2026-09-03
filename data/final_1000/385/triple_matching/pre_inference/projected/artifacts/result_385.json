@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/385/evaluation/entity_alignment/baseline_extracted_aligned_385.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/385/evaluation/entity_alignment/baseline_ground_truth_aligned_385.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Vladimír_Godár",
+      "predicate": "hasCountry",
+      "object": "Slovak",
+      "subject_uri": "http://example.org/entity/Vladimír_Godár",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Slovak"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Let_asfaltového_holuba",
+      "predicate": "hasComposer",
+      "object": "Vladimír_Godár",
+      "subject_uri": "http://example.org/entity/Let_asfaltového_holuba",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Vladimír_Godár"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Let_asfaltového_holuba",
+      "predicate": "hasCreator",
+      "object": "Vladimír_Godár",
+      "subject_uri": "http://example.org/entity/Let_asfaltového_holuba",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Vladimír_Godár"
+    },
+    {
+      "subject": "Let_asfaltového_holuba",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Let_asfaltového_holuba",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Let_asfaltového_holuba",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Let_asfaltového_holuba",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Let_asfaltového_holuba",
+      "predicate": "label",
+      "object": "\"Let asfaltového holuba\"",
+      "subject_uri": "http://example.org/entity/Let_asfaltového_holuba",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Let asfaltového holuba\""
+    },
+    {
+      "subject": "Slovak",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Slovak",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Slovak",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Slovak",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Slovak",
+      "predicate": "label",
+      "object": "\"Slovakia\"",
+      "subject_uri": "http://example.org/entity/Slovak",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Slovakia\""
+    },
+    {
+      "subject": "Slovak",
+      "predicate": "altLabel",
+      "object": "\"Slovak\"",
+      "subject_uri": "http://example.org/entity/Slovak",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Slovak\""
+    },
+    {
+      "subject": "Vladimír_Godár",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Vladimír_Godár",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Vladimír_Godár",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Vladimír_Godár",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Vladimír_Godár",
+      "predicate": "label",
+      "object": "\"Vladimír Godár\"",
+      "subject_uri": "http://example.org/entity/Vladimír_Godár",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Vladimír Godár\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 1,
+    "false_positives": 11,
+    "false_negatives": 1,
+    "precision": 0.08333333333333333,
+    "recall": 0.5,
+    "f1": 0.14285714285714285
+  },
+  "stage": "pre_inference"
+}

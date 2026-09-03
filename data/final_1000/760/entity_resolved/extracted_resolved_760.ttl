@@ -1,0 +1,25 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:atang_de_la_rama a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Atang de la Rama" ;
+    onto:hasSpouse data:amado_v_hernandez ;
+    skos:altLabel "Atang de la Rama",
+        "Honorata de la Rama-Hernandez" .
+
+data:amado_v_hernandez a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Amado V. Hernandez" ;
+    onto:hasBirthPlace data:tondo_manila ;
+    skos:altLabel "Amado V. Hernandez",
+        "Amado Vera Hernandez" .
+
+data:tondo_manila a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Tondo, Manila" ;
+    skos:altLabel "Tondo, Manila" .
+

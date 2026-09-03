@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/190/evaluation/entity_alignment/baseline_extracted_aligned_190.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/190/evaluation/entity_alignment/baseline_ground_truth_aligned_190.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "San_Clemente_Brescia",
+      "predicate": "hasCountry",
+      "object": "Italy",
+      "subject_uri": "http://example.org/entity/San_Clemente_Brescia",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Italy"
+    },
+    {
+      "subject": "Santi_Apostoli_Naples",
+      "predicate": "hasCountry",
+      "object": "Italy",
+      "subject_uri": "http://example.org/entity/Santi_Apostoli_Naples",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Italy"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Italy",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Italy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Italy",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Italy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Italy",
+      "predicate": "label",
+      "object": "\"Italy\"",
+      "subject_uri": "http://example.org/entity/Italy",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Italy\""
+    },
+    {
+      "subject": "San_Clemente_Brescia",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/San_Clemente_Brescia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "San_Clemente_Brescia",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/San_Clemente_Brescia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "San_Clemente_Brescia",
+      "predicate": "label",
+      "object": "\"San Clemente, Brescia\"",
+      "subject_uri": "http://example.org/entity/San_Clemente_Brescia",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"San Clemente, Brescia\""
+    },
+    {
+      "subject": "Santi_Apostoli_Naples",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Santi_Apostoli_Naples",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Santi_Apostoli_Naples",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Santi_Apostoli_Naples",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Santi_Apostoli_Naples",
+      "predicate": "label",
+      "object": "\"Santi Apostoli, Naples\"",
+      "subject_uri": "http://example.org/entity/Santi_Apostoli_Naples",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Santi Apostoli, Naples\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

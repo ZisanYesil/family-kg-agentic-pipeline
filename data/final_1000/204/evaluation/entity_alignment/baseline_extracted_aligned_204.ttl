@@ -1,0 +1,31 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Seabiscuit_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Seabiscuit" ;
+    onto:hasDirector <http://example.org/entity/Gary_Ross> .
+
+<http://example.org/entity/Warn_London> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Warn London" ;
+    onto:hasDirector <http://example.org/entity/T_Hayes_Hunter> .
+
+<http://example.org/entity/Gary_Ross> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gary Ross" ;
+    onto:hasNationality <http://example.org/entity/American> .
+
+<http://example.org/entity/T_Hayes_Hunter> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "T. Hayes Hunter" ;
+    onto:hasNationality <http://example.org/entity/American> ;
+    skos:altLabel "Thomas Hayes Hunter" .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

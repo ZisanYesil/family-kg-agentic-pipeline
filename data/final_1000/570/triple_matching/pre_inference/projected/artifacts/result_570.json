@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/570/evaluation/entity_alignment/baseline_extracted_aligned_570.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/570/evaluation/entity_alignment/baseline_ground_truth_aligned_570.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Hot_Time_in_the_Town_of_Berlin",
+      "predicate": "hasComposer",
+      "object": "Joe_Bushkin",
+      "subject_uri": "http://example.org/entity/Hot_Time_in_the_Town_of_Berlin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Joe_Bushkin"
+    },
+    {
+      "subject": "Joe_Bushkin",
+      "predicate": "hasDeathPlace",
+      "object": "Santa_Barbara",
+      "subject_uri": "http://example.org/entity/Joe_Bushkin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Santa_Barbara"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Hot_Time_in_the_Town_of_Berlin",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Hot_Time_in_the_Town_of_Berlin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    },
+    {
+      "subject": "Hot_Time_in_the_Town_of_Berlin",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hot_Time_in_the_Town_of_Berlin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hot_Time_in_the_Town_of_Berlin",
+      "predicate": "label",
+      "object": "\"(There'll Be a) Hot Time in the Town of Berlin\"",
+      "subject_uri": "http://example.org/entity/Hot_Time_in_the_Town_of_Berlin",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"(There'll Be a) Hot Time in the Town of Berlin\""
+    },
+    {
+      "subject": "Joe_Bushkin",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Joe_Bushkin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Joe_Bushkin",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Joe_Bushkin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Joe_Bushkin",
+      "predicate": "label",
+      "object": "\"Joe Bushkin\"",
+      "subject_uri": "http://example.org/entity/Joe_Bushkin",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Joe Bushkin\""
+    },
+    {
+      "subject": "Joe_Bushkin",
+      "predicate": "altLabel",
+      "object": "\"Bushkin\"",
+      "subject_uri": "http://example.org/entity/Joe_Bushkin",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Bushkin\""
+    },
+    {
+      "subject": "Santa_Barbara",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Santa_Barbara",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Santa_Barbara",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Santa_Barbara",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Santa_Barbara",
+      "predicate": "label",
+      "object": "\"Santa Barbara, California\"",
+      "subject_uri": "http://example.org/entity/Santa_Barbara",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Santa Barbara, California\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

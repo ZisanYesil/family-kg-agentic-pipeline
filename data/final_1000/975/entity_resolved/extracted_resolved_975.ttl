@@ -1,0 +1,27 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:talking_feet_1937 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Talking Feet" ;
+    onto:hasDirector data:john_baxter_1896 .
+
+data:the_third_miracle_1999 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Third Miracle" ;
+    onto:hasDirector data:agnieszka_holland_1948 .
+
+data:agnieszka_holland_1948 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Agnieszka Holland" ;
+    onto:hasBirthDate "1948-11-28"^^xsd:date .
+
+data:john_baxter_1896 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Baxter" ;
+    onto:hasBirthDate "1896-12-31"^^xsd:date ;
+    onto:hasDeathDate "1975-01-21"^^xsd:date .
+

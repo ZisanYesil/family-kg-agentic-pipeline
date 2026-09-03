@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:when_you_were_mine_song a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "When You Were Mine" ;
+    onto:hasComposer data:prince .
+
+data:prince a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Rogers Nelson" ;
+    onto:hasNationality data:united_states ;
+    skos:altLabel "Prince" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

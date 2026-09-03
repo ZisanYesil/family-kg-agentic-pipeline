@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/205/originals/extracted_205.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/205/ground_truth_205.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/liverpool": "http://example.org/entity/Liverpool",
+    "http://example.org/extracted/john_lennon": "http://example.org/entity/John_Lennon",
+    "http://example.org/extracted/love_john_lennon_song": "http://example.org/entity/Love"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/john_lennon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Winston Ono Lennon",
+          "source": "altLabel"
+        },
+        {
+          "text": "John Lennon",
+          "source": "label"
+        }
+      ],
+      "context": "John Winston Ono Lennon. has birth place: Liverpool. inverse has performer: Love.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Lennon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Lennon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Lennon",
+        "extracted_source": "label",
+        "ground_truth_text": "John Lennon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9440861940383911,
+      "graph_score": 0.9720430970191956,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/liverpool",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Liverpool",
+          "source": "label"
+        }
+      ],
+      "context": "Liverpool. inverse has birth place: John Winston Ono Lennon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Liverpool",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Liverpool",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Liverpool",
+        "extracted_source": "label",
+        "ground_truth_text": "Liverpool",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9396416544914246,
+      "graph_score": 0.9698208570480347,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/love_john_lennon_song",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Love",
+          "source": "altLabel"
+        },
+        {
+          "text": "Love (John Lennon song)",
+          "source": "label"
+        },
+        {
+          "text": "love john lennon song",
+          "source": "uri"
+        }
+      ],
+      "context": "Love. has performer: John Winston Ono Lennon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Love",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Love",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Love",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Love",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9100185632705688,
+      "graph_score": 0.9550092816352844,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

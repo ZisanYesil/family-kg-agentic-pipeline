@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_the_loves_of_madame_dubarry a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Loves of Madame Dubarry" ;
+    onto:hasDirector data:person_marcel_varnel ;
+    skos:altLabel "I Give My Heart" .
+
+data:person_marcel_varnel a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marcel Varnel" ;
+    onto:hasDeathPlace data:place_rake_west_sussex .
+
+data:place_rake_west_sussex a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Rake, West Sussex" .
+

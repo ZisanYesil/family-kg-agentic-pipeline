@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_lover_grief_yellow_river a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Lover's Grief over the Yellow River" ;
+    onto:hasDirector data:person_feng_xiaoning .
+
+data:person_feng_xiaoning a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Feng Xiaoning" ;
+    onto:hasBirthPlace data:place_xian .
+
+data:place_xian a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Xi'an" .
+

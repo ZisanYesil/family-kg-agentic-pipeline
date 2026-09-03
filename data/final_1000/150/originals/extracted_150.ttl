@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:falling_song a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Falling (Bruce Guthro song)" ;
+    onto:hasPerformer data:bruce_guthro .
+
+data:bruce_guthro a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bruce Guthro" ;
+    onto:hasBirthPlace data:cape_breton ;
+    skos:altLabel "Bruce Gouthro" .
+
+data:cape_breton a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Cape Breton Island, Nova Scotia" .
+

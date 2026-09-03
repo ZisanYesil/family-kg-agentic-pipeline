@@ -1,0 +1,139 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/667/evaluation/entity_alignment/baseline_extracted_aligned_667.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/667/evaluation/entity_alignment/baseline_ground_truth_aligned_667.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Booker_T",
+      "predicate": "hasAwardReceived",
+      "object": "WWE_Hall_of_Fame",
+      "subject_uri": "http://example.org/entity/Booker_T",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/WWE_Hall_of_Fame"
+    },
+    {
+      "subject": "Pro_Wrestling_Alliance",
+      "predicate": "hasFounder",
+      "object": "Booker_T",
+      "subject_uri": "http://example.org/entity/Pro_Wrestling_Alliance",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Booker_T"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Booker_T",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Booker_T",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Booker_T",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Booker_T",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Booker_T",
+      "predicate": "label",
+      "object": "\"Booker T\"",
+      "subject_uri": "http://example.org/entity/Booker_T",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Booker T\""
+    },
+    {
+      "subject": "Booker_T",
+      "predicate": "altLabel",
+      "object": "\"Robert Booker Tio Huffman\"",
+      "subject_uri": "http://example.org/entity/Booker_T",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Robert Booker Tio Huffman\""
+    },
+    {
+      "subject": "Pro_Wrestling_Alliance",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Pro_Wrestling_Alliance",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Pro_Wrestling_Alliance",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Pro_Wrestling_Alliance",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Pro_Wrestling_Alliance",
+      "predicate": "label",
+      "object": "\"Reality Of Wrestling\"",
+      "subject_uri": "http://example.org/entity/Pro_Wrestling_Alliance",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Reality Of Wrestling\""
+    },
+    {
+      "subject": "Pro_Wrestling_Alliance",
+      "predicate": "altLabel",
+      "object": "\"ROW\"",
+      "subject_uri": "http://example.org/entity/Pro_Wrestling_Alliance",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"ROW\""
+    },
+    {
+      "subject": "Pro_Wrestling_Alliance",
+      "predicate": "altLabel",
+      "object": "\"Reality of Wrestling\"",
+      "subject_uri": "http://example.org/entity/Pro_Wrestling_Alliance",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Reality of Wrestling\""
+    },
+    {
+      "subject": "WWE_Hall_of_Fame",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/WWE_Hall_of_Fame",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "WWE_Hall_of_Fame",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/WWE_Hall_of_Fame",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "WWE_Hall_of_Fame",
+      "predicate": "label",
+      "object": "\"WWE Hall of Fame\"",
+      "subject_uri": "http://example.org/entity/WWE_Hall_of_Fame",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"WWE Hall of Fame\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 14,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 2,
+    "false_positives": 12,
+    "false_negatives": 0,
+    "precision": 0.14285714285714285,
+    "recall": 1.0,
+    "f1": 0.25
+  },
+  "stage": "pre_inference"
+}

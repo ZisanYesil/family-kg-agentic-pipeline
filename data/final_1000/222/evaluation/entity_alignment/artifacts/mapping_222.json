@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/222/originals/extracted_222.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/222/ground_truth_222.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/institution_london_film_school": "http://example.org/entity/London_Film_School",
+    "http://example.org/extracted/person_giacomo_cimini": "http://example.org/entity/Giacomo_Cimini"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/institution_london_film_school",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "London Film School",
+          "source": "label"
+        },
+        {
+          "text": "institution london film school",
+          "source": "uri"
+        }
+      ],
+      "context": "London Film School. inverse has educated at: Giacomo Cimini.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/London_Film_School",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "London Film School",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "London Film School",
+        "extracted_source": "label",
+        "ground_truth_text": "London Film School",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_giacomo_cimini",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Giacomo Cimini",
+          "source": "label"
+        },
+        {
+          "text": "person giacomo cimini",
+          "source": "uri"
+        }
+      ],
+      "context": "Giacomo Cimini. has educated at: London Film School. inverse has director: Red Riding Hood (2003 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Giacomo_Cimini",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Giacomo Cimini",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Giacomo Cimini",
+        "extracted_source": "label",
+        "ground_truth_text": "Giacomo Cimini",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9795831441879272,
+      "graph_score": 0.9897915720939636,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_red_riding_hood_2003",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Red Riding Hood (2003 film)",
+          "source": "label"
+        },
+        {
+          "text": "film red riding hood 2003",
+          "source": "uri"
+        }
+      ],
+      "context": "Red Riding Hood (2003 film). has director: Giacomo Cimini.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Red_Riding_Hood",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Red Riding Hood",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Red Riding Hood (2003 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Red Riding Hood",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8738971948623657,
+      "name_embedding_score": 0.8782268166542053,
+      "string_score": 0.7714285850524902,
+      "independent_identity_support": true,
+      "context_score": 0.9354135990142822,
+      "graph_score": 0.9677067995071411,
+      "margin": 0.8738971948623657
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,20 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Róża_Maria_Wodzicka> a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse <http://example.org/entity/Jan_Nepomucen_Potocki> .
+
+<http://example.org/entity/Stanisław_Antoni_Potocki> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Jan_Nepomucen_Potocki> .
+
+<http://example.org/extracted/maria_szajer> a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse <http://example.org/entity/Jan_Nepomucen_Potocki> .
+
+<http://example.org/entity/Jan_Nepomucen_Potocki> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/entity/Stanisław_Antoni_Potocki> ;
+    ex:hasSpouse <http://example.org/entity/Róża_Maria_Wodzicka>,
+        <http://example.org/extracted/maria_szajer> .
+

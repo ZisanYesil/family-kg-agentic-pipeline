@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_red_riding_hood_2003 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Red Riding Hood (2003 film)" ;
+    onto:hasDirector data:person_giacomo_cimini .
+
+data:institution_london_film_school a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "London Film School" .
+
+data:person_giacomo_cimini a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Giacomo Cimini" ;
+    onto:hasEducatedAt data:institution_london_film_school .
+

@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/98/evaluation/entity_alignment/baseline_extracted_aligned_98.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/98/evaluation/entity_alignment/baseline_ground_truth_aligned_98.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Julius_Rockwell",
+      "predicate": "hasEducatedAt",
+      "object": "Yale",
+      "subject_uri": "http://example.org/entity/Julius_Rockwell",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Yale"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Francis_Williams_Rockwell",
+      "predicate": "hasParent",
+      "object": "Julius_Rockwell",
+      "subject_uri": "http://example.org/entity/Francis_Williams_Rockwell",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Julius_Rockwell"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Francis_Williams_Rockwell",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Francis_Williams_Rockwell",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Francis_Williams_Rockwell",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Francis_Williams_Rockwell",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Francis_Williams_Rockwell",
+      "predicate": "label",
+      "object": "\"Francis W. Rockwell\"",
+      "subject_uri": "http://example.org/entity/Francis_Williams_Rockwell",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Francis W. Rockwell\""
+    },
+    {
+      "subject": "Francis_Williams_Rockwell",
+      "predicate": "altLabel",
+      "object": "\"Francis Williams Rockwell\"",
+      "subject_uri": "http://example.org/entity/Francis_Williams_Rockwell",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Francis Williams Rockwell\""
+    },
+    {
+      "subject": "Julius_Rockwell",
+      "predicate": "hasParent",
+      "object": "Francis_Williams_Rockwell",
+      "subject_uri": "http://example.org/entity/Julius_Rockwell",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Francis_Williams_Rockwell"
+    },
+    {
+      "subject": "Julius_Rockwell",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Julius_Rockwell",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Julius_Rockwell",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Julius_Rockwell",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Julius_Rockwell",
+      "predicate": "label",
+      "object": "\"Julius Rockwell\"",
+      "subject_uri": "http://example.org/entity/Julius_Rockwell",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Julius Rockwell\""
+    },
+    {
+      "subject": "Yale",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Yale",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Yale",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Yale",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Yale",
+      "predicate": "label",
+      "object": "\"Yale University\"",
+      "subject_uri": "http://example.org/entity/Yale",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Yale University\""
+    },
+    {
+      "subject": "Yale",
+      "predicate": "altLabel",
+      "object": "\"Yale\"",
+      "subject_uri": "http://example.org/entity/Yale",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Yale\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 1,
+    "false_positives": 12,
+    "false_negatives": 1,
+    "precision": 0.07692307692307693,
+    "recall": 0.5,
+    "f1": 0.13333333333333336
+  },
+  "stage": "pre_inference"
+}

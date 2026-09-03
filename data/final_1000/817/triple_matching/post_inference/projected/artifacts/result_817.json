@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/817/evaluation/entity_alignment/final_extracted_aligned_817.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/817/evaluation/entity_alignment/final_ground_truth_aligned_817.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Bruno_Mars",
+      "predicate": "hasAwardReceived",
+      "object": "Grammy_Award",
+      "subject_uri": "http://example.org/entity/Bruno_Mars",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Grammy_Award"
+    },
+    {
+      "subject": "Bruno_Mars",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Bruno_Mars",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Grammy_Award",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/Grammy_Award",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "Marry_You",
+      "predicate": "hasCreator",
+      "object": "Bruno_Mars",
+      "subject_uri": "http://example.org/entity/Marry_You",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Bruno_Mars"
+    },
+    {
+      "subject": "Marry_You",
+      "predicate": "hasPerformer",
+      "object": "Bruno_Mars",
+      "subject_uri": "http://example.org/entity/Marry_You",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Bruno_Mars"
+    },
+    {
+      "subject": "Marry_You",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Marry_You",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Marry_You",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Marry_You",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Bruno_Mars",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bruno_Mars",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Marry_You",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Marry_You",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 9,
+    "true_positives": 7,
+    "false_positives": 2,
+    "false_negatives": 0,
+    "precision": 0.7777777777777778,
+    "recall": 1.0,
+    "f1": 0.8750000000000001
+  },
+  "stage": "post_inference"
+}

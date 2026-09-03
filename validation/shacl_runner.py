@@ -29,7 +29,7 @@ DATASET_ONTOLOGY_NAMESPACE = "http://example.org/2wiki-ontology#"
 # user-controlled ontology filename. Unregistered ontologies intentionally use only the
 # generated structural shapes.
 HAND_WRITTEN_SHAPES_BY_NAMESPACE: Mapping[str, Path] = {
-    DATASET_ONTOLOGY_NAMESPACE: PROJECT_ROOT / "shapes" / "dataset_shapes.ttl",
+    DATASET_ONTOLOGY_NAMESPACE: PROJECT_ROOT / "ontology" / "SHACL_shapes.ttl",
 }
 
 _SEVERITY_BY_URI = {
@@ -66,11 +66,18 @@ def build_ontology_graph(schema: OntologySchema) -> Graph:
 
     for class_uri in classes_by_name.values():
         graph.add((class_uri, RDF.type, OWL.Class))
-    for child, parent in schema.subclass_relations:
+    for child, superclasses in schema.superclasses_by_class.items():
         child_uri = classes_by_name.get(child)
-        parent_uri = classes_by_name.get(parent)
-        if child_uri is not None and parent_uri is not None:
-            graph.add((child_uri, RDFS.subClassOf, parent_uri))
+        if child_uri is None:
+            continue
+
+        for parent in superclasses:
+            if child == parent:
+                continue
+
+            parent_uri = classes_by_name.get(parent)
+            if parent_uri is not None:
+                graph.add((child_uri, RDFS.subClassOf, parent_uri))
 
     datatype_uris = {
         "integer": XSD.integer,

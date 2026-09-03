@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Herbert_Henry_Dow> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Herbert Henry Dow" ;
+    onto:hasEducatedAt <http://example.org/entity/Case> ;
+    onto:hasFather <http://example.org/entity/Alden_B_Dow> .
+
+<http://example.org/entity/Alden_B_Dow> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alden B. Dow" .
+
+<http://example.org/entity/Case> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Case School of Applied Science" .
+

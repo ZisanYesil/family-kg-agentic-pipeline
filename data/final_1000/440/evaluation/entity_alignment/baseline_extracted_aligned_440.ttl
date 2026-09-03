@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/John_Manners_Sutton> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Manners-Sutton" ;
+    onto:hasFather <http://example.org/entity/Lord_George_Manners_Sutton> .
+
+<http://example.org/entity/Lord_George_Manners_Sutton> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lord George Manners-Sutton" ;
+    onto:hasBrother data:john_manners_marquess_of_granby .
+
+data:john_manners_marquess_of_granby a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Manners, Marquess of Granby" .
+

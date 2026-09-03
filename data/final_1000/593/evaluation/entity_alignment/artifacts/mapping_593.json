@@ -1,0 +1,111 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/593/originals/extracted_593.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/593/ground_truth_593.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/susan_thornton_glassell": "http://example.org/entity/Susan_Thornton_Glassell"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/susan_thornton_glassell",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Susan Thornton Glassell",
+          "source": "label"
+        }
+      ],
+      "context": "Susan Thornton Glassell. inverse has spouse: George S. Patton Sr..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Susan_Thornton_Glassell",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Susan Thornton Glassell",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Susan Thornton Glassell",
+        "extracted_source": "label",
+        "ground_truth_text": "Susan Thornton Glassell",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9093986749649048,
+      "graph_score": 0.9093986749649048,
+      "margin": 0.7352744340896606
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/george_patton_sr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George S. Patton Sr.",
+          "source": "label"
+        },
+        {
+          "text": "george patton sr",
+          "source": "uri"
+        }
+      ],
+      "context": "George S. Patton Sr.. has spouse: Susan Thornton Glassell.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_S_Patton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George S Patton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George S. Patton Sr.",
+        "extracted_source": "label",
+        "ground_truth_text": "George S Patton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8032857775688171,
+      "name_embedding_score": 0.9681729078292847,
+      "string_score": 0.8732143044471741,
+      "independent_identity_support": true,
+      "context_score": 0.8071659803390503,
+      "graph_score": 0.40358299016952515,
+      "margin": 0.05977010726928711
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Col_George_Patton_Sr"
+  ]
+}

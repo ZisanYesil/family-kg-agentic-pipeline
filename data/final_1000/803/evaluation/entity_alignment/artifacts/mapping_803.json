@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/803/originals/extracted_803.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/803/ground_truth_803.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/conspirare_org": "http://example.org/entity/Conspirare",
+    "http://example.org/extracted/craig_hella_johnson": "http://example.org/entity/Craig_Hella_Johnson",
+    "http://example.org/extracted/crow_wing_county_mn": "http://example.org/entity/Crow_Wing_County_Minnesota"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/conspirare_org",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Conspirare",
+          "source": "label"
+        },
+        {
+          "text": "conspirare org",
+          "source": "uri"
+        }
+      ],
+      "context": "Conspirare. has founder: Craig Morris Hella Johnson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Conspirare",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Conspirare",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Conspirare",
+        "extracted_source": "label",
+        "ground_truth_text": "Conspirare",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9133042097091675,
+      "graph_score": 0.45665210485458374,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/craig_hella_johnson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Craig Morris Hella Johnson",
+          "source": "altLabel"
+        },
+        {
+          "text": "Craig Hella Johnson",
+          "source": "label"
+        }
+      ],
+      "context": "Craig Morris Hella Johnson. has birth place: Crow Wing County, Minnesota. inverse has founder: Conspirare.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Craig_Hella_Johnson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Craig Hella Johnson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Craig Hella Johnson",
+        "extracted_source": "label",
+        "ground_truth_text": "Craig Hella Johnson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9646057486534119,
+      "graph_score": 0.6489695310592651,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/crow_wing_county_mn",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Crow Wing County, Minnesota",
+          "source": "label"
+        },
+        {
+          "text": "crow wing county mn",
+          "source": "uri"
+        }
+      ],
+      "context": "Crow Wing County, Minnesota. inverse has birth place: Craig Morris Hella Johnson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Crow_Wing_County_Minnesota",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Crow Wing County Minnesota",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Crow Wing County, Minnesota",
+        "extracted_source": "label",
+        "ground_truth_text": "Crow Wing County Minnesota",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.99448162317276,
+      "string_score": 0.9915094375610352,
+      "independent_identity_support": true,
+      "context_score": 0.9876247644424438,
+      "graph_score": 0.9938123822212219,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

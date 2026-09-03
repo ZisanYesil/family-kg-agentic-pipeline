@@ -1,0 +1,30 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:condemned_women_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Condemned Women" ;
+    onto:hasDirector data:lew_landers .
+
+data:faces_in_the_dark_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Faces in the Dark" ;
+    onto:hasDirector data:david_edy .
+
+data:david_edy a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "David Eady" ;
+    onto:hasBirthDate "1924-04-22"^^xsd:date ;
+    onto:hasDeathDate "2009-04-05"^^xsd:date .
+
+data:lew_landers a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lew Landers" ;
+    onto:hasBirthDate "1901-01-02"^^xsd:date ;
+    onto:hasDeathDate "1962-12-16"^^xsd:date ;
+    skos:altLabel "Louis Friedlander" .
+

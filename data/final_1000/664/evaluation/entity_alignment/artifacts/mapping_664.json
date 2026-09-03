@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/664/originals/extracted_664.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/664/ground_truth_664.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/herbert_henry_dow": "http://example.org/entity/Herbert_Henry_Dow",
+    "http://example.org/extracted/alden_b_dow": "http://example.org/entity/Alden_B_Dow"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alden_b_dow",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alden B. Dow",
+          "source": "label"
+        },
+        {
+          "text": "alden b dow",
+          "source": "uri"
+        }
+      ],
+      "context": "Alden B. Dow. inverse has father: Herbert Henry Dow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alden_B_Dow",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alden B Dow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alden B. Dow",
+        "extracted_source": "label",
+        "ground_truth_text": "Alden B Dow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9738416075706482,
+      "string_score": 0.980434775352478,
+      "independent_identity_support": true,
+      "context_score": 0.9048186540603638,
+      "graph_score": 0.4524093270301819,
+      "margin": 0.4709897041320801
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/herbert_henry_dow",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Herbert Henry Dow",
+          "source": "label"
+        }
+      ],
+      "context": "Herbert Henry Dow. has educated at: Case School of Applied Science. has father: Alden B. Dow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Herbert_Henry_Dow",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Herbert Henry Dow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Herbert Henry Dow",
+        "extracted_source": "label",
+        "ground_truth_text": "Herbert Henry Dow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.864926815032959,
+      "graph_score": 0.4324634075164795,
+      "margin": 0.5304780602455139
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/case_school_of_applied_science",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Case School of Applied Science",
+          "source": "label"
+        }
+      ],
+      "context": "Case School of Applied Science. inverse has educated at: Herbert Henry Dow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Case",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Case",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Case School of Applied Science",
+        "extracted_source": "label",
+        "ground_truth_text": "Case",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6499729752540588,
+      "name_embedding_score": 0.6028446555137634,
+      "string_score": 0.45588234066963196,
+      "independent_identity_support": false,
+      "context_score": 0.8766406774520874,
+      "graph_score": 0.9383203387260437,
+      "margin": 0.6499729752540588
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

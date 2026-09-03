@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Lady_Sarah_Frances_Elizabeth_Chatto> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lady Sarah Chatto" ;
+    onto:hasMother <http://example.org/entity/Princess_Margaret> .
+
+<http://example.org/entity/Princess_Margaret> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Margaret, Countess of Snowdon" ;
+    onto:hasCauseOfDeath <http://example.org/entity/stroke> .
+
+<http://example.org/entity/stroke> a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "stroke" .
+

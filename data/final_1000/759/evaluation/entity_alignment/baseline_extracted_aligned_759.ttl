@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Thundergate> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Thundergate" ;
+    onto:hasDirector <http://example.org/entity/Joseph_De_Grasse> .
+
+<http://example.org/entity/Joseph_De_Grasse> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joseph De Grasse" ;
+    onto:hasBirthPlace <http://example.org/entity/New_Brunswick> ;
+    skos:altLabel "Joseph Louis De Grasse" .
+
+<http://example.org/entity/New_Brunswick> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bathurst, New Brunswick" .
+

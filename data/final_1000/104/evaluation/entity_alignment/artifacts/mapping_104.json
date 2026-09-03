@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/104/originals/extracted_104.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/104/ground_truth_104.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/album_doing_it_my_way": "http://example.org/entity/Doing_It_My_Way",
+    "http://example.org/extracted/album_no_talking_just_head": "http://example.org/entity/No_Talking_Just_Head"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/album_doing_it_my_way",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Doing It My Way",
+          "source": "label"
+        },
+        {
+          "text": "album doing it my way",
+          "source": "uri"
+        }
+      ],
+      "context": "Doing It My Way. has publication date: 2007-03-12.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Doing_It_My_Way",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Doing It My Way",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Doing It My Way",
+        "extracted_source": "label",
+        "ground_truth_text": "Doing It My Way",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9647698402404785,
+      "graph_score": 0.9647698402404785,
+      "margin": 0.6367102861404419
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/album_no_talking_just_head",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "No Talking, Just Head",
+          "source": "label"
+        },
+        {
+          "text": "album no talking just head",
+          "source": "uri"
+        }
+      ],
+      "context": "No Talking, Just Head. has publication date: 1996.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/No_Talking_Just_Head",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "No Talking Just Head",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "No Talking, Just Head",
+        "extracted_source": "label",
+        "ground_truth_text": "No Talking Just Head",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.97457355260849,
+      "string_score": 0.9890244007110596,
+      "independent_identity_support": true,
+      "context_score": 0.9845885634422302,
+      "graph_score": 0.9845885634422302,
+      "margin": 0.6643909811973572
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

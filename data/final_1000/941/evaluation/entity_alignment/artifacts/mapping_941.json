@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/941/originals/extracted_941.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/941/ground_truth_941.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/kim_chapiron": "http://example.org/entity/Kim_Chapiron",
+    "http://example.org/extracted/france": "http://example.org/entity/France",
+    "http://example.org/extracted/dog_pound_film": "http://example.org/entity/Dog_Pound"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/dog_pound_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dog Pound",
+          "source": "label"
+        },
+        {
+          "text": "dog pound film",
+          "source": "uri"
+        }
+      ],
+      "context": "Dog Pound. has director: Kim Chapiron.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dog_Pound",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dog Pound",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dog Pound",
+        "extracted_source": "label",
+        "ground_truth_text": "Dog Pound",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        }
+      ],
+      "context": "French. inverse has nationality: Kim Chapiron.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/France",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "France",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "France",
+        "extracted_source": "label",
+        "ground_truth_text": "France",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8774963021278381,
+      "graph_score": 0.43874815106391907,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/kim_chapiron",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kim Chapiron",
+          "source": "label"
+        }
+      ],
+      "context": "Kim Chapiron. has nationality: French. inverse has director: Dog Pound.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kim_Chapiron",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kim Chapiron",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kim Chapiron",
+        "extracted_source": "label",
+        "ground_truth_text": "Kim Chapiron",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9329184889793396,
+      "graph_score": 0.633125901222229,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

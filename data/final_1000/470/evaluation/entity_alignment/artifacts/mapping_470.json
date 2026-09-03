@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/470/originals/extracted_470.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/470/ground_truth_470.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_the_seventh_victim": "http://example.org/entity/The_Seventh_Victim",
+    "http://example.org/extracted/person_val_lewton": "http://example.org/entity/Val_Lewton",
+    "http://example.org/extracted/person_jack_schwarz": "http://example.org/entity/Jack_Schwarz",
+    "http://example.org/extracted/film_baby_face_morgan": "http://example.org/entity/Baby_Face_Morgan"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_baby_face_morgan",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Baby Face Morgan",
+          "source": "label"
+        },
+        {
+          "text": "film baby face morgan",
+          "source": "uri"
+        }
+      ],
+      "context": "Baby Face Morgan. has producer: Jack Schwarz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Baby_Face_Morgan",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Baby Face Morgan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Baby Face Morgan",
+        "extracted_source": "label",
+        "ground_truth_text": "Baby Face Morgan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8214288800954819
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_seventh_victim",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Seventh Victim",
+          "source": "label"
+        },
+        {
+          "text": "film the seventh victim",
+          "source": "uri"
+        }
+      ],
+      "context": "The Seventh Victim. has producer: Val Lewton.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Seventh_Victim",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Seventh Victim",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Seventh Victim",
+        "extracted_source": "label",
+        "ground_truth_text": "The Seventh Victim",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.870058000087738
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_jack_schwarz",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jack Schwarz",
+          "source": "label"
+        },
+        {
+          "text": "person jack schwarz",
+          "source": "uri"
+        }
+      ],
+      "context": "Jack Schwarz. has birth date: 1896-12-19. inverse has producer: Baby Face Morgan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jack_Schwarz",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jack Schwarz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jack Schwarz",
+        "extracted_source": "label",
+        "ground_truth_text": "Jack Schwarz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7397068738937378
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_val_lewton",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Val Lewton",
+          "source": "label"
+        },
+        {
+          "text": "person val lewton",
+          "source": "uri"
+        }
+      ],
+      "context": "Val Lewton. has birth date: 1904-05-07. inverse has producer: The Seventh Victim.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Val_Lewton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Val Lewton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Val Lewton",
+        "extracted_source": "label",
+        "ground_truth_text": "Val Lewton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7397068738937378
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

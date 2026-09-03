@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Ambition> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Ambition (1916 film)" ;
+    onto:hasDirector <http://example.org/entity/James_Vincent> .
+
+<http://example.org/entity/James_Vincent> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "James Vincent" ;
+    onto:hasDeathPlace <http://example.org/entity/New_York> .
+
+<http://example.org/entity/New_York> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "New York, New York" .
+

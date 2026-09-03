@@ -1,0 +1,25 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:million_dollar_mile a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Million Dollar Mile" ;
+    onto:hasPresenter data:tim_tebow ;
+    skos:altLabel "Million Dollar Mile" .
+
+data:heisman_trophy a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Heisman Trophy" ;
+    skos:altLabel "Heisman Trophy" .
+
+data:tim_tebow a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tim Tebow" ;
+    onto:hasAwardReceived data:heisman_trophy ;
+    onto:hasBirthDate "1987-08-14"^^xsd:date ;
+    skos:altLabel "Tim Tebow" .
+

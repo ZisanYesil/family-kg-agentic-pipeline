@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/432/evaluation/entity_alignment/final_extracted_aligned_432.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/432/evaluation/entity_alignment/final_ground_truth_aligned_432.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Believe_It",
+      "predicate": "hasCreator",
+      "object": "Meek_Mill",
+      "subject_uri": "http://example.org/entity/Believe_It",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Meek_Mill"
+    },
+    {
+      "subject": "Believe_It",
+      "predicate": "hasPerformer",
+      "object": "Meek_Mill",
+      "subject_uri": "http://example.org/entity/Believe_It",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Meek_Mill"
+    },
+    {
+      "subject": "Believe_It",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Believe_It",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Believe_It",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Believe_It",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Meek_Mill",
+      "predicate": "hasDetentionPlace",
+      "object": "State_Correctional_Institution_Chester",
+      "subject_uri": "http://example.org/entity/Meek_Mill",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDetentionPlace",
+      "object_term": "http://example.org/entity/State_Correctional_Institution_Chester"
+    },
+    {
+      "subject": "Meek_Mill",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Meek_Mill",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Meek_Mill",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Meek_Mill",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "State_Correctional_Institution_Chester",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/State_Correctional_Institution_Chester",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Believe_It",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Believe_It",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 9,
+    "true_positives": 8,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1": 0.9411764705882353
+  },
+  "stage": "post_inference"
+}

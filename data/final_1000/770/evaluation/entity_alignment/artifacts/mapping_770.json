@@ -1,0 +1,249 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/770/originals/extracted_770.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/770/ground_truth_770.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/country_germany": "http://example.org/entity/German",
+    "http://example.org/extracted/film_woman_in_the_river_1939": "http://example.org/entity/Woman_in_the_River",
+    "http://example.org/extracted/person_gerhard_lamprecht": "http://example.org/entity/Gerhard_Lamprecht",
+    "http://example.org/extracted/film_blockade_1938": "http://example.org/entity/Blockade_1938_film",
+    "http://example.org/extracted/person_william_dieterle": "http://example.org/entity/William_Dieterle"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 6,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "German",
+          "source": "altLabel"
+        },
+        {
+          "text": "Germany",
+          "source": "label"
+        },
+        {
+          "text": "country germany",
+          "source": "uri"
+        }
+      ],
+      "context": "German. inverse has nationality: Gerhard Lamprecht. inverse has nationality: William Dieterle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/German",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "German",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "German",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "German",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9295892715454102,
+      "graph_score": 0.4647946357727051,
+      "margin": 0.6538581252098083
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_blockade_1938",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Blockade (1938 film)",
+          "source": "label"
+        },
+        {
+          "text": "film blockade 1938",
+          "source": "uri"
+        }
+      ],
+      "context": "Blockade (1938 film). has director: William Dieterle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Blockade_1938_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Blockade 1938 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Blockade (1938 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Blockade 1938 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9746866226196289,
+      "string_score": 0.9763157963752747,
+      "independent_identity_support": true,
+      "context_score": 0.9876114726066589,
+      "graph_score": 0.9938057661056519,
+      "margin": 0.9162143468856812
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_woman_in_the_river_1939",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Woman in the River",
+          "source": "label"
+        },
+        {
+          "text": "film woman in the river 1939",
+          "source": "uri"
+        }
+      ],
+      "context": "Woman in the River. has director: Gerhard Lamprecht.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Woman_in_the_River",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Woman in the River",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Woman in the River",
+        "extracted_source": "label",
+        "ground_truth_text": "Woman in the River",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.6763529479503632
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_gerhard_lamprecht",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gerhard Lamprecht",
+          "source": "label"
+        },
+        {
+          "text": "person gerhard lamprecht",
+          "source": "uri"
+        }
+      ],
+      "context": "Gerhard Lamprecht. has nationality: German. inverse has director: Woman in the River.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gerhard_Lamprecht",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gerhard Lamprecht",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gerhard Lamprecht",
+        "extracted_source": "label",
+        "ground_truth_text": "Gerhard Lamprecht",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9732222557067871,
+      "graph_score": 0.6532778143882751,
+      "margin": 0.6260734498500824
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_william_dieterle",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William Dieterle",
+          "source": "label"
+        },
+        {
+          "text": "person william dieterle",
+          "source": "uri"
+        }
+      ],
+      "context": "William Dieterle. has nationality: German. inverse has director: Blockade (1938 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_Dieterle",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William Dieterle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William Dieterle",
+        "extracted_source": "label",
+        "ground_truth_text": "William Dieterle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.87315833568573,
+      "graph_score": 0.6032458543777466,
+      "margin": 0.6145915985107422
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/American"
+  ]
+}

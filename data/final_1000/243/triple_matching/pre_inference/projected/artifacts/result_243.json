@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/243/evaluation/entity_alignment/baseline_extracted_aligned_243.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/243/evaluation/entity_alignment/baseline_ground_truth_aligned_243.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Hard_Time_Loving_You",
+      "predicate": "hasPerformer",
+      "object": "Julian_Austin",
+      "subject_uri": "http://example.org/entity/Hard_Time_Loving_You",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Julian_Austin"
+    },
+    {
+      "subject": "Julian_Austin",
+      "predicate": "hasBirthPlace",
+      "object": "Sussex",
+      "subject_uri": "http://example.org/entity/Julian_Austin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Sussex"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Hard_Time_Loving_You",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Hard_Time_Loving_You",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Hard_Time_Loving_You",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hard_Time_Loving_You",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hard_Time_Loving_You",
+      "predicate": "label",
+      "object": "\"Hard Time Loving You\"",
+      "subject_uri": "http://example.org/entity/Hard_Time_Loving_You",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hard Time Loving You\""
+    },
+    {
+      "subject": "Julian_Austin",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Julian_Austin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Julian_Austin",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Julian_Austin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Julian_Austin",
+      "predicate": "label",
+      "object": "\"Julian Austin\"",
+      "subject_uri": "http://example.org/entity/Julian_Austin",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Julian Austin\""
+    },
+    {
+      "subject": "Sussex",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Sussex",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Sussex",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sussex",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sussex",
+      "predicate": "label",
+      "object": "\"Sussex, New Brunswick\"",
+      "subject_uri": "http://example.org/entity/Sussex",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sussex, New Brunswick\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Empress_Zhangsun> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/entity/Gaozong> ;
+    ex:hasParent <http://example.org/entity/Gaozong> .
+
+<http://example.org/entity/Li_Zhong> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Gaozong> .
+
+<http://example.org/entity/Gaozong> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Empress_Zhangsun> ;
+    ex:hasFather <http://example.org/entity/Li_Zhong> ;
+    ex:hasParent <http://example.org/entity/Li_Zhong> .
+

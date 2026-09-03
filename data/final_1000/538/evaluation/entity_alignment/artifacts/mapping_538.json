@@ -1,0 +1,179 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/538/originals/extracted_538.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/538/ground_truth_538.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/reunion_at_fairborough_film": "http://example.org/entity/Reunion_at_Fairborough",
+    "http://example.org/extracted/susannah_wise": "http://example.org/entity/Susannah_Wise",
+    "http://example.org/extracted/herbert_wise": "http://example.org/entity/Herbert_Wise"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/herbert_wise",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Herbert Wise",
+          "source": "label"
+        }
+      ],
+      "context": "Herbert Wise. has child: Charlie Walker-Wise. has child: Susannah Wise. inverse has director: Reunion at Fairborough.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Herbert_Wise",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Herbert Wise",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Herbert Wise",
+        "extracted_source": "label",
+        "ground_truth_text": "Herbert Wise",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9610278010368347,
+      "graph_score": 0.9805139303207397,
+      "margin": 0.5061129629611969
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/reunion_at_fairborough_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Reunion at Fairborough",
+          "source": "label"
+        },
+        {
+          "text": "reunion at fairborough film",
+          "source": "uri"
+        }
+      ],
+      "context": "Reunion at Fairborough. has director: Herbert Wise.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Reunion_at_Fairborough",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Reunion at Fairborough",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Reunion at Fairborough",
+        "extracted_source": "label",
+        "ground_truth_text": "Reunion at Fairborough",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/susannah_wise",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Susannah Wise",
+          "source": "label"
+        }
+      ],
+      "context": "Susannah Wise. inverse has child: Herbert Wise.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Susannah_Wise",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Susannah Wise",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Susannah Wise",
+        "extracted_source": "label",
+        "ground_truth_text": "Susannah Wise",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5036179423332214
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/charlie_walker_wise",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charlie Walker-Wise",
+          "source": "label"
+        },
+        {
+          "text": "charlie walker wise",
+          "source": "uri"
+        }
+      ],
+      "context": "Charlie Walker-Wise. inverse has child: Herbert Wise.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

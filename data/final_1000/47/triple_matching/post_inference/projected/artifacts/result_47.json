@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/47/evaluation/entity_alignment/final_extracted_aligned_47.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/47/evaluation/entity_alignment/final_ground_truth_aligned_47.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Akiko_Matsuura",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Akiko_Matsuura",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Akiko_Matsuura",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Akiko_Matsuura",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Japan",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Japan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Japan",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Japan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Pre",
+      "predicate": "hasMember",
+      "object": "Akiko_Matsuura",
+      "subject_uri": "http://example.org/entity/Pre",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasMember",
+      "object_term": "http://example.org/entity/Akiko_Matsuura"
+    },
+    {
+      "subject": "Pre",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Pre",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Pre",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Pre",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Akiko_Matsuura",
+      "predicate": "hasCountry",
+      "object": "Japan",
+      "subject_uri": "http://example.org/entity/Akiko_Matsuura",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Japan"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Akiko_Matsuura",
+      "predicate": "hasBirthPlace",
+      "object": "osaka",
+      "subject_uri": "http://example.org/entity/Akiko_Matsuura",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/extracted/osaka"
+    },
+    {
+      "subject": "osaka",
+      "predicate": "hasCountry",
+      "object": "Japan",
+      "subject_uri": "http://example.org/extracted/osaka",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Japan"
+    },
+    {
+      "subject": "osaka",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/osaka",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 11,
+    "true_positives": 7,
+    "false_positives": 3,
+    "false_negatives": 1,
+    "precision": 0.7,
+    "recall": 0.875,
+    "f1": 0.7777777777777777
+  },
+  "stage": "post_inference"
+}

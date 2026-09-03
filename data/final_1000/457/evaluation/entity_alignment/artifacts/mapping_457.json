@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/457/originals/extracted_457.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/457/ground_truth_457.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bernard_tschumi": "http://example.org/entity/Bernard_Tschumi",
+    "http://example.org/extracted/epfl": "http://example.org/entity/École_polytechnique_fédérale_de_Lausanne",
+    "http://example.org/extracted/jean_tschumi": "http://example.org/entity/Jean_Tschumi"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bernard_tschumi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bernard Tschumi",
+          "source": "label"
+        }
+      ],
+      "context": "Bernard Tschumi. inverse has son: Jean Tschumi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bernard_Tschumi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bernard Tschumi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bernard Tschumi",
+        "extracted_source": "label",
+        "ground_truth_text": "Bernard Tschumi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9124345779418945,
+      "graph_score": 0.45621728897094727,
+      "margin": 0.31682896614074707
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/epfl",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "École Polytechnique Fédérale de Lausanne",
+          "source": "label"
+        },
+        {
+          "text": "epfl",
+          "source": "uri"
+        }
+      ],
+      "context": "École Polytechnique Fédérale de Lausanne. inverse has employer: Jean Tschumi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/École_polytechnique_fédérale_de_Lausanne",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "École polytechnique fédérale de Lausanne",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "École Polytechnique Fédérale de Lausanne",
+        "extracted_source": "label",
+        "ground_truth_text": "École polytechnique fédérale de Lausanne",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9796695113182068,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9919052720069885,
+      "graph_score": 0.9959526062011719,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jean_tschumi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jean Tschumi",
+          "source": "label"
+        }
+      ],
+      "context": "Jean Tschumi. has employer: École Polytechnique Fédérale de Lausanne. has son: Bernard Tschumi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jean_Tschumi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jean Tschumi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jean Tschumi",
+        "extracted_source": "label",
+        "ground_truth_text": "Jean Tschumi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9758334755897522,
+      "graph_score": 0.6545833945274353,
+      "margin": 0.3143421411514282
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

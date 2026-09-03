@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Eleanor_of_Vermandois> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Eleanor of Vermandois" ;
+    onto:hasMother <http://example.org/entity/Petronilla_of_Aquitaine> .
+
+<http://example.org/entity/Eleanor_of_Aquitaine> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Eleanor of Aquitaine" .
+
+<http://example.org/entity/Petronilla_of_Aquitaine> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Petronilla of Aquitaine" ;
+    onto:hasSister <http://example.org/entity/Eleanor_of_Aquitaine> .
+

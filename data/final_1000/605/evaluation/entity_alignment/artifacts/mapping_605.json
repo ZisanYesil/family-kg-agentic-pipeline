@@ -1,0 +1,115 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/605/originals/extracted_605.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/605/ground_truth_605.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/caroline_kennedy_1957": "http://example.org/entity/Caroline_Kennedy"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/caroline_kennedy_1957",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Caroline Kennedy",
+          "source": "label"
+        },
+        {
+          "text": "caroline kennedy 1957",
+          "source": "uri"
+        }
+      ],
+      "context": "Caroline Kennedy. inverse has mother: Tatiana Schlossberg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Caroline_Kennedy",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Caroline Kennedy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Caroline Kennedy",
+        "extracted_source": "label",
+        "ground_truth_text": "Caroline Kennedy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8694409132003784,
+      "graph_score": 0.8694409132003784,
+      "margin": 0.4877169132232666
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tatiana_schlossberg_1990",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tatiana Schlossberg",
+          "source": "label"
+        },
+        {
+          "text": "tatiana schlossberg 1990",
+          "source": "uri"
+        }
+      ],
+      "context": "Tatiana Schlossberg. has mother: Caroline Kennedy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tatiana_Celia_Kennedy_Schlossberg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tatiana Celia Kennedy Schlossberg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tatiana Schlossberg",
+        "extracted_source": "label",
+        "ground_truth_text": "Tatiana Celia Kennedy Schlossberg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9062625765800476,
+      "name_embedding_score": 0.940615713596344,
+      "string_score": 0.7538461685180664,
+      "independent_identity_support": true,
+      "context_score": 0.9799456596374512,
+      "graph_score": 0.9899728298187256,
+      "margin": 0.5683893263339996
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Manhattan"
+  ]
+}

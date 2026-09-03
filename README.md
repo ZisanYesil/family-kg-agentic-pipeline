@@ -1,308 +1,374 @@
-# Family KG Agentic Pipeline
+# Ontology-Driven Knowledge Graph Construction Pipeline
 
-Family KG Agentic Pipeline is an agentic AI system for converting unstructured family narratives into ontology-grounded knowledge graphs. The project focuses on extracting people, attributes, and family relationships from text; representing them as RDF according to a Family Ontology; validating the generated graph with semantic constraints; and improving the result through an automated feedback loop.
+This repository implements a hybrid neuro-symbolic pipeline that transforms unstructured text into ontology-grounded RDF knowledge graphs, checks and selectively repairs them with SHACL, materializes ontology-supported consequences, and queries the resulting graphs deterministically.
 
-The system is designed for the internship task: **Agentic AI for Family-Ontology Knowledge Graph Construction and Iterative Improvement**.
+The project studies why structured output remains useful even when a large language model (LLM) can answer a question directly from text. A direct answer is generated for one request; the graph is a persistent, machine-checkable representation that can be validated, reasoned over, inspected, reused, and queried repeatedly.
 
-## Project Goal
+The implementation is evaluated in two separate phases:
 
-The goal is to build a reproducible pipeline that can:
+1. **Graph construction and symbolic enhancement:** assess extracted factual relations before and after constrained SHACL-guided processing and ontology-based inference.
+2. **Downstream question answering:** compare direct LLM answers from the original question and context with deterministic querying of the completed graph.
 
-- read narrative or semi-structured family-history text,
-- identify individuals and family-related attributes,
-- extract relationships such as parent, sibling, spouse, son, and daughter,
-- generate an RDF knowledge graph aligned with a Family Ontology,
-- validate the graph using OWL reasoning or SHACL constraints,
-- interpret validation errors and iteratively improve the graph,
-- expose the workflow through an asynchronous API.
+These phases use different units of evaluation. Triple-level precision, recall, and F1 describe graph construction; answer-level exact match and token F1 describe question answering.
 
-In short, the project turns natural-language family descriptions into machine-readable, ontology-consistent knowledge graphs.
 
-## System Overview
+## Ontology-driven configuration
 
-The pipeline follows a multi-agent architecture. Each agent has a focused responsibility, and the agents communicate automatically until the graph passes validation or a maximum iteration limit is reached.
+The schema-facing implementation is ontology-driven rather than hard-coded to a fixed list of classes and properties. At runtime, it parses a supplied OWL/Turtle ontology and uses the discovered vocabulary and structural axioms to configure extraction, relation mapping, RDF construction, validation, and inference.
 
-```text
-Input text
-   |
-   v
-Extraction Agent
-   |
-   v
-KG Builder Agent
-   |
-   v
-Validation Agent
-   |
-   v
-Feedback Agent
-   |
-   +---- if errors exist, revise and repeat
-   |
-   v
-Validated RDF knowledge graph
+The ontology used for the reported experiment is task-minimal and contains:
+
+- 14 classes;
+- 42 object properties;
+- 5 datatype properties;
+- 17 subproperty axioms;
+- 10 inverse-property axioms; and
+- 2 symmetric properties.
+
+Thirty-six object properties are exposed to extraction after excluding an abstract superproperty and redundant inverse-facing choices. The ontology includes shallow class organization, such as `Agent`, `Artifact`, and `Place`, together with richer property relationships relevant to the benchmark.
+
+A different compatible ontology can reconfigure the core schema-facing stages without rewriting their vocabulary-handling logic. This is not a claim of universal zero-configuration portability: an ontology must contain usable declarations and sufficiently informative metadata, and constraints that cannot be derived from structural axioms may require supplementary SHACL shapes. The current empirical evaluation uses one task-specific ontology.
+
+The evaluated ontology is located at [`ontology/ontology.ttl`](ontology/ontology.ttl).
+
+## Knowledge-graph construction
+
+### 1. Ontology-aware information extraction
+
+The extraction stage receives only the natural-language question and its original context. It does **not** receive the reference answer, reference graph, benchmark question type, or expected relation sequence.
+
+The supplied ontology dynamically configures the structured extraction schema and prompt. The evaluated extraction model is `gpt-oss:120b`, and its output is parsed as strict structured JSON containing entities, attributes, aliases, and candidate relations.
+
+### 2. Relation mapping and RDF construction
+
+Candidate relations are first mapped deterministically to ontology properties. An LLM fallback is used only for unresolved candidates, and returning no mapping is permitted when the evidence does not justify one. Domain and range information is used to check property orientation.
+
+The RDF construction stage creates:
+
+- ontology class assertions;
+- human-readable labels and aliases;
+- datatype-property assertions; and
+- ontology-grounded object-property assertions.
+
+Construction-time entity resolution does not use benchmark answers or reference RDF. Entities are merged only under guarded conditions, including a unique shared Wikidata identifier, compatible types, and no conflicting evidence.
+
+### 3. SHACL validation and constrained feedback
+
+Structural SHACL shapes are generated from the loaded ontology. The validator also records diagnostics such as unmapped extracted phrases. Findings receive stable fingerprints so that repeated iterations can be tracked consistently.
+
+The feedback stage can propose a small set of graph edits, including adding or removing a relation or replacing a literal. A proposal is applied only after deterministic checks confirm that it is supported by:
+
+- the source text;
+- the supplied ontology;
+- the current graph state; and
+- the reported validation finding.
+
+Accepted edits are applied atomically. A run may stop with unresolved findings rather than forcing the graph to conform. The experiment permits at most three repair iterations.
+
+Across the frozen 1,000-example cohort:
+
+| SHACL-processing outcome | Examples |
+|---|---:|
+| No feedback required | 947 |
+| At least one accepted repair | 20 |
+| Unresolved after processing | 33 |
+| Pipeline failure | 0 |
+
+These categories describe pipeline outcomes; they do not imply that every accepted graph statement is factually correct.
+
+### 4. Ontology-based inference
+
+The pipeline uses HermiT through Owlready2 together with explicit closure rules for the ontology constructs required by the experiment. These include:
+
+- subclass and type propagation;
+- domain and range typing;
+- subproperty and equivalent-property propagation;
+- inverse properties; and
+- symmetric properties.
+
+The pipeline does not infer that a parent relation is transitive. In total, 4,537 ontology-supported statements were materialized over the evaluation cohort.
+
+## Evaluation data
+
+The experiment uses a frozen cohort derived from the development split of **2WikiMultiHopQA**. Candidate selection was performed before observing evaluation scores: 1,000 primary examples and a 300-example reserve were sampled using a rare-relation-first procedure with seed 42, audited, and then frozen.
+
+| Cohort characteristic | Value |
+|---|---:|
+| Evaluation examples | 1,000 |
+| Compositional questions | 486 |
+| Comparison questions | 350 |
+| Inference questions | 96 |
+| Bridge-comparison questions | 68 |
+| Mean context length | 642.93 words |
+| Mean reference graph size | 2.36 triples |
+| Mean original extracted graph size | 11.87 triples |
+
+The frozen manifests and per-example artifacts are under [`data/final_1000`](data/final_1000).
+
+## Phase 1: graph-level evaluation
+
+The original extracted graph and the final graph produced after constrained SHACL processing and ontology-based inference are evaluated under strict triple matching. The reference graph is used in its asserted form for the original condition and is closed under the same ontology for the final condition, so an entailed statement is not counted on only one side of the final comparison.
+
+Entity alignment is used only for evaluation and is frozen from the original graph condition before being applied unchanged to the final graph condition. It combines lexical, alias, and contextual similarity using `paraphrase-multilingual-MiniLM-L12-v2`, a threshold of 0.55, and an ambiguity margin of 0.05. The reference answer and reference RDF are never used during graph construction or graph-based retrieval.
+
+After accepted entity identifiers are substituted, scoring uses exact equality of canonicalized RDF subjects, predicates, and objects. Plain literals and `xsd:string` literals share a representation. For four date predicates, a year and a complete date may match at year precision when at least one graph explicitly uses `xsd:gYear`; two complete dates must match exactly. The evaluator does not collapse related ontology predicates: for example, `hasFather` and `hasParent` match only when the corresponding ontological consequence is present in the evaluated graph.
+
+| Condition | TP | FP | FN | Micro precision | Micro recall | Micro F1 | Macro precision | Macro F1 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Original graphs | 1,859 | 10,014 | 498 | 15.66% | 78.87% | 26.13% | 16.53% | 26.82% |
+| Final graphs | 8,260 | 1,542 | 983 | 84.27% | 89.36% | 86.74% | 84.80% | 86.89% |
+
+From the original to the final graph condition, micro precision increased by 68.61 percentage points, recall by 10.49 points, and F1 by 60.61 points. At example level, F1 increased for 993 graphs, was unchanged for seven, and decreased for none. Because the final condition includes both constrained feedback and ontology closure, this comparison measures the complete graph-transformation process rather than attributing the change to either component alone.
+
+## Phase 2: question answering
+
+### Conditions
+
+**Direct-text LLM QA** receives exactly two inputs: the original question and the original context text. No ontology, graph, reference answer, question type, or relation sequence is supplied.
+
+**Deterministic graph QA** receives the completed reasoned graph and frozen benchmark guidance specifying the question category and relation sequence. It does not receive the reference answer or reference graph. The guidance removes natural-language query interpretation from the measured retrieval condition, so the result evaluates deterministic traversal of the available structured knowledge rather than a complete open-ended natural-language graph interface.
+
+### Results
+
+| QA condition | Strict exact match | Compatible exact match | Token F1 | Answer rate |
+|---|---:|---:|---:|---:|
+| Direct LLM over question + text | 66.40% | 86.20% | 87.13% | 95.00% |
+| Deterministic QA over reasoned graph | 63.10% | 79.50% | 80.40% | 88.70% |
+
+The direct LLM baseline is stronger on answer accuracy. The structured condition is therefore not presented as a universal replacement for direct answering. Its additional value is that the graph persists after construction and supports machine-checkable processing, inference, inspectable retrieval traces, repeated querying, and deterministic execution over fixed inputs.
+
+The paired compatible-exact-match outcomes are:
+
+| Outcome | Examples |
+|---|---:|
+| Both systems correct | 766 |
+| Direct LLM only correct | 96 |
+| Graph QA only correct | 29 |
+| Neither correct | 109 |
+
+### LLM usage and repeatability
+
+The direct baseline made 1,000 LLM calls. Token telemetry was available for 982 responses:
+
+| Direct-QA token telemetry | Tokens |
+|---|---:|
+| Prompt | 1,090,556 |
+| Completion | 155,443 |
+| Total | 1,245,999 |
+
+The 18 responses without telemetry are not estimated, so these totals are lower bounds for the complete direct-QA run.
+
+The evaluated graph-query stage made zero LLM calls and consumed zero generation tokens after graph construction. This does not mean the full graph workflow is free of LLM cost: extraction and some feedback operations occur at construction time. A fair amortized cost comparison across multiple questions requires separate construction-token measurements and is future work.
+
+Repeatability was tested by running graph QA three times over all 1,000 frozen examples. Answers and retrieval traces were identical across all runs. This establishes repeatability for the fixed graphs, manifests, software, and execution environment used in the experiment; it does not imply that upstream LLM-based graph construction is itself deterministic.
+
+## Running the pipeline
+
+### Requirements
+
+- Python 3.10 or newer
+- Java for HermiT reasoning
+- Access to an OpenAI-compatible chat-completions endpoint
+
+Install the Python dependencies:
+
+```bash
+python -m pip install -r requirements.txt
 ```
 
-## Agent Roles
+Configure the model endpoint. Use environment variables or a local `.env` file; never commit credentials.
 
-### Extraction Agent
-
-The Extraction Agent analyzes the input text and identifies:
-
-- people mentioned in the narrative,
-- attributes such as name, gender, birth year, death year, and aliases,
-- family relationships between people,
-- marriage information when available.
-
-Its output is a structured intermediate representation that can be converted into RDF.
-
-### KG Builder Agent
-
-The KG Builder Agent converts the extracted structure into RDF triples. It aligns people, relationships, and attributes with the Family Ontology by using ontology-defined classes, object properties, and data properties.
-
-The generated graph may be serialized as formats such as Turtle, JSON-LD, or RDF/XML.
-
-### Validation Agent
-
-The Validation Agent checks whether the generated knowledge graph is consistent with the ontology and validation rules. It is responsible for detecting issues such as:
-
-- invalid domain or range usage,
-- inconsistent relationship semantics,
-- cardinality violations,
-- missing or malformed attribute values,
-- logical inconsistencies in family relationships.
-
-Validation can be performed with OWL reasoners or SHACL shapes.
-
-### Feedback Agent
-
-The Feedback Agent reads structured validation errors and asks the configured LLM for a strict `FeedbackPlan`. The model cannot replace the graph directly: every proposed add, remove, or literal replacement is checked against the ontology, current graph, source text, and targeted validation fingerprint before being applied atomically.
-
-Unsafe plans fail the job without mutating the graph. Findings that cannot be repaired safely remain explicitly unresolved. The loop continues until the graph passes validation, repeats the same report, or reaches the configured iteration threshold.
-
-## Knowledge Graph Construction
-
-The knowledge graph is grounded in the Family Ontology. Extracted family data is represented with:
-
-- individuals as ontology instances,
-- family relationships as object-property triples,
-- attributes such as birth year or gender as data-property triples,
-- consistent IRIs for people and generated resources,
-- ontology-aware relationship semantics.
-
-Example input:
-
-```text
-John Smith was born in 1950. He married Mary Johnson in 1975.
-Their daughter Anna Smith was born in 1980.
+```bash
+export LLM_API_KEY="your-api-key"
+export LLM_BASE_URL="https://your-endpoint.example/v1"
+export LLM_MODEL="gpt-oss:120b"
 ```
 
-Example graph content, simplified:
+The exact variable names accepted by individual entry points are documented in their `--help` output and configuration modules.
 
-```turtle
-@prefix fhkb: <http://www.example.com/genealogy.owl#> .
-@prefix ex: <http://example.org/family/> .
+### Reproduce the frozen data workflow
 
-ex:john_smith a fhkb:Person ;
-    fhkb:hasBirthYear 1950 ;
-    fhkb:hasWife ex:mary_johnson ;
-    fhkb:hasDaughter ex:anna_smith .
+Build the candidate pool:
 
-ex:mary_johnson a fhkb:Person ;
-    fhkb:hasHusband ex:john_smith ;
-    fhkb:hasDaughter ex:anna_smith .
-
-ex:anna_smith a fhkb:Person ;
-    fhkb:hasFather ex:john_smith ;
-    fhkb:hasMother ex:mary_johnson ;
-    fhkb:hasBirthYear 1980 .
+```bash
+python build_dataset.py \
+  --input data/dev.parquet \
+  --out data/candidates_1300 \
+  --n 1000 \
+  --reserve 300 \
+  --seed 42
 ```
 
-## API
+Run ontology-grounded graph construction:
 
-The API exposes the core workflow asynchronously. A user submits text, receives a job id immediately, and can then monitor the pipeline or retrieve the resulting graph.
-
-Base URL when running locally:
-
-```text
-http://localhost:8000
+```bash
+python run_agent_pipeline.py data/candidates_1300 \
+  --ids 1-1300 \
+  --output-dir data/candidate_pipeline \
+  --ontology ontology/ontology.ttl \
+  --shacl-repair \
+  --max-repair-iterations 3
 ```
 
-### Health Check
+Freeze the 1,000-example evaluation cohort:
 
-```http
-GET /health
+```bash
+python finalize_dataset.py \
+  --candidate-dir data/candidates_1300 \
+  --pipeline-dir data/candidate_pipeline \
+  --output-dir data/final_1000 \
+  --target 1000
 ```
 
-### Start Knowledge Graph Extraction
+Run SHACL processing, inference, and evaluation-only alignment:
 
-```http
-POST /jobs
-Content-Type: application/json
+```bash
+python run_shacl_pipeline.py \
+  --input-dir data/final_1000 \
+  --ids 1-1000 \
+  --max-repair-iterations 3 \
+  --summary-output data/final_1000/shacl_summary.json
+
+python run_inference_pipeline.py \
+  --input-dir data/final_1000 \
+  --output-dir data/final_1000 \
+  --ids 1-1000 \
+  --ontology ontology/ontology.ttl \
+  --summary-output data/final_1000/inference_summary.json
+
+python run_evaluation_alignment.py \
+  --input-dir data/final_1000 \
+  --ids 1-1000 \
+  --ontology ontology/ontology.ttl \
+  --summary-output data/final_1000/alignment_summary.json
 ```
 
-Request:
+### Run Phase 2 QA
 
-```json
-{
-  "text": "John Smith was born in 1950. He married Mary Johnson in 1975. Their daughter Anna Smith was born in 1980.",
-  "webhook_url": "https://example.com/webhook"
-}
+Phase 2 entry points should be invoked as modules from the repository root:
+
+```bash
+python -m phase2_qa.run_direct_text_qa \
+  --input-dir data/final_1000 \
+  --ids 1-1000
+
+python -m phase2_qa.run_relation_guided_symbolic_qa \
+  --input-dir data/final_1000 \
+  --ids 1-1000 \
+  --graph-stage reasoned
+
+python -m phase2_qa.compare_qa \
+  --input-dir data/final_1000 \
+  --ids 1-1000
+
+python -m phase2_qa.verify_symbolic_repeatability \
+  --input-dir data/final_1000 \
+  --ids 1-1000 \
+  --graph-stage reasoned \
+  --runs 3
 ```
 
-`webhook_url` is optional.
+Use `--help` on each command for output paths and optional settings.
 
-Response:
+## Asynchronous API
 
-```json
-{
-  "job_id": "generated-job-id",
-  "status": "Pending",
-  "created_at": "2026-07-07T12:00:00Z"
-}
+The repository also exposes an asynchronous FastAPI service for individual graph-construction jobs.
+
+Start it locally:
+
+```bash
+uvicorn api.app:app --host 0.0.0.0 --port 8000
 ```
 
-### Check Job Status
+Submit a job:
 
-```http
-GET /jobs/{job_id}/status
+```bash
+curl -X POST http://localhost:8000/jobs \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "text": "The film had musical score by Rajesh Khanna. He was married to Dimple Kapadia.",
+    "question": "Who is the spouse of the composer of the film?",
+    "ontology_path": "ontology/ontology.ttl"
+  }'
 ```
 
-The response includes the current status, current iteration, maximum iteration count, and the latest error if one exists.
+Main endpoints:
 
-Common statuses include:
+| Method | Endpoint | Purpose |
+|---|---|---|
+| `GET` | `/health` | Service health |
+| `POST` | `/jobs` | Create a graph-construction job |
+| `GET` | `/jobs/{job_id}` | Job status and summary |
+| `GET` | `/jobs/{job_id}/graph` | Final graph artifact |
+| `GET` | `/jobs/{job_id}/iterations` | Validation and repair history |
 
-- `Pending`
-- `Extracting`
-- `Building`
-- `Validating`
-- `Repairing`
-- `Complete`
-- `Error`
-- `MaxIterationsReached`
+An optional webhook URL may be included when submitting a job. See the API models and generated OpenAPI documentation at `/docs` for the authoritative request and response schemas.
 
-### Retrieve Graph
-
-```http
-GET /jobs/{job_id}/graph?format=turtle
-```
-
-Supported output formats:
-
-- `turtle`
-- `json_ld`
-- `rdf_xml`
-
-### Retrieve Iteration Details
-
-```http
-GET /jobs/{job_id}/iterations
-```
-
-This endpoint returns the history of the iterative improvement process, including validation violations, feedback reasoning, and graph-size changes across iterations.
-
-## Running the Application
-
-### 1. Configure Environment Variables
-
-Create a `.env` file based on `.env.example`.
-
-```env
-DEEPSEEK_API_KEY=
-DEEPSEEK_BASE_URL=https://api.deepseek.com
-DEEPSEEK_MODEL=deepseek-v4-flash
-DEEPSEEK_MAX_TOKENS=8192
-REDIS_URL=redis://redis:6379/0
-DATABASE_URL=sqlite:////app/storage/jobs.db
-LOG_LEVEL=INFO
-MAX_ITERATIONS=10
-WEBHOOK_TIMEOUT_SECONDS=10
-WEBHOOK_MAX_ATTEMPTS=3
-DEFAULT_ONTOLOGY_PATH=ontology/dataset_ontology.ttl
-```
-
-SQLite schema upgrades run automatically at API startup. Existing job and iteration
-history is preserved; older databases receive the ontology path and repair-audit columns
-required by the current pipeline.
-
-### 2. Start with Docker Compose
+Run with Docker Compose:
 
 ```bash
 docker compose up --build
 ```
 
-This starts:
+## Artifact layout
 
-- the FastAPI service,
-- the asynchronous worker,
-- Redis for task queueing,
-- persistent local storage for job data.
+Each processed example retains intermediate artifacts so that construction decisions can be inspected rather than reduced to a final answer. Depending on the invoked workflow, these include:
 
-After startup, the API is available at:
+- the frozen input manifest;
+- raw structured extraction;
+- original RDF graph;
+- mapping diagnostics;
+- SHACL reports and feedback iterations;
+- accepted and rejected repair records;
+- inferred statements and the reasoned graph;
+- frozen evaluation alignment;
+- QA answer and retrieval trace; and
+- token/call telemetry when exposed by the model endpoint.
+
+Generated reports and manuscript materials are intentionally excluded from version control. The repository `.gitignore` covers the local `article/`, `output/pdf/`, and `tmp/pdfs/` paths so that draft text, figures, and regenerated reports are not published accidentally.
+
+## Repository structure
 
 ```text
-http://localhost:8000
+api/                         FastAPI application and job models
+agents/                      Extraction, mapping, feedback, and orchestration logic
+ontology/                    Task-minimal OWL/Turtle ontology
+shacl/                       Shape generation, validation, and repair support
+inference/                   Ontology loading and materialized closure
+entity_resolution/           Guarded construction-time entity resolution
+evaluation_alignment/        Frozen, evaluation-only entity alignment
+phase2_qa/                   Direct-text QA, graph QA, comparison, repeatability
+data/                        Source, candidate, frozen, and per-example artifacts
+tests/                       Unit and integration tests
+run_agent_pipeline.py        Batch graph-construction entry point
+run_shacl_pipeline.py        SHACL processing entry point
+run_inference_pipeline.py    Inference entry point
+run_evaluation_alignment.py  Alignment entry point
+build_dataset.py             Candidate-cohort construction
+finalize_dataset.py          Frozen-cohort finalization
 ```
 
-Interactive API documentation is available at:
+## Tests
 
-```text
-http://localhost:8000/docs
-```
-
-## Local Development
-
-Install dependencies:
+Run the test suite from the repository root:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+pytest -q
 ```
 
-Run tests:
+For changes to evaluation logic, also regenerate a small fixed subset and inspect its original graph, final graph, alignment, and QA trace. Metric code should be tested with explicit cases containing metadata predicates to ensure that only factual relations enter Phase 1 scoring.
 
-```bash
-pytest
-```
+## Limitations
 
-## Project Structure
+- The reported study uses one dataset, one task-specific ontology, and one principal extraction model.
+- Cross-domain portability of the ontology-driven implementation has not yet been evaluated end to end.
+- SHACL conformance verifies conformance to supplied shapes, not factual truth or graph completeness.
+- Inference can materialize only consequences licensed by the ontology and available assertions; it cannot recover every fact omitted during extraction.
+- Some repair decisions use an LLM, although every accepted edit passes deterministic support checks.
+- Graph QA uses frozen relation guidance and therefore does not measure unrestricted natural-language query interpretation.
+- Zero query-time LLM use applies after graph construction and should not be confused with zero total pipeline cost.
+- Repeatability was established for fixed graph inputs, not for stochastic upstream construction.
 
-```text
-agents/       Agent logic for extraction and knowledge graph construction
-api/          FastAPI application, request models, and routes
-core/         Shared configuration and logging setup
-ontology/     Family ontology files and ontology-related utilities
-shapes/       SHACL validation shapes
-storage/      Persistent job and iteration storage
-tasks/        Asynchronous pipeline orchestration
-tests/        Automated tests
-```
+## Data and licensing
 
-## Deliverables Covered by the Project
-
-The project is organized around the required internship deliverables:
-
-- source code for the agentic workflow,
-- ontology-integrated RDF generation,
-- validation assets for ontology conformance,
-- API endpoints for job creation, status tracking, graph retrieval, and iteration history,
-- Dockerized execution,
-- logging for pipeline observability,
-- sample input and RDF-style output examples,
-- documentation for running and using the application.
-
-## Evaluation Focus
-
-The system should be evaluated according to:
-
-- correctness and completeness of extracted family relationships,
-- conformance of generated RDF to the Family Ontology,
-- ability to detect validation errors,
-- ability to improve graph quality through feedback iterations,
-- robustness of the automated multi-agent workflow,
-- clarity and reproducibility of the API and documentation.
-
-## Webhook Support
-
-The job creation request can optionally include a webhook URL. When provided, the system can notify an external service after the asynchronous workflow finishes, allowing other applications to react to completed knowledge graph extraction jobs.
+2WikiMultiHopQA remains subject to its original dataset terms. Model access is subject to the provider's terms and deployment policy. Add an explicit repository license before redistributing this software if one is not already present.

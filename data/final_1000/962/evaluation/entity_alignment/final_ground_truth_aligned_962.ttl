@@ -1,0 +1,33 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Hennessy_film a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Don_Sharp ;
+    ex:hasDirector entity:Don_Sharp .
+
+entity:Trouble_in_the_Glen a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Herbert_Wilcox ;
+    ex:hasDirector entity:Herbert_Wilcox .
+
+entity:Australian a ex:Country,
+        ex:Place .
+
+entity:Don_Sharp a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:Australian,
+        entity:British ;
+    ex:hasCountry entity:Australian,
+        entity:British .
+
+entity:Herbert_Wilcox a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:British ;
+    ex:hasCountry entity:British .
+
+entity:British a ex:Country,
+        ex:Place .
+

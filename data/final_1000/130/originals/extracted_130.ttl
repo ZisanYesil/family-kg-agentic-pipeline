@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:_film_daawat_e_ishq a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Daawat-e-Ishq" ;
+    onto:hasDirector data:_person_habib_faisal .
+
+data:_institution_jamia_millia_islamia a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Jamia Millia Islamia" .
+
+data:_person_habib_faisal a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Habib Faisal" ;
+    onto:hasEducatedAt data:_institution_jamia_millia_islamia .
+

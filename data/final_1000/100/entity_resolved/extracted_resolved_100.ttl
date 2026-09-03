@@ -1,0 +1,32 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_cursed_2005 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Cursed (2005 film)" ;
+    onto:hasDirector data:person_wes_craven .
+
+data:film_wrath_of_god a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Wrath of God" ;
+    onto:hasDirector data:person_ralph_nelson .
+
+data:person_ralph_nelson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ralph Nelson" ;
+    onto:hasNationality data:country_united_states .
+
+data:person_wes_craven a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Wes Craven" ;
+    onto:hasNationality data:country_united_states ;
+    skos:altLabel "Wesley Earl Craven" .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

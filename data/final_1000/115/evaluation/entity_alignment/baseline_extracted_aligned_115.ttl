@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Arbusto_Energy> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Arbusto Energy" ;
+    onto:hasFounder <http://example.org/entity/George_W_Bush> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/George_W_Bush> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George W. Bush" ;
+    onto:hasNationality <http://example.org/entity/American> .
+

@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/804/originals/extracted_804.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/804/ground_truth_804.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/augustus_ii_strong": "http://example.org/entity/Augustus_II_the_Strong",
+    "http://example.org/extracted/maurice_de_saxe_1696": "http://example.org/entity/Maurice_de_Saxe",
+    "http://example.org/extracted/wawel_cathedral": "http://example.org/entity/Wawel_Cathedral"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/augustus_ii_strong",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Frederick Augustus I",
+          "source": "altLabel"
+        },
+        {
+          "text": "Augustus II the Strong",
+          "source": "label"
+        },
+        {
+          "text": "augustus ii strong",
+          "source": "uri"
+        }
+      ],
+      "context": "Frederick Augustus I. has burial place: Wawel Cathedral in Kraków. has son: Maurice, Count of Saxony.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Augustus_II_the_Strong",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Augustus II the Strong",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Augustus II the Strong",
+        "extracted_source": "label",
+        "ground_truth_text": "Augustus II the Strong",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7637975811958313,
+      "graph_score": 0.5485654473304749,
+      "margin": 0.6646735370159149
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/maurice_de_saxe_1696",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maurice, Count of Saxony",
+          "source": "altLabel"
+        },
+        {
+          "text": "Maurice de Saxe",
+          "source": "label"
+        },
+        {
+          "text": "maurice de saxe 1696",
+          "source": "uri"
+        }
+      ],
+      "context": "Maurice, Count of Saxony. inverse has son: Frederick Augustus I.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maurice_de_Saxe",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maurice de Saxe",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maurice de Saxe",
+        "extracted_source": "label",
+        "ground_truth_text": "Maurice de Saxe",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6478332877159119,
+      "graph_score": 0.32391664385795593,
+      "margin": 0.6451668739318848
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wawel_cathedral",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Wawel Cathedral in Kraków",
+          "source": "altLabel"
+        },
+        {
+          "text": "Wawel Cathedral",
+          "source": "label"
+        }
+      ],
+      "context": "Wawel Cathedral in Kraków. inverse has burial place: Frederick Augustus I.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Wawel_Cathedral",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Wawel Cathedral",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Wawel Cathedral",
+        "extracted_source": "label",
+        "ground_truth_text": "Wawel Cathedral",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8713173866271973,
+      "graph_score": 0.9356586933135986,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

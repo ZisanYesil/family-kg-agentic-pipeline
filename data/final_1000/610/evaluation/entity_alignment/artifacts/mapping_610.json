@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/610/originals/extracted_610.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/610/ground_truth_610.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/tim_wheeler": "http://example.org/entity/Tim_Wheeler",
+    "http://example.org/extracted/united_kingdom": "http://example.org/entity/Northern_Irish",
+    "http://example.org/extracted/film_cuatro": "http://example.org/entity/Cuatro"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_cuatro",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "¡Cuatro!",
+          "source": "label"
+        },
+        {
+          "text": "film cuatro",
+          "source": "uri"
+        }
+      ],
+      "context": "¡Cuatro!. has director: Timothy James Arthur Wheeler.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cuatro",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cuatro",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "¡Cuatro!",
+        "extracted_source": "label",
+        "ground_truth_text": "Cuatro",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.7050438523292542,
+      "string_score": 0.9357143044471741,
+      "independent_identity_support": true,
+      "context_score": 0.7642562985420227,
+      "graph_score": 0.882128119468689,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tim_wheeler",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Timothy James Arthur Wheeler",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tim Wheeler",
+          "source": "label"
+        }
+      ],
+      "context": "Timothy James Arthur Wheeler. has nationality: Northern Irish. inverse has director: ¡Cuatro!.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tim_Wheeler",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tim Wheeler",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tim Wheeler",
+        "extracted_source": "label",
+        "ground_truth_text": "Tim Wheeler",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9072022438049316,
+      "graph_score": 0.6202678084373474,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Northern Irish",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "Northern Irish. inverse has nationality: Timothy James Arthur Wheeler.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Northern_Irish",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Northern Irish",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Northern Irish",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Northern Irish",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9075139760971069,
+      "graph_score": 0.45375698804855347,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

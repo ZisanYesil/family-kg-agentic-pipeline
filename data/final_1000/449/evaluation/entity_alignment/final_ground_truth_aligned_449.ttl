@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Thomas_Henty a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Tommy_Cooper ;
+    ex:hasParent entity:Tommy_Cooper .
+
+entity:heart_attack a ex:CauseOfDeath .
+
+entity:Tommy_Cooper a ex:Agent,
+        ex:Person ;
+    ex:hasCauseOfDeath entity:heart_attack ;
+    ex:hasChild entity:Thomas_Henty .
+

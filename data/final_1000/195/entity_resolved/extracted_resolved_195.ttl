@@ -1,0 +1,32 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:mystery_plane a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Mystery Plane" ;
+    onto:hasCountry data:united_states .
+
+data:to_kill_a_dragon a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "To Kill a Dragon" ;
+    onto:hasCountry data:germany,
+        data:soviet_union .
+
+data:germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German" .
+
+data:soviet_union a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Soviet Union" ;
+    skos:altLabel "Soviet" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

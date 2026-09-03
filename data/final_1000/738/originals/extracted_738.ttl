@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:auguste_tessier_1853 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Auguste Tessier" ;
+    onto:hasFather data:ulric_joseph_tessier_1817 .
+
+data:cimetiere_notre_dame_de_belmont a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Cimetière Notre-Dame-de-Belmont" .
+
+data:ulric_joseph_tessier_1817 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ulric-Joseph Tessier" ;
+    onto:hasBurialPlace data:cimetiere_notre_dame_de_belmont .
+

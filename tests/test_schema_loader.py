@@ -4,7 +4,7 @@ from ontology.schema_loader import load_ontology_schema
 
 
 def test_load_dataset_ontology_schema_recognizes_date_or_year_ranges() -> None:
-    schema = load_ontology_schema("ontology/dataset_ontology.ttl")
+    schema = load_ontology_schema("ontology/ontology.ttl")
 
     datatype_props = {prop.local_name: prop for prop in schema.datatype_properties}
 
@@ -12,10 +12,10 @@ def test_load_dataset_ontology_schema_recognizes_date_or_year_ranges() -> None:
     assert datatype_props["hasDeathDate"].range_type == "date_or_year"
     assert datatype_props["hasPublicationDate"].range_type == "date_or_year"
     assert datatype_props["hasInception"].range_type == "date_or_year"
-    assert schema.is_class_compatible("Film", "CreativeWork")
-    assert schema.is_class_compatible("Film", "Artifact")
-    assert schema.is_class_compatible("Company", "Agent")
-    assert not schema.is_class_compatible("Person", "CreativeWork")
+    assert schema.class_satisfies("Film", "CreativeWork")
+    assert schema.class_satisfies("Film", "Artifact")
+    assert schema.class_satisfies("Organization", "Agent")
+    assert not schema.class_satisfies("Person", "CreativeWork")
     object_props = {prop.local_name for prop in schema.object_properties}
     assert {"hasCountry", "hasCreator", "hasStudentOf"} <= object_props
 

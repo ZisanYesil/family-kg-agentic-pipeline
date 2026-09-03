@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Fredegund a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:Chilperic_I .
+
+entity:Aregund a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Chilperic_I .
+
+entity:Chilperic_I a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Aregund ;
+    ex:hasParent entity:Aregund ;
+    ex:hasSpouse entity:Fredegund .
+

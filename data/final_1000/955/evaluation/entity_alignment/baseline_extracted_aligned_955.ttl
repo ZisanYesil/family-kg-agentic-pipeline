@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Prince_Maurits_of_Orange_Nassau_van_Vollenhoven> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Maurits Willem Pieter Hendrik of Orange-Nassau, van Vollenhoven" ;
+    onto:hasFather <http://example.org/entity/Pieter_van_Vollenhoven> ;
+    skos:altLabel "Prince Maurits of Orange-Nassau, van Vollenhoven" .
+
+<http://example.org/entity/Pieter_van_Vollenhoven> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Pieter van Vollenhoven" ;
+    onto:hasBirthDate "1939-04-30"^^xsd:date ;
+    skos:altLabel "Pieter van Vollenhoven Jr." .
+

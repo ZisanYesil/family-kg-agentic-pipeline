@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/89/originals/extracted_89.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/89/ground_truth_89.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/charlotte_christine_brunswick_luneburg": "http://example.org/entity/Charlotte_Christine_of_Brunswick_Lüneburg",
+    "http://example.org/extracted/natalya_alexeyevna_1714": "http://example.org/entity/Grand_Duchess_Natalya_Alexeyevna_of_Russia",
+    "http://example.org/extracted/peter_ii_of_russia": "http://example.org/entity/Peter_II_of_Russia"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/charlotte_christine_brunswick_luneburg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charlotte Christine of Brunswick-Lüneburg",
+          "source": "label"
+        },
+        {
+          "text": "charlotte christine brunswick luneburg",
+          "source": "uri"
+        }
+      ],
+      "context": "Charlotte Christine of Brunswick-Lüneburg. inverse has mother: Peter II Alexeyevich.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charlotte_Christine_of_Brunswick_Lüneburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charlotte Christine of Brunswick Lüneburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charlotte Christine of Brunswick-Lüneburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Charlotte Christine of Brunswick Lüneburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9846872687339783,
+      "string_score": 0.9890244007110596,
+      "independent_identity_support": true,
+      "context_score": 0.8753898739814758,
+      "graph_score": 0.9376949071884155,
+      "margin": 0.6754375100135803
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/natalya_alexeyevna_1714",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Natalya Alexeyevna (1714–1728)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Grand Duchess Natalya Alexeyevna of Russia",
+          "source": "label"
+        },
+        {
+          "text": "natalya alexeyevna 1714",
+          "source": "uri"
+        }
+      ],
+      "context": "Natalya Alexeyevna (1714–1728). has sister: Peter II Alexeyevich.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Grand_Duchess_Natalya_Alexeyevna_of_Russia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Grand Duchess Natalya Alexeyevna of Russia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Grand Duchess Natalya Alexeyevna of Russia",
+        "extracted_source": "label",
+        "ground_truth_text": "Grand Duchess Natalya Alexeyevna of Russia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7554459571838379,
+      "graph_score": 0.37772297859191895,
+      "margin": 0.5355497002601624
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/peter_ii_of_russia",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Peter II Alexeyevich",
+          "source": "altLabel"
+        },
+        {
+          "text": "Peter II of Russia",
+          "source": "label"
+        }
+      ],
+      "context": "Peter II Alexeyevich. has mother: Charlotte Christine of Brunswick-Lüneburg. inverse has sister: Natalya Alexeyevna (1714–1728).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Peter_II_of_Russia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Peter II of Russia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Peter II of Russia",
+        "extracted_source": "label",
+        "ground_truth_text": "Peter II of Russia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8262235522270203,
+      "graph_score": 0.5797784328460693,
+      "margin": 0.5216418206691742
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

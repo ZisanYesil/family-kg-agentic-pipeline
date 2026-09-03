@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/656/originals/extracted_656.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/656/ground_truth_656.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/song_i_want_you_shana": "http://example.org/entity/I_Want_You",
+    "http://example.org/extracted/person_shana_petrone": "http://example.org/entity/Shana",
+    "http://example.org/extracted/place_park_ridge_illinois": "http://example.org/entity/Park_Ridge_Illinois"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_shana_petrone",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shana",
+          "source": "altLabel"
+        },
+        {
+          "text": "Shana Petrone",
+          "source": "label"
+        },
+        {
+          "text": "person shana petrone",
+          "source": "uri"
+        }
+      ],
+      "context": "Shana. has birth place: Park Ridge, Illinois. inverse has performer: I Want You (Shana song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shana",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shana",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shana",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Shana",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.963767945766449,
+      "graph_score": 0.9818840026855469,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_park_ridge_illinois",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Park Ridge, Illinois",
+          "source": "label"
+        },
+        {
+          "text": "place park ridge illinois",
+          "source": "uri"
+        }
+      ],
+      "context": "Park Ridge, Illinois. inverse has birth place: Shana.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Park_Ridge_Illinois",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Park Ridge Illinois",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Park Ridge, Illinois",
+        "extracted_source": "label",
+        "ground_truth_text": "Park Ridge Illinois",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9838706851005554,
+      "string_score": 0.9884615540504456,
+      "independent_identity_support": true,
+      "context_score": 0.9945774674415588,
+      "graph_score": 0.997288703918457,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_i_want_you_shana",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "I Want You (Shana song)",
+          "source": "altLabel"
+        },
+        {
+          "text": "I Want You",
+          "source": "label"
+        },
+        {
+          "text": "song i want you shana",
+          "source": "uri"
+        }
+      ],
+      "context": "I Want You (Shana song). has performer: Shana.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/I_Want_You",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "I Want You",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "I Want You",
+        "extracted_source": "label",
+        "ground_truth_text": "I Want You",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9448649287223816,
+      "graph_score": 0.9724324941635132,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

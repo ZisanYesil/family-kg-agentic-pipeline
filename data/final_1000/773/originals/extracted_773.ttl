@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:love_on_the_cloud a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Love on the Cloud" ;
+    onto:hasDirector data:gu_changwei .
+
+data:gu_changwei a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gu Changwei" ;
+    onto:hasBirthPlace data:xian_shaanxi_china .
+
+data:xian_shaanxi_china a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Xi'an, Shaanxi, People's Republic of China" .
+

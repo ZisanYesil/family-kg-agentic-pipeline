@@ -133,12 +133,13 @@ def _allowed_predicates(
     if violation.path is not None:
         allowed.add(violation.path)
 
-    if violation.kind == ViolationKind.UNMAPPED_RELATION and violation.expected:
-        allowed.update(
-            candidate.strip()
-            for candidate in violation.expected.split(",")
-            if candidate.strip()
-        )
+    if violation.kind == ViolationKind.UNMAPPED_RELATION:
+        # The model must choose by meaning from the declared ontology. Restricting this
+        # to type-compatible properties caused semantically false substitutions (for
+        # example, mapping "composed by" to hasDirector). SHACL checks domain/range
+        # after the edit, and rdf:type may be repaired when the source supports it.
+        allowed.update(prop.uri for prop in schema.object_properties)
+        allowed.add(str(RDF.type))
 
     if violation.kind == ViolationKind.DANGLING_REFERENCE:
         allowed.add(str(RDF.type))

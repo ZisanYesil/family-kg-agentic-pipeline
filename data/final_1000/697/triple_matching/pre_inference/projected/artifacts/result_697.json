@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/697/evaluation/entity_alignment/baseline_extracted_aligned_697.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/697/evaluation/entity_alignment/baseline_ground_truth_aligned_697.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Theodora_of_Khazaria",
+      "predicate": "hasSibling",
+      "object": "Busir",
+      "subject_uri": "http://example.org/entity/Theodora_of_Khazaria",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Busir"
+    },
+    {
+      "subject": "Tiberius",
+      "predicate": "hasParent",
+      "object": "Theodora_of_Khazaria",
+      "subject_uri": "http://example.org/entity/Tiberius",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Theodora_of_Khazaria"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Busir",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Busir",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Busir",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Busir",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Busir",
+      "predicate": "label",
+      "object": "\"Busir\"",
+      "subject_uri": "http://example.org/entity/Busir",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Busir\""
+    },
+    {
+      "subject": "Busir",
+      "predicate": "altLabel",
+      "object": "\"Busir, khagan of the Khazars\"",
+      "subject_uri": "http://example.org/entity/Busir",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Busir, khagan of the Khazars\""
+    },
+    {
+      "subject": "Theodora_of_Khazaria",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Theodora_of_Khazaria",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Theodora_of_Khazaria",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Theodora_of_Khazaria",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Theodora_of_Khazaria",
+      "predicate": "label",
+      "object": "\"Theodora of Khazaria\"",
+      "subject_uri": "http://example.org/entity/Theodora_of_Khazaria",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Theodora of Khazaria\""
+    },
+    {
+      "subject": "Tiberius",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Tiberius",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Tiberius",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Tiberius",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Tiberius",
+      "predicate": "label",
+      "object": "\"Tiberius\"",
+      "subject_uri": "http://example.org/entity/Tiberius",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Tiberius\""
+    },
+    {
+      "subject": "Tiberius",
+      "predicate": "altLabel",
+      "object": "\"Tiberios\"",
+      "subject_uri": "http://example.org/entity/Tiberius",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Tiberios\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

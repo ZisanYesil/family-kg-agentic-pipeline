@@ -1,0 +1,20 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Srey_Santhor> a ex:Place .
+
+<http://example.org/entity/Ang_Em> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1674-01-01"^^xsd:date ;
+    ex:hasDeathDate "1731-01-01"^^xsd:date ;
+    ex:hasParent <http://example.org/entity/Ang_Nan> ;
+    ex:isSonOf <http://example.org/entity/Ang_Nan> .
+
+<http://example.org/entity/Ang_Nan> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1654-01-01"^^xsd:date ;
+    ex:hasChild <http://example.org/entity/Ang_Em> ;
+    ex:hasDeathDate "1691-01-01"^^xsd:date ;
+    ex:hasDeathPlace <http://example.org/entity/Srey_Santhor> ;
+    ex:hasSon <http://example.org/entity/Ang_Em> .
+

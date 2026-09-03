@@ -1,0 +1,249 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/95/originals/extracted_95.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/95/ground_truth_95.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/country_india": "http://example.org/entity/Indian",
+    "http://example.org/extracted/director_pavithran": "http://example.org/entity/Pavithran",
+    "http://example.org/extracted/director_ram_gopal_varma": "http://example.org/entity/Ram_Gopal_Varma",
+    "http://example.org/extracted/film_kalloori_vaasal": "http://example.org/entity/Kalloori_Vaasal",
+    "http://example.org/extracted/film_lakshmis_ntr": "http://example.org/entity/Lakshmi_s_NTR"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 6,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_india",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Indian",
+          "source": "altLabel"
+        },
+        {
+          "text": "India",
+          "source": "label"
+        },
+        {
+          "text": "country india",
+          "source": "uri"
+        }
+      ],
+      "context": "Indian. inverse has nationality: Pavithran. inverse has nationality: Ram Gopal Varma.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Indian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Indian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Indian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Indian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8509886860847473,
+      "graph_score": 0.42549434304237366,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/director_pavithran",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pavithran",
+          "source": "label"
+        },
+        {
+          "text": "director pavithran",
+          "source": "uri"
+        }
+      ],
+      "context": "Pavithran. has nationality: Indian. inverse has director: Kalloori Vaasal.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pavithran",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pavithran",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pavithran",
+        "extracted_source": "label",
+        "ground_truth_text": "Pavithran",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8676296472549438,
+      "graph_score": 0.6838148236274719,
+      "margin": 0.3889254927635193
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/director_ram_gopal_varma",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ram Gopal Varma",
+          "source": "label"
+        },
+        {
+          "text": "director ram gopal varma",
+          "source": "uri"
+        }
+      ],
+      "context": "Ram Gopal Varma. has nationality: Indian. inverse has director: Lakshmi's NTR.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ram_Gopal_Varma",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ram Gopal Varma",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ram Gopal Varma",
+        "extracted_source": "label",
+        "ground_truth_text": "Ram Gopal Varma",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.955710232257843,
+      "graph_score": 0.6445217728614807,
+      "margin": 0.6831166744232178
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_kalloori_vaasal",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kalloori Vaasal",
+          "source": "label"
+        },
+        {
+          "text": "film kalloori vaasal",
+          "source": "uri"
+        }
+      ],
+      "context": "Kalloori Vaasal. has director: Pavithran.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kalloori_Vaasal",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kalloori Vaasal",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kalloori Vaasal",
+        "extracted_source": "label",
+        "ground_truth_text": "Kalloori Vaasal",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6564281284809113
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_lakshmis_ntr",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lakshmi's NTR",
+          "source": "label"
+        },
+        {
+          "text": "film lakshmis ntr",
+          "source": "uri"
+        }
+      ],
+      "context": "Lakshmi's NTR. has director: Ram Gopal Varma.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lakshmi_s_NTR",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lakshmi s NTR",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lakshmi's NTR",
+        "extracted_source": "label",
+        "ground_truth_text": "Lakshmi s NTR",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9656838774681091,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9965308308601379,
+      "graph_score": 0.9982653856277466,
+      "margin": 0.653780072927475
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Pavithran_Tamil_film_director"
+  ]
+}

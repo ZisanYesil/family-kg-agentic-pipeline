@@ -1,0 +1,197 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/326/originals/extracted_326.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/326/ground_truth_326.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/watch_me_do": "http://example.org/entity/Watch_Me_Do",
+    "http://example.org/extracted/grammy_award": "http://example.org/entity/Grammy_Award",
+    "http://example.org/extracted/meghan_trainor": "http://example.org/entity/Meghan_Trainor"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 2,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/grammy_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Grammy Award",
+          "source": "label"
+        }
+      ],
+      "context": "Grammy Award. inverse has award received: Meghan Trainor.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Grammy_Award",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Grammy Award",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Grammy Award",
+        "extracted_source": "label",
+        "ground_truth_text": "Grammy Award",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/meghan_trainor",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Meghan Trainor",
+          "source": "label"
+        }
+      ],
+      "context": "Meghan Trainor. has award received: ASCAP Pop Music Award. has award received: Billboard Music Award. has award received: Grammy Award. inverse has performer: Watch Me Do.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Meghan_Trainor",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Meghan Trainor",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Meghan Trainor",
+        "extracted_source": "label",
+        "ground_truth_text": "Meghan Trainor",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8774160146713257,
+      "graph_score": 0.9387080073356628,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/watch_me_do",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Watch Me Do",
+          "source": "label"
+        }
+      ],
+      "context": "Watch Me Do. has performer: Meghan Trainor.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Watch_Me_Do",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Watch Me Do",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Watch Me Do",
+        "extracted_source": "label",
+        "ground_truth_text": "Watch Me Do",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ascap_pop_music_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "ASCAP Pop Music Award",
+          "source": "label"
+        }
+      ],
+      "context": "ASCAP Pop Music Award. inverse has award received: Meghan Trainor.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/billboard_music_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Billboard Music Award",
+          "source": "label"
+        }
+      ],
+      "context": "Billboard Music Award. inverse has award received: Meghan Trainor.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

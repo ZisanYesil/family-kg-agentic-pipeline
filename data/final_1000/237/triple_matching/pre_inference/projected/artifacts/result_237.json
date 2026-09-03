@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/237/evaluation/entity_alignment/baseline_extracted_aligned_237.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/237/evaluation/entity_alignment/baseline_ground_truth_aligned_237.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Fred_Keays",
+      "predicate": "hasBirthDate",
+      "object": "\"1898-07-12\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Fred_Keays",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1898-07-12\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Fred_Keays",
+      "predicate": "hasDeathDate",
+      "object": "\"1983-06-24\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Fred_Keays",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1983-06-24\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "William_H_Brand",
+      "predicate": "hasBirthDate",
+      "object": "\"1824-04-20\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/William_H_Brand",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1824-04-20\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "William_H_Brand",
+      "predicate": "hasDeathDate",
+      "object": "\"1891\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/William_H_Brand",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1891\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Fred_Keays",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Fred_Keays",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Fred_Keays",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Fred_Keays",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Fred_Keays",
+      "predicate": "label",
+      "object": "\"Fred Keays\"",
+      "subject_uri": "http://example.org/entity/Fred_Keays",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Fred Keays\""
+    },
+    {
+      "subject": "Fred_Keays",
+      "predicate": "altLabel",
+      "object": "\"Frederick William Keays\"",
+      "subject_uri": "http://example.org/entity/Fred_Keays",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Frederick William Keays\""
+    },
+    {
+      "subject": "William_H_Brand",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/William_H_Brand",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "William_H_Brand",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/William_H_Brand",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "William_H_Brand",
+      "predicate": "label",
+      "object": "\"William H. Brand\"",
+      "subject_uri": "http://example.org/entity/William_H_Brand",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"William H. Brand\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 11,
+    "true_positives": 4,
+    "false_positives": 7,
+    "false_negatives": 0,
+    "precision": 0.36363636363636365,
+    "recall": 1.0,
+    "f1": 0.5333333333333333
+  },
+  "stage": "pre_inference"
+}

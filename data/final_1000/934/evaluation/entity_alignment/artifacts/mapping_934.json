@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/934/originals/extracted_934.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/934/ground_truth_934.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jack_the_bear_1993": "http://example.org/entity/Jack_the_Bear",
+    "http://example.org/extracted/nattukku_1991": "http://example.org/entity/Nattukku_Oru_Nallavan"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/jack_the_bear_1993",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jack The Bear",
+          "source": "label"
+        },
+        {
+          "text": "jack the bear 1993",
+          "source": "uri"
+        }
+      ],
+      "context": "Jack The Bear. has publication date: 1993.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jack_the_Bear",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jack the Bear",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jack The Bear",
+        "extracted_source": "label",
+        "ground_truth_text": "Jack the Bear",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.999078094959259,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9995015263557434,
+      "graph_score": 0.9995015263557434,
+      "margin": 0.711827278137207
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/nattukku_1991",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nattukku Oru Nallavan",
+          "source": "label"
+        },
+        {
+          "text": "nattukku 1991",
+          "source": "uri"
+        }
+      ],
+      "context": "Nattukku Oru Nallavan. has publication date: 1991.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nattukku_Oru_Nallavan",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nattukku Oru Nallavan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nattukku Oru Nallavan",
+        "extracted_source": "label",
+        "ground_truth_text": "Nattukku Oru Nallavan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7215741574764252
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

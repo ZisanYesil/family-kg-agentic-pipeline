@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:juan_carlos_gumucio a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Juan Carlos Gumucio" ;
+    onto:hasSpouse data:marie_colvin .
+
+data:marie_colvin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marie Colvin" ;
+    onto:hasEmployer data:the_sunday_times ;
+    skos:altLabel "Marie Catherine Colvin" .
+
+data:the_sunday_times a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "The Sunday Times" .
+

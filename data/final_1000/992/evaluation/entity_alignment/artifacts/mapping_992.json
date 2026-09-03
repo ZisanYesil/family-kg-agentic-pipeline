@@ -1,0 +1,283 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/992/originals/extracted_992.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/992/ground_truth_992.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_richard_sale": "http://example.org/entity/Richard_Sale",
+    "http://example.org/extracted/person_clara_law": "http://example.org/entity/Clara_Law",
+    "http://example.org/extracted/film_golden_lotus": "http://example.org/entity/The_Reincarnation_of_Golden_Lotus",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 6,
+    "ground_truth_entities": 7,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 2
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has nationality: Richard Sale.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8946535587310791,
+      "graph_score": 0.44732677936553955,
+      "margin": 0.7008432745933533
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_golden_lotus",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Reincarnation of Golden Lotus",
+          "source": "label"
+        },
+        {
+          "text": "film golden lotus",
+          "source": "uri"
+        }
+      ],
+      "context": "The Reincarnation of Golden Lotus. has director: Clara Law Cheuk-yiu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Reincarnation_of_Golden_Lotus",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Reincarnation of Golden Lotus",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Reincarnation of Golden Lotus",
+        "extracted_source": "label",
+        "ground_truth_text": "The Reincarnation of Golden Lotus",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9337553381919861,
+      "graph_score": 0.9668776988983154,
+      "margin": 0.743911623954773
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_clara_law",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Clara Law Cheuk-yiu",
+          "source": "altLabel"
+        },
+        {
+          "text": "Clara Law",
+          "source": "label"
+        },
+        {
+          "text": "person clara law",
+          "source": "uri"
+        }
+      ],
+      "context": "Clara Law Cheuk-yiu. has nationality: Hong Kong. inverse has director: The Reincarnation of Golden Lotus.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Clara_Law",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Clara Law",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Clara Law",
+        "extracted_source": "label",
+        "ground_truth_text": "Clara Law",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8212090134620667,
+      "graph_score": 0.9106044769287109,
+      "margin": 0.7415397763252258
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_richard_sale",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Richard Sale",
+          "source": "label"
+        },
+        {
+          "text": "person richard sale",
+          "source": "uri"
+        }
+      ],
+      "context": "Richard Sale. has nationality: American. inverse has director: I'll Get By.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Richard_Sale",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Richard Sale",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Richard Sale",
+        "extracted_source": "label",
+        "ground_truth_text": "Richard Sale",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8082078695297241,
+      "graph_score": 0.40410393476486206,
+      "margin": 0.27573710680007935
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_ill_get_by",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "I'll Get By",
+          "source": "label"
+        },
+        {
+          "text": "film ill get by",
+          "source": "uri"
+        }
+      ],
+      "context": "I'll Get By. has director: Richard Sale.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/I_ll_Get_By_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "I ll Get By film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film ill get by",
+        "extracted_source": "uri",
+        "ground_truth_text": "I ll Get By film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8179521560668945,
+      "name_embedding_score": 0.8237208724021912,
+      "string_score": 0.6693548560142517,
+      "independent_identity_support": false,
+      "context_score": 0.9100242853164673,
+      "graph_score": 0.9550121426582336,
+      "margin": 0.6857097446918488
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_hong_kong",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hong Kong",
+          "source": "altLabel"
+        },
+        {
+          "text": "country hong kong",
+          "source": "uri"
+        }
+      ],
+      "context": "Hong Kong. inverse has nationality: Clara Law Cheuk-yiu.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Australia",
+    "http://example.org/entity/Richard_Sale_director"
+  ]
+}

@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/extracted/film_the_cousin_from_nowhere_1953> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasComposer <http://example.org/extracted/person_eduard_kunke> ;
+    ex:hasCreator <http://example.org/extracted/person_eduard_kunke> .
+
+<http://example.org/extracted/person_evelyn_kunke> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/extracted/person_eduard_kunke> ;
+    ex:isDaughterOf <http://example.org/extracted/person_eduard_kunke> .
+
+<http://example.org/extracted/person_eduard_kunke> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1885-01-27"^^xsd:date ;
+    ex:hasChild <http://example.org/extracted/person_evelyn_kunke> ;
+    ex:hasDaughter <http://example.org/extracted/person_evelyn_kunke> ;
+    ex:hasDeathDate "1953-10-27"^^xsd:date .
+

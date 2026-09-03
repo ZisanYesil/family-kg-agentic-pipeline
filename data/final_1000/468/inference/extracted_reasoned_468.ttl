@@ -1,0 +1,32 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/film_felicite> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/director_alain_gomis> ;
+    ex:hasDirector <http://example.org/extracted/director_alain_gomis> .
+
+<http://example.org/extracted/film_villa_amalia> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/director_benoit_jacquot> ;
+    ex:hasDirector <http://example.org/extracted/director_benoit_jacquot> .
+
+<http://example.org/extracted/country_senegal> a ex:Country,
+        ex:Place .
+
+<http://example.org/extracted/director_alain_gomis> a ex:Agent,
+        ex:Person ;
+    ex:hasCountry <http://example.org/extracted/country_france>,
+        <http://example.org/extracted/country_senegal> ;
+    ex:hasNationality <http://example.org/extracted/country_france>,
+        <http://example.org/extracted/country_senegal> .
+
+<http://example.org/extracted/director_benoit_jacquot> a ex:Agent,
+        ex:Person ;
+    ex:hasCountry <http://example.org/extracted/country_france> ;
+    ex:hasNationality <http://example.org/extracted/country_france> .
+
+<http://example.org/extracted/country_france> a ex:Country,
+        ex:Place .
+

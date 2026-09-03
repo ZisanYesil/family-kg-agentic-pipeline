@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/641/originals/extracted_641.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/641/ground_truth_641.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_beyond_the_sunset": "http://example.org/entity/Beyond_the_Sunset",
+    "http://example.org/extracted/film_kauravar": "http://example.org/entity/Kauravar"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_beyond_the_sunset",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Beyond the Sunset",
+          "source": "label"
+        },
+        {
+          "text": "film beyond the sunset",
+          "source": "uri"
+        }
+      ],
+      "context": "Beyond the Sunset. has publication date: 1989.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Beyond_the_Sunset",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Beyond the Sunset",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Beyond the Sunset",
+        "extracted_source": "label",
+        "ground_truth_text": "Beyond the Sunset",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.723414421081543
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_kauravar",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kauravar",
+          "source": "label"
+        },
+        {
+          "text": "film kauravar",
+          "source": "uri"
+        }
+      ],
+      "context": "Kauravar. has publication date: 1992.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kauravar",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kauravar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kauravar",
+        "extracted_source": "label",
+        "ground_truth_text": "Kauravar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.6684348583221436
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,188 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/620/originals/extracted_620.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/620/ground_truth_620.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/st_patricks_ottawa": "http://example.org/entity/St_Patrick_s_High_School_Ottawa",
+    "http://example.org/extracted/united_states": "http://example.org/entity/United_States",
+    "http://example.org/extracted/canada": "http://example.org/entity/Canada",
+    "http://example.org/extracted/columbia_montour": "http://example.org/entity/Columbia_Montour_Area_Vocational_Technical_School"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/canada",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Canada",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Canada. inverse has country: St. Patrick's High School (Ottawa).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Canada",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Canada",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Canada",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Canada",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9512462615966797,
+      "graph_score": 0.9756231307983398,
+      "margin": 0.6305778622627258
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/columbia_montour",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Columbia-Montour Area Vocational-Technical School",
+          "source": "altLabel"
+        },
+        {
+          "text": "columbia montour",
+          "source": "uri"
+        }
+      ],
+      "context": "Columbia-Montour Area Vocational-Technical School. has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Columbia_Montour_Area_Vocational_Technical_School",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Columbia Montour Area Vocational Technical School",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Columbia-Montour Area Vocational-Technical School",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Columbia Montour Area Vocational Technical School",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9339389204978943,
+      "string_score": 0.981632649898529,
+      "independent_identity_support": true,
+      "context_score": 0.9293811321258545,
+      "graph_score": 0.9646905660629272,
+      "margin": 0.7569103986024857
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/st_patricks_ottawa",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "St. Patrick's High School (Ottawa)",
+          "source": "altLabel"
+        },
+        {
+          "text": "st patricks ottawa",
+          "source": "uri"
+        }
+      ],
+      "context": "St. Patrick's High School (Ottawa). has country: Canada.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/St_Patrick_s_High_School_Ottawa",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "St Patrick s High School Ottawa",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "St. Patrick's High School (Ottawa)",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "St Patrick s High School Ottawa",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8520703315734863,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9188458323478699,
+      "graph_score": 0.9594229459762573,
+      "margin": 0.7748183459043503
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States",
+          "source": "altLabel"
+        }
+      ],
+      "context": "United States. inverse has country: Columbia-Montour Area Vocational-Technical School.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_States",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United States",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "United States",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9405161738395691,
+      "graph_score": 0.9702581167221069,
+      "margin": 0.7132969796657562
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

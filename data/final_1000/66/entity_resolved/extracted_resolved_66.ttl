@@ -1,0 +1,31 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_a_south_sea_bubble a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A South Sea Bubble" ;
+    onto:hasDirector data:person_t_hayes_hunter .
+
+data:film_the_young_animals a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Young Animals" ;
+    onto:hasDirector data:person_maury_dexter .
+
+data:person_maury_dexter a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Maury Dexter" ;
+    onto:hasNationality data:country_united_states .
+
+data:person_t_hayes_hunter a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "T. Hayes Hunter" ;
+    onto:hasNationality data:country_united_states .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

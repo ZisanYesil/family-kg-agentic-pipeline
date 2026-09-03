@@ -1,0 +1,25 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Road_Hard> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Road Hard" ;
+    onto:hasDirector <http://example.org/entity/Adam_Carolla> .
+
+<http://example.org/entity/We_Are_the_Freaks> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "We Are the Freaks" ;
+    onto:hasDirector <http://example.org/entity/Justin_Edgar> .
+
+<http://example.org/entity/Adam_Carolla> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Adam Carolla" ;
+    onto:hasBirthDate "1964-05-27"^^xsd:date .
+
+<http://example.org/entity/Justin_Edgar> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Justin Edgar" ;
+    onto:hasBirthDate "1971-08-18"^^xsd:date .
+

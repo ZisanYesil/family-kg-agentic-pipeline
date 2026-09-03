@@ -1,0 +1,170 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/102/originals/extracted_102.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/102/ground_truth_102.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/luca_prodan": "http://example.org/entity/Luca_Prodan",
+    "http://example.org/extracted/hurlingham_reggae_band": "http://example.org/entity/Hurlingham_Reggae_Band"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/hurlingham_reggae_band",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hurlingham Reggae Band",
+          "source": "label"
+        }
+      ],
+      "context": "Hurlingham Reggae Band. has member: Luca Prodan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hurlingham_Reggae_Band",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hurlingham Reggae Band",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hurlingham Reggae Band",
+        "extracted_source": "label",
+        "ground_truth_text": "Hurlingham Reggae Band",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/luca_prodan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Luca Prodan",
+          "source": "label"
+        }
+      ],
+      "context": "Luca Prodan. has nationality: Italy. has nationality: Scotland. inverse has member: Hurlingham Reggae Band.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Luca_Prodan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Luca Prodan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Luca Prodan",
+        "extracted_source": "label",
+        "ground_truth_text": "Luca Prodan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9536000490188599,
+      "graph_score": 0.9768000245094299,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/scotland",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Scotland",
+          "source": "label"
+        }
+      ],
+      "context": "Scotland. inverse has nationality: Luca Prodan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Italian_Scottish",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Italian Scottish",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Scotland",
+        "extracted_source": "label",
+        "ground_truth_text": "Italian Scottish",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5504117608070374,
+      "name_embedding_score": 0.796936571598053,
+      "string_score": 0.15000000596046448,
+      "independent_identity_support": false,
+      "context_score": 0.9155478477478027,
+      "graph_score": 0.45777392387390137,
+      "margin": 0.5504117608070374
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/italy",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Italy",
+          "source": "label"
+        }
+      ],
+      "context": "Italy. inverse has nationality: Luca Prodan.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

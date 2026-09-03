@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/897/evaluation/entity_alignment/baseline_extracted_aligned_897.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/897/evaluation/entity_alignment/baseline_ground_truth_aligned_897.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Fred_Jackman",
+      "predicate": "hasDeathPlace",
+      "object": "Hollywood",
+      "subject_uri": "http://example.org/entity/Fred_Jackman",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Hollywood"
+    },
+    {
+      "subject": "The_King_of_the_Wild_Horses",
+      "predicate": "hasDirector",
+      "object": "Fred_Jackman",
+      "subject_uri": "http://example.org/entity/The_King_of_the_Wild_Horses",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Fred_Jackman"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Fred_Jackman",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Fred_Jackman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Fred_Jackman",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Fred_Jackman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Fred_Jackman",
+      "predicate": "label",
+      "object": "\"Fred Wood Jackman Sr.\"",
+      "subject_uri": "http://example.org/entity/Fred_Jackman",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Fred Wood Jackman Sr.\""
+    },
+    {
+      "subject": "Fred_Jackman",
+      "predicate": "altLabel",
+      "object": "\"Fred Jackman\"",
+      "subject_uri": "http://example.org/entity/Fred_Jackman",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Fred Jackman\""
+    },
+    {
+      "subject": "Hollywood",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Hollywood",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Hollywood",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hollywood",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hollywood",
+      "predicate": "label",
+      "object": "\"Hollywood, California\"",
+      "subject_uri": "http://example.org/entity/Hollywood",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hollywood, California\""
+    },
+    {
+      "subject": "The_King_of_the_Wild_Horses",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_King_of_the_Wild_Horses",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_King_of_the_Wild_Horses",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_King_of_the_Wild_Horses",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_King_of_the_Wild_Horses",
+      "predicate": "label",
+      "object": "\"The King of the Wild Horses (1924 film)\"",
+      "subject_uri": "http://example.org/entity/The_King_of_the_Wild_Horses",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The King of the Wild Horses (1924 film)\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

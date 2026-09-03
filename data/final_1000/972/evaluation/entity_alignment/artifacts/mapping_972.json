@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/972/originals/extracted_972.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/972/ground_truth_972.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_everything_ducky": "http://example.org/entity/Everything_s_Ducky",
+    "http://example.org/extracted/person_m_krishnan_nair": "http://example.org/entity/M_Krishnan_Nair",
+    "http://example.org/extracted/person_don_taylor": "http://example.org/entity/Don_Taylor"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 6,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 2
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_everything_ducky",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Everything's Ducky",
+          "source": "label"
+        },
+        {
+          "text": "film everything ducky",
+          "source": "uri"
+        }
+      ],
+      "context": "Everything's Ducky. has director: Don Taylor.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Everything_s_Ducky",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Everything s Ducky",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Everything's Ducky",
+        "extracted_source": "label",
+        "ground_truth_text": "Everything s Ducky",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9635373950004578,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9850798845291138,
+      "graph_score": 0.9925399422645569,
+      "margin": 0.6573448181152344
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_don_taylor",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Don Taylor",
+          "source": "label"
+        },
+        {
+          "text": "person don taylor",
+          "source": "uri"
+        }
+      ],
+      "context": "Don Taylor. has death date: 1998-12-29. inverse has director: Everything's Ducky.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Don_Taylor",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Don Taylor",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Don Taylor",
+        "extracted_source": "label",
+        "ground_truth_text": "Don Taylor",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8100704550743103,
+      "graph_score": 0.9050352573394775,
+      "margin": 0.3965590000152588
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_m_krishnan_nair",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "M. Krishnan Nair",
+          "source": "label"
+        },
+        {
+          "text": "person m krishnan nair",
+          "source": "uri"
+        }
+      ],
+      "context": "M. Krishnan Nair. has death date: 2001-05-10. inverse has director: Karthika.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/M_Krishnan_Nair",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "M Krishnan Nair",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "M. Krishnan Nair",
+        "extracted_source": "label",
+        "ground_truth_text": "M Krishnan Nair",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9874749183654785,
+      "string_score": 0.9854838848114014,
+      "independent_identity_support": true,
+      "context_score": 0.7843558192253113,
+      "graph_score": 0.7843558192253113,
+      "margin": 0.12094771862030029
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_karthika",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Karthika",
+          "source": "label"
+        },
+        {
+          "text": "film karthika",
+          "source": "uri"
+        }
+      ],
+      "context": "Karthika. has director: M. Krishnan Nair.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Karthika_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Karthika film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film karthika",
+        "extracted_source": "uri",
+        "ground_truth_text": "Karthika film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9111108779907227,
+      "name_embedding_score": 0.9291751980781555,
+      "string_score": 0.8269230723381042,
+      "independent_identity_support": true,
+      "context_score": 0.9183400273323059,
+      "graph_score": 0.9591699838638306,
+      "margin": 0.6887097209692001
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Don_Taylor_American_actor_and_director",
+    "http://example.org/entity/M_Krishnan_Nair_director"
+  ]
+}

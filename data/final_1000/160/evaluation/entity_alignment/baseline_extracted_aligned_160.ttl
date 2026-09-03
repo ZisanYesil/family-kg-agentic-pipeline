@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Fanfare_of_Love> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Fanfares of Love" ;
+    onto:hasCountry data:west_germany .
+
+<http://example.org/entity/Guilty_2011_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Guilty" ;
+    onto:hasCountry <http://example.org/entity/French> .
+
+<http://example.org/entity/French> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+
+data:west_germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "West Germany" ;
+    skos:altLabel "West German" .
+

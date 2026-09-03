@@ -1,0 +1,151 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/796/originals/extracted_796.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/796/ground_truth_796.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/nikita_bogoslovsky": "http://example.org/entity/Nikita_Bogoslovsky"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/nikita_bogoslovsky",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nikita Bogoslovsky",
+          "source": "label"
+        }
+      ],
+      "context": "Nikita Bogoslovsky. has birth place: Saint-Petersburg. inverse has composer: Dark Is The Night (Soviet song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nikita_Bogoslovsky",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nikita Bogoslovsky",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nikita Bogoslovsky",
+        "extracted_source": "label",
+        "ground_truth_text": "Nikita Bogoslovsky",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9704285860061646,
+      "graph_score": 0.9704285860061646,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dark_is_the_night_song",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dark Is The Night (Soviet song)",
+          "source": "label"
+        },
+        {
+          "text": "dark is the night song",
+          "source": "uri"
+        }
+      ],
+      "context": "Dark Is The Night (Soviet song). has composer: Nikita Bogoslovsky.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dark_Is_the_Night",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dark Is the Night",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "dark is the night song",
+        "extracted_source": "uri",
+        "ground_truth_text": "Dark Is the Night",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.909857988357544,
+      "name_embedding_score": 0.8835062980651855,
+      "string_score": 0.892307698726654,
+      "independent_identity_support": true,
+      "context_score": 0.9602233171463013,
+      "graph_score": 0.9801116585731506,
+      "margin": 0.909857988357544
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/saint_petersburg",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Saint-Petersburg",
+          "source": "label"
+        },
+        {
+          "text": "saint petersburg",
+          "source": "uri"
+        }
+      ],
+      "context": "Saint-Petersburg. inverse has birth place: Nikita Bogoslovsky.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Petersburg",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Petersburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Saint-Petersburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Petersburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8650790452957153,
+      "name_embedding_score": 0.8529834151268005,
+      "string_score": 0.7711538672447205,
+      "independent_identity_support": true,
+      "context_score": 0.9663909077644348,
+      "graph_score": 0.983195424079895,
+      "margin": 0.8650790452957153
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

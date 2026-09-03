@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/478/originals/extracted_478.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/478/ground_truth_478.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ordono_bermudez": "http://example.org/entity/Ordoño_Bermúdez",
+    "http://example.org/extracted/bermudo_ii_de_leon": "http://example.org/entity/Bermudo_II_of_León"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bermudo_ii_de_leon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bermudo II of León",
+          "source": "label"
+        },
+        {
+          "text": "bermudo ii de leon",
+          "source": "uri"
+        }
+      ],
+      "context": "Bermudo II of León. inverse has father: Ordoño Bermúdez.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bermudo_II_of_León",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bermudo II of León",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bermudo II of León",
+        "extracted_source": "label",
+        "ground_truth_text": "Bermudo II of León",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9013407230377197,
+      "graph_score": 0.9506703615188599,
+      "margin": 0.512518048286438
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ordono_bermudez",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ordoño Bermúdez",
+          "source": "label"
+        },
+        {
+          "text": "ordono bermudez",
+          "source": "uri"
+        }
+      ],
+      "context": "Ordoño Bermúdez. has father: Bermudo II of León.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ordoño_Bermúdez",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ordoño Bermúdez",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ordoño Bermúdez",
+        "extracted_source": "label",
+        "ground_truth_text": "Ordoño Bermúdez",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6541768908500671
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Kingdom_of_León"
+  ]
+}

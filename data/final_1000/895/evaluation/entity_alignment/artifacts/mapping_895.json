@@ -1,0 +1,120 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/895/originals/extracted_895.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/895/ground_truth_895.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/patti_davis": "http://example.org/entity/Patricia_Ann_Davis",
+    "http://example.org/extracted/nancy_reagan": "http://example.org/entity/Nancy_Davis_Reagan"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/nancy_reagan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anne Frances Robbins",
+          "source": "altLabel"
+        },
+        {
+          "text": "Nancy Davis Reagan",
+          "source": "altLabel"
+        },
+        {
+          "text": "Nancy Reagan",
+          "source": "label"
+        }
+      ],
+      "context": "Anne Frances Robbins. inverse has mother: Patricia Ann Davis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nancy_Davis_Reagan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nancy Davis Reagan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nancy Davis Reagan",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Nancy Davis Reagan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6068049669265747,
+      "graph_score": 0.8034024834632874,
+      "margin": 0.5059005916118622
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/patti_davis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Patricia Ann Davis",
+          "source": "altLabel"
+        },
+        {
+          "text": "Patti Davis",
+          "source": "label"
+        }
+      ],
+      "context": "Patricia Ann Davis. has mother: Anne Frances Robbins.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Patricia_Ann_Davis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Patricia Ann Davis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Patricia Ann Davis",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Patricia Ann Davis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7243597507476807,
+      "graph_score": 0.8621798753738403,
+      "margin": 0.5226953625679016
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Bel_Air"
+  ]
+}

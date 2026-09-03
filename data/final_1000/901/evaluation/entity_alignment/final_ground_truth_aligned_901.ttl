@@ -1,0 +1,27 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Jack_Arnold_director a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "1992-03-17"^^xsd:date .
+
+entity:Red_Sundown a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Jack_Arnold ;
+    ex:hasDirector entity:Jack_Arnold .
+
+entity:Suvarna_Sethuve a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Geethapriya ;
+    ex:hasDirector entity:Geethapriya .
+
+entity:Geethapriya a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "2016-01-17"^^xsd:date .
+
+entity:Jack_Arnold a ex:Agent,
+        ex:Person .
+

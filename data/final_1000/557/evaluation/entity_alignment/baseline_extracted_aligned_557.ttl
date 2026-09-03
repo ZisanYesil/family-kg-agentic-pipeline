@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Kilippattu> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Kilippattu" ;
+    onto:hasDirector <http://example.org/entity/Raghavan> .
+
+<http://example.org/entity/Jishnu> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jishnu" .
+
+<http://example.org/entity/Raghavan> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Raghavan" ;
+    onto:hasSon <http://example.org/entity/Jishnu> .
+

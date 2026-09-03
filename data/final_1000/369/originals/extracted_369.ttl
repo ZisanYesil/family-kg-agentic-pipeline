@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:pye_min a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Pye Min" ;
+    onto:hasFather data:thalun .
+
+data:minye_kyawswa_ii a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Minye Kyawswa II" .
+
+data:thalun a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Thalun" ;
+    onto:hasBrother data:minye_kyawswa_ii .
+

@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/716/originals/extracted_716.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/716/ground_truth_716.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/henrietta_amelia_leeson": "http://example.org/entity/Henrietta_Amelia_Leeson",
+    "http://example.org/extracted/george_f_sowers": "http://example.org/entity/George_F_Sowers"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/george_f_sowers",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George F. Sowers",
+          "source": "label"
+        },
+        {
+          "text": "george f sowers",
+          "source": "uri"
+        }
+      ],
+      "context": "George F. Sowers. has birth date: 1921-09-23. has death date: 1996-10-23.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_F_Sowers",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George F Sowers",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "george f sowers",
+        "extracted_source": "uri",
+        "ground_truth_text": "George F Sowers",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9748964309692383,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9919314384460449,
+      "graph_score": 0.9919314384460449,
+      "margin": 0.7691933959722519
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/henrietta_amelia_leeson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henrietta Amelia Leeson",
+          "source": "label"
+        }
+      ],
+      "context": "Henrietta Amelia Leeson. has birth date: 1751. has death date: 1826-12-06.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Henrietta_Amelia_Leeson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Henrietta Amelia Leeson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henrietta Amelia Leeson",
+        "extracted_source": "label",
+        "ground_truth_text": "Henrietta Amelia Leeson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9910008311271667,
+      "graph_score": 0.9910008311271667,
+      "margin": 0.7904994189739227
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

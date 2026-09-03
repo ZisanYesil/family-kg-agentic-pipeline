@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/331/originals/extracted_331.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/331/ground_truth_331.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sweetly_youll_die_through_love": "http://example.org/entity/Sweetly_You_ll_Die_Through_Love",
+    "http://example.org/extracted/madrid_spain": "http://example.org/entity/Madrid",
+    "http://example.org/extracted/tulio_demicheli": "http://example.org/entity/Tulio_Demicheli"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/madrid_spain",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Madrid",
+          "source": "altLabel"
+        },
+        {
+          "text": "Madrid, Spain",
+          "source": "label"
+        },
+        {
+          "text": "madrid spain",
+          "source": "uri"
+        }
+      ],
+      "context": "Madrid. inverse has death place: Tulio Demicheli.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Madrid",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Madrid",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Madrid",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Madrid",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sweetly_youll_die_through_love",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sweetly You'll Die Through Love",
+          "source": "label"
+        },
+        {
+          "text": "sweetly youll die through love",
+          "source": "uri"
+        }
+      ],
+      "context": "Sweetly You'll Die Through Love. has director: Tulio Demicheli.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sweetly_You_ll_Die_Through_Love",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sweetly You ll Die Through Love",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sweetly You'll Die Through Love",
+        "extracted_source": "label",
+        "ground_truth_text": "Sweetly You ll Die Through Love",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9938578009605408,
+      "string_score": 0.9854838848114014,
+      "independent_identity_support": true,
+      "context_score": 0.997233510017395,
+      "graph_score": 0.9986167550086975,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tulio_demicheli",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tulio Demicheli",
+          "source": "label"
+        }
+      ],
+      "context": "Tulio Demicheli. has death place: Madrid. inverse has director: Sweetly You'll Die Through Love.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tulio_Demicheli",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tulio Demicheli",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tulio Demicheli",
+        "extracted_source": "label",
+        "ground_truth_text": "Tulio Demicheli",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9984924793243408,
+      "graph_score": 0.9992462396621704,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

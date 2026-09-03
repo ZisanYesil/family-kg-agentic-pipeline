@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/752/evaluation/entity_alignment/final_extracted_aligned_752.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/752/evaluation/entity_alignment/final_ground_truth_aligned_752.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Gallopin_Gals",
+      "predicate": "hasCreator",
+      "object": "Joseph_Barbera",
+      "subject_uri": "http://example.org/entity/Gallopin_Gals",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Joseph_Barbera"
+    },
+    {
+      "subject": "Gallopin_Gals",
+      "predicate": "hasDirector",
+      "object": "Joseph_Barbera",
+      "subject_uri": "http://example.org/entity/Gallopin_Gals",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Joseph_Barbera"
+    },
+    {
+      "subject": "Gallopin_Gals",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Gallopin_Gals",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Gallopin_Gals",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Gallopin_Gals",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Gallopin_Gals",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Gallopin_Gals",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Joseph_Barbera",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Joseph_Barbera",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Joseph_Barbera",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Joseph_Barbera",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Joseph_Barbera",
+      "predicate": "hasEmployer",
+      "object": "Van_Beuren_Studios",
+      "subject_uri": "http://example.org/entity/Joseph_Barbera",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/Van_Beuren_Studios"
+    },
+    {
+      "subject": "Van_Beuren_Studios",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Van_Beuren_Studios",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Van_Beuren_Studios",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Van_Beuren_Studios",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Joseph_Barbera",
+      "predicate": "hasEmployer",
+      "object": "organization_metro_golden_mayer",
+      "subject_uri": "http://example.org/entity/Joseph_Barbera",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/extracted/organization_metro_golden_mayer"
+    },
+    {
+      "subject": "organization_metro_golden_mayer",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/organization_metro_golden_mayer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "organization_metro_golden_mayer",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/extracted/organization_metro_golden_mayer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 13,
+    "true_positives": 7,
+    "false_positives": 3,
+    "false_negatives": 3,
+    "precision": 0.7,
+    "recall": 0.7,
+    "f1": 0.7
+  },
+  "stage": "post_inference"
+}

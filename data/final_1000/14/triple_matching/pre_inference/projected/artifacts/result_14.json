@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/14/evaluation/entity_alignment/baseline_extracted_aligned_14.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/14/evaluation/entity_alignment/baseline_ground_truth_aligned_14.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Old_Man_Drinking_a_Glass_of_Beer",
+      "predicate": "hasDirector",
+      "object": "George_Albert_Smith",
+      "subject_uri": "http://example.org/entity/Old_Man_Drinking_a_Glass_of_Beer",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/George_Albert_Smith"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "George_Albert_Smith",
+      "predicate": "hasDeathPlace",
+      "object": "Brighton",
+      "subject_uri": "http://example.org/entity/George_Albert_Smith",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Brighton"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "George_Albert_Smith",
+      "predicate": "hasBirthDate",
+      "object": "\"1864-01-04\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/George_Albert_Smith",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1864-01-04\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "George_Albert_Smith",
+      "predicate": "hasDeathDate",
+      "object": "\"1959-05-17\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/George_Albert_Smith",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1959-05-17\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "George_Albert_Smith",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/George_Albert_Smith",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "George_Albert_Smith",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/George_Albert_Smith",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "George_Albert_Smith",
+      "predicate": "label",
+      "object": "\"George Albert Smith\"",
+      "subject_uri": "http://example.org/entity/George_Albert_Smith",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"George Albert Smith\""
+    },
+    {
+      "subject": "Old_Man_Drinking_a_Glass_of_Beer",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Old_Man_Drinking_a_Glass_of_Beer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Old_Man_Drinking_a_Glass_of_Beer",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Old_Man_Drinking_a_Glass_of_Beer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Old_Man_Drinking_a_Glass_of_Beer",
+      "predicate": "label",
+      "object": "\"Old Man Drinking a Glass of Beer\"",
+      "subject_uri": "http://example.org/entity/Old_Man_Drinking_a_Glass_of_Beer",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Old Man Drinking a Glass of Beer\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 1,
+    "false_positives": 8,
+    "false_negatives": 1,
+    "precision": 0.1111111111111111,
+    "recall": 0.5,
+    "f1": 0.1818181818181818
+  },
+  "stage": "pre_inference"
+}

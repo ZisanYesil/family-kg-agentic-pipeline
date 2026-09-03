@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/690/originals/extracted_690.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/690/ground_truth_690.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/caesar_must_die": "http://example.org/entity/Caesar_Must_Die",
+    "http://example.org/extracted/berkeley_in_the_sxties": "http://example.org/entity/Berkeley_in_the_Sixties"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/berkeley_in_the_sxties",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Berkeley in the Sixties",
+          "source": "altLabel"
+        },
+        {
+          "text": "berkeley in the sxties",
+          "source": "uri"
+        }
+      ],
+      "context": "Berkeley in the Sixties. has publication date: 1990.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Berkeley_in_the_Sixties",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Berkeley in the Sixties",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Berkeley in the Sixties",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Berkeley in the Sixties",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0255374163389206
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/caesar_must_die",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Caesar Must Die",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Caesar Must Die. has publication date: 2012.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Caesar_Must_Die",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Caesar Must Die",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Caesar Must Die",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Caesar Must Die",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.087473802268505
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

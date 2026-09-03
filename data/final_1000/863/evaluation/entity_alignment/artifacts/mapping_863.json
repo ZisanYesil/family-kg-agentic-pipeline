@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/863/originals/extracted_863.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/863/ground_truth_863.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/otto_i_count_of_chiny": "http://example.org/entity/Otto_I_Count_of_Chiny",
+    "http://example.org/extracted/louis_count_of_verdun": "http://example.org/entity/Louis_Count_of_Verdun",
+    "http://example.org/extracted/gerberge_of_lorraine": "http://example.org/entity/Gerberge_of_Lorraine"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gerberge_of_lorraine",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gerberge of Lorraine",
+          "source": "label"
+        }
+      ],
+      "context": "Gerberge of Lorraine. inverse has mother: Otto I.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gerberge_of_Lorraine",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gerberge of Lorraine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gerberge of Lorraine",
+        "extracted_source": "label",
+        "ground_truth_text": "Gerberge of Lorraine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9101422429084778,
+      "graph_score": 0.9550710916519165,
+      "margin": 0.6856784820556641
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_count_of_verdun",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis I",
+          "source": "altLabel"
+        },
+        {
+          "text": "Louis I, Count of Verdun",
+          "source": "label"
+        },
+        {
+          "text": "louis count of verdun",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis I. has father: Otto I.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_Count_of_Verdun",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis Count of Verdun",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis I, Count of Verdun",
+        "extracted_source": "label",
+        "ground_truth_text": "Louis Count of Verdun",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9611139893531799,
+      "string_score": 0.9200000166893005,
+      "independent_identity_support": true,
+      "context_score": 0.6056209206581116,
+      "graph_score": 0.8028104305267334,
+      "margin": 0.535094678401947
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/otto_i_count_of_chiny",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Otto I",
+          "source": "altLabel"
+        },
+        {
+          "text": "Otto I, Count of Chiny",
+          "source": "label"
+        },
+        {
+          "text": "otto i count of chiny",
+          "source": "uri"
+        }
+      ],
+      "context": "Otto I. has mother: Gerberge of Lorraine. inverse has father: Louis I.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Otto_I_Count_of_Chiny",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Otto I Count of Chiny",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Otto I, Count of Chiny",
+        "extracted_source": "label",
+        "ground_truth_text": "Otto I Count of Chiny",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9640268683433533,
+      "string_score": 0.989534854888916,
+      "independent_identity_support": true,
+      "context_score": 0.8051881194114685,
+      "graph_score": 0.9025940895080566,
+      "margin": 0.6010721623897552
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

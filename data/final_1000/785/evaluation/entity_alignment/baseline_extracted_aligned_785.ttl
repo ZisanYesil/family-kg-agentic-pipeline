@@ -1,0 +1,15 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Science_Fiction_Adventures> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Science Fiction Adventures (1952 magazine)" ;
+    onto:hasEditor <http://example.org/entity/Lester_del_Rey> .
+
+<http://example.org/entity/Lester_del_Rey> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lester del Rey" ;
+    onto:hasDeathDate "1993-05-10"^^xsd:date .
+

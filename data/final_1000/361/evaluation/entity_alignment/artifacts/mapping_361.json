@@ -1,0 +1,164 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/361/originals/extracted_361.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/361/ground_truth_361.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_curtis_bernhardt": "http://example.org/entity/Curtis_Bernhardt",
+    "http://example.org/extracted/film_the_tunnel_1933": "http://example.org/entity/The_Tunnel"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_tunnel_1933",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Tunnel",
+          "source": "altLabel"
+        },
+        {
+          "text": "The Tunnel (1933 German-language film)",
+          "source": "label"
+        },
+        {
+          "text": "film the tunnel 1933",
+          "source": "uri"
+        }
+      ],
+      "context": "The Tunnel. has director: Curtis Bernhardt.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Tunnel",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Tunnel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Tunnel",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "The Tunnel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_curtis_bernhardt",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Curtis Bernhardt",
+          "source": "label"
+        },
+        {
+          "text": "person curtis bernhardt",
+          "source": "uri"
+        }
+      ],
+      "context": "Curtis Bernhardt. has burial place: Forest Lawn Memorial Park Cemetery. inverse has director: The Tunnel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Curtis_Bernhardt",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Curtis Bernhardt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Curtis Bernhardt",
+        "extracted_source": "label",
+        "ground_truth_text": "Curtis Bernhardt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9899674654006958,
+      "graph_score": 0.9949837327003479,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_forest_lawn_memorial_park_cemetery",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Forest Lawn Memorial Park Cemetery",
+          "source": "altLabel"
+        },
+        {
+          "text": "Glendale's Forest Lawn Memorial Park Cemetery",
+          "source": "label"
+        },
+        {
+          "text": "place forest lawn memorial park cemetery",
+          "source": "uri"
+        }
+      ],
+      "context": "Forest Lawn Memorial Park Cemetery. inverse has burial place: Curtis Bernhardt.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Forest_Lawn_Memorial_Park",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Forest Lawn Memorial Park",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Forest Lawn Memorial Park Cemetery",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Forest Lawn Memorial Park",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9236066341400146,
+      "name_embedding_score": 0.9116520881652832,
+      "string_score": 0.8813559412956238,
+      "independent_identity_support": true,
+      "context_score": 0.9795325994491577,
+      "graph_score": 0.9897662997245789,
+      "margin": 0.9236066341400146
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

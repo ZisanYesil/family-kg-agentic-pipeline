@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/850/evaluation/entity_alignment/final_extracted_aligned_850.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/850/evaluation/entity_alignment/final_ground_truth_aligned_850.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Poland",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Poland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Poland",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Poland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Skaldowie",
+      "predicate": "hasCountry",
+      "object": "Poland",
+      "subject_uri": "http://example.org/entity/Skaldowie",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Poland"
+    },
+    {
+      "subject": "Skaldowie",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Skaldowie",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "The_Dead_Stars_on_Hollywood",
+      "predicate": "hasCountry",
+      "object": "American",
+      "subject_uri": "http://example.org/entity/The_Dead_Stars_on_Hollywood",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/American"
+    },
+    {
+      "subject": "The_Dead_Stars_on_Hollywood",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/The_Dead_Stars_on_Hollywood",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "dead_stars_on_hollywood",
+      "predicate": "hasCountry",
+      "object": "American",
+      "subject_uri": "http://example.org/extracted/dead_stars_on_hollywood",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/American"
+    },
+    {
+      "subject": "dead_stars_on_hollywood",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/dead_stars_on_hollywood",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "dead_stars_on_hollywood",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/extracted/dead_stars_on_hollywood",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "skaldowie",
+      "predicate": "hasCountry",
+      "object": "Poland",
+      "subject_uri": "http://example.org/extracted/skaldowie",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Poland"
+    },
+    {
+      "subject": "skaldowie",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/skaldowie",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "skaldowie",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/extracted/skaldowie",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 14,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 4,
+    "precision": 0.4,
+    "recall": 0.5,
+    "f1": 0.4444444444444445
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,100 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/809/evaluation/entity_alignment/baseline_extracted_aligned_809.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/809/evaluation/entity_alignment/baseline_ground_truth_aligned_809.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Shriro",
+      "predicate": "hasInception",
+      "object": "\"1906\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Shriro",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1906\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "TJ_Ryan_Foundation",
+      "predicate": "hasInception",
+      "object": "\"2014-02-27\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/TJ_Ryan_Foundation",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"2014-02-27\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Shriro",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Shriro",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Shriro",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Shriro",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Shriro",
+      "predicate": "label",
+      "object": "\"Shriro\"",
+      "subject_uri": "http://example.org/entity/Shriro",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Shriro\""
+    },
+    {
+      "subject": "TJ_Ryan_Foundation",
+      "predicate": "hasInception",
+      "object": "\"2012-05-04\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/TJ_Ryan_Foundation",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"2012-05-04\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "TJ_Ryan_Foundation",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/TJ_Ryan_Foundation",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "TJ_Ryan_Foundation",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/TJ_Ryan_Foundation",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "TJ_Ryan_Foundation",
+      "predicate": "label",
+      "object": "\"TJ Ryan Foundation\"",
+      "subject_uri": "http://example.org/entity/TJ_Ryan_Foundation",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"TJ Ryan Foundation\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 9,
+    "true_positives": 1,
+    "false_positives": 7,
+    "false_negatives": 1,
+    "precision": 0.125,
+    "recall": 0.5,
+    "f1": 0.2
+  },
+  "stage": "pre_inference"
+}

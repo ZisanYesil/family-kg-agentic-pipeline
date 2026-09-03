@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Elisabeth_Magdalena_of_Pomerania> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Elisabeth Magdalena of Pomerania" ;
+    onto:hasFather <http://example.org/entity/Ernst_Ludwig_Duke_of_Pomerania> ;
+    skos:altLabel "Elisabeth Magdalena Of Pomerania" .
+
+<http://example.org/entity/Ernst_Ludwig_Duke_of_Pomerania> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ernst Ludwig" ;
+    onto:hasBirthPlace <http://example.org/entity/Wolgast> ;
+    skos:altLabel "Ernst Ludwig, Duke of Pomerania" .
+
+<http://example.org/entity/Wolgast> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Wolgast" .
+

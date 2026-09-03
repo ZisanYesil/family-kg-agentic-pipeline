@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/857/evaluation/entity_alignment/final_extracted_aligned_857.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/857/evaluation/entity_alignment/final_ground_truth_aligned_857.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Thietmar_Margrave_of_Meissen",
+      "predicate": "hasDeathDate",
+      "object": "\"0979-08-03\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Thietmar_Margrave_of_Meissen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"0979-08-03\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Thietmar_Margrave_of_Meissen",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Thietmar_Margrave_of_Meissen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Thietmar_Margrave_of_Meissen",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Thietmar_Margrave_of_Meissen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Gero_II_Margrave_of_the_Saxon_Ostmark",
+      "predicate": "hasParent",
+      "object": "Thietmar_Margrave_of_Meissen",
+      "subject_uri": "http://example.org/entity/Gero_II_Margrave_of_the_Saxon_Ostmark",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Thietmar_Margrave_of_Meissen"
+    },
+    {
+      "subject": "Gero_II_Margrave_of_the_Saxon_Ostmark",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Gero_II_Margrave_of_the_Saxon_Ostmark",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Gero_II_Margrave_of_the_Saxon_Ostmark",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gero_II_Margrave_of_the_Saxon_Ostmark",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Thietmar_Margrave_of_Meissen",
+      "predicate": "hasChild",
+      "object": "Gero_II_Margrave_of_the_Saxon_Ostmark",
+      "subject_uri": "http://example.org/entity/Thietmar_Margrave_of_Meissen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Gero_II_Margrave_of_the_Saxon_Ostmark"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Thietmar_Margrave_of_Meissen",
+      "predicate": "hasChild",
+      "object": "gero_ii",
+      "subject_uri": "http://example.org/entity/Thietmar_Margrave_of_Meissen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/extracted/gero_ii"
+    },
+    {
+      "subject": "gero_ii",
+      "predicate": "hasParent",
+      "object": "Thietmar_Margrave_of_Meissen",
+      "subject_uri": "http://example.org/extracted/gero_ii",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Thietmar_Margrave_of_Meissen"
+    },
+    {
+      "subject": "gero_ii",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/gero_ii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "gero_ii",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/gero_ii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 1,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 11,
+    "true_positives": 3,
+    "false_positives": 4,
+    "false_negatives": 4,
+    "precision": 0.42857142857142855,
+    "recall": 0.42857142857142855,
+    "f1": 0.42857142857142855
+  },
+  "stage": "post_inference"
+}

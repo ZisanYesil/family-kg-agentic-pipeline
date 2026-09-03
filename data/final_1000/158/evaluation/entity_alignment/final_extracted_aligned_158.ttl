@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Marie_of_Cleves_Duchess_of_Orléans> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/entity/Mary_of_Burgundy_Duchess_of_Cleves> ;
+    ex:hasParent <http://example.org/entity/Mary_of_Burgundy_Duchess_of_Cleves> .
+
+<http://example.org/entity/John_the_Fearless> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Mary_of_Burgundy_Duchess_of_Cleves> .
+
+<http://example.org/entity/Mary_of_Burgundy_Duchess_of_Cleves> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Marie_of_Cleves_Duchess_of_Orléans> ;
+    ex:hasFather <http://example.org/entity/John_the_Fearless> ;
+    ex:hasParent <http://example.org/entity/John_the_Fearless> .
+

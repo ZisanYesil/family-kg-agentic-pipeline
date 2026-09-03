@@ -1,0 +1,122 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/884/originals/extracted_884.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/884/ground_truth_884.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/francis_baring_3rd_baron_ashburton": "http://example.org/entity/Francis_Baring_3rd_Baron_Ashburton",
+    "http://example.org/extracted/alexander_hugh_baring_4th_baron_ashburton": "http://example.org/entity/Alexander_Hugh_Baring_4th_Baron_Ashburton"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alexander_hugh_baring_4th_baron_ashburton",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alexander Hugh Baring",
+          "source": "altLabel"
+        },
+        {
+          "text": "Alexander Hugh Baring, 4th Baron Ashburton",
+          "source": "label"
+        },
+        {
+          "text": "alexander hugh baring 4th baron ashburton",
+          "source": "uri"
+        }
+      ],
+      "context": "Alexander Hugh Baring. has father: Francis Baring.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alexander_Hugh_Baring_4th_Baron_Ashburton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alexander Hugh Baring 4th Baron Ashburton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alexander Hugh Baring, 4th Baron Ashburton",
+        "extracted_source": "label",
+        "ground_truth_text": "Alexander Hugh Baring 4th Baron Ashburton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9758816361427307,
+      "string_score": 0.9945783019065857,
+      "independent_identity_support": true,
+      "context_score": 0.6126084327697754,
+      "graph_score": 0.8063042163848877,
+      "margin": 0.3394496440887451
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/francis_baring_3rd_baron_ashburton",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Francis Baring",
+          "source": "altLabel"
+        },
+        {
+          "text": "Francis Baring, 3rd Baron Ashburton",
+          "source": "label"
+        },
+        {
+          "text": "francis baring 3rd baron ashburton",
+          "source": "uri"
+        }
+      ],
+      "context": "Francis Baring. has death date: 1868-09-06. inverse has father: Alexander Hugh Baring.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Francis_Baring_3rd_Baron_Ashburton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Francis Baring 3rd Baron Ashburton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Francis Baring, 3rd Baron Ashburton",
+        "extracted_source": "label",
+        "ground_truth_text": "Francis Baring 3rd Baron Ashburton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9685894846916199,
+      "string_score": 0.9934782385826111,
+      "independent_identity_support": true,
+      "context_score": 0.6448084115982056,
+      "graph_score": 0.8224042057991028,
+      "margin": 0.3521069288253784
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:show_nicht_nachmachen a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Nicht nachmachen!" ;
+    onto:hasPresenter data:person_wigald_boning ;
+    skos:altLabel "Don't Imitate!" .
+
+data:person_wigald_boning a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Wigald Boning" ;
+    onto:hasBirthPlace data:place_wildeshausen .
+
+data:place_wildeshausen a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Wildeshausen" .
+

@@ -1,0 +1,2573 @@
+{
+  "experiment": "relation_guided_symbolic_qa",
+  "valid_for_direct_baseline_comparison": true,
+  "query_guidance_source": "manifest.csv type and relations",
+  "graph_stage": "reasoned",
+  "summary": {
+    "examples": 103,
+    "completed": 103,
+    "failed": 0,
+    "answered": 92,
+    "unanswered": 11,
+    "answer_rate": 0.8932038834951457,
+    "strict_exact_match": 0.6699029126213593,
+    "exact_match": 0.8349514563106796,
+    "mean_token_f1": 0.8349514563106796
+  },
+  "results": [
+    {
+      "id": 1,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "country"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "1",
+      "type": "comparison",
+      "question": "Are North Marion High School (Oregon) and Seoul High School both located in the same country?",
+      "gold_answer": "no",
+      "predicted_answer": "no",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "no",
+      "normalized_gold": "no",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 2,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "place of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "2",
+      "type": "compositional",
+      "question": "Where was the place of death of the director of film Beat Girl?",
+      "gold_answer": "Nice",
+      "predicted_answer": "Nice",
+      "correct": true,
+      "note": "hasDirector/hasDeathPlace (score=1.00)",
+      "normalized_prediction": "nice",
+      "normalized_gold": "nice",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 3,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "date of death",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "3",
+      "type": "compositional",
+      "question": "When did Jean Martin (Singer)'s husband die?",
+      "gold_answer": "1983",
+      "predicted_answer": "1983-03-07",
+      "correct": true,
+      "note": "hasSpouse/hasDeathDate (score=1.00)",
+      "normalized_prediction": "1983 03 07",
+      "normalized_gold": "1983",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 4,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "cause of death",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "4",
+      "type": "compositional",
+      "question": "Why did John Middleton Murry's wife die?",
+      "gold_answer": "tuberculosis",
+      "predicted_answer": "extrapulmonary tuberculosis",
+      "correct": true,
+      "note": "hasSpouse/hasCauseOfDeath (score=1.00)",
+      "normalized_prediction": "extrapulmonary tuberculosis",
+      "normalized_gold": "tuberculosis",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 5,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "award received",
+          "performer"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "5",
+      "type": "compositional",
+      "question": "What is the award that the performer of song Sunday Papers earned?",
+      "gold_answer": "Grammy",
+      "predicted_answer": "Grammy Award nomination",
+      "correct": true,
+      "note": "hasPerformer/hasAwardReceived (score=1.00)",
+      "normalized_prediction": "grammy award nomination",
+      "normalized_gold": "grammy",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 6,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "country"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "6",
+      "type": "comparison",
+      "question": "Are both Nikolsk Airport and Svobodny Airport located in the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 7,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "performer",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "7",
+      "type": "compositional",
+      "question": "Where was the performer of song God (John Lennon Song) born?",
+      "gold_answer": "Liverpool",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "no scored candidate among []",
+      "normalized_prediction": "",
+      "normalized_gold": "liverpool",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 8,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "employer",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "8",
+      "type": "compositional",
+      "question": "Where does Karin Stoltenberg's husband work at?",
+      "gold_answer": "United Nations",
+      "predicted_answer": "United Nations",
+      "correct": true,
+      "note": "hasSpouse/hasEmployer (score=1.00)",
+      "normalized_prediction": "united nations",
+      "normalized_gold": "united nations",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 9,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "publication date"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "9",
+      "type": "comparison",
+      "question": "Which film came out earlier, Emmy Of Stork'S Nest or Indira Vizha?",
+      "gold_answer": "Emmy Of Stork'S Nest",
+      "predicted_answer": "Emmy of Stork's Nest",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "emmy of stork s nest",
+      "normalized_gold": "emmy of stork s nest",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 10,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "date of birth",
+          "has part"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "10",
+      "type": "compositional",
+      "question": "When is the lead guitarist of List Of The Dillinger Escape Plan Band Members's birthday?",
+      "gold_answer": "August 8, 1975",
+      "predicted_answer": "1975-08-08",
+      "correct": true,
+      "note": "hasMember/hasBirthDate (score=0.42)",
+      "normalized_prediction": "1975 08 08",
+      "normalized_gold": "august 8 1975",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 11,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "cause of death",
+          "father"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "11",
+      "type": "compositional",
+      "question": "What is the cause of death of Alex Matthiessen's father?",
+      "gold_answer": "leukemia",
+      "predicted_answer": "acute leukemia",
+      "correct": true,
+      "note": "hasFather/hasCauseOfDeath (score=1.00)",
+      "normalized_prediction": "acute leukemia",
+      "normalized_gold": "leukemia",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 12,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "country"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "12",
+      "type": "comparison",
+      "question": "Are Tomskoye, Amur Oblast and Pleshkovo located in the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 13,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "inception",
+          "publisher"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "13",
+      "type": "compositional",
+      "question": "When was the company that published American Scientist founded?",
+      "gold_answer": "1886",
+      "predicted_answer": "1886",
+      "correct": true,
+      "note": "hasPublisher/hasInception (score=1.00)",
+      "normalized_prediction": "1886",
+      "normalized_gold": "1886",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 14,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "place of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "14",
+      "type": "compositional",
+      "question": "Where did the director of film Old Man Drinking A Glass Of Beer die?",
+      "gold_answer": "Brighton",
+      "predicted_answer": "1959-05-17",
+      "correct": false,
+      "note": "hasDirector/hasDeathDate (score=0.38)",
+      "normalized_prediction": "1959 05 17",
+      "normalized_gold": "brighton",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 15,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "educated at"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "15",
+      "type": "compositional",
+      "question": "Where did the director of film Desolation Angels (1995 Film) graduate from?",
+      "gold_answer": "State University of New York at Purchase",
+      "predicted_answer": "State University of New York at Purchase",
+      "correct": true,
+      "note": "hasDirector/hasEducatedAt (score=1.00)",
+      "normalized_prediction": "state university of new york at purchase",
+      "normalized_gold": "state university of new york at purchase",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 16,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "mother",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "16",
+      "type": "compositional",
+      "question": "Where was the mother of Antonio Flores born?",
+      "gold_answer": "Jerez de la Frontera",
+      "predicted_answer": "Jerez de la Frontera",
+      "correct": true,
+      "note": "hasMother/hasBirthPlace (score=1.00)",
+      "normalized_prediction": "jerez de la frontera",
+      "normalized_gold": "jerez de la frontera",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 17,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "father",
+          "mother"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "17",
+      "type": "inference",
+      "question": "Who is Charles Willoughby, 10Th Baron Willoughby Of Parham's paternal grandmother?",
+      "gold_answer": "Lady Frances Manners",
+      "predicted_answer": "Frances Manners",
+      "correct": true,
+      "note": "hasFather/hasMother (score=1.00)",
+      "normalized_prediction": "frances manners",
+      "normalized_gold": "lady frances manners",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 18,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "18",
+      "type": "comparison",
+      "question": "Who lived longer, Csaba Pálinkás or Henry Scheffé?",
+      "gold_answer": "Henry Scheffé",
+      "predicted_answer": "Henry Scheffé",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "henry scheffe",
+      "normalized_gold": "henry scheffe",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 19,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "father",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "19",
+      "type": "inference",
+      "question": "Who is the mother of Edward I Of England?",
+      "gold_answer": "Eleanor of Provence",
+      "predicted_answer": "Eleanor of Provence",
+      "correct": true,
+      "note": "hasFather/hasSpouse (score=1.00)",
+      "normalized_prediction": "eleanor of provence",
+      "normalized_gold": "eleanor of provence",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 20,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "bridge_comparison",
+        "relations": [
+          "country of citizenship",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "20",
+      "type": "bridge_comparison",
+      "question": "Do director of film Winter Meeting and director of film Year Of The Horse have the same nationality?",
+      "gold_answer": "no",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "insufficient_comparable_values",
+      "normalized_prediction": "",
+      "normalized_gold": "no",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 21,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "publication date"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "21",
+      "type": "comparison",
+      "question": "Which film was released earlier, Anna-Liisa or Children Underground?",
+      "gold_answer": "Anna-Liisa",
+      "predicted_answer": "Anna-Liisa",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "anna liisa",
+      "normalized_gold": "anna liisa",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 22,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "father",
+          "mother"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "22",
+      "type": "inference",
+      "question": "Who is the paternal grandmother of Ingegerd Olofsdotter Of Sweden?",
+      "gold_answer": "Sigrid the Haughty",
+      "predicted_answer": "Sigrid the Haughty",
+      "correct": true,
+      "note": "hasFather/hasMother (score=1.00)",
+      "normalized_prediction": "sigrid haughty",
+      "normalized_gold": "sigrid haughty",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 23,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "country of citizenship",
+          "mother"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "23",
+      "type": "compositional",
+      "question": "Which country Dexter Young's mother is from?",
+      "gold_answer": "China",
+      "predicted_answer": "China",
+      "correct": true,
+      "note": "hasMother/hasCountry (score=0.73)",
+      "normalized_prediction": "china",
+      "normalized_gold": "china",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 24,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "mother",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "24",
+      "type": "inference",
+      "question": "Who is Thomas Stafford, 3Rd Earl Of Stafford's father?",
+      "gold_answer": "Hugh de Stafford, 2nd Earl of Stafford",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "no scored candidate among []",
+      "normalized_prediction": "",
+      "normalized_gold": "hugh de stafford 2nd earl of stafford",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 25,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "publication date"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "25",
+      "type": "comparison",
+      "question": "Which film came out first, Ami Neta Hobo or Hood Of The Living Dead?",
+      "gold_answer": "Hood Of The Living Dead",
+      "predicted_answer": "Hood of the Living Dead",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "hood of living dead",
+      "normalized_gold": "hood of living dead",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 26,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "cause of death",
+          "performer"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "26",
+      "type": "compositional",
+      "question": "What is the cause of death of performer of song Oh Boy, Oh Boy, Oh Boy!?",
+      "gold_answer": "laryngeal cancer",
+      "predicted_answer": "laryngeal cancer",
+      "correct": true,
+      "note": "hasPerformer/hasCauseOfDeath (score=1.00)",
+      "normalized_prediction": "laryngeal cancer",
+      "normalized_gold": "laryngeal cancer",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 27,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "father",
+          "sibling"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "27",
+      "type": "inference",
+      "question": "Who is the uncle of Catherine Allégret?",
+      "gold_answer": "Marc Allégret",
+      "predicted_answer": "Marc Allégret",
+      "correct": true,
+      "note": "hasFather/hasSibling (score=1.00)",
+      "normalized_prediction": "marc allegret",
+      "normalized_gold": "marc allegret",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 28,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "father",
+          "place of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "28",
+      "type": "compositional",
+      "question": "Where was the place of death of Duchess Maria Dorothea Of Württemberg's father?",
+      "gold_answer": "Kirchheim unter Teck",
+      "predicted_answer": "Kirchheim unter Teck",
+      "correct": true,
+      "note": "hasFather/hasDeathPlace (score=1.00)",
+      "normalized_prediction": "kirchheim unter teck",
+      "normalized_gold": "kirchheim unter teck",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 29,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "country"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "29",
+      "type": "comparison",
+      "question": "Are Coal City, Illinois and Lash Kenar, Nur both located in the same country?",
+      "gold_answer": "no",
+      "predicted_answer": "no",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "no",
+      "normalized_gold": "no",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 30,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "30",
+      "type": "compositional",
+      "question": "Where was the director of film Los Motivos De Luz born?",
+      "gold_answer": "France",
+      "predicted_answer": "Mexico, D.F.",
+      "correct": false,
+      "note": "hasDirector/hasBirthPlace (score=1.00)",
+      "normalized_prediction": "mexico d f",
+      "normalized_gold": "france",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 31,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "performer",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "31",
+      "type": "compositional",
+      "question": "Where was the performer of song I See You (Theme From Avatar) born?",
+      "gold_answer": "London",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "no_anchor",
+      "normalized_prediction": "",
+      "normalized_gold": "london",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 32,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "32",
+      "type": "comparison",
+      "question": "Who lived longer, Louis-Armand-Constantin De Rohan or Adalberto Pereira Dos Santos?",
+      "gold_answer": "Adalberto Pereira Dos Santos",
+      "predicted_answer": "Adalberto Pereira dos Santos",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "adalberto pereira dos santos",
+      "normalized_gold": "adalberto pereira dos santos",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 33,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "has part",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "33",
+      "type": "compositional",
+      "question": "Where was the keyboardist of Xyz (English Band) born?",
+      "gold_answer": "Kingsbury, London",
+      "predicted_answer": "Kingsbury, London",
+      "correct": true,
+      "note": "hasMember/hasBirthPlace (score=0.42)",
+      "normalized_prediction": "kingsbury london",
+      "normalized_gold": "kingsbury london",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 34,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "inception"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "34",
+      "type": "comparison",
+      "question": "Which one was established first, Besix or Circus Herman Renz?",
+      "gold_answer": "Besix",
+      "predicted_answer": "BESIX",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "besix",
+      "normalized_gold": "besix",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 35,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "country"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "35",
+      "type": "comparison",
+      "question": "Are Bilthoven and Herveld both located in the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 36,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "36",
+      "type": "comparison",
+      "question": "Who lived longer, Huchtenburg or Benjamin Nottingham Webster?",
+      "gold_answer": "Huchtenburg",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "insufficient_anchors",
+      "normalized_prediction": "",
+      "normalized_gold": "huchtenburg",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 37,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "father",
+          "place of burial"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "37",
+      "type": "compositional",
+      "question": "Where was the place of burial of Kunigunde Of Poland's father?",
+      "gold_answer": "Wawel Cathedral",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "no scored candidate among []",
+      "normalized_prediction": "",
+      "normalized_gold": "wawel cathedral",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 38,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "38",
+      "type": "compositional",
+      "question": "Who is the spouse of the director of film Min Kone Er Uskyldig?",
+      "gold_answer": "Annelise Hovmand",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "no scored candidate among []",
+      "normalized_prediction": "",
+      "normalized_gold": "annelise hovmand",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 39,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "employer"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "39",
+      "type": "compositional",
+      "question": "Where does the director of film Die Abfahrer work at?",
+      "gold_answer": "Dortmund University of Applied Sciences and Arts",
+      "predicted_answer": "Dortmund University of Applied Sciences and Arts",
+      "correct": true,
+      "note": "hasDirector/hasEmployer (score=1.00)",
+      "normalized_prediction": "dortmund university of applied sciences and arts",
+      "normalized_gold": "dortmund university of applied sciences and arts",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 40,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "cause of death",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "40",
+      "type": "compositional",
+      "question": "What is the cause of death of director of film She Asked For It?",
+      "gold_answer": "Parkinson",
+      "predicted_answer": "Parkinson's disease",
+      "correct": true,
+      "note": "hasDirector/hasCauseOfDeath (score=1.00)",
+      "normalized_prediction": "parkinson s disease",
+      "normalized_gold": "parkinson",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 41,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "country of citizenship",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "41",
+      "type": "compositional",
+      "question": "Which country Æthelwald, Ealdorman Of East Anglia's wife is from?",
+      "gold_answer": "English",
+      "predicted_answer": "England",
+      "correct": false,
+      "note": "hasSpouse/hasCountry (score=0.73)",
+      "normalized_prediction": "england",
+      "normalized_gold": "english",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 42,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "mother",
+          "place of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "42",
+      "type": "compositional",
+      "question": "Where did Joanna, Duchess Of Durazzo's mother die?",
+      "gold_answer": "Neapolitan",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "no_anchor",
+      "normalized_prediction": "",
+      "normalized_gold": "neapolitan",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 43,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "educated at"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "43",
+      "type": "compositional",
+      "question": "Where did the director of film Polish-Russian War (Film) study?",
+      "gold_answer": "National Film School in Łódź",
+      "predicted_answer": "National Film School in Łódź",
+      "correct": true,
+      "note": "hasDirector/hasEducatedAt (score=1.00)",
+      "normalized_prediction": "national film school in łodz",
+      "normalized_gold": "national film school in łodz",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 44,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "44",
+      "type": "comparison",
+      "question": "Who lived longer, Bernhard Afinger or Melvin Kranzberg?",
+      "gold_answer": "Melvin Kranzberg",
+      "predicted_answer": "Melvin Kranzberg",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "melvin kranzberg",
+      "normalized_gold": "melvin kranzberg",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 45,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "cause of death",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "45",
+      "type": "compositional",
+      "question": "Why did the director of film Normande (Film) die?",
+      "gold_answer": "Parkinson's disease",
+      "predicted_answer": "complications from Parkinson's disease",
+      "correct": true,
+      "note": "hasDirector/hasCauseOfDeath (score=1.00)",
+      "normalized_prediction": "complications from parkinson s disease",
+      "normalized_gold": "parkinson s disease",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 46,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "country of origin"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "46",
+      "type": "comparison",
+      "question": "Are Freestylers and The Nouvelles both from the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 47,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "country of citizenship",
+          "has part"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "47",
+      "type": "compositional",
+      "question": "What nationality is the singer of Pre (Band)?",
+      "gold_answer": "Japan",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "no scored candidate among [('hasMember', 'hasBirthPlace')]",
+      "normalized_prediction": "",
+      "normalized_gold": "japan",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 48,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "place of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "48",
+      "type": "compositional",
+      "question": "Where did the director of film Mary Jane'S Pa die?",
+      "gold_answer": "New York",
+      "predicted_answer": "New York, New York",
+      "correct": true,
+      "note": "hasDirector/hasDeathPlace (score=1.00)",
+      "normalized_prediction": "new york new york",
+      "normalized_gold": "new york",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 49,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "composer",
+          "country of citizenship"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "49",
+      "type": "compositional",
+      "question": "What nationality is the composer of film Count Your Blessings (1959 Film)?",
+      "gold_answer": "German",
+      "predicted_answer": "Germany",
+      "correct": true,
+      "note": "hasComposer/hasCountry (score=0.73)",
+      "normalized_prediction": "germany",
+      "normalized_gold": "german",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 50,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "bridge_comparison",
+        "relations": [
+          "date of death",
+          "producer"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "50",
+      "type": "bridge_comparison",
+      "question": "Which film has the producer died earlier, The Criminal (1960 Film) or A Soldier'S Oath?",
+      "gold_answer": "A Soldier'S Oath",
+      "predicted_answer": "A Soldier's Oath",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "soldier s oath",
+      "normalized_gold": "soldier s oath",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 51,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "performer",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "51",
+      "type": "compositional",
+      "question": "Where was the performer of song Suicide Social born?",
+      "gold_answer": "Alençon",
+      "predicted_answer": "Alençon, Orne",
+      "correct": true,
+      "note": "hasPerformer/hasBirthPlace (score=1.00)",
+      "normalized_prediction": "alencon orne",
+      "normalized_gold": "alencon",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 52,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "inception",
+          "publisher"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "52",
+      "type": "compositional",
+      "question": "When was the company that published The Rip Off Review Of Western Culture founded?",
+      "gold_answer": "1969",
+      "predicted_answer": "1969",
+      "correct": true,
+      "note": "hasPublisher/hasInception (score=1.00)",
+      "normalized_prediction": "1969",
+      "normalized_gold": "1969",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 53,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "bridge_comparison",
+        "relations": [
+          "date of birth",
+          "producer"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "53",
+      "type": "bridge_comparison",
+      "question": "Which film has the producer who was born earlier, Term Life or Housefull 2?",
+      "gold_answer": "Housefull 2",
+      "predicted_answer": "Housefull 2",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "housefull 2",
+      "normalized_gold": "housefull 2",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 54,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "54",
+      "type": "comparison",
+      "question": "Who lived longer, Lydia Knott or Maria Dulębianka?",
+      "gold_answer": "Lydia Knott",
+      "predicted_answer": "Lydia Knott",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "lydia knott",
+      "normalized_gold": "lydia knott",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 55,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "father",
+          "place of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "55",
+      "type": "compositional",
+      "question": "Where was the place of death of Carl Gustaf Creutz's father?",
+      "gold_answer": "Öland",
+      "predicted_answer": "Battle of Öland",
+      "correct": true,
+      "note": "^hasFather/hasDeathPlace (score=0.70)",
+      "normalized_prediction": "battle of oland",
+      "normalized_gold": "oland",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 56,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "award received",
+          "performer"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "56",
+      "type": "compositional",
+      "question": "What is the award that the performer of song In My Mind (Heather Headley Song) got?",
+      "gold_answer": "Tony Award for Best Actress in a Musical",
+      "predicted_answer": "Tony Award for Best Actress in a Musical",
+      "correct": true,
+      "note": "hasPerformer/hasAwardReceived (score=1.00)",
+      "normalized_prediction": "tony award for best actress in musical",
+      "normalized_gold": "tony award for best actress in musical",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 57,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "57",
+      "type": "comparison",
+      "question": "Who lived longer, Gustav Philipp Mörl or Giuseppe Diotti?",
+      "gold_answer": "Gustav Philipp Mörl",
+      "predicted_answer": "Gustav Philipp Mörl",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "gustav philipp morl",
+      "normalized_gold": "gustav philipp morl",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 58,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "58",
+      "type": "comparison",
+      "question": "Who lived longer, Andrzej Markowski or François Missoffe?",
+      "gold_answer": "François Missoffe",
+      "predicted_answer": "François Missoffe",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "francois missoffe",
+      "normalized_gold": "francois missoffe",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 59,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "father",
+          "place of burial"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "59",
+      "type": "compositional",
+      "question": "Where was the place of burial of Lucy Beall Candler Owens Heinz Leide's father?",
+      "gold_answer": "Georgia",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "no scored candidate among []",
+      "normalized_prediction": "",
+      "normalized_gold": "georgia",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 60,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "publication date"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "60",
+      "type": "comparison",
+      "question": "Which film came out first, The Greatest Thing In Life or Den Of Lions?",
+      "gold_answer": "The Greatest Thing In Life",
+      "predicted_answer": "The Greatest Thing in Life",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "greatest thing in life",
+      "normalized_gold": "greatest thing in life",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 61,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "mother",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "61",
+      "type": "compositional",
+      "question": "What is the place of birth of Clodia Pulchra (Wife Of Octavian)'s mother?",
+      "gold_answer": "Roman",
+      "predicted_answer": null,
+      "correct": false,
+      "note": "no scored candidate among []",
+      "normalized_prediction": "",
+      "normalized_gold": "roman",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 62,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "place of burial"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "62",
+      "type": "compositional",
+      "question": "Where was the place of burial of the director of film Tag Der Freiheit: Unsere Wehrmacht?",
+      "gold_answer": "Munich Waldfriedhof",
+      "predicted_answer": "Munich Waldfriedhof",
+      "correct": true,
+      "note": "hasDirector/hasBurialPlace (score=1.00)",
+      "normalized_prediction": "munich waldfriedhof",
+      "normalized_gold": "munich waldfriedhof",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 63,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "inception"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "63",
+      "type": "comparison",
+      "question": "Which school was founded first, Catholic University Of Tachira or Sri Dharmaloka College?",
+      "gold_answer": "Sri Dharmaloka College",
+      "predicted_answer": "Sri Dharmaloka College",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "sri dharmaloka college",
+      "normalized_gold": "sri dharmaloka college",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 64,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "child",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "64",
+      "type": "inference",
+      "question": "Who is Bertrand, Count Of Toulouse's child-in-law?",
+      "gold_answer": "Cecile of France",
+      "predicted_answer": "Cecile of France",
+      "correct": true,
+      "note": "hasChild/hasSpouse (score=1.00)",
+      "normalized_prediction": "cecile of france",
+      "normalized_gold": "cecile of france",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 65,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "country",
+          "publisher"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "65",
+      "type": "compositional",
+      "question": "What nationality of the company that published Personalized Medicine (Journal)?",
+      "gold_answer": "United Kingdom",
+      "predicted_answer": "United Kingdom",
+      "correct": true,
+      "note": "hasPublisher/hasCountry (score=1.00)",
+      "normalized_prediction": "united kingdom",
+      "normalized_gold": "united kingdom",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 66,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "bridge_comparison",
+        "relations": [
+          "country of citizenship",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "66",
+      "type": "bridge_comparison",
+      "question": "Are the directors of films A South Sea Bubble and The Young Animals both from the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 67,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "publication date"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "67",
+      "type": "comparison",
+      "question": "Which film was released more recently, Moscow Pride '06 or My Favourite Fabric?",
+      "gold_answer": "My Favourite Fabric",
+      "predicted_answer": "My Favourite Fabric",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "my favourite fabric",
+      "normalized_gold": "my favourite fabric",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 68,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "father",
+          "mother"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "68",
+      "type": "inference",
+      "question": "Who is Princess Marie Of Waldeck And Pyrmont's maternal grandfather?",
+      "gold_answer": "William, Duke of Nassau",
+      "predicted_answer": "William, Duke of Nassau",
+      "correct": true,
+      "note": "hasMother/hasFather (score=1.00)",
+      "normalized_prediction": "william duke of nassau",
+      "normalized_gold": "william duke of nassau",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 69,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "69",
+      "type": "comparison",
+      "question": "Who lived longer, Philippe Solari or Stephen Jurika?",
+      "gold_answer": "Stephen Jurika",
+      "predicted_answer": "Stephen Jurika Jr.",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "stephen jurika jr",
+      "normalized_gold": "stephen jurika",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 70,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "70",
+      "type": "comparison",
+      "question": "Who lived longer, Neil Lloyd Macky or Domenico Cosselli?",
+      "gold_answer": "Neil Lloyd Macky",
+      "predicted_answer": "Neil Lloyd Macky",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "neil lloyd macky",
+      "normalized_gold": "neil lloyd macky",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 71,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "inception"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "71",
+      "type": "comparison",
+      "question": "Which school was opened first, Carlisle School or Triam Udom Suksa School?",
+      "gold_answer": "Triam Udom Suksa School",
+      "predicted_answer": "Triam Udom Suksa School",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "triam udom suksa school",
+      "normalized_gold": "triam udom suksa school",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 72,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "72",
+      "type": "compositional",
+      "question": "Where was the director of film Pistol Whipped born?",
+      "gold_answer": "Dutch",
+      "predicted_answer": "Eindhoven",
+      "correct": false,
+      "note": "hasDirector/hasBirthPlace (score=1.00)",
+      "normalized_prediction": "eindhoven",
+      "normalized_gold": "dutch",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 73,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "publication date"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "73",
+      "type": "comparison",
+      "question": "Which film was released first, Ryan'S Daughter or A Day At The Museum?",
+      "gold_answer": "Ryan'S Daughter",
+      "predicted_answer": "Ryan's Daughter",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "ryan s daughter",
+      "normalized_gold": "ryan s daughter",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 74,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "mother",
+          "place of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "74",
+      "type": "compositional",
+      "question": "Where did Princess Margarita Of Greece And Denmark's mother die?",
+      "gold_answer": "Buckingham Palace",
+      "predicted_answer": "Buckingham Palace",
+      "correct": true,
+      "note": "hasMother/hasDeathPlace (score=1.00)",
+      "normalized_prediction": "buckingham palace",
+      "normalized_gold": "buckingham palace",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 75,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "father",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "75",
+      "type": "inference",
+      "question": "Who is Sancha Of Castile, Queen Of Aragon's father-in-law?",
+      "gold_answer": "Ramon Berenguer IV",
+      "predicted_answer": "Ramon Berenguer IV of Barcelona",
+      "correct": true,
+      "note": "hasSpouse/hasFather (score=1.00)",
+      "normalized_prediction": "ramon berenguer iv of barcelona",
+      "normalized_gold": "ramon berenguer iv",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 76,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "publication date"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "76",
+      "type": "comparison",
+      "question": "Which film was released earlier, Siyaah or Shadow Of Evil?",
+      "gold_answer": "Shadow Of Evil",
+      "predicted_answer": "Shadow of Evil",
+      "correct": true,
+      "note": "ordering",
+      "normalized_prediction": "shadow of evil",
+      "normalized_gold": "shadow of evil",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 77,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "father",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "77",
+      "type": "compositional",
+      "question": "What is the place of birth of Sean Sogliano's father?",
+      "gold_answer": "Alessandria",
+      "predicted_answer": "Alessandria",
+      "correct": true,
+      "note": "hasFather/hasBirthPlace (score=1.00)",
+      "normalized_prediction": "alessandria",
+      "normalized_gold": "alessandria",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 78,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "78",
+      "type": "comparison",
+      "question": "Who lived longer, Werner Mensching or Karel Zich?",
+      "gold_answer": "Werner Mensching",
+      "predicted_answer": "Werner Mensching",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "werner mensching",
+      "normalized_gold": "werner mensching",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 79,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "bridge_comparison",
+        "relations": [
+          "country of citizenship",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "79",
+      "type": "bridge_comparison",
+      "question": "Do both films: A French Gigolo and Temptation (1929 Film) have the directors from the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 80,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "cause of death",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "80",
+      "type": "compositional",
+      "question": "Why did the director of film The Devil'S Playground (1937 Film) die?",
+      "gold_answer": "Parkinson",
+      "predicted_answer": "Parkinson's disease",
+      "correct": true,
+      "note": "hasDirector/hasCauseOfDeath (score=1.00)",
+      "normalized_prediction": "parkinson s disease",
+      "normalized_gold": "parkinson",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 81,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "country"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "81",
+      "type": "comparison",
+      "question": "Are both St Joseph'S College, Gregory Terrace and Saint Ignatius' College, Adelaide located in the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 82,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "82",
+      "type": "comparison",
+      "question": "Who lived longer, A.-M. Julien or Ernst Zu Münster?",
+      "gold_answer": "A.-M. Julien",
+      "predicted_answer": "A.-M. Julien",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "m julien",
+      "normalized_gold": "m julien",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 83,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "date of death",
+          "mother"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "83",
+      "type": "compositional",
+      "question": "What is the date of death of Princess Eugénie Of Greece And Denmark's mother?",
+      "gold_answer": "21 September 1962",
+      "predicted_answer": "1962-09-21",
+      "correct": true,
+      "note": "hasMother/hasDeathDate (score=1.00)",
+      "normalized_prediction": "1962 09 21",
+      "normalized_gold": "21 september 1962",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 84,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "country of origin"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "84",
+      "type": "comparison",
+      "question": "Are The Human League and Agents Of Good Roots from the same country?",
+      "gold_answer": "no",
+      "predicted_answer": "no",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "no",
+      "normalized_gold": "no",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 85,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "father",
+          "mother"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "85",
+      "type": "inference",
+      "question": "Who is Alexandre Berthier, 3Rd Prince Of Wagram's paternal grandmother?",
+      "gold_answer": "Duchess Maria Elisabeth in Bavaria",
+      "predicted_answer": "Duchess Maria Elisabeth in Bavaria",
+      "correct": true,
+      "note": "hasFather/hasMother (score=1.00)",
+      "normalized_prediction": "duchess maria elisabeth in bavaria",
+      "normalized_gold": "duchess maria elisabeth in bavaria",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 86,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "composer",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "86",
+      "type": "compositional",
+      "question": "What is the place of birth of the composer of film Tana (Film)?",
+      "gold_answer": "Shkodër",
+      "predicted_answer": "Shkodër",
+      "correct": true,
+      "note": "hasComposer/hasBirthPlace (score=1.00)",
+      "normalized_prediction": "shkoder",
+      "normalized_gold": "shkoder",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 87,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "country of origin"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "87",
+      "type": "comparison",
+      "question": "Did the movies The Bond Boy and Mad Dogs And Englishmen (Film), originate from the same country?",
+      "gold_answer": "no",
+      "predicted_answer": "no",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "no",
+      "normalized_gold": "no",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 88,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "place of birth",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "88",
+      "type": "compositional",
+      "question": "What is the place of birth of Karin Stoltenberg's husband?",
+      "gold_answer": "Oslo",
+      "predicted_answer": "Oslo",
+      "correct": true,
+      "note": "hasSpouse/hasBirthPlace (score=1.00)",
+      "normalized_prediction": "oslo",
+      "normalized_gold": "oslo",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 89,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "mother",
+          "sibling"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "89",
+      "type": "inference",
+      "question": "Who is Grand Duchess Natalya Alexeyevna Of Russia (1714–1728)'s mother?",
+      "gold_answer": "Charlotte Christine of Brunswick-Lüneburg",
+      "predicted_answer": "Charlotte Christine of Brunswick-Lüneburg",
+      "correct": true,
+      "note": "hasSibling/hasMother (score=1.00)",
+      "normalized_prediction": "charlotte christine of brunswick luneburg",
+      "normalized_gold": "charlotte christine of brunswick luneburg",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 90,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "90",
+      "type": "comparison",
+      "question": "Who lived longer, Gustav Lindau or Nafija Sarajlić?",
+      "gold_answer": "Nafija Sarajlić",
+      "predicted_answer": "Nafija Sarajlić",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "nafija sarajlic",
+      "normalized_gold": "nafija sarajlic",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 91,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "director",
+          "place of birth"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "91",
+      "type": "compositional",
+      "question": "What is the place of birth of the director of film Gunsmoke (Film)?",
+      "gold_answer": "Gura Humorului",
+      "predicted_answer": "Gura Humorului",
+      "correct": true,
+      "note": "hasDirector/hasBirthPlace (score=1.00)",
+      "normalized_prediction": "gura humorului",
+      "normalized_gold": "gura humorului",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 92,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "award received",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "92",
+      "type": "compositional",
+      "question": "Which award the director of film Angel Square won?",
+      "gold_answer": "Officer of the Order of Canada",
+      "predicted_answer": "Gemini Award",
+      "correct": false,
+      "note": "hasDirector/hasAwardReceived (score=1.00)",
+      "normalized_prediction": "gemini award",
+      "normalized_gold": "officer of order of canada",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 93,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "country of citizenship"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "93",
+      "type": "comparison",
+      "question": "Were Jack Robertson (Footballer, Born 1902) and Peter Levy (Cinematographer) of the same nationality?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 94,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "bridge_comparison",
+        "relations": [
+          "country of citizenship",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "94",
+      "type": "bridge_comparison",
+      "question": "Are director of film Dortoir Des Grandes and director of film Is Paris Burning? (Film) both from the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 95,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "bridge_comparison",
+        "relations": [
+          "country of citizenship",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "95",
+      "type": "bridge_comparison",
+      "question": "Do both films Kalloori Vaasal and Lakshmi'S Ntr have the directors that share the same nationality?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 96,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "occupation"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "96",
+      "type": "comparison",
+      "question": "Who has a wider scope of profession, Anne Castles or Colin Will?",
+      "gold_answer": "Colin Will",
+      "predicted_answer": "Colin Will",
+      "correct": true,
+      "note": "cardinality 1 vs 2",
+      "normalized_prediction": "colin will",
+      "normalized_gold": "colin will",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 97,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "place of birth",
+          "spouse"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "97",
+      "type": "compositional",
+      "question": "What is the place of birth of Eduardo Conde's wife?",
+      "gold_answer": "Rio de Janeiro",
+      "predicted_answer": "Rio de Janeiro",
+      "correct": true,
+      "note": "hasSpouse/hasBirthPlace (score=1.00)",
+      "normalized_prediction": "rio de janeiro",
+      "normalized_gold": "rio de janeiro",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 98,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "educated at",
+          "father"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "98",
+      "type": "compositional",
+      "question": "Where did Francis W. Rockwell's father study?",
+      "gold_answer": "Yale",
+      "predicted_answer": "Yale University",
+      "correct": true,
+      "note": "^hasFather/hasEducatedAt (score=0.70)",
+      "normalized_prediction": "yale university",
+      "normalized_gold": "yale",
+      "strict_exact_match": false,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 99,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "inference",
+        "relations": [
+          "father",
+          "sibling"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "99",
+      "type": "inference",
+      "question": "Who is Blácaire Mac Gofraid's father?",
+      "gold_answer": "Gofraid ua Ímair",
+      "predicted_answer": "Gofraid ua Ímair",
+      "correct": true,
+      "note": "hasSibling/hasParent (score=0.44)",
+      "normalized_prediction": "gofraid ua imair",
+      "normalized_gold": "gofraid ua imair",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 100,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "bridge_comparison",
+        "relations": [
+          "country of citizenship",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "100",
+      "type": "bridge_comparison",
+      "question": "Do both films: The Wrath Of God and Cursed (2005 Film) have the directors from the same country?",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "correct": true,
+      "note": "equality",
+      "normalized_prediction": "yes",
+      "normalized_gold": "yes",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 101,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "country of citizenship",
+          "director"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "101",
+      "type": "compositional",
+      "question": "What nationality is the director of film Mission: Impossible 2?",
+      "gold_answer": "Hong Kong",
+      "predicted_answer": "Hong Kong",
+      "correct": true,
+      "note": "hasDirector/hasCountry (score=0.73)",
+      "normalized_prediction": "hong kong",
+      "normalized_gold": "hong kong",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    },
+    {
+      "id": 102,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "compositional",
+        "relations": [
+          "country of citizenship",
+          "has part"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "102",
+      "type": "compositional",
+      "question": "What nationality is the lead singer of Hurlingham Reggae Band?",
+      "gold_answer": "Italian–Scottish",
+      "predicted_answer": "Italy",
+      "correct": false,
+      "note": "hasMember/hasCountry (score=0.37)",
+      "normalized_prediction": "italy",
+      "normalized_gold": "italian scottish",
+      "strict_exact_match": false,
+      "exact_match": false,
+      "token_f1": 0.0
+    },
+    {
+      "id": 103,
+      "status": "completed",
+      "method": "relation_guided_symbolic_qa",
+      "query_guidance": {
+        "question_type": "comparison",
+        "relations": [
+          "date of birth",
+          "date of death"
+        ]
+      },
+      "graph_stage": "reasoned",
+      "example_id": "103",
+      "type": "comparison",
+      "question": "Who lived longer, Aaron Aaronsohn or Howard Purcell?",
+      "gold_answer": "Howard Purcell",
+      "predicted_answer": "Howard Purcell",
+      "correct": true,
+      "note": "lifespan",
+      "normalized_prediction": "howard purcell",
+      "normalized_gold": "howard purcell",
+      "strict_exact_match": true,
+      "exact_match": true,
+      "token_f1": 1.0
+    }
+  ]
+}

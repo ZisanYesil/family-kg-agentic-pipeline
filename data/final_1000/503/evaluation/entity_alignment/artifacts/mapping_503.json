@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/503/originals/extracted_503.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/503/ground_truth_503.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_kurt_cuno": "http://example.org/entity/Kurt_Cuno",
+    "http://example.org/extracted/person_andre_testut": "http://example.org/entity/André_Testut"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_andre_testut",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "André Testut",
+          "source": "label"
+        },
+        {
+          "text": "person andre testut",
+          "source": "uri"
+        }
+      ],
+      "context": "André Testut. has birth date: 1926-04-13. has death date: 2005-09-24.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/André_Testut",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "André Testut",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "André Testut",
+        "extracted_source": "label",
+        "ground_truth_text": "André Testut",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6522057056427002
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_kurt_cuno",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kurt Cuno",
+          "source": "label"
+        },
+        {
+          "text": "person kurt cuno",
+          "source": "uri"
+        }
+      ],
+      "context": "Kurt Cuno. has birth date: 1896-08-27. has death date: 1961-07-14.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kurt_Cuno",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kurt Cuno",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kurt Cuno",
+        "extracted_source": "label",
+        "ground_truth_text": "Kurt Cuno",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6414914131164551
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

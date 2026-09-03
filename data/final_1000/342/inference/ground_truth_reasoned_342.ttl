@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Las_Vegas_Sands a ex:Agent,
+        ex:Organization .
+
+entity:Miriam_Adelson a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:Sheldon_Adelson .
+
+entity:Sheldon_Adelson a ex:Agent,
+        ex:Person ;
+    ex:hasEmployer entity:Las_Vegas_Sands ;
+    ex:hasSpouse entity:Miriam_Adelson .
+

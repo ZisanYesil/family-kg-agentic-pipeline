@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/494/originals/extracted_494.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/494/ground_truth_494.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/constance_of_penthi%C3%A8vre": "http://example.org/entity/Constance_of_Penthièvre",
+    "http://example.org/extracted/france": "http://example.org/entity/Breton"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/constance_of_penthi%C3%A8vre",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Constance of Penthièvre",
+          "source": "label"
+        }
+      ],
+      "context": "Constance of Penthièvre. has nationality: Breton. inverse has mother: Alan IV, Viscount of Rohan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Constance_of_Penthièvre",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Constance of Penthièvre",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Constance of Penthièvre",
+        "extracted_source": "label",
+        "ground_truth_text": "Constance of Penthièvre",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9362536668777466,
+      "graph_score": 0.4681268334388733,
+      "margin": 0.6478868722915649
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Breton",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        }
+      ],
+      "context": "Breton. inverse has nationality: Constance of Penthièvre.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Breton",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Breton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Breton",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Breton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9324811697006226,
+      "graph_score": 0.4662405848503113,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/alan_iv_viscount_of_rohan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alan IV, Viscount of Rohan",
+          "source": "label"
+        },
+        {
+          "text": "alan iv viscount of rohan",
+          "source": "uri"
+        }
+      ],
+      "context": "Alan IV, Viscount of Rohan. has mother: Constance of Penthièvre.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alan_IV_de_Rohan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alan IV de Rohan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alan IV, Viscount of Rohan",
+        "extracted_source": "label",
+        "ground_truth_text": "Alan IV de Rohan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8555079102516174,
+      "name_embedding_score": 0.9044510126113892,
+      "string_score": 0.6499999761581421,
+      "independent_identity_support": false,
+      "context_score": 0.9262595176696777,
+      "graph_score": 0.9631297588348389,
+      "margin": 0.4978881776332855
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

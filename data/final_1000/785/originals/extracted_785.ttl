@@ -1,0 +1,16 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:science_fiction_adventures_1952_magazine a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Science Fiction Adventures (1952 magazine)" ;
+    onto:hasEditor data:lester_del_rey .
+
+data:lester_del_rey a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lester del Rey" ;
+    onto:hasDeathDate "1993-05-10"^^xsd:date .
+

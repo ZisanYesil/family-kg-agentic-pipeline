@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Cuatro> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "¡Cuatro!" ;
+    onto:hasDirector <http://example.org/entity/Tim_Wheeler> .
+
+<http://example.org/entity/Northern_Irish> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "Northern Irish" .
+
+<http://example.org/entity/Tim_Wheeler> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tim Wheeler" ;
+    onto:hasNationality <http://example.org/entity/Northern_Irish> ;
+    skos:altLabel "Timothy James Arthur Wheeler" .
+

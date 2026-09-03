@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:crazy_heart_film_2009 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Crazy Heart" ;
+    onto:hasCountry data:united_states .
+
+data:dragon_eyes_film_2012 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Dragon Eyes" ;
+    onto:hasCountry data:united_states .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

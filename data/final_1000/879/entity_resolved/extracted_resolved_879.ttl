@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_saadia a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Saadia" ;
+    onto:hasDirector data:person_albert_lewin .
+
+data:institution_harvard_university a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Harvard" .
+
+data:person_albert_lewin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Albert Lewin" ;
+    onto:hasEducatedAt data:institution_harvard_university .
+

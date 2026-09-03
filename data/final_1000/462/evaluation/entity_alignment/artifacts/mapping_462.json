@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/462/originals/extracted_462.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/462/ground_truth_462.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/lee_byung_chul": "http://example.org/entity/Lee_Byung_chul",
+    "http://example.org/extracted/hong_ra_hee": "http://example.org/entity/Hong_Ra_hee",
+    "http://example.org/extracted/lee_kun_hee": "http://example.org/entity/Lee_Kun_hee"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/hong_ra_hee",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hong Ra-hee",
+          "source": "label"
+        },
+        {
+          "text": "hong ra hee",
+          "source": "uri"
+        }
+      ],
+      "context": "Hong Ra-hee. has spouse: Lee Kun-hee.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hong_Ra_hee",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hong Ra hee",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hong Ra-hee",
+        "extracted_source": "label",
+        "ground_truth_text": "Hong Ra hee",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9691974520683289,
+      "string_score": 0.9590908885002136,
+      "independent_identity_support": true,
+      "context_score": 0.9628962874412537,
+      "graph_score": 0.9814481735229492,
+      "margin": 0.4159681797027588
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lee_byung_chul",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lee Byung-chul",
+          "source": "label"
+        },
+        {
+          "text": "lee byung chul",
+          "source": "uri"
+        }
+      ],
+      "context": "Lee Byung-chul. has son: Lee Kun-hee.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lee_Byung_chul",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lee Byung chul",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "lee byung chul",
+        "extracted_source": "uri",
+        "ground_truth_text": "Lee Byung chul",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.961264967918396,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8816182613372803,
+      "graph_score": 0.44080913066864014,
+      "margin": 0.3607439398765564
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lee_kun_hee",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lee Kun-hee",
+          "source": "label"
+        },
+        {
+          "text": "lee kun hee",
+          "source": "uri"
+        }
+      ],
+      "context": "Lee Kun-hee. inverse has son: Lee Byung-chul. inverse has spouse: Hong Ra-hee.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lee_Kun_hee",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lee Kun hee",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lee Kun-hee",
+        "extracted_source": "label",
+        "ground_truth_text": "Lee Kun hee",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9509047269821167,
+      "string_score": 0.9590908885002136,
+      "independent_identity_support": true,
+      "context_score": 0.9154877662658691,
+      "graph_score": 0.6244105696678162,
+      "margin": 0.3655731678009033
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

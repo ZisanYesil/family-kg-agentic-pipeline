@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/262/evaluation/entity_alignment/baseline_extracted_aligned_262.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/262/evaluation/entity_alignment/baseline_ground_truth_aligned_262.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Free_China_Journal",
+      "predicate": "hasInception",
+      "object": "\"1949\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Free_China_Journal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1949\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Neue_Grafik",
+      "predicate": "hasInception",
+      "object": "\"1958\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Neue_Grafik",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1958\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "free_china_journal",
+      "predicate": "hasPublicationDate",
+      "object": "\"1949\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/extracted/free_china_journal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1949\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "free_china_journal",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/extracted/free_china_journal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "free_china_journal",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/free_china_journal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "free_china_journal",
+      "predicate": "label",
+      "object": "\"Free China Journal\"",
+      "subject_uri": "http://example.org/extracted/free_china_journal",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Free China Journal\""
+    },
+    {
+      "subject": "neue_grafik",
+      "predicate": "hasPublicationDate",
+      "object": "\"1958\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/extracted/neue_grafik",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1958\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "neue_grafik",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/extracted/neue_grafik",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "neue_grafik",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/neue_grafik",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "neue_grafik",
+      "predicate": "label",
+      "object": "\"Neue Grafik\"",
+      "subject_uri": "http://example.org/extracted/neue_grafik",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Neue Grafik\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 0,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 0,
+    "false_positives": 8,
+    "false_negatives": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "pre_inference"
+}

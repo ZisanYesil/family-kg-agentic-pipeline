@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:bratuku_teruvu a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Bratuku Teruvu" ;
+    onto:hasDirector data:p_s_ramakrishna_rao .
+
+data:bhanumathi_ramakrishna a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bhanumathi Ramakrishna" .
+
+data:p_s_ramakrishna_rao a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "P. S. Ramakrishna Rao" ;
+    onto:hasBirthDate "1918-10-12"^^xsd:date ;
+    onto:hasDeathDate "1986-09-07"^^xsd:date ;
+    onto:hasSpouse data:bhanumathi_ramakrishna .
+

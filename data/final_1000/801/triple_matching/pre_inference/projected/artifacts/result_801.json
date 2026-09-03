@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/801/evaluation/entity_alignment/baseline_extracted_aligned_801.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/801/evaluation/entity_alignment/baseline_ground_truth_aligned_801.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Eric_England",
+      "predicate": "hasBirthPlace",
+      "object": "Russellville",
+      "subject_uri": "http://example.org/entity/Eric_England",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Russellville"
+    },
+    {
+      "subject": "Get_the_Girl",
+      "predicate": "hasDirector",
+      "object": "Eric_England",
+      "subject_uri": "http://example.org/entity/Get_the_Girl",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Eric_England"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Eric_England",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Eric_England",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Eric_England",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Eric_England",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Eric_England",
+      "predicate": "label",
+      "object": "\"Eric England\"",
+      "subject_uri": "http://example.org/entity/Eric_England",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Eric England\""
+    },
+    {
+      "subject": "Get_the_Girl",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Get_the_Girl",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Get_the_Girl",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Get_the_Girl",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Get_the_Girl",
+      "predicate": "label",
+      "object": "\"Get The Girl\"",
+      "subject_uri": "http://example.org/entity/Get_the_Girl",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Get The Girl\""
+    },
+    {
+      "subject": "Russellville",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Russellville",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Russellville",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Russellville",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Russellville",
+      "predicate": "label",
+      "object": "\"Russellville, Arkansas\"",
+      "subject_uri": "http://example.org/entity/Russellville",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Russellville, Arkansas\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

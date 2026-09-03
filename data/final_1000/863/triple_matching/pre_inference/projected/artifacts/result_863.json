@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/863/evaluation/entity_alignment/baseline_extracted_aligned_863.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/863/evaluation/entity_alignment/baseline_ground_truth_aligned_863.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Louis_Count_of_Verdun",
+      "predicate": "hasParent",
+      "object": "Otto_I_Count_of_Chiny",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Verdun",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Otto_I_Count_of_Chiny"
+    },
+    {
+      "subject": "Otto_I_Count_of_Chiny",
+      "predicate": "hasParent",
+      "object": "Gerberge_of_Lorraine",
+      "subject_uri": "http://example.org/entity/Otto_I_Count_of_Chiny",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Gerberge_of_Lorraine"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Gerberge_of_Lorraine",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gerberge_of_Lorraine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Gerberge_of_Lorraine",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gerberge_of_Lorraine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gerberge_of_Lorraine",
+      "predicate": "label",
+      "object": "\"Gerberge of Lorraine\"",
+      "subject_uri": "http://example.org/entity/Gerberge_of_Lorraine",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gerberge of Lorraine\""
+    },
+    {
+      "subject": "Louis_Count_of_Verdun",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Verdun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Louis_Count_of_Verdun",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Verdun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Louis_Count_of_Verdun",
+      "predicate": "label",
+      "object": "\"Louis I, Count of Verdun\"",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Verdun",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Louis I, Count of Verdun\""
+    },
+    {
+      "subject": "Louis_Count_of_Verdun",
+      "predicate": "altLabel",
+      "object": "\"Louis I\"",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Verdun",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Louis I\""
+    },
+    {
+      "subject": "Otto_I_Count_of_Chiny",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Otto_I_Count_of_Chiny",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Otto_I_Count_of_Chiny",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Otto_I_Count_of_Chiny",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Otto_I_Count_of_Chiny",
+      "predicate": "label",
+      "object": "\"Otto I, Count of Chiny\"",
+      "subject_uri": "http://example.org/entity/Otto_I_Count_of_Chiny",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Otto I, Count of Chiny\""
+    },
+    {
+      "subject": "Otto_I_Count_of_Chiny",
+      "predicate": "altLabel",
+      "object": "\"Otto I\"",
+      "subject_uri": "http://example.org/entity/Otto_I_Count_of_Chiny",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Otto I\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

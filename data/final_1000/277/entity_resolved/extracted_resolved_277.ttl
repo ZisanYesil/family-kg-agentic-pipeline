@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:william_1864 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William, Prince of Hohenzollern" ;
+    onto:hasDeathPlace data:sigmaringen ;
+    onto:hasSon data:frederick_1891 .
+
+data:frederick_1891 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Frederick, Prince of Hohenzollern" .
+
+data:sigmaringen a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Sigmaringen" .
+

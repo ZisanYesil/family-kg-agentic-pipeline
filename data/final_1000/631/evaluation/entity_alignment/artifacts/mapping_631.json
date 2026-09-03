@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/631/originals/extracted_631.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/631/ground_truth_631.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_the_great_circus_mystery": "http://example.org/entity/The_Great_Circus_Mystery",
+    "http://example.org/extracted/person_jay_marchant": "http://example.org/entity/Jay_Marchant"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_great_circus_mystery",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Great Circus Mystery",
+          "source": "label"
+        },
+        {
+          "text": "film the great circus mystery",
+          "source": "uri"
+        }
+      ],
+      "context": "The Great Circus Mystery. has director: Jay Marchant.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Great_Circus_Mystery",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Great Circus Mystery",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Great Circus Mystery",
+        "extracted_source": "label",
+        "ground_truth_text": "The Great Circus Mystery",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_jay_marchant",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jay Marchant",
+          "source": "label"
+        },
+        {
+          "text": "person jay marchant",
+          "source": "uri"
+        }
+      ],
+      "context": "Jay Marchant. has death place: Los Angeles County, California. inverse has director: The Great Circus Mystery.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jay_Marchant",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jay Marchant",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jay Marchant",
+        "extracted_source": "label",
+        "ground_truth_text": "Jay Marchant",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9785593748092651,
+      "graph_score": 0.9892796874046326,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_los_angeles_county_california",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Los Angeles County, California",
+          "source": "label"
+        },
+        {
+          "text": "place los angeles county california",
+          "source": "uri"
+        }
+      ],
+      "context": "Los Angeles County, California. inverse has death place: Jay Marchant.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Los_Angeles_County",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Los Angeles County",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Los Angeles County, California",
+        "extracted_source": "label",
+        "ground_truth_text": "Los Angeles County",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9208309054374695,
+      "name_embedding_score": 0.9361118674278259,
+      "string_score": 0.824999988079071,
+      "independent_identity_support": true,
+      "context_score": 0.9722000360488892,
+      "graph_score": 0.9861000180244446,
+      "margin": 0.9208309054374695
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

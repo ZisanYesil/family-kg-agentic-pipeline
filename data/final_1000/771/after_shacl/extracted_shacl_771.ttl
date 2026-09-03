@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_billy_elliot a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Billy Elliot" ;
+    onto:hasComposer data:person_stephen_warbeck .
+
+data:person_stephen_warbeck a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Stephen Warbeck" ;
+    onto:hasBirthPlace data:place_southampton_hampshire .
+
+data:place_southampton_hampshire a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Southampton, Hampshire" .
+

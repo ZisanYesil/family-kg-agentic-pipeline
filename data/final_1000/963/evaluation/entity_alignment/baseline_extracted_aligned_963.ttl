@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/John_Count_of_Brienne> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John, Count of Brienne" ;
+    onto:hasFather data:_walter_iv_brienne .
+
+<http://example.org/entity/Elvira_of_Sicily> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Elvira of Sicily" .
+
+data:_walter_iv_brienne a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Walter IV, Count of Brienne" ;
+    onto:hasMother <http://example.org/entity/Elvira_of_Sicily> .
+

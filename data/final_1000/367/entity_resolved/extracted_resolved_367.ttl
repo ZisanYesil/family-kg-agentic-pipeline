@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:varnyathil_aashanka_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Varnyathil Aashanka" ;
+    onto:hasDirector data:sidharth_bharathan_person .
+
+data:kpac_lalitha_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "K. P. A. C. Lalitha" .
+
+data:sidharth_bharathan_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sidharth Bharathan" ;
+    onto:hasMother data:kpac_lalitha_person .
+

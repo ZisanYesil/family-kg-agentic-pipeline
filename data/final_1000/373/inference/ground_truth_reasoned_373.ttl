@@ -1,0 +1,14 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Marie_Louise_of_Hesse_Kassel a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Maria_Amalia_of_Courland ;
+    ex:hasParent entity:Maria_Amalia_of_Courland .
+
+entity:Maria_Amalia_of_Courland a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Marie_Louise_of_Hesse_Kassel ;
+    ex:hasDeathDate "1711-06-16"^^xsd:date .
+

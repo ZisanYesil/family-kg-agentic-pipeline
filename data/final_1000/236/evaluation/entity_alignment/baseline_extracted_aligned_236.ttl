@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Don_t_Knock_the_Ox> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Don't Knock the Ox" ;
+    onto:hasDirector <http://example.org/entity/Tony_Ianzelo> .
+
+<http://example.org/entity/Ryerson_University> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Ryerson Polytechnical School" ;
+    skos:altLabel "Ryerson University",
+        "Toronto’s Ryerson Polytechnical School" .
+
+<http://example.org/entity/Tony_Ianzelo> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tony Ianzelo" ;
+    onto:hasEducatedAt <http://example.org/entity/Ryerson_University> .
+

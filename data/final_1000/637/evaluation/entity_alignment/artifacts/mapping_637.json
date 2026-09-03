@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/637/originals/extracted_637.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/637/ground_truth_637.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/the_last_white_dishwasher": "http://example.org/entity/The_Last_White_Dishwasher",
+    "http://example.org/extracted/the_year_of_spectacular_men": "http://example.org/entity/The_Year_of_Spectacular_Men"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/the_last_white_dishwasher",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Last White Dishwasher",
+          "source": "label"
+        }
+      ],
+      "context": "The Last White Dishwasher. has publication date: 2008.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Last_White_Dishwasher",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Last White Dishwasher",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Last White Dishwasher",
+        "extracted_source": "label",
+        "ground_truth_text": "The Last White Dishwasher",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8084460943937302
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_year_of_spectacular_men",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Year of Spectacular Men",
+          "source": "label"
+        }
+      ],
+      "context": "The Year of Spectacular Men. has publication date: 2018-06-15.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Year_of_Spectacular_Men",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Year of Spectacular Men",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Year of Spectacular Men",
+        "extracted_source": "label",
+        "ground_truth_text": "The Year of Spectacular Men",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.962834358215332,
+      "graph_score": 0.962834358215332,
+      "margin": 0.797207698225975
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

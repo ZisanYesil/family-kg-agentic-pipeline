@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_976_evil_ii a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "976-EVIL II" ;
+    onto:hasDirector data:person_jim_wynorski .
+
+data:person_jim_wynorski a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jim Wynorski" ;
+    onto:hasBirthPlace data:place_glen_cove_new_york .
+
+data:place_glen_cove_new_york a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Glen Cove, Long Island, New York" .
+

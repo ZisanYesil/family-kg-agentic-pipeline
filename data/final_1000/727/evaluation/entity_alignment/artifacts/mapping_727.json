@@ -1,0 +1,256 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/727/originals/extracted_727.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/727/ground_truth_727.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/linda_yellen": "http://example.org/entity/Linda_Yellen",
+    "http://example.org/extracted/chantilly_lace_film": "http://example.org/entity/Chantilly_Lace"
+  },
+  "summary": {
+    "extracted_entities": 7,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 4,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/chantilly_lace_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chantilly Lace",
+          "source": "label"
+        },
+        {
+          "text": "chantilly lace film",
+          "source": "uri"
+        }
+      ],
+      "context": "Chantilly Lace. has director: Linda Yellen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chantilly_Lace",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chantilly Lace",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chantilly Lace",
+        "extracted_source": "label",
+        "ground_truth_text": "Chantilly Lace",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/linda_yellen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Linda Yellen",
+          "source": "label"
+        }
+      ],
+      "context": "Linda Yellen. has award received: Christopher Award. has award received: Emmy Award. has award received: Peabody Award. has award received: Primetime Emmy Award. has award received: Silver Nymph. inverse has director: Chantilly Lace.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Linda_Yellen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Linda Yellen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Linda Yellen",
+        "extracted_source": "label",
+        "ground_truth_text": "Linda Yellen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8221908807754517,
+      "graph_score": 0.9110954403877258,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/emmy_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Emmy Award",
+          "source": "label"
+        }
+      ],
+      "context": "Emmy Award. inverse has award received: Linda Yellen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Emmys",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Emmys",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Emmy Award",
+        "extracted_source": "label",
+        "ground_truth_text": "Emmys",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7310760021209717,
+      "name_embedding_score": 0.8464273810386658,
+      "string_score": 0.23999999463558197,
+      "independent_identity_support": false,
+      "context_score": 0.9828984141349792,
+      "graph_score": 0.991449236869812,
+      "margin": 0.7310760021209717
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/christopher_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Christopher Award",
+          "source": "label"
+        }
+      ],
+      "context": "Christopher Award. inverse has award received: Linda Yellen.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/peabody_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Peabody Award",
+          "source": "label"
+        }
+      ],
+      "context": "Peabody Award. inverse has award received: Linda Yellen.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/primetime_emmy_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Primetime Emmy Award",
+          "source": "label"
+        }
+      ],
+      "context": "Primetime Emmy Award. inverse has award received: Linda Yellen.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/silver_nymph_award",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Silver Nymph",
+          "source": "label"
+        },
+        {
+          "text": "silver nymph award",
+          "source": "uri"
+        }
+      ],
+      "context": "Silver Nymph. inverse has award received: Linda Yellen.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

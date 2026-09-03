@@ -1,0 +1,32 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/griha_pravesh> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/basu_bhattacharya> ;
+    ex:hasDirector <http://example.org/extracted/basu_bhattacharya> .
+
+<http://example.org/extracted/aditya_bhattacharya> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/extracted/basu_bhattacharya> ;
+    ex:isSonOf <http://example.org/extracted/basu_bhattacharya> .
+
+<http://example.org/extracted/anwesha_arya> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/extracted/basu_bhattacharya> ;
+    ex:isDaughterOf <http://example.org/extracted/basu_bhattacharya> .
+
+<http://example.org/extracted/chimmu> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/extracted/basu_bhattacharya> ;
+    ex:isDaughterOf <http://example.org/extracted/basu_bhattacharya> .
+
+<http://example.org/extracted/basu_bhattacharya> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/aditya_bhattacharya>,
+        <http://example.org/extracted/anwesha_arya>,
+        <http://example.org/extracted/chimmu> ;
+    ex:hasDaughter <http://example.org/extracted/anwesha_arya>,
+        <http://example.org/extracted/chimmu> ;
+    ex:hasSon <http://example.org/extracted/aditya_bhattacharya> .
+

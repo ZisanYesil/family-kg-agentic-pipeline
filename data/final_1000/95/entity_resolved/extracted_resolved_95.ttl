@@ -1,0 +1,31 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_kalloori_vaasal a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Kalloori Vaasal" ;
+    onto:hasDirector data:director_pavithran .
+
+data:film_lakshmis_ntr a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Lakshmi's NTR" ;
+    onto:hasDirector data:director_ram_gopal_varma .
+
+data:director_pavithran a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Pavithran" ;
+    onto:hasNationality data:country_india .
+
+data:director_ram_gopal_varma a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ram Gopal Varma" ;
+    onto:hasNationality data:country_india .
+
+data:country_india a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "India" ;
+    skos:altLabel "Indian" .
+

@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Mahatma_Life_of_Gandhi_1869_1948> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Mahatma: Life of Gandhi, 1869–1948" ;
+    onto:hasDirector <http://example.org/entity/Vithalbhai_Jhaveri> .
+
+<http://example.org/entity/Padma_Bhushan> a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Padma Bhushan" .
+
+<http://example.org/entity/Vithalbhai_Jhaveri> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Vithalbhai Jhaveri" ;
+    onto:hasAwardReceived <http://example.org/entity/Padma_Bhushan> ;
+    skos:altLabel "Vitthal Jhaveri" .
+

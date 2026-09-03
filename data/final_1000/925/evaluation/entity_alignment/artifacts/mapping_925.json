@@ -1,0 +1,113 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/925/originals/extracted_925.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/925/ground_truth_925.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/moritz_hesse": "http://example.org/entity/Moritz_Landgrave_of_Hesse"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/moritz_hesse",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Moritz, Landgrave of Hesse",
+          "source": "label"
+        },
+        {
+          "text": "moritz hesse",
+          "source": "uri"
+        }
+      ],
+      "context": "Moritz, Landgrave of Hesse. has birth date: 1926-08-06. inverse has father: Donatus, Landgrave of Hesse.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Moritz_Landgrave_of_Hesse",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Moritz Landgrave of Hesse",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Moritz, Landgrave of Hesse",
+        "extracted_source": "label",
+        "ground_truth_text": "Moritz Landgrave of Hesse",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9687403440475464,
+      "string_score": 0.9911764860153198,
+      "independent_identity_support": true,
+      "context_score": 0.9699714183807373,
+      "graph_score": 0.9699714183807373,
+      "margin": 0.3368086814880371
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/donatus_hesse",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Donatus, Landgrave of Hesse",
+          "source": "label"
+        },
+        {
+          "text": "donatus hesse",
+          "source": "uri"
+        }
+      ],
+      "context": "Donatus, Landgrave of Hesse. has father: Moritz, Landgrave of Hesse.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Donatus_Prince_and_Landgrave_of_Hesse",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Donatus Prince and Landgrave of Hesse",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Donatus, Landgrave of Hesse",
+        "extracted_source": "label",
+        "ground_truth_text": "Donatus Prince and Landgrave of Hesse",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9035024642944336,
+      "name_embedding_score": 0.9006624817848206,
+      "string_score": 0.8322916626930237,
+      "independent_identity_support": true,
+      "context_score": 0.9607864618301392,
+      "graph_score": 0.9803932309150696,
+      "margin": 0.18153274059295654
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/466/evaluation/entity_alignment/final_extracted_aligned_466.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/466/evaluation/entity_alignment/final_ground_truth_aligned_466.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Edward_Stillingfleet",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Edward_Stillingfleet",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Edward_Stillingfleet",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Edward_Stillingfleet",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "J_M_Balliol_Salmon",
+      "predicate": "hasBirthDate",
+      "object": "\"1868\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/J_M_Balliol_Salmon",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1868\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "J_M_Balliol_Salmon",
+      "predicate": "hasDeathDate",
+      "object": "\"1953\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/J_M_Balliol_Salmon",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1953\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "J_M_Balliol_Salmon",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/J_M_Balliol_Salmon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "J_M_Balliol_Salmon",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/J_M_Balliol_Salmon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Edward_Stillingfleet",
+      "predicate": "hasBirthDate",
+      "object": "\"1635\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Edward_Stillingfleet",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1635\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Edward_Stillingfleet",
+      "predicate": "hasDeathDate",
+      "object": "\"1699\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Edward_Stillingfleet",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1699\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Edward_Stillingfleet",
+      "predicate": "hasBirthDate",
+      "object": "\"1660\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Edward_Stillingfleet",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1660\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Edward_Stillingfleet",
+      "predicate": "hasDeathDate",
+      "object": "\"1708\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Edward_Stillingfleet",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1708\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 10,
+    "true_positives": 6,
+    "false_positives": 2,
+    "false_negatives": 2,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75
+  },
+  "stage": "post_inference"
+}

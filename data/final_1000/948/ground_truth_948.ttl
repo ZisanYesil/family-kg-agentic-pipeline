@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1103
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:Calling_Philo_Vance ex:hasDirector inst:William_Clemens .  # director
+inst:The_Witch_s_Curse ex:hasDirector inst:Riccardo_Freda .  # director
+inst:William_Clemens_film_director ex:hasDeathDate "1980-04-29"^^xsd:date .  # date of death -> "April 29, 1980"
+inst:Riccardo_Freda ex:hasDeathDate "1999-12-20"^^xsd:date .  # date of death -> "20 December 1999"

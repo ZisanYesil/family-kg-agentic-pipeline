@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/48/originals/extracted_48.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/48/ground_truth_48.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_mary_janes_pa": "http://example.org/entity/Mary_Jane_s_Pa",
+    "http://example.org/extracted/person_william_keighley": "http://example.org/entity/William_Keighley"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_mary_janes_pa",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mary Jane's Pa",
+          "source": "label"
+        },
+        {
+          "text": "film mary janes pa",
+          "source": "uri"
+        }
+      ],
+      "context": "Mary Jane's Pa. has director: William Jackson Keighley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mary_Jane_s_Pa",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mary Jane s Pa",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mary Jane's Pa",
+        "extracted_source": "label",
+        "ground_truth_text": "Mary Jane s Pa",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9532819986343384,
+      "string_score": 0.9678571224212646,
+      "independent_identity_support": true,
+      "context_score": 0.95633864402771,
+      "graph_score": 0.978169322013855,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_william_keighley",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William Jackson Keighley",
+          "source": "altLabel"
+        },
+        {
+          "text": "William Keighley",
+          "source": "label"
+        },
+        {
+          "text": "person william keighley",
+          "source": "uri"
+        }
+      ],
+      "context": "William Jackson Keighley. has birth date: 1889-08-04. has death date: 1984-06-24. has death place: New York, New York. inverse has director: Mary Jane's Pa.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_Keighley",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William Keighley",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William Keighley",
+        "extracted_source": "label",
+        "ground_truth_text": "William Keighley",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7677361369132996,
+      "graph_score": 0.8838680982589722,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_new_york_ny",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "New York, New York",
+          "source": "label"
+        },
+        {
+          "text": "place new york ny",
+          "source": "uri"
+        }
+      ],
+      "context": "New York, New York. inverse has death place: William Jackson Keighley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/New_York",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "New York",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "New York, New York",
+        "extracted_source": "label",
+        "ground_truth_text": "New York",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9259145259857178,
+      "name_embedding_score": 0.950649619102478,
+      "string_score": 0.8269230723381042,
+      "independent_identity_support": true,
+      "context_score": 0.9508713483810425,
+      "graph_score": 0.9754356741905212,
+      "margin": 0.9259145259857178
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

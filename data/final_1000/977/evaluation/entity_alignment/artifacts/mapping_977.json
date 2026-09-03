@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/977/originals/extracted_977.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/977/ground_truth_977.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_gents_in_a_jam_1952": "http://example.org/entity/Gents_in_a_Jam",
+    "http://example.org/extracted/film_a_bientot_1968": "http://example.org/entity/À_bientôt_j_espère"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_a_bientot_1968",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "À bientôt, j'espère",
+          "source": "label"
+        },
+        {
+          "text": "film a bientot 1968",
+          "source": "uri"
+        }
+      ],
+      "context": "À bientôt, j'espère. has publication date: 1968.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/À_bientôt_j_espère",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "À bientôt j espère",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "À bientôt, j'espère",
+        "extracted_source": "label",
+        "ground_truth_text": "À bientôt j espère",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9695850014686584,
+      "string_score": 0.9635134935379028,
+      "independent_identity_support": true,
+      "context_score": 0.97801673412323,
+      "graph_score": 0.97801673412323,
+      "margin": 0.6935898661613464
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_gents_in_a_jam_1952",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gents in a Jam",
+          "source": "label"
+        },
+        {
+          "text": "film gents in a jam 1952",
+          "source": "uri"
+        }
+      ],
+      "context": "Gents in a Jam. has publication date: 1952.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gents_in_a_Jam",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gents in a Jam",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gents in a Jam",
+        "extracted_source": "label",
+        "ground_truth_text": "Gents in a Jam",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.6815573275089264
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

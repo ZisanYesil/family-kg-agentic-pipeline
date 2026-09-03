@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:sunday_papers a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Sunday Papers" ;
+    onto:hasPerformer data:joe_jackson .
+
+data:grammy_award_nomination a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Grammy Award nomination" .
+
+data:joe_jackson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joe Jackson" ;
+    onto:hasAwardReceived data:grammy_award_nomination ;
+    skos:altLabel "David Ian \"Joe\" Jackson" .
+

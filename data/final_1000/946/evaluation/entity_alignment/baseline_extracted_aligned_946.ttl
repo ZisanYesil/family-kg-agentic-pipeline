@@ -1,0 +1,25 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Crime_Against_Joe> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Crime Against Joe" ;
+    onto:hasDirector <http://example.org/entity/Lee_Sholem> .
+
+<http://example.org/entity/Vagabonderne_på_Bakkegården> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Vagabonderne på Bakkegården" ;
+    onto:hasDirector <http://example.org/entity/Alice_O_Fredericks> .
+
+<http://example.org/entity/Alice_O_Fredericks> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alice O'Fredericks" ;
+    onto:hasDeathDate "1968-02-18"^^xsd:date .
+
+<http://example.org/entity/Lee_Sholem> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lee Sholem" ;
+    onto:hasDeathDate "2000-08-19"^^xsd:date .
+

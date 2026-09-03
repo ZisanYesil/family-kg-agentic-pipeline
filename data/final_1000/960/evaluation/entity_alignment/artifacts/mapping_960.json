@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/960/originals/extracted_960.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/960/ground_truth_960.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/the_remains_of_nothing_film": "http://example.org/entity/The_Remains_of_Nothing",
+    "http://example.org/extracted/crime_in_the_streets_film": "http://example.org/entity/Crime_in_the_Streets"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/crime_in_the_streets_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Crime In The Streets",
+          "source": "label"
+        },
+        {
+          "text": "crime in the streets film",
+          "source": "uri"
+        }
+      ],
+      "context": "Crime In The Streets. has publication date: 1956.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Crime_in_the_Streets",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Crime in the Streets",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Crime In The Streets",
+        "extracted_source": "label",
+        "ground_truth_text": "Crime in the Streets",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9996361136436462,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9995391964912415,
+      "graph_score": 0.9995391964912415,
+      "margin": 0.7424672544002533
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_remains_of_nothing_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Remains Of Nothing",
+          "source": "label"
+        },
+        {
+          "text": "the remains of nothing film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Remains Of Nothing. has publication date: 2004.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Remains_of_Nothing",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Remains of Nothing",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Remains Of Nothing",
+        "extracted_source": "label",
+        "ground_truth_text": "The Remains of Nothing",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9996477365493774,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9996892213821411,
+      "graph_score": 0.9996892213821411,
+      "margin": 0.7379760146141052
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

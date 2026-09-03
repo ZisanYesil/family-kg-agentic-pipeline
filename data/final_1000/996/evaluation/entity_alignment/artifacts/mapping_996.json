@@ -1,0 +1,154 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/996/originals/extracted_996.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/996/ground_truth_996.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_theres_no_tomorrow": "http://example.org/entity/There_s_No_Tomorrow",
+    "http://example.org/extracted/person_max_ophuls": "http://example.org/entity/Max_Ophüls"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_theres_no_tomorrow",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "There's No Tomorrow",
+          "source": "label"
+        },
+        {
+          "text": "film theres no tomorrow",
+          "source": "uri"
+        }
+      ],
+      "context": "There's No Tomorrow. has director: Maximillian Oppenheimer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/There_s_No_Tomorrow",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "There s No Tomorrow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "There's No Tomorrow",
+        "extracted_source": "label",
+        "ground_truth_text": "There s No Tomorrow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9574913382530212,
+      "string_score": 0.9763157963752747,
+      "independent_identity_support": true,
+      "context_score": 0.8373153209686279,
+      "graph_score": 0.918657660484314,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_max_ophuls",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maximillian Oppenheimer",
+          "source": "altLabel"
+        },
+        {
+          "text": "Max Ophüls",
+          "source": "label"
+        },
+        {
+          "text": "person max ophuls",
+          "source": "uri"
+        }
+      ],
+      "context": "Maximillian Oppenheimer. has birth place: German. inverse has director: There's No Tomorrow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Max_Ophüls",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Max Ophüls",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Max Ophüls",
+        "extracted_source": "label",
+        "ground_truth_text": "Max Ophüls",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8200875520706177,
+      "graph_score": 0.9100437760353088,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "German",
+          "source": "altLabel"
+        },
+        {
+          "text": "Germany",
+          "source": "label"
+        },
+        {
+          "text": "country germany",
+          "source": "uri"
+        }
+      ],
+      "context": "German. inverse has birth place: Maximillian Oppenheimer.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Saarbrücken"
+  ]
+}

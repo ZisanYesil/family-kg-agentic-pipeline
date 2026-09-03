@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/651/originals/extracted_651.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/651/ground_truth_651.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_percy_wenrich": "http://example.org/entity/Percy_Wenrich"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_percy_wenrich",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Percy Wenrich",
+          "source": "label"
+        },
+        {
+          "text": "person percy wenrich",
+          "source": "uri"
+        }
+      ],
+      "context": "Percy Wenrich. has death place: New York City. inverse has composer: Moonlight Bay.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Percy_Wenrich",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Percy Wenrich",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Percy Wenrich",
+        "extracted_source": "label",
+        "ground_truth_text": "Percy Wenrich",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9853611588478088,
+      "graph_score": 0.9853611588478088,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_moonlight_bay",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Moonlight Bay",
+          "source": "label"
+        },
+        {
+          "text": "song moonlight bay",
+          "source": "uri"
+        }
+      ],
+      "context": "Moonlight Bay. has composer: Percy Wenrich.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/On_Moonlight_Bay",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "On Moonlight Bay",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Moonlight Bay",
+        "extracted_source": "label",
+        "ground_truth_text": "On Moonlight Bay",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9423566460609436,
+      "name_embedding_score": 0.952844500541687,
+      "string_score": 0.8701149225234985,
+      "independent_identity_support": true,
+      "context_score": 0.9872451424598694,
+      "graph_score": 0.9936225414276123,
+      "margin": 0.9423566460609436
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_new_york_city",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "New York City",
+          "source": "label"
+        },
+        {
+          "text": "place new york city",
+          "source": "uri"
+        }
+      ],
+      "context": "New York City. inverse has death place: Percy Wenrich.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/New_York",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "New York",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "New York City",
+        "extracted_source": "label",
+        "ground_truth_text": "New York",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9329625368118286,
+      "name_embedding_score": 0.9657221436500549,
+      "string_score": 0.8095238208770752,
+      "independent_identity_support": true,
+      "context_score": 0.9817640781402588,
+      "graph_score": 0.9908820390701294,
+      "margin": 0.9329625368118286
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

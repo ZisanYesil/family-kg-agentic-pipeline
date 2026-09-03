@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Palencia a ex:Place .
+
+entity:Sancha_of_Castile_Queen_of_Navarre a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Berengaria_of_Barcelona ;
+    ex:hasParent entity:Berengaria_of_Barcelona .
+
+entity:Berengaria_of_Barcelona a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Sancha_of_Castile_Queen_of_Navarre ;
+    ex:hasDeathPlace entity:Palencia .
+

@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/214/evaluation/entity_alignment/baseline_extracted_aligned_214.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/214/evaluation/entity_alignment/baseline_ground_truth_aligned_214.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Prince_Nikolaus_Wilhelm_of_Nassau",
+      "predicate": "hasParent",
+      "object": "Princess_Pauline_of_Württemberg",
+      "subject_uri": "http://example.org/entity/Prince_Nikolaus_Wilhelm_of_Nassau",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Princess_Pauline_of_Württemberg"
+    },
+    {
+      "subject": "Princess_Pauline_of_Württemberg",
+      "predicate": "hasBirthPlace",
+      "object": "Stuttgart",
+      "subject_uri": "http://example.org/entity/Princess_Pauline_of_Württemberg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Stuttgart"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Prince_Nikolaus_Wilhelm_of_Nassau",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Prince_Nikolaus_Wilhelm_of_Nassau",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Prince_Nikolaus_Wilhelm_of_Nassau",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Prince_Nikolaus_Wilhelm_of_Nassau",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Prince_Nikolaus_Wilhelm_of_Nassau",
+      "predicate": "label",
+      "object": "\"Prince Nikolaus Wilhelm of Nassau\"",
+      "subject_uri": "http://example.org/entity/Prince_Nikolaus_Wilhelm_of_Nassau",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Prince Nikolaus Wilhelm of Nassau\""
+    },
+    {
+      "subject": "Princess_Pauline_of_Württemberg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Pauline_of_Württemberg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Princess_Pauline_of_Württemberg",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Princess_Pauline_of_Württemberg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Princess_Pauline_of_Württemberg",
+      "predicate": "label",
+      "object": "\"Princess Pauline of Württemberg\"",
+      "subject_uri": "http://example.org/entity/Princess_Pauline_of_Württemberg",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Princess Pauline of Württemberg\""
+    },
+    {
+      "subject": "Stuttgart",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Stuttgart",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Stuttgart",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Stuttgart",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Stuttgart",
+      "predicate": "label",
+      "object": "\"Stuttgart\"",
+      "subject_uri": "http://example.org/entity/Stuttgart",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Stuttgart\""
+    },
+    {
+      "subject": "Stuttgart",
+      "predicate": "altLabel",
+      "object": "\"Stuttgart, Kingdom of Württemberg\"",
+      "subject_uri": "http://example.org/entity/Stuttgart",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Stuttgart, Kingdom of Württemberg\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

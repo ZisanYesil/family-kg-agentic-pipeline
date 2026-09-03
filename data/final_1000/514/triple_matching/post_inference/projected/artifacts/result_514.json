@@ -1,0 +1,82 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/514/evaluation/entity_alignment/final_extracted_aligned_514.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/514/evaluation/entity_alignment/final_ground_truth_aligned_514.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Anna_of_Saxony",
+      "predicate": "hasBirthDate",
+      "object": "\"1544-12-23\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Anna_of_Saxony",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1544-12-23\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Anna_of_Saxony",
+      "predicate": "hasChild",
+      "object": "Countess_Anna_of_Nassau",
+      "subject_uri": "http://example.org/entity/Anna_of_Saxony",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Countess_Anna_of_Nassau"
+    },
+    {
+      "subject": "Anna_of_Saxony",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Anna_of_Saxony",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Anna_of_Saxony",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Anna_of_Saxony",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Countess_Anna_of_Nassau",
+      "predicate": "hasParent",
+      "object": "Anna_of_Saxony",
+      "subject_uri": "http://example.org/entity/Countess_Anna_of_Nassau",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Anna_of_Saxony"
+    },
+    {
+      "subject": "Countess_Anna_of_Nassau",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Countess_Anna_of_Nassau",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Countess_Anna_of_Nassau",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Countess_Anna_of_Nassau",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 7,
+    "true_positives": 7,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

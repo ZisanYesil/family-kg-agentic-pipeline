@@ -1,0 +1,292 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/468/originals/extracted_468.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/468/ground_truth_468.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/director_benoit_jacquot": "http://example.org/entity/Benoît_Jacquot",
+    "http://example.org/extracted/country_senegal": "http://example.org/entity/Senegalese",
+    "http://example.org/extracted/country_france": "http://example.org/entity/French",
+    "http://example.org/extracted/director_alain_gomis": "http://example.org/entity/Alain_Gomis"
+  },
+  "summary": {
+    "extracted_entities": 6,
+    "ground_truth_entities": 6,
+    "matched": 6,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        },
+        {
+          "text": "country france",
+          "source": "uri"
+        }
+      ],
+      "context": "French. inverse has nationality: Alain Gomis. inverse has nationality: Benoît Jacquot.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/French",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "French",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "French",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "French",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9364020228385925,
+      "graph_score": 0.46820101141929626,
+      "margin": 0.6372221410274506
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_senegal",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Senegalese",
+          "source": "altLabel"
+        },
+        {
+          "text": "Senegal",
+          "source": "label"
+        },
+        {
+          "text": "country senegal",
+          "source": "uri"
+        }
+      ],
+      "context": "Senegalese. inverse has nationality: Alain Gomis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Senegalese",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Senegalese",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Senegalese",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Senegalese",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.948794960975647,
+      "graph_score": 0.4743974804878235,
+      "margin": 0.6422663927078247
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/director_alain_gomis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alain Gomis",
+          "source": "label"
+        },
+        {
+          "text": "director alain gomis",
+          "source": "uri"
+        }
+      ],
+      "context": "Alain Gomis. has nationality: French. has nationality: Senegalese. inverse has director: Félicité.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alain_Gomis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alain Gomis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alain Gomis",
+        "extracted_source": "label",
+        "ground_truth_text": "Alain Gomis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9169564247131348,
+      "graph_score": 0.4584782123565674,
+      "margin": 0.6086360812187195
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/director_benoit_jacquot",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Benoît Jacquot",
+          "source": "label"
+        },
+        {
+          "text": "director benoit jacquot",
+          "source": "uri"
+        }
+      ],
+      "context": "Benoît Jacquot. has nationality: French. inverse has director: Villa Amalia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Benoît_Jacquot",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Benoît Jacquot",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Benoît Jacquot",
+        "extracted_source": "label",
+        "ground_truth_text": "Benoît Jacquot",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9201619625091553,
+      "graph_score": 0.46008098125457764,
+      "margin": 0.6037002503871918
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_villa_amalia",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Villa Amalia",
+          "source": "label"
+        },
+        {
+          "text": "film villa amalia",
+          "source": "uri"
+        }
+      ],
+      "context": "Villa Amalia. has director: Benoît Jacquot.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Villa_Amalia_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Villa Amalia film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film villa amalia",
+        "extracted_source": "uri",
+        "ground_truth_text": "Villa Amalia film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9271074533462524,
+      "name_embedding_score": 0.9438236355781555,
+      "string_score": 0.8676470518112183,
+      "independent_identity_support": true,
+      "context_score": 0.9062706828117371,
+      "graph_score": 0.9531353712081909,
+      "margin": 0.5615882873535156
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_felicite",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Félicité",
+          "source": "label"
+        },
+        {
+          "text": "film felicite",
+          "source": "uri"
+        }
+      ],
+      "context": "Félicité. has director: Alain Gomis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Félicité_2017_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Félicité 2017 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Félicité",
+        "extracted_source": "label",
+        "ground_truth_text": "Félicité 2017 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7708812952041626,
+      "name_embedding_score": 0.7384122610092163,
+      "string_score": 0.6602563858032227,
+      "independent_identity_support": false,
+      "context_score": 0.8928886651992798,
+      "graph_score": 0.9464443325996399,
+      "margin": 0.4881846308708191
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

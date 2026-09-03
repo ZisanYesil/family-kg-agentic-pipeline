@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/21/originals/extracted_21.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/21/ground_truth_21.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_children_underground": "http://example.org/entity/Children_Underground",
+    "http://example.org/extracted/film_anna_liisa": "http://example.org/entity/Anna_Liisa"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_anna_liisa",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anna-Liisa",
+          "source": "altLabel"
+        },
+        {
+          "text": "film anna liisa",
+          "source": "uri"
+        }
+      ],
+      "context": "Anna-Liisa. has publication date: 1922.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anna_Liisa",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anna Liisa",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anna-Liisa",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Anna Liisa",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9374207854270935,
+      "string_score": 0.9549999833106995,
+      "independent_identity_support": true,
+      "context_score": 0.9840871691703796,
+      "graph_score": 0.9840871691703796,
+      "margin": 0.7677079290151596
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_children_underground",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Children Underground",
+          "source": "altLabel"
+        },
+        {
+          "text": "film children underground",
+          "source": "uri"
+        }
+      ],
+      "context": "Children Underground. has publication date: 2001.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Children_Underground",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Children Underground",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Children Underground",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Children Underground",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7951778173446655
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

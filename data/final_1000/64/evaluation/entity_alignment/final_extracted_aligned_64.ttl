@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Cecile_of_France> a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse <http://example.org/entity/Pons> .
+
+<http://example.org/entity/Bertrand_of_Toulouse> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Pons> .
+
+<http://example.org/entity/Pons> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/entity/Bertrand_of_Toulouse> ;
+    ex:hasParent <http://example.org/entity/Bertrand_of_Toulouse> ;
+    ex:hasSpouse <http://example.org/entity/Cecile_of_France> .
+

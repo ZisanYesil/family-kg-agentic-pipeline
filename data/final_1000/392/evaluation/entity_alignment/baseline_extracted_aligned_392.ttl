@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/The_Beautiful_Otero> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Beautiful Otero" ;
+    onto:hasDirector <http://example.org/entity/Richard_Pottier> ;
+    skos:altLabel "La bella Otero",
+        "La belle Otero" .
+
+<http://example.org/entity/Le_Plessis_Bouchard> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Le Plessis-Bouchard" .
+
+<http://example.org/entity/Richard_Pottier> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Richard Pottier" ;
+    onto:hasDeathPlace <http://example.org/entity/Le_Plessis_Bouchard> .
+

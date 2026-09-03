@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/108/evaluation/entity_alignment/baseline_extracted_aligned_108.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/108/evaluation/entity_alignment/baseline_ground_truth_aligned_108.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Edwin_August",
+      "predicate": "hasBurialPlace",
+      "object": "Valhalla_Memorial_Park_Cemetery",
+      "subject_uri": "http://example.org/entity/Edwin_August",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://example.org/entity/Valhalla_Memorial_Park_Cemetery"
+    },
+    {
+      "subject": "The_Yellow_Passport",
+      "predicate": "hasDirector",
+      "object": "Edwin_August",
+      "subject_uri": "http://example.org/entity/The_Yellow_Passport",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Edwin_August"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Edwin_August",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Edwin_August",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Edwin_August",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Edwin_August",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Edwin_August",
+      "predicate": "label",
+      "object": "\"Edwin August\"",
+      "subject_uri": "http://example.org/entity/Edwin_August",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Edwin August\""
+    },
+    {
+      "subject": "Edwin_August",
+      "predicate": "altLabel",
+      "object": "\"Edwin August Phillip von der Butz\"",
+      "subject_uri": "http://example.org/entity/Edwin_August",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Edwin August Phillip von der Butz\""
+    },
+    {
+      "subject": "The_Yellow_Passport",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Yellow_Passport",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Yellow_Passport",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Yellow_Passport",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Yellow_Passport",
+      "predicate": "label",
+      "object": "\"The Yellow Passport\"",
+      "subject_uri": "http://example.org/entity/The_Yellow_Passport",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Yellow Passport\""
+    },
+    {
+      "subject": "Valhalla_Memorial_Park_Cemetery",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Valhalla_Memorial_Park_Cemetery",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Valhalla_Memorial_Park_Cemetery",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Valhalla_Memorial_Park_Cemetery",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Valhalla_Memorial_Park_Cemetery",
+      "predicate": "label",
+      "object": "\"Valhalla Memorial Park Cemetery\"",
+      "subject_uri": "http://example.org/entity/Valhalla_Memorial_Park_Cemetery",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Valhalla Memorial Park Cemetery\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

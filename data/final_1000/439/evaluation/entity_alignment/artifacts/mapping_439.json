@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/439/originals/extracted_439.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/439/ground_truth_439.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/song_cant_remember_to_forget_you": "http://example.org/entity/Can_t_Remember_to_Forget_You",
+    "http://example.org/extracted/song_distant_lover": "http://example.org/entity/Distant_Lover"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/song_cant_remember_to_forget_you",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Can't Remember To Forget You",
+          "source": "label"
+        },
+        {
+          "text": "song cant remember to forget you",
+          "source": "uri"
+        }
+      ],
+      "context": "Can't Remember To Forget You. has publication date: 2014-01-13.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Can_t_Remember_to_Forget_You",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Can t Remember to Forget You",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Can't Remember To Forget You",
+        "extracted_source": "label",
+        "ground_truth_text": "Can t Remember to Forget You",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9559574127197266,
+      "string_score": 0.9839285612106323,
+      "independent_identity_support": true,
+      "context_score": 0.9498617649078369,
+      "graph_score": 0.9498617649078369,
+      "margin": 0.6488249599933624
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_distant_lover",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Distant Lover",
+          "source": "label"
+        },
+        {
+          "text": "song distant lover",
+          "source": "uri"
+        }
+      ],
+      "context": "Distant Lover. has publication date: 1973.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Distant_Lover",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Distant Lover",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Distant Lover",
+        "extracted_source": "label",
+        "ground_truth_text": "Distant Lover",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9518269896507263,
+      "graph_score": 0.9518269896507263,
+      "margin": 0.6353222727775574
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

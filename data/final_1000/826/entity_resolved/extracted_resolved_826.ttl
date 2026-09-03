@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:song_maana_ke_hum_yaar_nahin_2017 a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Maana Ke Hum Yaar Nahin" ;
+    onto:hasPerformer data:person_parineeti_chopra .
+
+data:award_filmfare a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Award" .
+
+data:award_national_film a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "National Film Award" .
+
+data:person_parineeti_chopra a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Parineeti Chopra" ;
+    onto:hasAwardReceived data:award_filmfare,
+        data:award_national_film .
+

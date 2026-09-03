@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Caroline_Bouvier_Kennedy> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Caroline Bouvier Kennedy" ;
+    onto:hasMother <http://example.org/entity/Jacqueline_Lee_Kennedy_Onassis> .
+
+<http://example.org/entity/Jacqueline_Lee_Kennedy_Onassis> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jacqueline Lee Kennedy Onassis" ;
+    onto:hasBirthPlace <http://example.org/entity/Southampton> ;
+    skos:altLabel "Jacqueline Bouvier Kennedy" .
+
+<http://example.org/entity/Southampton> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Southampton, New York" .
+

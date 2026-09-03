@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_man_of_god a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Man Of God" ;
+    onto:hasDirector data:person_jefery_levy .
+
+data:org_us_csu_film_school a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "University of Southern California film school" .
+
+data:person_jefery_levy a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jefery Levy" ;
+    onto:hasEmployer data:org_us_csu_film_school .
+

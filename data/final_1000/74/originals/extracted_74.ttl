@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:princess_margarita_greece_denmark a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Margarita of Greece and Denmark" ;
+    onto:hasMother data:princess_alice_battenberg .
+
+data:buckingham_palace a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Buckingham Palace" .
+
+data:princess_alice_battenberg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Alice of Battenberg" ;
+    onto:hasDeathPlace data:buckingham_palace .
+

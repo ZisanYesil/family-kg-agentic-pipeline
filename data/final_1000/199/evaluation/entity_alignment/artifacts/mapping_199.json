@@ -1,0 +1,144 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/199/originals/extracted_199.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/199/ground_truth_199.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sand_and_sorrow": "http://example.org/entity/Sand_And_Sorrow",
+    "http://example.org/extracted/paul_freedman": "http://example.org/entity/Paul_Freedman"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/paul_freedman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Paul Freedman",
+          "source": "label"
+        }
+      ],
+      "context": "Paul Freedman. has employer: Yale University. inverse has director: Sand And Sorrow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Paul_Freedman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Paul Freedman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Paul Freedman",
+        "extracted_source": "label",
+        "ground_truth_text": "Paul Freedman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9870847463607788,
+      "graph_score": 0.9935423731803894,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sand_and_sorrow",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sand And Sorrow",
+          "source": "label"
+        }
+      ],
+      "context": "Sand And Sorrow. has director: Paul Freedman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sand_And_Sorrow",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sand And Sorrow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sand And Sorrow",
+        "extracted_source": "label",
+        "ground_truth_text": "Sand And Sorrow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/yale_university",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Yale University",
+          "source": "label"
+        }
+      ],
+      "context": "Yale University. inverse has employer: Paul Freedman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Yale",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Yale",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Yale University",
+        "extracted_source": "label",
+        "ground_truth_text": "Yale",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8810800909996033,
+      "name_embedding_score": 0.9591147899627686,
+      "string_score": 0.6144737005233765,
+      "independent_identity_support": false,
+      "context_score": 0.9832340478897095,
+      "graph_score": 0.9916170239448547,
+      "margin": 0.8810800909996033
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

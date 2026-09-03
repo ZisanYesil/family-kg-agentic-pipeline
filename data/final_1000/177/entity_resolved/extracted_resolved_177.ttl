@@ -1,0 +1,29 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_the_escapist_2002 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Escapist (2002 film)" ;
+    onto:hasDirector data:person_gillies_mackinnon .
+
+data:edu_glasgow_school_of_art a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Glasgow School of Art" .
+
+data:edu_middlesex_polytechnic a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Middlesex Polytechnic" .
+
+data:edu_national_film_and_television_school a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "National Film and Television School" .
+
+data:person_gillies_mackinnon a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gillies MacKinnon" ;
+    onto:hasEducatedAt data:edu_glasgow_school_of_art,
+        data:edu_middlesex_polytechnic,
+        data:edu_national_film_and_television_school .
+

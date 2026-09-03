@@ -1,0 +1,163 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/258/originals/extracted_258.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/258/ground_truth_258.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/margaret_simey": "http://example.org/entity/Margaret_Simey",
+    "http://example.org/extracted/tom_simey": "http://example.org/entity/Tom_Simey",
+    "http://example.org/extracted/balliol_college_oxford": "http://example.org/entity/Balliol_College"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/balliol_college_oxford",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Balliol College",
+          "source": "altLabel"
+        },
+        {
+          "text": "Balliol College, Oxford",
+          "source": "label"
+        },
+        {
+          "text": "balliol college oxford",
+          "source": "uri"
+        }
+      ],
+      "context": "Balliol College. inverse has educated at: Thomas Spensley Simey.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Balliol_College",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Balliol College",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Balliol College",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Balliol College",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.4999999701976776,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/margaret_simey",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Margaret Bayne Todd",
+          "source": "altLabel"
+        },
+        {
+          "text": "Margaret Simey",
+          "source": "label"
+        }
+      ],
+      "context": "Margaret Bayne Todd. has spouse: Thomas Spensley Simey.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Margaret_Simey",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Margaret Simey",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Margaret Simey",
+        "extracted_source": "label",
+        "ground_truth_text": "Margaret Simey",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997019767761,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7372015118598938,
+      "graph_score": 0.8686007261276245,
+      "margin": 0.46284645795822144
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tom_simey",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thomas Spensley Simey",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tom Simey",
+          "source": "label"
+        }
+      ],
+      "context": "Thomas Spensley Simey. has educated at: Balliol College. inverse has spouse: Margaret Bayne Todd.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tom_Simey",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tom Simey",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tom Simey",
+        "extracted_source": "label",
+        "ground_truth_text": "Tom Simey",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6960510015487671,
+      "graph_score": 0.5980255007743835,
+      "margin": 0.08537101745605469
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Thomas_Spensley_Simey"
+  ]
+}

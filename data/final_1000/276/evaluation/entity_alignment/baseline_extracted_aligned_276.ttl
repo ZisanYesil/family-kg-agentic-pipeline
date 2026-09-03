@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Zoia_Ceaușescu> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Zoia Ceaușescu" ;
+    onto:hasFather <http://example.org/entity/Nicolae_Ceaușescu> .
+
+<http://example.org/entity/Nicolae_Ceaușescu> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Nicolae Ceaușescu" ;
+    onto:hasCauseOfDeath <http://example.org/entity/firing_squad> .
+
+<http://example.org/entity/firing_squad> a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "execution by firing squad" .
+

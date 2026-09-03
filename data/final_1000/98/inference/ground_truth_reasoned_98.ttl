@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Francis_Williams_Rockwell a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Julius_Rockwell ;
+    ex:hasParent entity:Julius_Rockwell .
+
+entity:Yale a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+entity:Julius_Rockwell a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Francis_Williams_Rockwell ;
+    ex:hasEducatedAt entity:Yale .
+

@@ -176,7 +176,7 @@ def test_remove_can_delete_an_existing_schema_invalid_value() -> None:
     assert (EX.alex, EX.birthYear, Literal("recent")) in graph
 
 
-def test_unmapped_relation_can_add_only_the_suggested_object_property() -> None:
+def test_unmapped_relation_can_add_a_declared_object_property() -> None:
     graph = _base_graph()
     violation = _violation(
         kind=ViolationKind.UNMAPPED_RELATION,

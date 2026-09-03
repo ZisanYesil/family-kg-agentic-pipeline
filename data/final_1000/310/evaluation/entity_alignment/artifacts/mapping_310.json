@@ -1,0 +1,112 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/310/originals/extracted_310.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/310/ground_truth_310.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sancho_ramirez": "http://example.org/entity/Sancho_Ramírez",
+    "http://example.org/extracted/ramiro_i_of_aragon": "http://example.org/entity/Ramiro_I_of_Aragon"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ramiro_i_of_aragon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ramiro I of Aragon",
+          "source": "label"
+        }
+      ],
+      "context": "Ramiro I of Aragon. inverse has father: Sancho Ramírez.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ramiro_I_of_Aragon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ramiro I of Aragon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ramiro I of Aragon",
+        "extracted_source": "label",
+        "ground_truth_text": "Ramiro I of Aragon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6015652418136597,
+      "graph_score": 0.30078262090682983,
+      "margin": 0.6269827485084534
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sancho_ramirez",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sancho Ramírez",
+          "source": "label"
+        },
+        {
+          "text": "sancho ramirez",
+          "source": "uri"
+        }
+      ],
+      "context": "Sancho Ramírez. has father: Ramiro I of Aragon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sancho_Ramírez",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sancho Ramírez",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sancho Ramírez",
+        "extracted_source": "label",
+        "ground_truth_text": "Sancho Ramírez",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6699161529541016,
+      "graph_score": 0.3349580764770508,
+      "margin": 0.5854533612728119
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Ermesinda_of_Bigorre"
+  ]
+}

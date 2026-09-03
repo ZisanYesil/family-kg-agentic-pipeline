@@ -1,0 +1,91 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/123/evaluation/entity_alignment/baseline_extracted_aligned_123.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/123/evaluation/entity_alignment/baseline_ground_truth_aligned_123.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Albert_Von_Tilzer",
+      "predicate": "hasBirthDate",
+      "object": "\"1878-03-29\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Albert_Von_Tilzer",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1878-03-29\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Don_t_Take_My_Darling_Boy_Away",
+      "predicate": "hasComposer",
+      "object": "Albert_Von_Tilzer",
+      "subject_uri": "http://example.org/entity/Don_t_Take_My_Darling_Boy_Away",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Albert_Von_Tilzer"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Albert_Von_Tilzer",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Albert_Von_Tilzer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Albert_Von_Tilzer",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Albert_Von_Tilzer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Albert_Von_Tilzer",
+      "predicate": "label",
+      "object": "\"Albert Von Tilzer\"",
+      "subject_uri": "http://example.org/entity/Albert_Von_Tilzer",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Albert Von Tilzer\""
+    },
+    {
+      "subject": "Don_t_Take_My_Darling_Boy_Away",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Don_t_Take_My_Darling_Boy_Away",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    },
+    {
+      "subject": "Don_t_Take_My_Darling_Boy_Away",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Don_t_Take_My_Darling_Boy_Away",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Don_t_Take_My_Darling_Boy_Away",
+      "predicate": "label",
+      "object": "\"Don't Take My Darling Boy Away\"",
+      "subject_uri": "http://example.org/entity/Don_t_Take_My_Darling_Boy_Away",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Don't Take My Darling Boy Away\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 8,
+    "true_positives": 2,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.25,
+    "recall": 1.0,
+    "f1": 0.4
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/453/originals/extracted_453.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/453/ground_truth_453.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/esme_stewart_1st_duke_of_lennox": "http://example.org/entity/Esmé_Stewart_1st_Duke_of_Lennox",
+    "http://example.org/extracted/anne_de_la_queuille": "http://example.org/entity/Anne_de_la_Queuille",
+    "http://example.org/extracted/esme_stewart_3rd_duke_of_lennox": "http://example.org/entity/Esmé_Stewart_3rd_Duke_of_Lennox"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/anne_de_la_queuille",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anne de la Queuille",
+          "source": "label"
+        }
+      ],
+      "context": "Anne de la Queuille. inverse has mother: Esmé Stewart, 1st Duke of Lennox.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anne_de_la_Queuille",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anne de la Queuille",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anne de la Queuille",
+        "extracted_source": "label",
+        "ground_truth_text": "Anne de la Queuille",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9966527819633484,
+      "graph_score": 0.9983264207839966,
+      "margin": 0.7263824343681335
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/esme_stewart_1st_duke_of_lennox",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Esmé Stewart, 1st Duke of Lennox",
+          "source": "label"
+        },
+        {
+          "text": "esme stewart 1st duke of lennox",
+          "source": "uri"
+        }
+      ],
+      "context": "Esmé Stewart, 1st Duke of Lennox. has mother: Anne de la Queuille. inverse has father: Esmé Stewart, 3rd Duke of Lennox.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Esmé_Stewart_1st_Duke_of_Lennox",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Esmé Stewart 1st Duke of Lennox",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Esmé Stewart, 1st Duke of Lennox",
+        "extracted_source": "label",
+        "ground_truth_text": "Esmé Stewart 1st Duke of Lennox",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9911794662475586,
+      "string_score": 0.9928571581840515,
+      "independent_identity_support": true,
+      "context_score": 0.9936202764511108,
+      "graph_score": 0.9968101382255554,
+      "margin": 0.1997138261795044
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/esme_stewart_3rd_duke_of_lennox",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Esmé Stewart, 3rd Duke of Lennox",
+          "source": "label"
+        },
+        {
+          "text": "esme stewart 3rd duke of lennox",
+          "source": "uri"
+        }
+      ],
+      "context": "Esmé Stewart, 3rd Duke of Lennox. has father: Esmé Stewart, 1st Duke of Lennox.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Esmé_Stewart_3rd_Duke_of_Lennox",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Esmé Stewart 3rd Duke of Lennox",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Esmé Stewart, 3rd Duke of Lennox",
+        "extracted_source": "label",
+        "ground_truth_text": "Esmé Stewart 3rd Duke of Lennox",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9890072345733643,
+      "string_score": 0.9928571581840515,
+      "independent_identity_support": true,
+      "context_score": 0.993189811706543,
+      "graph_score": 0.9965949058532715,
+      "margin": 0.19603097438812256
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

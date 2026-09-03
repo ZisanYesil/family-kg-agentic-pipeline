@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:John_II_of_Namur a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:John_I_Marquis_of_Namur ;
+    ex:hasParent entity:John_I_Marquis_of_Namur .
+
+entity:Isabelle_of_Luxembourg a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:John_I_Marquis_of_Namur .
+
+entity:John_I_Marquis_of_Namur a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:John_II_of_Namur ;
+    ex:hasMother entity:Isabelle_of_Luxembourg ;
+    ex:hasParent entity:Isabelle_of_Luxembourg .
+

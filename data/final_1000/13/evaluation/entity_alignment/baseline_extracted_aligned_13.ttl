@@ -1,0 +1,17 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/American_Scientist> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "American Scientist" ;
+    onto:hasPublisher <http://example.org/entity/Sigma_Xi> .
+
+<http://example.org/entity/Sigma_Xi> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Sigma Xi" ;
+    onto:hasInception "1886"^^xsd:gYear ;
+    skos:altLabel "Sigma Xi, The Scientific Research Society" .
+

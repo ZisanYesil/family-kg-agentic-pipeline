@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_back_home_1990 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Back Home" ;
+    onto:hasDirector data:person_piers_haggard .
+
+data:person_daisy_haggard a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Daisy Haggard" .
+
+data:person_piers_haggard a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Piers Haggard" ;
+    onto:hasChild data:person_daisy_haggard .
+

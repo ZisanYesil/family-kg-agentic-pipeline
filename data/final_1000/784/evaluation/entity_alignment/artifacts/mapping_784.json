@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/784/originals/extracted_784.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/784/ground_truth_784.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/song_talking_to_the_moon": "http://example.org/entity/Talking_to_the_Moon",
+    "http://example.org/extracted/person_bruno_mars": "http://example.org/entity/Bruno_Mars",
+    "http://example.org/extracted/award_grammy": "http://example.org/entity/Grammy_Award"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/award_grammy",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Grammy Award",
+          "source": "label"
+        },
+        {
+          "text": "award grammy",
+          "source": "uri"
+        }
+      ],
+      "context": "Grammy Award. inverse has award received: Bruno Mars.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Grammy_Award",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Grammy Award",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Grammy Award",
+        "extracted_source": "label",
+        "ground_truth_text": "Grammy Award",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_bruno_mars",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bruno Mars",
+          "source": "label"
+        },
+        {
+          "text": "person bruno mars",
+          "source": "uri"
+        }
+      ],
+      "context": "Bruno Mars. has award received: Grammy Award.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bruno_Mars",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bruno Mars",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bruno Mars",
+        "extracted_source": "label",
+        "ground_truth_text": "Bruno Mars",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8142970204353333,
+      "graph_score": 0.6571484804153442,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_talking_to_the_moon",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Talking to the Moon",
+          "source": "label"
+        },
+        {
+          "text": "song talking to the moon",
+          "source": "uri"
+        }
+      ],
+      "context": "Talking to the Moon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Talking_to_the_Moon",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Talking to the Moon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Talking to the Moon",
+        "extracted_source": "label",
+        "ground_truth_text": "Talking to the Moon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6854538917541504,
+      "graph_score": 0.3427269458770752,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:xyz_english_band a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "XYZ" ;
+    onto:hasMember data:chris_squire ;
+    skos:altLabel "XYZ (English band)" .
+
+data:chris_squire a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Chris Squire" ;
+    onto:hasBirthPlace data:kingsbury_london ;
+    skos:altLabel "Christopher Russell Edward Squire" .
+
+data:kingsbury_london a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Kingsbury, London" .
+

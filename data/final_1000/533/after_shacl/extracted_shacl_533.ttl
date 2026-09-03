@@ -1,0 +1,18 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" .
+
+data:janine_krieber a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Janine Krieber" ;
+    onto:hasSpouse data:stephane_dion .
+
+data:stephane_dion a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Stéphane Dion" .
+

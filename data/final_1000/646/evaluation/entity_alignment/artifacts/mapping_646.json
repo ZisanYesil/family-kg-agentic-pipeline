@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/646/originals/extracted_646.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/646/ground_truth_646.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/only_when_i_dance": "http://example.org/entity/Only_When_I_Dance",
+    "http://example.org/extracted/wicked_dreams_of_paula_schultz": "http://example.org/entity/The_Wicked_Dreams_of_Paula_Schultz"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/only_when_i_dance",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Only When I Dance",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Only When I Dance. has publication date: 2009.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Only_When_I_Dance",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Only When I Dance",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Only When I Dance",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Only When I Dance",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8245031237602234
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wicked_dreams_of_paula_schultz",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Wicked Dreams of Paula Schultz",
+          "source": "altLabel"
+        },
+        {
+          "text": "wicked dreams of paula schultz",
+          "source": "uri"
+        }
+      ],
+      "context": "The Wicked Dreams of Paula Schultz. has publication date: 1968.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Wicked_Dreams_of_Paula_Schultz",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Wicked Dreams of Paula Schultz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Wicked Dreams of Paula Schultz",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "The Wicked Dreams of Paula Schultz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8221444189548492
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

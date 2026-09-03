@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/715/originals/extracted_715.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/715/ground_truth_715.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/malaysia": "http://example.org/entity/Malaysia",
+    "http://example.org/extracted/p_ramlee": "http://example.org/entity/P_Ramlee",
+    "http://example.org/extracted/labu_dan_labi": "http://example.org/entity/Labu_dan_Labi"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/labu_dan_labi",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Labu dan Labi",
+          "source": "label"
+        }
+      ],
+      "context": "Labu dan Labi. has director: P. Ramlee.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Labu_dan_Labi",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Labu dan Labi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Labu dan Labi",
+        "extracted_source": "label",
+        "ground_truth_text": "Labu dan Labi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9920566082000732,
+      "graph_score": 0.9960283041000366,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/malaysia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Malaysian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Malaysia",
+          "source": "label"
+        }
+      ],
+      "context": "Malaysian. inverse has nationality: P. Ramlee.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Malaysia",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Malaysia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Malaysia",
+        "extracted_source": "label",
+        "ground_truth_text": "Malaysia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8933289647102356,
+      "graph_score": 0.4466644823551178,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/p_ramlee",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "P. Ramlee",
+          "source": "label"
+        },
+        {
+          "text": "p ramlee",
+          "source": "uri"
+        }
+      ],
+      "context": "P. Ramlee. has nationality: Malaysian. inverse has director: Labu dan Labi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/P_Ramlee",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "P Ramlee",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "P. Ramlee",
+        "extracted_source": "label",
+        "ground_truth_text": "P Ramlee",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9517115354537964,
+      "string_score": 0.9735293984413147,
+      "independent_identity_support": true,
+      "context_score": 0.9363483786582947,
+      "graph_score": 0.6348408460617065,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

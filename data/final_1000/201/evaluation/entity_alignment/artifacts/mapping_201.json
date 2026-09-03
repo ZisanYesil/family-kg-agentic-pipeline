@@ -1,0 +1,112 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/201/originals/extracted_201.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/201/ground_truth_201.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/francesca_ridgway": "http://example.org/entity/Francesca_Romana_Serra_Ridgway",
+    "http://example.org/extracted/david_ridgway": "http://example.org/entity/David_Ridgway"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/david_ridgway",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Ridgway",
+          "source": "label"
+        }
+      ],
+      "context": "David Ridgway. inverse has spouse: Francesca Romana Serra Ridgway.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/David_Ridgway",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "David Ridgway",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "David Ridgway",
+        "extracted_source": "label",
+        "ground_truth_text": "David Ridgway",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8664340972900391,
+      "graph_score": 0.9332170486450195,
+      "margin": 0.6189176738262177
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/francesca_ridgway",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Francesca Romana Serra Ridgway",
+          "source": "altLabel"
+        },
+        {
+          "text": "Francesca Ridgway",
+          "source": "label"
+        }
+      ],
+      "context": "Francesca Romana Serra Ridgway. has spouse: David Ridgway.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Francesca_Romana_Serra_Ridgway",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Francesca Romana Serra Ridgway",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Francesca Romana Serra Ridgway",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Francesca Romana Serra Ridgway",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.48856914043426514
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Athens"
+  ]
+}

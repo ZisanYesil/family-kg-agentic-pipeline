@@ -1,0 +1,147 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/430/originals/extracted_430.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/430/ground_truth_430.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ordgar": "http://example.org/entity/Ordgar",
+    "http://example.org/extracted/england": "http://example.org/entity/England",
+    "http://example.org/extracted/ordwulf": "http://example.org/entity/Ordwulf"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/england",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "England",
+          "source": "label"
+        }
+      ],
+      "context": "England. inverse has nationality: Ordgar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/England",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "England",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "England",
+        "extracted_source": "label",
+        "ground_truth_text": "England",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8517187833786011,
+      "graph_score": 0.42585939168930054,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ordgar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ordgar",
+          "source": "label"
+        }
+      ],
+      "context": "Ordgar. has nationality: England. inverse has father: Ordwulf.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ordgar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ordgar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ordgar",
+        "extracted_source": "label",
+        "ground_truth_text": "Ordgar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8430395126342773,
+      "graph_score": 0.6715197563171387,
+      "margin": 0.47982335090637207
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ordwulf",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ordwulf",
+          "source": "label"
+        }
+      ],
+      "context": "Ordwulf. has father: Ordgar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ordwulf",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ordwulf",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ordwulf",
+        "extracted_source": "label",
+        "ground_truth_text": "Ordwulf",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.4716183543205261
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Ordgar_Ealdorman_of_Devon"
+  ]
+}

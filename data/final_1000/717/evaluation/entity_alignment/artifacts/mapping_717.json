@@ -1,0 +1,151 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/717/originals/extracted_717.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/717/ground_truth_717.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/adv_cycling_association": "http://example.org/entity/Adventure_Cycling_Association"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adv_cycling_association",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adventure Cycling Association",
+          "source": "label"
+        },
+        {
+          "text": "adv cycling association",
+          "source": "uri"
+        }
+      ],
+      "context": "Adventure Cycling Association. has country: United States. inverse has publisher: Adventure Cyclist magazine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adventure_Cycling_Association",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adventure Cycling Association",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adventure Cycling Association",
+        "extracted_source": "label",
+        "ground_truth_text": "Adventure Cycling Association",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9712087512016296,
+      "graph_score": 0.9712087512016296,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/adv_cyclist_magazine",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adventure Cyclist magazine",
+          "source": "label"
+        },
+        {
+          "text": "adv cyclist magazine",
+          "source": "uri"
+        }
+      ],
+      "context": "Adventure Cyclist magazine. has publisher: Adventure Cycling Association.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adventure_Cyclist_is_an_association_magazine",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adventure Cyclist is an association magazine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adventure Cyclist magazine",
+        "extracted_source": "label",
+        "ground_truth_text": "Adventure Cyclist is an association magazine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9027751088142395,
+      "name_embedding_score": 0.9331688284873962,
+      "string_score": 0.7592856884002686,
+      "independent_identity_support": true,
+      "context_score": 0.9709543585777283,
+      "graph_score": 0.9854772090911865,
+      "margin": 0.9027751088142395
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "United States. inverse has country: Adventure Cycling Association.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/U_S",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "U S",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "label",
+        "ground_truth_text": "U S",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5962276458740234,
+      "name_embedding_score": 0.6191919445991516,
+      "string_score": 0.16875000298023224,
+      "independent_identity_support": false,
+      "context_score": 0.9555530548095703,
+      "graph_score": 0.9777765274047852,
+      "margin": 0.5962276458740234
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

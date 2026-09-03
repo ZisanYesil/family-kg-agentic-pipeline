@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/24/evaluation/entity_alignment/final_extracted_aligned_24.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/24/evaluation/entity_alignment/final_ground_truth_aligned_24.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Hugh_de_Stafford_2nd_Earl_of_Stafford",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Hugh_de_Stafford_2nd_Earl_of_Stafford",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Hugh_de_Stafford_2nd_Earl_of_Stafford",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Hugh_de_Stafford_2nd_Earl_of_Stafford",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Thomas_Stafford_3rd_Earl_of_Stafford",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Thomas_Stafford_3rd_Earl_of_Stafford",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Thomas_Stafford_3rd_Earl_of_Stafford",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Thomas_Stafford_3rd_Earl_of_Stafford",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Hugh_de_Stafford_2nd_Earl_of_Stafford",
+      "predicate": "hasSpouse",
+      "object": "Philippa_de_Beauchamp",
+      "subject_uri": "http://example.org/entity/Hugh_de_Stafford_2nd_Earl_of_Stafford",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Philippa_de_Beauchamp"
+    },
+    {
+      "subject": "Philippa_de_Beauchamp",
+      "predicate": "hasChild",
+      "object": "Thomas_Stafford_3rd_Earl_of_Stafford",
+      "subject_uri": "http://example.org/entity/Philippa_de_Beauchamp",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Thomas_Stafford_3rd_Earl_of_Stafford"
+    },
+    {
+      "subject": "Philippa_de_Beauchamp",
+      "predicate": "hasSpouse",
+      "object": "Hugh_de_Stafford_2nd_Earl_of_Stafford",
+      "subject_uri": "http://example.org/entity/Philippa_de_Beauchamp",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Hugh_de_Stafford_2nd_Earl_of_Stafford"
+    },
+    {
+      "subject": "Philippa_de_Beauchamp",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Philippa_de_Beauchamp",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Philippa_de_Beauchamp",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Philippa_de_Beauchamp",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Thomas_Stafford_3rd_Earl_of_Stafford",
+      "predicate": "hasParent",
+      "object": "Philippa_de_Beauchamp",
+      "subject_uri": "http://example.org/entity/Thomas_Stafford_3rd_Earl_of_Stafford",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Philippa_de_Beauchamp"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Hugh_de_Stafford_2nd_Earl_of_Stafford",
+      "predicate": "hasChild",
+      "object": "Thomas_Stafford_3rd_Earl_of_Stafford",
+      "subject_uri": "http://example.org/entity/Hugh_de_Stafford_2nd_Earl_of_Stafford",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Thomas_Stafford_3rd_Earl_of_Stafford"
+    },
+    {
+      "subject": "Thomas_Stafford_3rd_Earl_of_Stafford",
+      "predicate": "hasParent",
+      "object": "Hugh_de_Stafford_2nd_Earl_of_Stafford",
+      "subject_uri": "http://example.org/entity/Thomas_Stafford_3rd_Earl_of_Stafford",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Hugh_de_Stafford_2nd_Earl_of_Stafford"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 12,
+    "true_positives": 4,
+    "false_positives": 2,
+    "false_negatives": 6,
+    "precision": 0.6666666666666666,
+    "recall": 0.4,
+    "f1": 0.5
+  },
+  "stage": "post_inference"
+}

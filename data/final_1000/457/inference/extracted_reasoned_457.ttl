@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/epfl> a ex:Agent,
+        ex:Organization .
+
+<http://example.org/extracted/bernard_tschumi> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/extracted/jean_tschumi> ;
+    ex:isSonOf <http://example.org/extracted/jean_tschumi> .
+
+<http://example.org/extracted/jean_tschumi> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/bernard_tschumi> ;
+    ex:hasEmployer <http://example.org/extracted/epfl> ;
+    ex:hasSon <http://example.org/extracted/bernard_tschumi> .
+

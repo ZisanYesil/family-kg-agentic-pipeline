@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:adolphe_de_leuven a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Adolphe de Leuven" ;
+    onto:hasFather data:adolph_ribbing .
+
+data:adolph_ribbing a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Adolph Ribbing" ;
+    onto:hasBirthPlace data:stockholm ;
+    skos:altLabel "Adolph de Leuven" .
+
+data:stockholm a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Stockholm" .
+

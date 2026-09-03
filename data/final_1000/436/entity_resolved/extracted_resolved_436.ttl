@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:red_2016_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Red (2016 film)" ;
+    onto:hasDirector data:branko_tomovic .
+
+data:branko_tomovic a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Branko Tomović" ;
+    onto:hasBirthPlace data:munster_germany .
+
+data:munster_germany a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Münster, Germany" .
+

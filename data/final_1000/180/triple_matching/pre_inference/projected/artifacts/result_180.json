@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/180/evaluation/entity_alignment/baseline_extracted_aligned_180.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/180/evaluation/entity_alignment/baseline_ground_truth_aligned_180.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Hermann_Muthesius",
+      "predicate": "hasBirthDate",
+      "object": "\"1861-04-20\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Hermann_Muthesius",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1861-04-20\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Hermann_Muthesius",
+      "predicate": "hasDeathDate",
+      "object": "\"1927-10-29\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Hermann_Muthesius",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1927-10-29\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Kiril_Makedonski",
+      "predicate": "hasBirthDate",
+      "object": "\"1925-01-19\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Kiril_Makedonski",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1925-01-19\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Kiril_Makedonski",
+      "predicate": "hasDeathDate",
+      "object": "\"1984-06-02\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Kiril_Makedonski",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1984-06-02\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Hermann_Muthesius",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Hermann_Muthesius",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Hermann_Muthesius",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hermann_Muthesius",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hermann_Muthesius",
+      "predicate": "label",
+      "object": "\"Hermann Muthesius\"",
+      "subject_uri": "http://example.org/entity/Hermann_Muthesius",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hermann Muthesius\""
+    },
+    {
+      "subject": "Kiril_Makedonski",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Kiril_Makedonski",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Kiril_Makedonski",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Kiril_Makedonski",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Kiril_Makedonski",
+      "predicate": "label",
+      "object": "\"Kiril Makedonski\"",
+      "subject_uri": "http://example.org/entity/Kiril_Makedonski",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Kiril Makedonski\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 10,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715
+  },
+  "stage": "pre_inference"
+}

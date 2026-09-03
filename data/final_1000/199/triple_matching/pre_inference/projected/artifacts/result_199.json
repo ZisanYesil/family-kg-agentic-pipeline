@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/199/evaluation/entity_alignment/baseline_extracted_aligned_199.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/199/evaluation/entity_alignment/baseline_ground_truth_aligned_199.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Paul_Freedman",
+      "predicate": "hasEmployer",
+      "object": "Yale",
+      "subject_uri": "http://example.org/entity/Paul_Freedman",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/Yale"
+    },
+    {
+      "subject": "Sand_And_Sorrow",
+      "predicate": "hasDirector",
+      "object": "Paul_Freedman",
+      "subject_uri": "http://example.org/entity/Sand_And_Sorrow",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Paul_Freedman"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Paul_Freedman",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Paul_Freedman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Paul_Freedman",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Paul_Freedman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Paul_Freedman",
+      "predicate": "label",
+      "object": "\"Paul Freedman\"",
+      "subject_uri": "http://example.org/entity/Paul_Freedman",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Paul Freedman\""
+    },
+    {
+      "subject": "Sand_And_Sorrow",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Sand_And_Sorrow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Sand_And_Sorrow",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sand_And_Sorrow",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sand_And_Sorrow",
+      "predicate": "label",
+      "object": "\"Sand And Sorrow\"",
+      "subject_uri": "http://example.org/entity/Sand_And_Sorrow",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sand And Sorrow\""
+    },
+    {
+      "subject": "Yale",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Yale",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Yale",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Yale",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Yale",
+      "predicate": "label",
+      "object": "\"Yale University\"",
+      "subject_uri": "http://example.org/entity/Yale",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Yale University\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

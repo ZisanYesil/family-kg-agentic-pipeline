@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:der_doppelganger a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Der Doppelgänger" ;
+    onto:hasComposer data:franz_schubert .
+
+data:antonio_salieri a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Antonio Salieri" .
+
+data:franz_schubert a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Franz Schubert" ;
+    onto:hasStudentOf data:antonio_salieri .
+

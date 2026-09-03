@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:gofraid_ua_imir a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gofraid ua Ímair" ;
+    onto:hasSon data:olaf_guthfrithson .
+
+data:blacaire_mac_gofraid a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Blácaire mac Gofraid" .
+
+data:olaf_guthfrithson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Olaf Guthfrithson" ;
+    onto:hasBrother data:blacaire_mac_gofraid .
+

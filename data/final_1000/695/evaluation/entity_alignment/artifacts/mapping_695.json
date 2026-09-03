@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/695/originals/extracted_695.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/695/ground_truth_695.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/margaret_countess_of_anjou_1272": "http://example.org/entity/Margaret_Countess_of_Anjou",
+    "http://example.org/extracted/charles_of_valois_1270": "http://example.org/entity/Charles_of_Valois"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/charles_of_valois_1270",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charles of Valois",
+          "source": "label"
+        },
+        {
+          "text": "charles of valois 1270",
+          "source": "uri"
+        }
+      ],
+      "context": "Charles of Valois. inverse has spouse: Margaret, Countess of Anjou.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charles_of_Valois",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charles of Valois",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charles of Valois",
+        "extracted_source": "label",
+        "ground_truth_text": "Charles of Valois",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8707258701324463,
+      "graph_score": 0.9353629350662231,
+      "margin": 0.6329512000083923
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/margaret_countess_of_anjou_1272",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Margaret, Countess of Anjou",
+          "source": "label"
+        },
+        {
+          "text": "margaret countess of anjou 1272",
+          "source": "uri"
+        }
+      ],
+      "context": "Margaret, Countess of Anjou. has spouse: Charles of Valois.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Margaret_Countess_of_Anjou",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Margaret Countess of Anjou",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Margaret, Countess of Anjou",
+        "extracted_source": "label",
+        "ground_truth_text": "Margaret Countess of Anjou",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9815106391906738,
+      "string_score": 0.9915094375610352,
+      "independent_identity_support": true,
+      "context_score": 0.9883890748023987,
+      "graph_score": 0.994194507598877,
+      "margin": 0.654523491859436
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/France"
+  ]
+}

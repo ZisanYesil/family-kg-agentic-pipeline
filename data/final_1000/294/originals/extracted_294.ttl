@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:douro_wine_company a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Douro Wine Company" ;
+    onto:hasFounder data:sebastiao_melo .
+
+data:sebastiao_melo a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sebastião José de Carvalho e Melo" ;
+    onto:hasBirthDate "1699-05-13"^^xsd:date ;
+    onto:hasDeathDate "1782-05-08"^^xsd:date ;
+    skos:altLabel "Marquis of Pombal" .
+

@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/extracted/film_pugachev_1978> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/person_aleksei_saltykov> ;
+    ex:hasDirector <http://example.org/extracted/person_aleksei_saltykov> ;
+    ex:hasPublicationDate "1978"^^xsd:gYear .
+
+<http://example.org/extracted/award_peoples_artist_rsfsr> a ex:Award .
+
+<http://example.org/extracted/person_aleksei_saltykov> a ex:Agent,
+        ex:Person ;
+    ex:hasAwardReceived <http://example.org/extracted/award_peoples_artist_rsfsr> .
+

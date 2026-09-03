@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_christopher_columbus_the_enigma a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Christopher Columbus – The Enigma" ;
+    onto:hasDirector data:person_manoel_de_oliveira ;
+    skos:altLabel "Cristóvão Colombo - O Enigma" .
+
+data:person_manoel_de_oliveira a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Manoel de Oliveira" ;
+    onto:hasBirthPlace data:place_cedofeita_porto ;
+    skos:altLabel "Manoel Cândido Pinto de Oliveira" .
+
+data:place_cedofeita_porto a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Cedofeita, Porto" .
+

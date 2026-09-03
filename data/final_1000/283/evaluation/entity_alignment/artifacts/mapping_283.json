@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/283/originals/extracted_283.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/283/ground_truth_283.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/pierre_frieden": "http://example.org/entity/Pierre_Frieden",
+    "http://example.org/extracted/zurich": "http://example.org/entity/Zürich",
+    "http://example.org/extracted/madeleine_frieden_kinnen": "http://example.org/entity/Madeleine_Frieden_Kinnen"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/madeleine_frieden_kinnen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Madeleine Frieden-Kinnen",
+          "source": "label"
+        },
+        {
+          "text": "madeleine frieden kinnen",
+          "source": "uri"
+        }
+      ],
+      "context": "Madeleine Frieden-Kinnen. has spouse: Pierre Frieden.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Madeleine_Frieden_Kinnen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Madeleine Frieden Kinnen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Madeleine Frieden-Kinnen",
+        "extracted_source": "label",
+        "ground_truth_text": "Madeleine Frieden Kinnen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9905102252960205,
+      "string_score": 0.981249988079071,
+      "independent_identity_support": true,
+      "context_score": 0.9815683960914612,
+      "graph_score": 0.9907841682434082,
+      "margin": 0.4451797604560852
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pierre_frieden",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pierre Frieden",
+          "source": "label"
+        }
+      ],
+      "context": "Pierre Frieden. has death place: Zürich. inverse has spouse: Madeleine Frieden-Kinnen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pierre_Frieden",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pierre Frieden",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pierre Frieden",
+        "extracted_source": "label",
+        "ground_truth_text": "Pierre Frieden",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9948306083679199,
+      "graph_score": 0.99741530418396,
+      "margin": 0.4268907308578491
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/zurich",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Zürich",
+          "source": "label"
+        },
+        {
+          "text": "zurich",
+          "source": "uri"
+        }
+      ],
+      "context": "Zürich. inverse has death place: Pierre Frieden.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Zürich",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Zürich",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Zürich",
+        "extracted_source": "label",
+        "ground_truth_text": "Zürich",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

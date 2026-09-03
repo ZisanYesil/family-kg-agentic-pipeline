@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/236/originals/extracted_236.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/236/ground_truth_236.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_dont_knock_the_ox": "http://example.org/entity/Don_t_Knock_the_Ox",
+    "http://example.org/extracted/person_tony_ianzelo": "http://example.org/entity/Tony_Ianzelo",
+    "http://example.org/extracted/edu_ryerson_polytechnical_school": "http://example.org/entity/Ryerson_University"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/edu_ryerson_polytechnical_school",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ryerson University",
+          "source": "altLabel"
+        },
+        {
+          "text": "Toronto’s Ryerson Polytechnical School",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ryerson Polytechnical School",
+          "source": "label"
+        },
+        {
+          "text": "edu ryerson polytechnical school",
+          "source": "uri"
+        }
+      ],
+      "context": "Ryerson University. inverse has educated at: Tony Ianzelo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ryerson_University",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ryerson University",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ryerson University",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Ryerson University",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_dont_knock_the_ox",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Don't Knock the Ox",
+          "source": "label"
+        },
+        {
+          "text": "film dont knock the ox",
+          "source": "uri"
+        }
+      ],
+      "context": "Don't Knock the Ox. has director: Tony Ianzelo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Don_t_Knock_the_Ox",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Don t Knock the Ox",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Don't Knock the Ox",
+        "extracted_source": "label",
+        "ground_truth_text": "Don t Knock the Ox",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9185295104980469,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.915861964225769,
+      "graph_score": 0.9579309821128845,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_tony_ianzelo",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tony Ianzelo",
+          "source": "label"
+        },
+        {
+          "text": "person tony ianzelo",
+          "source": "uri"
+        }
+      ],
+      "context": "Tony Ianzelo. has educated at: Ryerson University. inverse has director: Don't Knock the Ox.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tony_Ianzelo",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tony Ianzelo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tony Ianzelo",
+        "extracted_source": "label",
+        "ground_truth_text": "Tony Ianzelo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.955944299697876,
+      "graph_score": 0.977972149848938,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

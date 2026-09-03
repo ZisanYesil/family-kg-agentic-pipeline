@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Eudokia a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:Heraclius .
+
+entity:Theodore a ex:Agent,
+        ex:Person ;
+    ex:hasSibling entity:Heraclius .
+
+entity:Heraclius a ex:Agent,
+        ex:Person ;
+    ex:hasSibling entity:Theodore ;
+    ex:hasSpouse entity:Eudokia .
+

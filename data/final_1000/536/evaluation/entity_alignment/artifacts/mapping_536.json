@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/536/originals/extracted_536.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/536/ground_truth_536.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/james_longstreet": "http://example.org/entity/James_Longstreet",
+    "http://example.org/extracted/helen_dortch_longstreet": "http://example.org/entity/Helen_Dortch_Longstreet"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/helen_dortch_longstreet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Helen Dortch Longstreet",
+          "source": "label"
+        }
+      ],
+      "context": "Helen Dortch Longstreet. has spouse: James Longstreet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Helen_Dortch_Longstreet",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Helen Dortch Longstreet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Helen Dortch Longstreet",
+        "extracted_source": "label",
+        "ground_truth_text": "Helen Dortch Longstreet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4280228614807129
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/james_longstreet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Longstreet",
+          "source": "label"
+        }
+      ],
+      "context": "James Longstreet. has educated at: United States Military Academy at West Point. inverse has spouse: Helen Dortch Longstreet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_Longstreet",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James Longstreet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James Longstreet",
+        "extracted_source": "label",
+        "ground_truth_text": "James Longstreet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.936150074005127,
+      "graph_score": 0.9680750370025635,
+      "margin": 0.43751978874206543
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/usma_west_point",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States Military Academy at West Point",
+          "source": "label"
+        },
+        {
+          "text": "usma west point",
+          "source": "uri"
+        }
+      ],
+      "context": "United States Military Academy at West Point. inverse has educated at: James Longstreet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Army",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Army",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States Military Academy at West Point",
+        "extracted_source": "label",
+        "ground_truth_text": "Army",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5988160371780396,
+      "name_embedding_score": 0.6972004771232605,
+      "string_score": 0.07500000298023224,
+      "independent_identity_support": false,
+      "context_score": 0.8517261743545532,
+      "graph_score": 0.9258630871772766,
+      "margin": 0.5988160371780396
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

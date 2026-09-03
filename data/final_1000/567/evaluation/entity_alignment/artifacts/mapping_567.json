@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/567/originals/extracted_567.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/567/ground_truth_567.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/theophanu_955": "http://example.org/entity/Theophanu",
+    "http://example.org/extracted/sophia_i_975": "http://example.org/entity/Sophia_I"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/sophia_i_975",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sophia I",
+          "source": "label"
+        },
+        {
+          "text": "sophia i 975",
+          "source": "uri"
+        }
+      ],
+      "context": "Sophia I. has mother: Theophanu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sophia_I",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sophia I",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sophia I",
+        "extracted_source": "label",
+        "ground_truth_text": "Sophia I",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6291110515594482
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/theophanu_955",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Theophanu",
+          "source": "label"
+        },
+        {
+          "text": "theophanu 955",
+          "source": "uri"
+        }
+      ],
+      "context": "Theophanu. inverse has mother: Sophia I.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Theophanu",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Theophanu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Theophanu",
+        "extracted_source": "label",
+        "ground_truth_text": "Theophanu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7783324718475342,
+      "graph_score": 0.8891662359237671,
+      "margin": 0.6311752796173096
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Roman_Empire"
+  ]
+}

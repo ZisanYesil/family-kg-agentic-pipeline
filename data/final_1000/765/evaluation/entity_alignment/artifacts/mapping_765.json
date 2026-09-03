@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/765/originals/extracted_765.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/765/ground_truth_765.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/especially_on_sunday_film": "http://example.org/entity/Especially_on_Sunday",
+    "http://example.org/extracted/the_devils_tomb_film": "http://example.org/entity/The_Devil_s_Tomb"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/especially_on_sunday_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Especially on Sunday",
+          "source": "label"
+        },
+        {
+          "text": "especially on sunday film",
+          "source": "uri"
+        }
+      ],
+      "context": "Especially on Sunday. has publication date: 1991.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Especially_on_Sunday",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Especially on Sunday",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Especially on Sunday",
+        "extracted_source": "label",
+        "ground_truth_text": "Especially on Sunday",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.687709778547287
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_devils_tomb_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Devil's Tomb",
+          "source": "label"
+        },
+        {
+          "text": "the devils tomb film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Devil's Tomb. has publication date: 2009-05-26.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Devil_s_Tomb",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Devil s Tomb",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Devil's Tomb",
+        "extracted_source": "label",
+        "ground_truth_text": "The Devil s Tomb",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9894142150878906,
+      "string_score": 0.971875011920929,
+      "independent_identity_support": true,
+      "context_score": 0.9339209794998169,
+      "graph_score": 0.9339209794998169,
+      "margin": 0.7899796366691589
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

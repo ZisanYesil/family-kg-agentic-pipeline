@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/742/originals/extracted_742.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/742/ground_truth_742.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/escape_to_danger_film": "http://example.org/entity/Escape_to_Danger",
+    "http://example.org/extracted/two_can_play_film": "http://example.org/entity/Two_Can_Play"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/escape_to_danger_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Escape to Danger",
+          "source": "label"
+        },
+        {
+          "text": "escape to danger film",
+          "source": "uri"
+        }
+      ],
+      "context": "Escape to Danger. has publication date: 1943.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Escape_to_Danger",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Escape to Danger",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Escape to Danger",
+        "extracted_source": "label",
+        "ground_truth_text": "Escape to Danger",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7641638219356537
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/two_can_play_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Two Can Play",
+          "source": "label"
+        },
+        {
+          "text": "two can play film",
+          "source": "uri"
+        }
+      ],
+      "context": "Two Can Play. has publication date: 1926.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Two_Can_Play",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Two Can Play",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Two Can Play",
+        "extracted_source": "label",
+        "ground_truth_text": "Two Can Play",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.7561281323432922
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

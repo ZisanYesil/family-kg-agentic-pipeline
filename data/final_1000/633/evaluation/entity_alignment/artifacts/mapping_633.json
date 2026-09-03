@@ -1,0 +1,144 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/633/originals/extracted_633.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/633/ground_truth_633.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/shanghai_normal_university": "http://example.org/entity/Shanghai_Normal_University",
+    "http://example.org/extracted/chaohu_university": "http://example.org/entity/Chaohu_University"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/chaohu_university",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chaohu University",
+          "source": "label"
+        }
+      ],
+      "context": "Chaohu University. has country: People's Republic of China.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chaohu_University",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chaohu University",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chaohu University",
+        "extracted_source": "label",
+        "ground_truth_text": "Chaohu University",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9404704570770264,
+      "graph_score": 0.9404704570770264,
+      "margin": 0.39094656705856323
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/shanghai_normal_university",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shanghai Normal University",
+          "source": "label"
+        }
+      ],
+      "context": "Shanghai Normal University. has country: People's Republic of China.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shanghai_Normal_University",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shanghai Normal University",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shanghai Normal University",
+        "extracted_source": "label",
+        "ground_truth_text": "Shanghai Normal University",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9449208378791809,
+      "graph_score": 0.9449208378791809,
+      "margin": 0.3914668560028076
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/china",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "People's Republic of China",
+          "source": "altLabel"
+        },
+        {
+          "text": "China",
+          "source": "label"
+        }
+      ],
+      "context": "People's Republic of China. inverse has country: Chaohu University. inverse has country: Shanghai Normal University.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chinese",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chinese",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "China",
+        "extracted_source": "label",
+        "ground_truth_text": "Chinese",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7770676612854004,
+      "name_embedding_score": 0.9160383939743042,
+      "string_score": 0.30000001192092896,
+      "independent_identity_support": false,
+      "context_score": 0.9523876309394836,
+      "graph_score": 0.9761937856674194,
+      "margin": 0.34671881794929504
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

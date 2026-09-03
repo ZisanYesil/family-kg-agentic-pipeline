@@ -1,0 +1,37 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_felicite a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Félicité" ;
+    onto:hasDirector data:director_alain_gomis .
+
+data:film_villa_amalia a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Villa Amalia" ;
+    onto:hasDirector data:director_benoit_jacquot .
+
+data:country_senegal a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Senegal" ;
+    skos:altLabel "Senegalese" .
+
+data:director_alain_gomis a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alain Gomis" ;
+    onto:hasNationality data:country_france,
+        data:country_senegal .
+
+data:director_benoit_jacquot a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Benoît Jacquot" ;
+    onto:hasNationality data:country_france .
+
+data:country_france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+

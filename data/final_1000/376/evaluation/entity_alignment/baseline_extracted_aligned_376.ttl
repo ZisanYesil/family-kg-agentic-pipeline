@@ -1,0 +1,15 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Bellingham_Review> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Bellingham Review" ;
+    onto:hasPublisher <http://example.org/entity/Western_Washington_University> .
+
+<http://example.org/entity/Western_Washington_University> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Western Washington University" ;
+    onto:hasInception "1886"^^xsd:gYear .
+

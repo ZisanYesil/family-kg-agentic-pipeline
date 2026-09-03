@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/780/evaluation/entity_alignment/baseline_extracted_aligned_780.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/780/evaluation/entity_alignment/baseline_ground_truth_aligned_780.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Humphry_Waldo_Sibthorp",
+      "predicate": "hasParent",
+      "object": "John_Sibthorpe",
+      "subject_uri": "http://example.org/entity/Humphry_Waldo_Sibthorp",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/John_Sibthorpe"
+    },
+    {
+      "subject": "John_Sibthorpe",
+      "predicate": "hasEducatedAt",
+      "object": "Christ_Church",
+      "subject_uri": "http://example.org/entity/John_Sibthorpe",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Christ_Church"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Christ_Church",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Christ_Church",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Christ_Church",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Christ_Church",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Christ_Church",
+      "predicate": "label",
+      "object": "\"Christ Church, Oxford\"",
+      "subject_uri": "http://example.org/entity/Christ_Church",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Christ Church, Oxford\""
+    },
+    {
+      "subject": "Humphry_Waldo_Sibthorp",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Humphry_Waldo_Sibthorp",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Humphry_Waldo_Sibthorp",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Humphry_Waldo_Sibthorp",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Humphry_Waldo_Sibthorp",
+      "predicate": "label",
+      "object": "\"Humphry Waldo Sibthorp\"",
+      "subject_uri": "http://example.org/entity/Humphry_Waldo_Sibthorp",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Humphry Waldo Sibthorp\""
+    },
+    {
+      "subject": "Humphry_Waldo_Sibthorp",
+      "predicate": "altLabel",
+      "object": "\"Humphry Sibthorp (botanist)\"",
+      "subject_uri": "http://example.org/entity/Humphry_Waldo_Sibthorp",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Humphry Sibthorp (botanist)\""
+    },
+    {
+      "subject": "John_Sibthorpe",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/John_Sibthorpe",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "John_Sibthorpe",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/John_Sibthorpe",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "John_Sibthorpe",
+      "predicate": "label",
+      "object": "\"John Sibthorpe\"",
+      "subject_uri": "http://example.org/entity/John_Sibthorpe",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"John Sibthorpe\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

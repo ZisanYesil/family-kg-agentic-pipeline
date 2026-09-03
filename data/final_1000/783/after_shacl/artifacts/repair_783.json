@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "8b7e15921d8b63bff8a084db1bbc29e688261da1a8f63d796eb51eb52d0c2b1a",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/versus_versace_artifact",
+        "path": null,
+        "value": "http://example.org/extracted/gianni_versace_person",
+        "expected": null,
+        "message": "Relation phrase 'was founded by' from http://example.org/extracted/versus_versace_artifact to http://example.org/extracted/gianni_versace_person was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "8b7e15921d8b63bff8a084db1bbc29e688261da1a8f63d796eb51eb52d0c2b1a",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/versus_versace_artifact",
+            "path": null,
+            "value": "http://example.org/extracted/gianni_versace_person",
+            "expected": null,
+            "message": "Relation phrase 'was founded by' from http://example.org/extracted/versus_versace_artifact to http://example.org/extracted/gianni_versace_person was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 12,
+      "feedback_reasoning": "The violation concerns an unmapped_relation where the source text states that the artifact ‘Versus (Versace)’ was founded by Gianni Versace. The ontology does not contain any object‑property whose documented meaning matches the concept of a founder (e.g., no ‘hasFounder’ or similar predicate). Although there is a generic ‘hasCreator’ property, its definition is tied to CreativeWork, not Artifact, and the source text explicitly uses the phrase ‘founder’, not ‘creator’. According to the repair policy, a predicate may only be chosen when its documented meaning aligns with the relation phrase; domain/range compatibility alone is insufficient. Hence no suitable predicate can be added without inventing a new mapping, which is prohibited. The safest repair is therefore to leave the graph unchanged and record the inability to map the relation.",
+      "repairs": [
+        {
+          "violation_fingerprint": "e3c79e67cd8bdbe208e6def16dfb0f4b734ac956ee722e148b43170e3fe888ac",
+          "reasoning": "No ontology predicate matches the relation phrase ‘was founded by’ for an Artifact → Person relationship.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "e3c79e67cd8bdbe208e6def16dfb0f4b734ac956ee722e148b43170e3fe888ac"
+      ],
+      "triples_after": 12,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "8b7e15921d8b63bff8a084db1bbc29e688261da1a8f63d796eb51eb52d0c2b1a",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/versus_versace_artifact",
+            "path": null,
+            "value": "http://example.org/extracted/gianni_versace_person",
+            "expected": null,
+            "message": "Relation phrase 'was founded by' from http://example.org/extracted/versus_versace_artifact to http://example.org/extracted/gianni_versace_person was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "8b7e15921d8b63bff8a084db1bbc29e688261da1a8f63d796eb51eb52d0c2b1a",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/versus_versace_artifact",
+        "path": null,
+        "value": "http://example.org/extracted/gianni_versace_person",
+        "expected": null,
+        "message": "Relation phrase 'was founded by' from http://example.org/extracted/versus_versace_artifact to http://example.org/extracted/gianni_versace_person was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

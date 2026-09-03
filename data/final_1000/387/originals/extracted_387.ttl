@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:louise_linton a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louise Linton" ;
+    onto:hasSpouse data:steven_mnuchin .
+
+data:steven_mnuchin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Steven Mnuchin" ;
+    onto:hasEmployer data:us_treasury_department .
+
+data:us_treasury_department a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "United States Department of the Treasury" ;
+    skos:altLabel "U.S. Treasury" .
+

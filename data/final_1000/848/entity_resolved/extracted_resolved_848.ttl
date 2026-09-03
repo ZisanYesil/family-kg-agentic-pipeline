@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:louise_tracy a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louise Tracy" ;
+    onto:hasSpouse data:spencer_tracy .
+
+data:ripon_college a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Ripon College" .
+
+data:spencer_tracy a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Spencer Tracy" ;
+    onto:hasEducatedAt data:ripon_college .
+

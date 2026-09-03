@@ -1,0 +1,23 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Charles_Duke_of_Lower_Lorraine> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Charles, Duke of Lower Lorraine" ;
+    onto:hasBurialPlace <http://example.org/entity/Basilica_of_Saint_Servatius> ;
+    onto:hasSon <http://example.org/entity/Louis_of_Lower_Lorraine> ;
+    skos:altLabel "Charles, Duke of Lower Lorraine" .
+
+<http://example.org/entity/Basilica_of_Saint_Servatius> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Basilica of Saint Servatius" ;
+    skos:altLabel "Basilica of Saint Servatius",
+        "Basilica of Saint Servatius in Maastricht" .
+
+<http://example.org/entity/Louis_of_Lower_Lorraine> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis of Lower Lorraine" ;
+    skos:altLabel "Louis of Lower Lorraine" .
+

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/693/originals/extracted_693.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/693/ground_truth_693.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/woman_war_film": "http://example.org/entity/A_Woman_s_War",
+    "http://example.org/extracted/lettre_ouverte_film": "http://example.org/entity/Lettre_ouverte"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/lettre_ouverte_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lettre ouverte",
+          "source": "label"
+        },
+        {
+          "text": "lettre ouverte film",
+          "source": "uri"
+        }
+      ],
+      "context": "Lettre ouverte. has publication date: 1953.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lettre_ouverte",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lettre ouverte",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lettre ouverte",
+        "extracted_source": "label",
+        "ground_truth_text": "Lettre ouverte",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.7530818581581116
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/woman_war_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A Woman's War",
+          "source": "label"
+        },
+        {
+          "text": "woman war film",
+          "source": "uri"
+        }
+      ],
+      "context": "A Woman's War. has publication date: 1957.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Woman_s_War",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Woman s War",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Woman's War",
+        "extracted_source": "label",
+        "ground_truth_text": "A Woman s War",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9354457855224609,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9893649816513062,
+      "graph_score": 0.9893649816513062,
+      "margin": 0.7085170745849609
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

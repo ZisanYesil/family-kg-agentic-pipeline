@@ -1,0 +1,23 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Vladimir_Feldman> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Vladimir Feldman" ;
+    onto:hasSpouse <http://example.org/entity/Irina_Berezina> .
+
+<http://example.org/entity/Irina_Berezina> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Irina Berezina" ;
+    onto:hasBirthDate "1965-07-07"^^xsd:date ;
+    onto:hasBirthPlace <http://example.org/entity/Kiev> ;
+    skos:altLabel "Irina Berezina-Feldman",
+        "Irina Feldman" .
+
+<http://example.org/entity/Kiev> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Kiev" .
+

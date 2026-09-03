@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Marie_Frederike_of_Hesse_Kassel a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:William_I_Elector_of_Hesse ;
+    ex:hasParent entity:William_I_Elector_of_Hesse .
+
+entity:Princess_Mary_of_Great_Britain a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:William_I_Elector_of_Hesse .
+
+entity:William_I_Elector_of_Hesse a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Marie_Frederike_of_Hesse_Kassel ;
+    ex:hasMother entity:Princess_Mary_of_Great_Britain ;
+    ex:hasParent entity:Princess_Mary_of_Great_Britain .
+

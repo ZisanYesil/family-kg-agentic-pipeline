@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/527/evaluation/entity_alignment/final_extracted_aligned_527.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/527/evaluation/entity_alignment/final_ground_truth_aligned_527.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Eleanor_Roosevelt",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Eleanor_Roosevelt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Eleanor_Roosevelt",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Eleanor_Roosevelt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Franklin_Delano_Roosevelt",
+      "predicate": "hasSibling",
+      "object": "James_Roosevelt",
+      "subject_uri": "http://example.org/entity/Franklin_Delano_Roosevelt",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/James_Roosevelt"
+    },
+    {
+      "subject": "Franklin_Delano_Roosevelt",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Franklin_Delano_Roosevelt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Franklin_Delano_Roosevelt",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Franklin_Delano_Roosevelt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "James_Roosevelt",
+      "predicate": "hasSibling",
+      "object": "Franklin_Delano_Roosevelt",
+      "subject_uri": "http://example.org/entity/James_Roosevelt",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Franklin_Delano_Roosevelt"
+    },
+    {
+      "subject": "James_Roosevelt",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/James_Roosevelt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "James_Roosevelt",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/James_Roosevelt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Eleanor_Roosevelt",
+      "predicate": "hasSpouse",
+      "object": "Franklin_D_Roosevelt",
+      "subject_uri": "http://example.org/entity/Eleanor_Roosevelt",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Franklin_D_Roosevelt"
+    },
+    {
+      "subject": "Franklin_D_Roosevelt",
+      "predicate": "hasSpouse",
+      "object": "Eleanor_Roosevelt",
+      "subject_uri": "http://example.org/entity/Franklin_D_Roosevelt",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Eleanor_Roosevelt"
+    },
+    {
+      "subject": "Franklin_D_Roosevelt",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Franklin_D_Roosevelt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Franklin_D_Roosevelt",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Franklin_D_Roosevelt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Eleanor_Roosevelt",
+      "predicate": "hasSpouse",
+      "object": "Franklin_Delano_Roosevelt",
+      "subject_uri": "http://example.org/entity/Eleanor_Roosevelt",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Franklin_Delano_Roosevelt"
+    },
+    {
+      "subject": "Franklin_Delano_Roosevelt",
+      "predicate": "hasSpouse",
+      "object": "Eleanor_Roosevelt",
+      "subject_uri": "http://example.org/entity/Franklin_Delano_Roosevelt",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Eleanor_Roosevelt"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 12,
+    "union_triples_in_scope": 14,
+    "true_positives": 8,
+    "false_positives": 2,
+    "false_negatives": 4,
+    "precision": 0.8,
+    "recall": 0.6666666666666666,
+    "f1": 0.7272727272727272
+  },
+  "stage": "post_inference"
+}

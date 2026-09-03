@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Suicide_social> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Suicide social" ;
+    onto:hasPerformer <http://example.org/entity/Orelsan> .
+
+<http://example.org/entity/Alençon> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Alençon, Orne" .
+
+<http://example.org/entity/Orelsan> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Orelsan" ;
+    onto:hasBirthPlace <http://example.org/entity/Alençon> ;
+    skos:altLabel "Aurélien Cotentin" .
+

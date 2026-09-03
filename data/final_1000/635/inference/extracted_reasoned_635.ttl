@@ -1,0 +1,13 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/extracted/catherine_ivanovna> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/extracted/praskovia_saltykova> ;
+    ex:hasParent <http://example.org/extracted/praskovia_saltykova> .
+
+<http://example.org/extracted/praskovia_saltykova> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/catherine_ivanovna> ;
+    ex:hasDeathDate "1723-10-13"^^xsd:date .
+

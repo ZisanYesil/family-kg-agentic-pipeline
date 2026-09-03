@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:apne_dam_par a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Apne Dam Par" ;
+    onto:hasDirector data:arshad_khan .
+
+data:cela_s_appele_l_aurore a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Cela s'appelle l'aurore" ;
+    onto:hasDirector data:luis_bunuel .
+
+data:arshad_khan a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Arshad Khan" ;
+    onto:hasBirthDate "1971-03-22"^^xsd:date .
+
+data:luis_bunuel a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Luis Buñuel" ;
+    onto:hasBirthDate "1900-02-22"^^xsd:date .
+

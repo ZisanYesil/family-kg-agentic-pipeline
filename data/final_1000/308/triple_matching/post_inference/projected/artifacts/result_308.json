@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/308/evaluation/entity_alignment/final_extracted_aligned_308.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/308/evaluation/entity_alignment/final_ground_truth_aligned_308.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Duke_Henry_of_Mecklenburg_Schwerin",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Duke_Henry_of_Mecklenburg_Schwerin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Duke_Henry_of_Mecklenburg_Schwerin",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Duke_Henry_of_Mecklenburg_Schwerin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Juliana_of_the_Netherlands",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Juliana_of_the_Netherlands",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Juliana_of_the_Netherlands",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Juliana_of_the_Netherlands",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Duke_Henry_of_Mecklenburg_Schwerin",
+      "predicate": "hasSpouse",
+      "object": "Wilhelmina",
+      "subject_uri": "http://example.org/entity/Duke_Henry_of_Mecklenburg_Schwerin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Wilhelmina"
+    },
+    {
+      "subject": "Juliana_of_the_Netherlands",
+      "predicate": "hasParent",
+      "object": "Wilhelmina",
+      "subject_uri": "http://example.org/entity/Juliana_of_the_Netherlands",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Wilhelmina"
+    },
+    {
+      "subject": "Wilhelmina",
+      "predicate": "hasChild",
+      "object": "Juliana_of_the_Netherlands",
+      "subject_uri": "http://example.org/entity/Wilhelmina",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Juliana_of_the_Netherlands"
+    },
+    {
+      "subject": "Wilhelmina",
+      "predicate": "hasSpouse",
+      "object": "Duke_Henry_of_Mecklenburg_Schwerin",
+      "subject_uri": "http://example.org/entity/Wilhelmina",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Duke_Henry_of_Mecklenburg_Schwerin"
+    },
+    {
+      "subject": "Wilhelmina",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Wilhelmina",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Wilhelmina",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Wilhelmina",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Duke_Henry_of_Mecklenburg_Schwerin",
+      "predicate": "hasChild",
+      "object": "Juliana_of_the_Netherlands",
+      "subject_uri": "http://example.org/entity/Duke_Henry_of_Mecklenburg_Schwerin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Juliana_of_the_Netherlands"
+    },
+    {
+      "subject": "Juliana_of_the_Netherlands",
+      "predicate": "hasParent",
+      "object": "Duke_Henry_of_Mecklenburg_Schwerin",
+      "subject_uri": "http://example.org/entity/Juliana_of_the_Netherlands",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Duke_Henry_of_Mecklenburg_Schwerin"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 12,
+    "true_positives": 4,
+    "false_positives": 2,
+    "false_negatives": 6,
+    "precision": 0.6666666666666666,
+    "recall": 0.4,
+    "f1": 0.5
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/381/originals/extracted_381.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/381/ground_truth_381.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_the_clink_of_ice": "http://example.org/entity/The_Clink_of_Ice",
+    "http://example.org/extracted/film_guilty": "http://example.org/entity/Guilty"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_guilty",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Guilty?",
+          "source": "label"
+        },
+        {
+          "text": "film guilty",
+          "source": "uri"
+        }
+      ],
+      "context": "Guilty?. has publication date: 1930.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Guilty",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Guilty",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Guilty?",
+        "extracted_source": "label",
+        "ground_truth_text": "Guilty",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9368964433670044,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9769614338874817,
+      "graph_score": 0.9769614338874817,
+      "margin": 0.8768221586942673
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_clink_of_ice",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Clink of Ice",
+          "source": "label"
+        },
+        {
+          "text": "film the clink of ice",
+          "source": "uri"
+        }
+      ],
+      "context": "The Clink of Ice. has publication date: 2010.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Clink_of_Ice",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Clink of Ice",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Clink of Ice",
+        "extracted_source": "label",
+        "ground_truth_text": "The Clink of Ice",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.8392031490802765
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

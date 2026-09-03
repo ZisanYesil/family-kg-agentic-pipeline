@@ -1,0 +1,216 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/177/originals/extracted_177.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/177/ground_truth_177.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_gillies_mackinnon": "http://example.org/entity/Gillies_MacKinnon",
+    "http://example.org/extracted/edu_national_film_and_television_school": "http://example.org/entity/National_Film_and_Television_School"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 2,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/edu_national_film_and_television_school",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "National Film and Television School",
+          "source": "label"
+        },
+        {
+          "text": "edu national film and television school",
+          "source": "uri"
+        }
+      ],
+      "context": "National Film and Television School. inverse has educated at: Gillies Mac Kinnon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/National_Film_and_Television_School",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "National Film and Television School",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "National Film and Television School",
+        "extracted_source": "label",
+        "ground_truth_text": "National Film and Television School",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_gillies_mackinnon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gillies Mac Kinnon",
+          "source": "label"
+        },
+        {
+          "text": "person gillies mackinnon",
+          "source": "uri"
+        }
+      ],
+      "context": "Gillies Mac Kinnon. has educated at: Glasgow School of Art. has educated at: Middlesex Polytechnic. has educated at: National Film and Television School. inverse has director: The Escapist (2002 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gillies_MacKinnon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gillies Mac Kinnon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gillies Mac Kinnon",
+        "extracted_source": "label",
+        "ground_truth_text": "Gillies Mac Kinnon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9051117897033691,
+      "graph_score": 0.9525558948516846,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_escapist_2002",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Escapist (2002 film)",
+          "source": "label"
+        },
+        {
+          "text": "film the escapist 2002",
+          "source": "uri"
+        }
+      ],
+      "context": "The Escapist (2002 film). has director: Gillies Mac Kinnon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Escapist",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Escapist",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Escapist (2002 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Escapist",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8354700803756714,
+      "name_embedding_score": 0.8242793083190918,
+      "string_score": 0.7250000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9366436004638672,
+      "graph_score": 0.9683218002319336,
+      "margin": 0.8354700803756714
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/edu_glasgow_school_of_art",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Glasgow School of Art",
+          "source": "label"
+        },
+        {
+          "text": "edu glasgow school of art",
+          "source": "uri"
+        }
+      ],
+      "context": "Glasgow School of Art. inverse has educated at: Gillies Mac Kinnon.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/edu_middlesex_polytechnic",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Middlesex Polytechnic",
+          "source": "label"
+        },
+        {
+          "text": "edu middlesex polytechnic",
+          "source": "uri"
+        }
+      ],
+      "context": "Middlesex Polytechnic. inverse has educated at: Gillies Mac Kinnon.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

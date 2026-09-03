@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/252/evaluation/entity_alignment/baseline_extracted_aligned_252.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/252/evaluation/entity_alignment/baseline_ground_truth_aligned_252.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Tannenberg_film",
+      "predicate": "hasCountry",
+      "object": "German",
+      "subject_uri": "http://example.org/entity/Tannenberg_film",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/German"
+    },
+    {
+      "subject": "To_Kill_a_Dragon",
+      "predicate": "hasCountry",
+      "object": "German",
+      "subject_uri": "http://example.org/entity/To_Kill_a_Dragon",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/German"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "To_Kill_a_Dragon",
+      "predicate": "hasCountry",
+      "object": "Soviet",
+      "subject_uri": "http://example.org/entity/To_Kill_a_Dragon",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Soviet"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "German",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/German",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "German",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/German",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "German",
+      "predicate": "label",
+      "object": "\"Germany\"",
+      "subject_uri": "http://example.org/entity/German",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Germany\""
+    },
+    {
+      "subject": "German",
+      "predicate": "altLabel",
+      "object": "\"German\"",
+      "subject_uri": "http://example.org/entity/German",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"German\""
+    },
+    {
+      "subject": "Tannenberg_film",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Tannenberg_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Tannenberg_film",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Tannenberg_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Tannenberg_film",
+      "predicate": "label",
+      "object": "\"Tannenberg\"",
+      "subject_uri": "http://example.org/entity/Tannenberg_film",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Tannenberg\""
+    },
+    {
+      "subject": "To_Kill_a_Dragon",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/To_Kill_a_Dragon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "To_Kill_a_Dragon",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/To_Kill_a_Dragon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "To_Kill_a_Dragon",
+      "predicate": "label",
+      "object": "\"To Kill a Dragon\"",
+      "subject_uri": "http://example.org/entity/To_Kill_a_Dragon",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"To Kill a Dragon\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 3,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.16666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.26666666666666666
+  },
+  "stage": "pre_inference"
+}

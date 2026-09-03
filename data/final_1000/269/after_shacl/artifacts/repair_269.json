@@ -1,0 +1,94 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "31a20e50092dc3529b663bc2932a39dab135df159dd6d18c50ff74419b691ded",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_the_straw_hat",
+        "path": null,
+        "value": "http://example.org/extracted/isaac_schwartz",
+        "expected": null,
+        "message": "Relation phrase 'composer of' from http://example.org/extracted/film_the_straw_hat to http://example.org/extracted/isaac_schwartz was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "31a20e50092dc3529b663bc2932a39dab135df159dd6d18c50ff74419b691ded",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_the_straw_hat",
+            "path": null,
+            "value": "http://example.org/extracted/isaac_schwartz",
+            "expected": null,
+            "message": "Relation phrase 'composer of' from http://example.org/extracted/film_the_straw_hat to http://example.org/extracted/isaac_schwartz was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 12,
+      "feedback_reasoning": "The source text states that the film “The Straw Hat” was composed by Isaac Schwartz. The appropriate ontology predicate that captures the relation “composer of” is onto:hasComposer, which has domain CreativeWork (and Film is a CreativeWork) and range Person. Adding this triple resolves the unmapped_relation violation.",
+      "repairs": [
+        {
+          "violation_fingerprint": "9039866e0e1353faf0c926790296881701118d4e40ebabda4df8089b48013785",
+          "reasoning": "Map the 'composer of' relation to the ontology predicate hasComposer.",
+          "operations": [
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/film_the_straw_hat",
+              "predicate": "http://example.org/2wiki-ontology#hasComposer",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/extracted/isaac_schwartz"
+              }
+            }
+          ]
+        }
+      ],
+      "edit_log": [
+        {
+          "violation_fingerprint": "9039866e0e1353faf0c926790296881701118d4e40ebabda4df8089b48013785",
+          "operation_index": 0,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/film_the_straw_hat",
+          "predicate": "http://example.org/2wiki-ontology#hasComposer",
+          "old_value": null,
+          "new_value": "<http://example.org/extracted/isaac_schwartz>",
+          "triples_before": 12,
+          "triples_after": 13
+        }
+      ],
+      "unresolved_violation_fingerprints": [],
+      "triples_after": 13,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": true,
+        "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "violations": []
+      },
+      "outcome": "conforms"
+    }
+  ],
+  "status": "repaired",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": true,
+    "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "violations": []
+  },
+  "dangling_references": []
+}

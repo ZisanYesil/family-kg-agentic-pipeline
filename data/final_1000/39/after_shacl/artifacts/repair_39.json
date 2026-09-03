@@ -1,0 +1,94 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "9195caee6c81dfc51a6c5b215934bef5797c09fa3f659320c00b38cc622b3420",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/adolf_winkelmann",
+        "path": null,
+        "value": "http://example.org/extracted/dortmund_university_of_applied_sciences_and_arts",
+        "expected": null,
+        "message": "Relation phrase 'works as a professor at' from http://example.org/extracted/adolf_winkelmann to http://example.org/extracted/dortmund_university_of_applied_sciences_and_arts was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "9195caee6c81dfc51a6c5b215934bef5797c09fa3f659320c00b38cc622b3420",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/adolf_winkelmann",
+            "path": null,
+            "value": "http://example.org/extracted/dortmund_university_of_applied_sciences_and_arts",
+            "expected": null,
+            "message": "Relation phrase 'works as a professor at' from http://example.org/extracted/adolf_winkelmann to http://example.org/extracted/dortmund_university_of_applied_sciences_and_arts was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 10,
+      "feedback_reasoning": "The source text states that Adolf Winkelmann works as a professor at the Dortmund University of Applied Sciences and Arts. The ontology provides the object property onto:hasEmployer (domain Person, range Organization) whose meaning – ‘employer of a person’ – matches the phrase “works as a professor at”. Although the university is typed as onto:EducationalInstitution, it is reasonable to treat it as an organization for employment purposes. Thus we can repair the unmapped relation by adding a triple using this predicate.",
+      "repairs": [
+        {
+          "violation_fingerprint": "ce6001894c14d0dd336f5a2a96013d3c9546a0adf6a0d942d878dd017f0e2d4c",
+          "reasoning": "Map the phrase “works as a professor at” to the ontology predicate http://example.org/2wiki-ontology#hasEmployer and add the missing triple.",
+          "operations": [
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/adolf_winkelmann",
+              "predicate": "http://example.org/2wiki-ontology#hasEmployer",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/extracted/dortmund_university_of_applied_sciences_and_arts"
+              }
+            }
+          ]
+        }
+      ],
+      "edit_log": [
+        {
+          "violation_fingerprint": "ce6001894c14d0dd336f5a2a96013d3c9546a0adf6a0d942d878dd017f0e2d4c",
+          "operation_index": 0,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/adolf_winkelmann",
+          "predicate": "http://example.org/2wiki-ontology#hasEmployer",
+          "old_value": null,
+          "new_value": "<http://example.org/extracted/dortmund_university_of_applied_sciences_and_arts>",
+          "triples_before": 10,
+          "triples_after": 11
+        }
+      ],
+      "unresolved_violation_fingerprints": [],
+      "triples_after": 11,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": true,
+        "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "violations": []
+      },
+      "outcome": "conforms"
+    }
+  ],
+  "status": "repaired",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": true,
+    "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "violations": []
+  },
+  "dangling_references": []
+}

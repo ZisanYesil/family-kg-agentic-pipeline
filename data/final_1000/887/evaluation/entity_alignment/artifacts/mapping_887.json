@@ -1,0 +1,115 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/887/originals/extracted_887.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/887/ground_truth_887.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_franz_antel": "http://example.org/entity/Franz_Antel"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_franz_antel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Franz Antel",
+          "source": "label"
+        },
+        {
+          "text": "person franz antel",
+          "source": "uri"
+        }
+      ],
+      "context": "Franz Antel. inverse has director: No Sin on the Alpine Pastures (1950 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Franz_Antel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Franz Antel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Franz Antel",
+        "extracted_source": "label",
+        "ground_truth_text": "Franz Antel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7974637746810913,
+      "graph_score": 0.7974637746810913,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_1950",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "No Sin on the Alpine Pastures (1950 film)",
+          "source": "label"
+        },
+        {
+          "text": "film 1950",
+          "source": "uri"
+        }
+      ],
+      "context": "No Sin on the Alpine Pastures (1950 film). has director: Franz Antel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/No_Sin_on_the_Alpine_Pastures",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "No Sin on the Alpine Pastures",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "No Sin on the Alpine Pastures (1950 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "No Sin on the Alpine Pastures",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8841947913169861,
+      "name_embedding_score": 0.8574011921882629,
+      "string_score": 0.8603571653366089,
+      "independent_identity_support": true,
+      "context_score": 0.9232391119003296,
+      "graph_score": 0.9616195559501648,
+      "margin": 0.8841947913169861
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Vienna"
+  ]
+}

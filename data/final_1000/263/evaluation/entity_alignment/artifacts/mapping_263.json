@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/263/originals/extracted_263.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/263/ground_truth_263.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/place_hamburg_germany": "http://example.org/entity/Hamburg_Germany",
+    "http://example.org/extracted/person_karel_lamac": "http://example.org/entity/Karel_Lamač",
+    "http://example.org/extracted/film_the_lantern_1938": "http://example.org/entity/The_Lantern"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_lantern_1938",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Lantern",
+          "source": "altLabel"
+        },
+        {
+          "text": "film the lantern 1938",
+          "source": "uri"
+        }
+      ],
+      "context": "The Lantern. has director: Karel Lamač.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Lantern",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Lantern",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Lantern",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "The Lantern",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_karel_lamac",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Karel Lamač",
+          "source": "altLabel"
+        },
+        {
+          "text": "person karel lamac",
+          "source": "uri"
+        }
+      ],
+      "context": "Karel Lamač. has death place: Hamburg. inverse has director: The Lantern.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Karel_Lamač",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Karel Lamač",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Karel Lamač",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Karel Lamač",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.987090528011322,
+      "graph_score": 0.9935452938079834,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_hamburg_germany",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hamburg",
+          "source": "altLabel"
+        },
+        {
+          "text": "Hamburg, Germany",
+          "source": "altLabel"
+        },
+        {
+          "text": "place hamburg germany",
+          "source": "uri"
+        }
+      ],
+      "context": "Hamburg. inverse has death place: Karel Lamač.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hamburg_Germany",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hamburg Germany",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hamburg, Germany",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Hamburg Germany",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9376230239868164,
+      "string_score": 0.9854838848114014,
+      "independent_identity_support": true,
+      "context_score": 0.9870993494987488,
+      "graph_score": 0.9935497045516968,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

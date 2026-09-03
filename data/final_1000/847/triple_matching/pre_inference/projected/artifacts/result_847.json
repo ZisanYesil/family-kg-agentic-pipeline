@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/847/evaluation/entity_alignment/baseline_extracted_aligned_847.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/847/evaluation/entity_alignment/baseline_ground_truth_aligned_847.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Paper_Bird",
+      "predicate": "hasMember",
+      "object": "Sarah_Anderson",
+      "subject_uri": "http://example.org/entity/Paper_Bird",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasMember",
+      "object_term": "http://example.org/entity/Sarah_Anderson"
+    },
+    {
+      "subject": "Sarah_Anderson",
+      "predicate": "hasCountry",
+      "object": "American",
+      "subject_uri": "http://example.org/entity/Sarah_Anderson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/American"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "American",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "American",
+      "predicate": "label",
+      "object": "\"United States\"",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"United States\""
+    },
+    {
+      "subject": "American",
+      "predicate": "altLabel",
+      "object": "\"American\"",
+      "subject_uri": "http://example.org/entity/American",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"American\""
+    },
+    {
+      "subject": "Paper_Bird",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Paper_Bird",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Paper_Bird",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Paper_Bird",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Paper_Bird",
+      "predicate": "label",
+      "object": "\"Paper Bird\"",
+      "subject_uri": "http://example.org/entity/Paper_Bird",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Paper Bird\""
+    },
+    {
+      "subject": "Sarah_Anderson",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sarah_Anderson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sarah_Anderson",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sarah_Anderson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sarah_Anderson",
+      "predicate": "label",
+      "object": "\"Sarah Anderson\"",
+      "subject_uri": "http://example.org/entity/Sarah_Anderson",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sarah Anderson\""
+    },
+    {
+      "subject": "Sarah_Anderson",
+      "predicate": "altLabel",
+      "object": "\"Sarah L. Anderson\"",
+      "subject_uri": "http://example.org/entity/Sarah_Anderson",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Sarah L. Anderson\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

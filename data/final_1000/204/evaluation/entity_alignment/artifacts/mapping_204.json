@@ -1,0 +1,250 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/204/originals/extracted_204.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/204/ground_truth_204.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_warn_london": "http://example.org/entity/Warn_London",
+    "http://example.org/extracted/person_t_hayes_hunter": "http://example.org/entity/T_Hayes_Hunter",
+    "http://example.org/extracted/person_gary_ross": "http://example.org/entity/Gary_Ross",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has nationality: Gary Ross. inverse has nationality: Thomas Hayes Hunter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9275919795036316,
+      "graph_score": 0.4637959897518158,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_warn_london",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Warn London",
+          "source": "label"
+        },
+        {
+          "text": "film warn london",
+          "source": "uri"
+        }
+      ],
+      "context": "Warn London. has director: Thomas Hayes Hunter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Warn_London",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Warn London",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Warn London",
+        "extracted_source": "label",
+        "ground_truth_text": "Warn London",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9662166237831116,
+      "graph_score": 0.9831082820892334,
+      "margin": 0.6823306083679199
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_gary_ross",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gary Ross",
+          "source": "label"
+        },
+        {
+          "text": "person gary ross",
+          "source": "uri"
+        }
+      ],
+      "context": "Gary Ross. has nationality: American. inverse has director: Seabiscuit.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gary_Ross",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gary Ross",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gary Ross",
+        "extracted_source": "label",
+        "ground_truth_text": "Gary Ross",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9272024035453796,
+      "graph_score": 0.4636012017726898,
+      "margin": 0.624274492263794
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_t_hayes_hunter",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thomas Hayes Hunter",
+          "source": "altLabel"
+        },
+        {
+          "text": "T. Hayes Hunter",
+          "source": "label"
+        },
+        {
+          "text": "person t hayes hunter",
+          "source": "uri"
+        }
+      ],
+      "context": "Thomas Hayes Hunter. has nationality: American. inverse has director: Warn London.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/T_Hayes_Hunter",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "T Hayes Hunter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "T. Hayes Hunter",
+        "extracted_source": "label",
+        "ground_truth_text": "T Hayes Hunter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9818413257598877,
+      "string_score": 0.9844827651977539,
+      "independent_identity_support": true,
+      "context_score": 0.9125781059265137,
+      "graph_score": 0.6229557394981384,
+      "margin": 0.6213133335113525
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_seabiscuit",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Seabiscuit",
+          "source": "label"
+        },
+        {
+          "text": "film seabiscuit",
+          "source": "uri"
+        }
+      ],
+      "context": "Seabiscuit. has director: Gary Ross.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Seabiscuit_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Seabiscuit film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film seabiscuit",
+        "extracted_source": "uri",
+        "ground_truth_text": "Seabiscuit film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9378659725189209,
+      "name_embedding_score": 0.9777867794036865,
+      "string_score": 0.8500000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.8917806148529053,
+      "graph_score": 0.9458903074264526,
+      "margin": 0.7805098593235016
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

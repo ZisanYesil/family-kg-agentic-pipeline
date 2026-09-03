@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/255/originals/extracted_255.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/255/ground_truth_255.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/_paul_richter": "http://example.org/entity/Paul_Richter",
+    "http://example.org/extracted/_aud_egede_nissen": "http://example.org/entity/Aud_Egede_Nissen",
+    "http://example.org/extracted/_norway": "http://example.org/entity/Norwegian"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/_aud_egede_nissen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Aud Egede-Nissen",
+          "source": "label"
+        },
+        {
+          "text": "aud egede nissen",
+          "source": "uri"
+        }
+      ],
+      "context": "Aud Egede-Nissen. has nationality: Norwegian. inverse has spouse: Paul Richter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Aud_Egede_Nissen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Aud Egede Nissen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Aud Egede-Nissen",
+        "extracted_source": "label",
+        "ground_truth_text": "Aud Egede Nissen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9443169832229614,
+      "string_score": 0.971875011920929,
+      "independent_identity_support": true,
+      "context_score": 0.9552323222160339,
+      "graph_score": 0.6442828178405762,
+      "margin": 0.7076440155506134
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_norway",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Norwegian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Norway",
+          "source": "label"
+        }
+      ],
+      "context": "Norwegian. inverse has nationality: Aud Egede-Nissen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Norwegian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Norwegian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Norwegian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Norwegian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.921324610710144,
+      "graph_score": 0.460662305355072,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_paul_richter",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Paul Richter",
+          "source": "label"
+        }
+      ],
+      "context": "Paul Richter. has spouse: Aud Egede-Nissen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Paul_Richter",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Paul Richter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Paul Richter",
+        "extracted_source": "label",
+        "ground_truth_text": "Paul Richter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9907544851303101,
+      "graph_score": 0.995377242565155,
+      "margin": 0.6987041234970093
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

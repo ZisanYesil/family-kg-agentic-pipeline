@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/578/evaluation/entity_alignment/baseline_extracted_aligned_578.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/578/evaluation/entity_alignment/baseline_ground_truth_aligned_578.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Marcel_Varnel",
+      "predicate": "hasDeathPlace",
+      "object": "West_Sussex",
+      "subject_uri": "http://example.org/entity/Marcel_Varnel",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/West_Sussex"
+    },
+    {
+      "subject": "The_Loves_of_Madame_Dubarry",
+      "predicate": "hasDirector",
+      "object": "Marcel_Varnel",
+      "subject_uri": "http://example.org/entity/The_Loves_of_Madame_Dubarry",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Marcel_Varnel"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Marcel_Varnel",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Marcel_Varnel",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Marcel_Varnel",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Marcel_Varnel",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Marcel_Varnel",
+      "predicate": "label",
+      "object": "\"Marcel Varnel\"",
+      "subject_uri": "http://example.org/entity/Marcel_Varnel",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Marcel Varnel\""
+    },
+    {
+      "subject": "The_Loves_of_Madame_Dubarry",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Loves_of_Madame_Dubarry",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Loves_of_Madame_Dubarry",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Loves_of_Madame_Dubarry",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Loves_of_Madame_Dubarry",
+      "predicate": "label",
+      "object": "\"The Loves of Madame Dubarry\"",
+      "subject_uri": "http://example.org/entity/The_Loves_of_Madame_Dubarry",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Loves of Madame Dubarry\""
+    },
+    {
+      "subject": "The_Loves_of_Madame_Dubarry",
+      "predicate": "altLabel",
+      "object": "\"I Give My Heart\"",
+      "subject_uri": "http://example.org/entity/The_Loves_of_Madame_Dubarry",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"I Give My Heart\""
+    },
+    {
+      "subject": "West_Sussex",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/West_Sussex",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "West_Sussex",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/West_Sussex",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "West_Sussex",
+      "predicate": "label",
+      "object": "\"Rake, West Sussex\"",
+      "subject_uri": "http://example.org/entity/West_Sussex",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Rake, West Sussex\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

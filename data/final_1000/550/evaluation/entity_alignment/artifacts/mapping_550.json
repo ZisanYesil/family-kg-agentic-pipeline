@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/550/originals/extracted_550.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/550/ground_truth_550.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/secret_of_mountain_lake_film": "http://example.org/entity/The_Secret_of_Mountain_Lake",
+    "http://example.org/extracted/upstairs_and_downstairs_film": "http://example.org/entity/Upstairs_and_Downstairs"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/secret_of_mountain_lake_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Secret of Mountain Lake",
+          "source": "label"
+        },
+        {
+          "text": "secret of mountain lake film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Secret of Mountain Lake. has publication date: 1954.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Secret_of_Mountain_Lake",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Secret of Mountain Lake",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Secret of Mountain Lake",
+        "extracted_source": "label",
+        "ground_truth_text": "The Secret of Mountain Lake",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.7504492700099945
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/upstairs_and_downstairs_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Upstairs and Downstairs",
+          "source": "label"
+        },
+        {
+          "text": "upstairs and downstairs film",
+          "source": "uri"
+        }
+      ],
+      "context": "Upstairs and Downstairs. has publication date: 1959.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Upstairs_and_Downstairs",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Upstairs and Downstairs",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Upstairs and Downstairs",
+        "extracted_source": "label",
+        "ground_truth_text": "Upstairs and Downstairs",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7681524753570557
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

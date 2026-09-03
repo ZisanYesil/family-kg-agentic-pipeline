@@ -1,0 +1,82 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/139/evaluation/entity_alignment/final_extracted_aligned_139.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/139/evaluation/entity_alignment/final_ground_truth_aligned_139.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Ed_Blackwell",
+      "predicate": "hasBirthPlace",
+      "object": "New_Orleans_Louisiana",
+      "subject_uri": "http://example.org/entity/Ed_Blackwell",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/New_Orleans_Louisiana"
+    },
+    {
+      "subject": "Ed_Blackwell",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Ed_Blackwell",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Ed_Blackwell",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ed_Blackwell",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "New_Orleans_Louisiana",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/New_Orleans_Louisiana",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Old_and_New_Dreams",
+      "predicate": "hasMember",
+      "object": "Ed_Blackwell",
+      "subject_uri": "http://example.org/entity/Old_and_New_Dreams",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasMember",
+      "object_term": "http://example.org/entity/Ed_Blackwell"
+    },
+    {
+      "subject": "Old_and_New_Dreams",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Old_and_New_Dreams",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Old_and_New_Dreams",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Old_and_New_Dreams",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 7,
+    "true_positives": 7,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

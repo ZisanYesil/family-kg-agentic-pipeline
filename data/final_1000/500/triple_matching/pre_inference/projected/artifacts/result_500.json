@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/500/evaluation/entity_alignment/baseline_extracted_aligned_500.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/500/evaluation/entity_alignment/baseline_ground_truth_aligned_500.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Jeff_Celentano",
+      "predicate": "hasBirthPlace",
+      "object": "Pemberton_New_Jersey",
+      "subject_uri": "http://example.org/entity/Jeff_Celentano",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Pemberton_New_Jersey"
+    },
+    {
+      "subject": "Say_it_in_Russian",
+      "predicate": "hasDirector",
+      "object": "Jeff_Celentano",
+      "subject_uri": "http://example.org/entity/Say_it_in_Russian",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Jeff_Celentano"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Jeff_Celentano",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jeff_Celentano",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jeff_Celentano",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jeff_Celentano",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jeff_Celentano",
+      "predicate": "label",
+      "object": "\"Jeff Celentano\"",
+      "subject_uri": "http://example.org/entity/Jeff_Celentano",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jeff Celentano\""
+    },
+    {
+      "subject": "Jeff_Celentano",
+      "predicate": "altLabel",
+      "object": "\"Jeff Weston\"",
+      "subject_uri": "http://example.org/entity/Jeff_Celentano",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Jeff Weston\""
+    },
+    {
+      "subject": "Pemberton_New_Jersey",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Pemberton_New_Jersey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Pemberton_New_Jersey",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Pemberton_New_Jersey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Pemberton_New_Jersey",
+      "predicate": "label",
+      "object": "\"Pemberton, New Jersey\"",
+      "subject_uri": "http://example.org/entity/Pemberton_New_Jersey",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Pemberton, New Jersey\""
+    },
+    {
+      "subject": "Say_it_in_Russian",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Say_it_in_Russian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Say_it_in_Russian",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Say_it_in_Russian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Say_it_in_Russian",
+      "predicate": "label",
+      "object": "\"Say it in Russian\"",
+      "subject_uri": "http://example.org/entity/Say_it_in_Russian",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Say it in Russian\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

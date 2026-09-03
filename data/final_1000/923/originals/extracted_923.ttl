@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:paul_foley_ironmaster a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Paul Foley" ;
+    onto:hasFather data:thomas_foley_1617 .
+
+data:england a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "England" ;
+    skos:altLabel "English" .
+
+data:thomas_foley_1617 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Thomas Foley" ;
+    onto:hasNationality data:england .
+

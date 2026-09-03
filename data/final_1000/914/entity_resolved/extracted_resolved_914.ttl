@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_the_belles_of_st_trinians_1954 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Belles of St. Trinian's" ;
+    onto:hasDirector data:person_frank_launder .
+
+data:person_bernadette_ofarrell a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bernadette O'Farrell" .
+
+data:person_frank_launder a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Frank Launder" ;
+    onto:hasSpouse data:person_bernadette_ofarrell .
+

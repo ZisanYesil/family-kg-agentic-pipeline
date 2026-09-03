@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/807/evaluation/entity_alignment/final_extracted_aligned_807.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/807/evaluation/entity_alignment/final_ground_truth_aligned_807.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Baton_Rouge",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Baton_Rouge",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Lil_Boosie",
+      "predicate": "hasBirthPlace",
+      "object": "Baton_Rouge",
+      "subject_uri": "http://example.org/entity/Lil_Boosie",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Baton_Rouge"
+    },
+    {
+      "subject": "Lil_Boosie",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Lil_Boosie",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Lil_Boosie",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Lil_Boosie",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Show_da_World",
+      "predicate": "hasCreator",
+      "object": "Lil_Boosie",
+      "subject_uri": "http://example.org/entity/Show_da_World",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Lil_Boosie"
+    },
+    {
+      "subject": "Show_da_World",
+      "predicate": "hasPerformer",
+      "object": "Lil_Boosie",
+      "subject_uri": "http://example.org/entity/Show_da_World",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Lil_Boosie"
+    },
+    {
+      "subject": "Show_da_World",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Show_da_World",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Show_da_World",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Show_da_World",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Show_da_World",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Show_da_World",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 9,
+    "true_positives": 8,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1": 0.9411764705882353
+  },
+  "stage": "post_inference"
+}

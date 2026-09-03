@@ -1,0 +1,33 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Blockade_1938_film a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:William_Dieterle ;
+    ex:hasDirector entity:William_Dieterle .
+
+entity:Woman_in_the_River a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Gerhard_Lamprecht ;
+    ex:hasDirector entity:Gerhard_Lamprecht .
+
+entity:American a ex:Country,
+        ex:Place .
+
+entity:Gerhard_Lamprecht a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:German ;
+    ex:hasCountry entity:German .
+
+entity:William_Dieterle a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:American,
+        entity:German ;
+    ex:hasCountry entity:American,
+        entity:German .
+
+entity:German a ex:Country,
+        ex:Place .
+

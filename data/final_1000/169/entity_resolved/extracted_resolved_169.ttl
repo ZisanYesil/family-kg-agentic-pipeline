@@ -1,0 +1,16 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:louis_i_prince_of_monaco a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis I, Prince of Monaco" ;
+    onto:hasSpouse data:catherine_charlotte_de_gramont .
+
+data:catherine_charlotte_de_gramont a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Catherine Charlotte de Gramont" ;
+    onto:hasDeathDate "1678-06-04"^^xsd:date .
+

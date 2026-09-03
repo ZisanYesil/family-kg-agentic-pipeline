@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/429/originals/extracted_429.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/429/ground_truth_429.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_beauties_on_motor_scooters": "http://example.org/entity/Beauties_on_Motor_Scooters",
+    "http://example.org/extracted/film_mamas_little_pirate": "http://example.org/entity/Mama_s_Little_Pirate"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_beauties_on_motor_scooters",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Beauties on Motor Scooters",
+          "source": "label"
+        },
+        {
+          "text": "film beauties on motor scooters",
+          "source": "uri"
+        }
+      ],
+      "context": "Beauties on Motor Scooters. has publication date: 1952.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Beauties_on_Motor_Scooters",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Beauties on Motor Scooters",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Beauties on Motor Scooters",
+        "extracted_source": "label",
+        "ground_truth_text": "Beauties on Motor Scooters",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7506234794855118
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_mamas_little_pirate",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mama's Little Pirate",
+          "source": "label"
+        },
+        {
+          "text": "film mamas little pirate",
+          "source": "uri"
+        }
+      ],
+      "context": "Mama's Little Pirate. has publication date: 1934.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mama_s_Little_Pirate",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mama s Little Pirate",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mama's Little Pirate",
+        "extracted_source": "label",
+        "ground_truth_text": "Mama s Little Pirate",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9785122871398926,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.992950975894928,
+      "graph_score": 0.992950975894928,
+      "margin": 0.7789718210697174
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

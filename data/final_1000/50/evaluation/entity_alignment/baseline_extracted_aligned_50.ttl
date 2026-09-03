@@ -1,0 +1,31 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/A_Soldier_s_Oath> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A Soldier's Oath" ;
+    onto:hasProducer <http://example.org/entity/William_Fox> .
+
+<http://example.org/entity/The_Criminal_1960_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Criminal" ;
+    onto:hasProducer <http://example.org/entity/Nat_Cohen> ;
+    skos:altLabel "The Criminal (1960 film)" .
+
+<http://example.org/entity/Nat_Cohen> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Nat Cohen" ;
+    onto:hasBirthDate "1905-12-23"^^xsd:date ;
+    onto:hasDeathDate "1988-02-10"^^xsd:date .
+
+<http://example.org/entity/William_Fox> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Fox" ;
+    onto:hasBirthDate "1879-01-01"^^xsd:date ;
+    onto:hasDeathDate "1952-05-08"^^xsd:date ;
+    skos:altLabel "Vilmos Fuchs",
+        "William Fox" .
+

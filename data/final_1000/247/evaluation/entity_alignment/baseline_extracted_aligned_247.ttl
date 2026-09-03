@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Elene_1753_17_June_1786_was_a_Georgia> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Elene of Georgia" ;
+    onto:hasChild <http://example.org/entity/Solomon_II_of_Imereti> ;
+    skos:altLabel "Elene",
+        "Helene" .
+
+<http://example.org/entity/Prince_Archil_of_Imereti> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Archil of Imereti" .
+
+<http://example.org/entity/Solomon_II_of_Imereti> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Solomon II of Imereti" ;
+    onto:hasFather <http://example.org/entity/Prince_Archil_of_Imereti> .
+

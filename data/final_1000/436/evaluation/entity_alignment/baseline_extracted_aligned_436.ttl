@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Red> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Red (2016 film)" ;
+    onto:hasDirector <http://example.org/entity/Branko_Tomovic> .
+
+<http://example.org/entity/Branko_Tomovic> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Branko Tomović" ;
+    onto:hasBirthPlace <http://example.org/entity/Münster> .
+
+<http://example.org/entity/Münster> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Münster, Germany" .
+

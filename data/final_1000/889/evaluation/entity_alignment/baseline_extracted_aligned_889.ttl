@@ -1,0 +1,25 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Henry_Goes_Arizona> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Henry Goes Arizona" ;
+    onto:hasDirector <http://example.org/entity/Edwin_L_Marin> .
+
+<http://example.org/entity/Tex_and_the_Lord_of_the_Deep> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Tex and the Lord of the Deep" ;
+    onto:hasDirector <http://example.org/entity/Duccio_Tessari> .
+
+<http://example.org/entity/Duccio_Tessari> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Duccio Tessari" ;
+    onto:hasDeathDate "1994-09-06"^^xsd:date .
+
+<http://example.org/entity/Edwin_L_Marin> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edwin L. Marin" ;
+    onto:hasDeathDate "1951-05-02"^^xsd:date .
+

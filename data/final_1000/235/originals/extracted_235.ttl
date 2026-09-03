@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:constantine_iii_scotland a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Constantine III of Scotland" ;
+    onto:hasFather data:cuilen .
+
+data:amlaib a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Amlaíb" .
+
+data:cuilen a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Cuilén" ;
+    onto:hasBrother data:amlaib .
+

@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1072
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:Stolen_Identity ex:hasDirector inst:Gunther_von_Fritsch .  # director
+inst:Them ex:hasDirector inst:Gordon_Douglas .  # director
+inst:Gunther_von_Fritsch ex:hasBirthDate "1906-07-15"^^xsd:date .  # date of birth -> "15 July 1906"
+inst:Gordon_Douglas_director ex:hasBirthDate "1907-12-15"^^xsd:date .  # date of birth -> "December 15, 1907"

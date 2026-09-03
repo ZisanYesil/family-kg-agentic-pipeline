@@ -1,0 +1,27 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Song_of_Arizona> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Song of Arizona" ;
+    onto:hasDirector <http://example.org/entity/Frank_McDonald> .
+
+<http://example.org/entity/Texas_Terrors> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Texas Terrors" ;
+    onto:hasDirector <http://example.org/entity/George_Sherman> .
+
+<http://example.org/entity/Frank_McDonald> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Frank McDonald" ;
+    onto:hasBirthDate "1899-11-09"^^xsd:date ;
+    onto:hasDeathDate "1980-03-08"^^xsd:date .
+
+<http://example.org/entity/George_Sherman> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George Sherman" ;
+    onto:hasBirthDate "1908-07-14"^^xsd:date ;
+    onto:hasDeathDate "1991-03-15"^^xsd:date .
+

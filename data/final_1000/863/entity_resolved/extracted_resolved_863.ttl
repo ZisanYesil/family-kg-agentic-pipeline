@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:louis_count_of_verdun a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis I, Count of Verdun" ;
+    onto:hasFather data:otto_i_count_of_chiny ;
+    skos:altLabel "Louis I" .
+
+data:gerberge_of_lorraine a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gerberge of Lorraine" .
+
+data:otto_i_count_of_chiny a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Otto I, Count of Chiny" ;
+    onto:hasMother data:gerberge_of_lorraine ;
+    skos:altLabel "Otto I" .
+

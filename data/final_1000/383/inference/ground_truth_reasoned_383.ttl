@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Vai_viegli_būt_jaunam a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Juris_Podnieks ;
+    ex:hasDirector entity:Juris_Podnieks .
+
+entity:VGIK a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+entity:Juris_Podnieks a ex:Agent,
+        ex:Person ;
+    ex:hasEducatedAt entity:VGIK .
+

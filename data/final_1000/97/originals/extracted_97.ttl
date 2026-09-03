@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:eduardo_conde a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Eduardo Conde" ;
+    onto:hasSpouse data:betty_lago .
+
+data:betty_lago a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Betty Lago" ;
+    onto:hasBirthPlace data:rio_de_janeiro ;
+    skos:altLabel "Elizabeth Lago Netto" .
+
+data:rio_de_janeiro a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Rio de Janeiro" .
+

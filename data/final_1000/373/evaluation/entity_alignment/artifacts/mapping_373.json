@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/373/originals/extracted_373.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/373/ground_truth_373.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/marie_louise_of_hesse_kassel": "http://example.org/entity/Marie_Louise_of_Hesse_Kassel",
+    "http://example.org/extracted/maria_amalia_of_courland": "http://example.org/entity/Maria_Amalia_of_Courland"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/maria_amalia_of_courland",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maria Anna Amalia of Courland",
+          "source": "altLabel"
+        },
+        {
+          "text": "Maria Amalia of Courland",
+          "source": "label"
+        }
+      ],
+      "context": "Maria Anna Amalia of Courland. has death date: 1711-06-16. inverse has mother: Marie Louise of Hesse-Kassel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maria_Amalia_of_Courland",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maria Amalia of Courland",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maria Amalia of Courland",
+        "extracted_source": "label",
+        "ground_truth_text": "Maria Amalia of Courland",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9750140309333801,
+      "graph_score": 0.9875069856643677,
+      "margin": 0.5492307841777802
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/marie_louise_of_hesse_kassel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marie Louise of Hesse-Kassel",
+          "source": "label"
+        },
+        {
+          "text": "marie louise of hesse kassel",
+          "source": "uri"
+        }
+      ],
+      "context": "Marie Louise of Hesse-Kassel. has mother: Maria Anna Amalia of Courland.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marie_Louise_of_Hesse_Kassel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marie Louise of Hesse Kassel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marie Louise of Hesse-Kassel",
+        "extracted_source": "label",
+        "ground_truth_text": "Marie Louise of Hesse Kassel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9858493208885193,
+      "string_score": 0.9839285612106323,
+      "independent_identity_support": true,
+      "context_score": 0.9718258380889893,
+      "graph_score": 0.9859129190444946,
+      "margin": 0.569869875907898
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

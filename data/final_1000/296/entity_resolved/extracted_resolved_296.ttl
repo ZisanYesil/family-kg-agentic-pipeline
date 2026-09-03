@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:stanislaw_antoni_potocki a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Stanisław Antoni Potocki" ;
+    onto:hasChild data:jan_nepomucen_potocki .
+
+data:jan_nepomucen_potocki a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jan Nepomucen Potocki" ;
+    onto:hasSpouse data:maria_szajer,
+        data:roza_maria_wodzicka .
+
+data:maria_szajer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Maria Szajer" .
+
+data:roza_maria_wodzicka a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Róża Maria Wodzicka" .
+

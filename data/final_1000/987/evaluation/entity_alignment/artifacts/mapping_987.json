@@ -1,0 +1,146 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/987/originals/extracted_987.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/987/ground_truth_987.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_glimpses_impressions": "http://example.org/entity/Glimpses_Impressions",
+    "http://example.org/extracted/person_jean_francois_pouliot": "http://example.org/entity/Jean_François_Pouliot"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_glimpses_impressions",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Glimpses/Impressions",
+          "source": "label"
+        },
+        {
+          "text": "film glimpses impressions",
+          "source": "uri"
+        }
+      ],
+      "context": "Glimpses/Impressions. has director: Jean-François Pouliot.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Glimpses_Impressions",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Glimpses Impressions",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Glimpses/Impressions",
+        "extracted_source": "label",
+        "ground_truth_text": "Glimpses Impressions",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9377480149269104,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.9760065674781799,
+      "graph_score": 0.9880032539367676,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_jean_francois_pouliot",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jean-François Pouliot",
+          "source": "label"
+        },
+        {
+          "text": "person jean francois pouliot",
+          "source": "uri"
+        }
+      ],
+      "context": "Jean-François Pouliot. inverse has director: Glimpses/Impressions. inverse has member: Cossette Communication Marketing.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jean_François_Pouliot",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jean François Pouliot",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jean-François Pouliot",
+        "extracted_source": "label",
+        "ground_truth_text": "Jean François Pouliot",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9768319129943848,
+      "string_score": 0.9785714149475098,
+      "independent_identity_support": true,
+      "context_score": 0.75018709897995,
+      "graph_score": 0.8750935792922974,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/organization_cossette_communication_marketing",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cossette Communication Marketing",
+          "source": "label"
+        },
+        {
+          "text": "organization cossette communication marketing",
+          "source": "uri"
+        }
+      ],
+      "context": "Cossette Communication Marketing. has member: Jean-François Pouliot.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/National_Film_Board"
+  ]
+}

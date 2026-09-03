@@ -1,0 +1,184 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/842/originals/extracted_842.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/842/ground_truth_842.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/deh_baneh_ye_eslamabad": "http://example.org/entity/Deh_Baneh_ye_Eslamabad",
+    "http://example.org/extracted/satau": "http://example.org/entity/Satau",
+    "http://example.org/extracted/iran": "http://example.org/entity/Iran",
+    "http://example.org/extracted/botswana": "http://example.org/entity/Botswana"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/botswana",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Botswana",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Botswana. inverse has country: Satau.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Botswana",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Botswana",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Botswana",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Botswana",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.670853316783905
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/deh_baneh_ye_eslamabad",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Deh Baneh-ye Eslamabad",
+          "source": "altLabel"
+        },
+        {
+          "text": "deh baneh ye eslamabad",
+          "source": "uri"
+        }
+      ],
+      "context": "Deh Baneh-ye Eslamabad. has country: Iran.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Deh_Baneh_ye_Eslamabad",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Deh Baneh ye Eslamabad",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Deh Baneh-ye Eslamabad",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Deh Baneh ye Eslamabad",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8553251028060913,
+      "string_score": 0.9795454740524292,
+      "independent_identity_support": true,
+      "context_score": 0.9913244247436523,
+      "graph_score": 0.9956622123718262,
+      "margin": 0.7132660448551178
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/iran",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Iran",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Iran. inverse has country: Deh Baneh-ye Eslamabad.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Iran",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Iran",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Iran",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Iran",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9935088157653809,
+      "graph_score": 0.9967544078826904,
+      "margin": 0.6727763414382935
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/satau",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Satau",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Satau. has country: Botswana.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Satau",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Satau",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Satau",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Satau",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6914269328117371
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

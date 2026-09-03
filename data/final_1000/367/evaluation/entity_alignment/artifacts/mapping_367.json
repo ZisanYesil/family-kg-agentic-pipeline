@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/367/originals/extracted_367.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/367/ground_truth_367.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/kpac_lalitha_person": "http://example.org/entity/K_P_A_C_Lalitha",
+    "http://example.org/extracted/sidharth_bharathan_person": "http://example.org/entity/Sidharth_Bharathan",
+    "http://example.org/extracted/varnyathil_aashanka_film": "http://example.org/entity/Varnyathil_Aashanka"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/kpac_lalitha_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "K. P. A. C. Lalitha",
+          "source": "label"
+        },
+        {
+          "text": "kpac lalitha person",
+          "source": "uri"
+        }
+      ],
+      "context": "K. P. A. C. Lalitha. inverse has mother: Sidharth Bharathan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/K_P_A_C_Lalitha",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "K P A C Lalitha",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "K. P. A. C. Lalitha",
+        "extracted_source": "label",
+        "ground_truth_text": "K P A C Lalitha",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9100238680839539,
+      "string_score": 0.9470587968826294,
+      "independent_identity_support": true,
+      "context_score": 0.9725551009178162,
+      "graph_score": 0.9862775802612305,
+      "margin": 0.5260803997516632
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sidharth_bharathan_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sidharth Bharathan",
+          "source": "label"
+        },
+        {
+          "text": "sidharth bharathan person",
+          "source": "uri"
+        }
+      ],
+      "context": "Sidharth Bharathan. has mother: K. P. A. C. Lalitha. inverse has director: Varnyathil Aashanka.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sidharth_Bharathan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sidharth Bharathan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sidharth Bharathan",
+        "extracted_source": "label",
+        "ground_truth_text": "Sidharth Bharathan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9822263121604919,
+      "graph_score": 0.9911131858825684,
+      "margin": 0.5374745428562164
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/varnyathil_aashanka_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Varnyathil Aashanka",
+          "source": "label"
+        },
+        {
+          "text": "varnyathil aashanka film",
+          "source": "uri"
+        }
+      ],
+      "context": "Varnyathil Aashanka. has director: Sidharth Bharathan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Varnyathil_Aashanka",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Varnyathil Aashanka",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Varnyathil Aashanka",
+        "extracted_source": "label",
+        "ground_truth_text": "Varnyathil Aashanka",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

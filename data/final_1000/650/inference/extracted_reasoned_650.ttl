@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/ateneo_de_manila_university> a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+<http://example.org/extracted/mikey_arroyo> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/extracted/gloria_arroyo> ;
+    ex:hasParent <http://example.org/extracted/gloria_arroyo> .
+
+<http://example.org/extracted/gloria_arroyo> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/mikey_arroyo> ;
+    ex:hasEmployer <http://example.org/extracted/ateneo_de_manila_university> .
+

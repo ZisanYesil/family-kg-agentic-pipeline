@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/477/originals/extracted_477.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/477/ground_truth_477.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/album_pleasure_victim": "http://example.org/entity/Pleasure_Victim",
+    "http://example.org/extracted/album_stands_for_decibels": "http://example.org/entity/Stands_for_Decibels"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/album_pleasure_victim",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pleasure Victim",
+          "source": "label"
+        },
+        {
+          "text": "album pleasure victim",
+          "source": "uri"
+        }
+      ],
+      "context": "Pleasure Victim. has publication date: 1982.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pleasure_Victim",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pleasure Victim",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pleasure Victim",
+        "extracted_source": "label",
+        "ground_truth_text": "Pleasure Victim",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9594837427139282,
+      "graph_score": 0.9594837427139282,
+      "margin": 0.8593844175338745
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/album_stands_for_decibels",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stands for Decibels",
+          "source": "label"
+        },
+        {
+          "text": "album stands for decibels",
+          "source": "uri"
+        }
+      ],
+      "context": "Stands for Decibels. has publication date: 1981.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stands_for_Decibels",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stands for Decibels",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stands for Decibels",
+        "extracted_source": "label",
+        "ground_truth_text": "Stands for Decibels",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.8397172391414642
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,185 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/160/originals/extracted_160.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/160/ground_truth_160.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/france": "http://example.org/entity/French"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        }
+      ],
+      "context": "French. inverse has country: Guilty.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/French",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "French",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "French",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "French",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8065391182899475,
+      "graph_score": 0.8065391182899475,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/fanfares_of_love_1951",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fanfares of Love",
+          "source": "label"
+        },
+        {
+          "text": "fanfares of love 1951",
+          "source": "uri"
+        }
+      ],
+      "context": "Fanfares of Love. has country: West German.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fanfare_of_Love",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fanfare of Love",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fanfares of Love",
+        "extracted_source": "label",
+        "ground_truth_text": "Fanfare of Love",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7630573511123657,
+      "name_embedding_score": 0.9718972444534302,
+      "string_score": 0.7604838609695435,
+      "independent_identity_support": true,
+      "context_score": 0.6959019899368286,
+      "graph_score": 0.3479509949684143,
+      "margin": 0.5565369725227356
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/guilty_2011",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Guilty",
+          "source": "label"
+        },
+        {
+          "text": "guilty 2011",
+          "source": "uri"
+        }
+      ],
+      "context": "Guilty. has country: French.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Guilty_2011_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Guilty 2011 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "guilty 2011",
+        "extracted_source": "uri",
+        "ground_truth_text": "Guilty 2011 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7396260499954224,
+      "name_embedding_score": 0.8497752547264099,
+      "string_score": 0.8333333134651184,
+      "independent_identity_support": true,
+      "context_score": 0.851240873336792,
+      "graph_score": 0.425620436668396,
+      "margin": 0.5808520615100861
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/west_germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "West German",
+          "source": "altLabel"
+        },
+        {
+          "text": "West Germany",
+          "source": "label"
+        }
+      ],
+      "context": "West German. inverse has country: Fanfares of Love.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

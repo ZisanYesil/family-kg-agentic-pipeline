@@ -1,0 +1,22 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Fine_by_Me> a ex:Artifact,
+        ex:CreativeWork ;
+    ex:hasCreator <http://example.org/entity/Chris_Brown> ;
+    ex:hasPerformer <http://example.org/entity/Chris_Brown> .
+
+<http://example.org/entity/Grammy_Award_for_Best_R_B_Album> a ex:Award .
+
+<http://example.org/extracted/bet_award> a ex:Award .
+
+<http://example.org/extracted/billboard_music_award> a ex:Award .
+
+<http://example.org/extracted/soul_train_award> a ex:Award .
+
+<http://example.org/entity/Chris_Brown> a ex:Agent,
+        ex:Person ;
+    ex:hasAwardReceived <http://example.org/entity/Grammy_Award_for_Best_R_B_Album>,
+        <http://example.org/extracted/bet_award>,
+        <http://example.org/extracted/billboard_music_award>,
+        <http://example.org/extracted/soul_train_award> .
+

@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/226/originals/extracted_226.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/226/ground_truth_226.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/harald_ii_of_denmark": "http://example.org/entity/Harald_II_of_Denmark",
+    "http://example.org/extracted/poland": "http://example.org/entity/Polish",
+    "http://example.org/extracted/gunhild_of_wenden": "http://example.org/entity/Gunhild_of_Wenden"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gunhild_of_wenden",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gunhilda of Wenden",
+          "source": "altLabel"
+        },
+        {
+          "text": "Gunhild of Wenden",
+          "source": "label"
+        }
+      ],
+      "context": "Gunhilda of Wenden. has nationality: Polish. inverse has mother: Harald II of Denmark.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gunhild_of_Wenden",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gunhild of Wenden",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gunhild of Wenden",
+        "extracted_source": "label",
+        "ground_truth_text": "Gunhild of Wenden",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9555245637893677,
+      "graph_score": 0.6444289684295654,
+      "margin": 0.585618793964386
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/harald_ii_of_denmark",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Harald II of Denmark",
+          "source": "label"
+        }
+      ],
+      "context": "Harald II of Denmark. has mother: Gunhilda of Wenden.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Harald_II_of_Denmark",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Harald II of Denmark",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Harald II of Denmark",
+        "extracted_source": "label",
+        "ground_truth_text": "Harald II of Denmark",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9851810336112976,
+      "graph_score": 0.9925905466079712,
+      "margin": 0.5876261591911316
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/poland",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Polish",
+          "source": "altLabel"
+        },
+        {
+          "text": "Poland",
+          "source": "label"
+        }
+      ],
+      "context": "Polish. inverse has nationality: Gunhilda of Wenden.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Polish",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Polish",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Polish",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Polish",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8989577889442444,
+      "graph_score": 0.4494788944721222,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

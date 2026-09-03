@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/674/originals/extracted_674.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/674/ground_truth_674.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_jim_wynorski": "http://example.org/entity/Jim_Wynorski",
+    "http://example.org/extracted/film_976_evil_ii": "http://example.org/entity/976_EVIL_II"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_976_evil_ii",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "976-EVIL II",
+          "source": "label"
+        },
+        {
+          "text": "film 976 evil ii",
+          "source": "uri"
+        }
+      ],
+      "context": "976-EVIL II. has director: Jim Wynorski.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/976_EVIL_II",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "976 EVIL II",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "976-EVIL II",
+        "extracted_source": "label",
+        "ground_truth_text": "976 EVIL II",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9832987189292908,
+      "string_score": 0.9590908885002136,
+      "independent_identity_support": true,
+      "context_score": 0.9852780103683472,
+      "graph_score": 0.9926390051841736,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_jim_wynorski",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jim Wynorski",
+          "source": "label"
+        },
+        {
+          "text": "person jim wynorski",
+          "source": "uri"
+        }
+      ],
+      "context": "Jim Wynorski. has birth place: Glen Cove, Long Island, New York. inverse has director: 976-EVIL II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jim_Wynorski",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jim Wynorski",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jim Wynorski",
+        "extracted_source": "label",
+        "ground_truth_text": "Jim Wynorski",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8521779775619507,
+      "graph_score": 0.9260889887809753,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_glen_cove_new_york",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Glen Cove, Long Island, New York",
+          "source": "label"
+        },
+        {
+          "text": "place glen cove new york",
+          "source": "uri"
+        }
+      ],
+      "context": "Glen Cove, Long Island, New York. inverse has birth place: Jim Wynorski.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/New_York",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "New York",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "place glen cove new york",
+        "extracted_source": "uri",
+        "ground_truth_text": "New York",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7182599306106567,
+      "name_embedding_score": 0.6788422465324402,
+      "string_score": 0.625,
+      "independent_identity_support": false,
+      "context_score": 0.7807105779647827,
+      "graph_score": 0.8903552889823914,
+      "margin": 0.7182599306106567
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

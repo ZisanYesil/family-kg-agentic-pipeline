@@ -1,0 +1,14 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Donatus_Prince_and_Landgrave_of_Hesse a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Moritz_Landgrave_of_Hesse ;
+    ex:hasParent entity:Moritz_Landgrave_of_Hesse .
+
+entity:Moritz_Landgrave_of_Hesse a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1926-08-06"^^xsd:date ;
+    ex:hasChild entity:Donatus_Prince_and_Landgrave_of_Hesse .
+

@@ -1,0 +1,134 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/371/originals/extracted_371.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/371/ground_truth_371.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/agrippina_the_elder": "http://example.org/entity/Agrippina_the_Elder",
+    "http://example.org/extracted/julia_drusilla": "http://example.org/entity/Julia_Drusilla"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/agrippina_the_elder",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Agrippina the Elder",
+          "source": "label"
+        }
+      ],
+      "context": "Agrippina the Elder. inverse has mother: Caligula.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Agrippina_the_Elder",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Agrippina the Elder",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Agrippina the Elder",
+        "extracted_source": "label",
+        "ground_truth_text": "Agrippina the Elder",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.781237006187439,
+      "graph_score": 0.781237006187439,
+      "margin": 0.6776406168937683
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/julia_drusilla",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Julia Drusilla",
+          "source": "label"
+        }
+      ],
+      "context": "Julia Drusilla. has father: Caligula.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Julia_Drusilla",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Julia Drusilla",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Julia Drusilla",
+        "extracted_source": "label",
+        "ground_truth_text": "Julia Drusilla",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7081006765365601,
+      "graph_score": 0.7081006765365601,
+      "margin": 0.7066301107406616
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/caligula",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Caligula",
+          "source": "label"
+        }
+      ],
+      "context": "Caligula. has mother: Agrippina the Elder. inverse has father: Julia Drusilla.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Gaius"
+  ]
+}

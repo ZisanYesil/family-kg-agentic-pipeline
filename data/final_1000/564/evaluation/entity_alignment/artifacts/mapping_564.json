@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/564/originals/extracted_564.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/564/ground_truth_564.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/abdulaziz": "http://example.org/entity/Abdülaziz",
+    "http://example.org/extracted/hayranidil_kadin": "http://example.org/entity/Hayranidil_Kadın"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/abdulaziz",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Abdülaziz",
+          "source": "label"
+        },
+        {
+          "text": "abdulaziz",
+          "source": "uri"
+        }
+      ],
+      "context": "Abdülaziz. has birth date: 1830-02-08. has death date: 1876-06-04. inverse has spouse: Hayranidil Kadın.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Abdülaziz",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Abdülaziz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Abdülaziz",
+        "extracted_source": "label",
+        "ground_truth_text": "Abdülaziz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7566595673561096,
+      "graph_score": 0.8783297538757324,
+      "margin": 0.6381109356880188
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/hayranidil_kadin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hayranidil Kadın",
+          "source": "label"
+        },
+        {
+          "text": "hayranidil kadin",
+          "source": "uri"
+        }
+      ],
+      "context": "Hayranidil Kadın. has spouse: Abdülaziz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hayranidil_Kadın",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hayranidil Kadın",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hayranidil Kadın",
+        "extracted_source": "label",
+        "ground_truth_text": "Hayranidil Kadın",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7405263781547546
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Constantinople"
+  ]
+}

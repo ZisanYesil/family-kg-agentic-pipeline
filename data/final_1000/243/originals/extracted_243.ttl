@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:song_hard_time_loving_you a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Hard Time Loving You" ;
+    onto:hasPerformer data:julian_austin .
+
+data:julian_austin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Julian Austin" ;
+    onto:hasBirthPlace data:sussex_new_brunswick .
+
+data:sussex_new_brunswick a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Sussex, New Brunswick" .
+

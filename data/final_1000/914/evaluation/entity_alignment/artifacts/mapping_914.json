@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/914/originals/extracted_914.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/914/ground_truth_914.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_bernadette_ofarrell": "http://example.org/entity/Bernadette_O_Farrell",
+    "http://example.org/extracted/person_frank_launder": "http://example.org/entity/Frank_Launder",
+    "http://example.org/extracted/film_the_belles_of_st_trinians_1954": "http://example.org/entity/The_Belles_of_St_Trinian_s"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_belles_of_st_trinians_1954",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Belles of St. Trinian's",
+          "source": "label"
+        },
+        {
+          "text": "film the belles of st trinians 1954",
+          "source": "uri"
+        }
+      ],
+      "context": "The Belles of St. Trinian's. has director: Frank Launder.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Belles_of_St_Trinian_s",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Belles of St Trinian s",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Belles of St. Trinian's",
+        "extracted_source": "label",
+        "ground_truth_text": "The Belles of St Trinian s",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9789535999298096,
+      "string_score": 0.9745283126831055,
+      "independent_identity_support": true,
+      "context_score": 0.9868460297584534,
+      "graph_score": 0.9934229850769043,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_bernadette_ofarrell",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bernadette O'Farrell",
+          "source": "label"
+        },
+        {
+          "text": "person bernadette ofarrell",
+          "source": "uri"
+        }
+      ],
+      "context": "Bernadette O'Farrell. inverse has spouse: Frank Launder.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bernadette_O_Farrell",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bernadette O Farrell",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bernadette O'Farrell",
+        "extracted_source": "label",
+        "ground_truth_text": "Bernadette O Farrell",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9525761008262634,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.9799234867095947,
+      "graph_score": 0.9899617433547974,
+      "margin": 0.7176395356655121
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_frank_launder",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Frank Launder",
+          "source": "label"
+        },
+        {
+          "text": "person frank launder",
+          "source": "uri"
+        }
+      ],
+      "context": "Frank Launder. has spouse: Bernadette O'Farrell. inverse has director: The Belles of St. Trinian's.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Frank_Launder",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Frank Launder",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Frank Launder",
+        "extracted_source": "label",
+        "ground_truth_text": "Frank Launder",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9773247241973877,
+      "graph_score": 0.9886623620986938,
+      "margin": 0.6914982199668884
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

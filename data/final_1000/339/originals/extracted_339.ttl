@@ -1,0 +1,27 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:creditors_2015_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Creditors (2015 film)" ;
+    onto:hasDirector data:ben_cura .
+
+data:argentina a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Argentina" ;
+    skos:altLabel "Argentine" .
+
+data:ben_cura a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ben Cura" ;
+    onto:hasNationality data:argentina,
+        data:united_kingdom .
+
+data:united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "British" .
+

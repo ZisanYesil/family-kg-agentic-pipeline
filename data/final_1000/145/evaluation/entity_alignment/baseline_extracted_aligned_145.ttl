@@ -1,0 +1,25 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/If_Dog_Rabbit> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "If... Dog... Rabbit..." ;
+    onto:hasCountry <http://example.org/entity/American> .
+
+<http://example.org/entity/The_Clan_2015_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Clan (2015 film)" ;
+    onto:hasCountry <http://example.org/entity/Argentine> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/Argentine> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Argentina" ;
+    skos:altLabel "Argentine" .
+

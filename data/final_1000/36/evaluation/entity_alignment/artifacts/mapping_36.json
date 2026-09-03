@@ -1,0 +1,113 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/36/originals/extracted_36.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/36/ground_truth_36.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/benjamin_nottingham_webster_1797": "http://example.org/entity/Benjamin_Nottingham_Webster"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/benjamin_nottingham_webster_1797",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Benjamin Nottingham Webster",
+          "source": "altLabel"
+        },
+        {
+          "text": "benjamin nottingham webster 1797",
+          "source": "uri"
+        }
+      ],
+      "context": "Benjamin Nottingham Webster. has birth date: 1797-09-03. has death date: 1882-07-03.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Benjamin_Nottingham_Webster",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Benjamin Nottingham Webster",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Benjamin Nottingham Webster",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Benjamin Nottingham Webster",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6857987642288208
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jan_huchtenburg_1647",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jan van Huchtenburg",
+          "source": "altLabel"
+        },
+        {
+          "text": "jan huchtenburg 1647",
+          "source": "uri"
+        }
+      ],
+      "context": "Jan van Huchtenburg. has birth date: 1647-11-20. has death date: 1733-07-02.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Huchtenburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Huchtenburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jan van Huchtenburg",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Huchtenburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8054591417312622,
+      "name_embedding_score": 0.8319381475448608,
+      "string_score": 0.7133333086967468,
+      "independent_identity_support": true,
+      "context_score": 0.8446269035339355,
+      "graph_score": 0.8446269035339355,
+      "margin": 0.3974473178386688
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

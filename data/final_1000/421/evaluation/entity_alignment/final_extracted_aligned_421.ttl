@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Gwendolyn_Graham> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/entity/Bob_Graham> ;
+    ex:hasParent <http://example.org/entity/Bob_Graham> .
+
+<http://example.org/extracted/bob_graham_center> a ex:Agent,
+        ex:Organization .
+
+<http://example.org/entity/Bob_Graham> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Gwendolyn_Graham> ;
+    ex:hasEmployer <http://example.org/extracted/bob_graham_center> .
+

@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:duchess_maria_dorothea_wurttemberg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Duchess Maria Dorothea of Württemberg" ;
+    onto:hasFather data:duke_louis_wurttemberg ;
+    skos:altLabel "Maria Dorothea Luise Wilhelmine Caroline" .
+
+data:duke_louis_wurttemberg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Duke Louis of Württemberg" ;
+    onto:hasDeathPlace data:kirchheim_unter_teck ;
+    skos:altLabel "Louis Friedrich Alexander" .
+
+data:kirchheim_unter_teck a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Kirchheim unter Teck" .
+

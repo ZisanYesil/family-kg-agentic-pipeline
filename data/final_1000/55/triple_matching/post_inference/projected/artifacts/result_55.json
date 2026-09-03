@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/55/evaluation/entity_alignment/final_extracted_aligned_55.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/55/evaluation/entity_alignment/final_ground_truth_aligned_55.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Carl_Gustaf_Creutz",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Carl_Gustaf_Creutz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Carl_Gustaf_Creutz",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Carl_Gustaf_Creutz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Lorentz_Creutz",
+      "predicate": "hasDeathPlace",
+      "object": "Öland",
+      "subject_uri": "http://example.org/entity/Lorentz_Creutz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Öland"
+    },
+    {
+      "subject": "Lorentz_Creutz",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Lorentz_Creutz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Lorentz_Creutz",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Lorentz_Creutz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Öland",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Öland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Carl_Gustaf_Creutz",
+      "predicate": "hasParent",
+      "object": "Lorentz_Creutz",
+      "subject_uri": "http://example.org/entity/Carl_Gustaf_Creutz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Lorentz_Creutz"
+    },
+    {
+      "subject": "Lorentz_Creutz",
+      "predicate": "hasChild",
+      "object": "Carl_Gustaf_Creutz",
+      "subject_uri": "http://example.org/entity/Lorentz_Creutz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Carl_Gustaf_Creutz"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Carl_Gustaf_Creutz",
+      "predicate": "hasChild",
+      "object": "Lorentz_Creutz",
+      "subject_uri": "http://example.org/entity/Carl_Gustaf_Creutz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Lorentz_Creutz"
+    },
+    {
+      "subject": "Lorentz_Creutz",
+      "predicate": "hasParent",
+      "object": "Carl_Gustaf_Creutz",
+      "subject_uri": "http://example.org/entity/Lorentz_Creutz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Carl_Gustaf_Creutz"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 10,
+    "true_positives": 6,
+    "false_positives": 2,
+    "false_negatives": 2,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75
+  },
+  "stage": "post_inference"
+}

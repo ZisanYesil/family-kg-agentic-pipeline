@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/614/originals/extracted_614.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/614/ground_truth_614.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bratuku_teruvu": "http://example.org/entity/Bratuku_Teruvu",
+    "http://example.org/extracted/p_s_ramakrishna_rao": "http://example.org/entity/P_S_Ramakrishna_Rao",
+    "http://example.org/extracted/bhanumathi_ramakrishna": "http://example.org/entity/Bhanumathi_Ramakrishna"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bhanumathi_ramakrishna",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bhanumathi Ramakrishna",
+          "source": "label"
+        }
+      ],
+      "context": "Bhanumathi Ramakrishna. inverse has spouse: P. S. Ramakrishna Rao.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bhanumathi_Ramakrishna",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bhanumathi Ramakrishna",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bhanumathi Ramakrishna",
+        "extracted_source": "label",
+        "ground_truth_text": "Bhanumathi Ramakrishna",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9929987788200378,
+      "graph_score": 0.9964994192123413,
+      "margin": 0.33402276039123535
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/bratuku_teruvu",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bratuku Teruvu",
+          "source": "label"
+        }
+      ],
+      "context": "Bratuku Teruvu. has director: P. S. Ramakrishna Rao.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bratuku_Teruvu",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bratuku Teruvu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bratuku Teruvu",
+        "extracted_source": "label",
+        "ground_truth_text": "Bratuku Teruvu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9944514632225037,
+      "graph_score": 0.9972257614135742,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/p_s_ramakrishna_rao",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "P. S. Ramakrishna Rao",
+          "source": "label"
+        },
+        {
+          "text": "p s ramakrishna rao",
+          "source": "uri"
+        }
+      ],
+      "context": "P. S. Ramakrishna Rao. has birth date: 1918-10-12. has death date: 1986-09-07. has spouse: Bhanumathi Ramakrishna. inverse has director: Bratuku Teruvu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/P_S_Ramakrishna_Rao",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "P S Ramakrishna Rao",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "P. S. Ramakrishna Rao",
+        "extracted_source": "label",
+        "ground_truth_text": "P S Ramakrishna Rao",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.987045407295227,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.8275021910667419,
+      "graph_score": 0.9137511253356934,
+      "margin": 0.36021488904953003
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

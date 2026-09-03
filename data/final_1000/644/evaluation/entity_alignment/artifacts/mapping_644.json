@@ -1,0 +1,143 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/644/originals/extracted_644.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/644/ground_truth_644.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bonne_of_bohemia": "http://example.org/entity/Bonne_of_Bohemia"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bonne_of_bohemia",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bonne of Bohemia",
+          "source": "label"
+        }
+      ],
+      "context": "Bonne of Bohemia. inverse has mother: Louis I of Anjou.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bonne_of_Bohemia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bonne of Bohemia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bonne of Bohemia",
+        "extracted_source": "label",
+        "ground_truth_text": "Bonne of Bohemia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9005777835845947,
+      "graph_score": 0.9005777835845947,
+      "margin": 0.5508968234062195
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/marie_of_blois",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marie of Blois",
+          "source": "label"
+        }
+      ],
+      "context": "Marie of Blois. has spouse: Louis I of Anjou.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marie_of_Blois_Duchess_of_Anjou",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marie of Blois Duchess of Anjou",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marie of Blois",
+        "extracted_source": "label",
+        "ground_truth_text": "Marie of Blois Duchess of Anjou",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8447732925415039,
+      "name_embedding_score": 0.8419473171234131,
+      "string_score": 0.7300000190734863,
+      "independent_identity_support": true,
+      "context_score": 0.9651983976364136,
+      "graph_score": 0.9651983976364136,
+      "margin": 0.4198288917541504
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_i_of_anjou",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis I of Anjou",
+          "source": "label"
+        }
+      ],
+      "context": "Louis I of Anjou. has mother: Bonne of Bohemia. inverse has spouse: Marie of Blois.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_I",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis I",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis I of Anjou",
+        "extracted_source": "label",
+        "ground_truth_text": "Louis I",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8215377330780029,
+      "name_embedding_score": 0.7982581257820129,
+      "string_score": 0.698913037776947,
+      "independent_identity_support": false,
+      "context_score": 0.9814434051513672,
+      "graph_score": 0.9907217025756836,
+      "margin": 0.24860334396362305
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

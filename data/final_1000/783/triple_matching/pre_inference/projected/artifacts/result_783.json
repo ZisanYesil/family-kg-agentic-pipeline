@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/783/evaluation/entity_alignment/baseline_extracted_aligned_783.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/783/evaluation/entity_alignment/baseline_ground_truth_aligned_783.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Gianni_Versace",
+      "predicate": "hasDeathPlace",
+      "object": "Miami_Beach",
+      "subject_uri": "http://example.org/entity/Gianni_Versace",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Miami_Beach"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Versus",
+      "predicate": "hasFounder",
+      "object": "Gianni_Versace",
+      "subject_uri": "http://example.org/entity/Versus",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Gianni_Versace"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Gianni_Versace",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gianni_Versace",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Gianni_Versace",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gianni_Versace",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gianni_Versace",
+      "predicate": "label",
+      "object": "\"Gianni Versace\"",
+      "subject_uri": "http://example.org/entity/Gianni_Versace",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gianni Versace\""
+    },
+    {
+      "subject": "Gianni_Versace",
+      "predicate": "altLabel",
+      "object": "\"Giovanni Maria Versace\"",
+      "subject_uri": "http://example.org/entity/Gianni_Versace",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Giovanni Maria Versace\""
+    },
+    {
+      "subject": "Miami_Beach",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Miami_Beach",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Miami_Beach",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Miami_Beach",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Miami_Beach",
+      "predicate": "label",
+      "object": "\"Casa Casuarina\"",
+      "subject_uri": "http://example.org/entity/Miami_Beach",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Casa Casuarina\""
+    },
+    {
+      "subject": "Miami_Beach",
+      "predicate": "altLabel",
+      "object": "\"Miami Beach mansion Casa Casuarina\"",
+      "subject_uri": "http://example.org/entity/Miami_Beach",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Miami Beach mansion Casa Casuarina\""
+    },
+    {
+      "subject": "versus_versace_artifact",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/extracted/versus_versace_artifact",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "versus_versace_artifact",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/versus_versace_artifact",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "versus_versace_artifact",
+      "predicate": "label",
+      "object": "\"Versus (Versace)\"",
+      "subject_uri": "http://example.org/extracted/versus_versace_artifact",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Versus (Versace)\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 1,
+    "false_positives": 11,
+    "false_negatives": 1,
+    "precision": 0.08333333333333333,
+    "recall": 0.5,
+    "f1": 0.14285714285714285
+  },
+  "stage": "pre_inference"
+}

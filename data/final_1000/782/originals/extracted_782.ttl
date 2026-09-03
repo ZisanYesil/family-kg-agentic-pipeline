@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:jan_karol_opalinski a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jan Karol Opaliński" ;
+    onto:hasFather data:krzysztof_opalinski .
+
+data:krzysztof_opalinski a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Krzysztof Opaliński" ;
+    onto:hasNationality data:poland .
+
+data:poland a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Poland" ;
+    skos:altLabel "Polish" .
+

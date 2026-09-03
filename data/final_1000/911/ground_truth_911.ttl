@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1063
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:The_Shadow_of_Nazareth ex:hasDirector inst:Arthur_Maude .  # director
+inst:Berlin_Jerusalem ex:hasDirector inst:Amos_Gitai .  # director
+inst:Arthur_Maude ex:hasBirthDate "1880-07-23"^^xsd:date .  # date of birth -> "23 July 1880"
+inst:Amos_Gitai ex:hasBirthDate "1950-10-11"^^xsd:date .  # date of birth -> "11 October 1950"

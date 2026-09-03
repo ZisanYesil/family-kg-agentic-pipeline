@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/460/evaluation/entity_alignment/baseline_extracted_aligned_460.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/460/evaluation/entity_alignment/baseline_ground_truth_aligned_460.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Jean_Armand_Charlemagne",
+      "predicate": "hasBirthDate",
+      "object": "\"1753-11-30\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Jean_Armand_Charlemagne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1753-11-30\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Jean_Armand_Charlemagne",
+      "predicate": "hasDeathDate",
+      "object": "\"1838-03-06\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Jean_Armand_Charlemagne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1838-03-06\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "predicate": "hasBirthDate",
+      "object": "\"1724-10-30\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1724-10-30\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "predicate": "hasDeathDate",
+      "object": "\"1812-04-08\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1812-04-08\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Jean_Armand_Charlemagne",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jean_Armand_Charlemagne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jean_Armand_Charlemagne",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jean_Armand_Charlemagne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jean_Armand_Charlemagne",
+      "predicate": "label",
+      "object": "\"Jean Armand Charlemagne\"",
+      "subject_uri": "http://example.org/entity/Jean_Armand_Charlemagne",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jean Armand Charlemagne\""
+    },
+    {
+      "subject": "John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "predicate": "label",
+      "object": "\"John Ashburnham, 2nd Earl of Ashburnham\"",
+      "subject_uri": "http://example.org/entity/John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"John Ashburnham, 2nd Earl of Ashburnham\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 10,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715
+  },
+  "stage": "pre_inference"
+}

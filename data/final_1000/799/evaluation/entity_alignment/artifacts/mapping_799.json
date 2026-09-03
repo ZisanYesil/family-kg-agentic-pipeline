@@ -1,0 +1,167 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/799/originals/extracted_799.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/799/ground_truth_799.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bad_homburg_vor_der_hoehe": "http://example.org/entity/Bad_Homburg_vor_der_Höhe",
+    "http://example.org/extracted/george_bernhard_of_anhalt_dessau": "http://example.org/entity/George_Bernhard_of_Anhalt_Dessau"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 2,
+    "review": 1,
+    "unmatched": 0,
+    "unmatched_ground_truth": 2
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bad_homburg_vor_der_hoehe",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bad Homburg vor der Höhe",
+          "source": "label"
+        },
+        {
+          "text": "bad homburg vor der hoehe",
+          "source": "uri"
+        }
+      ],
+      "context": "Bad Homburg vor der Höhe. inverse has birth place: Christiane Amalie, Landgräfin von Hessen-Homburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bad_Homburg_vor_der_Höhe",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bad Homburg vor der Höhe",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bad Homburg vor der Höhe",
+        "extracted_source": "label",
+        "ground_truth_text": "Bad Homburg vor der Höhe",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8632922172546387,
+      "graph_score": 0.8632922172546387,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/george_bernhard_of_anhalt_dessau",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George Bernhard of Anhalt-Dessau",
+          "source": "label"
+        },
+        {
+          "text": "george bernhard of anhalt dessau",
+          "source": "uri"
+        }
+      ],
+      "context": "George Bernhard of Anhalt-Dessau. has mother: Christiane Amalie, Landgräfin von Hessen-Homburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_Bernhard_of_Anhalt_Dessau",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George Bernhard of Anhalt Dessau",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George Bernhard of Anhalt-Dessau",
+        "extracted_source": "label",
+        "ground_truth_text": "George Bernhard of Anhalt Dessau",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9730762243270874,
+      "string_score": 0.9859374761581421,
+      "independent_identity_support": true,
+      "context_score": 0.8968867063522339,
+      "graph_score": 0.8968867063522339,
+      "margin": 0.5803552865982056
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/amelie_of_hesse_homburg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Christiane Amalie, Landgräfin von Hessen-Homburg",
+          "source": "altLabel"
+        },
+        {
+          "text": "Princess and Landgravine Christiane Amalie of Hesse-Homburg",
+          "source": "altLabel"
+        },
+        {
+          "text": "Amalie of Hesse-Homburg",
+          "source": "label"
+        },
+        {
+          "text": "amelie of hesse homburg",
+          "source": "uri"
+        }
+      ],
+      "context": "Christiane Amalie, Landgräfin von Hessen-Homburg. has birth place: Bad Homburg vor der Höhe. inverse has mother: George Bernhard of Anhalt-Dessau.",
+      "decision": "review",
+      "matched": false,
+      "ground_truth_uri": "http://example.org/entity/Princess_Amalie_of_Hesse_Homburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Amalie of Hesse Homburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Amalie of Hesse-Homburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Amalie of Hesse Homburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.777099609375,
+      "name_embedding_score": 0.8122612237930298,
+      "string_score": 0.8600000143051147,
+      "independent_identity_support": true,
+      "context_score": 0.7477521300315857,
+      "graph_score": 0.6238760948181152,
+      "margin": 0.004120528697967529
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Landgravine_Amalie_of_Hesse_Homburg",
+    "http://example.org/entity/Princess_Amalie_of_Hesse_Homburg"
+  ]
+}

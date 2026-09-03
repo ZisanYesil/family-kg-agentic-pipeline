@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Inthaphom a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Inthasom ;
+    ex:hasParent entity:Inthasom .
+
+entity:Kingkitsarat a ex:Agent,
+        ex:Person ;
+    ex:hasSibling entity:Inthasom .
+
+entity:Inthasom a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Inthaphom ;
+    ex:hasSibling entity:Kingkitsarat .
+

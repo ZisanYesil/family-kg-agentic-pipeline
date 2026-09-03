@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/157/originals/extracted_157.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/157/ground_truth_157.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/argentina_country": "http://example.org/entity/Argentine",
+    "http://example.org/extracted/los_peores_del_barrio_film": "http://example.org/entity/Los_Peores_del_barrio",
+    "http://example.org/extracted/dias_de_ilusion_film": "http://example.org/entity/Días_de_ilusión"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/argentina_country",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Argentine",
+          "source": "altLabel"
+        },
+        {
+          "text": "Argentina",
+          "source": "label"
+        },
+        {
+          "text": "argentina country",
+          "source": "uri"
+        }
+      ],
+      "context": "Argentine. inverse has country: Días de ilusión. inverse has country: Los Peores del barrio.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Argentine",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Argentine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Argentine",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Argentine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9551495313644409,
+      "graph_score": 0.47757476568222046,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dias_de_ilusion_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Días de ilusión",
+          "source": "label"
+        },
+        {
+          "text": "dias de ilusion film",
+          "source": "uri"
+        }
+      ],
+      "context": "Días de ilusión. has country: Argentine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Días_de_ilusión",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Días de ilusión",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Días de ilusión",
+        "extracted_source": "label",
+        "ground_truth_text": "Días de ilusión",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9110077619552612,
+      "graph_score": 0.4555038809776306,
+      "margin": 0.732862651348114
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/los_peores_del_barrio_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Los Peores del barrio",
+          "source": "label"
+        },
+        {
+          "text": "los peores del barrio film",
+          "source": "uri"
+        }
+      ],
+      "context": "Los Peores del barrio. has country: Argentine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Los_Peores_del_barrio",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Los Peores del barrio",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Los Peores del barrio",
+        "extracted_source": "label",
+        "ground_truth_text": "Los Peores del barrio",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9258122444152832,
+      "graph_score": 0.4629061222076416,
+      "margin": 0.7110158205032349
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

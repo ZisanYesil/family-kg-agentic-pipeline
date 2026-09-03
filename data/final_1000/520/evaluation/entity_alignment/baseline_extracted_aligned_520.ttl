@@ -1,0 +1,34 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/C_Man_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "C-Man" ;
+    onto:hasDirector <http://example.org/entity/Joseph_Lerner> .
+
+<http://example.org/entity/Greencastle_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Greencastle" ;
+    onto:hasDirector <http://example.org/entity/Koran_Dunbar> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/Canadian> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Canada" .
+
+<http://example.org/entity/Joseph_Lerner> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joseph Lerner" ;
+    onto:hasNationality <http://example.org/entity/Canadian> .
+
+<http://example.org/entity/Koran_Dunbar> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Koran Dunbar" ;
+    onto:hasNationality <http://example.org/entity/American> .
+

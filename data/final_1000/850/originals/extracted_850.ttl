@@ -1,0 +1,25 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:dead_stars_on_hollywood a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "The Dead Stars On Hollywood" ;
+    onto:hasCountry data:united_states .
+
+data:skaldowie a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Skaldowie" ;
+    onto:hasCountry data:poland .
+
+data:poland a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Poland" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

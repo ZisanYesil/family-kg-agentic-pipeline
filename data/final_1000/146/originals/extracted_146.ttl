@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_daddy_come_home a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Daddy, Come Home" ;
+    onto:hasPerformer data:person_billy_murray .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+data:person_billy_murray a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Billy Murray" ;
+    onto:hasNationality data:country_united_states ;
+    skos:altLabel "William Thomas \"Billy\" Murray" .
+

@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/515/originals/extracted_515.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/515/ground_truth_515.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/mannheim": "http://example.org/entity/Mannheim",
+    "http://example.org/extracted/karoline_of_wartensleben": "http://example.org/entity/Karoline_of_Wartensleben",
+    "http://example.org/extracted/adelaide_of_lippe_biesterfeld": "http://example.org/entity/Countess_Adelaide_of_Lippe_Biesterfeld"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adelaide_of_lippe_biesterfeld",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Countess Adelaide of Lippe-Biesterfeld",
+          "source": "label"
+        },
+        {
+          "text": "adelaide of lippe biesterfeld",
+          "source": "uri"
+        }
+      ],
+      "context": "Countess Adelaide of Lippe-Biesterfeld. has mother: Countess Karoline Friederike Cäcilie Klothilde von Wartensleben.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Countess_Adelaide_of_Lippe_Biesterfeld",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Countess Adelaide of Lippe Biesterfeld",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Countess Adelaide of Lippe-Biesterfeld",
+        "extracted_source": "label",
+        "ground_truth_text": "Countess Adelaide of Lippe Biesterfeld",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.988219678401947,
+      "string_score": 0.9881578683853149,
+      "independent_identity_support": true,
+      "context_score": 0.9330267310142517,
+      "graph_score": 0.9665133953094482,
+      "margin": 0.5819081366062164
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/karoline_of_wartensleben",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Countess Karoline Friederike Cäcilie Klothilde von Wartensleben",
+          "source": "label"
+        },
+        {
+          "text": "karoline of wartensleben",
+          "source": "uri"
+        }
+      ],
+      "context": "Countess Karoline Friederike Cäcilie Klothilde von Wartensleben. has birth place: Mannheim. inverse has mother: Countess Adelaide of Lippe-Biesterfeld.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Karoline_of_Wartensleben",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Karoline of Wartensleben",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "karoline of wartensleben",
+        "extracted_source": "uri",
+        "ground_truth_text": "Karoline of Wartensleben",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.5649232268333435,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9406586289405823,
+      "graph_score": 0.9703292846679688,
+      "margin": 0.5143868923187256
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mannheim",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mannheim",
+          "source": "label"
+        }
+      ],
+      "context": "Mannheim. inverse has birth place: Countess Karoline Friederike Cäcilie Klothilde von Wartensleben.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mannheim",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mannheim",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mannheim",
+        "extracted_source": "label",
+        "ground_truth_text": "Mannheim",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8924168348312378,
+      "graph_score": 0.9462084174156189,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

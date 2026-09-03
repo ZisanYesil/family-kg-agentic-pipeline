@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_henry_goes_arizona a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Henry Goes Arizona" ;
+    onto:hasDirector data:person_edwin_l_marin .
+
+data:film_tex_and_the_lord_of_the_deep a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Tex and the Lord of the Deep" ;
+    onto:hasDirector data:person_duccio_tessari .
+
+data:person_duccio_tessari a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Duccio Tessari" ;
+    onto:hasDeathDate "1994-09-06"^^xsd:date .
+
+data:person_edwin_l_marin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edwin L. Marin" ;
+    onto:hasDeathDate "1951-05-02"^^xsd:date .
+

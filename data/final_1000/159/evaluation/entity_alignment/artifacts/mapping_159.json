@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/159/originals/extracted_159.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/159/ground_truth_159.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/canada": "http://example.org/entity/Canada",
+    "http://example.org/extracted/polyvalente_w_a_losier": "http://example.org/entity/Polyvalente_W_A_Losier",
+    "http://example.org/extracted/gordon_bell_high_school": "http://example.org/entity/Gordon_Bell_High_School"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/canada",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Canada",
+          "source": "label"
+        }
+      ],
+      "context": "Canada. inverse has country: Gordon Bell High School. inverse has country: Polyvalente W.-A. Losier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Canada",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Canada",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Canada",
+        "extracted_source": "label",
+        "ground_truth_text": "Canada",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9898592233657837,
+      "graph_score": 0.9949296116828918,
+      "margin": 0.8136416524648666
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/gordon_bell_high_school",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gordon Bell High School",
+          "source": "label"
+        }
+      ],
+      "context": "Gordon Bell High School. has country: Canada.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gordon_Bell_High_School",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gordon Bell High School",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gordon Bell High School",
+        "extracted_source": "label",
+        "ground_truth_text": "Gordon Bell High School",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7790030837059021
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/polyvalente_w_a_losier",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Polyvalente W.-A. Losier",
+          "source": "label"
+        },
+        {
+          "text": "polyvalente w a losier",
+          "source": "uri"
+        }
+      ],
+      "context": "Polyvalente W.-A. Losier. has country: Canada.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Polyvalente_W_A_Losier",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Polyvalente W A Losier",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "polyvalente w a losier",
+        "extracted_source": "uri",
+        "ground_truth_text": "Polyvalente W A Losier",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9717190265655518,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9534680843353271,
+      "graph_score": 0.9767340421676636,
+      "margin": 0.7645466923713684
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

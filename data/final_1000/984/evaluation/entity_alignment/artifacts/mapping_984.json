@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/984/originals/extracted_984.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/984/ground_truth_984.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_fort_bowie": "http://example.org/entity/Fort_Bowie",
+    "http://example.org/extracted/person_howard_koch": "http://example.org/entity/Howard_W_Koch"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_fort_bowie",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fort Bowie",
+          "source": "label"
+        },
+        {
+          "text": "film fort bowie",
+          "source": "uri"
+        }
+      ],
+      "context": "Fort Bowie. has director: Howard Winchel Koch.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fort_Bowie",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fort Bowie",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fort Bowie",
+        "extracted_source": "label",
+        "ground_truth_text": "Fort Bowie",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9092915058135986,
+      "graph_score": 0.9546457529067993,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_howard_koch",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Howard Winchel Koch",
+          "source": "altLabel"
+        },
+        {
+          "text": "Howard W. Koch",
+          "source": "label"
+        },
+        {
+          "text": "person howard koch",
+          "source": "uri"
+        }
+      ],
+      "context": "Howard Winchel Koch. has birth date: 1916-04-11. inverse has director: Fort Bowie.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Howard_W_Koch",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Howard W Koch",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Howard W. Koch",
+        "extracted_source": "label",
+        "ground_truth_text": "Howard W Koch",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9877081513404846,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9206677079200745,
+      "graph_score": 0.9603338241577148,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

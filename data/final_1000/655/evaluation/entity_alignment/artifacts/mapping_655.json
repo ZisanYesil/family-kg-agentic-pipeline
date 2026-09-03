@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/655/originals/extracted_655.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/655/ground_truth_655.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/coalition_of_the_willing_band": "http://example.org/entity/The_Coalition_of_the_Willing",
+    "http://example.org/extracted/niagara_falls_new_york": "http://example.org/entity/Niagara_Falls_New_York",
+    "http://example.org/extracted/bobby_previte": "http://example.org/entity/Bobby_Previte"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bobby_previte",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bobby Previte",
+          "source": "label"
+        }
+      ],
+      "context": "Bobby Previte. has birth place: Niagara Falls, New York. inverse has member: The Coalition of the Willing.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bobby_Previte",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bobby Previte",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bobby Previte",
+        "extracted_source": "label",
+        "ground_truth_text": "Bobby Previte",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.99659264087677,
+      "graph_score": 0.998296320438385,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/coalition_of_the_willing_band",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Coalition of the Willing",
+          "source": "label"
+        },
+        {
+          "text": "coalition of the willing band",
+          "source": "uri"
+        }
+      ],
+      "context": "The Coalition of the Willing. has member: Bobby Previte.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Coalition_of_the_Willing",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Coalition of the Willing",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Coalition of the Willing",
+        "extracted_source": "label",
+        "ground_truth_text": "The Coalition of the Willing",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/niagara_falls_new_york",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Niagara Falls, New York",
+          "source": "label"
+        },
+        {
+          "text": "niagara falls new york",
+          "source": "uri"
+        }
+      ],
+      "context": "Niagara Falls, New York. inverse has birth place: Bobby Previte.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Niagara_Falls_New_York",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Niagara Falls New York",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Niagara Falls, New York",
+        "extracted_source": "label",
+        "ground_truth_text": "Niagara Falls New York",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9633660316467285,
+      "string_score": 0.9900000095367432,
+      "independent_identity_support": true,
+      "context_score": 0.9903590679168701,
+      "graph_score": 0.9951795339584351,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

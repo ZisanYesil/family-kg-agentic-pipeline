@@ -1,0 +1,182 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/339/originals/extracted_339.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/339/ground_truth_339.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/argentina": "http://example.org/entity/Argentine",
+    "http://example.org/extracted/ben_cura": "http://example.org/entity/Ben_Cura"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/argentina",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Argentine",
+          "source": "altLabel"
+        },
+        {
+          "text": "Argentina",
+          "source": "label"
+        }
+      ],
+      "context": "Argentine. inverse has nationality: Ben Cura.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Argentine",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Argentine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Argentine",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Argentine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9395321011543274,
+      "graph_score": 0.4697660505771637,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ben_cura",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ben Cura",
+          "source": "label"
+        }
+      ],
+      "context": "Ben Cura. has nationality: Argentine. has nationality: British. inverse has director: Creditors (2015 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ben_Cura",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ben Cura",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ben Cura",
+        "extracted_source": "label",
+        "ground_truth_text": "Ben Cura",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8825284242630005,
+      "graph_score": 0.44126421213150024,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/creditors_2015_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Creditors (2015 film)",
+          "source": "label"
+        },
+        {
+          "text": "creditors 2015 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Creditors (2015 film). has director: Ben Cura.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Creditors",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Creditors",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "creditors 2015 film",
+        "extracted_source": "uri",
+        "ground_truth_text": "Creditors",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7939180135726929,
+      "name_embedding_score": 0.7795352339744568,
+      "string_score": 0.6726190447807312,
+      "independent_identity_support": false,
+      "context_score": 0.8879649639129639,
+      "graph_score": 0.9439824819564819,
+      "margin": 0.7939180135726929
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "British. inverse has nationality: Ben Cura.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

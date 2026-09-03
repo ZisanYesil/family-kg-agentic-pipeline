@@ -1,0 +1,104 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/273/originals/extracted_273.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/273/ground_truth_273.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/margaret_holles": "http://example.org/entity/Margaret_Holles_Duchess_of_Newcastle_upon_Tyne"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 1,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 2
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/margaret_holles",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Margaret Holles",
+          "source": "altLabel"
+        },
+        {
+          "text": "Margaret Holles, Duchess of Newcastle-upon-Tyne",
+          "source": "label"
+        }
+      ],
+      "context": "Margaret Holles. has spouse: John Holles.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Margaret Holles Duchess of Newcastle upon Tyne",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Margaret Holles, Duchess of Newcastle-upon-Tyne",
+        "extracted_source": "label",
+        "ground_truth_text": "Margaret Holles Duchess of Newcastle upon Tyne",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9480983018875122,
+      "string_score": 0.975806474685669,
+      "independent_identity_support": true,
+      "context_score": 0.6586605310440063,
+      "graph_score": 0.6586605310440063,
+      "margin": 0.36858999729156494
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_holles",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Holles",
+          "source": "altLabel"
+        },
+        {
+          "text": "John Holles, Earl of Clare",
+          "source": "label"
+        }
+      ],
+      "context": "John Holles. inverse has spouse: Margaret Holles.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/John_Holles_1st_Duke_of_Newcastle",
+    "http://example.org/entity/Lady_Henrietta_Cavendish_Holles"
+  ]
+}

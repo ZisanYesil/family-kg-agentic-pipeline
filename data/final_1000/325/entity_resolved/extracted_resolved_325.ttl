@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_bedre_enn_sitt_rykte a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Bedre enn sitt rykte" ;
+    onto:hasDirector data:person_edith_carlmar ;
+    skos:altLabel "Bedre Enn Sitt Rykte" .
+
+data:person_edith_carlmar a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edith Carlmar" ;
+    onto:hasSpouse data:person_otto_carlmar .
+
+data:person_otto_carlmar a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Otto Carlmar" .
+

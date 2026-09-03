@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/86/originals/extracted_86.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/86/ground_truth_86.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/cesk_zadeja": "http://example.org/entity/Çesk_Zadeja",
+    "http://example.org/extracted/place_shkoder": "http://example.org/entity/Shkodër",
+    "http://example.org/extracted/film_tana": "http://example.org/entity/Tana"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/cesk_zadeja",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Çesk Zadeja",
+          "source": "label"
+        },
+        {
+          "text": "cesk zadeja",
+          "source": "uri"
+        }
+      ],
+      "context": "Çesk Zadeja. has birth place: Shkodër.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Çesk_Zadeja",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Çesk Zadeja",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Çesk Zadeja",
+        "extracted_source": "label",
+        "ground_truth_text": "Çesk Zadeja",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8221575617790222,
+      "graph_score": 0.6610788106918335,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_tana",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tana",
+          "source": "label"
+        },
+        {
+          "text": "film tana",
+          "source": "uri"
+        }
+      ],
+      "context": "Tana.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tana",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tana",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tana",
+        "extracted_source": "label",
+        "ground_truth_text": "Tana",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.5525364875793457,
+      "graph_score": 0.27626824378967285,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_shkoder",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shkodër",
+          "source": "label"
+        },
+        {
+          "text": "place shkoder",
+          "source": "uri"
+        }
+      ],
+      "context": "Shkodër. inverse has birth place: Çesk Zadeja.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shkodër",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shkodër",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shkodër",
+        "extracted_source": "label",
+        "ground_truth_text": "Shkodër",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

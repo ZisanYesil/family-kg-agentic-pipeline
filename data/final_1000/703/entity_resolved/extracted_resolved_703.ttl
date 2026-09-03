@@ -1,0 +1,32 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_pauper_millionaire_1922 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Pauper Millionaire" ;
+    onto:hasDirector data:person_frank_hall_crane .
+
+data:film_simha_jodi_1980 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Simha Jodi" ;
+    onto:hasDirector data:person_joe_simon .
+
+data:person_frank_hall_crane a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Frank Hall Crane" ;
+    onto:hasNationality data:country_united_states .
+
+data:person_joe_simon a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joe Simon" ;
+    onto:hasNationality data:country_united_states ;
+    skos:altLabel "Joseph Henry Simon" .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

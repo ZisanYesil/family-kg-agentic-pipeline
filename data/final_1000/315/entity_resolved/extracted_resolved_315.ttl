@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_thomas_the_impostor a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Thomas the Impostor" ;
+    onto:hasDirector data:person_georges_franju .
+
+data:person_georges_franju a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Georges Franju" ;
+    onto:hasBirthPlace data:place_fougeres_ille_et_vilaine .
+
+data:place_fougeres_ille_et_vilaine a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Fougères, Ille-et-Vilaine" .
+

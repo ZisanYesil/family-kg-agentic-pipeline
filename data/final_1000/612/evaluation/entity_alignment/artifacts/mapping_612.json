@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/612/originals/extracted_612.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/612/ground_truth_612.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sharqliyya": "http://example.org/entity/Sharqliyya",
+    "http://example.org/extracted/syria": "http://example.org/entity/Syria",
+    "http://example.org/extracted/umm_al_tuyour_hama": "http://example.org/entity/Umm_al_Tuyour_Hama_Governorate"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/sharqliyya",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sharqlieh",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sharqliyya",
+          "source": "label"
+        }
+      ],
+      "context": "Sharqlieh. has country: Syria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sharqliyya",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sharqliyya",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sharqliyya",
+        "extracted_source": "label",
+        "ground_truth_text": "Sharqliyya",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9616875648498535,
+      "graph_score": 0.9808437824249268,
+      "margin": 0.49052363634109497
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/syria",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Syria",
+          "source": "label"
+        }
+      ],
+      "context": "Syria. inverse has country: Sharqlieh. inverse has country: Umm al-Tuyour.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Syria",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Syria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Syria",
+        "extracted_source": "label",
+        "ground_truth_text": "Syria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.959193229675293,
+      "graph_score": 0.9795966148376465,
+      "margin": 0.7093767523765564
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/umm_al_tuyour_hama",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Umm al-Tuyour",
+          "source": "altLabel"
+        },
+        {
+          "text": "Umm al-Tuyour, Hama Governorate",
+          "source": "label"
+        },
+        {
+          "text": "umm al tuyour hama",
+          "source": "uri"
+        }
+      ],
+      "context": "Umm al-Tuyour. has country: Syria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Umm_al_Tuyour_Hama_Governorate",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Umm al Tuyour Hama Governorate",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Umm al-Tuyour, Hama Governorate",
+        "extracted_source": "label",
+        "ground_truth_text": "Umm al Tuyour Hama Governorate",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9593073129653931,
+      "string_score": 0.9778688549995422,
+      "independent_identity_support": true,
+      "context_score": 0.8952674865722656,
+      "graph_score": 0.9476337432861328,
+      "margin": 0.4953995943069458
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

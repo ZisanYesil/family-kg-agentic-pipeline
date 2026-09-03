@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/185/originals/extracted_185.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/185/ground_truth_185.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jiri_baumruk_1930": "http://example.org/entity/Jiří_Baumruk",
+    "http://example.org/extracted/mathias_rosenblad_1758": "http://example.org/entity/Mathias_Rosenblad"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/jiri_baumruk_1930",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jiří Baumruk",
+          "source": "label"
+        },
+        {
+          "text": "jiri baumruk 1930",
+          "source": "uri"
+        }
+      ],
+      "context": "Jiří Baumruk. has birth date: 1930-06-27. has death date: 1989-11-23.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jiří_Baumruk",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jiří Baumruk",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jiří Baumruk",
+        "extracted_source": "label",
+        "ground_truth_text": "Jiří Baumruk",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5587145686149597
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mathias_rosenblad_1758",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mathias Rosenblad",
+          "source": "label"
+        },
+        {
+          "text": "mathias rosenblad 1758",
+          "source": "uri"
+        }
+      ],
+      "context": "Mathias Rosenblad. has birth date: 1758-06-23. has death date: 1847-09-04.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mathias_Rosenblad",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mathias Rosenblad",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mathias Rosenblad",
+        "extracted_source": "label",
+        "ground_truth_text": "Mathias Rosenblad",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5742318034172058
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

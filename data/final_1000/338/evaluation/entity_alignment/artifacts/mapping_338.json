@@ -1,0 +1,119 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/338/originals/extracted_338.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/338/ground_truth_338.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_f_w_thring": "http://example.org/entity/Francis_William_Thring"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_f_w_thring",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Francis William Thring",
+          "source": "altLabel"
+        },
+        {
+          "text": "F. W. Thring",
+          "source": "label"
+        },
+        {
+          "text": "person f w thring",
+          "source": "uri"
+        }
+      ],
+      "context": "Francis William Thring. inverse has director: His Royal Highness (1932 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Francis_William_Thring",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Francis William Thring",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Francis William Thring",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Francis William Thring",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.592166543006897,
+      "graph_score": 0.592166543006897,
+      "margin": 0.2454739212989807
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_his_royal_highness_1932",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "His Royal Highness (1932 film)",
+          "source": "label"
+        },
+        {
+          "text": "film his royal highness 1932",
+          "source": "uri"
+        }
+      ],
+      "context": "His Royal Highness (1932 film). has director: Francis William Thring.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/His_Royal_Highness",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "His Royal Highness",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "His Royal Highness (1932 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "His Royal Highness",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6652930974960327,
+      "name_embedding_score": 0.758710503578186,
+      "string_score": 0.7875000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.7125027179718018,
+      "graph_score": 0.3562513589859009,
+      "margin": 0.6652930974960327
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/F_W_Thring"
+  ]
+}

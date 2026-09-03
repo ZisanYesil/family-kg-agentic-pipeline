@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Temple_Lea_Houston> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Temple Lea Houston" ;
+    onto:hasMother <http://example.org/entity/Margaret_Lea_Houston> .
+
+<http://example.org/entity/Margaret_Lea_Houston> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Margaret Lea Houston" ;
+    onto:hasCauseOfDeath <http://example.org/entity/yellow_fever> .
+
+<http://example.org/entity/yellow_fever> a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "yellow fever" .
+

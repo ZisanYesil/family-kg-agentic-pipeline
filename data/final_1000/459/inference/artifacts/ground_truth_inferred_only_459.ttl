@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:French a ex:Place .
+
+entity:Jeanne_de_Bar_suo_jure_Countess_of_Marle_and_Soissons a ex:Agent,
+        ex:Person .
+
+entity:Jeanne_de_Bar_Countess_of_Marle_and_Soissons a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Peter_II_Count_of_Saint_Pol .
+
+entity:Peter_II_Count_of_Saint_Pol a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Jeanne_de_Bar_Countess_of_Marle_and_Soissons .
+

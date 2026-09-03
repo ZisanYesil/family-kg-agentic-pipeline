@@ -1,0 +1,74 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/219/evaluation/entity_alignment/final_extracted_aligned_219.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/219/evaluation/entity_alignment/final_ground_truth_aligned_219.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Farnsworth_Wright",
+      "predicate": "hasBirthDate",
+      "object": "\"1888-07-29\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Farnsworth_Wright",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1888-07-29\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Farnsworth_Wright",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Farnsworth_Wright",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Farnsworth_Wright",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Farnsworth_Wright",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Oriental_Stories",
+      "predicate": "hasEditor",
+      "object": "Farnsworth_Wright",
+      "subject_uri": "http://example.org/entity/Oriental_Stories",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEditor",
+      "object_term": "http://example.org/entity/Farnsworth_Wright"
+    },
+    {
+      "subject": "Oriental_Stories",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Oriental_Stories",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Oriental_Stories",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Oriental_Stories",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 6,
+    "union_triples_in_scope": 6,
+    "true_positives": 6,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_to_light_a_candle a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "To Light a Candle" ;
+    onto:hasCreator data:person_maziar_bahari .
+
+data:organization_newsweek a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Newsweek" .
+
+data:person_maziar_bahari a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Maziar Bahari" ;
+    onto:hasEmployer data:organization_newsweek .
+

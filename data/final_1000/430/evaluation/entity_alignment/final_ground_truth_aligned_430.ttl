@@ -1,0 +1,20 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Ordgar_Ealdorman_of_Devon a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:England ;
+    ex:hasCountry entity:England .
+
+entity:Ordwulf a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Ordgar ;
+    ex:hasParent entity:Ordgar .
+
+entity:England a ex:Country,
+        ex:Place .
+
+entity:Ordgar a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Ordwulf .
+

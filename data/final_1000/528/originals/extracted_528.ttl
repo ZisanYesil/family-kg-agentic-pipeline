@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:sir_edward_acton_3rd_baronet a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sir Edward Acton, 3rd Baronet" ;
+    onto:hasFather data:sir_walter_acton_2nd_baronet .
+
+data:sir_walter_acton_2nd_baronet a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sir Walter Acton, 2nd Baronet" ;
+    onto:hasNationality data:united_kingdom .
+
+data:united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "English" .
+

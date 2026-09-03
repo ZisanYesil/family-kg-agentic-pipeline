@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/671/originals/extracted_671.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/671/ground_truth_671.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/david_smith_director": "http://example.org/entity/David_Smith",
+    "http://example.org/extracted/santa_barbara_california": "http://example.org/entity/Santa_Barbara_California"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/david_smith_director",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Smith",
+          "source": "label"
+        },
+        {
+          "text": "david smith director",
+          "source": "uri"
+        }
+      ],
+      "context": "David Smith. has death place: Santa Barbara, California. inverse has director: Baree, Son Of Kazan (1918 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/David_Smith",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "David Smith",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "David Smith",
+        "extracted_source": "label",
+        "ground_truth_text": "David Smith",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9475170969963074,
+      "graph_score": 0.9737585783004761,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/santa_barbara_california",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Santa Barbara, California",
+          "source": "label"
+        },
+        {
+          "text": "santa barbara california",
+          "source": "uri"
+        }
+      ],
+      "context": "Santa Barbara, California. inverse has death place: David Smith.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Santa_Barbara_California",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Santa Barbara California",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Santa Barbara, California",
+        "extracted_source": "label",
+        "ground_truth_text": "Santa Barbara California",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9648059606552124,
+      "string_score": 0.9908163547515869,
+      "independent_identity_support": true,
+      "context_score": 0.992027223110199,
+      "graph_score": 0.9960136413574219,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/baree_son_of_kazan_1918_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Baree, Son Of Kazan (1918 film)",
+          "source": "label"
+        },
+        {
+          "text": "baree son of kazan 1918 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Baree, Son Of Kazan (1918 film). has director: David Smith.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Baree_Son_of_Kazan",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Baree Son of Kazan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Baree, Son Of Kazan (1918 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Baree Son of Kazan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8768580555915833,
+      "name_embedding_score": 0.8718789219856262,
+      "string_score": 0.7972789406776428,
+      "independent_identity_support": true,
+      "context_score": 0.9327906966209412,
+      "graph_score": 0.966395378112793,
+      "margin": 0.8768580555915833
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

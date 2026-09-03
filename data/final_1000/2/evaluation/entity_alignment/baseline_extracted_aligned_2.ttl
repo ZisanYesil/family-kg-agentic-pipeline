@@ -1,0 +1,23 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Beat_Girl> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Beat Girl" ;
+    onto:hasDirector <http://example.org/entity/Edmond_T_Gréville> ;
+    skos:altLabel "Beat Girl" .
+
+<http://example.org/entity/Edmond_T_Gréville> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edmond T. Gréville" ;
+    onto:hasDeathPlace <http://example.org/entity/Nice> ;
+    skos:altLabel "Edmond Gréville Thonger",
+        "Edmond T. Gréville" .
+
+<http://example.org/entity/Nice> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Nice" ;
+    skos:altLabel "Nice" .
+

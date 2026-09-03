@@ -48,6 +48,7 @@ def create_kg_extraction_job(
     db.create_job(
         job_id=job_id,
         input_text=request.text,
+        question=request.question,
         ontology_path=ontology_path,
         max_iterations=max_iterations,
         webhook_url=webhook_url,

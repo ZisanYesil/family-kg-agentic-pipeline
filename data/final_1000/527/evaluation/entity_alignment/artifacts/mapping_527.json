@@ -1,0 +1,150 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/527/originals/extracted_527.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/527/ground_truth_527.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/franklin_d_roosevelt": "http://example.org/entity/Franklin_Delano_Roosevelt",
+    "http://example.org/extracted/eleanor_roosevelt": "http://example.org/entity/Eleanor_Roosevelt"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/eleanor_roosevelt",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eleanor Roosevelt",
+          "source": "label"
+        }
+      ],
+      "context": "Eleanor Roosevelt. inverse has spouse: Franklin Delano Roosevelt.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eleanor_Roosevelt",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eleanor Roosevelt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eleanor Roosevelt",
+        "extracted_source": "label",
+        "ground_truth_text": "Eleanor Roosevelt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9361417889595032,
+      "graph_score": 0.4680708944797516,
+      "margin": 0.3570236563682556
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/franklin_d_roosevelt",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Franklin Delano Roosevelt",
+          "source": "label"
+        },
+        {
+          "text": "franklin d roosevelt",
+          "source": "uri"
+        }
+      ],
+      "context": "Franklin Delano Roosevelt. has spouse: Eleanor Roosevelt. inverse has brother: James Roosevelt Roosevelt.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Franklin_Delano_Roosevelt",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Franklin Delano Roosevelt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Franklin Delano Roosevelt",
+        "extracted_source": "label",
+        "ground_truth_text": "Franklin Delano Roosevelt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9022212624549866,
+      "graph_score": 0.4511106312274933,
+      "margin": 0.15063714981079102
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/james_roosevelt_roosevelt",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Roosevelt Roosevelt",
+          "source": "label"
+        }
+      ],
+      "context": "James Roosevelt Roosevelt. has brother: Franklin Delano Roosevelt.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_Roosevelt",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James Roosevelt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James Roosevelt Roosevelt",
+        "extracted_source": "label",
+        "ground_truth_text": "James Roosevelt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8389379978179932,
+      "name_embedding_score": 0.9884523153305054,
+      "string_score": 0.887499988079071,
+      "independent_identity_support": true,
+      "context_score": 0.982694685459137,
+      "graph_score": 0.4913473427295685,
+      "margin": 0.16031992435455322
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Franklin_D_Roosevelt"
+  ]
+}

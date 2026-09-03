@@ -1,0 +1,126 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/82/originals/extracted_82.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/82/ground_truth_82.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ernst_zu_munster": "http://example.org/entity/Ernst_zu_Münster",
+    "http://example.org/extracted/a_m_julien": "http://example.org/entity/A_M_Julien"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/a_m_julien",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A.- M. Julien",
+          "source": "altLabel"
+        },
+        {
+          "text": "A.-M. Julien",
+          "source": "altLabel"
+        },
+        {
+          "text": "Aman- Julien Maistre",
+          "source": "altLabel"
+        },
+        {
+          "text": "a m julien",
+          "source": "uri"
+        }
+      ],
+      "context": "A.- M. Julien. has birth date: 1903-07-24. has death date: 2001-01-15.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_M_Julien",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A M Julien",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A.- M. Julien",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "A M Julien",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9446322917938232,
+      "string_score": 0.9413043260574341,
+      "independent_identity_support": true,
+      "context_score": 0.9783539772033691,
+      "graph_score": 0.9783539772033691,
+      "margin": 0.44950801134109497
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ernst_zu_munster",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ernst zu Münster",
+          "source": "altLabel"
+        },
+        {
+          "text": "Graf Ernst Friedrich Herbert zu Münster",
+          "source": "altLabel"
+        },
+        {
+          "text": "ernst zu munster",
+          "source": "uri"
+        }
+      ],
+      "context": "Ernst zu Münster. has birth date: 1766-03-01. has death date: 1839-05-20.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ernst_zu_Münster",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ernst zu Münster",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ernst zu Münster",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Ernst zu Münster",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.48305201530456543
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

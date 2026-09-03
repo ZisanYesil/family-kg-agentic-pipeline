@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:alan_iv_viscount_of_rohan a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alan IV, Viscount of Rohan" ;
+    onto:hasMother data:constance_of_penthi%C3%A8vre .
+
+data:constance_of_penthi%C3%A8vre a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Constance of Penthièvre" ;
+    onto:hasNationality data:france .
+
+data:france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "Breton" .
+

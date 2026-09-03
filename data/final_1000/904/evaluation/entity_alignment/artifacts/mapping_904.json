@@ -1,0 +1,204 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/904/originals/extracted_904.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/904/ground_truth_904.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_sexy_toto": "http://example.org/entity/Sexy_Toto",
+    "http://example.org/extracted/person_mario_amendola": "http://example.org/entity/Mario_Amendola",
+    "http://example.org/extracted/person_don_siegel": "http://example.org/entity/Don_Siegel",
+    "http://example.org/extracted/film_two_mules_for_sister_sara": "http://example.org/entity/Two_Mules_for_Sister_Sara"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_sexy_toto",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sexy Toto",
+          "source": "label"
+        },
+        {
+          "text": "film sexy toto",
+          "source": "uri"
+        }
+      ],
+      "context": "Sexy Toto. has director: Mario Amendola.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sexy_Toto",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sexy Toto",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sexy Toto",
+        "extracted_source": "label",
+        "ground_truth_text": "Sexy Toto",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8444221019744873
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_two_mules_for_sister_sara",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Two Mules for Sister Sara",
+          "source": "label"
+        },
+        {
+          "text": "film two mules for sister sara",
+          "source": "uri"
+        }
+      ],
+      "context": "Two Mules for Sister Sara. has director: Donald Siegel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Two_Mules_for_Sister_Sara",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Two Mules for Sister Sara",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Two Mules for Sister Sara",
+        "extracted_source": "label",
+        "ground_truth_text": "Two Mules for Sister Sara",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9563088417053223,
+      "graph_score": 0.9781544208526611,
+      "margin": 0.8555519133806229
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_don_siegel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Donald Siegel",
+          "source": "altLabel"
+        },
+        {
+          "text": "Don Siegel",
+          "source": "label"
+        },
+        {
+          "text": "person don siegel",
+          "source": "uri"
+        }
+      ],
+      "context": "Donald Siegel. has death date: 1991-04-20. inverse has director: Two Mules for Sister Sara.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Don_Siegel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Don Siegel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Don Siegel",
+        "extracted_source": "label",
+        "ground_truth_text": "Don Siegel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9460126161575317,
+      "graph_score": 0.9730063080787659,
+      "margin": 0.7070633471012115
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_mario_amendola",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mario Amendola",
+          "source": "label"
+        },
+        {
+          "text": "person mario amendola",
+          "source": "uri"
+        }
+      ],
+      "context": "Mario Amendola. has death date: 1993-12-22. inverse has director: Sexy Toto.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mario_Amendola",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mario Amendola",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mario Amendola",
+        "extracted_source": "label",
+        "ground_truth_text": "Mario Amendola",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.694962203502655
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/978/originals/extracted_978.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/978/ground_truth_978.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/david_fennario": "http://example.org/entity/David_Fennario",
+    "http://example.org/extracted/peter_emanuel_falck": "http://example.org/entity/Peter_Emanuel_Falck"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/david_fennario",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David William Fennario",
+          "source": "altLabel"
+        },
+        {
+          "text": "David Fennario",
+          "source": "label"
+        }
+      ],
+      "context": "David William Fennario. has birth date: 1947-04-26.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/David_Fennario",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "David Fennario",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "David Fennario",
+        "extracted_source": "label",
+        "ground_truth_text": "David Fennario",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9734768867492676,
+      "graph_score": 0.9734768867492676,
+      "margin": 0.5143859684467316
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/peter_emanuel_falck",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Peter Emanuel Falck",
+          "source": "altLabel"
+        },
+        {
+          "text": "Peter Emanuel Falck",
+          "source": "label"
+        }
+      ],
+      "context": "John Peter Emanuel Falck. has birth date: 1952-07-15.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Peter_Emanuel_Falck",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Peter Emanuel Falck",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Peter Emanuel Falck",
+        "extracted_source": "label",
+        "ground_truth_text": "Peter Emanuel Falck",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9863990545272827,
+      "graph_score": 0.9863990545272827,
+      "margin": 0.5393779873847961
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

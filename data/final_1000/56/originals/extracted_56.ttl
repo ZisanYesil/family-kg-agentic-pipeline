@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:in_my_mind_song a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "In My Mind (Heather Headley song)" ;
+    onto:hasPerformer data:heather_headley .
+
+data:heather_headley a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Heather Headley" ;
+    onto:hasAwardReceived data:tony_award_2000 .
+
+data:tony_award_2000 a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Tony Award for Best Actress in a Musical" .
+

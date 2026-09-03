@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/643/originals/extracted_643.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/643/ground_truth_643.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_dimple_kapadia": "http://example.org/entity/Dimple_Kapadia",
+    "http://example.org/extracted/film_namma_ooru_nayagan_1988": "http://example.org/entity/Namma_Ooru_Nayagan",
+    "http://example.org/extracted/person_rajesh_khanna": "http://example.org/entity/Rajesh_Khanna"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_namma_ooru_nayagan_1988",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Namma Ooru Nayagan",
+          "source": "label"
+        },
+        {
+          "text": "film namma ooru nayagan 1988",
+          "source": "uri"
+        }
+      ],
+      "context": "Namma Ooru Nayagan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Namma_Ooru_Nayagan",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Namma Ooru Nayagan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Namma Ooru Nayagan",
+        "extracted_source": "label",
+        "ground_truth_text": "Namma Ooru Nayagan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.712022066116333,
+      "graph_score": 0.3560110330581665,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_dimple_kapadia",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dimple Kapadia",
+          "source": "label"
+        },
+        {
+          "text": "person dimple kapadia",
+          "source": "uri"
+        }
+      ],
+      "context": "Dimple Kapadia. inverse has spouse: Jatin Khanna.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dimple_Kapadia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dimple Kapadia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dimple Kapadia",
+        "extracted_source": "label",
+        "ground_truth_text": "Dimple Kapadia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8864568471908569,
+      "graph_score": 0.9432284235954285,
+      "margin": 0.6931103765964508
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_rajesh_khanna",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jatin Khanna",
+          "source": "altLabel"
+        },
+        {
+          "text": "Rajesh Khanna",
+          "source": "label"
+        },
+        {
+          "text": "person rajesh khanna",
+          "source": "uri"
+        }
+      ],
+      "context": "Jatin Khanna. has spouse: Dimple Kapadia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rajesh_Khanna",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rajesh Khanna",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rajesh Khanna",
+        "extracted_source": "label",
+        "ground_truth_text": "Rajesh Khanna",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7293257713317871,
+      "graph_score": 0.6146628856658936,
+      "margin": 0.6129250824451447
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

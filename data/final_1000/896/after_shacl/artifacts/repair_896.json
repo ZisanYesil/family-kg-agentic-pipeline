@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "fe08808cfbed7615b2edd7aabf5a5bca5edbb93912cc7e344d9e3ec6fdc0aa66",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/far_away_and_long_ago_1978",
+        "path": null,
+        "value": "http://example.org/extracted/i_always_loved_you_1953",
+        "expected": null,
+        "message": "Relation phrase 'released later than' from http://example.org/extracted/far_away_and_long_ago_1978 to http://example.org/extracted/i_always_loved_you_1953 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "fe08808cfbed7615b2edd7aabf5a5bca5edbb93912cc7e344d9e3ec6fdc0aa66",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/far_away_and_long_ago_1978",
+            "path": null,
+            "value": "http://example.org/extracted/i_always_loved_you_1953",
+            "expected": null,
+            "message": "Relation phrase 'released later than' from http://example.org/extracted/far_away_and_long_ago_1978 to http://example.org/extracted/i_always_loved_you_1953 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 8,
+      "feedback_reasoning": "The violation is an **unmapped_relation** with the relation phrase *'released later than'* between the two film resources. The source text contains no statement about one film being released later than the other, and the supplied ontology does not define any predicate whose documented meaning matches this phrase (e.g., there is no `hasReleaseOrder`, `hasLaterReleaseThan`, etc.). Because a predicate may only be chosen when its meaning is supported both by the relation phrase **and** the source text, no suitable predicate can be selected. Therefore the violation cannot be safely repaired.",
+      "repairs": [
+        {
+          "violation_fingerprint": "3e40aa91a3bd343ed0db1291a69f707237d7a54b3488857e7c459f3e4faf99b1",
+          "reasoning": "No ontology predicate matches the phrase 'released later than' and the source text provides no evidence for such a relationship.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "3e40aa91a3bd343ed0db1291a69f707237d7a54b3488857e7c459f3e4faf99b1"
+      ],
+      "triples_after": 8,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "fe08808cfbed7615b2edd7aabf5a5bca5edbb93912cc7e344d9e3ec6fdc0aa66",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/far_away_and_long_ago_1978",
+            "path": null,
+            "value": "http://example.org/extracted/i_always_loved_you_1953",
+            "expected": null,
+            "message": "Relation phrase 'released later than' from http://example.org/extracted/far_away_and_long_ago_1978 to http://example.org/extracted/i_always_loved_you_1953 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "fe08808cfbed7615b2edd7aabf5a5bca5edbb93912cc7e344d9e3ec6fdc0aa66",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/far_away_and_long_ago_1978",
+        "path": null,
+        "value": "http://example.org/extracted/i_always_loved_you_1953",
+        "expected": null,
+        "message": "Relation phrase 'released later than' from http://example.org/extracted/far_away_and_long_ago_1978 to http://example.org/extracted/i_always_loved_you_1953 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

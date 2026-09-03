@@ -1,0 +1,17 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:leona_lewis a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leona Lewis" ;
+    onto:hasBirthPlace data:islington_london ;
+    skos:altLabel "Leona Louise Lewis" .
+
+data:islington_london a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Islington, London" ;
+    skos:altLabel "London Borough of Islington" .
+

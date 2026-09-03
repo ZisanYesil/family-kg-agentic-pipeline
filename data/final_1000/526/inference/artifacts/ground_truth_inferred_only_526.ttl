@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Empress_Zhangsun a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Gaozong .
+
+entity:Li_Zhong a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Gaozong .
+
+entity:Gaozong a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Li_Zhong ;
+    ex:hasParent entity:Empress_Zhangsun .
+

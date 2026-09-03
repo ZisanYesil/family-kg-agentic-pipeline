@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/415/originals/extracted_415.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/415/ground_truth_415.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/gavin_newson": "http://example.org/entity/Gavin_Newsom",
+    "http://example.org/extracted/santa_clara_university": "http://example.org/entity/Santa_Clara_University"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gavin_newson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gavin Christopher Newsom",
+          "source": "altLabel"
+        },
+        {
+          "text": "Gavin Newsom",
+          "source": "label"
+        },
+        {
+          "text": "gavin newson",
+          "source": "uri"
+        }
+      ],
+      "context": "Gavin Christopher Newsom. has educated at: Santa Clara University. inverse has spouse: Jennifer Lynn Siebel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gavin_Newsom",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gavin Newsom",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gavin Newsom",
+        "extracted_source": "label",
+        "ground_truth_text": "Gavin Newsom",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9758122563362122,
+      "graph_score": 0.9879060983657837,
+      "margin": 0.7232841551303864
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/santa_clara_university",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Santa Clara University",
+          "source": "label"
+        }
+      ],
+      "context": "Santa Clara University. inverse has educated at: Gavin Christopher Newsom.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Santa_Clara_University",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Santa Clara University",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Santa Clara University",
+        "extracted_source": "label",
+        "ground_truth_text": "Santa Clara University",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.984609067440033,
+      "graph_score": 0.9923045635223389,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jennifer_siebel_newson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jennifer Lynn Siebel",
+          "source": "altLabel"
+        },
+        {
+          "text": "Jennifer Siebel Newsom",
+          "source": "label"
+        },
+        {
+          "text": "jennifer siebel newson",
+          "source": "uri"
+        }
+      ],
+      "context": "Jennifer Lynn Siebel. has spouse: Gavin Christopher Newsom.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jennifer_Siebel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jennifer Siebel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jennifer Lynn Siebel",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Jennifer Siebel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9267747402191162,
+      "name_embedding_score": 0.9376400113105774,
+      "string_score": 0.8523809313774109,
+      "independent_identity_support": true,
+      "context_score": 0.9588760137557983,
+      "graph_score": 0.9794380068778992,
+      "margin": 0.48463669419288635
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/490/originals/extracted_490.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/490/ground_truth_490.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/juan_carlos_gumucio": "http://example.org/entity/Juan_Carlos_Gumucio",
+    "http://example.org/extracted/marie_colvin": "http://example.org/entity/Marie_Colvin"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/juan_carlos_gumucio",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Juan Carlos Gumucio",
+          "source": "label"
+        }
+      ],
+      "context": "Juan Carlos Gumucio. has spouse: Marie Catherine Colvin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Juan_Carlos_Gumucio",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Juan Carlos Gumucio",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Juan Carlos Gumucio",
+        "extracted_source": "label",
+        "ground_truth_text": "Juan Carlos Gumucio",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9656904935836792,
+      "graph_score": 0.9828452467918396,
+      "margin": 0.8061909824609756
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/marie_colvin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marie Catherine Colvin",
+          "source": "altLabel"
+        },
+        {
+          "text": "Marie Colvin",
+          "source": "label"
+        }
+      ],
+      "context": "Marie Catherine Colvin. has employer: The Sunday Times. inverse has spouse: Juan Carlos Gumucio.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marie_Colvin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marie Colvin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marie Colvin",
+        "extracted_source": "label",
+        "ground_truth_text": "Marie Colvin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.960960865020752,
+      "graph_score": 0.980480432510376,
+      "margin": 0.8197586834430695
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_sunday_times",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Sunday Times",
+          "source": "label"
+        }
+      ],
+      "context": "The Sunday Times. inverse has employer: Marie Catherine Colvin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sunday_Times",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sunday Times",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Sunday Times",
+        "extracted_source": "label",
+        "ground_truth_text": "Sunday Times",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9427011013031006,
+      "name_embedding_score": 0.9674616456031799,
+      "string_score": 0.8523809313774109,
+      "independent_identity_support": true,
+      "context_score": 0.9670007228851318,
+      "graph_score": 0.9835003614425659,
+      "margin": 0.9427011013031006
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

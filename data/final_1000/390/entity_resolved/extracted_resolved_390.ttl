@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_3_avengers_1964 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "3 Avengers" ;
+    onto:hasCountryOfOrigin data:country_italy .
+
+data:film_the_redemption_1924 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Redemption" ;
+    onto:hasCountryOfOrigin data:country_italy .
+
+data:country_italy a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Italy" ;
+    skos:altLabel "Italian" .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:edadil_kadin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edadil Kadın" ;
+    onto:hasSpouse data:abdulaziz .
+
+data:abdulaziz a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Abdülaziz" ;
+    onto:hasBirthPlace data:eyup_palace_constan .
+
+data:eyup_palace_constan a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Eyüp Palace, Constantinople (present‑day Istanbul)" .
+

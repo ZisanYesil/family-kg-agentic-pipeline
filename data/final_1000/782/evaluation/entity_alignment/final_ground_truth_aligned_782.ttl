@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Jan_Karol_Opaliński a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Krzysztof_Opaliński ;
+    ex:hasParent entity:Krzysztof_Opaliński .
+
+entity:Krzysztof_Opaliński a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Jan_Karol_Opaliński ;
+    ex:hasCitizenship entity:Polish_Lithuanian_Commonwealth ;
+    ex:hasCountry entity:Polish_Lithuanian_Commonwealth .
+
+entity:Polish_Lithuanian_Commonwealth a ex:Country,
+        ex:Place .
+

@@ -1,0 +1,192 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/942/originals/extracted_942.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/942/ground_truth_942.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/riders_of_the_deadline_film": "http://example.org/entity/Riders_of_the_Deadline",
+    "http://example.org/extracted/lesley_selander": "http://example.org/entity/Lesley_Selander",
+    "http://example.org/extracted/demetrius_and_the_gladiators_film": "http://example.org/entity/Demetrius_and_the_Gladiators",
+    "http://example.org/extracted/delmer_daves": "http://example.org/entity/Delmer_Daves"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/delmer_daves",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Delmer Daves",
+          "source": "label"
+        }
+      ],
+      "context": "Delmer Daves. has birth date: 1904-07-24. inverse has director: Demetrius and the Gladiators.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Delmer_Daves",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Delmer Daves",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Delmer Daves",
+        "extracted_source": "label",
+        "ground_truth_text": "Delmer Daves",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999997615814209,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.6625616252422333
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/demetrius_and_the_gladiators_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Demetrius and the Gladiators",
+          "source": "label"
+        },
+        {
+          "text": "demetrius and the gladiators film",
+          "source": "uri"
+        }
+      ],
+      "context": "Demetrius and the Gladiators. has director: Delmer Daves.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Demetrius_and_the_Gladiators",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Demetrius and the Gladiators",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Demetrius and the Gladiators",
+        "extracted_source": "label",
+        "ground_truth_text": "Demetrius and the Gladiators",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.7732709050178528
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lesley_selander",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lesley Selander",
+          "source": "label"
+        }
+      ],
+      "context": "Lesley Selander. has birth date: 1900-05-26. inverse has director: Riders of the Deadline.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lesley_Selander",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lesley Selander",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lesley Selander",
+        "extracted_source": "label",
+        "ground_truth_text": "Lesley Selander",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6625616252422333
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/riders_of_the_deadline_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Riders of the Deadline",
+          "source": "label"
+        },
+        {
+          "text": "riders of the deadline film",
+          "source": "uri"
+        }
+      ],
+      "context": "Riders of the Deadline. has director: Lesley Selander.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Riders_of_the_Deadline",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Riders of the Deadline",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Riders of the Deadline",
+        "extracted_source": "label",
+        "ground_truth_text": "Riders of the Deadline",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7663457989692688
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

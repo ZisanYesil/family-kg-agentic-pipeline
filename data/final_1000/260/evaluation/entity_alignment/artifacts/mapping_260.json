@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/260/originals/extracted_260.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/260/ground_truth_260.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/watch_your_stern_film": "http://example.org/entity/Watch_Your_Stern",
+    "http://example.org/extracted/strangers_of_the_evening_film": "http://example.org/entity/Strangers_of_the_Evening"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/strangers_of_the_evening_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Strangers of the Evening",
+          "source": "label"
+        },
+        {
+          "text": "strangers of the evening film",
+          "source": "uri"
+        }
+      ],
+      "context": "Strangers of the Evening. has publication date: 1932.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Strangers_of_the_Evening",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Strangers of the Evening",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Strangers of the Evening",
+        "extracted_source": "label",
+        "ground_truth_text": "Strangers of the Evening",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6909798383712769
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/watch_your_stern_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Watch Your Stern",
+          "source": "label"
+        },
+        {
+          "text": "watch your stern film",
+          "source": "uri"
+        }
+      ],
+      "context": "Watch Your Stern. has publication date: 1960.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Watch_Your_Stern",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Watch Your Stern",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Watch Your Stern",
+        "extracted_source": "label",
+        "ground_truth_text": "Watch Your Stern",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.6694263219833374
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

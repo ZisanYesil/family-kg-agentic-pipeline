@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1105
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:Fame_1936_film ex:hasDirector inst:Leslie_S_Hiscott .  # director
+inst:It_s_All_About_Love ex:hasDirector inst:Thomas_Vinterberg .  # director
+inst:Leslie_S_Hiscott ex:hasBirthDate "1894-07-25"^^xsd:date .  # date of birth -> "25 July 1894"
+inst:Thomas_Vinterberg ex:hasBirthDate "1969-05-19"^^xsd:date .  # date of birth -> "19 May 1969"

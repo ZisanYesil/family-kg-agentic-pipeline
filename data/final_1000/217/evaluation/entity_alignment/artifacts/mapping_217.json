@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/217/originals/extracted_217.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/217/ground_truth_217.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_h_m_pulham_esq": "http://example.org/entity/H_M_Pulham_Esq",
+    "http://example.org/extracted/film_colour_of_your_lips": "http://example.org/entity/The_Colour_of_Your_Lips"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_colour_of_your_lips",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Colour of Your Lips",
+          "source": "label"
+        },
+        {
+          "text": "film colour of your lips",
+          "source": "uri"
+        }
+      ],
+      "context": "The Colour of Your Lips. has publication date: 2018.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Colour_of_Your_Lips",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Colour of Your Lips",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Colour of Your Lips",
+        "extracted_source": "label",
+        "ground_truth_text": "The Colour of Your Lips",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.8645736128091812
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_h_m_pulham_esq",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "H. M. Pulham, Esq.",
+          "source": "label"
+        },
+        {
+          "text": "film h m pulham esq",
+          "source": "uri"
+        }
+      ],
+      "context": "H. M. Pulham, Esq.. has publication date: 1941.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/H_M_Pulham_Esq",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "H M Pulham Esq",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "H. M. Pulham, Esq.",
+        "extracted_source": "label",
+        "ground_truth_text": "H M Pulham Esq",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8760659098625183,
+      "string_score": 0.9437500238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9695546627044678,
+      "graph_score": 0.9695546627044678,
+      "margin": 0.7825327813625336
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

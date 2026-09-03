@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Stefan_Vladislav a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Stefan_the_First_Crowned ;
+    ex:hasParent entity:Stefan_the_First_Crowned .
+
+entity:Serbian_Grand_Principality a ex:Country,
+        ex:Place .
+
+entity:Stefan_the_First_Crowned a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Stefan_Vladislav ;
+    ex:hasCitizenship entity:Serbian_Grand_Principality ;
+    ex:hasCountry entity:Serbian_Grand_Principality .
+

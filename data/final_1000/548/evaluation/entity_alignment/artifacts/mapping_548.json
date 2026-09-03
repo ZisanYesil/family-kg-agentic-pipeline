@@ -1,0 +1,144 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/548/originals/extracted_548.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/548/ground_truth_548.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/mary_tappan_wright": "http://example.org/entity/Mary_Tappan_Wright",
+    "http://example.org/extracted/john_henry_wright": "http://example.org/entity/John_Henry_Wright"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/john_henry_wright",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Henry Wright",
+          "source": "label"
+        }
+      ],
+      "context": "John Henry Wright. has educated at: Dartmouth College. inverse has spouse: Mary Tappan Wright.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Henry_Wright",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Henry Wright",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Henry Wright",
+        "extracted_source": "label",
+        "ground_truth_text": "John Henry Wright",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9871066808700562,
+      "graph_score": 0.9935533404350281,
+      "margin": 0.4918617606163025
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mary_tappan_wright",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mary Tappan Wright",
+          "source": "label"
+        }
+      ],
+      "context": "Mary Tappan Wright. has spouse: John Henry Wright.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mary_Tappan_Wright",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mary Tappan Wright",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mary Tappan Wright",
+        "extracted_source": "label",
+        "ground_truth_text": "Mary Tappan Wright",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.48951953649520874
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dartmouth_college",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dartmouth College",
+          "source": "label"
+        }
+      ],
+      "context": "Dartmouth College. inverse has educated at: John Henry Wright.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dartmouth",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dartmouth",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dartmouth College",
+        "extracted_source": "label",
+        "ground_truth_text": "Dartmouth",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8868554830551147,
+      "name_embedding_score": 0.9119497537612915,
+      "string_score": 0.7365384697914124,
+      "independent_identity_support": true,
+      "context_score": 0.9739680886268616,
+      "graph_score": 0.9869840145111084,
+      "margin": 0.8868554830551147
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

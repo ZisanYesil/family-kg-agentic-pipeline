@@ -1,0 +1,164 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/410/originals/extracted_410.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/410/ground_truth_410.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/song_i_believe_in_music": "http://example.org/entity/I_Believe_in_Music",
+    "http://example.org/extracted/person_mac_davis": "http://example.org/entity/Mac_Davis"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_mac_davis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Morris Mac Davis",
+          "source": "altLabel"
+        },
+        {
+          "text": "Mac Davis",
+          "source": "label"
+        },
+        {
+          "text": "person mac davis",
+          "source": "uri"
+        }
+      ],
+      "context": "Morris Mac Davis. has birth place: Lubbock, Texas, United States. inverse has performer: I Believe in Music (song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mac_Davis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mac Davis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mac Davis",
+        "extracted_source": "label",
+        "ground_truth_text": "Mac Davis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.940805196762085,
+      "graph_score": 0.9704025983810425,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_i_believe_in_music",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "I Believe in Music (song)",
+          "source": "altLabel"
+        },
+        {
+          "text": "I Believe in Music",
+          "source": "label"
+        },
+        {
+          "text": "song i believe in music",
+          "source": "uri"
+        }
+      ],
+      "context": "I Believe in Music (song). has performer: Morris Mac Davis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/I_Believe_in_Music",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "I Believe in Music",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "I Believe in Music",
+        "extracted_source": "label",
+        "ground_truth_text": "I Believe in Music",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9603938460350037,
+      "graph_score": 0.9801969528198242,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_lubbock_texas_usa",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lubbock, Texas, United States",
+          "source": "label"
+        },
+        {
+          "text": "place lubbock texas usa",
+          "source": "uri"
+        }
+      ],
+      "context": "Lubbock, Texas, United States. inverse has birth place: Morris Mac Davis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lubbock_Texas",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lubbock Texas",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "place lubbock texas usa",
+        "extracted_source": "uri",
+        "ground_truth_text": "Lubbock Texas",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8745095729827881,
+      "name_embedding_score": 0.8875057101249695,
+      "string_score": 0.75,
+      "independent_identity_support": true,
+      "context_score": 0.9460532069206238,
+      "graph_score": 0.9730266332626343,
+      "margin": 0.8745095729827881
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

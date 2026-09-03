@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:philippa_of_hainault a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Philippa of Hainault" ;
+    onto:hasCauseOfDeath data:illness_related_to_edema ;
+    onto:hasDaughter data:joan_of_england_1335_1348 ;
+    skos:altLabel "Philippa of Hainault" .
+
+data:illness_related_to_edema a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "Illness closely related to edema" .
+
+data:joan_of_england_1335_1348 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joan of England" ;
+    skos:altLabel "Joan of England (1333/34–1348)",
+        "Joan of England (1335–1348)" .
+

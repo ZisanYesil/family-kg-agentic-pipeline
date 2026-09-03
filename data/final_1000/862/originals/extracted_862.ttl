@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_guilty_of_treason a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Guilty of Treason" ;
+    onto:hasDirector data:person_felix_e_feist ;
+    skos:altLabel "Treason" .
+
+data:person_felix_e_feist a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Felix E. Feist" ;
+    onto:hasBirthPlace data:place_new_york_city ;
+    skos:altLabel "Felix Ellison Feist" .
+
+data:place_new_york_city a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "New York City" .
+

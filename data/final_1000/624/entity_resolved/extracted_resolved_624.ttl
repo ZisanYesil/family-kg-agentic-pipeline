@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_the_aquatic_effect a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Aquatic Effect" ;
+    onto:hasDirector data:person_solveig_anspach .
+
+data:institution_lafemis a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "La Fémis" .
+
+data:person_solveig_anspach a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sólveig Anspach" ;
+    onto:hasEducatedAt data:institution_lafemis .
+

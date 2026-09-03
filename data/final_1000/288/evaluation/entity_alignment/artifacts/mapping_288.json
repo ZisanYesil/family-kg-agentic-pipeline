@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/288/originals/extracted_288.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/288/ground_truth_288.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/heraclius": "http://example.org/entity/Heraclius",
+    "http://example.org/extracted/theodore": "http://example.org/entity/Theodore"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/heraclius",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Heraclius",
+          "source": "label"
+        }
+      ],
+      "context": "Heraclius. inverse has brother: Theodore. inverse has spouse: Fabia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Heraclius",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Heraclius",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Heraclius",
+        "extracted_source": "label",
+        "ground_truth_text": "Heraclius",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8026278614997864,
+      "graph_score": 0.4013139307498932,
+      "margin": 0.6223577558994293
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/theodore",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Theodore",
+          "source": "label"
+        }
+      ],
+      "context": "Theodore. has brother: Heraclius.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Theodore",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Theodore",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Theodore",
+        "extracted_source": "label",
+        "ground_truth_text": "Theodore",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8809778094291687,
+      "graph_score": 0.44048890471458435,
+      "margin": 0.63237664103508
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/fabia_eudokia",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fabia",
+          "source": "altLabel"
+        },
+        {
+          "text": "Fabia Eudokia",
+          "source": "label"
+        }
+      ],
+      "context": "Fabia. has spouse: Heraclius.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eudokia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eudokia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fabia Eudokia",
+        "extracted_source": "label",
+        "ground_truth_text": "Eudokia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8056436777114868,
+      "name_embedding_score": 0.8150527477264404,
+      "string_score": 0.7400000095367432,
+      "independent_identity_support": true,
+      "context_score": 0.7049382328987122,
+      "graph_score": 0.8524690866470337,
+      "margin": 0.4355584979057312
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

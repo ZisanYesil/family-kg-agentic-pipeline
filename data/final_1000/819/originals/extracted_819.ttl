@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_sallskapsresan_2_snowroller a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Sällskapsresan 2 – Snowroller" ;
+    onto:hasDirector data:person_lasse_berg .
+
+data:institution_konstfack a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Konstfack" .
+
+data:person_lasse_berg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lasse Åberg" ;
+    onto:hasEducatedAt data:institution_konstfack ;
+    skos:altLabel "Lars Gunnar Åberg" .
+

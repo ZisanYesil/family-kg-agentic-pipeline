@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:ahmose_nebetta a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ahmose-Nebetta" ;
+    onto:hasFather data:seqenenre_tao ;
+    skos:altLabel "Ahmose-Nebta" .
+
+data:seqenenre_tao a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Seqenenre Tao" ;
+    onto:hasMother data:tetisheri .
+
+data:tetisheri a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tetisheri" .
+

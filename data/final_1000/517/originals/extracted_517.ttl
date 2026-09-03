@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_kanda_naal_mudhal a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Kanda Naal Mudhal" ;
+    onto:hasDirector data:person_v_priya .
+
+data:person_suhasini a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Suhasini" .
+
+data:person_v_priya a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "V. Priya" ;
+    onto:hasStudentOf data:person_suhasini .
+

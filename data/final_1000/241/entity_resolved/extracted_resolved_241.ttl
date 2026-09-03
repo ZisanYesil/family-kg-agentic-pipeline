@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_the_roadhouse_murder a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Roadhouse Murder" ;
+    onto:hasDirector data:person_j_walter_ruben .
+
+data:person_j_walter_ruben a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "J. Walter Ruben" ;
+    onto:hasBurialPlace data:place_forest_lawn_memorial_park_cemetery ;
+    skos:altLabel "Jacob Walter Ruben" .
+
+data:place_forest_lawn_memorial_park_cemetery a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Glendale's Forest Lawn Memorial Park Cemetery" .
+

@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:george_bernhard_of_anhalt_dessau a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George Bernhard of Anhalt-Dessau" ;
+    onto:hasMother data:amelie_of_hesse_homburg .
+
+data:amelie_of_hesse_homburg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Amalie of Hesse-Homburg" ;
+    onto:hasBirthPlace data:bad_homburg_vor_der_hoehe ;
+    skos:altLabel "Christiane Amalie, Landgräfin von Hessen-Homburg",
+        "Princess and Landgravine Christiane Amalie of Hesse-Homburg" .
+
+data:bad_homburg_vor_der_hoehe a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bad Homburg vor der Höhe" .
+

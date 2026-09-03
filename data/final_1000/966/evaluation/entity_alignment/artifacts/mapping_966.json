@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/966/originals/extracted_966.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/966/ground_truth_966.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/louis_ix_of_hesse-darmstadt": "http://example.org/entity/Louis_IX_Landgrave_of_Hesse_Darmstadt",
+    "http://example.org/extracted/princess_caroline_of_hesse-darmstadt_1746": "http://example.org/entity/Caroline_of_Hesse_Darmstadt",
+    "http://example.org/extracted/pirmasens": "http://example.org/entity/Pirmasens"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/louis_ix_of_hesse-darmstadt",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis IX",
+          "source": "altLabel"
+        },
+        {
+          "text": "Louis IX, Landgrave of Hesse-Darmstadt",
+          "source": "label"
+        },
+        {
+          "text": "louis ix of hesse-darmstadt",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis IX. has death place: Pirmasens. has father: Princess Caroline of Hesse-Darmstadt.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_IX_Landgrave_of_Hesse_Darmstadt",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis IX Landgrave of Hesse Darmstadt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis IX, Landgrave of Hesse-Darmstadt",
+        "extracted_source": "label",
+        "ground_truth_text": "Louis IX Landgrave of Hesse Darmstadt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9074084162712097,
+      "string_score": 0.9819999933242798,
+      "independent_identity_support": true,
+      "context_score": 0.7134217619895935,
+      "graph_score": 0.523377537727356,
+      "margin": 0.3874438405036926
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pirmasens",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pirmasens",
+          "source": "label"
+        }
+      ],
+      "context": "Pirmasens. inverse has death place: Louis IX.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pirmasens",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pirmasens",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pirmasens",
+        "extracted_source": "label",
+        "ground_truth_text": "Pirmasens",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6881983876228333,
+      "graph_score": 0.8440991640090942,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/princess_caroline_of_hesse-darmstadt_1746",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Caroline of Hesse-Darmstadt",
+          "source": "altLabel"
+        },
+        {
+          "text": "Caroline of Hesse-Darmstadt",
+          "source": "label"
+        },
+        {
+          "text": "princess caroline of hesse-darmstadt 1746",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Caroline of Hesse-Darmstadt. inverse has father: Louis IX.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Caroline_of_Hesse_Darmstadt",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Caroline of Hesse Darmstadt",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Caroline of Hesse-Darmstadt",
+        "extracted_source": "label",
+        "ground_truth_text": "Caroline of Hesse Darmstadt",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8964879512786865,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.5763954520225525,
+      "graph_score": 0.28819772601127625,
+      "margin": 0.42544710636138916
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

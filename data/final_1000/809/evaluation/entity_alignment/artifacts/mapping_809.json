@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/809/originals/extracted_809.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/809/ground_truth_809.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/tj_ryan_foundation": "http://example.org/entity/TJ_Ryan_Foundation",
+    "http://example.org/extracted/shriro": "http://example.org/entity/Shriro"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/shriro",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Shriro",
+          "source": "label"
+        }
+      ],
+      "context": "Shriro. has inception: 1906.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Shriro",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Shriro",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Shriro",
+        "extracted_source": "label",
+        "ground_truth_text": "Shriro",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8701795637607574
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tj_ryan_foundation",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "TJ Ryan Foundation",
+          "source": "label"
+        }
+      ],
+      "context": "TJ Ryan Foundation. has inception: 2012-05-04.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/TJ_Ryan_Foundation",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "TJ Ryan Foundation",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "TJ Ryan Foundation",
+        "extracted_source": "label",
+        "ground_truth_text": "TJ Ryan Foundation",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9679504036903381,
+      "graph_score": 0.9679504036903381,
+      "margin": 0.8705629855394363
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/247/originals/extracted_247.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/247/ground_truth_247.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/solomon_ii_of_imereti": "http://example.org/entity/Solomon_II_of_Imereti",
+    "http://example.org/extracted/archil_of_imereti": "http://example.org/entity/Prince_Archil_of_Imereti"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/archil_of_imereti",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prince Archil of Imereti",
+          "source": "label"
+        },
+        {
+          "text": "archil of imereti",
+          "source": "uri"
+        }
+      ],
+      "context": "Prince Archil of Imereti. inverse has father: Solomon II of Imereti.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prince_Archil_of_Imereti",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prince Archil of Imereti",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prince Archil of Imereti",
+        "extracted_source": "label",
+        "ground_truth_text": "Prince Archil of Imereti",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4198560118675232
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/solomon_ii_of_imereti",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Solomon II of Imereti",
+          "source": "label"
+        }
+      ],
+      "context": "Solomon II of Imereti. has father: Prince Archil of Imereti. inverse has child: Elene.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Solomon_II_of_Imereti",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Solomon II of Imereti",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Solomon II of Imereti",
+        "extracted_source": "label",
+        "ground_truth_text": "Solomon II of Imereti",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.836115300655365,
+      "graph_score": 0.9180576801300049,
+      "margin": 0.4016462564468384
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/elene_of_georgia",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Elene",
+          "source": "altLabel"
+        },
+        {
+          "text": "Helene",
+          "source": "altLabel"
+        },
+        {
+          "text": "Princess Elene of Georgia",
+          "source": "label"
+        },
+        {
+          "text": "elene of georgia",
+          "source": "uri"
+        }
+      ],
+      "context": "Elene. has child: Solomon II of Imereti.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Elene_1753_17_June_1786_was_a_Georgia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Elene 1753 17 June 1786 was a Georgia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "elene of georgia",
+        "extracted_source": "uri",
+        "ground_truth_text": "Elene 1753 17 June 1786 was a Georgia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.662622332572937,
+      "name_embedding_score": 0.6612944006919861,
+      "string_score": 0.4932914078235626,
+      "independent_identity_support": false,
+      "context_score": 0.6692181825637817,
+      "graph_score": 0.8346090912818909,
+      "margin": 0.26889827847480774
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

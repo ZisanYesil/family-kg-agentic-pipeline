@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/289/evaluation/entity_alignment/baseline_extracted_aligned_289.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/289/evaluation/entity_alignment/baseline_ground_truth_aligned_289.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "21_Savage",
+      "predicate": "hasCountry",
+      "object": "United_Kingdom",
+      "subject_uri": "http://example.org/entity/21_Savage",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/United_Kingdom"
+    },
+    {
+      "subject": "Red_Opps",
+      "predicate": "hasPerformer",
+      "object": "21_Savage",
+      "subject_uri": "http://example.org/entity/Red_Opps",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/21_Savage"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "21_Savage",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/21_Savage",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "21_Savage",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/21_Savage",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "21_Savage",
+      "predicate": "label",
+      "object": "\"21 Savage\"",
+      "subject_uri": "http://example.org/entity/21_Savage",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"21 Savage\""
+    },
+    {
+      "subject": "21_Savage",
+      "predicate": "altLabel",
+      "object": "\"Shéyaa Bin Abraham-Joseph\"",
+      "subject_uri": "http://example.org/entity/21_Savage",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Shéyaa Bin Abraham-Joseph\""
+    },
+    {
+      "subject": "Red_Opps",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Red_Opps",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Red_Opps",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Red_Opps",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Red_Opps",
+      "predicate": "label",
+      "object": "\"Red Opps\"",
+      "subject_uri": "http://example.org/entity/Red_Opps",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Red Opps\""
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "label",
+      "object": "\"United Kingdom\"",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"United Kingdom\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

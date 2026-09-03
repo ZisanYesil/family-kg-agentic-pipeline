@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Monsieur_N a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Antoine_de_Caunes ;
+    ex:hasDirector entity:Antoine_de_Caunes .
+
+entity:Emma_de_Caunes a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Antoine_de_Caunes .
+
+entity:Antoine_de_Caunes a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Emma_de_Caunes .
+

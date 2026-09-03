@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/797/originals/extracted_797.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/797/ground_truth_797.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_a_midnight_romance": "http://example.org/entity/A_Midnight_Romance",
+    "http://example.org/extracted/film_the_bedford_incident": "http://example.org/entity/The_Bedford_Incident",
+    "http://example.org/extracted/person_richard_widmark": "http://example.org/entity/Richard_Widmark",
+    "http://example.org/extracted/person_anita_stewart": "http://example.org/entity/Anita_Stewart"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_a_midnight_romance",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A Midnight Romance",
+          "source": "label"
+        },
+        {
+          "text": "film a midnight romance",
+          "source": "uri"
+        }
+      ],
+      "context": "A Midnight Romance. has producer: Anita Stewart.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Midnight_Romance",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Midnight Romance",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Midnight Romance",
+        "extracted_source": "label",
+        "ground_truth_text": "A Midnight Romance",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.769092783331871
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_bedford_incident",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Bedford Incident",
+          "source": "label"
+        },
+        {
+          "text": "film the bedford incident",
+          "source": "uri"
+        }
+      ],
+      "context": "The Bedford Incident. has producer: Richard Widmark.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Bedford_Incident",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Bedford Incident",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Bedford Incident",
+        "extracted_source": "label",
+        "ground_truth_text": "The Bedford Incident",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.7315129935741425
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_anita_stewart",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anita Stewart",
+          "source": "label"
+        },
+        {
+          "text": "person anita stewart",
+          "source": "uri"
+        }
+      ],
+      "context": "Anita Stewart. has death date: 1961-05-04. inverse has producer: A Midnight Romance.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anita_Stewart",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anita Stewart",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anita Stewart",
+        "extracted_source": "label",
+        "ground_truth_text": "Anita Stewart",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7788744568824768
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_richard_widmark",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Richard Widmark",
+          "source": "label"
+        },
+        {
+          "text": "person richard widmark",
+          "source": "uri"
+        }
+      ],
+      "context": "Richard Widmark. has death date: 2008-03-24. inverse has producer: The Bedford Incident.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Richard_Widmark",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Richard Widmark",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Richard Widmark",
+        "extracted_source": "label",
+        "ground_truth_text": "Richard Widmark",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.7208212018013
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

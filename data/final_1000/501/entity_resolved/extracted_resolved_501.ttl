@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:ajax_ole_ole_ole_song a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Ajax, Olé Olé Olé" ;
+    onto:hasPerformer data:willy_alberti .
+
+data:willeke_alberti a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Willeke Alberti" .
+
+data:willy_alberti a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Willy Alberti" ;
+    onto:hasChild data:willeke_alberti ;
+    skos:altLabel "Carel Verbrugge" .
+

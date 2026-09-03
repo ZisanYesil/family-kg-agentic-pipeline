@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Der_Doppelgänger> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Der Doppelgänger" ;
+    onto:hasComposer <http://example.org/entity/Franz_Schubert> .
+
+<http://example.org/entity/Antonio_Salieri> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Antonio Salieri" .
+
+<http://example.org/entity/Franz_Schubert> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Franz Schubert" ;
+    onto:hasStudentOf <http://example.org/entity/Antonio_Salieri> .
+

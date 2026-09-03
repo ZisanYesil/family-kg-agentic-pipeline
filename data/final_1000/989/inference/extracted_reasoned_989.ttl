@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/musicalwork_por_una_cabeza> a ex:Artifact,
+        ex:CreativeWork,
+        ex:MusicalWork ;
+    ex:hasComposer <http://example.org/extracted/person_carlos_gardel> ;
+    ex:hasCreator <http://example.org/extracted/person_carlos_gardel> .
+
+<http://example.org/extracted/country_argentina> a ex:Country,
+        ex:Place .
+
+<http://example.org/extracted/country_france> a ex:Country,
+        ex:Place .
+
+<http://example.org/extracted/person_carlos_gardel> a ex:Agent,
+        ex:Person ;
+    ex:hasCountry <http://example.org/extracted/country_argentina>,
+        <http://example.org/extracted/country_france> ;
+    ex:hasNationality <http://example.org/extracted/country_argentina>,
+        <http://example.org/extracted/country_france> .
+

@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_kon_khon a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Kon Khon" ;
+    onto:hasDirector data:person_sarunyoo_wongkrachang .
+
+data:person_sarunyoo_wongkrachang a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sarunyoo Wongkrachang" ;
+    onto:hasBirthPlace data:place_bang_konthi_district ;
+    skos:altLabel "Sarunyu Wongkrachang" .
+
+data:place_bang_konthi_district a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bang Khonthi District, Samut Songkhram Province, Thailand" .
+

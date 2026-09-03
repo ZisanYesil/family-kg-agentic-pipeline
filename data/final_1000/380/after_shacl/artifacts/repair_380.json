@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "931a596c21996d9afe17f51d6a64f1fcb028322a62975aea258d9da7c7f4a5e8",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_kizhakke_varum_paattu",
+        "path": null,
+        "value": "http://example.org/extracted/film_le_maitre_d_ecole",
+        "expected": null,
+        "message": "Relation phrase 'released more recently than' from http://example.org/extracted/film_kizhakke_varum_paattu to http://example.org/extracted/film_le_maitre_d_ecole was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "931a596c21996d9afe17f51d6a64f1fcb028322a62975aea258d9da7c7f4a5e8",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_kizhakke_varum_paattu",
+            "path": null,
+            "value": "http://example.org/extracted/film_le_maitre_d_ecole",
+            "expected": null,
+            "message": "Relation phrase 'released more recently than' from http://example.org/extracted/film_kizhakke_varum_paattu to http://example.org/extracted/film_le_maitre_d_ecole was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 8,
+      "feedback_reasoning": "The validation finding is an unmapped_relation for the phrase “released more recently than” between the two film individuals. The supplied ontology does not contain any object property whose documented semantics express a temporal ordering or “released more recently than” relationship. Because no suitable predicate exists and we are not allowed to invent new predicates, the violation cannot be repaired safely.",
+      "repairs": [
+        {
+          "violation_fingerprint": "2b88b69bb4907e19eae0d185b39e0079649213a2812401ccb6ba8a3d16e3c3a5",
+          "reasoning": "No ontology predicate matches the relation phrase; therefore no operation can be performed.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "2b88b69bb4907e19eae0d185b39e0079649213a2812401ccb6ba8a3d16e3c3a5"
+      ],
+      "triples_after": 8,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "931a596c21996d9afe17f51d6a64f1fcb028322a62975aea258d9da7c7f4a5e8",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/film_kizhakke_varum_paattu",
+            "path": null,
+            "value": "http://example.org/extracted/film_le_maitre_d_ecole",
+            "expected": null,
+            "message": "Relation phrase 'released more recently than' from http://example.org/extracted/film_kizhakke_varum_paattu to http://example.org/extracted/film_le_maitre_d_ecole was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "931a596c21996d9afe17f51d6a64f1fcb028322a62975aea258d9da7c7f4a5e8",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/film_kizhakke_varum_paattu",
+        "path": null,
+        "value": "http://example.org/extracted/film_le_maitre_d_ecole",
+        "expected": null,
+        "message": "Relation phrase 'released more recently than' from http://example.org/extracted/film_kizhakke_varum_paattu to http://example.org/extracted/film_le_maitre_d_ecole was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

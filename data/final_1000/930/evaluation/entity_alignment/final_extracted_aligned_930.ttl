@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Irina_Berezina> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1965-07-07"^^xsd:date ;
+    ex:hasBirthPlace <http://example.org/entity/Kiev> ;
+    ex:hasSpouse <http://example.org/entity/Vladimir_Feldman> .
+
+<http://example.org/entity/Kiev> a ex:Place .
+
+<http://example.org/entity/Vladimir_Feldman> a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse <http://example.org/entity/Irina_Berezina> .
+

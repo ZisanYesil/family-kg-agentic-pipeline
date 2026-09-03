@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_song_of_arizona a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Song of Arizona" ;
+    onto:hasDirector data:person_frank_mcdonald .
+
+data:film_texas_terrors a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Texas Terrors" ;
+    onto:hasDirector data:person_george_sherman .
+
+data:person_frank_mcdonald a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Frank McDonald" ;
+    onto:hasBirthDate "1899-11-09"^^xsd:date ;
+    onto:hasDeathDate "1980-03-08"^^xsd:date .
+
+data:person_george_sherman a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George Sherman" ;
+    onto:hasBirthDate "1908-07-14"^^xsd:date ;
+    onto:hasDeathDate "1991-03-15"^^xsd:date .
+

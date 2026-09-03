@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/421/evaluation/entity_alignment/baseline_extracted_aligned_421.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/421/evaluation/entity_alignment/baseline_ground_truth_aligned_421.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Gwendolyn_Graham",
+      "predicate": "hasParent",
+      "object": "Bob_Graham",
+      "subject_uri": "http://example.org/entity/Gwendolyn_Graham",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Bob_Graham"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Bob_Graham",
+      "predicate": "hasEmployer",
+      "object": "Harvard",
+      "subject_uri": "http://example.org/entity/Bob_Graham",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/Harvard"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Bob_Graham",
+      "predicate": "hasEmployer",
+      "object": "bob_graham_center",
+      "subject_uri": "http://example.org/entity/Bob_Graham",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/extracted/bob_graham_center"
+    },
+    {
+      "subject": "Bob_Graham",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bob_Graham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Bob_Graham",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Bob_Graham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Bob_Graham",
+      "predicate": "label",
+      "object": "\"Bob Graham\"",
+      "subject_uri": "http://example.org/entity/Bob_Graham",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bob Graham\""
+    },
+    {
+      "subject": "Gwendolyn_Graham",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gwendolyn_Graham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Gwendolyn_Graham",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gwendolyn_Graham",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gwendolyn_Graham",
+      "predicate": "label",
+      "object": "\"Gwendolyn Graham\"",
+      "subject_uri": "http://example.org/entity/Gwendolyn_Graham",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gwendolyn Graham\""
+    },
+    {
+      "subject": "Gwendolyn_Graham",
+      "predicate": "altLabel",
+      "object": "\"Gwen Graham\"",
+      "subject_uri": "http://example.org/entity/Gwendolyn_Graham",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Gwen Graham\""
+    },
+    {
+      "subject": "bob_graham_center",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/extracted/bob_graham_center",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "bob_graham_center",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/bob_graham_center",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "bob_graham_center",
+      "predicate": "label",
+      "object": "\"Bob Graham Center for Public Service\"",
+      "subject_uri": "http://example.org/extracted/bob_graham_center",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bob Graham Center for Public Service\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 1,
+    "false_positives": 11,
+    "false_negatives": 1,
+    "precision": 0.08333333333333333,
+    "recall": 0.5,
+    "f1": 0.14285714285714285
+  },
+  "stage": "pre_inference"
+}

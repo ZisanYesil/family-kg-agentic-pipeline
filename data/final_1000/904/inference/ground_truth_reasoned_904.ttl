@@ -1,0 +1,24 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Sexy_Toto a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Mario_Amendola ;
+    ex:hasDirector entity:Mario_Amendola .
+
+entity:Two_Mules_for_Sister_Sara a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Don_Siegel ;
+    ex:hasDirector entity:Don_Siegel .
+
+entity:Don_Siegel a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "1991-04-20"^^xsd:date .
+
+entity:Mario_Amendola a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "1993-12-22"^^xsd:date .
+

@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/856/evaluation/entity_alignment/final_extracted_aligned_856.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/856/evaluation/entity_alignment/final_ground_truth_aligned_856.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Arshad_Khan",
+      "predicate": "hasCountry",
+      "object": "Pakistan",
+      "subject_uri": "http://example.org/entity/Arshad_Khan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Pakistan"
+    },
+    {
+      "subject": "Arshad_Khan",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Arshad_Khan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Arshad_Khan",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Arshad_Khan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Daadagiri",
+      "predicate": "hasCreator",
+      "object": "Arshad_Khan",
+      "subject_uri": "http://example.org/entity/Daadagiri",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Arshad_Khan"
+    },
+    {
+      "subject": "Daadagiri",
+      "predicate": "hasDirector",
+      "object": "Arshad_Khan",
+      "subject_uri": "http://example.org/entity/Daadagiri",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Arshad_Khan"
+    },
+    {
+      "subject": "Daadagiri",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Daadagiri",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Daadagiri",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Daadagiri",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Daadagiri",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Daadagiri",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Pakistan",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Pakistan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Pakistan",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Pakistan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Arshad_Khan",
+      "predicate": "hasCountry",
+      "object": "country_australia",
+      "subject_uri": "http://example.org/entity/Arshad_Khan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/country_australia"
+    },
+    {
+      "subject": "country_australia",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/country_australia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "country_australia",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/country_australia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 13,
+    "true_positives": 10,
+    "false_positives": 3,
+    "false_negatives": 0,
+    "precision": 0.7692307692307693,
+    "recall": 1.0,
+    "f1": 0.8695652173913044
+  },
+  "stage": "post_inference"
+}

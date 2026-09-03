@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/15/originals/extracted_15.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/15/ground_truth_15.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/state_university_of_new_york_at_purchase": "http://example.org/entity/State_University_of_New_York_at_Purchase",
+    "http://example.org/extracted/tim_mccann": "http://example.org/entity/Tim_McCann"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/state_university_of_new_york_at_purchase",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "State University of New York at Purchase",
+          "source": "label"
+        }
+      ],
+      "context": "State University of New York at Purchase. inverse has educated at: Tim Mc Cann.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/State_University_of_New_York_at_Purchase",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "State University of New York at Purchase",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "State University of New York at Purchase",
+        "extracted_source": "label",
+        "ground_truth_text": "State University of New York at Purchase",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tim_mccann",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tim Mc Cann",
+          "source": "label"
+        },
+        {
+          "text": "tim mccann",
+          "source": "uri"
+        }
+      ],
+      "context": "Tim Mc Cann. has educated at: State University of New York at Purchase. inverse has director: Desolation Angels (1995 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tim_McCann",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tim Mc Cann",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tim Mc Cann",
+        "extracted_source": "label",
+        "ground_truth_text": "Tim Mc Cann",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9473539590835571,
+      "graph_score": 0.9736769795417786,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/desolation_angels_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Desolation Angels (1995 film)",
+          "source": "label"
+        },
+        {
+          "text": "desolation angels film",
+          "source": "uri"
+        }
+      ],
+      "context": "Desolation Angels (1995 film). has director: Tim Mc Cann.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Desolation_Angels",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Desolation Angels",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "desolation angels film",
+        "extracted_source": "uri",
+        "ground_truth_text": "Desolation Angels",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8926178216934204,
+      "name_embedding_score": 0.8745726346969604,
+      "string_score": 0.8589743375778198,
+      "independent_identity_support": true,
+      "context_score": 0.9247036576271057,
+      "graph_score": 0.9623517990112305,
+      "margin": 0.8926178216934204
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

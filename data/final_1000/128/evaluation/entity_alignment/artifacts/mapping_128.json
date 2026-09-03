@@ -1,0 +1,159 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/128/originals/extracted_128.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/128/ground_truth_128.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/leicester_devereux_6th_viscount_hereford": "http://example.org/entity/Leicester_Devereux_6th_Viscount_Hereford",
+    "http://example.org/extracted/england": "http://example.org/entity/English",
+    "http://example.org/extracted/walter_devereux_5th_viscount_hereford": "http://example.org/entity/Walter_Devereux_5th_Viscount_Hereford"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/england",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "English",
+          "source": "altLabel"
+        },
+        {
+          "text": "England",
+          "source": "label"
+        }
+      ],
+      "context": "English. inverse has country: Walter Devereux, 5th Viscount Hereford.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/English",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "English",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "English",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "English",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7073072195053101,
+      "graph_score": 0.35365360975265503,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/leicester_devereux_6th_viscount_hereford",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Leicester Devereux, 6th Viscount Hereford",
+          "source": "label"
+        },
+        {
+          "text": "leicester devereux 6th viscount hereford",
+          "source": "uri"
+        }
+      ],
+      "context": "Leicester Devereux, 6th Viscount Hereford. has father: Walter Devereux, 5th Viscount Hereford.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Leicester_Devereux_6th_Viscount_Hereford",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Leicester Devereux 6th Viscount Hereford",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Leicester Devereux, 6th Viscount Hereford",
+        "extracted_source": "label",
+        "ground_truth_text": "Leicester Devereux 6th Viscount Hereford",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9821451306343079,
+      "string_score": 0.9944444298744202,
+      "independent_identity_support": true,
+      "context_score": 0.995166003704071,
+      "graph_score": 0.9975830316543579,
+      "margin": 0.2617901563644409
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/walter_devereux_5th_viscount_hereford",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Walter Devereux, 5th Viscount Hereford",
+          "source": "label"
+        },
+        {
+          "text": "walter devereux 5th viscount hereford",
+          "source": "uri"
+        }
+      ],
+      "context": "Walter Devereux, 5th Viscount Hereford. has country: English. inverse has father: Leicester Devereux, 6th Viscount Hereford.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Walter_Devereux_5th_Viscount_Hereford",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Walter Devereux 5th Viscount Hereford",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Walter Devereux, 5th Viscount Hereford",
+        "extracted_source": "label",
+        "ground_truth_text": "Walter Devereux 5th Viscount Hereford",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9930753111839294,
+      "string_score": 0.9940000176429749,
+      "independent_identity_support": true,
+      "context_score": 0.9633549451828003,
+      "graph_score": 0.7316774725914001,
+      "margin": 0.29247283935546875
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Walter_Devereux"
+  ]
+}

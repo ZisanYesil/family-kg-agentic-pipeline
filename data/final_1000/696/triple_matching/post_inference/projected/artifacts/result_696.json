@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/696/evaluation/entity_alignment/final_extracted_aligned_696.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/696/evaluation/entity_alignment/final_ground_truth_aligned_696.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Maziar_Bahari",
+      "predicate": "hasEmployer",
+      "object": "Newsweek",
+      "subject_uri": "http://example.org/entity/Maziar_Bahari",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/Newsweek"
+    },
+    {
+      "subject": "Maziar_Bahari",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Maziar_Bahari",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Maziar_Bahari",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Maziar_Bahari",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Newsweek",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Newsweek",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Newsweek",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Newsweek",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "To_Light_a_Candle",
+      "predicate": "hasCreator",
+      "object": "Maziar_Bahari",
+      "subject_uri": "http://example.org/entity/To_Light_a_Candle",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Maziar_Bahari"
+    },
+    {
+      "subject": "To_Light_a_Candle",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/To_Light_a_Candle",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "To_Light_a_Candle",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/To_Light_a_Candle",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "To_Light_a_Candle",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/To_Light_a_Candle",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "To_Light_a_Candle",
+      "predicate": "hasDirector",
+      "object": "Maziar_Bahari",
+      "subject_uri": "http://example.org/entity/To_Light_a_Candle",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Maziar_Bahari"
+    }
+  ],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 10,
+    "true_positives": 9,
+    "false_positives": 0,
+    "false_negatives": 1,
+    "precision": 1.0,
+    "recall": 0.9,
+    "f1": 0.9473684210526316
+  },
+  "stage": "post_inference"
+}

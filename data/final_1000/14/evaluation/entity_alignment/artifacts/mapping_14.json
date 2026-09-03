@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/14/originals/extracted_14.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/14/ground_truth_14.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_george_albert_smith": "http://example.org/entity/George_Albert_Smith",
+    "http://example.org/extracted/film_old_man_drinking_a_glass_of_beer": "http://example.org/entity/Old_Man_Drinking_a_Glass_of_Beer"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_old_man_drinking_a_glass_of_beer",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Old Man Drinking a Glass of Beer",
+          "source": "label"
+        },
+        {
+          "text": "film old man drinking a glass of beer",
+          "source": "uri"
+        }
+      ],
+      "context": "Old Man Drinking a Glass of Beer. has director: George Albert Smith.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Old_Man_Drinking_a_Glass_of_Beer",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Old Man Drinking a Glass of Beer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Old Man Drinking a Glass of Beer",
+        "extracted_source": "label",
+        "ground_truth_text": "Old Man Drinking a Glass of Beer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_george_albert_smith",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George Albert Smith",
+          "source": "label"
+        },
+        {
+          "text": "person george albert smith",
+          "source": "uri"
+        }
+      ],
+      "context": "George Albert Smith. has birth date: 1864-01-04. has death date: 1959-05-17. inverse has director: Old Man Drinking a Glass of Beer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_Albert_Smith",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George Albert Smith",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George Albert Smith",
+        "extracted_source": "label",
+        "ground_truth_text": "George Albert Smith",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7706329226493835,
+      "graph_score": 0.8853164911270142,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Brighton"
+  ]
+}

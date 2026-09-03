@@ -1,0 +1,289 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/207/originals/extracted_207.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/207/ground_truth_207.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/peter_mate_pop": "http://example.org/entity/Péter_Máté",
+    "http://example.org/extracted/michael_d_antonovich": "http://example.org/entity/Michael_D_Antonovich",
+    "http://example.org/extracted/occupation_politician": "http://example.org/entity/politician",
+    "http://example.org/extracted/occupation_composer": "http://example.org/entity/composer",
+    "http://example.org/extracted/occupation_pianist": "http://example.org/entity/pianist"
+  },
+  "summary": {
+    "extracted_entities": 6,
+    "ground_truth_entities": 6,
+    "matched": 6,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/michael_d_antonovich",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Michael D. Antonovich",
+          "source": "label"
+        },
+        {
+          "text": "michael d antonovich",
+          "source": "uri"
+        }
+      ],
+      "context": "Michael D. Antonovich. has occupation: politician.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Michael_D_Antonovich",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Michael D Antonovich",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Michael D. Antonovich",
+        "extracted_source": "label",
+        "ground_truth_text": "Michael D Antonovich",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9896776080131531,
+      "string_score": 0.9890244007110596,
+      "independent_identity_support": true,
+      "context_score": 0.9926649332046509,
+      "graph_score": 0.9963324666023254,
+      "margin": 0.6802124977111816
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_composer",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "composer",
+          "source": "label"
+        },
+        {
+          "text": "occupation composer",
+          "source": "uri"
+        }
+      ],
+      "context": "composer. inverse has occupation: Péter Máté.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/composer",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "composer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "composer",
+        "extracted_source": "label",
+        "ground_truth_text": "composer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.33934879302978516
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_pianist",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "pianist",
+          "source": "label"
+        },
+        {
+          "text": "occupation pianist",
+          "source": "uri"
+        }
+      ],
+      "context": "pianist. inverse has occupation: Péter Máté.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/pianist",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "pianist",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "pianist",
+        "extracted_source": "label",
+        "ground_truth_text": "pianist",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.33934879302978516
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_politician",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "politician",
+          "source": "label"
+        },
+        {
+          "text": "occupation politician",
+          "source": "uri"
+        }
+      ],
+      "context": "politician. inverse has occupation: Michael D. Antonovich.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/politician",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "politician",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "politician",
+        "extracted_source": "label",
+        "ground_truth_text": "politician",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9952343702316284,
+      "graph_score": 0.9976171851158142,
+      "margin": 0.7401321530342102
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/peter_mate_pop",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Péter Máté",
+          "source": "altLabel"
+        },
+        {
+          "text": "Péter Máté (pop singer)",
+          "source": "label"
+        },
+        {
+          "text": "peter mate pop",
+          "source": "uri"
+        }
+      ],
+      "context": "Péter Máté. has occupation: composer. has occupation: pianist. has occupation: pop singer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Péter_Máté",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Péter Máté",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Péter Máté",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Péter Máté",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9842141270637512,
+      "graph_score": 0.9921070337295532,
+      "margin": 0.7411230206489563
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/occupation_pop_singer",
+      "extracted_types": [
+        "Occupation"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "pop singer",
+          "source": "label"
+        },
+        {
+          "text": "occupation pop singer",
+          "source": "uri"
+        }
+      ],
+      "context": "pop singer. inverse has occupation: Péter Máté.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/singer",
+      "ground_truth_types": [
+        "Occupation"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "singer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "pop singer",
+        "extracted_source": "label",
+        "ground_truth_text": "singer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8775528073310852,
+      "name_embedding_score": 0.8826587200164795,
+      "string_score": 0.762499988079071,
+      "independent_identity_support": true,
+      "context_score": 0.9647875428199768,
+      "graph_score": 0.982393741607666,
+      "margin": 0.3990713953971863
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

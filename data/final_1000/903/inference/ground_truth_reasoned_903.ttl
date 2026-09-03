@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Lighter a ex:Artifact,
+        ex:CreativeWork ;
+    ex:hasCreator entity:Miley_Cyrus ;
+    ex:hasPerformer entity:Miley_Cyrus .
+
+entity:Billy_Ray_Cyrus a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Miley_Cyrus .
+
+entity:Miley_Cyrus a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Billy_Ray_Cyrus ;
+    ex:hasParent entity:Billy_Ray_Cyrus .
+

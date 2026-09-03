@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:harith_ibn_harb a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Harith ibn Harb" ;
+    onto:hasFather data:harb_ibn_umayya .
+
+data:harb_ibn_umayya a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Harb ibn Umayya" ;
+    onto:hasFather data:umayya_ibn_abd_shams .
+
+data:umayya_ibn_abd_shams a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Umayya ibn Abd Shams" .
+

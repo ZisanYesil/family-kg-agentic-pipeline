@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/496/originals/extracted_496.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/496/ground_truth_496.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/surog_charmil": "http://example.org/entity/Surog_Charmil",
+    "http://example.org/extracted/iran": "http://example.org/entity/Iran",
+    "http://example.org/extracted/sheykhian_mari": "http://example.org/entity/Sheykhian_Mari"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/iran",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Iran",
+          "source": "label"
+        }
+      ],
+      "context": "Iran. inverse has country: Sheykheyān. inverse has country: Sūrog.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Iran",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Iran",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Iran",
+        "extracted_source": "label",
+        "ground_truth_text": "Iran",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9387056827545166,
+      "graph_score": 0.9693528413772583,
+      "margin": 0.735352098941803
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sheykhian_mari",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sheykheyān",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sheykhīyan",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sheykhīān",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sheykhian Mari",
+          "source": "label"
+        }
+      ],
+      "context": "Sheykheyān. has country: Iran.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sheykhian_Mari",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sheykhian Mari",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sheykhian Mari",
+        "extracted_source": "label",
+        "ground_truth_text": "Sheykhian Mari",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9275515079498291,
+      "graph_score": 0.9637757539749146,
+      "margin": 0.5647734999656677
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/surog_charmil",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sūrog",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sūrog Charmīl",
+          "source": "altLabel"
+        },
+        {
+          "text": "Surog Charmil",
+          "source": "label"
+        }
+      ],
+      "context": "Sūrog. has country: Iran.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Surog_Charmil",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Surog Charmil",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Surog Charmil",
+        "extracted_source": "label",
+        "ground_truth_text": "Surog Charmil",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8387566804885864,
+      "graph_score": 0.9193783402442932,
+      "margin": 0.47325384616851807
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -19,7 +19,7 @@ def test_api_and_sqlite_round_trip_with_repair_audit(tmp_path, monkeypatch) -> N
     with TestClient(app) as client:
         create_response = client.post(
             "/jobs",
-            json={"text": "Jane Doe is a person in this family narrative."},
+            json={"text": "Jane Doe is a person in this family narrative.","question": "When was Jane Doe born?",},
         )
         assert create_response.status_code == 202
         job_id = create_response.json()["job_id"]

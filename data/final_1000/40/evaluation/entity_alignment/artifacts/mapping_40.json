@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/40/originals/extracted_40.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/40/ground_truth_40.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_erle_c_kenton": "http://example.org/entity/Erle_C_Kenton",
+    "http://example.org/extracted/film_she_asked_for_it": "http://example.org/entity/She_Asked_for_It"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_she_asked_for_it",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "She Asked for It",
+          "source": "label"
+        },
+        {
+          "text": "film she asked for it",
+          "source": "uri"
+        }
+      ],
+      "context": "She Asked for It. has director: Erle C. Kenton.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/She_Asked_for_It",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "She Asked for It",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "She Asked for It",
+        "extracted_source": "label",
+        "ground_truth_text": "She Asked for It",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9956362247467041,
+      "graph_score": 0.997818112373352,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_erle_c_kenton",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Erle C. Kenton",
+          "source": "label"
+        },
+        {
+          "text": "person erle c kenton",
+          "source": "uri"
+        }
+      ],
+      "context": "Erle C. Kenton. has cause of death: Parkinson's disease. inverse has director: She Asked for It.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Erle_C_Kenton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Erle C Kenton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Erle C. Kenton",
+        "extracted_source": "label",
+        "ground_truth_text": "Erle C Kenton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9645095467567444,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.9856570363044739,
+      "graph_score": 0.9928284883499146,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cause_parkinsons_disease",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Parkinson's disease",
+          "source": "label"
+        },
+        {
+          "text": "cause parkinsons disease",
+          "source": "uri"
+        }
+      ],
+      "context": "Parkinson's disease. inverse has cause of death: Erle C. Kenton.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Parkinson",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Parkinson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Parkinson's disease",
+        "extracted_source": "label",
+        "ground_truth_text": "Parkinson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8584092855453491,
+      "name_embedding_score": 0.8878726959228516,
+      "string_score": 0.6726190447807312,
+      "independent_identity_support": false,
+      "context_score": 0.9705455303192139,
+      "graph_score": 0.9852727651596069,
+      "margin": 0.8584092855453491
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

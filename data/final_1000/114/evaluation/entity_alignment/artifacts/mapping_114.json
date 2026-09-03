@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/114/originals/extracted_114.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/114/ground_truth_114.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/henry_of_berg_lord_of_windeck": "http://example.org/entity/Henry_of_Berg_Lord_of_Windeck",
+    "http://example.org/extracted/neuss": "http://example.org/entity/Neuss",
+    "http://example.org/extracted/adolf_vii_of_berg": "http://example.org/entity/Adolf_VII_of_Berg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adolf_vii_of_berg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adolf VII of Berg",
+          "source": "label"
+        }
+      ],
+      "context": "Adolf VII of Berg. has death place: Neuss. inverse has father: Henry of Berg, Lord of Windeck.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adolf_VII_of_Berg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adolf VII of Berg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adolf VII of Berg",
+        "extracted_source": "label",
+        "ground_truth_text": "Adolf VII of Berg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9961815476417542,
+      "graph_score": 0.9980907440185547,
+      "margin": 0.4007890224456787
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/henry_of_berg_lord_of_windeck",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henry of Berg, Lord of Windeck",
+          "source": "label"
+        },
+        {
+          "text": "henry of berg lord of windeck",
+          "source": "uri"
+        }
+      ],
+      "context": "Henry of Berg, Lord of Windeck. has father: Adolf VII of Berg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Henry_of_Berg_Lord_of_Windeck",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Henry of Berg Lord of Windeck",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henry of Berg, Lord of Windeck",
+        "extracted_source": "label",
+        "ground_truth_text": "Henry of Berg Lord of Windeck",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9920855164527893,
+      "string_score": 0.9923728704452515,
+      "independent_identity_support": true,
+      "context_score": 0.9964184761047363,
+      "graph_score": 0.9982092380523682,
+      "margin": 0.3918289542198181
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/neuss",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Neuss",
+          "source": "label"
+        }
+      ],
+      "context": "Neuss. inverse has death place: Adolf VII of Berg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Neuss",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Neuss",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Neuss",
+        "extracted_source": "label",
+        "ground_truth_text": "Neuss",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

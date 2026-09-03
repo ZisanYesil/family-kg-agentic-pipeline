@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:louis_jean_marie_de_bourbon a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis Jean Marie de Bourbon" ;
+    onto:hasNationality data:france ;
+    onto:hasSon data:louis_alexandre_prince_of_lamballe .
+
+data:france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+
+data:louis_alexandre_prince_of_lamballe a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis Alexandre de Bourbon" .
+

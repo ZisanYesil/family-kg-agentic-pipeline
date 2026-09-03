@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:France a ex:Place .
+
+entity:Isabel_de_la_Cerda a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Luis_de_la_Cerda ;
+    ex:hasParent entity:Luis_de_la_Cerda .
+
+entity:Luis_de_la_Cerda a ex:Agent,
+        ex:Person ;
+    ex:hasBirthPlace entity:France ;
+    ex:hasChild entity:Isabel_de_la_Cerda .
+

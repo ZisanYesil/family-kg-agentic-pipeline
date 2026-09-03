@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:hero_at_large_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Hero At Large" ;
+    onto:hasDirector data:martin_davidson_person .
+
+data:american_academy_of_dramatic_arts a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "American Academy of Dramatic Arts" .
+
+data:martin_davidson_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Martin Davidson" ;
+    onto:hasEducatedAt data:american_academy_of_dramatic_arts .
+

@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/517/originals/extracted_517.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/517/ground_truth_517.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_v_priya": "http://example.org/entity/V_Priya",
+    "http://example.org/extracted/film_kanda_naal_mudhal": "http://example.org/entity/Kanda_Naal_Mudhal",
+    "http://example.org/extracted/person_suhasini": "http://example.org/entity/Suhasini"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_kanda_naal_mudhal",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kanda Naal Mudhal",
+          "source": "label"
+        },
+        {
+          "text": "film kanda naal mudhal",
+          "source": "uri"
+        }
+      ],
+      "context": "Kanda Naal Mudhal. has director: V. Priya.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kanda_Naal_Mudhal",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kanda Naal Mudhal",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kanda Naal Mudhal",
+        "extracted_source": "label",
+        "ground_truth_text": "Kanda Naal Mudhal",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9928922653198242,
+      "graph_score": 0.9964461326599121,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_suhasini",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Suhasini",
+          "source": "label"
+        },
+        {
+          "text": "person suhasini",
+          "source": "uri"
+        }
+      ],
+      "context": "Suhasini. inverse has student of: V. Priya.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Suhasini",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Suhasini",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Suhasini",
+        "extracted_source": "label",
+        "ground_truth_text": "Suhasini",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9875233769416809,
+      "graph_score": 0.9937616586685181,
+      "margin": 0.5677359998226166
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_v_priya",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "V. Priya",
+          "source": "label"
+        },
+        {
+          "text": "person v priya",
+          "source": "uri"
+        }
+      ],
+      "context": "V. Priya. has student of: Suhasini. inverse has director: Kanda Naal Mudhal.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/V_Priya",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "V Priya",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "V. Priya",
+        "extracted_source": "label",
+        "ground_truth_text": "V Priya",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9014920592308044,
+      "string_score": 0.9700000286102295,
+      "independent_identity_support": true,
+      "context_score": 0.9898558855056763,
+      "graph_score": 0.9949279427528381,
+      "margin": 0.6060665547847748
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

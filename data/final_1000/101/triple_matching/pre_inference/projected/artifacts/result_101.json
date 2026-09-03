@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/101/evaluation/entity_alignment/baseline_extracted_aligned_101.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/101/evaluation/entity_alignment/baseline_ground_truth_aligned_101.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "John_Woo",
+      "predicate": "hasCountry",
+      "object": "Hong_Kong",
+      "subject_uri": "http://example.org/entity/John_Woo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Hong_Kong"
+    },
+    {
+      "subject": "Mission_Impossible_2",
+      "predicate": "hasDirector",
+      "object": "John_Woo",
+      "subject_uri": "http://example.org/entity/Mission_Impossible_2",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/John_Woo"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Hong_Kong",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Hong_Kong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Hong_Kong",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hong_Kong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hong_Kong",
+      "predicate": "label",
+      "object": "\"Hong Kong\"",
+      "subject_uri": "http://example.org/entity/Hong_Kong",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hong Kong\""
+    },
+    {
+      "subject": "Hong_Kong",
+      "predicate": "altLabel",
+      "object": "\"Hong Kong\"",
+      "subject_uri": "http://example.org/entity/Hong_Kong",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Hong Kong\""
+    },
+    {
+      "subject": "John_Woo",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/John_Woo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "John_Woo",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/John_Woo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "John_Woo",
+      "predicate": "label",
+      "object": "\"John Woo\"",
+      "subject_uri": "http://example.org/entity/John_Woo",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"John Woo\""
+    },
+    {
+      "subject": "Mission_Impossible_2",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Mission_Impossible_2",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Mission_Impossible_2",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Mission_Impossible_2",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Mission_Impossible_2",
+      "predicate": "label",
+      "object": "\"Mission: Impossible 2\"",
+      "subject_uri": "http://example.org/entity/Mission_Impossible_2",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Mission: Impossible 2\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

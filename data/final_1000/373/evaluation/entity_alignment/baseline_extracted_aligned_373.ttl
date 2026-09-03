@@ -1,0 +1,17 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Marie_Louise_of_Hesse_Kassel> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marie Louise of Hesse-Kassel" ;
+    onto:hasMother <http://example.org/entity/Maria_Amalia_of_Courland> .
+
+<http://example.org/entity/Maria_Amalia_of_Courland> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Maria Amalia of Courland" ;
+    onto:hasDeathDate "1711-06-16"^^xsd:date ;
+    skos:altLabel "Maria Anna Amalia of Courland" .
+

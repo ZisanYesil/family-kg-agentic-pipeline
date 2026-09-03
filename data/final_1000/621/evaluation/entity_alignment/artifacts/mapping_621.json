@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/621/originals/extracted_621.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/621/ground_truth_621.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/irene_of_montferrat": "http://example.org/entity/Irene_of_Montferrat",
+    "http://example.org/extracted/william_vii_montferrat": "http://example.org/entity/William_VII_Marquess_of_Montferrat",
+    "http://example.org/extracted/john_palaiologos": "http://example.org/entity/John_Palaiologos"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/irene_of_montferrat",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Irene of Montferrat",
+          "source": "label"
+        }
+      ],
+      "context": "Irene of Montferrat. has father: William VII, Marquess of Montferrat. inverse has mother: John Palaiologos (son of Andronikos II).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Irene_of_Montferrat",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Irene of Montferrat",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Irene of Montferrat",
+        "extracted_source": "label",
+        "ground_truth_text": "Irene of Montferrat",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9035532474517822,
+      "graph_score": 0.9517766237258911,
+      "margin": 0.4420522451400757
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_palaiologos",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Palaiologos (son of Andronikos II)",
+          "source": "label"
+        },
+        {
+          "text": "john palaiologos",
+          "source": "uri"
+        }
+      ],
+      "context": "John Palaiologos (son of Andronikos II). has mother: Irene of Montferrat.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Palaiologos",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Palaiologos",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "john palaiologos",
+        "extracted_source": "uri",
+        "ground_truth_text": "John Palaiologos",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8940256237983704,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8081931471824646,
+      "graph_score": 0.9040966033935547,
+      "margin": 0.6188421249389648
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/william_vii_montferrat",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William VII, Marquess of Montferrat",
+          "source": "label"
+        },
+        {
+          "text": "william vii montferrat",
+          "source": "uri"
+        }
+      ],
+      "context": "William VII, Marquess of Montferrat. inverse has father: Irene of Montferrat.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_VII_Marquess_of_Montferrat",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William VII Marquess of Montferrat",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William VII, Marquess of Montferrat",
+        "extracted_source": "label",
+        "ground_truth_text": "William VII Marquess of Montferrat",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9947800636291504,
+      "string_score": 0.9934782385826111,
+      "independent_identity_support": true,
+      "context_score": 0.9963652491569519,
+      "graph_score": 0.9981826543807983,
+      "margin": 0.4396146535873413
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

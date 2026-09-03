@@ -1,0 +1,143 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/455/originals/extracted_455.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/455/ground_truth_455.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/philip_foster_farm": "http://example.org/entity/Philip_Foster_Farm",
+    "http://example.org/extracted/seattle_times_building": "http://example.org/entity/Seattle_Times_Building",
+    "http://example.org/extracted/united_states": "http://example.org/entity/United_States"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/philip_foster_farm",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Philip Foster Farm",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Philip Foster Farm. has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Philip_Foster_Farm",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Philip Foster Farm",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Philip Foster Farm",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Philip Foster Farm",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8137383460998535
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/seattle_times_building",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Seattle Times Building",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Seattle Times Building. has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Seattle_Times_Building",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Seattle Times Building",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Seattle Times Building",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Seattle Times Building",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8539231419563293,
+      "graph_score": 0.4269615709781647,
+      "margin": 0.6727814674377441
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States",
+          "source": "altLabel"
+        }
+      ],
+      "context": "United States. inverse has country: Philip Foster Farm. inverse has country: Seattle Times Building.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_States",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United States",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "United States",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8478498458862305,
+      "graph_score": 0.6739249229431152,
+      "margin": 0.6387244462966919
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Canadian"
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/274/originals/extracted_274.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/274/ground_truth_274.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_im_not_harry_jenson": "http://example.org/entity/I_m_Not_Harry_Jenson",
+    "http://example.org/extracted/person_tom_hern": "http://example.org/entity/Tom_Hern",
+    "http://example.org/extracted/film_conquest": "http://example.org/entity/Conquest_of_the_Planet_of_the_Apes",
+    "http://example.org/extracted/person_arthur_jacobs": "http://example.org/entity/Arthur_P_Jacobs"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_conquest",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Conquest of the Planet of the Apes",
+          "source": "label"
+        },
+        {
+          "text": "film conquest",
+          "source": "uri"
+        }
+      ],
+      "context": "Conquest of the Planet of the Apes. has producer: Arthur P. Jacobs.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Conquest_of_the_Planet_of_the_Apes",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Conquest of the Planet of the Apes",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Conquest of the Planet of the Apes",
+        "extracted_source": "label",
+        "ground_truth_text": "Conquest of the Planet of the Apes",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9946407079696655,
+      "graph_score": 0.9973203539848328,
+      "margin": 0.8381332010030746
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_im_not_harry_jenson",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "I'm Not Harry Jenson",
+          "source": "label"
+        },
+        {
+          "text": "film im not harry jenson",
+          "source": "uri"
+        }
+      ],
+      "context": "I'm Not Harry Jenson. has producer: Tom Hern.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/I_m_Not_Harry_Jenson",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "I m Not Harry Jenson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "I'm Not Harry Jenson",
+        "extracted_source": "label",
+        "ground_truth_text": "I m Not Harry Jenson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9281368255615234,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.9715993404388428,
+      "graph_score": 0.9857996702194214,
+      "margin": 0.8833891302347183
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_arthur_jacobs",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Arthur P. Jacobs",
+          "source": "label"
+        },
+        {
+          "text": "person arthur jacobs",
+          "source": "uri"
+        }
+      ],
+      "context": "Arthur P. Jacobs. has birth date: 1922-03-07. inverse has producer: Conquest of the Planet of the Apes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Arthur_P_Jacobs",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Arthur P Jacobs",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Arthur P. Jacobs",
+        "extracted_source": "label",
+        "ground_truth_text": "Arthur P Jacobs",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9901386499404907,
+      "string_score": 0.9854838848114014,
+      "independent_identity_support": true,
+      "context_score": 0.9949980974197388,
+      "graph_score": 0.9974990487098694,
+      "margin": 0.7203247547149658
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_tom_hern",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tom Hern",
+          "source": "label"
+        },
+        {
+          "text": "person tom hern",
+          "source": "uri"
+        }
+      ],
+      "context": "Tom Hern. has birth date: 1984-12-10. inverse has producer: I'm Not Harry Jenson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tom_Hern",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tom Hern",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tom Hern",
+        "extracted_source": "label",
+        "ground_truth_text": "Tom Hern",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9865425825119019,
+      "graph_score": 0.9932712912559509,
+      "margin": 0.7725046873092651
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

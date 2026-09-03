@@ -5,12 +5,14 @@ from pathlib import Path
 import pytest
 from rdflib import Graph, Literal, Namespace
 from rdflib.namespace import RDF, SH, XSD
+from rdflib.namespace import OWL
 
 from ontology.schema_loader import (
     DatatypeProperty,
     ObjectProperty,
     OntologyClass,
     OntologySchema,
+    load_ontology_schema,
 )
 from validation.models import ViolationKind, ViolationSeverity, ViolationSource
 from validation.shacl_runner import (
@@ -103,6 +105,23 @@ def test_valid_graph_returns_empty_conforming_result() -> None:
     assert result.violations == ()
 
 
+def test_dataset_allows_multiple_grounded_countries_of_origin() -> None:
+    schema = load_ontology_schema("ontology/ontology.ttl")
+    ontology = Namespace(DATASET_ONTOLOGY_NAMESPACE)
+    dataset = Namespace("http://example.org/extracted/")
+    data = Graph()
+    data.add((dataset.film, RDF.type, ontology.Film))
+    data.add((dataset.italy, RDF.type, ontology.Country))
+    data.add((dataset.united_states, RDF.type, ontology.Country))
+    data.add((dataset.film, ontology.hasCountryOfOrigin, dataset.italy))
+    data.add((dataset.film, ontology.hasCountryOfOrigin, dataset.united_states))
+
+    result = run_shacl_validation(data, schema)
+
+    assert result.conforms is True
+    assert result.violations == ()
+
+
 def test_dynamic_violation_is_normalized_with_repair_context() -> None:
     data = Graph()
     data.add((EX.car_one, RDF.type, EX.Car))
@@ -164,8 +183,7 @@ def test_warning_is_reported_but_does_not_block_conformance(tmp_path: Path) -> N
     assert len(result.violations) == 1
     assert result.violations[0].severity == ViolationSeverity.WARNING
 
-
-def test_dataset_namespace_automatically_loads_dataset_semantic_shapes() -> None:
+def test_current_namespace_automatically_loads_semantic_shapes() -> None:
     dataset = Namespace(DATASET_ONTOLOGY_NAMESPACE)
     dataset_schema = OntologySchema(
         namespace=DATASET_ONTOLOGY_NAMESPACE,
@@ -176,8 +194,12 @@ def test_dataset_namespace_automatically_loads_dataset_semantic_shapes() -> None
 
     shapes = build_shacl_graph(dataset_schema)
 
-    assert (dataset.PersonShape, RDF.type, SH.NodeShape) in shapes
-    assert (dataset.PersonShape, SH.targetClass, dataset.Person) in shapes
+    assert (dataset.NamedIndividualShape, RDF.type, SH.NodeShape) in shapes
+    assert (
+        dataset.NamedIndividualShape,
+        SH.targetClass,
+        OWL.NamedIndividual,
+    ) in shapes
 
 
 def test_rdfs_inference_accepts_subclass_for_property_domain_and_range() -> None:
@@ -197,7 +219,11 @@ def test_rdfs_inference_accepts_subclass_for_property_domain_and_range() -> None
                 range_class="Vehicle",
             ),
         ),
-        subclass_relations=(("Car", "Vehicle"),),
+        superclasses_by_class={
+            "Vehicle": frozenset({"Vehicle"}),
+            "Car": frozenset({"Car", "Vehicle"}),
+            "Person": frozenset({"Person"}),
+        },
     )
     data = Graph()
     data.add((EX.alex, RDF.type, EX.Person))

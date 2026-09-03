@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/853/originals/extracted_853.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/853/ground_truth_853.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_raj_kanwar": "http://example.org/entity/Raj_Kanwar",
+    "http://example.org/extracted/film_humko_deewana_kar_gaye": "http://example.org/entity/Humko_Deewana_Kar_Gaye"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_humko_deewana_kar_gaye",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Humko Deewana Kar Gaye",
+          "source": "label"
+        },
+        {
+          "text": "film humko deewana kar gaye",
+          "source": "uri"
+        }
+      ],
+      "context": "Humko Deewana Kar Gaye. has director: Raj Kanwar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Humko_Deewana_Kar_Gaye",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Humko Deewana Kar Gaye",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Humko Deewana Kar Gaye",
+        "extracted_source": "label",
+        "ground_truth_text": "Humko Deewana Kar Gaye",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_raj_kanwar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Raj Kanwar",
+          "source": "label"
+        },
+        {
+          "text": "person raj kanwar",
+          "source": "uri"
+        }
+      ],
+      "context": "Raj Kanwar. inverse has director: Humko Deewana Kar Gaye.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Raj_Kanwar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Raj Kanwar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Raj Kanwar",
+        "extracted_source": "label",
+        "ground_truth_text": "Raj Kanwar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8404747843742371,
+      "graph_score": 0.9202374219894409,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/India"
+  ]
+}

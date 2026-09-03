@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/44/evaluation/entity_alignment/baseline_extracted_aligned_44.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/44/evaluation/entity_alignment/baseline_ground_truth_aligned_44.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Bernhard_Afinger",
+      "predicate": "hasBirthDate",
+      "object": "\"1813-05-06\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Bernhard_Afinger",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1813-05-06\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Bernhard_Afinger",
+      "predicate": "hasDeathDate",
+      "object": "\"1882-12-25\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Bernhard_Afinger",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1882-12-25\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Melvin_Kranzberg",
+      "predicate": "hasBirthDate",
+      "object": "\"1917-11-22\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Melvin_Kranzberg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1917-11-22\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Melvin_Kranzberg",
+      "predicate": "hasDeathDate",
+      "object": "\"1995-12-06\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Melvin_Kranzberg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1995-12-06\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Bernhard_Afinger",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bernhard_Afinger",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Bernhard_Afinger",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Bernhard_Afinger",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Bernhard_Afinger",
+      "predicate": "label",
+      "object": "\"Bernhard Afinger\"",
+      "subject_uri": "http://example.org/entity/Bernhard_Afinger",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bernhard Afinger\""
+    },
+    {
+      "subject": "Melvin_Kranzberg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Melvin_Kranzberg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Melvin_Kranzberg",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Melvin_Kranzberg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Melvin_Kranzberg",
+      "predicate": "label",
+      "object": "\"Melvin Kranzberg\"",
+      "subject_uri": "http://example.org/entity/Melvin_Kranzberg",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Melvin Kranzberg\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 10,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,33 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:hennessy_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Hennessy" ;
+    onto:hasDirector data:don_sharp .
+
+data:trouble_in_the_glen a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Trouble in the Glen" ;
+    onto:hasDirector data:herbert_wilcox .
+
+data:don_sharp a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Don Sharp" ;
+    onto:hasNationality data:united_kingdom ;
+    skos:altLabel "Donald Herman Sharp" .
+
+data:herbert_wilcox a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Herbert Wilcox" ;
+    onto:hasNationality data:united_kingdom ;
+    skos:altLabel "Herbert Sydney Wilcox" .
+
+data:united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "British" .
+

@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/170/originals/extracted_170.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/170/ground_truth_170.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/cracked_eggs_and_noodles": "http://example.org/entity/Cracked_Eggs_and_Noodles",
+    "http://example.org/extracted/do_risos_e_lagrimas": "http://example.org/entity/Do_Risos_e_Lagrimas"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/cracked_eggs_and_noodles",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cracked Eggs and Noodles",
+          "source": "label"
+        }
+      ],
+      "context": "Cracked Eggs and Noodles. has publication date: 2005.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cracked_Eggs_and_Noodles",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cracked Eggs and Noodles",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cracked Eggs and Noodles",
+        "extracted_source": "label",
+        "ground_truth_text": "Cracked Eggs and Noodles",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8213511407375336
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/do_risos_e_lagrimas",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Do Risos e Lagrimas",
+          "source": "label"
+        }
+      ],
+      "context": "Do Risos e Lagrimas. has publication date: 1926.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Do_Risos_e_Lagrimas",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Do Risos e Lagrimas",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Do Risos e Lagrimas",
+        "extracted_source": "label",
+        "ground_truth_text": "Do Risos e Lagrimas",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8161185681819916
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

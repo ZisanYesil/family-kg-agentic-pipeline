@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/728/originals/extracted_728.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/728/ground_truth_728.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_feng_xiaoning": "http://example.org/entity/Feng_Xiaoning",
+    "http://example.org/extracted/place_xian": "http://example.org/entity/Xi_an",
+    "http://example.org/extracted/film_lover_grief_yellow_river": "http://example.org/entity/Lover_s_Grief_over_the_Yellow_River"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_lover_grief_yellow_river",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lover's Grief over the Yellow River",
+          "source": "label"
+        },
+        {
+          "text": "film lover grief yellow river",
+          "source": "uri"
+        }
+      ],
+      "context": "Lover's Grief over the Yellow River. has director: Feng Xiaoning.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lover_s_Grief_over_the_Yellow_River",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lover s Grief over the Yellow River",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lover's Grief over the Yellow River",
+        "extracted_source": "label",
+        "ground_truth_text": "Lover s Grief over the Yellow River",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9612926840782166,
+      "string_score": 0.9871428608894348,
+      "independent_identity_support": true,
+      "context_score": 0.9947884678840637,
+      "graph_score": 0.9973942041397095,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_feng_xiaoning",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Feng Xiaoning",
+          "source": "label"
+        },
+        {
+          "text": "person feng xiaoning",
+          "source": "uri"
+        }
+      ],
+      "context": "Feng Xiaoning. has birth place: Xi'an. inverse has director: Lover's Grief over the Yellow River.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Feng_Xiaoning",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Feng Xiaoning",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Feng Xiaoning",
+        "extracted_source": "label",
+        "ground_truth_text": "Feng Xiaoning",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9936448931694031,
+      "graph_score": 0.9968224763870239,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_xian",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Xi'an",
+          "source": "label"
+        },
+        {
+          "text": "place xian",
+          "source": "uri"
+        }
+      ],
+      "context": "Xi'an. inverse has birth place: Feng Xiaoning.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Xi_an",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Xi an",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Xi'an",
+        "extracted_source": "label",
+        "ground_truth_text": "Xi an",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.967435896396637,
+      "string_score": 0.9100000262260437,
+      "independent_identity_support": true,
+      "context_score": 0.9945002794265747,
+      "graph_score": 0.9972501397132874,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

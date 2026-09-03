@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/566/originals/extracted_566.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/566/ground_truth_566.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/lawrence_margolis": "http://example.org/entity/Lawrence_S_Margolis",
+    "http://example.org/extracted/george_southall_cyclist": "http://example.org/entity/George_Southall"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/george_southall_cyclist",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George Southall",
+          "source": "altLabel"
+        },
+        {
+          "text": "Montford George Southall",
+          "source": "label"
+        },
+        {
+          "text": "george southall cyclist",
+          "source": "uri"
+        }
+      ],
+      "context": "George Southall. has birth date: 1907-07-17. has death date: 1993-05-02.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_Southall",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George Southall",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George Southall",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "George Southall",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.517971396446228
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lawrence_margolis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lawrence S. Margolis",
+          "source": "label"
+        },
+        {
+          "text": "lawrence margolis",
+          "source": "uri"
+        }
+      ],
+      "context": "Lawrence S. Margolis. has birth date: 1935-03-13. has death date: 2017-01-18.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lawrence_S_Margolis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lawrence S Margolis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lawrence S. Margolis",
+        "extracted_source": "label",
+        "ground_truth_text": "Lawrence S Margolis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9796339869499207,
+      "string_score": 0.9884615540504456,
+      "independent_identity_support": true,
+      "context_score": 0.9953793883323669,
+      "graph_score": 0.9953793883323669,
+      "margin": 0.5232679843902588
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

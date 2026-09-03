@@ -1,0 +1,195 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/989/originals/extracted_989.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/989/ground_truth_989.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/country_argentina": "http://example.org/entity/Argentine",
+    "http://example.org/extracted/person_carlos_gardel": "http://example.org/entity/Carlos_Gardel",
+    "http://example.org/extracted/musicalwork_por_una_cabeza": "http://example.org/entity/Por_una_Cabeza"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_argentina",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Argentine",
+          "source": "altLabel"
+        },
+        {
+          "text": "Argentina",
+          "source": "label"
+        },
+        {
+          "text": "country argentina",
+          "source": "uri"
+        }
+      ],
+      "context": "Argentine. inverse has nationality: Carlos Gardel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Argentine",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Argentine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Argentine",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Argentine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9346567392349243,
+      "graph_score": 0.46732836961746216,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/musicalwork_por_una_cabeza",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Por una Cabeza",
+          "source": "label"
+        },
+        {
+          "text": "musicalwork por una cabeza",
+          "source": "uri"
+        }
+      ],
+      "context": "Por una Cabeza. has composer: Carlos Gardel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Por_una_Cabeza",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Por una Cabeza",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Por una Cabeza",
+        "extracted_source": "label",
+        "ground_truth_text": "Por una Cabeza",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_carlos_gardel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Carlos Gardel",
+          "source": "altLabel"
+        },
+        {
+          "text": "person carlos gardel",
+          "source": "uri"
+        }
+      ],
+      "context": "Carlos Gardel. has nationality: Argentine. has nationality: French. inverse has composer: Por una Cabeza.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Carlos_Gardel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Carlos Gardel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Carlos Gardel",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Carlos Gardel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9354373216629028,
+      "graph_score": 0.634385347366333,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        },
+        {
+          "text": "country france",
+          "source": "uri"
+        }
+      ],
+      "context": "French. inverse has nationality: Carlos Gardel.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

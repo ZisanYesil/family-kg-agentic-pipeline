@@ -3,11 +3,12 @@ from __future__ import annotations
 import re
 from datetime import date
 from dataclasses import dataclass
-from typing import Any, Optional
+from typing import Any
+from urllib.parse import quote
 
 import structlog
 from rdflib import Graph, Literal, Namespace, URIRef
-from rdflib.namespace import OWL, RDF, RDFS, XSD
+from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
 
 from ontology.schema_loader import OntologySchema
 
@@ -16,22 +17,7 @@ logger = structlog.get_logger(__name__)
 REQUIRED_EXTRACTION_KEYS = ("entities", "relations")
 REQUIRED_ENTITY_KEYS = ("id", "type")
 RELATION_FIELDS = ("subject", "predicate", "object")
-
-# Common RDFS/SKOS-style naming conventions for "alternate name" datatype properties. If the
-# ontology declares one of these (case-insensitively), extraction_agent's `aliases` list is
-# serialized using it; otherwise aliases have nowhere ontology-defined to go and are simply
-# not written to RDF. This is a naming-convention match, not a hardcoded namespace/URI, so it
-# works for any ontology that follows the convention and degrades gracefully for ones that
-# don't.
-_ALIAS_PROPERTY_CANDIDATES = {
-    "alsoknownas",
-    "knownas",
-    "formerlyknownas",
-    "altlabel",
-    "aliases",
-    "alias",
-}
-
+DEFAULT_ENTITY_NAMESPACE = "http://example.org/extracted/"
 
 # Deliberately excludes "string": xsd:string and a plain (untyped) literal are not the
 # same term as far as rdflib equality is concerned, and every other string-valued triple in
@@ -42,23 +28,8 @@ _RANGE_TYPE_TO_XSD = {
     "boolean": XSD.boolean,
     "decimal": XSD.decimal,
     "date": XSD.date,
-    "year": XSD.gYear,
+    "gYear": XSD.gYear,
 }
-
-_GYEAR_PATTERN = re.compile(r"^-?\d{4,}(?:Z|[+-]\d{2}:\d{2})?$")
-
-
-def _date_or_year_datatype(value: object) -> URIRef:
-    lexical_value = str(value)
-    if _GYEAR_PATTERN.fullmatch(lexical_value):
-        return XSD.gYear
-    try:
-        date.fromisoformat(lexical_value)
-    except ValueError as exc:
-        raise KGBuilderError(
-            f"Value {lexical_value!r} must be an ISO-8601 date or year"
-        ) from exc
-    return XSD.date
 
 
 class KGBuilderError(Exception):
@@ -83,10 +54,7 @@ class KGBuilderResult:
 
 
 def _sanitize_local_name(raw_id: str) -> str:
-    sanitized = re.sub(r"[^a-zA-Z0-9_]", "_", raw_id.lower())
-    if sanitized and sanitized[0].isdigit():
-        return f"e_{sanitized}"
-    return sanitized
+    return quote(raw_id, safe="-._~")
 
 
 def _bind_prefixes(graph: Graph, ns: Namespace) -> None:
@@ -95,13 +63,7 @@ def _bind_prefixes(graph: Graph, ns: Namespace) -> None:
     graph.bind("rdfs", RDFS)
     graph.bind("owl", OWL)
     graph.bind("xsd", XSD)
-
-
-def _find_alias_property(schema: OntologySchema) -> Optional[str]:
-    for prop in schema.datatype_properties:
-        if prop.local_name.lower() in _ALIAS_PROPERTY_CANDIDATES:
-            return prop.local_name
-    return None
+    graph.bind("skos", SKOS)
 
 
 def _entity_uri(ns: Namespace, raw_id: object) -> URIRef:
@@ -123,18 +85,19 @@ def _validate_required_object_fields(
                 )
 
 
-def _validate_functional_attribute_fields(entities: list[Any]) -> None:
+def _validate_functional_attribute_fields(entities: list[Any], schema: OntologySchema) -> None:
     """Flag conflicting values for the same (entity, attribute) pair across the entities
     list, e.g. the same id extracted twice with two different birthYear values."""
     seen_values: dict[tuple[str, str], object] = {}
 
+    functional_names = {prop.local_name for prop in schema.datatype_properties if prop.is_functional}
     for entity in entities:
         entity_id = str(entity["id"])
         attributes = entity.get("attributes") or {}
         if not isinstance(attributes, dict):
             continue
         for field, value in attributes.items():
-            if value is None:
+            if value is None or field not in functional_names:
                 continue
             key = (entity_id, field)
             existing = seen_values.get(key)
@@ -177,31 +140,92 @@ def _validate_extractions(extractions: dict[str, list[Any]], schema: OntologySch
     _validate_required_object_fields(extractions["entities"], "Entity", REQUIRED_ENTITY_KEYS)
     _validate_required_object_fields(extractions["relations"], "Relation", RELATION_FIELDS)
     _validate_entity_iri_local_names(extractions["entities"])
-    _validate_functional_attribute_fields(extractions["entities"])
+    _validate_functional_attribute_fields(extractions["entities"], schema)
 
     class_names = {cls.local_name for cls in schema.classes}
+    seen_ids: set[str] = set()
+    datatype_properties_by_name = {
+        prop.local_name: prop for prop in schema.datatype_properties
+    }
+    datatype_names = set(datatype_properties_by_name)
     for index, entity in enumerate(extractions["entities"]):
+        entity_id = str(entity["id"])
+        if entity_id in seen_ids:
+            raise KGBuilderError(f"Duplicate entity id: {entity_id}")
+        seen_ids.add(entity_id)
         entity_type = str(entity["type"])
         if entity_type not in class_names:
             raise KGBuilderError(f"Entity at index {index} has unsupported type: {entity_type}")
+        attributes = entity.get("attributes") or {}
+        if not isinstance(attributes, dict):
+            raise KGBuilderError(f"Entity at index {index} attributes must be an object")
+        unknown_attributes = set(attributes) - datatype_names
+        if unknown_attributes:
+            raise KGBuilderError(
+                f"Entity at index {index} has unsupported attributes: {', '.join(sorted(unknown_attributes))}"
+            )
+        for attribute_name, value in attributes.items():
+            if value is None:
+                continue
+            prop = datatype_properties_by_name[attribute_name]
+            if not schema.class_satisfies(entity_type, prop.domain_class):
+                raise KGBuilderError(
+                    f"Entity type {entity_type} does not satisfy {attribute_name} "
+                    f"domain {prop.domain_class}"
+                )
 
     predicate_names = {prop.local_name for prop in schema.object_properties}
+    entity_type_by_id = {str(entity["id"]): str(entity["type"]) for entity in extractions["entities"]}
+    properties_by_name = {prop.local_name: prop for prop in schema.object_properties}
     for relation in extractions["relations"]:
         predicate = str(relation["predicate"])
         if predicate not in predicate_names:
             raise KGBuilderError(f"Unsupported relation predicate: {predicate}")
+        subject_type = entity_type_by_id.get(str(relation["subject"]))
+        object_type = entity_type_by_id.get(str(relation["object"]))
+        prop = properties_by_name[predicate]
+        if subject_type is not None and not schema.class_satisfies(subject_type, prop.domain_class):
+            raise KGBuilderError(
+                f"Subject type {subject_type} does not satisfy {predicate} domain {prop.domain_class}"
+            )
+        if object_type is not None and not schema.class_satisfies(object_type, prop.range_class):
+            raise KGBuilderError(
+                f"Object type {object_type} does not satisfy {predicate} range {prop.range_class}"
+            )
+
+
+def _typed_literal(value: Any, range_type: str) -> Literal:
+    if range_type == "date_or_year":
+        text = str(value)
+        if re.fullmatch(r"\d{4}", text):
+            return Literal(text, datatype=XSD.gYear)
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", text):
+            try:
+                date.fromisoformat(text)
+            except ValueError as exc:
+                raise KGBuilderError(f"Invalid ISO date value: {text}") from exc
+            return Literal(text, datatype=XSD.date)
+        raise KGBuilderError(f"Date value must be YYYY or YYYY-MM-DD: {text!r}")
+    xsd_type = _RANGE_TYPE_TO_XSD.get(range_type)
+    return Literal(value, datatype=xsd_type) if xsd_type is not None else Literal(value)
 
 
 def _add_entity(
     graph: Graph,
-    ns: Namespace,
+    entity_ns: Namespace,
+    ontology_ns: Namespace,
     entity: dict[str, Any],
     schema: OntologySchema,
-    alias_property: Optional[str],
 ) -> None:
-    subject = _entity_uri(ns, entity["id"])
-    graph.add((subject, RDF.type, ns[str(entity["type"])]))
+    subject = _entity_uri(entity_ns, entity["id"])
     graph.add((subject, RDF.type, OWL.NamedIndividual))
+    # Preserve the class selected during extraction.  Previously the builder
+    # validated ``entity["type"]`` but discarded it when serializing RDF, so
+    # downstream reasoning could recover a type only when a relation happened
+    # to have a sufficiently narrow rdfs:domain/range.  Properties such as
+    # hasCountry intentionally have no domain, which made correctly extracted
+    # Film entities lose Film -> CreativeWork -> Artifact altogether.
+    graph.add((subject, RDF.type, ontology_ns[str(entity["type"])]))
 
     label = str(entity.get("label", ""))
     if label:
@@ -215,27 +239,20 @@ def _add_entity(
                 continue
             prop = datatype_props_by_name.get(name)
             if prop is None:
-                # Not declared by this ontology (shouldn't happen given schema-validated
-                # extraction output, but ignore defensively rather than fail late here).
-                continue
-            xsd_type = (
-                _date_or_year_datatype(value)
-                if prop.range_type == "date_or_year"
-                else _RANGE_TYPE_TO_XSD.get(prop.range_type)
-            )
-            literal = Literal(value, datatype=xsd_type) if xsd_type is not None else Literal(value)
-            graph.add((subject, ns[prop.local_name], literal))
+                raise KGBuilderError(f"Unsupported attribute: {name}")
+            literal = _typed_literal(value, prop.range_type)
+            graph.add((subject, ontology_ns[prop.local_name], literal))
 
-    if alias_property is not None:
-        aliases = entity.get("aliases", [])
-        if isinstance(aliases, list):
-            for alias in aliases:
-                graph.add((subject, ns[alias_property], Literal(str(alias))))
+    aliases = entity.get("aliases", [])
+    if isinstance(aliases, list):
+        for alias in aliases:
+            graph.add((subject, SKOS.altLabel, Literal(str(alias))))
 
 
 def _add_relation(
     graph: Graph,
-    ns: Namespace,
+    entity_ns: Namespace,
+    ontology_ns: Namespace,
     relation: dict[str, Any],
     known_entity_ids: set[str],
     dangling_references: list[DanglingRelationReference],
@@ -244,8 +261,10 @@ def _add_relation(
     object_id = str(relation.get("object", ""))
     predicate = str(relation.get("predicate", ""))
 
+    has_dangling_reference = False
     for role, entity_id in (("subject", subject_id), ("object", object_id)):
         if entity_id not in known_entity_ids:
+            has_dangling_reference = True
             dangling_references.append(
                 DanglingRelationReference(
                     role=role,
@@ -262,22 +281,39 @@ def _add_relation(
                 predicate=predicate,
             )
 
-    graph.add((_entity_uri(ns, subject_id), ns[predicate], _entity_uri(ns, object_id)))
+    if not has_dangling_reference:
+        graph.add(
+            (
+                _entity_uri(entity_ns, subject_id),
+                ontology_ns[predicate],
+                _entity_uri(entity_ns, object_id),
+            )
+        )
 
 
-def kg_builder_agent(extractions: dict[str, list[Any]], schema: OntologySchema) -> str:
+def kg_builder_agent(
+    extractions: dict[str, list[Any]],
+    schema: OntologySchema,
+    *,
+    entity_namespace: str = DEFAULT_ENTITY_NAMESPACE,
+) -> str:
     """Convert extracted entities/relations into Turtle, for whatever ontology `schema`
     describes."""
-    return kg_builder_agent_with_diagnostics(extractions, schema).turtle_graph
+    return kg_builder_agent_with_diagnostics(
+        extractions, schema, entity_namespace=entity_namespace
+    ).turtle_graph
 
 
 def kg_builder_agent_with_diagnostics(
-    extractions: dict[str, list[Any]], schema: OntologySchema
+    extractions: dict[str, list[Any]],
+    schema: OntologySchema,
+    *,
+    entity_namespace: str = DEFAULT_ENTITY_NAMESPACE,
 ) -> KGBuilderResult:
     """Convert extracted entities/relations into a Turtle-serialized RDF graph and collect
     non-fatal diagnostics. Works for any ontology: the namespace, valid entity types (rdf:type
     values), datatype property URIs, and valid relation predicates all come from `schema`
-    (see ontology/schema_loader.py) rather than being hardcoded to the family ontology.
+    (see schema_loader.py) rather than being hardcoded to the family ontology.
     """
     try:
         _validate_extractions(extractions, schema)
@@ -290,17 +326,18 @@ def kg_builder_agent_with_diagnostics(
             ontology_namespace=schema.namespace,
         )
 
-        ns = Namespace(schema.namespace)
+        ns = Namespace(entity_namespace)
+        ontology_ns = Namespace(schema.namespace)
         graph = Graph()
-        _bind_prefixes(graph, ns)
-        alias_property = _find_alias_property(schema)
+        _bind_prefixes(graph, ontology_ns)
+        graph.bind("data", ns)
         known_entity_ids = {str(entity["id"]) for entity in entities}
         dangling_references: list[DanglingRelationReference] = []
 
         for entity in entities:
-            _add_entity(graph, ns, entity, schema, alias_property)
+            _add_entity(graph, ns, ontology_ns, entity, schema)
         for relation in relations:
-            _add_relation(graph, ns, relation, known_entity_ids, dangling_references)
+            _add_relation(graph, ns, ontology_ns, relation, known_entity_ids, dangling_references)
 
         serialized = graph.serialize(format="turtle")
         if isinstance(serialized, bytes):

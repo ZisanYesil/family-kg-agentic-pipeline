@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/389/originals/extracted_389.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/389/ground_truth_389.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/org_national_film_board": "http://example.org/entity/National_Film_Board",
+    "http://example.org/extracted/film_diary_evelyn_lau": "http://example.org/entity/The_Diary_of_Evelyn_Lau",
+    "http://example.org/extracted/person_sturla_gunnarsson": "http://example.org/entity/Sturla_Gunnarsson"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_diary_evelyn_lau",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Diary Of Evelyn Lau",
+          "source": "label"
+        },
+        {
+          "text": "film diary evelyn lau",
+          "source": "uri"
+        }
+      ],
+      "context": "The Diary Of Evelyn Lau. has director: Sturla Gunnarsson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Diary_of_Evelyn_Lau",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Diary of Evelyn Lau",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Diary Of Evelyn Lau",
+        "extracted_source": "label",
+        "ground_truth_text": "The Diary of Evelyn Lau",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9998640418052673,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9998247623443604,
+      "graph_score": 0.9999123811721802,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/org_national_film_board",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "National Film Board",
+          "source": "label"
+        },
+        {
+          "text": "org national film board",
+          "source": "uri"
+        }
+      ],
+      "context": "National Film Board. inverse has employer: Sturla Gunnarsson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/National_Film_Board",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "National Film Board",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "National Film Board",
+        "extracted_source": "label",
+        "ground_truth_text": "National Film Board",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_sturla_gunnarsson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sturla Gunnarsson",
+          "source": "label"
+        },
+        {
+          "text": "person sturla gunnarsson",
+          "source": "uri"
+        }
+      ],
+      "context": "Sturla Gunnarsson. has employer: National Film Board. inverse has director: The Diary Of Evelyn Lau.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sturla_Gunnarsson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sturla Gunnarsson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sturla Gunnarsson",
+        "extracted_source": "label",
+        "ground_truth_text": "Sturla Gunnarsson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.999919593334198,
+      "graph_score": 0.9999598264694214,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

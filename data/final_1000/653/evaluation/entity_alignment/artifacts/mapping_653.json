@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/653/originals/extracted_653.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/653/ground_truth_653.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/saad_ad_din_ii": "http://example.org/entity/Sa_ad_ad_Din_II",
+    "http://example.org/extracted/haqq_ad_din_ii": "http://example.org/entity/Haqq_ad_Din_II"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/haqq_ad_din_ii",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Haqq ad-Din II",
+          "source": "label"
+        },
+        {
+          "text": "haqq ad din ii",
+          "source": "uri"
+        }
+      ],
+      "context": "Haqq ad-Din II. inverse has brother: Sa'ad ad-Din II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Haqq_ad_Din_II",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Haqq ad Din II",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Haqq ad-Din II",
+        "extracted_source": "label",
+        "ground_truth_text": "Haqq ad Din II",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.957459032535553,
+      "string_score": 0.9678571224212646,
+      "independent_identity_support": true,
+      "context_score": 0.9337555170059204,
+      "graph_score": 0.4668777585029602,
+      "margin": 0.28586286306381226
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/saad_ad_din_ii",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sa'ad ad-Din II",
+          "source": "label"
+        },
+        {
+          "text": "saad ad din ii",
+          "source": "uri"
+        }
+      ],
+      "context": "Sa'ad ad-Din II. has brother: Haqq ad-Din II. inverse has father: Mansur ad-Din.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sa_ad_ad_Din_II",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sa ad ad Din II",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sa'ad ad-Din II",
+        "extracted_source": "label",
+        "ground_truth_text": "Sa ad ad Din II",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.7441375255584717,
+      "string_score": 0.9399999976158142,
+      "independent_identity_support": true,
+      "context_score": 0.9392880201339722,
+      "graph_score": 0.4696440100669861,
+      "margin": 0.38639962673187256
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mansur_ad_din_adal",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mansur ad-Din",
+          "source": "label"
+        },
+        {
+          "text": "mansur ad din adal",
+          "source": "uri"
+        }
+      ],
+      "context": "Mansur ad-Din. has father: Sa'ad ad-Din II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mansur_ad_Din_of_Adal",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mansur ad Din of Adal",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mansur ad-Din",
+        "extracted_source": "label",
+        "ground_truth_text": "Mansur ad Din of Adal",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8848563432693481,
+      "name_embedding_score": 0.904506266117096,
+      "string_score": 0.7676470875740051,
+      "independent_identity_support": true,
+      "context_score": 0.9255313873291016,
+      "graph_score": 0.9627656936645508,
+      "margin": 0.292388916015625
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

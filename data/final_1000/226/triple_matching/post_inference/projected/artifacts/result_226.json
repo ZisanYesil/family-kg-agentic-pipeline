@@ -1,0 +1,98 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/226/evaluation/entity_alignment/final_extracted_aligned_226.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/226/evaluation/entity_alignment/final_ground_truth_aligned_226.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Gunhild_of_Wenden",
+      "predicate": "hasChild",
+      "object": "Harald_II_of_Denmark",
+      "subject_uri": "http://example.org/entity/Gunhild_of_Wenden",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Harald_II_of_Denmark"
+    },
+    {
+      "subject": "Gunhild_of_Wenden",
+      "predicate": "hasCountry",
+      "object": "Polish",
+      "subject_uri": "http://example.org/entity/Gunhild_of_Wenden",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Polish"
+    },
+    {
+      "subject": "Gunhild_of_Wenden",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Gunhild_of_Wenden",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Gunhild_of_Wenden",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gunhild_of_Wenden",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Harald_II_of_Denmark",
+      "predicate": "hasParent",
+      "object": "Gunhild_of_Wenden",
+      "subject_uri": "http://example.org/entity/Harald_II_of_Denmark",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Gunhild_of_Wenden"
+    },
+    {
+      "subject": "Harald_II_of_Denmark",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Harald_II_of_Denmark",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Harald_II_of_Denmark",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Harald_II_of_Denmark",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Polish",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Polish",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Polish",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Polish",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 9,
+    "true_positives": 9,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,26 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Talking_Feet> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Talking Feet" ;
+    onto:hasDirector <http://example.org/entity/John_Baxter> .
+
+<http://example.org/entity/The_Third_Miracle> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Third Miracle" ;
+    onto:hasDirector <http://example.org/entity/Agnieszka_Holland> .
+
+<http://example.org/entity/Agnieszka_Holland> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Agnieszka Holland" ;
+    onto:hasBirthDate "1948-11-28"^^xsd:date .
+
+<http://example.org/entity/John_Baxter> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Baxter" ;
+    onto:hasBirthDate "1896-12-31"^^xsd:date ;
+    onto:hasDeathDate "1975-01-21"^^xsd:date .
+

@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Tiberius> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tiberius" ;
+    onto:hasMother <http://example.org/entity/Theodora_of_Khazaria> ;
+    skos:altLabel "Tiberios" .
+
+<http://example.org/entity/Busir> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Busir" ;
+    skos:altLabel "Busir, khagan of the Khazars" .
+
+<http://example.org/entity/Theodora_of_Khazaria> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Theodora of Khazaria" ;
+    onto:hasBrother <http://example.org/entity/Busir> .
+

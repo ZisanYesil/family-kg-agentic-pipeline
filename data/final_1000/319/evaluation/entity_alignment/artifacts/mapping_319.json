@@ -1,0 +1,144 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/319/originals/extracted_319.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/319/ground_truth_319.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/constantia_eriksdotter": "http://example.org/entity/Constantia_Eriksdotter",
+    "http://example.org/extracted/eric_xiv_of_sweden": "http://example.org/entity/Eric_XIV_of_Sweden"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/constantia_eriksdotter",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Constantia Eriksdotter",
+          "source": "label"
+        }
+      ],
+      "context": "Constantia Eriksdotter. has father: Eric XIV of Sweden.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Constantia_Eriksdotter",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Constantia Eriksdotter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Constantia Eriksdotter",
+        "extracted_source": "label",
+        "ground_truth_text": "Constantia Eriksdotter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.6952894926071167
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/eric_xiv_of_sweden",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eric XIV of Sweden",
+          "source": "label"
+        }
+      ],
+      "context": "Eric XIV of Sweden. has cause of death: arsenic poisoning. inverse has father: Constantia Eriksdotter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eric_XIV_of_Sweden",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eric XIV of Sweden",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eric XIV of Sweden",
+        "extracted_source": "label",
+        "ground_truth_text": "Eric XIV of Sweden",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9465048313140869,
+      "graph_score": 0.9732524156570435,
+      "margin": 0.708802193403244
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/arsenic_poisoning",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "arsenic poisoning",
+          "source": "label"
+        }
+      ],
+      "context": "arsenic poisoning. inverse has cause of death: Eric XIV of Sweden.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/poisoning",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "poisoning",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "arsenic poisoning",
+        "extracted_source": "label",
+        "ground_truth_text": "poisoning",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7942767143249512,
+      "name_embedding_score": 0.7502933144569397,
+      "string_score": 0.7365384697914124,
+      "independent_identity_support": true,
+      "context_score": 0.8799630999565125,
+      "graph_score": 0.9399815797805786,
+      "margin": 0.7942767143249512
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

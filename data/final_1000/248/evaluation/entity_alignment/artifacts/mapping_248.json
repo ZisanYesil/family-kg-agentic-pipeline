@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/248/originals/extracted_248.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/248/ground_truth_248.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/george_mccowan_person": "http://example.org/entity/George_McCowan",
+    "http://example.org/extracted/emphysema_cause": "http://example.org/entity/emphysema",
+    "http://example.org/extracted/starsky_and_hutch_on_playboy_island_film": "http://example.org/entity/Starsky_and_Hutch_on_Playboy_Island"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/emphysema_cause",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "emphysema",
+          "source": "label"
+        },
+        {
+          "text": "emphysema cause",
+          "source": "uri"
+        }
+      ],
+      "context": "emphysema. inverse has cause of death: George Mc Cowan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/emphysema",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "emphysema",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "emphysema",
+        "extracted_source": "label",
+        "ground_truth_text": "emphysema",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/george_mccowan_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George Mc Cowan",
+          "source": "label"
+        },
+        {
+          "text": "george mccowan person",
+          "source": "uri"
+        }
+      ],
+      "context": "George Mc Cowan. has cause of death: emphysema. inverse has director: Starsky and Hutch on Playboy Island.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_McCowan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George Mc Cowan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George Mc Cowan",
+        "extracted_source": "label",
+        "ground_truth_text": "George Mc Cowan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/starsky_and_hutch_on_playboy_island_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Starsky and Hutch on Playboy Island",
+          "source": "label"
+        },
+        {
+          "text": "starsky and hutch on playboy island film",
+          "source": "uri"
+        }
+      ],
+      "context": "Starsky and Hutch on Playboy Island. has director: George Mc Cowan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Starsky_and_Hutch_on_Playboy_Island",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Starsky and Hutch on Playboy Island",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Starsky and Hutch on Playboy Island",
+        "extracted_source": "label",
+        "ground_truth_text": "Starsky and Hutch on Playboy Island",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

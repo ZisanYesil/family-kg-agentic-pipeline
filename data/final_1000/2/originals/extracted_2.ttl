@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:beat_girl_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Beat Girl" ;
+    onto:hasDirector data:edmond_gr%C3%A9ville_person ;
+    skos:altLabel "Beat Girl" .
+
+data:edmond_gr%C3%A9ville_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edmond T. Gréville" ;
+    onto:hasDeathPlace data:nice_place ;
+    skos:altLabel "Edmond Gréville Thonger",
+        "Edmond T. Gréville" .
+
+data:nice_place a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Nice" ;
+    skos:altLabel "Nice" .
+

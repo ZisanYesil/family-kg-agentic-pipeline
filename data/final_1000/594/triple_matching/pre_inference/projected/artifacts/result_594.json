@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/594/evaluation/entity_alignment/baseline_extracted_aligned_594.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/594/evaluation/entity_alignment/baseline_ground_truth_aligned_594.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Albert_IV_Duke_of_Austria",
+      "predicate": "hasBurialPlace",
+      "object": "Stephansdom",
+      "subject_uri": "http://example.org/entity/Albert_IV_Duke_of_Austria",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://example.org/entity/Stephansdom"
+    },
+    {
+      "subject": "Joanna_Sophia_of_Bavaria",
+      "predicate": "hasSpouse",
+      "object": "Albert_IV_Duke_of_Austria",
+      "subject_uri": "http://example.org/entity/Joanna_Sophia_of_Bavaria",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Albert_IV_Duke_of_Austria"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Albert_IV_Duke_of_Austria",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Albert_IV_Duke_of_Austria",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Albert_IV_Duke_of_Austria",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Albert_IV_Duke_of_Austria",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Albert_IV_Duke_of_Austria",
+      "predicate": "label",
+      "object": "\"Albert IV, Duke of Austria\"",
+      "subject_uri": "http://example.org/entity/Albert_IV_Duke_of_Austria",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Albert IV, Duke of Austria\""
+    },
+    {
+      "subject": "Joanna_Sophia_of_Bavaria",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Joanna_Sophia_of_Bavaria",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Joanna_Sophia_of_Bavaria",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Joanna_Sophia_of_Bavaria",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Joanna_Sophia_of_Bavaria",
+      "predicate": "label",
+      "object": "\"Joanna Sophia of Bavaria\"",
+      "subject_uri": "http://example.org/entity/Joanna_Sophia_of_Bavaria",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Joanna Sophia of Bavaria\""
+    },
+    {
+      "subject": "Stephansdom",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Stephansdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Stephansdom",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Stephansdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Stephansdom",
+      "predicate": "label",
+      "object": "\"Ducal Crypt in the Stephansdom, Vienna\"",
+      "subject_uri": "http://example.org/entity/Stephansdom",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ducal Crypt in the Stephansdom, Vienna\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

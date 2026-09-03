@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:luitgard_frankish_queen a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Luitgard" ;
+    onto:hasSpouse data:charlemagne ;
+    skos:altLabel "Luitgard (Frankish queen)" .
+
+data:charlemagne a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Charlemagne" ;
+    onto:hasCountry data:frankish_country ;
+    skos:altLabel "Charles I",
+        "Charles the Great" .
+
+data:frankish_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Frankish" ;
+    skos:altLabel "Frankish" .
+

@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/97/evaluation/entity_alignment/baseline_extracted_aligned_97.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/97/evaluation/entity_alignment/baseline_ground_truth_aligned_97.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Betty_Lago",
+      "predicate": "hasBirthPlace",
+      "object": "Rio_de_Janeiro",
+      "subject_uri": "http://example.org/entity/Betty_Lago",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Rio_de_Janeiro"
+    },
+    {
+      "subject": "Eduardo_Conde",
+      "predicate": "hasSpouse",
+      "object": "Betty_Lago",
+      "subject_uri": "http://example.org/entity/Eduardo_Conde",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Betty_Lago"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Betty_Lago",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Betty_Lago",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Betty_Lago",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Betty_Lago",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Betty_Lago",
+      "predicate": "label",
+      "object": "\"Betty Lago\"",
+      "subject_uri": "http://example.org/entity/Betty_Lago",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Betty Lago\""
+    },
+    {
+      "subject": "Betty_Lago",
+      "predicate": "altLabel",
+      "object": "\"Elizabeth Lago Netto\"",
+      "subject_uri": "http://example.org/entity/Betty_Lago",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Elizabeth Lago Netto\""
+    },
+    {
+      "subject": "Eduardo_Conde",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Eduardo_Conde",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Eduardo_Conde",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Eduardo_Conde",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Eduardo_Conde",
+      "predicate": "label",
+      "object": "\"Eduardo Conde\"",
+      "subject_uri": "http://example.org/entity/Eduardo_Conde",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Eduardo Conde\""
+    },
+    {
+      "subject": "Rio_de_Janeiro",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Rio_de_Janeiro",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Rio_de_Janeiro",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Rio_de_Janeiro",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Rio_de_Janeiro",
+      "predicate": "label",
+      "object": "\"Rio de Janeiro\"",
+      "subject_uri": "http://example.org/entity/Rio_de_Janeiro",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Rio de Janeiro\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

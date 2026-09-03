@@ -1,0 +1,16 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:oriental_stories a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Oriental Stories" ;
+    onto:hasEditor data:farnsworth_wright .
+
+data:farnsworth_wright a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Farnsworth Wright" ;
+    onto:hasBirthDate "1888-07-29"^^xsd:date .
+

@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_pugachev_1978 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Pugachev" ;
+    onto:hasDirector data:person_aleksei_saltykov ;
+    onto:hasPublicationDate "1978"^^xsd:gYear .
+
+data:award_peoples_artist_rsfsr a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "People's Artist of the RSFSR" .
+
+data:person_aleksei_saltykov a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Aleksei Saltykov" ;
+    onto:hasAwardReceived data:award_peoples_artist_rsfsr ;
+    skos:altLabel "Aleksey Aleksandrovich Saltykov",
+        "Alexey Saltykov" .
+

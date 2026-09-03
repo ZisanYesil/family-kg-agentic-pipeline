@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:anne_castles a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Anne Castles" ;
+    onto:hasOccupation data:occupation_cognitive_scientist .
+
+data:colin_will a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Colin Will" ;
+    onto:hasOccupation data:occupation_poet,
+        data:occupation_publisher .
+
+data:occupation_cognitive_scientist a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "cognitive scientist" .
+
+data:occupation_poet a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "poet" .
+
+data:occupation_publisher a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "publisher" .
+

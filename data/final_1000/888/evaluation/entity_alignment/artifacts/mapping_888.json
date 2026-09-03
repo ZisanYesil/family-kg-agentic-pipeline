@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/888/originals/extracted_888.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/888/ground_truth_888.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_what_rats_wont_do": "http://example.org/entity/What_Rats_Won_t_Do",
+    "http://example.org/extracted/person_alastair_reid": "http://example.org/entity/Alastair_Reid"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_what_rats_wont_do",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "What Rats Won'T Do",
+          "source": "label"
+        },
+        {
+          "text": "film what rats wont do",
+          "source": "uri"
+        }
+      ],
+      "context": "What Rats Won'T Do. has director: Alastair Reid.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/What_Rats_Won_t_Do",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "What Rats Won t Do",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "What Rats Won'T Do",
+        "extracted_source": "label",
+        "ground_truth_text": "What Rats Won t Do",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9729517102241516,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9420822858810425,
+      "graph_score": 0.9710411429405212,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_alastair_reid",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alastair Reid",
+          "source": "label"
+        },
+        {
+          "text": "person alastair reid",
+          "source": "uri"
+        }
+      ],
+      "context": "Alastair Reid. has death place: Stoke St Gregory, Somerset. inverse has director: What Rats Won'T Do.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alastair_Reid",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alastair Reid",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alastair Reid",
+        "extracted_source": "label",
+        "ground_truth_text": "Alastair Reid",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9411566853523254,
+      "graph_score": 0.9705783128738403,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_stoke_st_gregory_somerset",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stoke St Gregory, Somerset",
+          "source": "label"
+        },
+        {
+          "text": "place stoke st gregory somerset",
+          "source": "uri"
+        }
+      ],
+      "context": "Stoke St Gregory, Somerset. inverse has death place: Alastair Reid.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Somerset",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Somerset",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stoke St Gregory, Somerset",
+        "extracted_source": "label",
+        "ground_truth_text": "Somerset",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7470048666000366,
+      "name_embedding_score": 0.7335357069969177,
+      "string_score": 0.5742647051811218,
+      "independent_identity_support": false,
+      "context_score": 0.8933667540550232,
+      "graph_score": 0.946683406829834,
+      "margin": 0.7470048666000366
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

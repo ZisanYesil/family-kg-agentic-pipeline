@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Eleonora_Luisa_Gonzaga> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Eleonora Luisa Gonzaga" ;
+    onto:hasFather <http://example.org/entity/Vincenzo_Gonzaga_Duke_of_Guastalla> .
+
+<http://example.org/entity/Andrea_Gonzaga> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Andrea Gonzaga" ;
+    skos:altLabel "Andrea Gonzaga, Count of San Paolo" .
+
+<http://example.org/entity/Vincenzo_Gonzaga_Duke_of_Guastalla> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Vincenzo Gonzaga" ;
+    onto:hasFather <http://example.org/entity/Andrea_Gonzaga> ;
+    skos:altLabel "Vincenzo Gonzaga, Duke of Guastalla" .
+

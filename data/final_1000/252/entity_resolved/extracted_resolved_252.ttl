@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:tannenberg_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Tannenberg" ;
+    onto:hasCountry data:germany_country .
+
+data:to_kill_a_dragon_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "To Kill a Dragon" ;
+    onto:hasCountry data:germany_country .
+
+data:germany_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German" .
+

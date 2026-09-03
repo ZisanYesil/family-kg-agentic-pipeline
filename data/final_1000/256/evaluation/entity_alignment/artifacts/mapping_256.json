@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/256/originals/extracted_256.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/256/ground_truth_256.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_op_nayyar": "http://example.org/entity/O_P_Nayyar",
+    "http://example.org/extracted/film_howrah_bridge": "http://example.org/entity/Howrah_Bridge"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_howrah_bridge",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Howrah Bridge",
+          "source": "label"
+        },
+        {
+          "text": "film howrah bridge",
+          "source": "uri"
+        }
+      ],
+      "context": "Howrah Bridge.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Howrah_Bridge",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Howrah Bridge",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Howrah Bridge",
+        "extracted_source": "label",
+        "ground_truth_text": "Howrah Bridge",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6027374863624573,
+      "graph_score": 0.30136874318122864,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_op_nayyar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "O. P. Nayyar",
+          "source": "label"
+        },
+        {
+          "text": "person op nayyar",
+          "source": "uri"
+        }
+      ],
+      "context": "O. P. Nayyar. has award received: Filmfare Award for Best Music Director.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/O_P_Nayyar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "O P Nayyar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "O. P. Nayyar",
+        "extracted_source": "label",
+        "ground_truth_text": "O P Nayyar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9494244456291199,
+      "string_score": 0.9590908885002136,
+      "independent_identity_support": true,
+      "context_score": 0.7587145566940308,
+      "graph_score": 0.3793572783470154,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/award_filmfare_best_music_director_1958",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Filmfare Award for Best Music Director",
+          "source": "label"
+        },
+        {
+          "text": "award filmfare best music director 1958",
+          "source": "uri"
+        }
+      ],
+      "context": "Filmfare Award for Best Music Director. inverse has award received: O. P. Nayyar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Filmfare_Award",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Filmfare Award",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Filmfare Award for Best Music Director",
+        "extracted_source": "label",
+        "ground_truth_text": "Filmfare Award",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7321865558624268,
+      "name_embedding_score": 0.6868366599082947,
+      "string_score": 0.6256410479545593,
+      "independent_identity_support": false,
+      "context_score": 0.8588635921478271,
+      "graph_score": 0.9294317960739136,
+      "margin": 0.7321865558624268
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

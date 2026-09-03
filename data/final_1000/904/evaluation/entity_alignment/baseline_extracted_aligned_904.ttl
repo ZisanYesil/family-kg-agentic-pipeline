@@ -1,0 +1,27 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Sexy_Toto> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Sexy Toto" ;
+    onto:hasDirector <http://example.org/entity/Mario_Amendola> .
+
+<http://example.org/entity/Two_Mules_for_Sister_Sara> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Two Mules for Sister Sara" ;
+    onto:hasDirector <http://example.org/entity/Don_Siegel> .
+
+<http://example.org/entity/Don_Siegel> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Don Siegel" ;
+    onto:hasDeathDate "1991-04-20"^^xsd:date ;
+    skos:altLabel "Donald Siegel" .
+
+<http://example.org/entity/Mario_Amendola> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mario Amendola" ;
+    onto:hasDeathDate "1993-12-22"^^xsd:date .
+

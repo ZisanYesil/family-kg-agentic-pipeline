@@ -1,0 +1,14 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Augustus_Henry_Seward a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Frances_Adeline_Seward ;
+    ex:hasParent entity:Frances_Adeline_Seward .
+
+entity:Frances_Adeline_Seward a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Augustus_Henry_Seward ;
+    ex:hasDeathDate "1865-06-21"^^xsd:date .
+

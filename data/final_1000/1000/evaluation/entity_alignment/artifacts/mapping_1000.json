@@ -1,0 +1,194 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/1000/originals/extracted_1000.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/1000/ground_truth_1000.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/cela_s_appele_l_aurore": "http://example.org/entity/Cela_s_appelle_l_aurore",
+    "http://example.org/extracted/luis_bunuel": "http://example.org/entity/Luis_Buñuel",
+    "http://example.org/extracted/apne_dam_par": "http://example.org/entity/Apne_Dam_Par",
+    "http://example.org/extracted/arshad_khan": "http://example.org/entity/Arshad_Khan"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/apne_dam_par",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Apne Dam Par",
+          "source": "label"
+        }
+      ],
+      "context": "Apne Dam Par. has director: Arshad Khan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Apne_Dam_Par",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Apne Dam Par",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Apne Dam Par",
+        "extracted_source": "label",
+        "ground_truth_text": "Apne Dam Par",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8134922981262207
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/arshad_khan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Arshad Khan",
+          "source": "label"
+        }
+      ],
+      "context": "Arshad Khan. has birth date: 1971-03-22. inverse has director: Apne Dam Par.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Arshad_Khan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Arshad Khan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Arshad Khan",
+        "extracted_source": "label",
+        "ground_truth_text": "Arshad Khan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8059504628181458,
+      "graph_score": 0.9029752016067505,
+      "margin": 0.3534729480743408
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cela_s_appele_l_aurore",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cela s'appelle l'aurore",
+          "source": "label"
+        },
+        {
+          "text": "cela s appele l aurore",
+          "source": "uri"
+        }
+      ],
+      "context": "Cela s'appelle l'aurore. has director: Luis Buñuel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cela_s_appelle_l_aurore",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cela s appelle l aurore",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "cela s appele l aurore",
+        "extracted_source": "uri",
+        "ground_truth_text": "Cela s appelle l aurore",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.958673357963562,
+      "string_score": 0.846666693687439,
+      "independent_identity_support": true,
+      "context_score": 0.9775324463844299,
+      "graph_score": 0.9887661933898926,
+      "margin": 0.8096662163734436
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/luis_bunuel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Luis Buñuel",
+          "source": "label"
+        },
+        {
+          "text": "luis bunuel",
+          "source": "uri"
+        }
+      ],
+      "context": "Luis Buñuel. has birth date: 1900-02-22. inverse has director: Cela s'appelle l'aurore.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Luis_Buñuel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Luis Buñuel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Luis Buñuel",
+        "extracted_source": "label",
+        "ground_truth_text": "Luis Buñuel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.997203528881073,
+      "graph_score": 0.9986017942428589,
+      "margin": 0.7220854163169861
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Arshad_Khan_cricketer"
+  ]
+}

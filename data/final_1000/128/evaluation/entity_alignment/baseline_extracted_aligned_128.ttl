@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Leicester_Devereux_6th_Viscount_Hereford> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leicester Devereux, 6th Viscount Hereford" ;
+    onto:hasFather <http://example.org/entity/Walter_Devereux_5th_Viscount_Hereford> .
+
+<http://example.org/entity/English> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "England" ;
+    skos:altLabel "English" .
+
+<http://example.org/entity/Walter_Devereux_5th_Viscount_Hereford> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Walter Devereux, 5th Viscount Hereford" ;
+    onto:hasCountry <http://example.org/entity/English> .
+

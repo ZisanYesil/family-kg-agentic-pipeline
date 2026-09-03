@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/409/evaluation/entity_alignment/final_extracted_aligned_409.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/409/evaluation/entity_alignment/final_ground_truth_aligned_409.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Florence_of_Holland",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Florence_of_Holland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Florence_of_Holland",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Florence_of_Holland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Ada_of_Huntingdon",
+      "predicate": "hasChild",
+      "object": "Florence_of_Holland",
+      "subject_uri": "http://example.org/entity/Ada_of_Huntingdon",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Florence_of_Holland"
+    },
+    {
+      "subject": "Ada_of_Huntingdon",
+      "predicate": "hasSpouse",
+      "object": "Floris_III",
+      "subject_uri": "http://example.org/entity/Ada_of_Huntingdon",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Floris_III"
+    },
+    {
+      "subject": "Ada_of_Huntingdon",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Ada_of_Huntingdon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Ada_of_Huntingdon",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ada_of_Huntingdon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Florence_of_Holland",
+      "predicate": "hasParent",
+      "object": "Ada_of_Huntingdon",
+      "subject_uri": "http://example.org/entity/Florence_of_Holland",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Ada_of_Huntingdon"
+    },
+    {
+      "subject": "Floris_III",
+      "predicate": "hasSpouse",
+      "object": "Ada_of_Huntingdon",
+      "subject_uri": "http://example.org/entity/Floris_III",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Ada_of_Huntingdon"
+    },
+    {
+      "subject": "Floris_III",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Floris_III",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Floris_III",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Floris_III",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Florence_of_Holland",
+      "predicate": "hasParent",
+      "object": "florence_iii_count_of_holland",
+      "subject_uri": "http://example.org/entity/Florence_of_Holland",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/extracted/florence_iii_count_of_holland"
+    },
+    {
+      "subject": "florence_iii_count_of_holland",
+      "predicate": "hasChild",
+      "object": "Florence_of_Holland",
+      "subject_uri": "http://example.org/extracted/florence_iii_count_of_holland",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Florence_of_Holland"
+    },
+    {
+      "subject": "florence_iii_count_of_holland",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/florence_iii_count_of_holland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "florence_iii_count_of_holland",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/florence_iii_count_of_holland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 1,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 14,
+    "true_positives": 2,
+    "false_positives": 4,
+    "false_negatives": 8,
+    "precision": 0.3333333333333333,
+    "recall": 0.2,
+    "f1": 0.25
+  },
+  "stage": "post_inference"
+}

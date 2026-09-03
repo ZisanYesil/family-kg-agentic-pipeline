@@ -1,0 +1,22 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Lord_Bernard_Stewart> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lord Bernard Stewart" ;
+    onto:hasFather <http://example.org/entity/Esmé_Stewart_3rd_Duke_of_Lennox> ;
+    skos:altLabel "Lord Bernard Stewart" .
+
+<http://example.org/entity/Esmé_Stewart_3rd_Duke_of_Lennox> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Esmé Stewart, 3rd Duke of Lennox" ;
+    onto:hasBurialPlace <http://example.org/entity/Westminster_Abbey> ;
+    skos:altLabel "Esmé Stewart, 3rd Duke of Lennox" .
+
+<http://example.org/entity/Westminster_Abbey> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Westminster Abbey" ;
+    skos:altLabel "Westminster Abbey" .
+

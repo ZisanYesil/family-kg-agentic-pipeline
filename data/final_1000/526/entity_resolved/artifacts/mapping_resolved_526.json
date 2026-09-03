@@ -1,0 +1,82 @@
+{
+  "_source_extraction_sha256": "87e5d4934a3be44751a1ef3b6af2a2e04149aca86b911c9d455b180efbac1e7a",
+  "entities": [
+    {
+      "id": "li_zhong",
+      "label": "Li Zhong",
+      "type": "Person",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "gao_zong",
+      "label": "Emperor Gaozong of Tang",
+      "type": "Person",
+      "aliases": [
+        "Li Zhi"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "zhangsun",
+      "label": "Empress Zhangsun",
+      "type": "Person",
+      "aliases": [],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "gao_zong",
+      "predicate": "hasFather",
+      "object": "li_zhong",
+      "relation_phrase": "father of",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "li_zhong",
+      "source_object": "gao_zong",
+      "endpoints_swapped": true
+    },
+    {
+      "subject": "zhangsun",
+      "predicate": "hasMother",
+      "object": "gao_zong",
+      "relation_phrase": "mother of",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "gao_zong",
+      "source_object": "zhangsun",
+      "endpoints_swapped": true
+    }
+  ],
+  "unmapped_relations": [
+    {
+      "subject": "li_zhong",
+      "object": "zhangsun",
+      "relation_phrase": "paternal grandmother",
+      "reason": "relation_phrase did not match any ontology predicate"
+    }
+  ]
+}

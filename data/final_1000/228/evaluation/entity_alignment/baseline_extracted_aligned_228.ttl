@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Netflix> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Netflix (song)" ;
+    onto:hasPerformer <http://example.org/entity/2_Chainz> .
+
+<http://example.org/entity/2_Chainz> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tauheed Epps" ;
+    onto:hasBirthPlace <http://example.org/entity/College_Park_Georgia> ;
+    skos:altLabel "2 Chainz" .
+
+<http://example.org/entity/College_Park_Georgia> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "College Park, Georgia" .
+

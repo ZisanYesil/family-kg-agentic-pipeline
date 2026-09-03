@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Hero_at_Large> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Hero At Large" ;
+    onto:hasDirector <http://example.org/entity/Martin_Davidson> .
+
+<http://example.org/entity/American_Academy_of_Dramatic_Arts> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "American Academy of Dramatic Arts" .
+
+<http://example.org/entity/Martin_Davidson> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Martin Davidson" ;
+    onto:hasEducatedAt <http://example.org/entity/American_Academy_of_Dramatic_Arts> .
+

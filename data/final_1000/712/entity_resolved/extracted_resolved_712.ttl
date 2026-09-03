@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:cancun_intl_airport a onto:Artifact,
+        owl:NamedIndividual ;
+    rdfs:label "Cancún International Airport" ;
+    onto:hasCountry data:mexico .
+
+data:ciudad_juarez_intl_airport a onto:Artifact,
+        owl:NamedIndividual ;
+    rdfs:label "Ciudad Juárez International Airport" ;
+    onto:hasCountry data:mexico ;
+    skos:altLabel "Abraham González International Airport" .
+
+data:mexico a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Mexico" .
+

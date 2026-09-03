@@ -1,0 +1,147 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/832/originals/extracted_832.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/832/ground_truth_832.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/anjan_choudhury": "http://example.org/entity/Anjan_Choudhury"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/anjan_choudhury",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anjan Choudhury",
+          "source": "label"
+        }
+      ],
+      "context": "Anjan Choudhury. has child: Sandip Choudhury. inverse has director: Mukhyamantri (1996 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Anjan_Choudhury",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Anjan Choudhury",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Anjan Choudhury",
+        "extracted_source": "label",
+        "ground_truth_text": "Anjan Choudhury",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9136359095573425,
+      "graph_score": 0.9136359095573425,
+      "margin": 0.5032973885536194
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mukhyamantri_1996_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mukhyamantri (1996 film)",
+          "source": "label"
+        },
+        {
+          "text": "mukhyamantri 1996 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Mukhyamantri (1996 film). has director: Anjan Choudhury.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mukhyamantri",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mukhyamantri",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mukhyamantri (1996 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Mukhyamantri",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8135933876037598,
+      "name_embedding_score": 0.8073843121528625,
+      "string_score": 0.6833333373069763,
+      "independent_identity_support": false,
+      "context_score": 0.9125434756278992,
+      "graph_score": 0.956271767616272,
+      "margin": 0.8135933876037598
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sandip_choudhury",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sandip Choudhury",
+          "source": "label"
+        }
+      ],
+      "context": "Sandip Choudhury. inverse has child: Anjan Choudhury.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chumki_Chowdhury",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chumki Chowdhury",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sandip Choudhury",
+        "extracted_source": "label",
+        "ground_truth_text": "Chumki Chowdhury",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6550260782241821,
+      "name_embedding_score": 0.6942291259765625,
+      "string_score": 0.28125,
+      "independent_identity_support": false,
+      "context_score": 0.9007920026779175,
+      "graph_score": 0.9503960013389587,
+      "margin": 0.05483323335647583
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

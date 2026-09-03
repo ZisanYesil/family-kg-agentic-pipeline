@@ -1,0 +1,139 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/360/evaluation/entity_alignment/final_extracted_aligned_360.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/360/evaluation/entity_alignment/final_ground_truth_aligned_360.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Chris_Brown",
+      "predicate": "hasAwardReceived",
+      "object": "Grammy_Award_for_Best_R_B_Album",
+      "subject_uri": "http://example.org/entity/Chris_Brown",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Grammy_Award_for_Best_R_B_Album"
+    },
+    {
+      "subject": "Chris_Brown",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Chris_Brown",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Grammy_Award_for_Best_R_B_Album",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/Grammy_Award_for_Best_R_B_Album",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "Little_More_Royalty",
+      "predicate": "hasCreator",
+      "object": "Chris_Brown",
+      "subject_uri": "http://example.org/entity/Little_More_Royalty",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Chris_Brown"
+    },
+    {
+      "subject": "Little_More_Royalty",
+      "predicate": "hasPerformer",
+      "object": "Chris_Brown",
+      "subject_uri": "http://example.org/entity/Little_More_Royalty",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Chris_Brown"
+    },
+    {
+      "subject": "Little_More_Royalty",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Little_More_Royalty",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Little_More_Royalty",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Little_More_Royalty",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Chris_Brown",
+      "predicate": "hasAwardReceived",
+      "object": "award_bet",
+      "subject_uri": "http://example.org/entity/Chris_Brown",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/extracted/award_bet"
+    },
+    {
+      "subject": "Chris_Brown",
+      "predicate": "hasAwardReceived",
+      "object": "award_billboard_music",
+      "subject_uri": "http://example.org/entity/Chris_Brown",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/extracted/award_billboard_music"
+    },
+    {
+      "subject": "Chris_Brown",
+      "predicate": "hasAwardReceived",
+      "object": "award_soul_train_music",
+      "subject_uri": "http://example.org/entity/Chris_Brown",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/extracted/award_soul_train_music"
+    },
+    {
+      "subject": "Chris_Brown",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Chris_Brown",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "award_bet",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/extracted/award_bet",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "award_billboard_music",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/extracted/award_billboard_music",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "award_soul_train_music",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/extracted/award_soul_train_music",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 14,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 14,
+    "true_positives": 7,
+    "false_positives": 7,
+    "false_negatives": 0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6666666666666666
+  },
+  "stage": "post_inference"
+}

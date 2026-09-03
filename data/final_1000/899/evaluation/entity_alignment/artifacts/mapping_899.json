@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/899/originals/extracted_899.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/899/ground_truth_899.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_carlos_hugo_christensen": "http://example.org/entity/Carlos_Hugo_Christensen",
+    "http://example.org/extracted/place_santiago_del_estero": "http://example.org/entity/Santiago_del_Estero"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_carlos_hugo_christensen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Carlos Hugo Christensen",
+          "source": "label"
+        },
+        {
+          "text": "person carlos hugo christensen",
+          "source": "uri"
+        }
+      ],
+      "context": "Carlos Hugo Christensen. has birth place: Santiago del Estero. inverse has director: Sixteen (1943 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Carlos_Hugo_Christensen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Carlos Hugo Christensen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Carlos Hugo Christensen",
+        "extracted_source": "label",
+        "ground_truth_text": "Carlos Hugo Christensen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9410558342933655,
+      "graph_score": 0.9705278873443604,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_santiago_del_estero",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Santiago del Estero",
+          "source": "label"
+        },
+        {
+          "text": "place santiago del estero",
+          "source": "uri"
+        }
+      ],
+      "context": "Santiago del Estero. inverse has birth place: Carlos Hugo Christensen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Santiago_del_Estero",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Santiago del Estero",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Santiago del Estero",
+        "extracted_source": "label",
+        "ground_truth_text": "Santiago del Estero",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_sixteen_1943",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sixteen (1943 film)",
+          "source": "label"
+        },
+        {
+          "text": "film sixteen 1943",
+          "source": "uri"
+        }
+      ],
+      "context": "Sixteen (1943 film). has director: Carlos Hugo Christensen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sixteen",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sixteen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sixteen (1943 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Sixteen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7111511826515198,
+      "name_embedding_score": 0.6401841044425964,
+      "string_score": 0.6256410479545593,
+      "independent_identity_support": false,
+      "context_score": 0.8771911859512329,
+      "graph_score": 0.9385955929756165,
+      "margin": 0.7111511826515198
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

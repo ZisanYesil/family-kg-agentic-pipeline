@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Auguste_Tessier> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Auguste Tessier" ;
+    onto:hasFather <http://example.org/entity/Ulric_Joseph_Tessier> .
+
+<http://example.org/entity/Cimetière_Notre_Dame_de_Belmont> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Cimetière Notre-Dame-de-Belmont" .
+
+<http://example.org/entity/Ulric_Joseph_Tessier> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ulric-Joseph Tessier" ;
+    onto:hasBurialPlace <http://example.org/entity/Cimetière_Notre_Dame_de_Belmont> .
+

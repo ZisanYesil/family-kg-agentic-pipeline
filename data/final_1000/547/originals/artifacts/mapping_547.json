@@ -1,0 +1,80 @@
+{
+  "_source_extraction_sha256": "464cb00c6261a4442c66f75eef10adeabef537a20ec771291b33a0ca94d880df",
+  "entities": [
+    {
+      "id": "bottle_caps_candy",
+      "label": "Bottle Caps",
+      "type": "Product",
+      "aliases": [
+        "Bottle Caps (candy)"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "nestle",
+      "label": "Nestlé",
+      "type": "Organization",
+      "aliases": [
+        "Nestlé S.A.",
+        "Nestlé"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    },
+    {
+      "id": "switzerland",
+      "label": "Switzerland",
+      "type": "Country",
+      "aliases": [
+        "Swiss"
+      ],
+      "attributes": {
+        "hasBirthDate": null,
+        "hasDeathDate": null,
+        "hasDemonym": null,
+        "hasInception": null,
+        "hasPublicationDate": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "bottle_caps_candy",
+      "predicate": "hasManufacturer",
+      "object": "nestle",
+      "relation_phrase": "manufactured by",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "bottle_caps_candy",
+      "source_object": "nestle",
+      "endpoints_swapped": false
+    },
+    {
+      "subject": "nestle",
+      "predicate": "hasCountry",
+      "object": "switzerland",
+      "relation_phrase": "has country",
+      "qualifiers": {
+        "year": null,
+        "note": null
+      },
+      "source_subject": "nestle",
+      "source_object": "switzerland",
+      "endpoints_swapped": false
+    }
+  ],
+  "unmapped_relations": []
+}

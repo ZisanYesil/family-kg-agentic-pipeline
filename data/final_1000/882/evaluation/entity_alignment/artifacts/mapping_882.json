@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/882/originals/extracted_882.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/882/ground_truth_882.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/john_roberts": "http://example.org/entity/John_Roberts",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/john_roberts",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Glover Roberts Jr.",
+          "source": "altLabel"
+        },
+        {
+          "text": "John Roberts",
+          "source": "label"
+        }
+      ],
+      "context": "John Glover Roberts Jr.. has nationality: American. inverse has director: War of the Buttons (1994 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Roberts",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Roberts",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Roberts",
+        "extracted_source": "label",
+        "ground_truth_text": "John Roberts",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8418875336647034,
+      "graph_score": 0.4209437668323517,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has nationality: John Glover Roberts Jr..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8821178078651428,
+      "graph_score": 0.4410589039325714,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/war_of_the_buttons_1994_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "War of the Buttons (1994 film)",
+          "source": "label"
+        },
+        {
+          "text": "war of the buttons 1994 film",
+          "source": "uri"
+        }
+      ],
+      "context": "War of the Buttons (1994 film). has director: John Glover Roberts Jr..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/War_of_the_Buttons",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "War of the Buttons",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "War of the Buttons (1994 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "War of the Buttons",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8510556221008301,
+      "name_embedding_score": 0.8323866128921509,
+      "string_score": 0.8041666746139526,
+      "independent_identity_support": true,
+      "context_score": 0.8705652356147766,
+      "graph_score": 0.9352825880050659,
+      "margin": 0.8510556221008301
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

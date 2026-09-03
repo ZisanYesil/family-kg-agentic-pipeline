@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_red_sundown a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Red Sundown" ;
+    onto:hasDirector data:director_jack_arnold .
+
+data:film_suvarna_sethuve a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Suvarna Sethuve" ;
+    onto:hasDirector data:director_geethapriya .
+
+data:director_geethapriya a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Geethapriya" ;
+    onto:hasDeathDate "2016-01-17"^^xsd:date ;
+    skos:altLabel "Lakshman Rao Mohite" .
+
+data:director_jack_arnold a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jack Arnold" ;
+    onto:hasDeathDate "1992-03-17"^^xsd:date .
+

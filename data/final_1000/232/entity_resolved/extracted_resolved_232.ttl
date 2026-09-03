@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:barton_mystery_1920_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Barton Mystery (1920 film)" ;
+    onto:hasCountryOfOrigin data:united_kingdom .
+
+data:man_on_the_run_1949_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Man on the Run (1949 film)" ;
+    onto:hasCountryOfOrigin data:united_kingdom .
+
+data:united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "British" .
+

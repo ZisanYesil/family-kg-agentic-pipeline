@@ -1,0 +1,13 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Prince_Maurits_of_Orange_Nassau_van_Vollenhoven> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/entity/Pieter_van_Vollenhoven> ;
+    ex:hasParent <http://example.org/entity/Pieter_van_Vollenhoven> .
+
+<http://example.org/entity/Pieter_van_Vollenhoven> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1939-04-30"^^xsd:date ;
+    ex:hasChild <http://example.org/entity/Prince_Maurits_of_Orange_Nassau_van_Vollenhoven> .
+

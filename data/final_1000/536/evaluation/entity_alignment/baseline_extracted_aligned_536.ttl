@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Helen_Dortch_Longstreet> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Helen Dortch Longstreet" ;
+    onto:hasSpouse <http://example.org/entity/James_Longstreet> .
+
+<http://example.org/entity/Army> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "United States Military Academy at West Point" .
+
+<http://example.org/entity/James_Longstreet> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "James Longstreet" ;
+    onto:hasEducatedAt <http://example.org/entity/Army> .
+

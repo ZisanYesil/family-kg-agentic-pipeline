@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Coulson_Wallop a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:John_Wallop_2nd_Earl_of_Portsmouth ;
+    ex:hasParent entity:John_Wallop_2nd_Earl_of_Portsmouth .
+
+entity:Oxford a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+entity:John_Wallop_2nd_Earl_of_Portsmouth a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Coulson_Wallop ;
+    ex:hasEducatedAt entity:Oxford .
+

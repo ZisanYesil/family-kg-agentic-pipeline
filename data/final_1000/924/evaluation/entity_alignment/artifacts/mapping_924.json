@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/924/originals/extracted_924.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/924/ground_truth_924.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/khalil_el_amin": "http://example.org/entity/Khalil_El_Amin",
+    "http://example.org/extracted/tori_anthony": "http://example.org/entity/Tori_Anthony",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/khalil_el_amin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Khalil El-Amin",
+          "source": "altLabel"
+        },
+        {
+          "text": "Khalil Hassan El-Amin",
+          "source": "label"
+        },
+        {
+          "text": "khalil el amin",
+          "source": "uri"
+        }
+      ],
+      "context": "Khalil El-Amin. has nationality: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Khalil_El_Amin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Khalil El Amin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "khalil el amin",
+        "extracted_source": "uri",
+        "ground_truth_text": "Khalil El Amin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9151268601417542,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8746458292007446,
+      "graph_score": 0.4373229146003723,
+      "margin": 0.7226796746253967
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tori_anthony",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tori Anthony",
+          "source": "label"
+        }
+      ],
+      "context": "Tori Anthony. has nationality: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tori_Anthony",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tori Anthony",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tori Anthony",
+        "extracted_source": "label",
+        "ground_truth_text": "Tori Anthony",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9453907608985901,
+      "graph_score": 0.47269538044929504,
+      "margin": 0.7406608462333679
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has nationality: Khalil El-Amin. inverse has nationality: Tori Anthony.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9229555726051331,
+      "graph_score": 0.46147778630256653,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

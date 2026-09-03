@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/313/originals/extracted_313.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/313/ground_truth_313.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/kaaka_muttai": "http://example.org/entity/Kaaka_Muttai",
+    "http://example.org/extracted/en_s%C3%B8mand_g%C3%A5r_i_land": "http://example.org/entity/En_sømand_går_i_land"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/en_s%C3%B8mand_g%C3%A5r_i_land",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "En sømand går i land",
+          "source": "label"
+        }
+      ],
+      "context": "En sømand går i land. has publication date: 1954.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/En_sømand_går_i_land",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "En sømand går i land",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "En sømand går i land",
+        "extracted_source": "label",
+        "ground_truth_text": "En sømand går i land",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8476234674453735
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/kaaka_muttai",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kaaka Muttai",
+          "source": "label"
+        }
+      ],
+      "context": "Kaaka Muttai. has publication date: 2015-06-05.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kaaka_Muttai",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kaaka Muttai",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kaaka Muttai",
+        "extracted_source": "label",
+        "ground_truth_text": "Kaaka Muttai",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8911750912666321,
+      "graph_score": 0.8911750912666321,
+      "margin": 0.8452953994274139
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

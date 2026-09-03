@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Manoranjan> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Manoranjan" ;
+    onto:hasDirector <http://example.org/entity/Shammi_Kapoor> .
+
+<http://example.org/entity/Filmfare_Award> a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Best Actor Award" .
+
+<http://example.org/entity/Shammi_Kapoor> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Shammi Kapoor" ;
+    onto:hasAwardReceived <http://example.org/entity/Filmfare_Award>,
+        data:filmfare_best_supporting_actor_award_1982 .
+
+data:filmfare_best_supporting_actor_award_1982 a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Award for Best Supporting Actor" .
+

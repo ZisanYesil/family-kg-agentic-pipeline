@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/56/originals/extracted_56.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/56/ground_truth_56.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/heather_headley": "http://example.org/entity/Heather_Headley",
+    "http://example.org/extracted/tony_award_2000": "http://example.org/entity/Tony_Award_for_Best_Actress_in_a_Musical"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/heather_headley",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Heather Headley",
+          "source": "label"
+        }
+      ],
+      "context": "Heather Headley. has award received: Tony Award for Best Actress in a Musical. inverse has performer: In My Mind (Heather Headley song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Heather_Headley",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Heather Headley",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Heather Headley",
+        "extracted_source": "label",
+        "ground_truth_text": "Heather Headley",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.977604329586029,
+      "graph_score": 0.9888021945953369,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tony_award_2000",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tony Award for Best Actress in a Musical",
+          "source": "label"
+        },
+        {
+          "text": "tony award 2000",
+          "source": "uri"
+        }
+      ],
+      "context": "Tony Award for Best Actress in a Musical. inverse has award received: Heather Headley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tony_Award_for_Best_Actress_in_a_Musical",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tony Award for Best Actress in a Musical",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tony Award for Best Actress in a Musical",
+        "extracted_source": "label",
+        "ground_truth_text": "Tony Award for Best Actress in a Musical",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/in_my_mind_song",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "In My Mind (Heather Headley song)",
+          "source": "label"
+        },
+        {
+          "text": "in my mind song",
+          "source": "uri"
+        }
+      ],
+      "context": "In My Mind (Heather Headley song). has performer: Heather Headley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/In_My_Mind",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "In My Mind",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "in my mind song",
+        "extracted_source": "uri",
+        "ground_truth_text": "In My Mind",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8393914699554443,
+      "name_embedding_score": 0.7857287526130676,
+      "string_score": 0.8475000262260437,
+      "independent_identity_support": true,
+      "context_score": 0.8772165179252625,
+      "graph_score": 0.9386082887649536,
+      "margin": 0.8393914699554443
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/430/evaluation/entity_alignment/baseline_extracted_aligned_430.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/430/evaluation/entity_alignment/baseline_ground_truth_aligned_430.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Ordwulf",
+      "predicate": "hasParent",
+      "object": "Ordgar",
+      "subject_uri": "http://example.org/entity/Ordwulf",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Ordgar"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Ordgar_Ealdorman_of_Devon",
+      "predicate": "hasCountry",
+      "object": "England",
+      "subject_uri": "http://example.org/entity/Ordgar_Ealdorman_of_Devon",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/England"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "England",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/England",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "England",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/England",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "England",
+      "predicate": "label",
+      "object": "\"England\"",
+      "subject_uri": "http://example.org/entity/England",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"England\""
+    },
+    {
+      "subject": "Ordgar",
+      "predicate": "hasCountry",
+      "object": "England",
+      "subject_uri": "http://example.org/entity/Ordgar",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/England"
+    },
+    {
+      "subject": "Ordgar",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ordgar",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Ordgar",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ordgar",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ordgar",
+      "predicate": "label",
+      "object": "\"Ordgar\"",
+      "subject_uri": "http://example.org/entity/Ordgar",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ordgar\""
+    },
+    {
+      "subject": "Ordwulf",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ordwulf",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Ordwulf",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ordwulf",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ordwulf",
+      "predicate": "label",
+      "object": "\"Ordwulf\"",
+      "subject_uri": "http://example.org/entity/Ordwulf",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ordwulf\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

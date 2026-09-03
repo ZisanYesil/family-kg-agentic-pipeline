@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/edema> a ex:CauseOfDeath .
+
+<http://example.org/entity/Joan_of_England> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/entity/Philippa_of_Hainault> ;
+    ex:isDaughterOf <http://example.org/entity/Philippa_of_Hainault> .
+
+<http://example.org/entity/Philippa_of_Hainault> a ex:Agent,
+        ex:Person ;
+    ex:hasCauseOfDeath <http://example.org/entity/edema> ;
+    ex:hasChild <http://example.org/entity/Joan_of_England> ;
+    ex:hasDaughter <http://example.org/entity/Joan_of_England> .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:dirk_ii_van_brederode a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Dirk II van Brederode" ;
+    onto:hasFather data:william_i_van_brederode .
+
+data:velsen a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Velsen" .
+
+data:william_i_van_brederode a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William I van Brederode" ;
+    onto:hasDeathPlace data:velsen .
+

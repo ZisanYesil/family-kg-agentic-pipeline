@@ -1,0 +1,97 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/857/originals/extracted_857.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/857/ground_truth_857.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {},
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 1,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/thietmar_ii",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thietmar",
+          "source": "label"
+        },
+        {
+          "text": "thietmar ii",
+          "source": "uri"
+        }
+      ],
+      "context": "Thietmar. has death date: 0979-08-03. inverse has father: Gero II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thietmar_Margrave_of_Meissen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thietmar Margrave of Meissen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thietmar",
+        "extracted_source": "label",
+        "ground_truth_text": "Thietmar Margrave of Meissen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6193499565124512,
+      "name_embedding_score": 0.6147368550300598,
+      "string_score": 0.5625,
+      "independent_identity_support": false,
+      "context_score": 0.6854261755943298,
+      "graph_score": 0.6854261755943298,
+      "margin": 0.22800925374031067
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/gero_ii",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gero II",
+          "source": "label"
+        }
+      ],
+      "context": "Gero II. has father: Thietmar.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Gero_II_Margrave_of_the_Saxon_Ostmark"
+  ]
+}

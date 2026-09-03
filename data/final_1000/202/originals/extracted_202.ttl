@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_mamas_boy_2007 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Mama's Boy" ;
+    skos:altLabel "Mama's Boy" .
+
+data:person_mark_mothersbaugh a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mark Mothersbaugh" ;
+    onto:hasEducatedAt data:institution_kent_state_university ;
+    skos:altLabel "Mark Allen Mothersbaugh" .
+
+data:institution_kent_state_university a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Kent State University" ;
+    skos:altLabel "Kent State University" .
+

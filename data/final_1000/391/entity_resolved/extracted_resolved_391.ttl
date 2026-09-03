@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:baby_love_1968_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Baby Love (1968 film)" ;
+    onto:hasDirector data:alastair_reid .
+
+data:alastair_reid a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alastair Reid" ;
+    onto:hasDeathPlace data:stoke_st_gregory_somerset .
+
+data:stoke_st_gregory_somerset a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Stoke St Gregory, Somerset" .
+

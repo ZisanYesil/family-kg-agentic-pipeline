@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/316/originals/extracted_316.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/316/ground_truth_316.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/hollywood_shuffle_film": "http://example.org/entity/Hollywood_Shuffle",
+    "http://example.org/extracted/thelma_louise_film": "http://example.org/entity/Thelma_Louise"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/hollywood_shuffle_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hollywood Shuffle",
+          "source": "altLabel"
+        },
+        {
+          "text": "hollywood shuffle film",
+          "source": "uri"
+        }
+      ],
+      "context": "Hollywood Shuffle. has publication date: 1987.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hollywood_Shuffle",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hollywood Shuffle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hollywood Shuffle",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Hollywood Shuffle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7726297080516815
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/thelma_louise_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thelma & Louise",
+          "source": "altLabel"
+        },
+        {
+          "text": "thelma louise film",
+          "source": "uri"
+        }
+      ],
+      "context": "Thelma & Louise. has publication date: 1991.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thelma_Louise",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thelma Louise",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thelma & Louise",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Thelma Louise",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9172437191009521,
+      "string_score": 0.9678571224212646,
+      "independent_identity_support": true,
+      "context_score": 0.9642080664634705,
+      "graph_score": 0.9642080664634705,
+      "margin": 0.7109692096710205
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

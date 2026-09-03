@@ -1,0 +1,106 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/293/originals/extracted_293.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/293/ground_truth_293.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/beauty_and_the_bastard": "http://example.org/entity/Beauty_and_the_Bastard",
+    "http://example.org/extracted/crazy_on_the_outside": "http://example.org/entity/Crazy_on_the_Outside"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/beauty_and_the_bastard",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Beauty and the Bastard",
+          "source": "label"
+        }
+      ],
+      "context": "Beauty and the Bastard. has publication date: 2005.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Beauty_and_the_Bastard",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Beauty and the Bastard",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Beauty and the Bastard",
+        "extracted_source": "label",
+        "ground_truth_text": "Beauty and the Bastard",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6523928642272949
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/crazy_on_the_outside",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Crazy on the Outside",
+          "source": "label"
+        }
+      ],
+      "context": "Crazy on the Outside. has publication date: 2010.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Crazy_on_the_Outside",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Crazy on the Outside",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Crazy on the Outside",
+        "extracted_source": "label",
+        "ground_truth_text": "Crazy on the Outside",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6523928642272949
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

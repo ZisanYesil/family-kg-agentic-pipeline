@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/708/evaluation/entity_alignment/baseline_extracted_aligned_708.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/708/evaluation/entity_alignment/baseline_ground_truth_aligned_708.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Carl_von_Fersen",
+      "predicate": "hasParent",
+      "object": "Hans_Reinhold_von_Fersen",
+      "subject_uri": "http://example.org/entity/Carl_von_Fersen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Hans_Reinhold_von_Fersen"
+    },
+    {
+      "subject": "Hans_Reinhold_von_Fersen",
+      "predicate": "hasDeathPlace",
+      "object": "Stockholm",
+      "subject_uri": "http://example.org/entity/Hans_Reinhold_von_Fersen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Stockholm"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Carl_von_Fersen",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Carl_von_Fersen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Carl_von_Fersen",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Carl_von_Fersen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Carl_von_Fersen",
+      "predicate": "label",
+      "object": "\"Carl von Fersen\"",
+      "subject_uri": "http://example.org/entity/Carl_von_Fersen",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Carl von Fersen\""
+    },
+    {
+      "subject": "Hans_Reinhold_von_Fersen",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Hans_Reinhold_von_Fersen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Hans_Reinhold_von_Fersen",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hans_Reinhold_von_Fersen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hans_Reinhold_von_Fersen",
+      "predicate": "label",
+      "object": "\"Hans Reinhold von Fersen\"",
+      "subject_uri": "http://example.org/entity/Hans_Reinhold_von_Fersen",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hans Reinhold von Fersen\""
+    },
+    {
+      "subject": "Stockholm",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Stockholm",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Stockholm",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Stockholm",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Stockholm",
+      "predicate": "label",
+      "object": "\"Stockholm\"",
+      "subject_uri": "http://example.org/entity/Stockholm",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Stockholm\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

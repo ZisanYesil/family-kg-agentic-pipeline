@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:elene_of_georgia a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Elene of Georgia" ;
+    onto:hasChild data:solomon_ii_of_imereti ;
+    skos:altLabel "Elene",
+        "Helene" .
+
+data:archil_of_imereti a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Archil of Imereti" .
+
+data:solomon_ii_of_imereti a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Solomon II of Imereti" ;
+    onto:hasFather data:archil_of_imereti .
+

@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/694/evaluation/entity_alignment/final_extracted_aligned_694.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/694/evaluation/entity_alignment/final_ground_truth_aligned_694.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Aregund",
+      "predicate": "hasChild",
+      "object": "Chilperic_I",
+      "subject_uri": "http://example.org/entity/Aregund",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Chilperic_I"
+    },
+    {
+      "subject": "Aregund",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Aregund",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Aregund",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Aregund",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Chilperic_I",
+      "predicate": "hasParent",
+      "object": "Aregund",
+      "subject_uri": "http://example.org/entity/Chilperic_I",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Aregund"
+    },
+    {
+      "subject": "Chilperic_I",
+      "predicate": "hasSpouse",
+      "object": "Fredegund",
+      "subject_uri": "http://example.org/entity/Chilperic_I",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Fredegund"
+    },
+    {
+      "subject": "Chilperic_I",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Chilperic_I",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Chilperic_I",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Chilperic_I",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Fredegund",
+      "predicate": "hasSpouse",
+      "object": "Chilperic_I",
+      "subject_uri": "http://example.org/entity/Fredegund",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Chilperic_I"
+    },
+    {
+      "subject": "Fredegund",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Fredegund",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Fredegund",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Fredegund",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Fredegund",
+      "predicate": "hasDeathDate",
+      "object": "\"0597-12-08\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Fredegund",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"0597-12-08\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 11,
+    "true_positives": 10,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.9090909090909091,
+    "recall": 1.0,
+    "f1": 0.9523809523809523
+  },
+  "stage": "post_inference"
+}

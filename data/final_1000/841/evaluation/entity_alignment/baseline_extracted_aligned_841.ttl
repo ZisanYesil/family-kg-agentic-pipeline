@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/B_Boy> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "B Boy" ;
+    onto:hasPerformer <http://example.org/entity/Meek_Mill> .
+
+<http://example.org/entity/Meek_Mill> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Meek Mill" ;
+    onto:hasDetentionPlace <http://example.org/entity/State_Correctional_Institution_Chester> .
+
+<http://example.org/entity/State_Correctional_Institution_Chester> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "State Correctional Institution – Chester" .
+

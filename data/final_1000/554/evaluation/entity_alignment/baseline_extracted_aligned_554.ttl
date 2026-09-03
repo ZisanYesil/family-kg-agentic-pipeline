@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Władysław_I_Herman> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Władysław I Herman" ;
+    onto:hasFather <http://example.org/entity/Casimir_I_the_Restorer> .
+
+<http://example.org/entity/Casimir_I_the_Restorer> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Casimir I the Restorer" ;
+    onto:hasBirthPlace <http://example.org/entity/Kraków> .
+
+<http://example.org/entity/Kraków> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Kraków" .
+

@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Clarice_Orsini> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Clarice Orsini" ;
+    onto:hasSpouse <http://example.org/entity/Lorenzo_de_Medici> .
+
+<http://example.org/entity/Lorenzo_de_Medici> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lorenzo de' Medici" ;
+    onto:hasNationality data:italy .
+
+data:italy a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Italy" ;
+    skos:altLabel "Italian" .
+

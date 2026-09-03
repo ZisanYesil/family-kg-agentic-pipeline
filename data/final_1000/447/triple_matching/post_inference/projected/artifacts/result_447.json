@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/447/evaluation/entity_alignment/final_extracted_aligned_447.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/447/evaluation/entity_alignment/final_ground_truth_aligned_447.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Coretta_Scott_King",
+      "predicate": "hasChild",
+      "object": "Dexter_Scott_King",
+      "subject_uri": "http://example.org/entity/Coretta_Scott_King",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Dexter_Scott_King"
+    },
+    {
+      "subject": "Coretta_Scott_King",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Coretta_Scott_King",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Coretta_Scott_King",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Coretta_Scott_King",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Dexter_Scott_King",
+      "predicate": "hasParent",
+      "object": "Coretta_Scott_King",
+      "subject_uri": "http://example.org/entity/Dexter_Scott_King",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Coretta_Scott_King"
+    },
+    {
+      "subject": "Dexter_Scott_King",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Dexter_Scott_King",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Dexter_Scott_King",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Dexter_Scott_King",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Coretta_Scott_King",
+      "predicate": "hasBurialPlace",
+      "object": "Georgia",
+      "subject_uri": "http://example.org/entity/Coretta_Scott_King",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://example.org/entity/Georgia"
+    },
+    {
+      "subject": "Georgia",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Georgia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Coretta_Scott_King",
+      "predicate": "hasBurialPlace",
+      "object": "king_center",
+      "subject_uri": "http://example.org/entity/Coretta_Scott_King",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://example.org/extracted/king_center"
+    },
+    {
+      "subject": "king_center",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/king_center",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 10,
+    "true_positives": 6,
+    "false_positives": 2,
+    "false_negatives": 2,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75
+  },
+  "stage": "post_inference"
+}

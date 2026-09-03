@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:antikarisma a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Antikarisma" ;
+    onto:hasFounder data:shahin_najafi .
+
+data:bandar_e_anzali a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bandar-e Anzali, Gilan, Iran" .
+
+data:shahin_najafi a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Shahin Najafi" ;
+    onto:hasBirthPlace data:bandar_e_anzali .
+

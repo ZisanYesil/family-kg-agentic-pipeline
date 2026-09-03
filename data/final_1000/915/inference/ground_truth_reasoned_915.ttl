@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Queen_Insun a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:Myeongjong_of_Joseon .
+
+entity:Myeongjong_of_Joseon a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Queen_Munjeong ;
+    ex:hasParent entity:Queen_Munjeong ;
+    ex:hasSpouse entity:Queen_Insun .
+
+entity:Queen_Munjeong a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Myeongjong_of_Joseon .
+

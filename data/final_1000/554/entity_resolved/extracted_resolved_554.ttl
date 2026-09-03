@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:wladyslaw_i_herman a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Władysław I Herman" ;
+    onto:hasFather data:casimir_i_the_restorer .
+
+data:casimir_i_the_restorer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Casimir I the Restorer" ;
+    onto:hasBirthPlace data:krakow .
+
+data:krakow a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Kraków" .
+

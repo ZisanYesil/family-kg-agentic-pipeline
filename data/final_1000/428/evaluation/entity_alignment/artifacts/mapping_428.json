@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/428/originals/extracted_428.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/428/ground_truth_428.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/nefertari": "http://example.org/entity/Nefertari",
+    "http://example.org/extracted/qv66": "http://example.org/entity/QV66",
+    "http://example.org/extracted/amun_her_khepeshef_20": "http://example.org/entity/Amun_her_khepeshef"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/amun_her_khepeshef_20",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Amun-her-khepeshef (son of Ramesses II)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Amun-her-khepeshef",
+          "source": "label"
+        },
+        {
+          "text": "amun her khepeshef 20",
+          "source": "uri"
+        }
+      ],
+      "context": "Amun-her-khepeshef (son of Ramesses II). has mother: Nefertari Meritmut.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Amun_her_khepeshef",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Amun her khepeshef",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "amun her khepeshef 20",
+        "extracted_source": "uri",
+        "ground_truth_text": "Amun her khepeshef",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.875198483467102,
+      "string_score": 0.9028846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.7999255061149597,
+      "graph_score": 0.8999627828598022,
+      "margin": 0.652094304561615
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/nefertari",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nefertari Meritmut",
+          "source": "altLabel"
+        },
+        {
+          "text": "Nefertari",
+          "source": "label"
+        }
+      ],
+      "context": "Nefertari Meritmut. has burial place: QV66 (Valley of the Queens). inverse has mother: Amun-her-khepeshef (son of Ramesses II).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nefertari",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nefertari",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nefertari",
+        "extracted_source": "label",
+        "ground_truth_text": "Nefertari",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8661482334136963,
+      "graph_score": 0.9330741167068481,
+      "margin": 0.6557667553424835
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/qv66",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "QV66 (Valley of the Queens)",
+          "source": "label"
+        },
+        {
+          "text": "qv66",
+          "source": "uri"
+        }
+      ],
+      "context": "QV66 (Valley of the Queens). inverse has burial place: Nefertari Meritmut.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/QV66",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "QV66",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "qv66",
+        "extracted_source": "uri",
+        "ground_truth_text": "QV66",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9653351902961731,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8701881170272827,
+      "graph_score": 0.9350940585136414,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

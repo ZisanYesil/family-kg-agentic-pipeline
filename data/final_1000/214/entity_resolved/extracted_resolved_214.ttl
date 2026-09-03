@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:prince_nikolaus_wilhelm_of_nassau a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Prince Nikolaus Wilhelm of Nassau" ;
+    onto:hasMother data:princess_pauline_of_wurttemberg .
+
+data:princess_pauline_of_wurttemberg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Pauline of Württemberg" ;
+    onto:hasBirthPlace data:stuttgart .
+
+data:stuttgart a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Stuttgart" ;
+    skos:altLabel "Stuttgart, Kingdom of Württemberg" .
+

@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_machi a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Machi" ;
+    onto:hasComposer data:person_ar_reihana .
+
+data:person_bhavani_sree a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bhavani Sree" ;
+    onto:hasMother data:person_ar_reihana .
+
+data:person_gv_prakash_kumar a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "G. V. Prakash Kumar" ;
+    onto:hasMother data:person_ar_reihana .
+
+data:person_ar_reihana a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "A. R. Reihana" ;
+    skos:altLabel "Rayhanah" .
+

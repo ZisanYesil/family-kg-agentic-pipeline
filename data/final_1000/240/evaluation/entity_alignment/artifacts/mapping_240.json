@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/240/originals/extracted_240.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/240/ground_truth_240.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bronislav_gimpel": "http://example.org/entity/Bronislav_Gimpel",
+    "http://example.org/extracted/lilavati_singh": "http://example.org/entity/Lilavati_Singh"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bronislav_gimpel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bronislav Gimpel",
+          "source": "label"
+        }
+      ],
+      "context": "Bronislav Gimpel. has birth date: 1911-01-29. has death date: 1979-05-01.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bronislav_Gimpel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bronislav Gimpel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bronislav Gimpel",
+        "extracted_source": "label",
+        "ground_truth_text": "Bronislav Gimpel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6188840866088867
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lilavati_singh",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lilivati Singh",
+          "source": "altLabel"
+        },
+        {
+          "text": "Lilavati Singh",
+          "source": "label"
+        }
+      ],
+      "context": "Lilivati Singh. has birth date: 1868-12-14. has death date: 1909-05-09.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lilavati_Singh",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lilavati Singh",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lilavati Singh",
+        "extracted_source": "label",
+        "ground_truth_text": "Lilavati Singh",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9363214373588562,
+      "graph_score": 0.9363214373588562,
+      "margin": 0.629897952079773
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

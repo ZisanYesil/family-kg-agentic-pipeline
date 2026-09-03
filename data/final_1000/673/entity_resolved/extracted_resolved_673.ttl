@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:union_sulphur_company a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Union Sulphur Company" ;
+    onto:hasFounder data:herman_frasch .
+
+data:herman_frasch a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Herman Frasch" ;
+    onto:hasBirthPlace data:oberrot_bei_gaildorf_wurttemberg .
+
+data:oberrot_bei_gaildorf_wurttemberg a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Oberrot bei Gaildorf, Württemberg" .
+

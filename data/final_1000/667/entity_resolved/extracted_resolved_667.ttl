@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:reality_of_wrestling a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Reality Of Wrestling" ;
+    onto:hasFounder data:booker_t ;
+    skos:altLabel "ROW",
+        "Reality of Wrestling" .
+
+data:booker_t a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Booker T" ;
+    onto:hasAwardReceived data:wwe_hall_of_fame ;
+    skos:altLabel "Robert Booker Tio Huffman" .
+
+data:wwe_hall_of_fame a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "WWE Hall of Fame" .
+

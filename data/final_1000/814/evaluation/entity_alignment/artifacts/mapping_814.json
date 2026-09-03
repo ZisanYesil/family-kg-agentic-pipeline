@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/814/originals/extracted_814.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/814/ground_truth_814.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/gospel_music_hall_of_fame": "http://example.org/entity/Gospel_Music_Hall_of_Fame",
+    "http://example.org/extracted/pat_boone": "http://example.org/entity/Pat_Boone"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gospel_music_hall_of_fame",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gospel Music Hall of Fame",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Gospel Music Hall of Fame.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gospel_Music_Hall_of_Fame",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gospel Music Hall of Fame",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gospel Music Hall of Fame",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Gospel Music Hall of Fame",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.725268542766571,
+      "graph_score": 0.3626342713832855,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pat_boone",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pat Boone",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Pat Boone. inverse has performer: Bernardine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pat_Boone",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pat Boone",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pat Boone",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Pat Boone",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6110731959342957,
+      "graph_score": 0.3055365979671478,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/bernardine_song",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bernardine",
+          "source": "altLabel"
+        },
+        {
+          "text": "bernardine song",
+          "source": "uri"
+        }
+      ],
+      "context": "Bernardine. has performer: Pat Boone.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bernadine",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bernadine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "bernardine song",
+        "extracted_source": "uri",
+        "ground_truth_text": "Bernadine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7216680645942688,
+      "name_embedding_score": 0.809546172618866,
+      "string_score": 0.3375000059604645,
+      "independent_identity_support": false,
+      "context_score": 0.8601599931716919,
+      "graph_score": 0.930079996585846,
+      "margin": 0.7216680645942688
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

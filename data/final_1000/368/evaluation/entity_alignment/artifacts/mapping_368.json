@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/368/originals/extracted_368.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/368/ground_truth_368.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_paddy_breathnach": "http://example.org/entity/Paddy_Breathnach",
+    "http://example.org/extracted/country_ireland": "http://example.org/entity/Ireland",
+    "http://example.org/extracted/film_freakdog": "http://example.org/entity/Freakdog"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_ireland",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Irish",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ireland",
+          "source": "label"
+        },
+        {
+          "text": "country ireland",
+          "source": "uri"
+        }
+      ],
+      "context": "Irish. inverse has nationality: Paddy Breathnach.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ireland",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ireland",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ireland",
+        "extracted_source": "label",
+        "ground_truth_text": "Ireland",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9103661179542542,
+      "graph_score": 0.4551830589771271,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_freakdog",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Freakdog",
+          "source": "label"
+        },
+        {
+          "text": "film freakdog",
+          "source": "uri"
+        }
+      ],
+      "context": "Freakdog. has director: Paddy Breathnach.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Freakdog",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Freakdog",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Freakdog",
+        "extracted_source": "label",
+        "ground_truth_text": "Freakdog",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_paddy_breathnach",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Paddy Breathnach",
+          "source": "label"
+        },
+        {
+          "text": "person paddy breathnach",
+          "source": "uri"
+        }
+      ],
+      "context": "Paddy Breathnach. has nationality: Irish. inverse has director: Freakdog.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Paddy_Breathnach",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Paddy Breathnach",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Paddy Breathnach",
+        "extracted_source": "label",
+        "ground_truth_text": "Paddy Breathnach",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9479271173477173,
+      "graph_score": 0.6406302452087402,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

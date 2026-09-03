@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1084
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:The_Company_s_in_Love ex:hasDirector inst:Max_Ophüls .  # director
+inst:Punyakoti ex:hasDirector inst:Ravi_Shankar .  # director
+inst:Max_Ophüls ex:hasDeathDate "1957-03-26"^^xsd:date .  # date of death -> "26 March 1957"
+inst:Ravi_Shankar ex:hasDeathDate "2012-12-11"^^xsd:date .  # date of death -> "11 December 2012"

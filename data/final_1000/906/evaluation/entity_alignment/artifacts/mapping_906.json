@@ -1,0 +1,133 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/906/originals/extracted_906.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/906/ground_truth_906.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/george_of_lencastre_2nd_duke_aveiro": "http://example.org/entity/George_of_Lencastre_2nd_Duke_of_Aveiro"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/george_of_lencastre_2nd_duke_aveiro",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George of Lencastre",
+          "source": "altLabel"
+        },
+        {
+          "text": "George of Lencastre, 2nd Duke of Aveiro",
+          "source": "altLabel"
+        },
+        {
+          "text": "Jorge de Lencastre",
+          "source": "altLabel"
+        },
+        {
+          "text": "george of lencastre 2nd duke aveiro",
+          "source": "uri"
+        }
+      ],
+      "context": "George of Lencastre. inverse has son: 1st Duke of Aveiro.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_of_Lencastre_2nd_Duke_of_Aveiro",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George of Lencastre 2nd Duke of Aveiro",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George of Lencastre, 2nd Duke of Aveiro",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "George of Lencastre 2nd Duke of Aveiro",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9965044856071472,
+      "string_score": 0.9941558241844177,
+      "independent_identity_support": true,
+      "context_score": 0.8497422933578491,
+      "graph_score": 0.8497422933578491,
+      "margin": 0.2498653531074524
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_of_lencastre_1st_duke_aveiro",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "1st Duke of Aveiro",
+          "source": "altLabel"
+        },
+        {
+          "text": "Dom John of Lencastre",
+          "source": "altLabel"
+        },
+        {
+          "text": "John of Lencastre",
+          "source": "altLabel"
+        },
+        {
+          "text": "João de Lencastre",
+          "source": "altLabel"
+        },
+        {
+          "text": "john of lencastre 1st duke aveiro",
+          "source": "uri"
+        }
+      ],
+      "context": "1st Duke of Aveiro. has son: George of Lencastre.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_of_Lencastre_1st_Duke_of_Aveiro",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John of Lencastre 1st Duke of Aveiro",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "john of lencastre 1st duke aveiro",
+        "extracted_source": "uri",
+        "ground_truth_text": "John of Lencastre 1st Duke of Aveiro",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7925503849983215,
+      "name_embedding_score": 0.8844154477119446,
+      "string_score": 0.980434775352478,
+      "independent_identity_support": true,
+      "context_score": 0.8418715596199036,
+      "graph_score": 0.4209357798099518,
+      "margin": 0.10052472352981567
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

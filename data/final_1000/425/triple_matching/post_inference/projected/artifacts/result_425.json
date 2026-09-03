@@ -1,0 +1,100 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/425/evaluation/entity_alignment/final_extracted_aligned_425.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/425/evaluation/entity_alignment/final_ground_truth_aligned_425.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Brisa_Auto_estradas_de_Portugal",
+      "predicate": "hasFounder",
+      "object": "Jorge_de_Brito",
+      "subject_uri": "http://example.org/entity/Brisa_Auto_estradas_de_Portugal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Jorge_de_Brito"
+    },
+    {
+      "subject": "Brisa_Auto_estradas_de_Portugal",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Brisa_Auto_estradas_de_Portugal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Brisa_Auto_estradas_de_Portugal",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Brisa_Auto_estradas_de_Portugal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Jorge_de_Brito",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Jorge_de_Brito",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Jorge_de_Brito",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jorge_de_Brito",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Jorge_de_Brito",
+      "predicate": "hasDeathPlace",
+      "object": "Prazeres",
+      "subject_uri": "http://example.org/entity/Jorge_de_Brito",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Prazeres"
+    },
+    {
+      "subject": "Prazeres",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Prazeres",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Jorge_de_Brito",
+      "predicate": "hasDeathPlace",
+      "object": "place_lisbon",
+      "subject_uri": "http://example.org/entity/Jorge_de_Brito",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/extracted/place_lisbon"
+    },
+    {
+      "subject": "place_lisbon",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/place_lisbon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 9,
+    "true_positives": 5,
+    "false_positives": 2,
+    "false_negatives": 2,
+    "precision": 0.7142857142857143,
+    "recall": 0.7142857142857143,
+    "f1": 0.7142857142857143
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Harald_II_of_Denmark a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Gunhild_of_Wenden ;
+    ex:hasParent entity:Gunhild_of_Wenden .
+
+entity:Gunhild_of_Wenden a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Harald_II_of_Denmark ;
+    ex:hasCitizenship entity:Polish ;
+    ex:hasCountry entity:Polish .
+
+entity:Polish a ex:Country,
+        ex:Place .
+

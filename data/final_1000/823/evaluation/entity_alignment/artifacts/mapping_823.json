@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/823/originals/extracted_823.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/823/ground_truth_823.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/song_do_you_like_this": "http://example.org/entity/Do_You_Like_This",
+    "http://example.org/extracted/benton_harbor_michigan": "http://example.org/entity/Benton_Harbor_Michigan",
+    "http://example.org/extracted/rome_singer": "http://example.org/entity/Rome"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/benton_harbor_michigan",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Benton Harbor, Michigan",
+          "source": "label"
+        },
+        {
+          "text": "benton harbor michigan",
+          "source": "uri"
+        }
+      ],
+      "context": "Benton Harbor, Michigan. inverse has birth place: Jerome Woods.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Benton_Harbor_Michigan",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Benton Harbor Michigan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Benton Harbor, Michigan",
+        "extracted_source": "label",
+        "ground_truth_text": "Benton Harbor Michigan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9790170192718506,
+      "string_score": 0.9900000095367432,
+      "independent_identity_support": true,
+      "context_score": 0.7525762915611267,
+      "graph_score": 0.8762881755828857,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/rome_singer",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jerome Woods",
+          "source": "altLabel"
+        },
+        {
+          "text": "Rome",
+          "source": "label"
+        },
+        {
+          "text": "rome singer",
+          "source": "uri"
+        }
+      ],
+      "context": "Jerome Woods. has birth place: Benton Harbor, Michigan. inverse has performer: Do You Like This.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rome",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rome",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rome",
+        "extracted_source": "label",
+        "ground_truth_text": "Rome",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6504920125007629,
+      "graph_score": 0.8252459764480591,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_do_you_like_this",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Do You Like This",
+          "source": "label"
+        },
+        {
+          "text": "song do you like this",
+          "source": "uri"
+        }
+      ],
+      "context": "Do You Like This. has performer: Jerome Woods.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Do_You_Like_This",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Do You Like This",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Do You Like This",
+        "extracted_source": "label",
+        "ground_truth_text": "Do You Like This",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.4899338185787201,
+      "graph_score": 0.7449669241905212,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

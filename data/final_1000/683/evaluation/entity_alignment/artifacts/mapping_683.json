@@ -1,0 +1,195 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/683/originals/extracted_683.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/683/ground_truth_683.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_alfons_zitterbacke": "http://example.org/entity/Alfons_Zitterbacke",
+    "http://example.org/extracted/film_almighty_dollar_1923": "http://example.org/entity/The_Almighty_Dollar_1923_film",
+    "http://example.org/extracted/country_germany": "http://example.org/entity/German"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "German",
+          "source": "altLabel"
+        },
+        {
+          "text": "Germany",
+          "source": "label"
+        },
+        {
+          "text": "country germany",
+          "source": "uri"
+        }
+      ],
+      "context": "German. inverse has country of origin: The Almighty Dollar (1923 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/German",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "German",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "German",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "German",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8459129333496094,
+      "graph_score": 0.6729564666748047,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_alfons_zitterbacke",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alfons Zitterbacke",
+          "source": "label"
+        },
+        {
+          "text": "film alfons zitterbacke",
+          "source": "uri"
+        }
+      ],
+      "context": "Alfons Zitterbacke. has country of origin: East German.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alfons_Zitterbacke",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alfons Zitterbacke",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alfons Zitterbacke",
+        "extracted_source": "label",
+        "ground_truth_text": "Alfons Zitterbacke",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9763959646224976,
+      "graph_score": 0.4881979823112488,
+      "margin": 0.6632781624794006
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_almighty_dollar_1923",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Almighty Dollar (1923 film)",
+          "source": "label"
+        },
+        {
+          "text": "film almighty dollar 1923",
+          "source": "uri"
+        }
+      ],
+      "context": "The Almighty Dollar (1923 film). has country of origin: German.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Almighty_Dollar_1923_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Almighty Dollar 1923 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Almighty Dollar (1923 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Almighty Dollar 1923 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9519908428192139,
+      "string_score": 0.9850000143051147,
+      "independent_identity_support": true,
+      "context_score": 0.9545167684555054,
+      "graph_score": 0.9772583842277527,
+      "margin": 0.6470251083374023
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_east_germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "East German",
+          "source": "altLabel"
+        },
+        {
+          "text": "East Germany",
+          "source": "label"
+        },
+        {
+          "text": "country east germany",
+          "source": "uri"
+        }
+      ],
+      "context": "East German. inverse has country of origin: Alfons Zitterbacke.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

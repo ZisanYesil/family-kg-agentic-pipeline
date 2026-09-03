@@ -1,0 +1,29 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_fame_1936 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Fame (1936 film)" ;
+    onto:hasDirector data:person_leslie_hiscott .
+
+data:film_its_all_about_love_2003 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "It's All About Love" ;
+    onto:hasDirector data:person_thomas_vinterberg .
+
+data:person_leslie_hiscott a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leslie S. Hiscott" ;
+    onto:hasBirthDate "1894-07-25"^^xsd:date ;
+    onto:hasDeathDate "1968-05-03"^^xsd:date ;
+    skos:altLabel "Leslie Stephenson Hiscott" .
+
+data:person_thomas_vinterberg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Thomas Vinterberg" ;
+    onto:hasBirthDate "1969-05-19"^^xsd:date .
+

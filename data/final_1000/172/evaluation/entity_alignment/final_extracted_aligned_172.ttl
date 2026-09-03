@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Inthaphom> a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "1776"^^xsd:gYear ;
+    ex:hasFather <http://example.org/entity/Inthasom> ;
+    ex:hasParent <http://example.org/entity/Inthasom> .
+
+<http://example.org/entity/Kingkitsarat> a ex:Agent,
+        ex:Person ;
+    ex:hasSibling <http://example.org/entity/Inthasom> ;
+    ex:isBrotherOf <http://example.org/entity/Inthasom> .
+
+<http://example.org/entity/Inthasom> a ex:Agent,
+        ex:Person ;
+    ex:hasBrother <http://example.org/entity/Kingkitsarat> ;
+    ex:hasChild <http://example.org/entity/Inthaphom> ;
+    ex:hasDeathDate "1749"^^xsd:gYear ;
+    ex:hasSibling <http://example.org/entity/Kingkitsarat> .
+

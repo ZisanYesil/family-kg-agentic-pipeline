@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/963/evaluation/entity_alignment/baseline_extracted_aligned_963.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/963/evaluation/entity_alignment/baseline_ground_truth_aligned_963.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "John_Count_of_Brienne",
+      "predicate": "hasParent",
+      "object": "Walter_IV_of_Brienne",
+      "subject_uri": "http://example.org/entity/John_Count_of_Brienne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Walter_IV_of_Brienne"
+    },
+    {
+      "subject": "Walter_IV_the_Great_of_Brienne",
+      "predicate": "hasParent",
+      "object": "Elvira_of_Sicily",
+      "subject_uri": "http://example.org/entity/Walter_IV_the_Great_of_Brienne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Elvira_of_Sicily"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Elvira_of_Sicily",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Elvira_of_Sicily",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Elvira_of_Sicily",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Elvira_of_Sicily",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Elvira_of_Sicily",
+      "predicate": "label",
+      "object": "\"Elvira of Sicily\"",
+      "subject_uri": "http://example.org/entity/Elvira_of_Sicily",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Elvira of Sicily\""
+    },
+    {
+      "subject": "John_Count_of_Brienne",
+      "predicate": "hasParent",
+      "object": "_walter_iv_brienne",
+      "subject_uri": "http://example.org/entity/John_Count_of_Brienne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/extracted/_walter_iv_brienne"
+    },
+    {
+      "subject": "John_Count_of_Brienne",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/John_Count_of_Brienne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "John_Count_of_Brienne",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/John_Count_of_Brienne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "John_Count_of_Brienne",
+      "predicate": "label",
+      "object": "\"John, Count of Brienne\"",
+      "subject_uri": "http://example.org/entity/John_Count_of_Brienne",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"John, Count of Brienne\""
+    },
+    {
+      "subject": "_walter_iv_brienne",
+      "predicate": "hasParent",
+      "object": "Elvira_of_Sicily",
+      "subject_uri": "http://example.org/extracted/_walter_iv_brienne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Elvira_of_Sicily"
+    },
+    {
+      "subject": "_walter_iv_brienne",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/_walter_iv_brienne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "_walter_iv_brienne",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/_walter_iv_brienne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "_walter_iv_brienne",
+      "predicate": "label",
+      "object": "\"Walter IV, Count of Brienne\"",
+      "subject_uri": "http://example.org/extracted/_walter_iv_brienne",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Walter IV, Count of Brienne\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 0,
+    "false_positives": 11,
+    "false_negatives": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "pre_inference"
+}

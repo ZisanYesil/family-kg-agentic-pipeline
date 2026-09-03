@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/762/originals/extracted_762.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/762/ground_truth_762.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jeanne_d_evreux": "http://example.org/entity/Jeanne_d_Évreux",
+    "http://example.org/extracted/louis_count_of_evreux": "http://example.org/entity/Louis_Count_of_Évreux",
+    "http://example.org/extracted/blanche_of_france_duchess_of_orleans": "http://example.org/entity/Blanche_of_France_Duchess_of_Orléans"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/blanche_of_france_duchess_of_orleans",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Blanche of France, Duchess of Orléans",
+          "source": "label"
+        },
+        {
+          "text": "blanche of france duchess of orleans",
+          "source": "uri"
+        }
+      ],
+      "context": "Blanche of France, Duchess of Orléans. has mother: Jeanne d'Évreux.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Blanche_of_France_Duchess_of_Orléans",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Blanche of France Duchess of Orléans",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Blanche of France, Duchess of Orléans",
+        "extracted_source": "label",
+        "ground_truth_text": "Blanche of France Duchess of Orléans",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9959723353385925,
+      "string_score": 0.9938356280326843,
+      "independent_identity_support": true,
+      "context_score": 0.9538208246231079,
+      "graph_score": 0.976910412311554,
+      "margin": 0.5100136399269104
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jeanne_d_evreux",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jeanne d'Évreux",
+          "source": "label"
+        },
+        {
+          "text": "jeanne d evreux",
+          "source": "uri"
+        }
+      ],
+      "context": "Jeanne d'Évreux. has father: Louis, Count of Évreux. inverse has mother: Blanche of France, Duchess of Orléans.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jeanne_d_Évreux",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jeanne d Évreux",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jeanne d'Évreux",
+        "extracted_source": "label",
+        "ground_truth_text": "Jeanne d Évreux",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9578574895858765,
+      "string_score": 0.9700000286102295,
+      "independent_identity_support": true,
+      "context_score": 0.9650779962539673,
+      "graph_score": 0.9825389981269836,
+      "margin": 0.5060089230537415
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_count_of_evreux",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis, Count of Évreux",
+          "source": "label"
+        },
+        {
+          "text": "louis count of evreux",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis, Count of Évreux. inverse has father: Jeanne d'Évreux.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_Count_of_Évreux",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis Count of Évreux",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis, Count of Évreux",
+        "extracted_source": "label",
+        "ground_truth_text": "Louis Count of Évreux",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9870985746383667,
+      "string_score": 0.989534854888916,
+      "independent_identity_support": true,
+      "context_score": 0.9658046364784241,
+      "graph_score": 0.9829022884368896,
+      "margin": 0.47229528427124023
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

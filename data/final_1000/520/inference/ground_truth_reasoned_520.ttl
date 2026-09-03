@@ -1,0 +1,31 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:C_Man_film a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Joseph_Lerner ;
+    ex:hasDirector entity:Joseph_Lerner .
+
+entity:Greencastle_film a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Koran_Dunbar ;
+    ex:hasDirector entity:Koran_Dunbar .
+
+entity:American a ex:Country,
+        ex:Place .
+
+entity:Canadian a ex:Country,
+        ex:Place .
+
+entity:Joseph_Lerner a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:Canadian ;
+    ex:hasCountry entity:Canadian .
+
+entity:Koran_Dunbar a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:American ;
+    ex:hasCountry entity:American .
+

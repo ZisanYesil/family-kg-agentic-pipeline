@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/184/originals/extracted_184.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/184/ground_truth_184.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ladislav_stroupeznicky": "http://example.org/entity/Ladislav_Stroupežnický",
+    "http://example.org/extracted/peder_mork_monsted": "http://example.org/entity/Peder_Mørk_Mønsted"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ladislav_stroupeznicky",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ladislav Stroupežnický",
+          "source": "label"
+        },
+        {
+          "text": "ladislav stroupeznicky",
+          "source": "uri"
+        }
+      ],
+      "context": "Ladislav Stroupežnický. has birth date: 1850-01-06. has death date: 1892-08-11.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ladislav_Stroupežnický",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ladislav Stroupežnický",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ladislav Stroupežnický",
+        "extracted_source": "label",
+        "ground_truth_text": "Ladislav Stroupežnický",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.648978054523468
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/peder_mork_monsted",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Peder Mørk Mønsted",
+          "source": "label"
+        },
+        {
+          "text": "peder mork monsted",
+          "source": "uri"
+        }
+      ],
+      "context": "Peder Mørk Mønsted. has birth date: 1859-12-10. has death date: 1941-06-20.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Peder_Mørk_Mønsted",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Peder Mørk Mønsted",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Peder Mørk Mønsted",
+        "extracted_source": "label",
+        "ground_truth_text": "Peder Mørk Mønsted",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6703228950500488
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

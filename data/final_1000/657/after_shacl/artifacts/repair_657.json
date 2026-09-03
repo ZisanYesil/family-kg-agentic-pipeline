@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "b69f60af53026894d8789c13781e7e6f8c96a1ceec2a941442419049831e8912",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/michal_aviad",
+        "path": null,
+        "value": "http://example.org/extracted/tel_aviv_university",
+        "expected": null,
+        "message": "Relation phrase 'works at' from http://example.org/extracted/michal_aviad to http://example.org/extracted/tel_aviv_university was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "b69f60af53026894d8789c13781e7e6f8c96a1ceec2a941442419049831e8912",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/michal_aviad",
+            "path": null,
+            "value": "http://example.org/extracted/tel_aviv_university",
+            "expected": null,
+            "message": "Relation phrase 'works at' from http://example.org/extracted/michal_aviad to http://example.org/extracted/tel_aviv_university was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 10,
+      "feedback_reasoning": "The violation concerns an unmapped relation phrase “works at” from data:michal_aviad to data:tel_aviv_university. The source text states that Michal Aviad “is director, script writer, producer and senior lecturer at the Department of Cinema and Television, Tel Aviv University.” The ontology provides object properties such as onto:hasEmployer (Person → Organization) and onto:hasEducatedAt (Person → EducationalInstitution), but none whose documented meaning covers a person being employed or holding a lecturing position at an educational institution. Because no ontology predicate matches the semantics of “works at” for this Person–EducationalInstitution pair, no safe edit can be made without inventing a predicate or misusing an existing one. Therefore the violation cannot be repaired automatically.",
+      "repairs": [
+        {
+          "violation_fingerprint": "b2da32cdec88e17a2e8e1879578aae46b1fbdcd9cb88565a863caa9e10f3f8bf",
+          "reasoning": "No suitable ontology predicate matches the relation phrase ‘works at’ between a Person and an EducationalInstitution as described in the source text.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "b2da32cdec88e17a2e8e1879578aae46b1fbdcd9cb88565a863caa9e10f3f8bf"
+      ],
+      "triples_after": 10,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "b69f60af53026894d8789c13781e7e6f8c96a1ceec2a941442419049831e8912",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/michal_aviad",
+            "path": null,
+            "value": "http://example.org/extracted/tel_aviv_university",
+            "expected": null,
+            "message": "Relation phrase 'works at' from http://example.org/extracted/michal_aviad to http://example.org/extracted/tel_aviv_university was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "b69f60af53026894d8789c13781e7e6f8c96a1ceec2a941442419049831e8912",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/michal_aviad",
+        "path": null,
+        "value": "http://example.org/extracted/tel_aviv_university",
+        "expected": null,
+        "message": "Relation phrase 'works at' from http://example.org/extracted/michal_aviad to http://example.org/extracted/tel_aviv_university was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

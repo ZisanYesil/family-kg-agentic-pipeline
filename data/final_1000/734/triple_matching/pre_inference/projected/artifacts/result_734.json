@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/734/evaluation/entity_alignment/baseline_extracted_aligned_734.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/734/evaluation/entity_alignment/baseline_ground_truth_aligned_734.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Chocñacota_Putina",
+      "predicate": "hasCountry",
+      "object": "Peru",
+      "subject_uri": "http://example.org/entity/Chocñacota_Putina",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Peru"
+    },
+    {
+      "subject": "Sillane",
+      "predicate": "hasCountry",
+      "object": "Peru",
+      "subject_uri": "http://example.org/entity/Sillane",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Peru"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Chocñacota_Putina",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Chocñacota_Putina",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Chocñacota_Putina",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Chocñacota_Putina",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Chocñacota_Putina",
+      "predicate": "label",
+      "object": "\"Chocñacota (Putina)\"",
+      "subject_uri": "http://example.org/entity/Chocñacota_Putina",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Chocñacota (Putina)\""
+    },
+    {
+      "subject": "Peru",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Peru",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Peru",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Peru",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Peru",
+      "predicate": "label",
+      "object": "\"Peru\"",
+      "subject_uri": "http://example.org/entity/Peru",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Peru\""
+    },
+    {
+      "subject": "Sillane",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Sillane",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Sillane",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sillane",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sillane",
+      "predicate": "label",
+      "object": "\"Sillane\"",
+      "subject_uri": "http://example.org/entity/Sillane",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sillane\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

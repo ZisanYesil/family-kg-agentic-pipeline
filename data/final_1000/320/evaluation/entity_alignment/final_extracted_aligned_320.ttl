@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Augustus_II_the_Strong> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1670-05-12"^^xsd:date ;
+    ex:hasChild <http://example.org/entity/Maurice_de_Saxe> ;
+    ex:hasDeathDate "1733-02-01"^^xsd:date ;
+    ex:hasSon <http://example.org/entity/Maurice_de_Saxe> .
+
+<http://example.org/entity/Maurice_de_Saxe> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1696-10-28"^^xsd:date ;
+    ex:hasDeathDate "1750-11-20"^^xsd:date ;
+    ex:hasParent <http://example.org/entity/Augustus_II_the_Strong> ;
+    ex:isSonOf <http://example.org/entity/Augustus_II_the_Strong> .
+

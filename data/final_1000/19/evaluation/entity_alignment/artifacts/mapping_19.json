@@ -1,0 +1,144 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/19/originals/extracted_19.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/19/ground_truth_19.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/edward_i_of_england": "http://example.org/entity/Edward_I_of_England",
+    "http://example.org/extracted/eleanor_of_provence": "http://example.org/entity/Eleanor_of_Provence"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/edward_i_of_england",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edward I of England",
+          "source": "label"
+        }
+      ],
+      "context": "Edward I of England. has father: Henry III of England.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Edward_I_of_England",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Edward I of England",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Edward I of England",
+        "extracted_source": "label",
+        "ground_truth_text": "Edward I of England",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9870583415031433,
+      "graph_score": 0.9870583415031433,
+      "margin": 0.49454212188720703
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/eleanor_of_provence",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eleanor of Provence",
+          "source": "label"
+        }
+      ],
+      "context": "Eleanor of Provence. inverse has spouse: Henry III of England.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eleanor_of_Provence",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eleanor of Provence",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eleanor of Provence",
+        "extracted_source": "label",
+        "ground_truth_text": "Eleanor of Provence",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9802767038345337,
+      "graph_score": 0.9802767038345337,
+      "margin": 0.48182904720306396
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/henry_iii_of_england",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henry III of England",
+          "source": "label"
+        }
+      ],
+      "context": "Henry III of England. has spouse: Eleanor of Provence. inverse has father: Edward I of England.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Henry_III",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Henry III",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henry III of England",
+        "extracted_source": "label",
+        "ground_truth_text": "Henry III",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8748505115509033,
+      "name_embedding_score": 0.8994058966636658,
+      "string_score": 0.7043103575706482,
+      "independent_identity_support": true,
+      "context_score": 0.9925598502159119,
+      "graph_score": 0.9962799549102783,
+      "margin": 0.19813275337219238
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

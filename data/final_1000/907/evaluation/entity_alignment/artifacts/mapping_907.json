@@ -1,0 +1,175 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/907/originals/extracted_907.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/907/ground_truth_907.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/max_uhlemann": "http://example.org/entity/Max_Uhlemann",
+    "http://example.org/extracted/friedrich_gottlob_uhlemann": "http://example.org/entity/Friedrich_Gottlob_Uhlemann",
+    "http://example.org/extracted/university_of_berlin": "http://example.org/entity/University_of_Berlin"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/friedrich_gottlob_uhlemann",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Friedrich Gottlob Uhlemann",
+          "source": "label"
+        }
+      ],
+      "context": "Friedrich Gottlob Uhlemann. has employer: University of Berlin. has employer: University of Leipzig. inverse has father: Maximilian Adolph Uhlemann.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Friedrich_Gottlob_Uhlemann",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Friedrich Gottlob Uhlemann",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Friedrich Gottlob Uhlemann",
+        "extracted_source": "label",
+        "ground_truth_text": "Friedrich Gottlob Uhlemann",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.956047534942627,
+      "graph_score": 0.9780237674713135,
+      "margin": 0.41079485416412354
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/max_uhlemann",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maximilian Adolph Uhlemann",
+          "source": "altLabel"
+        },
+        {
+          "text": "Max Uhlemann",
+          "source": "label"
+        }
+      ],
+      "context": "Maximilian Adolph Uhlemann. has father: Friedrich Gottlob Uhlemann.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Max_Uhlemann",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Max Uhlemann",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Max Uhlemann",
+        "extracted_source": "label",
+        "ground_truth_text": "Max Uhlemann",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9353614449501038,
+      "graph_score": 0.9676806926727295,
+      "margin": 0.3949512243270874
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/university_of_berlin",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "University of Berlin",
+          "source": "label"
+        }
+      ],
+      "context": "University of Berlin. inverse has employer: Friedrich Gottlob Uhlemann.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/University_of_Berlin",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "University of Berlin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "University of Berlin",
+        "extracted_source": "label",
+        "ground_truth_text": "University of Berlin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/university_of_leipzig",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "University of Leipzig",
+          "source": "label"
+        }
+      ],
+      "context": "University of Leipzig. inverse has employer: Friedrich Gottlob Uhlemann.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

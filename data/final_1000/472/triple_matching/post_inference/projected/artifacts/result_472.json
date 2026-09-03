@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/472/evaluation/entity_alignment/final_extracted_aligned_472.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/472/evaluation/entity_alignment/final_ground_truth_aligned_472.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Picturegoer",
+      "predicate": "hasInception",
+      "object": "\"1911\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Picturegoer",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1911\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Picturegoer",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Picturegoer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Picturegoer",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Picturegoer",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Scribner_s_Monthly",
+      "predicate": "hasInception",
+      "object": "\"1870\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Scribner_s_Monthly",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasInception",
+      "object_term": "\"1870\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Scribner_s_Monthly",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Scribner_s_Monthly",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Scribner_s_Monthly",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Scribner_s_Monthly",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "picturegoer_1911",
+      "predicate": "hasPublicationDate",
+      "object": "\"1911\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/extracted/picturegoer_1911",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1911\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "picturegoer_1911",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/extracted/picturegoer_1911",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "picturegoer_1911",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/extracted/picturegoer_1911",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "scribners_monthly_1870",
+      "predicate": "hasPublicationDate",
+      "object": "\"1870\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/extracted/scribners_monthly_1870",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1870\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "scribners_monthly_1870",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/extracted/scribners_monthly_1870",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "scribners_monthly_1870",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/extracted/scribners_monthly_1870",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 0,
+    "extracted_triples_in_scope": 6,
+    "ground_truth_triples_in_scope": 6,
+    "union_triples_in_scope": 12,
+    "true_positives": 0,
+    "false_positives": 6,
+    "false_negatives": 6,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "post_inference"
+}

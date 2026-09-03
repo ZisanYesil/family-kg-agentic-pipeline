@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:four_eyed_monsters_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Four Eyed Monsters" ;
+    onto:hasCountry data:united_states .
+
+data:joseph_amazing_technicolor_dreamcoat_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Joseph and the Amazing Technicolor Dreamcoat (film)" ;
+    onto:hasCountry data:united_kingdom .
+
+data:united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "British" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

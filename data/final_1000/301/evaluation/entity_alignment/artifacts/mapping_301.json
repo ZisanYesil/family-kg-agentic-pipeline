@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/301/originals/extracted_301.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/301/ground_truth_301.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/pierre_sonnerat": "http://example.org/entity/Pierre_Sonnerat",
+    "http://example.org/extracted/ingrith_deyrup_olsen": "http://example.org/entity/Ingrith_Johnson_Deyrup_Olsen"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ingrith_deyrup_olsen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ingrith Johnson Deyrup-Olsen",
+          "source": "label"
+        },
+        {
+          "text": "ingrith deyrup olsen",
+          "source": "uri"
+        }
+      ],
+      "context": "Ingrith Johnson Deyrup-Olsen. has birth date: 1919. has death date: 2004-07-25.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ingrith_Johnson_Deyrup_Olsen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ingrith Johnson Deyrup Olsen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ingrith Johnson Deyrup-Olsen",
+        "extracted_source": "label",
+        "ground_truth_text": "Ingrith Johnson Deyrup Olsen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.7611600160598755,
+      "string_score": 0.9839285612106323,
+      "independent_identity_support": true,
+      "context_score": 0.8616947531700134,
+      "graph_score": 0.8616947531700134,
+      "margin": 0.5537294745445251
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pierre_sonnerat",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pierre Sonnerat",
+          "source": "label"
+        }
+      ],
+      "context": "Pierre Sonnerat. has birth date: 1748-08-18. has death date: 1814-03-31.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pierre_Sonnerat",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pierre Sonnerat",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pierre Sonnerat",
+        "extracted_source": "label",
+        "ground_truth_text": "Pierre Sonnerat",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.620769590139389
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

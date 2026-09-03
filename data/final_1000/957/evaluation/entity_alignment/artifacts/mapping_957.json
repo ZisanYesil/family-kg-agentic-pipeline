@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/957/originals/extracted_957.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/957/ground_truth_957.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_frank_mcdonald": "http://example.org/entity/Frank_McDonald",
+    "http://example.org/extracted/film_song_of_arizona": "http://example.org/entity/Song_of_Arizona",
+    "http://example.org/extracted/person_george_sherman": "http://example.org/entity/George_Sherman",
+    "http://example.org/extracted/film_texas_terrors": "http://example.org/entity/Texas_Terrors"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_song_of_arizona",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Song of Arizona",
+          "source": "label"
+        },
+        {
+          "text": "film song of arizona",
+          "source": "uri"
+        }
+      ],
+      "context": "Song of Arizona. has director: Frank Mc Donald.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Song_of_Arizona",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Song of Arizona",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Song of Arizona",
+        "extracted_source": "label",
+        "ground_truth_text": "Song of Arizona",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8234357237815857
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_texas_terrors",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Texas Terrors",
+          "source": "label"
+        },
+        {
+          "text": "film texas terrors",
+          "source": "uri"
+        }
+      ],
+      "context": "Texas Terrors. has director: George Sherman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Texas_Terrors",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Texas Terrors",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Texas Terrors",
+        "extracted_source": "label",
+        "ground_truth_text": "Texas Terrors",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7634592354297638
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_frank_mcdonald",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Frank Mc Donald",
+          "source": "label"
+        },
+        {
+          "text": "person frank mcdonald",
+          "source": "uri"
+        }
+      ],
+      "context": "Frank Mc Donald. has birth date: 1899-11-09. has death date: 1980-03-08. inverse has director: Song of Arizona.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Frank_McDonald",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Frank Mc Donald",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Frank Mc Donald",
+        "extracted_source": "label",
+        "ground_truth_text": "Frank Mc Donald",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7102752923965454,
+      "graph_score": 0.8551376461982727,
+      "margin": 0.2686157822608948
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_george_sherman",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George Sherman",
+          "source": "label"
+        },
+        {
+          "text": "person george sherman",
+          "source": "uri"
+        }
+      ],
+      "context": "George Sherman. has birth date: 1908-07-14. has death date: 1991-03-15. inverse has director: Texas Terrors.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_Sherman",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George Sherman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George Sherman",
+        "extracted_source": "label",
+        "ground_truth_text": "George Sherman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9495015144348145,
+      "graph_score": 0.9747507572174072,
+      "margin": 0.6366923153400421
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Frank_McDonald_director"
+  ]
+}

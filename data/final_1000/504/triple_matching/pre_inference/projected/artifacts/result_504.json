@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/504/evaluation/entity_alignment/baseline_extracted_aligned_504.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/504/evaluation/entity_alignment/baseline_ground_truth_aligned_504.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Heart_of_Paris",
+      "predicate": "hasPublicationDate",
+      "object": "\"1932\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Heart_of_Paris",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1932\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Padithal_Mattum_Podhuma",
+      "predicate": "hasPublicationDate",
+      "object": "\"1962\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Padithal_Mattum_Podhuma",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"1962\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Heart_of_Paris",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Heart_of_Paris",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Heart_of_Paris",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Heart_of_Paris",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Heart_of_Paris",
+      "predicate": "label",
+      "object": "\"Heart of Paris\"",
+      "subject_uri": "http://example.org/entity/Heart_of_Paris",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Heart of Paris\""
+    },
+    {
+      "subject": "Heart_of_Paris",
+      "predicate": "altLabel",
+      "object": "\"Coeur de Paris\"",
+      "subject_uri": "http://example.org/entity/Heart_of_Paris",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Coeur de Paris\""
+    },
+    {
+      "subject": "Padithal_Mattum_Podhuma",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Padithal_Mattum_Podhuma",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Padithal_Mattum_Podhuma",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Padithal_Mattum_Podhuma",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Padithal_Mattum_Podhuma",
+      "predicate": "label",
+      "object": "\"Padithal Mattum Podhuma\"",
+      "subject_uri": "http://example.org/entity/Padithal_Mattum_Podhuma",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Padithal Mattum Podhuma\""
+    },
+    {
+      "subject": "Padithal_Mattum_Podhuma",
+      "predicate": "altLabel",
+      "object": "\"Padithaal Mattum Podhuma\"",
+      "subject_uri": "http://example.org/entity/Padithal_Mattum_Podhuma",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Padithaal Mattum Podhuma\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 2,
+    "false_positives": 8,
+    "false_negatives": 0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "f1": 0.33333333333333337
+  },
+  "stage": "pre_inference"
+}

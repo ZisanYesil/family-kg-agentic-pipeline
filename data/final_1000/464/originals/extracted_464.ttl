@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:supercut_song a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Supercut" ;
+    onto:hasPerformer data:lorde_person .
+
+data:lorde_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lorde" ;
+    onto:hasBirthPlace data:takapuna_place ;
+    skos:altLabel "Ella Marija Lani Yelich-O'Connor" .
+
+data:takapuna_place a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Takapuna" .
+

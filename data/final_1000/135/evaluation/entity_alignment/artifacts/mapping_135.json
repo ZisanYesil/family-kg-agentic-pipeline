@@ -1,0 +1,175 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/135/originals/extracted_135.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/135/ground_truth_135.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/chimalpopoca": "http://example.org/entity/Chimalpopoca",
+    "http://example.org/extracted/tlilpotoncatzin": "http://example.org/entity/Tlilpotoncatzin",
+    "http://example.org/extracted/tlacaelel": "http://example.org/entity/Tlacaelel"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/chimalpopoca",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chimalpopoca",
+          "source": "label"
+        }
+      ],
+      "context": "Chimalpopoca. inverse has brother: Tlacaelel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chimalpopoca",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chimalpopoca",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chimalpopoca",
+        "extracted_source": "label",
+        "ground_truth_text": "Chimalpopoca",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9895673394203186,
+      "graph_score": 0.4947836697101593,
+      "margin": 0.6043932437896729
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tlacaelel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tlacaelel",
+          "source": "label"
+        }
+      ],
+      "context": "Tlacaelel. has brother: Chimalpopoca. has brother: Moctezuma I. inverse has father: Tlilpotonqui.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tlacaelel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tlacaelel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tlacaelel",
+        "extracted_source": "label",
+        "ground_truth_text": "Tlacaelel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9456905126571655,
+      "graph_score": 0.6395119428634644,
+      "margin": 0.4331315755844116
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tlilpotoncatzin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tlilpotonqui",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tlilpotoncatzin",
+          "source": "label"
+        }
+      ],
+      "context": "Tlilpotonqui. has father: Tlacaelel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tlilpotoncatzin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tlilpotoncatzin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tlilpotoncatzin",
+        "extracted_source": "label",
+        "ground_truth_text": "Tlilpotoncatzin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9798969626426697,
+      "graph_score": 0.9899485111236572,
+      "margin": 0.4292849898338318
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/moctezuma_i",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Moctezuma I",
+          "source": "label"
+        }
+      ],
+      "context": "Moctezuma I. inverse has brother: Tlacaelel.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

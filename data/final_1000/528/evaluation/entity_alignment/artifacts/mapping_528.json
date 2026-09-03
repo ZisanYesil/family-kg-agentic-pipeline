@@ -1,0 +1,159 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/528/originals/extracted_528.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/528/ground_truth_528.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sir_walter_acton_2nd_baronet": "http://example.org/entity/Sir_Walter_Acton_2nd_Baronet",
+    "http://example.org/extracted/sir_edward_acton_3rd_baronet": "http://example.org/entity/Sir_Edward_Acton_3rd_Baronet",
+    "http://example.org/extracted/united_kingdom": "http://example.org/entity/English"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/sir_edward_acton_3rd_baronet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sir Edward Acton, 3rd Baronet",
+          "source": "label"
+        },
+        {
+          "text": "sir edward acton 3rd baronet",
+          "source": "uri"
+        }
+      ],
+      "context": "Sir Edward Acton, 3rd Baronet. has father: Sir Walter Acton, 2nd Baronet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sir_Edward_Acton_3rd_Baronet",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sir Edward Acton 3rd Baronet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sir Edward Acton, 3rd Baronet",
+        "extracted_source": "label",
+        "ground_truth_text": "Sir Edward Acton 3rd Baronet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9917317628860474,
+      "string_score": 0.99210524559021,
+      "independent_identity_support": true,
+      "context_score": 0.9953743815422058,
+      "graph_score": 0.9976872205734253,
+      "margin": 0.2608731985092163
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sir_walter_acton_2nd_baronet",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sir Walter Acton, 2nd Baronet",
+          "source": "label"
+        },
+        {
+          "text": "sir walter acton 2nd baronet",
+          "source": "uri"
+        }
+      ],
+      "context": "Sir Walter Acton, 2nd Baronet. has nationality: English. inverse has father: Sir Edward Acton, 3rd Baronet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sir_Walter_Acton_2nd_Baronet",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sir Walter Acton 2nd Baronet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sir Walter Acton, 2nd Baronet",
+        "extracted_source": "label",
+        "ground_truth_text": "Sir Walter Acton 2nd Baronet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9930483102798462,
+      "string_score": 0.99210524559021,
+      "independent_identity_support": true,
+      "context_score": 0.9655790328979492,
+      "graph_score": 0.7327895164489746,
+      "margin": 0.26624393463134766
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "English",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        }
+      ],
+      "context": "English. inverse has nationality: Sir Walter Acton, 2nd Baronet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/English",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "English",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "English",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "English",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8708064556121826,
+      "graph_score": 0.4354032278060913,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Sir_Walter_Acton"
+  ]
+}

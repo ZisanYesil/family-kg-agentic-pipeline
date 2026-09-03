@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/169/originals/extracted_169.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/169/ground_truth_169.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/catherine_charlotte_de_gramont": "http://example.org/entity/Catherine_Charlotte_de_Gramont",
+    "http://example.org/extracted/louis_i_prince_of_monaco": "http://example.org/entity/Louis_I_Prince_of_Monaco"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/catherine_charlotte_de_gramont",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Catherine Charlotte de Gramont",
+          "source": "label"
+        }
+      ],
+      "context": "Catherine Charlotte de Gramont. has death date: 1678-06-04. inverse has spouse: Louis I, Prince of Monaco.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Catherine_Charlotte_de_Gramont",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Catherine Charlotte de Gramont",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Catherine Charlotte de Gramont",
+        "extracted_source": "label",
+        "ground_truth_text": "Catherine Charlotte de Gramont",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9983952641487122,
+      "graph_score": 0.9991976022720337,
+      "margin": 0.685472309589386
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louis_i_prince_of_monaco",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis I, Prince of Monaco",
+          "source": "label"
+        },
+        {
+          "text": "louis i prince of monaco",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis I, Prince of Monaco. has spouse: Catherine Charlotte de Gramont.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Louis_I_Prince_of_Monaco",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Louis I Prince of Monaco",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Louis I, Prince of Monaco",
+        "extracted_source": "label",
+        "ground_truth_text": "Louis I Prince of Monaco",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9900697469711304,
+      "string_score": 0.9908163547515869,
+      "independent_identity_support": true,
+      "context_score": 0.9936835765838623,
+      "graph_score": 0.9968417882919312,
+      "margin": 0.6868027150630951
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

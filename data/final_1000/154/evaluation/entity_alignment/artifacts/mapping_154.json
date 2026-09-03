@@ -1,0 +1,163 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/154/originals/extracted_154.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/154/ground_truth_154.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_leona_lewis": "http://example.org/entity/Leona_Lewis"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_leona_lewis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Leona Louise Lewis",
+          "source": "altLabel"
+        },
+        {
+          "text": "Leona Lewis",
+          "source": "label"
+        },
+        {
+          "text": "person leona lewis",
+          "source": "uri"
+        }
+      ],
+      "context": "Leona Louise Lewis. has birth place: Islington. inverse has performer: Don't Let Me Down (Leona Lewis song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Leona_Lewis",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Leona Lewis",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Leona Lewis",
+        "extracted_source": "label",
+        "ground_truth_text": "Leona Lewis",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9115424156188965,
+      "graph_score": 0.9115424156188965,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_dont_let_me_down_leona_lewis",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Don't Let Me Down (Leona Lewis song)",
+          "source": "label"
+        },
+        {
+          "text": "song dont let me down leona lewis",
+          "source": "uri"
+        }
+      ],
+      "context": "Don't Let Me Down (Leona Lewis song). has performer: Leona Louise Lewis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Don_t_Let_Me_Down",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Don t Let Me Down",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Don't Let Me Down (Leona Lewis song)",
+        "extracted_source": "label",
+        "ground_truth_text": "Don t Let Me Down",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7870216369628906,
+      "name_embedding_score": 0.7369030117988586,
+      "string_score": 0.7279481291770935,
+      "independent_identity_support": true,
+      "context_score": 0.8926651477813721,
+      "graph_score": 0.946332573890686,
+      "margin": 0.7870216369628906
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_islington",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Islington",
+          "source": "altLabel"
+        },
+        {
+          "text": "London Borough of Islington",
+          "source": "label"
+        },
+        {
+          "text": "place islington",
+          "source": "uri"
+        }
+      ],
+      "context": "Islington. inverse has birth place: Leona Louise Lewis.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/London",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "London",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "London Borough of Islington",
+        "extracted_source": "label",
+        "ground_truth_text": "London",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.723633885383606,
+      "name_embedding_score": 0.7072741389274597,
+      "string_score": 0.5261363387107849,
+      "independent_identity_support": false,
+      "context_score": 0.9077022075653076,
+      "graph_score": 0.9538511037826538,
+      "margin": 0.723633885383606
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

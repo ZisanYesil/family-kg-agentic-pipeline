@@ -1,0 +1,144 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/342/originals/extracted_342.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/342/ground_truth_342.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/_sheldon_adelson": "http://example.org/entity/Sheldon_Adelson",
+    "http://example.org/extracted/_miriam_adelson": "http://example.org/entity/Miriam_Adelson"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/_miriam_adelson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Miriam Adelson",
+          "source": "label"
+        }
+      ],
+      "context": "Miriam Adelson. has spouse: Sheldon Adelson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Miriam_Adelson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Miriam Adelson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Miriam Adelson",
+        "extracted_source": "label",
+        "ground_truth_text": "Miriam Adelson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4275984764099121
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_sheldon_adelson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sheldon Adelson",
+          "source": "label"
+        }
+      ],
+      "context": "Sheldon Adelson. has employer: Las Vegas Sands Corporation. inverse has spouse: Miriam Adelson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sheldon_Adelson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sheldon Adelson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sheldon Adelson",
+        "extracted_source": "label",
+        "ground_truth_text": "Sheldon Adelson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9866935610771179,
+      "graph_score": 0.9933468103408813,
+      "margin": 0.43116527795791626
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_las_vegas_sands_corporation",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Las Vegas Sands Corporation",
+          "source": "label"
+        }
+      ],
+      "context": "Las Vegas Sands Corporation. inverse has employer: Sheldon Adelson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Las_Vegas_Sands",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Las Vegas Sands",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Las Vegas Sands Corporation",
+        "extracted_source": "label",
+        "ground_truth_text": "Las Vegas Sands",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8783612251281738,
+      "name_embedding_score": 0.8607513904571533,
+      "string_score": 0.8089285492897034,
+      "independent_identity_support": true,
+      "context_score": 0.9660273790359497,
+      "graph_score": 0.9830136895179749,
+      "margin": 0.8783612251281738
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

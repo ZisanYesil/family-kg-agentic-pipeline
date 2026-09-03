@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/386/evaluation/entity_alignment/baseline_extracted_aligned_386.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/386/evaluation/entity_alignment/baseline_ground_truth_aligned_386.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Metropolitan_Police_Service",
+      "predicate": "hasCountry",
+      "object": "United_Kingdom",
+      "subject_uri": "http://example.org/entity/Metropolitan_Police_Service",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/United_Kingdom"
+    },
+    {
+      "subject": "The_Job",
+      "predicate": "hasPublisher",
+      "object": "Metropolitan_Police_Service",
+      "subject_uri": "http://example.org/entity/The_Job",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublisher",
+      "object_term": "http://example.org/entity/Metropolitan_Police_Service"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "The_Job",
+      "predicate": "hasPublisher",
+      "object": "square_one_publishing",
+      "subject_uri": "http://example.org/entity/The_Job",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublisher",
+      "object_term": "http://example.org/extracted/square_one_publishing"
+    },
+    {
+      "subject": "The_Job",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The_Job",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "The_Job",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Job",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Job",
+      "predicate": "label",
+      "object": "\"The Job\"",
+      "subject_uri": "http://example.org/entity/The_Job",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Job\""
+    },
+    {
+      "subject": "square_one_publishing",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/extracted/square_one_publishing",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "square_one_publishing",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/square_one_publishing",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "square_one_publishing",
+      "predicate": "label",
+      "object": "\"Square One Publishing\"",
+      "subject_uri": "http://example.org/extracted/square_one_publishing",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Square One Publishing\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 1,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 9,
+    "true_positives": 0,
+    "false_positives": 7,
+    "false_negatives": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "pre_inference"
+}

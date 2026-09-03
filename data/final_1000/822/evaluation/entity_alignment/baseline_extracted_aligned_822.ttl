@@ -1,0 +1,25 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Ang_Nan> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ang Nan" ;
+    onto:hasBirthDate "1654-01-01"^^xsd:date ;
+    onto:hasDeathDate "1691-01-01"^^xsd:date ;
+    onto:hasDeathPlace <http://example.org/entity/Srey_Santhor> ;
+    onto:hasSon <http://example.org/entity/Ang_Em> .
+
+<http://example.org/entity/Ang_Em> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ang Em" ;
+    onto:hasBirthDate "1674-01-01"^^xsd:date ;
+    onto:hasDeathDate "1731-01-01"^^xsd:date ;
+    skos:altLabel "Barom Reameathiptei" .
+
+<http://example.org/entity/Srey_Santhor> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Srey Santhor" .
+

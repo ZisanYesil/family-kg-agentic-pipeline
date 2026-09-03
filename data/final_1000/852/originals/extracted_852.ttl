@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:coulson_wallop a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Coulson Wallop" ;
+    onto:hasFather data:john_wallop_2nd_earl_of_portsmouth .
+
+data:john_wallop_2nd_earl_of_portsmouth a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Wallop, 2nd Earl of Portsmouth" ;
+    onto:hasEducatedAt data:oxford_university .
+
+data:oxford_university a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Oxford" .
+

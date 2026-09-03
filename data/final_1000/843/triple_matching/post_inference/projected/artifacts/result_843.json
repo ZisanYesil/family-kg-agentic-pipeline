@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/843/evaluation/entity_alignment/final_extracted_aligned_843.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/843/evaluation/entity_alignment/final_ground_truth_aligned_843.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "De_Dannan",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/De_Dannan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "De_Dannan",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/De_Dannan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Frankie_Gavin",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Frankie_Gavin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Frankie_Gavin",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Frankie_Gavin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "British",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/British",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "British",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/British",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "De_Dannan",
+      "predicate": "hasMember",
+      "object": "Frankie_Gavin",
+      "subject_uri": "http://example.org/entity/De_Dannan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasMember",
+      "object_term": "http://example.org/entity/Frankie_Gavin"
+    },
+    {
+      "subject": "Frankie_Gavin",
+      "predicate": "hasCountry",
+      "object": "British",
+      "subject_uri": "http://example.org/entity/Frankie_Gavin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/British"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "De_Dannan",
+      "predicate": "hasCountry",
+      "object": "ireland",
+      "subject_uri": "http://example.org/entity/De_Dannan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/ireland"
+    },
+    {
+      "subject": "De_Dannan",
+      "predicate": "hasFounder",
+      "object": "Frankie_Gavin",
+      "subject_uri": "http://example.org/entity/De_Dannan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/entity/Frankie_Gavin"
+    },
+    {
+      "subject": "ireland",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/ireland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "ireland",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/ireland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 12,
+    "true_positives": 4,
+    "false_positives": 4,
+    "false_negatives": 4,
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1": 0.5
+  },
+  "stage": "post_inference"
+}

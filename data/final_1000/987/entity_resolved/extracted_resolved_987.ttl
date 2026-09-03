@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_glimpses_impressions a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Glimpses/Impressions" ;
+    onto:hasDirector data:person_jean_francois_pouliot .
+
+data:organization_cossette_communication_marketing a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Cossette Communication Marketing" ;
+    onto:hasMember data:person_jean_francois_pouliot .
+
+data:person_jean_francois_pouliot a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jean-François Pouliot" .
+

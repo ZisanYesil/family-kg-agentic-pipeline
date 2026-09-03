@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/The_Dressmaker_from_Paris> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Dressmaker from Paris" ;
+    onto:hasDirector <http://example.org/entity/Paul_Bern> .
+
+<http://example.org/entity/Jean_Harlow> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jean Harlow" .
+
+<http://example.org/entity/Paul_Bern> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Paul Bern" ;
+    onto:hasSpouse <http://example.org/entity/Jean_Harlow> .
+

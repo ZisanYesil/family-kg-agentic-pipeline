@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_company_in_love a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Company's in Love" ;
+    onto:hasDirector data:person_max_ophuls .
+
+data:film_punyakoti a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Punyakoti" ;
+    onto:hasDirector data:person_ravi_shankar_v .
+
+data:person_max_ophuls a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Max Ophüls" ;
+    onto:hasBirthDate "1902-05-06"^^xsd:date ;
+    onto:hasDeathDate "1957-03-26"^^xsd:date ;
+    skos:altLabel "Maximillian Oppenheimer" .
+
+data:person_ravi_shankar_v a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ravi Shankar V" .
+

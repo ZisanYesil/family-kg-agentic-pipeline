@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1002
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:Condemned_Women ex:hasDirector inst:Lew_Landers .  # director
+inst:Faces_in_the_Dark ex:hasDirector inst:David_Eady .  # director
+inst:Lew_Landers ex:hasDeathDate "1962-12-16"^^xsd:date .  # date of death -> "December 16, 1962"
+inst:David_Eady_film_director ex:hasDeathDate "2009-04-05"^^xsd:date .  # date of death -> "April 5, 2009"

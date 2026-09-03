@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Giuseppe_Frezzolini> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Giuseppe Frezzolini" ;
+    onto:hasChild <http://example.org/entity/Erminia_Frezzolini> .
+
+<http://example.org/entity/Antonio_Poggi> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Antonio Poggi" .
+
+<http://example.org/entity/Erminia_Frezzolini> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Erminia Frezzolini" ;
+    onto:hasSpouse <http://example.org/entity/Antonio_Poggi> .
+

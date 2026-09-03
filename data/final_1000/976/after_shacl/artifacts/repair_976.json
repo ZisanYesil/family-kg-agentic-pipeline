@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "c8caa87b8b9976c452acd1188d4e0c80fdf3d2a5bb9688b4d056f4eba8c2fa95",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/charles_prince_nassau_usingen_1712",
+        "path": null,
+        "value": "http://example.org/extracted/charles_emile_troisier_1844",
+        "expected": null,
+        "message": "Relation phrase 'is older than' from http://example.org/extracted/charles_prince_nassau_usingen_1712 to http://example.org/extracted/charles_emile_troisier_1844 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "c8caa87b8b9976c452acd1188d4e0c80fdf3d2a5bb9688b4d056f4eba8c2fa95",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/charles_prince_nassau_usingen_1712",
+            "path": null,
+            "value": "http://example.org/extracted/charles_emile_troisier_1844",
+            "expected": null,
+            "message": "Relation phrase 'is older than' from http://example.org/extracted/charles_prince_nassau_usingen_1712 to http://example.org/extracted/charles_emile_troisier_1844 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 8,
+      "feedback_reasoning": "The violation concerns an unmapped_relation with the phrase “is older than” between the two individuals. The ontology does not define any predicate whose documented meaning corresponds to an age‑comparison relationship (e.g., “isOlderThan”, “hasEarlierBirthDate”, etc.). Domain and range compatibility alone is insufficient, and no suitable predicate can be selected without inventing a new property, which is disallowed. Consequently the violation cannot be safely repaired.",
+      "repairs": [
+        {
+          "violation_fingerprint": "e1b4682c61ac2cf09634a2a6cd0912126f0f34adb91448b691083acf00cfd23d",
+          "reasoning": "No ontology predicate matches the semantics of the phrase “is older than”. Adding or substituting a predicate would be speculative and not grounded in the ontology or source text.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "e1b4682c61ac2cf09634a2a6cd0912126f0f34adb91448b691083acf00cfd23d"
+      ],
+      "triples_after": 8,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "c8caa87b8b9976c452acd1188d4e0c80fdf3d2a5bb9688b4d056f4eba8c2fa95",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/charles_prince_nassau_usingen_1712",
+            "path": null,
+            "value": "http://example.org/extracted/charles_emile_troisier_1844",
+            "expected": null,
+            "message": "Relation phrase 'is older than' from http://example.org/extracted/charles_prince_nassau_usingen_1712 to http://example.org/extracted/charles_emile_troisier_1844 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "c8caa87b8b9976c452acd1188d4e0c80fdf3d2a5bb9688b4d056f4eba8c2fa95",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/charles_prince_nassau_usingen_1712",
+        "path": null,
+        "value": "http://example.org/extracted/charles_emile_troisier_1844",
+        "expected": null,
+        "message": "Relation phrase 'is older than' from http://example.org/extracted/charles_prince_nassau_usingen_1712 to http://example.org/extracted/charles_emile_troisier_1844 was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

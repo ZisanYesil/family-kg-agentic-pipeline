@@ -1,0 +1,113 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/767/originals/extracted_767.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/767/ground_truth_767.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_house_on_the_edge_of_the_park": "http://example.org/entity/The_House_on_the_Edge_of_the_Park"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_house_on_the_edge_of_the_park",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The House on the Edge of the Park",
+          "source": "label"
+        },
+        {
+          "text": "film house on the edge of the park",
+          "source": "uri"
+        }
+      ],
+      "context": "The House on the Edge of the Park. has publication date: 1980.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_House_on_the_Edge_of_the_Park",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The House on the Edge of the Park",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The House on the Edge of the Park",
+        "extracted_source": "label",
+        "ground_truth_text": "The House on the Edge of the Park",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.847796767950058
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_goonga_pehalwan",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Goonga Pehalwan",
+          "source": "label"
+        },
+        {
+          "text": "film goonga pehalwan",
+          "source": "uri"
+        }
+      ],
+      "context": "Goonga Pehalwan. has publication date: 2013.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Goonga_Pehelwan",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Goonga Pehelwan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Goonga Pehalwan",
+        "extracted_source": "label",
+        "ground_truth_text": "Goonga Pehelwan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8987470865249634,
+      "name_embedding_score": 0.9778984785079956,
+      "string_score": 0.653333306312561,
+      "independent_identity_support": false,
+      "context_score": 0.9858580827713013,
+      "graph_score": 0.9858580827713013,
+      "margin": 0.7253340035676956
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

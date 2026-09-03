@@ -1,0 +1,119 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/881/originals/extracted_881.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/881/ground_truth_881.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/auguste_theodore_paul_de_broglie": "http://example.org/entity/Auguste_Théodore_Paul_de_Broglie"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/auguste_theodore_paul_de_broglie",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Abbé Auguste-Théodore-Paul de Broglie",
+          "source": "altLabel"
+        },
+        {
+          "text": "Auguste-Théodore-Paul de Broglie",
+          "source": "label"
+        },
+        {
+          "text": "auguste theodore paul de broglie",
+          "source": "uri"
+        }
+      ],
+      "context": "Abbé Auguste-Théodore-Paul de Broglie. has father: Achille-Victor, Duc de Broglie.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Auguste_Théodore_Paul_de_Broglie",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Auguste Théodore Paul de Broglie",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Auguste-Théodore-Paul de Broglie",
+        "extracted_source": "label",
+        "ground_truth_text": "Auguste Théodore Paul de Broglie",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.955814778804779,
+      "string_score": 0.971875011920929,
+      "independent_identity_support": true,
+      "context_score": 0.6252865195274353,
+      "graph_score": 0.6252865195274353,
+      "margin": 0.33144325017929077
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/achille_victor_duke_de_broglie",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Achille-Victor, Duc de Broglie",
+          "source": "label"
+        },
+        {
+          "text": "achille victor duke de broglie",
+          "source": "uri"
+        }
+      ],
+      "context": "Achille-Victor, Duc de Broglie. inverse has father: Abbé Auguste-Théodore-Paul de Broglie.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Victor_de_Broglie",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Victor de Broglie",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Achille-Victor, Duc de Broglie",
+        "extracted_source": "label",
+        "ground_truth_text": "Victor de Broglie",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6724681258201599,
+      "name_embedding_score": 0.8033645153045654,
+      "string_score": 0.7755318880081177,
+      "independent_identity_support": true,
+      "context_score": 0.6152234673500061,
+      "graph_score": 0.30761173367500305,
+      "margin": 0.09741771221160889
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Albertine_baroness_Staël_von_Holstein"
+  ]
+}

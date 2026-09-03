@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/292/evaluation/entity_alignment/baseline_extracted_aligned_292.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/292/evaluation/entity_alignment/baseline_ground_truth_aligned_292.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Ginevra_d_Este",
+      "predicate": "hasParent",
+      "object": "Niccolò_III_d_Este",
+      "subject_uri": "http://example.org/entity/Ginevra_d_Este",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Niccolò_III_d_Este"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Niccolò_III_d_Este",
+      "predicate": "hasBirthPlace",
+      "object": "Ferrara",
+      "subject_uri": "http://example.org/entity/Niccolò_III_d_Este",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Ferrara"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Ginevra_d_Este",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ginevra_d_Este",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Ginevra_d_Este",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ginevra_d_Este",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ginevra_d_Este",
+      "predicate": "label",
+      "object": "\"Ginevra d'Este\"",
+      "subject_uri": "http://example.org/entity/Ginevra_d_Este",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ginevra d'Este\""
+    },
+    {
+      "subject": "Ginevra_d_Este",
+      "predicate": "altLabel",
+      "object": "\"Ginevra d'Este\"",
+      "subject_uri": "http://example.org/entity/Ginevra_d_Este",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Ginevra d'Este\""
+    },
+    {
+      "subject": "Niccolò_III_d_Este",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Niccolò_III_d_Este",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Niccolò_III_d_Este",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Niccolò_III_d_Este",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Niccolò_III_d_Este",
+      "predicate": "label",
+      "object": "\"Niccolò III d'Este\"",
+      "subject_uri": "http://example.org/entity/Niccolò_III_d_Este",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Niccolò III d'Este\""
+    },
+    {
+      "subject": "Niccolò_III_d_Este",
+      "predicate": "altLabel",
+      "object": "\"Niccolò III d'Este\"",
+      "subject_uri": "http://example.org/entity/Niccolò_III_d_Este",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Niccolò III d'Este\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 1,
+    "false_positives": 8,
+    "false_negatives": 1,
+    "precision": 0.1111111111111111,
+    "recall": 0.5,
+    "f1": 0.1818181818181818
+  },
+  "stage": "pre_inference"
+}

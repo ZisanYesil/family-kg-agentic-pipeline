@@ -1,0 +1,112 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/290/originals/extracted_290.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/290/ground_truth_290.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/davina": "http://example.org/entity/Davina",
+    "http://example.org/extracted/come_over_to_my_place": "http://example.org/entity/Come_Over_to_My_Place"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/come_over_to_my_place",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Come Over To My Place",
+          "source": "label"
+        }
+      ],
+      "context": "Come Over To My Place. has performer: Davina Bussey.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Come_Over_to_My_Place",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Come Over to My Place",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Come Over To My Place",
+        "extracted_source": "label",
+        "ground_truth_text": "Come Over to My Place",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9989703297615051,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.86518394947052,
+      "graph_score": 0.93259197473526,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/davina",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Davina Bussey",
+          "source": "altLabel"
+        },
+        {
+          "text": "Davina",
+          "source": "label"
+        }
+      ],
+      "context": "Davina Bussey. inverse has performer: Come Over To My Place.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Davina",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Davina",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Davina",
+        "extracted_source": "label",
+        "ground_truth_text": "Davina",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7639102935791016,
+      "graph_score": 0.8819551467895508,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Detroit"
+  ]
+}

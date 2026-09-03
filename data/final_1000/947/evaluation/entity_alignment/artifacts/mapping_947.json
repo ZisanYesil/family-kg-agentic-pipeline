@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/947/originals/extracted_947.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/947/ground_truth_947.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_gianfranco_parolini": "http://example.org/entity/Gianfranco_Parolini",
+    "http://example.org/extracted/place_rome_italy": "http://example.org/entity/Rome",
+    "http://example.org/extracted/film_gods_gun": "http://example.org/entity/God_s_Gun"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_gods_gun",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "God's Gun",
+          "source": "label"
+        },
+        {
+          "text": "film gods gun",
+          "source": "uri"
+        }
+      ],
+      "context": "God's Gun. has director: Frank Kramer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/God_s_Gun",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "God s Gun",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "God's Gun",
+        "extracted_source": "label",
+        "ground_truth_text": "God s Gun",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9792322516441345,
+      "string_score": 0.949999988079071,
+      "independent_identity_support": true,
+      "context_score": 0.6231023669242859,
+      "graph_score": 0.8115512132644653,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_gianfranco_parolini",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Frank Kramer",
+          "source": "altLabel"
+        },
+        {
+          "text": "Gianfranco Parolini",
+          "source": "label"
+        },
+        {
+          "text": "person gianfranco parolini",
+          "source": "uri"
+        }
+      ],
+      "context": "Frank Kramer. has death place: Rome, Italy. inverse has director: God's Gun.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gianfranco_Parolini",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gianfranco Parolini",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gianfranco Parolini",
+        "extracted_source": "label",
+        "ground_truth_text": "Gianfranco Parolini",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.763778030872345,
+      "graph_score": 0.8818889856338501,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_rome_italy",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rome, Italy",
+          "source": "altLabel"
+        },
+        {
+          "text": "Rome",
+          "source": "label"
+        },
+        {
+          "text": "place rome italy",
+          "source": "uri"
+        }
+      ],
+      "context": "Rome, Italy. inverse has death place: Frank Kramer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rome",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rome",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rome",
+        "extracted_source": "label",
+        "ground_truth_text": "Rome",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7588183283805847,
+      "graph_score": 0.8794091939926147,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

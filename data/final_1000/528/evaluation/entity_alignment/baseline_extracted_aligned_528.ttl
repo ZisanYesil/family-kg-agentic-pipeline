@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Sir_Edward_Acton_3rd_Baronet> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sir Edward Acton, 3rd Baronet" ;
+    onto:hasFather <http://example.org/entity/Sir_Walter_Acton_2nd_Baronet> .
+
+<http://example.org/entity/English> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "English" .
+
+<http://example.org/entity/Sir_Walter_Acton_2nd_Baronet> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sir Walter Acton, 2nd Baronet" ;
+    onto:hasNationality <http://example.org/entity/English> .
+

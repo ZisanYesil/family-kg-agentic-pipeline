@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_crime_doctors_courage a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Crime Doctor's Courage" ;
+    onto:hasDirector data:person_george_sherman .
+
+data:film_vasantha_sena_1967 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Vasantha Sena (1967 film)" ;
+    onto:hasDirector data:person_b_s_ranga .
+
+data:person_b_s_ranga a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "B. S. Ranga" ;
+    onto:hasDeathDate "2010-12-12"^^xsd:date .
+
+data:person_george_sherman a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George Sherman" ;
+    onto:hasDeathDate "1991-03-15"^^xsd:date .
+

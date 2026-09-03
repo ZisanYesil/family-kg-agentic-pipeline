@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_diary_evelyn_lau a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Diary Of Evelyn Lau" ;
+    onto:hasDirector data:person_sturla_gunnarsson .
+
+data:org_national_film_board a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "National Film Board" .
+
+data:person_sturla_gunnarsson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sturla Gunnarsson" ;
+    onto:hasEmployer data:org_national_film_board .
+

@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/346/evaluation/entity_alignment/baseline_extracted_aligned_346.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/346/evaluation/entity_alignment/baseline_ground_truth_aligned_346.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Hubert_Mordek",
+      "predicate": "hasBirthDate",
+      "object": "\"1939-05-08\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Hubert_Mordek",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1939-05-08\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Hubert_Mordek",
+      "predicate": "hasDeathDate",
+      "object": "\"2006-03-17\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Hubert_Mordek",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"2006-03-17\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Levon_Ashotovich_Grigorian",
+      "predicate": "hasBirthDate",
+      "object": "\"1947-09-07\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Levon_Ashotovich_Grigorian",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1947-09-07\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Levon_Ashotovich_Grigorian",
+      "predicate": "hasDeathDate",
+      "object": "\"1975-11-29\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Levon_Ashotovich_Grigorian",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1975-11-29\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Hubert_Mordek",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Hubert_Mordek",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Hubert_Mordek",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hubert_Mordek",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hubert_Mordek",
+      "predicate": "label",
+      "object": "\"Hubert Mordek\"",
+      "subject_uri": "http://example.org/entity/Hubert_Mordek",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hubert Mordek\""
+    },
+    {
+      "subject": "Levon_Ashotovich_Grigorian",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Levon_Ashotovich_Grigorian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Levon_Ashotovich_Grigorian",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Levon_Ashotovich_Grigorian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Levon_Ashotovich_Grigorian",
+      "predicate": "label",
+      "object": "\"Levon Ashotovich Grigorian\"",
+      "subject_uri": "http://example.org/entity/Levon_Ashotovich_Grigorian",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Levon Ashotovich Grigorian\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 10,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715
+  },
+  "stage": "pre_inference"
+}

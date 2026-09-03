@@ -1,0 +1,115 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/711/originals/extracted_711.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/711/ground_truth_711.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/philip_carteret_frs": "http://example.org/entity/Sir_Philip_Carteret_FRS"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/philip_carteret_frs",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Philip Carteret",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sir Philip Carteret, FRS",
+          "source": "label"
+        },
+        {
+          "text": "philip carteret frs",
+          "source": "uri"
+        }
+      ],
+      "context": "Philip Carteret. has spouse: Jemima Montagu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sir_Philip_Carteret_FRS",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sir Philip Carteret FRS",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sir Philip Carteret, FRS",
+        "extracted_source": "label",
+        "ground_truth_text": "Sir Philip Carteret FRS",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9906883835792542,
+      "string_score": 0.9904255270957947,
+      "independent_identity_support": true,
+      "context_score": 0.6083789467811584,
+      "graph_score": 0.6083789467811584,
+      "margin": 0.4016917943954468
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jemima_montagu",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jemima Montagu",
+          "source": "label"
+        }
+      ],
+      "context": "Jemima Montagu. inverse has spouse: Philip Carteret.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lady_Jemima_Montagu",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lady Jemima Montagu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jemima Montagu",
+        "extracted_source": "label",
+        "ground_truth_text": "Lady Jemima Montagu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7705686092376709,
+      "name_embedding_score": 0.9105295538902283,
+      "string_score": 0.8484848737716675,
+      "independent_identity_support": true,
+      "context_score": 0.8254607915878296,
+      "graph_score": 0.4127303957939148,
+      "margin": 0.4747658669948578
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/George_Carteret_1st_Baron_Carteret"
+  ]
+}

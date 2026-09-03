@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/510/originals/extracted_510.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/510/ground_truth_510.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/james_henderson": "http://example.org/entity/James_Henry_Dickey_Henderson",
+    "http://example.org/extracted/ant_jobert_lamballe": "http://example.org/entity/Antoine_Joseph_Jobert_de_Lamballe"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ant_jobert_lamballe",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Antoine Joseph Jobert de Lamballe",
+          "source": "label"
+        },
+        {
+          "text": "ant jobert lamballe",
+          "source": "uri"
+        }
+      ],
+      "context": "Antoine Joseph Jobert de Lamballe. has birth date: 1799-12-17. has death date: 1867-04-19.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Antoine_Joseph_Jobert_de_Lamballe",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Antoine Joseph Jobert de Lamballe",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Antoine Joseph Jobert de Lamballe",
+        "extracted_source": "label",
+        "ground_truth_text": "Antoine Joseph Jobert de Lamballe",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.596735805273056
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/james_henderson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Henry Dickey Henderson",
+          "source": "label"
+        },
+        {
+          "text": "james henderson",
+          "source": "uri"
+        }
+      ],
+      "context": "James Henry Dickey Henderson. has birth date: 1810-07-23. has death date: 1885-12-13.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_Henry_Dickey_Henderson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James Henry Dickey Henderson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James Henry Dickey Henderson",
+        "extracted_source": "label",
+        "ground_truth_text": "James Henry Dickey Henderson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5566345155239105
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

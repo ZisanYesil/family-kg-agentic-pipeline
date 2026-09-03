@@ -1,0 +1,24 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:A_Gathering_of_Eagles a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Delbert_Mann ;
+    ex:hasDirector entity:Delbert_Mann .
+
+entity:September_Affair a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:William_Dieterle ;
+    ex:hasDirector entity:William_Dieterle .
+
+entity:Delbert_Mann a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "2007-11-11"^^xsd:date .
+
+entity:William_Dieterle a ex:Agent,
+        ex:Person ;
+    ex:hasDeathDate "1972-12-09"^^xsd:date .
+

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/123/originals/extracted_123.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/123/ground_truth_123.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/song_dont_take_my_darling_boy_away": "http://example.org/entity/Don_t_Take_My_Darling_Boy_Away",
+    "http://example.org/extracted/person_albert_von_tilzer": "http://example.org/entity/Albert_Von_Tilzer"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_albert_von_tilzer",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Albert Von Tilzer",
+          "source": "label"
+        },
+        {
+          "text": "person albert von tilzer",
+          "source": "uri"
+        }
+      ],
+      "context": "Albert Von Tilzer. has birth date: 1878-03-29. inverse has composer: Don't Take My Darling Boy Away.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Albert_Von_Tilzer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Albert Von Tilzer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Albert Von Tilzer",
+        "extracted_source": "label",
+        "ground_truth_text": "Albert Von Tilzer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9860548377037048,
+      "graph_score": 0.9930274486541748,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_dont_take_my_darling_boy_away",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Don't Take My Darling Boy Away",
+          "source": "label"
+        },
+        {
+          "text": "song dont take my darling boy away",
+          "source": "uri"
+        }
+      ],
+      "context": "Don't Take My Darling Boy Away. has composer: Albert Von Tilzer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Don_t_Take_My_Darling_Boy_Away",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Don t Take My Darling Boy Away",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Don't Take My Darling Boy Away",
+        "extracted_source": "label",
+        "ground_truth_text": "Don t Take My Darling Boy Away",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9345447421073914,
+      "string_score": 0.9850000143051147,
+      "independent_identity_support": true,
+      "context_score": 0.968384861946106,
+      "graph_score": 0.984192430973053,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

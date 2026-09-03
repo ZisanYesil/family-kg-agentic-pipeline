@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/187/originals/extracted_187.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/187/ground_truth_187.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ko_tun_hwa": "http://example.org/entity/Ko_Tun_hwa",
+    "http://example.org/extracted/bruce_cummins": "http://example.org/entity/Bruce_Cummins"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bruce_cummins",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bruce Cummins",
+          "source": "label"
+        }
+      ],
+      "context": "Bruce Cummins. has birth date: 1929-11-17. has death date: 2017-08-22.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bruce_Cummins",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bruce Cummins",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bruce Cummins",
+        "extracted_source": "label",
+        "ground_truth_text": "Bruce Cummins",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.7633917182683945
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ko_tun_hwa",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vice Admiral Ko Tun-hwa",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ko Tun-Hwa",
+          "source": "label"
+        },
+        {
+          "text": "ko tun hwa",
+          "source": "uri"
+        }
+      ],
+      "context": "Vice Admiral Ko Tun-hwa. has birth date: 1921-09-18. has death date: 2010-06-12.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ko_Tun_hwa",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ko Tun hwa",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ko Tun-Hwa",
+        "extracted_source": "label",
+        "ground_truth_text": "Ko Tun hwa",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9325083494186401,
+      "string_score": 0.9549999833106995,
+      "independent_identity_support": true,
+      "context_score": 0.8651360869407654,
+      "graph_score": 0.8651360869407654,
+      "margin": 0.722266286611557
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

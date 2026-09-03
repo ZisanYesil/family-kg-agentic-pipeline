@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/186/evaluation/entity_alignment/baseline_extracted_aligned_186.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/186/evaluation/entity_alignment/baseline_ground_truth_aligned_186.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "His_Name_Was_Holy_Ghost",
+      "predicate": "hasCountry",
+      "object": "Italian",
+      "subject_uri": "http://example.org/entity/His_Name_Was_Holy_Ghost",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Italian"
+    },
+    {
+      "subject": "The_Cop_in_Blue_Jeans",
+      "predicate": "hasCountry",
+      "object": "Italian",
+      "subject_uri": "http://example.org/entity/The_Cop_in_Blue_Jeans",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Italian"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "His_Name_Was_Holy_Ghost",
+      "predicate": "hasCountry",
+      "object": "Spanish",
+      "subject_uri": "http://example.org/entity/His_Name_Was_Holy_Ghost",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Spanish"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "His_Name_Was_Holy_Ghost",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/His_Name_Was_Holy_Ghost",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "His_Name_Was_Holy_Ghost",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/His_Name_Was_Holy_Ghost",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "His_Name_Was_Holy_Ghost",
+      "predicate": "label",
+      "object": "\"His Name Was Holy Ghost\"",
+      "subject_uri": "http://example.org/entity/His_Name_Was_Holy_Ghost",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"His Name Was Holy Ghost\""
+    },
+    {
+      "subject": "Italian",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Italian",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Italian",
+      "predicate": "label",
+      "object": "\"Italy\"",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Italy\""
+    },
+    {
+      "subject": "Italian",
+      "predicate": "altLabel",
+      "object": "\"Italian\"",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Italian\""
+    },
+    {
+      "subject": "The_Cop_in_Blue_Jeans",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Cop_in_Blue_Jeans",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Cop_in_Blue_Jeans",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Cop_in_Blue_Jeans",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Cop_in_Blue_Jeans",
+      "predicate": "label",
+      "object": "\"The Cop In Blue Jeans\"",
+      "subject_uri": "http://example.org/entity/The_Cop_in_Blue_Jeans",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Cop In Blue Jeans\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 3,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.16666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.26666666666666666
+  },
+  "stage": "pre_inference"
+}

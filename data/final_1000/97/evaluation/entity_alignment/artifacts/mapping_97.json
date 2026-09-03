@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/97/originals/extracted_97.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/97/ground_truth_97.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/betty_lago": "http://example.org/entity/Betty_Lago",
+    "http://example.org/extracted/rio_de_janeiro": "http://example.org/entity/Rio_de_Janeiro",
+    "http://example.org/extracted/eduardo_conde": "http://example.org/entity/Eduardo_Conde"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/betty_lago",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Elizabeth Lago Netto",
+          "source": "altLabel"
+        },
+        {
+          "text": "Betty Lago",
+          "source": "label"
+        }
+      ],
+      "context": "Elizabeth Lago Netto. has birth place: Rio de Janeiro. inverse has spouse: Eduardo Conde.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Betty_Lago",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Betty Lago",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Betty Lago",
+        "extracted_source": "label",
+        "ground_truth_text": "Betty Lago",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.881457507610321,
+      "graph_score": 0.9407287836074829,
+      "margin": 0.6978156864643097
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/eduardo_conde",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eduardo Conde",
+          "source": "label"
+        }
+      ],
+      "context": "Eduardo Conde. has spouse: Elizabeth Lago Netto.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eduardo_Conde",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eduardo Conde",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eduardo Conde",
+        "extracted_source": "label",
+        "ground_truth_text": "Eduardo Conde",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8824794292449951,
+      "graph_score": 0.9412397146224976,
+      "margin": 0.7648484408855438
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/rio_de_janeiro",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rio de Janeiro",
+          "source": "label"
+        }
+      ],
+      "context": "Rio de Janeiro. inverse has birth place: Elizabeth Lago Netto.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rio_de_Janeiro",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rio de Janeiro",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rio de Janeiro",
+        "extracted_source": "label",
+        "ground_truth_text": "Rio de Janeiro",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8923014998435974,
+      "graph_score": 0.9461507797241211,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

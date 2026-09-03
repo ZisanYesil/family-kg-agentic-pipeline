@@ -1,0 +1,23 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Maude_Smith> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Maude Smith" ;
+    onto:hasSpouse <http://example.org/entity/John_A_McDougald> ;
+    skos:altLabel "Hedley Maude Smith",
+        "Maude Smith" .
+
+<http://example.org/entity/John_A_McDougald> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John A. McDougald" ;
+    onto:hasDeathPlace <http://example.org/entity/Palm_Beach> ;
+    skos:altLabel "Bud McDougald",
+        "John Angus \"Bud\" McDougald" .
+
+<http://example.org/entity/Palm_Beach> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Palm Beach, Florida" .
+

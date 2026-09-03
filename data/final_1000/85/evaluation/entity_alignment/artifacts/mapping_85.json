@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/85/originals/extracted_85.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/85/ground_truth_85.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/napoleon_alexandre_berthier": "http://example.org/entity/Napoléon_Alexandre_Berthier",
+    "http://example.org/extracted/duchess_maria_elisabeth_in_bavaria": "http://example.org/entity/Duchess_Maria_Elisabeth_in_Bavaria",
+    "http://example.org/extracted/alexandre_3rd_prince_of_wagram": "http://example.org/entity/Alexandre_Berthier_3rd_Prince_of_Wagram"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alexandre_3rd_prince_of_wagram",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Louis Philippe Marie \"Alexandre\" Berthier",
+          "source": "altLabel"
+        },
+        {
+          "text": "Alexandre Berthier, 3rd Prince of Wagram",
+          "source": "label"
+        },
+        {
+          "text": "alexandre 3rd prince of wagram",
+          "source": "uri"
+        }
+      ],
+      "context": "Louis Philippe Marie \"Alexandre\" Berthier. has father: Napoléon Alexandre Louis Joseph Berthier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alexandre_Berthier_3rd_Prince_of_Wagram",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alexandre Berthier 3rd Prince of Wagram",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alexandre Berthier, 3rd Prince of Wagram",
+        "extracted_source": "label",
+        "ground_truth_text": "Alexandre Berthier 3rd Prince of Wagram",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9923549890518188,
+      "string_score": 0.994303822517395,
+      "independent_identity_support": true,
+      "context_score": 0.74323970079422,
+      "graph_score": 0.8716198205947876,
+      "margin": 0.35971599817276
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/duchess_maria_elisabeth_in_bavaria",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Duchess Maria Elisabeth in Bavaria",
+          "source": "label"
+        }
+      ],
+      "context": "Duchess Maria Elisabeth in Bavaria. inverse has mother: Napoléon Alexandre Louis Joseph Berthier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Duchess_Maria_Elisabeth_in_Bavaria",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Duchess Maria Elisabeth in Bavaria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Duchess Maria Elisabeth in Bavaria",
+        "extracted_source": "label",
+        "ground_truth_text": "Duchess Maria Elisabeth in Bavaria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9834253191947937,
+      "graph_score": 0.9917126893997192,
+      "margin": 0.6662459373474121
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/napoleon_alexandre_berthier",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Napoléon Alexandre Louis Joseph Berthier",
+          "source": "altLabel"
+        },
+        {
+          "text": "Napoléon Alexandre Berthier",
+          "source": "label"
+        },
+        {
+          "text": "napoleon alexandre berthier",
+          "source": "uri"
+        }
+      ],
+      "context": "Napoléon Alexandre Louis Joseph Berthier. has mother: Duchess Maria Elisabeth in Bavaria. inverse has father: Louis Philippe Marie \"Alexandre\" Berthier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Napoléon_Alexandre_Berthier",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Napoléon Alexandre Berthier",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Napoléon Alexandre Berthier",
+        "extracted_source": "label",
+        "ground_truth_text": "Napoléon Alexandre Berthier",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8681926727294922,
+      "graph_score": 0.9340963363647461,
+      "margin": 0.4822879433631897
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

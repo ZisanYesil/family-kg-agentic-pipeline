@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/716/evaluation/entity_alignment/baseline_extracted_aligned_716.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/716/evaluation/entity_alignment/baseline_ground_truth_aligned_716.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "George_F_Sowers",
+      "predicate": "hasBirthDate",
+      "object": "\"1921-09-23\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/George_F_Sowers",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1921-09-23\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "George_F_Sowers",
+      "predicate": "hasDeathDate",
+      "object": "\"1996-10-23\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/George_F_Sowers",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1996-10-23\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Henrietta_Amelia_Leeson",
+      "predicate": "hasBirthDate",
+      "object": "\"1751\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Henrietta_Amelia_Leeson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1751\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Henrietta_Amelia_Leeson",
+      "predicate": "hasDeathDate",
+      "object": "\"1826\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Henrietta_Amelia_Leeson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1826\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "George_F_Sowers",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/George_F_Sowers",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "George_F_Sowers",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/George_F_Sowers",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "George_F_Sowers",
+      "predicate": "label",
+      "object": "\"George F. Sowers\"",
+      "subject_uri": "http://example.org/entity/George_F_Sowers",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"George F. Sowers\""
+    },
+    {
+      "subject": "Henrietta_Amelia_Leeson",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Henrietta_Amelia_Leeson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Henrietta_Amelia_Leeson",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Henrietta_Amelia_Leeson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Henrietta_Amelia_Leeson",
+      "predicate": "label",
+      "object": "\"Henrietta Amelia Leeson\"",
+      "subject_uri": "http://example.org/entity/Henrietta_Amelia_Leeson",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Henrietta Amelia Leeson\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 10,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/565/originals/extracted_565.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/565/ground_truth_565.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_evelyn_kunke": "http://example.org/entity/Evelyn_Künneke",
+    "http://example.org/extracted/person_eduard_kunke": "http://example.org/entity/Eduard_Künneke"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_eduard_kunke",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eduard Künneke",
+          "source": "label"
+        },
+        {
+          "text": "person eduard kunke",
+          "source": "uri"
+        }
+      ],
+      "context": "Eduard Künneke. has birth date: 1885-01-27. has daughter: Evelyn Künneke. has death date: 1953-10-27.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eduard_Künneke",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eduard Künneke",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eduard Künneke",
+        "extracted_source": "label",
+        "ground_truth_text": "Eduard Künneke",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.6468760967254639,
+      "graph_score": 0.32343804836273193,
+      "margin": 0.5493760704994202
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_evelyn_kunke",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Evelyn Künneke",
+          "source": "label"
+        },
+        {
+          "text": "person evelyn kunke",
+          "source": "uri"
+        }
+      ],
+      "context": "Evelyn Künneke. inverse has daughter: Eduard Künneke.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Evelyn_Künneke",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Evelyn Künneke",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Evelyn Künneke",
+        "extracted_source": "label",
+        "ground_truth_text": "Evelyn Künneke",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9698928594589233,
+      "graph_score": 0.48494642972946167,
+      "margin": 0.5316135287284851
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_cousin_from_nowhere_1953",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Cousin From Nowhere (1953 film)",
+          "source": "label"
+        },
+        {
+          "text": "film the cousin from nowhere 1953",
+          "source": "uri"
+        }
+      ],
+      "context": "The Cousin From Nowhere (1953 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Cousin_from_Nowhere",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Cousin from Nowhere",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Cousin From Nowhere (1953 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Cousin from Nowhere",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6804532408714294,
+      "name_embedding_score": 0.8238601684570312,
+      "string_score": 0.8235632181167603,
+      "independent_identity_support": true,
+      "context_score": 0.5010591745376587,
+      "graph_score": 0.25052958726882935,
+      "margin": 0.6804532408714294
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

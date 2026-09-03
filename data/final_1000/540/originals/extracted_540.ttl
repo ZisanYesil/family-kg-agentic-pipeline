@@ -1,0 +1,20 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_save_children a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Save The Children Fund Film" ;
+    onto:hasProducer data:person_tony_garnett .
+
+data:film_time_out_of_mind a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Time Out of Mind (2014 Film)" .
+
+data:person_tony_garnett a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tony Garnett" ;
+    onto:hasBirthDate "1936-04-03"^^xsd:date .
+

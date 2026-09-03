@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_levels_meek_mill a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Levels" ;
+    onto:hasPerformer data:person_meek_mill .
+
+data:person_meek_mill a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Meek Mill" ;
+    onto:hasDetentionPlace data:place_sc_chester ;
+    skos:altLabel "Robert Rihmeek Williams" .
+
+data:place_sc_chester a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "State Correctional Institution – Chester" .
+

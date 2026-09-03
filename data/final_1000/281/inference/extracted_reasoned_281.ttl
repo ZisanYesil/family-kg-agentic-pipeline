@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/charterhouse_school> a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+<http://example.org/extracted/lionel_giles> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/extracted/herbert_giles> ;
+    ex:hasParent <http://example.org/extracted/herbert_giles> .
+
+<http://example.org/extracted/herbert_giles> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/lionel_giles> ;
+    ex:hasEducatedAt <http://example.org/extracted/charterhouse_school> .
+

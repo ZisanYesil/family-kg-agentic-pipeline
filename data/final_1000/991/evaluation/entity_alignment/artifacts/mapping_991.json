@@ -1,0 +1,279 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/991/originals/extracted_991.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/991/ground_truth_991.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/director_clooney": "http://example.org/entity/George_Clooney",
+    "http://example.org/extracted/director_phillip_ko": "http://example.org/entity/Phillip_Ko",
+    "http://example.org/extracted/film_killers_romance": "http://example.org/entity/Killer_s_Romance",
+    "http://example.org/extracted/country_usa": "http://example.org/entity/American",
+    "http://example.org/extracted/film_ides_2011": "http://example.org/entity/The_Ides_of_March_2011_film"
+  },
+  "summary": {
+    "extracted_entities": 6,
+    "ground_truth_entities": 6,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_usa",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country usa",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has nationality: George Clooney.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9424113631248474,
+      "graph_score": 0.4712056815624237,
+      "margin": 0.7246493995189667
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/director_clooney",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George Clooney",
+          "source": "label"
+        },
+        {
+          "text": "director clooney",
+          "source": "uri"
+        }
+      ],
+      "context": "George Clooney. has nationality: American. inverse has director: The Ides of March (2011 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_Clooney",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George Clooney",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George Clooney",
+        "extracted_source": "label",
+        "ground_truth_text": "George Clooney",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9616554379463196,
+      "graph_score": 0.647494375705719,
+      "margin": 0.7400735914707184
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/director_phillip_ko",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Phillip Ko",
+          "source": "label"
+        },
+        {
+          "text": "director phillip ko",
+          "source": "uri"
+        }
+      ],
+      "context": "Phillip Ko. has nationality: Hong Kong. inverse has director: Killer's Romance.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Phillip_Ko",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Phillip Ko",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Phillip Ko",
+        "extracted_source": "label",
+        "ground_truth_text": "Phillip Ko",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8738037943840027,
+      "graph_score": 0.9369019269943237,
+      "margin": 0.7496373653411865
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_ides_2011",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Ides of March (2011 film)",
+          "source": "label"
+        },
+        {
+          "text": "film ides 2011",
+          "source": "uri"
+        }
+      ],
+      "context": "The Ides of March (2011 film). has director: George Clooney.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Ides_of_March_2011_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Ides of March 2011 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Ides of March (2011 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Ides of March 2011 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9190717339515686,
+      "string_score": 0.9839285612106323,
+      "independent_identity_support": true,
+      "context_score": 0.9703894853591919,
+      "graph_score": 0.985194742679596,
+      "margin": 0.711979478597641
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_killers_romance",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Killer's Romance",
+          "source": "label"
+        },
+        {
+          "text": "film killers romance",
+          "source": "uri"
+        }
+      ],
+      "context": "Killer's Romance. has director: Phillip Ko.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Killer_s_Romance",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Killer s Romance",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Killer's Romance",
+        "extracted_source": "label",
+        "ground_truth_text": "Killer s Romance",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9837703108787537,
+      "string_score": 0.971875011920929,
+      "independent_identity_support": true,
+      "context_score": 0.9930601716041565,
+      "graph_score": 0.9965300559997559,
+      "margin": 0.6273142099380493
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_hongkong",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hong Kong",
+          "source": "label"
+        },
+        {
+          "text": "country hongkong",
+          "source": "uri"
+        }
+      ],
+      "context": "Hong Kong. inverse has nationality: Phillip Ko.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/China"
+  ]
+}

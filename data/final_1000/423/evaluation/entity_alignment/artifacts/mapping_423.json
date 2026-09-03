@@ -1,0 +1,168 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/423/originals/extracted_423.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/423/ground_truth_423.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_school_in_the_mailbox": "http://example.org/entity/School_in_the_Mailbox",
+    "http://example.org/extracted/person_stanley_hawes": "http://example.org/entity/Stanley_Hawes"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_school_in_the_mailbox",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "School in the Mailbox",
+          "source": "label"
+        },
+        {
+          "text": "film school in the mailbox",
+          "source": "uri"
+        }
+      ],
+      "context": "School in the Mailbox. has director: Stanley Gilbert Hawes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/School_in_the_Mailbox",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "School in the Mailbox",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "School in the Mailbox",
+        "extracted_source": "label",
+        "ground_truth_text": "School in the Mailbox",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9635246396064758,
+      "graph_score": 0.9817622900009155,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_stanley_hawes",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stanley Gilbert Hawes",
+          "source": "altLabel"
+        },
+        {
+          "text": "Stanley Hawes",
+          "source": "label"
+        },
+        {
+          "text": "person stanley hawes",
+          "source": "uri"
+        }
+      ],
+      "context": "Stanley Gilbert Hawes. has employer: Australian Government's filmmaking body. inverse has director: School in the Mailbox.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stanley_Hawes",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stanley Hawes",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stanley Hawes",
+        "extracted_source": "label",
+        "ground_truth_text": "Stanley Hawes",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8421729803085327,
+      "graph_score": 0.9210864901542664,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/org_australian_national_film_board",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Australian Government's filmmaking body",
+          "source": "altLabel"
+        },
+        {
+          "text": "Commonwealth Film Unit",
+          "source": "altLabel"
+        },
+        {
+          "text": "Australian National Film Board",
+          "source": "label"
+        },
+        {
+          "text": "org australian national film board",
+          "source": "uri"
+        }
+      ],
+      "context": "Australian Government's filmmaking body. inverse has employer: Stanley Gilbert Hawes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/National_Film_Board",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "National Film Board",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "org australian national film board",
+        "extracted_source": "uri",
+        "ground_truth_text": "National Film Board",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8379834294319153,
+      "name_embedding_score": 0.8422977328300476,
+      "string_score": 0.7726414799690247,
+      "independent_identity_support": true,
+      "context_score": 0.7893933057785034,
+      "graph_score": 0.8946966528892517,
+      "margin": 0.8379834294319153
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

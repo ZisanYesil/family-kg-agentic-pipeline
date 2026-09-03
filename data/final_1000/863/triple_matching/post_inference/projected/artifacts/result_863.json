@@ -1,0 +1,106 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/863/evaluation/entity_alignment/final_extracted_aligned_863.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/863/evaluation/entity_alignment/final_ground_truth_aligned_863.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Gerberge_of_Lorraine",
+      "predicate": "hasChild",
+      "object": "Otto_I_Count_of_Chiny",
+      "subject_uri": "http://example.org/entity/Gerberge_of_Lorraine",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Otto_I_Count_of_Chiny"
+    },
+    {
+      "subject": "Gerberge_of_Lorraine",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Gerberge_of_Lorraine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Gerberge_of_Lorraine",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gerberge_of_Lorraine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Louis_Count_of_Verdun",
+      "predicate": "hasParent",
+      "object": "Otto_I_Count_of_Chiny",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Verdun",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Otto_I_Count_of_Chiny"
+    },
+    {
+      "subject": "Louis_Count_of_Verdun",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Verdun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Louis_Count_of_Verdun",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Verdun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Otto_I_Count_of_Chiny",
+      "predicate": "hasChild",
+      "object": "Louis_Count_of_Verdun",
+      "subject_uri": "http://example.org/entity/Otto_I_Count_of_Chiny",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Louis_Count_of_Verdun"
+    },
+    {
+      "subject": "Otto_I_Count_of_Chiny",
+      "predicate": "hasParent",
+      "object": "Gerberge_of_Lorraine",
+      "subject_uri": "http://example.org/entity/Otto_I_Count_of_Chiny",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Gerberge_of_Lorraine"
+    },
+    {
+      "subject": "Otto_I_Count_of_Chiny",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Otto_I_Count_of_Chiny",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Otto_I_Count_of_Chiny",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Otto_I_Count_of_Chiny",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 10,
+    "true_positives": 10,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

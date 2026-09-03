@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/extracted/film_mary_janes_pa> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/person_william_keighley> ;
+    ex:hasDirector <http://example.org/extracted/person_william_keighley> .
+
+<http://example.org/extracted/place_new_york_ny> a ex:Place .
+
+<http://example.org/extracted/person_william_keighley> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1889-08-04"^^xsd:date ;
+    ex:hasDeathDate "1984-06-24"^^xsd:date ;
+    ex:hasDeathPlace <http://example.org/extracted/place_new_york_ny> .
+

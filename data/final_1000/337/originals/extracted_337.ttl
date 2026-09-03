@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:lord_herbert_scott a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lord Herbert Andrew Montagu Douglas Scott" ;
+    onto:hasMother data:lady_louisa_hamilton .
+
+data:james_hamilton_1st_duke_abercorn a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "James Hamilton, 1st Duke of Abercorn" .
+
+data:lady_louisa_hamilton a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lady Louisa Jane Hamilton" ;
+    onto:hasFather data:james_hamilton_1st_duke_abercorn .
+

@@ -1,0 +1,90 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/406/evaluation/entity_alignment/final_extracted_aligned_406.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/406/evaluation/entity_alignment/final_ground_truth_aligned_406.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Margaret_Lea_Houston",
+      "predicate": "hasCauseOfDeath",
+      "object": "yellow_fever",
+      "subject_uri": "http://example.org/entity/Margaret_Lea_Houston",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+      "object_term": "http://example.org/entity/yellow_fever"
+    },
+    {
+      "subject": "Margaret_Lea_Houston",
+      "predicate": "hasChild",
+      "object": "Temple_Lea_Houston",
+      "subject_uri": "http://example.org/entity/Margaret_Lea_Houston",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Temple_Lea_Houston"
+    },
+    {
+      "subject": "Margaret_Lea_Houston",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Margaret_Lea_Houston",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Margaret_Lea_Houston",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Margaret_Lea_Houston",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Temple_Lea_Houston",
+      "predicate": "hasParent",
+      "object": "Margaret_Lea_Houston",
+      "subject_uri": "http://example.org/entity/Temple_Lea_Houston",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Margaret_Lea_Houston"
+    },
+    {
+      "subject": "Temple_Lea_Houston",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Temple_Lea_Houston",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Temple_Lea_Houston",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Temple_Lea_Houston",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "yellow_fever",
+      "predicate": "type",
+      "object": "CauseOfDeath",
+      "subject_uri": "http://example.org/entity/yellow_fever",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CauseOfDeath"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 8,
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

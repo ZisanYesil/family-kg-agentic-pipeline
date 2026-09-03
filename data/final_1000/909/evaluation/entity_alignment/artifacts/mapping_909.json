@@ -1,0 +1,151 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/909/originals/extracted_909.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/909/ground_truth_909.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jim_wynorski": "http://example.org/entity/Jim_Wynorski"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/jim_wynorski",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jim Wynorski",
+          "source": "label"
+        }
+      ],
+      "context": "Jim Wynorski. has birth place: Glen Cove, Long Island, New York. inverse has director: Not of This Earth (1988 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jim_Wynorski",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jim Wynorski",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jim Wynorski",
+        "extracted_source": "label",
+        "ground_truth_text": "Jim Wynorski",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.843183159828186,
+      "graph_score": 0.843183159828186,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_not_of_this_earth_1988",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Not of This Earth (1988 film)",
+          "source": "label"
+        },
+        {
+          "text": "film not of this earth 1988",
+          "source": "uri"
+        }
+      ],
+      "context": "Not of This Earth (1988 film). has director: Jim Wynorski.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Not_of_This_Earth",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Not of This Earth",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Not of This Earth (1988 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Not of This Earth",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8575187921524048,
+      "name_embedding_score": 0.8447428941726685,
+      "string_score": 0.7992753386497498,
+      "independent_identity_support": true,
+      "context_score": 0.8826280236244202,
+      "graph_score": 0.9413139820098877,
+      "margin": 0.8575187921524048
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/glen_cove_long_island_new_york",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Glen Cove, Long Island, New York",
+          "source": "label"
+        },
+        {
+          "text": "glen cove long island new york",
+          "source": "uri"
+        }
+      ],
+      "context": "Glen Cove, Long Island, New York. inverse has birth place: Jim Wynorski.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/New_York",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "New York",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "glen cove long island new york",
+        "extracted_source": "uri",
+        "ground_truth_text": "New York",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6730577349662781,
+      "name_embedding_score": 0.614534318447113,
+      "string_score": 0.5728070139884949,
+      "independent_identity_support": false,
+      "context_score": 0.7807105779647827,
+      "graph_score": 0.8903552889823914,
+      "margin": 0.6730577349662781
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

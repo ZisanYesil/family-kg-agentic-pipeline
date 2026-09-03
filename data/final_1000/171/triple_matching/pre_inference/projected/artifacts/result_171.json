@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/171/evaluation/entity_alignment/baseline_extracted_aligned_171.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/171/evaluation/entity_alignment/baseline_ground_truth_aligned_171.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Timothy_West",
+      "predicate": "hasSpouse",
+      "object": "Prunella_Scales",
+      "subject_uri": "http://example.org/entity/Timothy_West",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Prunella_Scales"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Lockwood_West",
+      "predicate": "hasChild",
+      "object": "Timothy_West",
+      "subject_uri": "http://example.org/entity/Lockwood_West",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Timothy_West"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Lockwood_West",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Lockwood_West",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Lockwood_West",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lockwood_West",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lockwood_West",
+      "predicate": "label",
+      "object": "\"Lockwood West\"",
+      "subject_uri": "http://example.org/entity/Lockwood_West",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Lockwood West\""
+    },
+    {
+      "subject": "Lockwood_West",
+      "predicate": "altLabel",
+      "object": "\"Harry Lockwood West\"",
+      "subject_uri": "http://example.org/entity/Lockwood_West",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Harry Lockwood West\""
+    },
+    {
+      "subject": "Prunella_Scales",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Prunella_Scales",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Prunella_Scales",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Prunella_Scales",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Prunella_Scales",
+      "predicate": "label",
+      "object": "\"Prunella Scales\"",
+      "subject_uri": "http://example.org/entity/Prunella_Scales",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Prunella Scales\""
+    },
+    {
+      "subject": "Timothy_West",
+      "predicate": "hasParent",
+      "object": "Lockwood_West",
+      "subject_uri": "http://example.org/entity/Timothy_West",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Lockwood_West"
+    },
+    {
+      "subject": "Timothy_West",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Timothy_West",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Timothy_West",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Timothy_West",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Timothy_West",
+      "predicate": "label",
+      "object": "\"Timothy West\"",
+      "subject_uri": "http://example.org/entity/Timothy_West",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Timothy West\""
+    },
+    {
+      "subject": "Timothy_West",
+      "predicate": "altLabel",
+      "object": "\"Timothy Lancaster West\"",
+      "subject_uri": "http://example.org/entity/Timothy_West",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Timothy Lancaster West\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 1,
+    "false_positives": 12,
+    "false_negatives": 1,
+    "precision": 0.07692307692307693,
+    "recall": 0.5,
+    "f1": 0.13333333333333336
+  },
+  "stage": "pre_inference"
+}

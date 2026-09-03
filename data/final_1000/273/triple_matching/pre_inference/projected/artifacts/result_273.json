@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/273/evaluation/entity_alignment/baseline_extracted_aligned_273.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/273/evaluation/entity_alignment/baseline_ground_truth_aligned_273.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Lady_Henrietta_Cavendish_Holles",
+      "predicate": "hasParent",
+      "object": "John_Holles_1st_Duke_of_Newcastle",
+      "subject_uri": "http://example.org/entity/Lady_Henrietta_Cavendish_Holles",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/John_Holles_1st_Duke_of_Newcastle"
+    },
+    {
+      "subject": "Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate": "hasChild",
+      "object": "Lady_Henrietta_Cavendish_Holles",
+      "subject_uri": "http://example.org/entity/Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Lady_Henrietta_Cavendish_Holles"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate": "hasSpouse",
+      "object": "john_holles",
+      "subject_uri": "http://example.org/entity/Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/extracted/john_holles"
+    },
+    {
+      "subject": "Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate": "label",
+      "object": "\"Margaret Holles, Duchess of Newcastle-upon-Tyne\"",
+      "subject_uri": "http://example.org/entity/Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Margaret Holles, Duchess of Newcastle-upon-Tyne\""
+    },
+    {
+      "subject": "Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate": "altLabel",
+      "object": "\"Margaret Holles\"",
+      "subject_uri": "http://example.org/entity/Margaret_Holles_Duchess_of_Newcastle_upon_Tyne",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Margaret Holles\""
+    },
+    {
+      "subject": "john_holles",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/john_holles",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "john_holles",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/john_holles",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "john_holles",
+      "predicate": "label",
+      "object": "\"John Holles, Earl of Clare\"",
+      "subject_uri": "http://example.org/extracted/john_holles",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"John Holles, Earl of Clare\""
+    },
+    {
+      "subject": "john_holles",
+      "predicate": "altLabel",
+      "object": "\"John Holles\"",
+      "subject_uri": "http://example.org/extracted/john_holles",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"John Holles\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 1,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 0,
+    "false_positives": 9,
+    "false_negatives": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "pre_inference"
+}

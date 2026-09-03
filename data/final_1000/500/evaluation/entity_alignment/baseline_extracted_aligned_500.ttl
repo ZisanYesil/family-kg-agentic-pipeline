@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Say_it_in_Russian> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Say it in Russian" ;
+    onto:hasDirector <http://example.org/entity/Jeff_Celentano> .
+
+<http://example.org/entity/Jeff_Celentano> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jeff Celentano" ;
+    onto:hasBirthPlace <http://example.org/entity/Pemberton_New_Jersey> ;
+    skos:altLabel "Jeff Weston" .
+
+<http://example.org/entity/Pemberton_New_Jersey> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Pemberton, New Jersey" .
+

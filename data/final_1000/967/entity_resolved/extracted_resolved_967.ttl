@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_earth_1957 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Earth (1957 film)" ;
+    onto:hasDirector data:zahari_zhandov ;
+    skos:altLabel "Earth" .
+
+data:sofia a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Sofia" .
+
+data:zahari_zhandov a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Zahari Zhandov" ;
+    onto:hasDeathPlace data:sofia .
+

@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Musharrif_al_Dawla> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/entity/Baha_al_Dawla> ;
+    ex:hasParent <http://example.org/entity/Baha_al_Dawla> .
+
+<http://example.org/entity/Adud_al_Dawla> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Baha_al_Dawla> .
+
+<http://example.org/entity/Baha_al_Dawla> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Musharrif_al_Dawla> ;
+    ex:hasFather <http://example.org/entity/Adud_al_Dawla> ;
+    ex:hasParent <http://example.org/entity/Adud_al_Dawla> .
+

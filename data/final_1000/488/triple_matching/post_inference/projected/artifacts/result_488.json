@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/488/evaluation/entity_alignment/final_extracted_aligned_488.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/488/evaluation/entity_alignment/final_ground_truth_aligned_488.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Stefan_Vladislav",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Stefan_Vladislav",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Stefan_Vladislav",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Stefan_Vladislav",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Stefan_the_First_Crowned",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Stefan_the_First_Crowned",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Stefan_the_First_Crowned",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Stefan_the_First_Crowned",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Serbian_Grand_Principality",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Serbian_Grand_Principality",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Serbian_Grand_Principality",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Serbian_Grand_Principality",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Stefan_Vladislav",
+      "predicate": "hasParent",
+      "object": "Stefan_the_First_Crowned",
+      "subject_uri": "http://example.org/entity/Stefan_Vladislav",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Stefan_the_First_Crowned"
+    },
+    {
+      "subject": "Stefan_the_First_Crowned",
+      "predicate": "hasChild",
+      "object": "Stefan_Vladislav",
+      "subject_uri": "http://example.org/entity/Stefan_the_First_Crowned",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Stefan_Vladislav"
+    },
+    {
+      "subject": "Stefan_the_First_Crowned",
+      "predicate": "hasCountry",
+      "object": "Serbian_Grand_Principality",
+      "subject_uri": "http://example.org/entity/Stefan_the_First_Crowned",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Serbian_Grand_Principality"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Stefan_Vladislav",
+      "predicate": "hasChild",
+      "object": "Stefan_the_First_Crowned",
+      "subject_uri": "http://example.org/entity/Stefan_Vladislav",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Stefan_the_First_Crowned"
+    },
+    {
+      "subject": "Stefan_the_First_Crowned",
+      "predicate": "hasCountry",
+      "object": "serbia",
+      "subject_uri": "http://example.org/entity/Stefan_the_First_Crowned",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/serbia"
+    },
+    {
+      "subject": "Stefan_the_First_Crowned",
+      "predicate": "hasParent",
+      "object": "Stefan_Vladislav",
+      "subject_uri": "http://example.org/entity/Stefan_the_First_Crowned",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Stefan_Vladislav"
+    },
+    {
+      "subject": "serbia",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/serbia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "serbia",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/serbia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 14,
+    "true_positives": 4,
+    "false_positives": 5,
+    "false_negatives": 5,
+    "precision": 0.4444444444444444,
+    "recall": 0.4444444444444444,
+    "f1": 0.4444444444444444
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,172 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/706/originals/extracted_706.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/706/ground_truth_706.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/pratibha_parmar": "http://example.org/entity/Pratibha_Parmar",
+    "http://example.org/extracted/a_place_of_rage_1991": "http://example.org/entity/A_Place_of_Rage"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 2,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/a_place_of_rage_1991",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A Place of Rage",
+          "source": "label"
+        },
+        {
+          "text": "a place of rage 1991",
+          "source": "uri"
+        }
+      ],
+      "context": "A Place of Rage. has director: Pratibha Parmar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Place_of_Rage",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Place of Rage",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Place of Rage",
+        "extracted_source": "label",
+        "ground_truth_text": "A Place of Rage",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pratibha_parmar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pratibha Parmar",
+          "source": "label"
+        }
+      ],
+      "context": "Pratibha Parmar. has award received: San Francisco Frameline Film Festival Lifetime Achievement Award. has award received: Visionary Award. inverse has director: A Place of Rage.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pratibha_Parmar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pratibha Parmar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pratibha Parmar",
+        "extracted_source": "label",
+        "ground_truth_text": "Pratibha Parmar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7024568319320679,
+      "graph_score": 0.8512284159660339,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lifetime_achievement_award_san_francisco_frameline",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "San Francisco Frameline Film Festival Lifetime Achievement Award",
+          "source": "label"
+        },
+        {
+          "text": "lifetime achievement award san francisco frameline",
+          "source": "uri"
+        }
+      ],
+      "context": "San Francisco Frameline Film Festival Lifetime Achievement Award. inverse has award received: Pratibha Parmar.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/visionary_award_one_in_ten_film_festival",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Visionary Award",
+          "source": "label"
+        },
+        {
+          "text": "visionary award one in ten film festival",
+          "source": "uri"
+        }
+      ],
+      "context": "Visionary Award. inverse has award received: Pratibha Parmar.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/100_Women"
+  ]
+}

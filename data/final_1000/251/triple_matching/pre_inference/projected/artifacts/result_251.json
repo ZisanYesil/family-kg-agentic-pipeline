@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/251/evaluation/entity_alignment/baseline_extracted_aligned_251.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/251/evaluation/entity_alignment/baseline_ground_truth_aligned_251.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Alam_Shah",
+      "predicate": "hasParent",
+      "object": "Muhammad_Shah",
+      "subject_uri": "http://example.org/entity/Alam_Shah",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Muhammad_Shah"
+    },
+    {
+      "subject": "Muhammad_Shah",
+      "predicate": "hasBurialPlace",
+      "object": "Lodi_Gardens",
+      "subject_uri": "http://example.org/entity/Muhammad_Shah",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://example.org/entity/Lodi_Gardens"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Alam_Shah",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Alam_Shah",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Alam_Shah",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Alam_Shah",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Alam_Shah",
+      "predicate": "label",
+      "object": "\"Alam Shah\"",
+      "subject_uri": "http://example.org/entity/Alam_Shah",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Alam Shah\""
+    },
+    {
+      "subject": "Lodi_Gardens",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Lodi_Gardens",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Lodi_Gardens",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lodi_Gardens",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lodi_Gardens",
+      "predicate": "label",
+      "object": "\"Lodi Gardens\"",
+      "subject_uri": "http://example.org/entity/Lodi_Gardens",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Lodi Gardens\""
+    },
+    {
+      "subject": "Lodi_Gardens",
+      "predicate": "altLabel",
+      "object": "\"New Delhi\"",
+      "subject_uri": "http://example.org/entity/Lodi_Gardens",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"New Delhi\""
+    },
+    {
+      "subject": "Muhammad_Shah",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Muhammad_Shah",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Muhammad_Shah",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Muhammad_Shah",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Muhammad_Shah",
+      "predicate": "label",
+      "object": "\"Muhammad Shah\"",
+      "subject_uri": "http://example.org/entity/Muhammad_Shah",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Muhammad Shah\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

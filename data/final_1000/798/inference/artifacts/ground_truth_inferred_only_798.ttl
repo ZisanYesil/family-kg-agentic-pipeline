@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Prince_Albert_of_Schleswig_Holstein_Sonderburg_Glücksburg a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Friedrich_Duke_of_Schleswig_Holstein_Sonderburg_Glücksburg .
+
+entity:Princess_Louise_Caroline_of_Hesse_Kassel a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Friedrich_Duke_of_Schleswig_Holstein_Sonderburg_Glücksburg .
+
+entity:Friedrich_Duke_of_Schleswig_Holstein_Sonderburg_Glücksburg a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Prince_Albert_of_Schleswig_Holstein_Sonderburg_Glücksburg ;
+    ex:hasParent entity:Princess_Louise_Caroline_of_Hesse_Kassel .
+

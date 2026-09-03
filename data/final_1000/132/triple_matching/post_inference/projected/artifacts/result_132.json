@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/132/evaluation/entity_alignment/final_extracted_aligned_132.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/132/evaluation/entity_alignment/final_ground_truth_aligned_132.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Iran",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Iran",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Iran",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Iran",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Karimabad_Silvaneh",
+      "predicate": "hasCountry",
+      "object": "Iran",
+      "subject_uri": "http://example.org/entity/Karimabad_Silvaneh",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Iran"
+    },
+    {
+      "subject": "Pakistan",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Pakistan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Pakistan",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Pakistan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Shadikhan",
+      "predicate": "hasCountry",
+      "object": "Pakistan",
+      "subject_uri": "http://example.org/entity/Shadikhan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Pakistan"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Karimabad_Silvaneh",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Karimabad_Silvaneh",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Shadikhan",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Shadikhan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "silvaneh_place",
+      "predicate": "hasCountry",
+      "object": "Iran",
+      "subject_uri": "http://example.org/extracted/silvaneh_place",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Iran"
+    },
+    {
+      "subject": "silvaneh_place",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/silvaneh_place",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 4,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 6,
+    "union_triples_in_scope": 10,
+    "true_positives": 6,
+    "false_positives": 4,
+    "false_negatives": 0,
+    "precision": 0.6,
+    "recall": 1.0,
+    "f1": 0.7499999999999999
+  },
+  "stage": "post_inference"
+}

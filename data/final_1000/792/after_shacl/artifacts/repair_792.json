@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "05a835848edf38e9c5974e23f6068107ff9058881811eca18e9290833b26ba8e",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/occidentalis_karma",
+        "path": null,
+        "value": "http://example.org/extracted/gang_up",
+        "expected": null,
+        "message": "Relation phrase 'released before' from http://example.org/extracted/occidentalis_karma to http://example.org/extracted/gang_up was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "05a835848edf38e9c5974e23f6068107ff9058881811eca18e9290833b26ba8e",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/occidentalis_karma",
+            "path": null,
+            "value": "http://example.org/extracted/gang_up",
+            "expected": null,
+            "message": "Relation phrase 'released before' from http://example.org/extracted/occidentalis_karma to http://example.org/extracted/gang_up was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 10,
+      "feedback_reasoning": "The violation reports an unmapped_relation with the phrase “released before” between the two CreativeWork individuals. The ontology provided has no predicate whose documented meaning expresses a temporal ordering such as “released before”. Because we may only use declared ontology predicates whose meaning matches the relation phrase and the source text, and none qualify, the relation cannot be safely added or replaced.",
+      "repairs": [
+        {
+          "violation_fingerprint": "14bb062fe1861aafd88f5acbe5e0e76487820b452958f2680f97fac3f37fef05",
+          "reasoning": "No ontology predicate matches the relation phrase “released before”; therefore the violation cannot be repaired without inventing a predicate, which is disallowed.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "14bb062fe1861aafd88f5acbe5e0e76487820b452958f2680f97fac3f37fef05"
+      ],
+      "triples_after": 10,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "05a835848edf38e9c5974e23f6068107ff9058881811eca18e9290833b26ba8e",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/occidentalis_karma",
+            "path": null,
+            "value": "http://example.org/extracted/gang_up",
+            "expected": null,
+            "message": "Relation phrase 'released before' from http://example.org/extracted/occidentalis_karma to http://example.org/extracted/gang_up was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "05a835848edf38e9c5974e23f6068107ff9058881811eca18e9290833b26ba8e",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/occidentalis_karma",
+        "path": null,
+        "value": "http://example.org/extracted/gang_up",
+        "expected": null,
+        "message": "Relation phrase 'released before' from http://example.org/extracted/occidentalis_karma to http://example.org/extracted/gang_up was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

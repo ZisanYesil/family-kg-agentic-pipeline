@@ -1,0 +1,169 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/317/originals/extracted_317.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/317/ground_truth_317.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ernst_ii_hl": "http://example.org/entity/Ernst_II_Prince_of_Hohenlohe_Langenburg",
+    "http://example.org/extracted/princess_marie_alexandra_sh": "http://example.org/entity/Princess_Marie_Alexandra_of_Schleswig_Holstein",
+    "http://example.org/extracted/princess_marie_melita_hl": "http://example.org/entity/Princess_Marie_Melita_of_Hohenlohe_Langenburg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ernst_ii_hl",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ernst II",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ernst II, Prince of Hohenlohe-Langenburg",
+          "source": "label"
+        },
+        {
+          "text": "ernst ii hl",
+          "source": "uri"
+        }
+      ],
+      "context": "Ernst II. inverse has father: Marie Melita.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ernst_II_Prince_of_Hohenlohe_Langenburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ernst II Prince of Hohenlohe Langenburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ernst II, Prince of Hohenlohe-Langenburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Ernst II Prince of Hohenlohe Langenburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9372596144676208,
+      "string_score": 0.9829114079475403,
+      "independent_identity_support": true,
+      "context_score": 0.6453266143798828,
+      "graph_score": 0.8226633071899414,
+      "margin": 0.5361089110374451
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/princess_marie_alexandra_sh",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marie Alexandra Caroline-Mathilde Viktoria Irene",
+          "source": "altLabel"
+        },
+        {
+          "text": "Princess Marie Alexandra of Schleswig-Holstein",
+          "source": "label"
+        },
+        {
+          "text": "princess marie alexandra sh",
+          "source": "uri"
+        }
+      ],
+      "context": "Marie Alexandra Caroline-Mathilde Viktoria Irene. has mother: Marie Melita.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Marie_Alexandra_of_Schleswig_Holstein",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Marie Alexandra of Schleswig Holstein",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Marie Alexandra of Schleswig-Holstein",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Marie Alexandra of Schleswig Holstein",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9962367415428162,
+      "string_score": 0.990217387676239,
+      "independent_identity_support": true,
+      "context_score": 0.7065110206604004,
+      "graph_score": 0.8532555103302002,
+      "margin": 0.43521279096603394
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/princess_marie_melita_hl",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marie Melita",
+          "source": "altLabel"
+        },
+        {
+          "text": "Princess Marie Melita of Hohenlohe-Langenburg",
+          "source": "label"
+        },
+        {
+          "text": "princess marie melita hl",
+          "source": "uri"
+        }
+      ],
+      "context": "Marie Melita. has father: Ernst II. inverse has mother: Marie Alexandra Caroline-Mathilde Viktoria Irene.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Marie_Melita_of_Hohenlohe_Langenburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Marie Melita of Hohenlohe Langenburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Marie Melita of Hohenlohe-Langenburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Marie Melita of Hohenlohe Langenburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9756627082824707,
+      "string_score": 0.9900000095367432,
+      "independent_identity_support": true,
+      "context_score": 0.6808038353919983,
+      "graph_score": 0.8404018878936768,
+      "margin": 0.44689470529556274
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/98/originals/extracted_98.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/98/ground_truth_98.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/yale_university": "http://example.org/entity/Yale",
+    "http://example.org/extracted/francis_w_rockwell": "http://example.org/entity/Francis_Williams_Rockwell",
+    "http://example.org/extracted/julius_rockwell": "http://example.org/entity/Julius_Rockwell"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/francis_w_rockwell",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Francis Williams Rockwell",
+          "source": "altLabel"
+        },
+        {
+          "text": "Francis W. Rockwell",
+          "source": "label"
+        },
+        {
+          "text": "francis w rockwell",
+          "source": "uri"
+        }
+      ],
+      "context": "Francis Williams Rockwell. inverse has father: Julius Rockwell.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Francis_Williams_Rockwell",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Francis Williams Rockwell",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Francis Williams Rockwell",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Francis Williams Rockwell",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9289900660514832,
+      "graph_score": 0.4644950330257416,
+      "margin": 0.3315886855125427
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/julius_rockwell",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Julius Rockwell",
+          "source": "label"
+        }
+      ],
+      "context": "Julius Rockwell. has educated at: Yale. has father: Francis Williams Rockwell.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Julius_Rockwell",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Julius Rockwell",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Julius Rockwell",
+        "extracted_source": "label",
+        "ground_truth_text": "Julius Rockwell",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9478393793106079,
+      "graph_score": 0.6405863761901855,
+      "margin": 0.34909576177597046
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/yale_university",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Yale",
+          "source": "altLabel"
+        },
+        {
+          "text": "Yale University",
+          "source": "label"
+        }
+      ],
+      "context": "Yale. inverse has educated at: Julius Rockwell.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Yale",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Yale",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Yale",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Yale",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

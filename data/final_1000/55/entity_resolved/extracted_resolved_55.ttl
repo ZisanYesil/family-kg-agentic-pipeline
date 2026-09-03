@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:lorentz_creutz_sr a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lorentz Creutz Sr." ;
+    onto:hasDeathPlace data:battle_of_oland ;
+    onto:hasFather data:carl_gustaf_creutz ;
+    skos:altLabel "Lorentz Creutz" .
+
+data:battle_of_oland a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Battle of Öland" .
+
+data:carl_gustaf_creutz a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Carl Gustaf Creutz" .
+

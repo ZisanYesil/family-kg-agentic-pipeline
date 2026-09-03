@@ -1,0 +1,28 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Simha_Jodi a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Joe_Simon ;
+    ex:hasDirector entity:Joe_Simon .
+
+entity:The_Pauper_Millionaire a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Frank_Hall_Crane ;
+    ex:hasDirector entity:Frank_Hall_Crane .
+
+entity:Frank_Hall_Crane a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:America ;
+    ex:hasCountry entity:America .
+
+entity:Joe_Simon a ex:Agent,
+        ex:Person ;
+    ex:hasCitizenship entity:America ;
+    ex:hasCountry entity:America .
+
+entity:America a ex:Country,
+        ex:Place .
+

@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_crime_against_joe a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Crime Against Joe" ;
+    onto:hasDirector data:person_lee_sholem .
+
+data:film_vagabonderne_paa_bakkegarden a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Vagabonderne på Bakkegården" ;
+    onto:hasDirector data:person_alice_ofredericks .
+
+data:person_alice_ofredericks a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alice O'Fredericks" ;
+    onto:hasDeathDate "1968-02-18"^^xsd:date .
+
+data:person_lee_sholem a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lee Sholem" ;
+    onto:hasDeathDate "2000-08-19"^^xsd:date .
+

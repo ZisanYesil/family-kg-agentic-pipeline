@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/917/evaluation/entity_alignment/baseline_extracted_aligned_917.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/917/evaluation/entity_alignment/baseline_ground_truth_aligned_917.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Deathstalker_II",
+      "predicate": "hasDirector",
+      "object": "Jim_Wynorski",
+      "subject_uri": "http://example.org/entity/Deathstalker_II",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Jim_Wynorski"
+    },
+    {
+      "subject": "Jim_Wynorski",
+      "predicate": "hasBirthPlace",
+      "object": "New_York",
+      "subject_uri": "http://example.org/entity/Jim_Wynorski",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/New_York"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Deathstalker_II",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Deathstalker_II",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Deathstalker_II",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Deathstalker_II",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Deathstalker_II",
+      "predicate": "label",
+      "object": "\"Deathstalker II\"",
+      "subject_uri": "http://example.org/entity/Deathstalker_II",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Deathstalker II\""
+    },
+    {
+      "subject": "Jim_Wynorski",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jim_Wynorski",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jim_Wynorski",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jim_Wynorski",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jim_Wynorski",
+      "predicate": "label",
+      "object": "\"Jim Wynorski\"",
+      "subject_uri": "http://example.org/entity/Jim_Wynorski",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jim Wynorski\""
+    },
+    {
+      "subject": "New_York",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "New_York",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "New_York",
+      "predicate": "label",
+      "object": "\"Glen Cove, Long Island, New York\"",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Glen Cove, Long Island, New York\""
+    },
+    {
+      "subject": "New_York",
+      "predicate": "altLabel",
+      "object": "\"Glen Cove\"",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Glen Cove\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

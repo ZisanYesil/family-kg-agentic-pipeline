@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/258/evaluation/entity_alignment/final_extracted_aligned_258.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/258/evaluation/entity_alignment/final_ground_truth_aligned_258.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Balliol_College",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Balliol_College",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Balliol_College",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Balliol_College",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Balliol_College",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/Balliol_College",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Margaret_Simey",
+      "predicate": "hasSpouse",
+      "object": "Tom_Simey",
+      "subject_uri": "http://example.org/entity/Margaret_Simey",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Tom_Simey"
+    },
+    {
+      "subject": "Margaret_Simey",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Margaret_Simey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Margaret_Simey",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Margaret_Simey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Tom_Simey",
+      "predicate": "hasSpouse",
+      "object": "Margaret_Simey",
+      "subject_uri": "http://example.org/entity/Tom_Simey",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Margaret_Simey"
+    },
+    {
+      "subject": "Tom_Simey",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Tom_Simey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Tom_Simey",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Tom_Simey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Thomas_Spensley_Simey",
+      "predicate": "hasEducatedAt",
+      "object": "Balliol_College",
+      "subject_uri": "http://example.org/entity/Thomas_Spensley_Simey",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Balliol_College"
+    },
+    {
+      "subject": "Thomas_Spensley_Simey",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Thomas_Spensley_Simey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Thomas_Spensley_Simey",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Thomas_Spensley_Simey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Tom_Simey",
+      "predicate": "hasEducatedAt",
+      "object": "Balliol_College",
+      "subject_uri": "http://example.org/entity/Tom_Simey",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Balliol_College"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 12,
+    "union_triples_in_scope": 13,
+    "true_positives": 9,
+    "false_positives": 1,
+    "false_negatives": 3,
+    "precision": 0.9,
+    "recall": 0.75,
+    "f1": 0.8181818181818182
+  },
+  "stage": "post_inference"
+}

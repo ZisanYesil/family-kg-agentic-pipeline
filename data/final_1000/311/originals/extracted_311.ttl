@@ -1,0 +1,27 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:my_father_hero_1994 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "My Father the Hero (1994 film)" ;
+    onto:hasCountryOfOrigin data:france,
+        data:united_states .
+
+data:wyoming_roundup a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Wyoming Roundup" ;
+    onto:hasCountryOfOrigin data:united_states .
+
+data:france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

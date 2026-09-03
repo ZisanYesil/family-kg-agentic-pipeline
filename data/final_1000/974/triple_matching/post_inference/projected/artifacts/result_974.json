@@ -1,0 +1,82 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/974/evaluation/entity_alignment/final_extracted_aligned_974.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/974/evaluation/entity_alignment/final_ground_truth_aligned_974.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Æthelmund",
+      "predicate": "hasChild",
+      "object": "Æthelric",
+      "subject_uri": "http://example.org/entity/Æthelmund",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Æthelric"
+    },
+    {
+      "subject": "Æthelmund",
+      "predicate": "hasDeathDate",
+      "object": "\"0802\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Æthelmund",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"0802\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Æthelmund",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Æthelmund",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Æthelmund",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Æthelmund",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Æthelric",
+      "predicate": "hasParent",
+      "object": "Æthelmund",
+      "subject_uri": "http://example.org/entity/Æthelric",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Æthelmund"
+    },
+    {
+      "subject": "Æthelric",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Æthelric",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Æthelric",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Æthelric",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 7,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 7,
+    "true_positives": 7,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

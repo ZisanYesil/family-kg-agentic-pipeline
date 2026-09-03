@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/578/originals/extracted_578.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/578/ground_truth_578.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_the_loves_of_madame_dubarry": "http://example.org/entity/The_Loves_of_Madame_Dubarry",
+    "http://example.org/extracted/person_marcel_varnel": "http://example.org/entity/Marcel_Varnel"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_loves_of_madame_dubarry",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "I Give My Heart",
+          "source": "altLabel"
+        },
+        {
+          "text": "The Loves of Madame Dubarry",
+          "source": "label"
+        },
+        {
+          "text": "film the loves of madame dubarry",
+          "source": "uri"
+        }
+      ],
+      "context": "I Give My Heart. has director: Marcel Varnel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Loves_of_Madame_Dubarry",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Loves of Madame Dubarry",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Loves of Madame Dubarry",
+        "extracted_source": "label",
+        "ground_truth_text": "The Loves of Madame Dubarry",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7155890464782715,
+      "graph_score": 0.8577945232391357,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_marcel_varnel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marcel Varnel",
+          "source": "label"
+        },
+        {
+          "text": "person marcel varnel",
+          "source": "uri"
+        }
+      ],
+      "context": "Marcel Varnel. has death place: Rake, West Sussex. inverse has director: I Give My Heart.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marcel_Varnel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marcel Varnel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marcel Varnel",
+        "extracted_source": "label",
+        "ground_truth_text": "Marcel Varnel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8502457141876221,
+      "graph_score": 0.925122857093811,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_rake_west_sussex",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rake, West Sussex",
+          "source": "label"
+        },
+        {
+          "text": "place rake west sussex",
+          "source": "uri"
+        }
+      ],
+      "context": "Rake, West Sussex. inverse has death place: Marcel Varnel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/West_Sussex",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "West Sussex",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rake, West Sussex",
+        "extracted_source": "label",
+        "ground_truth_text": "West Sussex",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8374285697937012,
+      "name_embedding_score": 0.7852828502655029,
+      "string_score": 0.8202381134033203,
+      "independent_identity_support": true,
+      "context_score": 0.917820930480957,
+      "graph_score": 0.9589104652404785,
+      "margin": 0.8374285697937012
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

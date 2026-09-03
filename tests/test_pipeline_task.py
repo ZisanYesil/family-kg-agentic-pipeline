@@ -391,7 +391,7 @@ def test_run_pipeline_passes_dangling_reference_to_feedback_and_blocks_completio
     monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
     monkeypatch.setattr(
         "tasks.pipeline_task.extraction_agent",
-        lambda _text, _schema: {"entities": [], "relations": []},
+        lambda _text, _schema: {"entities": [{"id": "known_child", "attributes": {"hasBirthDate": "1900"}}], "relations": []},
     )
     monkeypatch.setattr(
         "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
@@ -463,7 +463,7 @@ def test_run_pipeline_passes_unmapped_relation_to_feedback_and_blocks_completion
     monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
     monkeypatch.setattr(
         "tasks.pipeline_task.extraction_agent",
-        lambda _text, _schema: {"entities": entities, "relations": []},
+        lambda _text, _schema: {"entities": entities, "relations": [{"subject": "known_child", "object": "known_father", "relation_phrase": "father"}]},
     )
     monkeypatch.setattr(
         "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
@@ -490,7 +490,8 @@ def test_run_pipeline_passes_unmapped_relation_to_feedback_and_blocks_completion
 
     assert len(feedback_inputs) == 1
     assert any(item.kind == ViolationKind.UNMAPPED_RELATION for item in feedback_inputs[0])
-    assert any("http://example.com/family#hasFather" in (item.expected or "") for item in feedback_inputs[0])
+    assert all(item.expected is None for item in feedback_inputs[0])
+    assert any("merely type-compatible" in item.message for item in feedback_inputs[0])
     assert JobStatus.Complete.value not in storage.statuses
     assert storage.statuses[-1] == JobStatus.Error.value
 
@@ -546,7 +547,7 @@ def test_run_pipeline_clears_unmapped_diagnostic_after_feedback_adds_candidate_t
     monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
     monkeypatch.setattr(
         "tasks.pipeline_task.extraction_agent",
-        lambda _text, _schema: {"entities": entities, "relations": []},
+        lambda _text, _schema: {"entities": entities, "relations": [{"subject": "known_child", "object": "known_father", "relation_phrase": "father"}]},
     )
     monkeypatch.setattr(
         "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
@@ -648,7 +649,7 @@ def test_run_pipeline_marks_job_error_when_ontology_mapping_fails(monkeypatch) -
 
     monkeypatch.setattr(
         "tasks.pipeline_task.extraction_agent",
-        lambda _text, _schema: {"entities": [], "relations": []},
+        lambda _text, _schema: {"entities": [{"id": "test_entity", "attributes": {"hasBirthDate": "1900"}}], "relations": []},
     )
     monkeypatch.setattr("tasks.pipeline_task.ontology_mapping_agent_with_diagnostics", fail_mapping)
     monkeypatch.setattr("tasks.pipeline_task.kg_builder_agent_with_diagnostics", fake_builder)
@@ -676,7 +677,7 @@ def test_run_pipeline_marks_job_error_when_validation_infrastructure_fails(
     )
     monkeypatch.setattr(
         "tasks.pipeline_task.extraction_agent",
-        lambda _text, _schema: {"entities": [], "relations": []},
+        lambda _text, _schema: {"entities": [{"id": "test_entity", "attributes": {"hasBirthDate": "1900"}}], "relations": []},
     )
     monkeypatch.setattr(
         "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
@@ -742,7 +743,7 @@ def test_run_pipeline_real_shacl_violation_blocks_completion_and_reaches_feedbac
     monkeypatch.setattr("tasks.pipeline_task.load_ontology_schema", lambda _path: schema)
     monkeypatch.setattr(
         "tasks.pipeline_task.extraction_agent",
-        lambda _text, _schema: {"entities": [], "relations": []},
+        lambda _text, _schema: {"entities": [{"id": "test_entity", "attributes": {"hasBirthDate": "1900"}}], "relations": []},
     )
     monkeypatch.setattr(
         "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",
@@ -800,7 +801,7 @@ def test_run_pipeline_rejects_string_feedback_graph_and_passes_independent_copy(
     )
     monkeypatch.setattr(
         "tasks.pipeline_task.extraction_agent",
-        lambda _text, _schema: {"entities": [], "relations": []},
+        lambda _text, _schema: {"entities": [{"id": "test_entity", "attributes": {"hasBirthDate": "1900"}}], "relations": []},
     )
     monkeypatch.setattr(
         "tasks.pipeline_task.ontology_mapping_agent_with_diagnostics",

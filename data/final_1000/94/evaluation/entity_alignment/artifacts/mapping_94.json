@@ -1,0 +1,246 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/94/originals/extracted_94.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/94/ground_truth_94.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_dortoir_des_grandes": "http://example.org/entity/Dortoir_des_grandes",
+    "http://example.org/extracted/person_rene_clement": "http://example.org/entity/René_Clément",
+    "http://example.org/extracted/person_henri_decoin": "http://example.org/entity/Henri_Decoin",
+    "http://example.org/extracted/country_france": "http://example.org/entity/French"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        },
+        {
+          "text": "country france",
+          "source": "uri"
+        }
+      ],
+      "context": "French. inverse has nationality: Henri Decoin. inverse has nationality: René Clément.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/French",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "French",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "French",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "French",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9410610795021057,
+      "graph_score": 0.47053053975105286,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_dortoir_des_grandes",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dortoir des grandes",
+          "source": "label"
+        },
+        {
+          "text": "film dortoir des grandes",
+          "source": "uri"
+        }
+      ],
+      "context": "Dortoir des grandes. has director: Henri Decoin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dortoir_des_grandes",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dortoir des grandes",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dortoir des grandes",
+        "extracted_source": "label",
+        "ground_truth_text": "Dortoir des grandes",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6535398066043854
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_henri_decoin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henri Decoin",
+          "source": "label"
+        },
+        {
+          "text": "person henri decoin",
+          "source": "uri"
+        }
+      ],
+      "context": "Henri Decoin. has nationality: French. inverse has director: Dortoir des grandes.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Henri_Decoin",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Henri Decoin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henri Decoin",
+        "extracted_source": "label",
+        "ground_truth_text": "Henri Decoin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.971798837184906,
+      "graph_score": 0.6525660753250122,
+      "margin": 0.5649775862693787
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_rene_clement",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "René Clément",
+          "source": "label"
+        },
+        {
+          "text": "person rene clement",
+          "source": "uri"
+        }
+      ],
+      "context": "René Clément. has nationality: French. inverse has director: Is Paris Burning?.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/René_Clément",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "René Clément",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "René Clément",
+        "extracted_source": "label",
+        "ground_truth_text": "René Clément",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.921650230884552,
+      "graph_score": 0.460825115442276,
+      "margin": 0.5582443475723267
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_is_paris_burning",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Is Paris Burning?",
+          "source": "label"
+        },
+        {
+          "text": "film is paris burning",
+          "source": "uri"
+        }
+      ],
+      "context": "Is Paris Burning?. has director: René Clément.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Is_Paris_Burning_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Is Paris Burning film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film is paris burning",
+        "extracted_source": "uri",
+        "ground_truth_text": "Is Paris Burning film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9492634534835815,
+      "name_embedding_score": 0.9784073829650879,
+      "string_score": 0.8928571343421936,
+      "independent_identity_support": true,
+      "context_score": 0.8947641849517822,
+      "graph_score": 0.9473820924758911,
+      "margin": 0.7029130756855011
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

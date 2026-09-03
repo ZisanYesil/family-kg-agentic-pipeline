@@ -1,0 +1,164 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/807/originals/extracted_807.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/807/ground_truth_807.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_boosie_badazz": "http://example.org/entity/Lil_Boosie",
+    "http://example.org/extracted/song_show_da_world": "http://example.org/entity/Show_da_World"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_boosie_badazz",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lil Boosie",
+          "source": "altLabel"
+        },
+        {
+          "text": "Torrence Hatch Jr.",
+          "source": "altLabel"
+        },
+        {
+          "text": "Boosie Badazz",
+          "source": "label"
+        },
+        {
+          "text": "person boosie badazz",
+          "source": "uri"
+        }
+      ],
+      "context": "Lil Boosie. has birth place: Baton Rouge, Louisiana. inverse has performer: Show da World.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lil_Boosie",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lil Boosie",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lil Boosie",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Lil Boosie",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9713776111602783,
+      "graph_score": 0.9856888055801392,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_show_da_world",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Show da World",
+          "source": "label"
+        },
+        {
+          "text": "song show da world",
+          "source": "uri"
+        }
+      ],
+      "context": "Show da World. has performer: Lil Boosie.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Show_da_World",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Show da World",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Show da World",
+        "extracted_source": "label",
+        "ground_truth_text": "Show da World",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_baton_rouge_louisiana",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Baton Rouge, Louisiana",
+          "source": "label"
+        },
+        {
+          "text": "place baton rouge louisiana",
+          "source": "uri"
+        }
+      ],
+      "context": "Baton Rouge, Louisiana. inverse has birth place: Lil Boosie.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Baton_Rouge",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Baton Rouge",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Baton Rouge, Louisiana",
+        "extracted_source": "label",
+        "ground_truth_text": "Baton Rouge",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8838933110237122,
+      "name_embedding_score": 0.895132303237915,
+      "string_score": 0.7666666507720947,
+      "independent_identity_support": true,
+      "context_score": 0.9572840929031372,
+      "graph_score": 0.9786420464515686,
+      "margin": 0.8838933110237122
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

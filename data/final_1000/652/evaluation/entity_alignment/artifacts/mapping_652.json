@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/652/originals/extracted_652.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/652/ground_truth_652.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/bermudo_nunez": "http://example.org/entity/Bermudo_Núñez",
+    "http://example.org/extracted/oveco_nunez": "http://example.org/entity/Oveco_Núñez"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bermudo_nunez",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bermudo Núñez",
+          "source": "label"
+        },
+        {
+          "text": "bermudo nunez",
+          "source": "uri"
+        }
+      ],
+      "context": "Bermudo Núñez. has son: Fernando Bermúdez de Cea. inverse has brother: Oveco Núñez.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bermudo_Núñez",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bermudo Núñez",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bermudo Núñez",
+        "extracted_source": "label",
+        "ground_truth_text": "Bermudo Núñez",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9722481966018677,
+      "graph_score": 0.48612409830093384,
+      "margin": 0.41554105281829834
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/oveco_nunez",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Oveco Núñez",
+          "source": "label"
+        },
+        {
+          "text": "oveco nunez",
+          "source": "uri"
+        }
+      ],
+      "context": "Oveco Núñez. has brother: Bermudo Núñez.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Oveco_Núñez",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Oveco Núñez",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Oveco Núñez",
+        "extracted_source": "label",
+        "ground_truth_text": "Oveco Núñez",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9405341744422913,
+      "graph_score": 0.47026708722114563,
+      "margin": 0.41736727952957153
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/fernando_bermudez_de_cea",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fernando Bermúdez de Cea",
+          "source": "label"
+        },
+        {
+          "text": "fernando bermudez de cea",
+          "source": "uri"
+        }
+      ],
+      "context": "Fernando Bermúdez de Cea. inverse has son: Bermudo Núñez.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fernando_Bermúdez",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fernando Bermúdez",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fernando Bermúdez de Cea",
+        "extracted_source": "label",
+        "ground_truth_text": "Fernando Bermúdez",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7578047513961792,
+      "name_embedding_score": 0.8961086273193359,
+      "string_score": 0.7981707453727722,
+      "independent_identity_support": true,
+      "context_score": 0.8816620111465454,
+      "graph_score": 0.4408310055732727,
+      "margin": 0.3208628296852112
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

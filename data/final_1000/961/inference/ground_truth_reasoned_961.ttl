@@ -1,0 +1,24 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Road_Hard a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Adam_Carolla ;
+    ex:hasDirector entity:Adam_Carolla .
+
+entity:We_Are_the_Freaks a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Justin_Edgar ;
+    ex:hasDirector entity:Justin_Edgar .
+
+entity:Adam_Carolla a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1964-05-27"^^xsd:date .
+
+entity:Justin_Edgar a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1971-08-18"^^xsd:date .
+

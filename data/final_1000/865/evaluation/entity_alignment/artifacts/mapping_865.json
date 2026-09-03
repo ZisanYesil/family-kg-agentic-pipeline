@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/865/originals/extracted_865.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/865/ground_truth_865.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/_person_fernando_cortes": "http://example.org/entity/Fernando_Cortés",
+    "http://example.org/extracted/_film_my_three_merry_widows": "http://example.org/entity/My_Three_Merry_Widows",
+    "http://example.org/extracted/_person_maria_del_pilar_cordero": "http://example.org/entity/Mapy_Cortés"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/_film_my_three_merry_widows",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "My Three Merry Widows",
+          "source": "label"
+        },
+        {
+          "text": "film my three merry widows",
+          "source": "uri"
+        }
+      ],
+      "context": "My Three Merry Widows. has director: Fernando Cortés.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/My_Three_Merry_Widows",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "My Three Merry Widows",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "My Three Merry Widows",
+        "extracted_source": "label",
+        "ground_truth_text": "My Three Merry Widows",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_person_fernando_cortes",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fernando Cortés",
+          "source": "label"
+        },
+        {
+          "text": "person fernando cortes",
+          "source": "uri"
+        }
+      ],
+      "context": "Fernando Cortés. has birth date: 1909-10-04. has death date: 1979. has spouse: Mapy Cortés. inverse has director: My Three Merry Widows.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fernando_Cortés",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fernando Cortés",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fernando Cortés",
+        "extracted_source": "label",
+        "ground_truth_text": "Fernando Cortés",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8563836216926575,
+      "graph_score": 0.9281917810440063,
+      "margin": 0.37474524974823
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_person_maria_del_pilar_cordero",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mapy Cortés",
+          "source": "altLabel"
+        },
+        {
+          "text": "María del Pilar Cordero",
+          "source": "label"
+        },
+        {
+          "text": "person maria del pilar cordero",
+          "source": "uri"
+        }
+      ],
+      "context": "Mapy Cortés. inverse has spouse: Fernando Cortés.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mapy_Cortés",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mapy Cortés",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mapy Cortés",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Mapy Cortés",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.36286598443984985
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

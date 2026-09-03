@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/933/originals/extracted_933.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/933/ground_truth_933.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_sarunyoo_wongkrachang": "http://example.org/entity/Sarunyoo_Wongkrachang",
+    "http://example.org/extracted/film_kon_khon": "http://example.org/entity/Kon_Khon"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_kon_khon",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kon Khon",
+          "source": "label"
+        },
+        {
+          "text": "film kon khon",
+          "source": "uri"
+        }
+      ],
+      "context": "Kon Khon. has director: Sarunyu Wongkrachang.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kon_Khon",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kon Khon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kon Khon",
+        "extracted_source": "label",
+        "ground_truth_text": "Kon Khon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9923134446144104,
+      "graph_score": 0.9961566925048828,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_sarunyoo_wongkrachang",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sarunyu Wongkrachang",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sarunyoo Wongkrachang",
+          "source": "label"
+        },
+        {
+          "text": "person sarunyoo wongkrachang",
+          "source": "uri"
+        }
+      ],
+      "context": "Sarunyu Wongkrachang. has birth place: Bang Khonthi District, Samut Songkhram Province, Thailand. inverse has director: Kon Khon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sarunyoo_Wongkrachang",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sarunyoo Wongkrachang",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sarunyoo Wongkrachang",
+        "extracted_source": "label",
+        "ground_truth_text": "Sarunyoo Wongkrachang",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8882908225059509,
+      "graph_score": 0.9441454410552979,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_bang_konthi_district",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bang Khonthi District, Samut Songkhram Province, Thailand",
+          "source": "label"
+        },
+        {
+          "text": "place bang konthi district",
+          "source": "uri"
+        }
+      ],
+      "context": "Bang Khonthi District, Samut Songkhram Province, Thailand. inverse has birth place: Sarunyu Wongkrachang.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bang_Khonthi",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bang Khonthi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "place bang konthi district",
+        "extracted_source": "uri",
+        "ground_truth_text": "Bang Khonthi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6052876114845276,
+      "name_embedding_score": 0.5293704271316528,
+      "string_score": 0.46052631735801697,
+      "independent_identity_support": false,
+      "context_score": 0.8037665486335754,
+      "graph_score": 0.9018832445144653,
+      "margin": 0.6052876114845276
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

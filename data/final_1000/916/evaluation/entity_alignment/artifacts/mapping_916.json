@@ -1,0 +1,208 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/916/originals/extracted_916.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/916/ground_truth_916.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_jose_maria_forque": "http://example.org/entity/José_María_Forqué",
+    "http://example.org/extracted/film_searching_for_monica": "http://example.org/entity/Searching_for_Monica",
+    "http://example.org/extracted/film_hospital_massacre": "http://example.org/entity/Hospital_Massacre",
+    "http://example.org/extracted/person_boaz_davidson": "http://example.org/entity/Boaz_Davidson"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_hospital_massacre",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hospital Massacre",
+          "source": "label"
+        },
+        {
+          "text": "film hospital massacre",
+          "source": "uri"
+        }
+      ],
+      "context": "Hospital Massacre. has director: Boaz Davidson.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hospital_Massacre",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hospital Massacre",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hospital Massacre",
+        "extracted_source": "label",
+        "ground_truth_text": "Hospital Massacre",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.8704697340726852
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_searching_for_monica",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Buscando a Mónica",
+          "source": "altLabel"
+        },
+        {
+          "text": "Searching for Monica",
+          "source": "label"
+        },
+        {
+          "text": "film searching for monica",
+          "source": "uri"
+        }
+      ],
+      "context": "Buscando a Mónica. has director: José María Forqué Galindo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Searching_for_Monica",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Searching for Monica",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Searching for Monica",
+        "extracted_source": "label",
+        "ground_truth_text": "Searching for Monica",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8393816947937012,
+      "graph_score": 0.9196908473968506,
+      "margin": 0.831991508603096
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_boaz_davidson",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Boaz Davidson",
+          "source": "label"
+        },
+        {
+          "text": "person boaz davidson",
+          "source": "uri"
+        }
+      ],
+      "context": "Boaz Davidson. has birth date: 1943-11-08. inverse has director: Hospital Massacre.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Boaz_Davidson",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Boaz Davidson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Boaz Davidson",
+        "extracted_source": "label",
+        "ground_truth_text": "Boaz Davidson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7200003266334534
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_jose_maria_forque",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "José María Forqué Galindo",
+          "source": "altLabel"
+        },
+        {
+          "text": "José María Forqué",
+          "source": "label"
+        },
+        {
+          "text": "person jose maria forque",
+          "source": "uri"
+        }
+      ],
+      "context": "José María Forqué Galindo. has birth date: 1923-03-08. inverse has director: Buscando a Mónica.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/José_María_Forqué",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "José María Forqué",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "José María Forqué",
+        "extracted_source": "label",
+        "ground_truth_text": "José María Forqué",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8685768246650696,
+      "graph_score": 0.9342883825302124,
+      "margin": 0.7362414598464966
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

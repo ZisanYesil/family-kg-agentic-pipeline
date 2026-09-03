@@ -1,0 +1,16 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:song_dont_take_my_darling_boy_away a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Don't Take My Darling Boy Away" ;
+    onto:hasComposer data:person_albert_von_tilzer .
+
+data:person_albert_von_tilzer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Albert Von Tilzer" ;
+    onto:hasBirthDate "1878-03-29"^^xsd:date .
+

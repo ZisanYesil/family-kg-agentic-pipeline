@@ -1,0 +1,18 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Hans_Albrecht_Hereditary_Prince_of_Schleswig_Holstein a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Princess_Marie_Melita_of_Hohenlohe_Langenburg ;
+    ex:hasParent entity:Princess_Marie_Melita_of_Hohenlohe_Langenburg .
+
+entity:Ernst_II_Prince_of_Hohenlohe_Langenburg a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Princess_Marie_Melita_of_Hohenlohe_Langenburg .
+
+entity:Princess_Marie_Melita_of_Hohenlohe_Langenburg a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Hans_Albrecht_Hereditary_Prince_of_Schleswig_Holstein ;
+    ex:hasFather entity:Ernst_II_Prince_of_Hohenlohe_Langenburg ;
+    ex:hasParent entity:Ernst_II_Prince_of_Hohenlohe_Langenburg .
+

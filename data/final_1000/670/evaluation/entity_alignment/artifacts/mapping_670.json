@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/670/originals/extracted_670.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/670/ground_truth_670.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ferdinand_iv_of_castile": "http://example.org/entity/Ferdinand_IV_of_Castile",
+    "http://example.org/extracted/alfonso_xi_of_castile": "http://example.org/entity/Alfonso_XI_of_Castile",
+    "http://example.org/extracted/jaen": "http://example.org/entity/Jaén"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alfonso_xi_of_castile",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alfonso XI of Castile",
+          "source": "label"
+        }
+      ],
+      "context": "Alfonso XI of Castile. has father: Ferdinand IV of Castile.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alfonso_XI_of_Castile",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alfonso XI of Castile",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alfonso XI of Castile",
+        "extracted_source": "label",
+        "ground_truth_text": "Alfonso XI of Castile",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.31785887479782104
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ferdinand_iv_of_castile",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ferdinand IV of Castile",
+          "source": "label"
+        }
+      ],
+      "context": "Ferdinand IV of Castile. has death place: Jaén. inverse has father: Alfonso XI of Castile.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ferdinand_IV_of_Castile",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ferdinand IV of Castile",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ferdinand IV of Castile",
+        "extracted_source": "label",
+        "ground_truth_text": "Ferdinand IV of Castile",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.3280861973762512
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jaen",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jaén",
+          "source": "label"
+        },
+        {
+          "text": "jaen",
+          "source": "uri"
+        }
+      ],
+      "context": "Jaén. inverse has death place: Ferdinand IV of Castile.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jaén",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jaén",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jaén",
+        "extracted_source": "label",
+        "ground_truth_text": "Jaén",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

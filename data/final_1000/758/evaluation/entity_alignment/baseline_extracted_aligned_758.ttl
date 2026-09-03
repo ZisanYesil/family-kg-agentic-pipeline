@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Fatima_Maada_Bio> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fatima Maada Bio" ;
+    onto:hasSpouse <http://example.org/entity/Julius_Maada_Bio> .
+
+<http://example.org/entity/American_University> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "American University" .
+
+<http://example.org/entity/Julius_Maada_Bio> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Julius Maada Bio" ;
+    onto:hasEducatedAt <http://example.org/entity/American_University>,
+        data:benguema_military_academy .
+
+data:benguema_military_academy a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Benguema Military Academy" .
+

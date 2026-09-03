@@ -1,0 +1,187 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/818/originals/extracted_818.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/818/ground_truth_818.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/maria_antonieta_pons_person": "http://example.org/entity/María_Antonieta_Pons",
+    "http://example.org/extracted/beautiful_mexico_film": "http://example.org/entity/Beautiful_Mexico",
+    "http://example.org/extracted/ramon_pereda_person": "http://example.org/entity/Ramón_Pereda"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/beautiful_mexico_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Beautiful Mexico",
+          "source": "label"
+        },
+        {
+          "text": "beautiful mexico film",
+          "source": "uri"
+        }
+      ],
+      "context": "Beautiful Mexico. has director: Ramón Pereda.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Beautiful_Mexico",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Beautiful Mexico",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Beautiful Mexico",
+        "extracted_source": "label",
+        "ground_truth_text": "Beautiful Mexico",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/maria_antonieta_pons_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "María Antonieta Pons",
+          "source": "label"
+        },
+        {
+          "text": "maria antonieta pons person",
+          "source": "uri"
+        }
+      ],
+      "context": "María Antonieta Pons. inverse has spouse: Ramón Pereda.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/María_Antonieta_Pons",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "María Antonieta Pons",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "María Antonieta Pons",
+        "extracted_source": "label",
+        "ground_truth_text": "María Antonieta Pons",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6422569453716278
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ramon_pereda_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ramón Pereda",
+          "source": "label"
+        },
+        {
+          "text": "ramon pereda person",
+          "source": "uri"
+        }
+      ],
+      "context": "Ramón Pereda. has spouse: Adriana Lamar. has spouse: María Antonieta Pons. inverse has director: Beautiful Mexico.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ramón_Pereda",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ramón Pereda",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ramón Pereda",
+        "extracted_source": "label",
+        "ground_truth_text": "Ramón Pereda",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9489836692810059,
+      "graph_score": 0.9744918346405029,
+      "margin": 0.6341139674186707
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/adriana_lamar_person",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adriana Lamar",
+          "source": "label"
+        },
+        {
+          "text": "adriana lamar person",
+          "source": "uri"
+        }
+      ],
+      "context": "Adriana Lamar. inverse has spouse: Ramón Pereda.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

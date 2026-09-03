@@ -1,0 +1,151 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/521/originals/extracted_521.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/521/ground_truth_521.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/dillon_dam_brewery": "http://example.org/entity/Dillon_Dam_Brewery",
+    "http://example.org/extracted/united_states": "http://example.org/entity/United_States",
+    "http://example.org/extracted/ultra_diamonds": "http://example.org/entity/ULTRA_Diamonds"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/dillon_dam_brewery",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dillon Dam Brewery",
+          "source": "label"
+        }
+      ],
+      "context": "Dillon Dam Brewery. has country: U.S.A..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dillon_Dam_Brewery",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dillon Dam Brewery",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dillon Dam Brewery",
+        "extracted_source": "label",
+        "ground_truth_text": "Dillon Dam Brewery",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9583173394203186,
+      "graph_score": 0.4791586697101593,
+      "margin": 0.7290163636207581
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ultra_diamonds",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "ULTRA Diamonds",
+          "source": "label"
+        }
+      ],
+      "context": "ULTRA Diamonds. has country: U.S.A..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/ULTRA_Diamonds",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "ULTRA Diamonds",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "ULTRA Diamonds",
+        "extracted_source": "label",
+        "ground_truth_text": "ULTRA Diamonds",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9634162783622742,
+      "graph_score": 0.9817081689834595,
+      "margin": 0.8534487187862396
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "U.S.A.",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States of America",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "U.S.A.. inverse has country: Dillon Dam Brewery. inverse has country: ULTRA Diamonds.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_States",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United States",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "label",
+        "ground_truth_text": "United States",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8362257480621338,
+      "graph_score": 0.6681128740310669,
+      "margin": 0.2649519443511963
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/U_S_A"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/710/evaluation/entity_alignment/baseline_extracted_aligned_710.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/710/evaluation/entity_alignment/baseline_ground_truth_aligned_710.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Donald_G_Jackson",
+      "predicate": "hasBurialPlace",
+      "object": "Westwood_Village_Memorial_Park_Cemetery",
+      "subject_uri": "http://example.org/entity/Donald_G_Jackson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://example.org/entity/Westwood_Village_Memorial_Park_Cemetery"
+    },
+    {
+      "subject": "The_Roller_Blade_Seven",
+      "predicate": "hasDirector",
+      "object": "Donald_G_Jackson",
+      "subject_uri": "http://example.org/entity/The_Roller_Blade_Seven",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Donald_G_Jackson"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Donald_G_Jackson",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Donald_G_Jackson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Donald_G_Jackson",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Donald_G_Jackson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Donald_G_Jackson",
+      "predicate": "label",
+      "object": "\"Donald G. Jackson\"",
+      "subject_uri": "http://example.org/entity/Donald_G_Jackson",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Donald G. Jackson\""
+    },
+    {
+      "subject": "The_Roller_Blade_Seven",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Roller_Blade_Seven",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Roller_Blade_Seven",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Roller_Blade_Seven",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Roller_Blade_Seven",
+      "predicate": "label",
+      "object": "\"The Roller Blade Seven\"",
+      "subject_uri": "http://example.org/entity/The_Roller_Blade_Seven",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Roller Blade Seven\""
+    },
+    {
+      "subject": "Westwood_Village_Memorial_Park_Cemetery",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Westwood_Village_Memorial_Park_Cemetery",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Westwood_Village_Memorial_Park_Cemetery",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Westwood_Village_Memorial_Park_Cemetery",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Westwood_Village_Memorial_Park_Cemetery",
+      "predicate": "label",
+      "object": "\"Westwood Village Memorial Park Cemetery\"",
+      "subject_uri": "http://example.org/entity/Westwood_Village_Memorial_Park_Cemetery",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Westwood Village Memorial Park Cemetery\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

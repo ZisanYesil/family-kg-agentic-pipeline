@@ -1,0 +1,25 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/The_Crime_Doctor_s_Courage> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Crime Doctor's Courage" ;
+    onto:hasDirector <http://example.org/entity/George_Sherman> .
+
+<http://example.org/entity/Vasantha_Sena_1967_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Vasantha Sena (1967 film)" ;
+    onto:hasDirector <http://example.org/entity/B_S_Ranga> .
+
+<http://example.org/entity/B_S_Ranga> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "B. S. Ranga" ;
+    onto:hasDeathDate "2010-12-12"^^xsd:date .
+
+<http://example.org/entity/George_Sherman> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George Sherman" ;
+    onto:hasDeathDate "1991-03-15"^^xsd:date .
+

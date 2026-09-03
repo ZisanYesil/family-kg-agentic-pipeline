@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Matilda_of_Tuscany> a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse <http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine> .
+
+<http://example.org/entity/Ida_of_Lorraine> a ex:Agent,
+        ex:Person ;
+    ex:hasBrother <http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine> ;
+    ex:hasSibling <http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine> .
+
+<http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine> a ex:Agent,
+        ex:Person ;
+    ex:hasSibling <http://example.org/entity/Ida_of_Lorraine> ;
+    ex:hasSpouse <http://example.org/entity/Matilda_of_Tuscany> ;
+    ex:isBrotherOf <http://example.org/entity/Ida_of_Lorraine> .
+

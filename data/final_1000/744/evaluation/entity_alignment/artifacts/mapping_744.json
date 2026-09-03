@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/744/originals/extracted_744.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/744/ground_truth_744.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_las_tecnologias_pesqueras": "http://example.org/entity/Las_tecnologías_pesqueras",
+    "http://example.org/extracted/film_don_cesare_di_bazan": "http://example.org/entity/Don_Cesare_di_Bazan"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_don_cesare_di_bazan",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Don Cesare di Bazan",
+          "source": "label"
+        },
+        {
+          "text": "film don cesare di bazan",
+          "source": "uri"
+        }
+      ],
+      "context": "Don Cesare di Bazan. has publication date: 1942.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Don_Cesare_di_Bazan",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Don Cesare di Bazan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Don Cesare di Bazan",
+        "extracted_source": "label",
+        "ground_truth_text": "Don Cesare di Bazan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.8300070762634277
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_las_tecnologias_pesqueras",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Las tecnologías pesqueras",
+          "source": "label"
+        },
+        {
+          "text": "film las tecnologias pesqueras",
+          "source": "uri"
+        }
+      ],
+      "context": "Las tecnologías pesqueras. has publication date: 1975.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Las_tecnologías_pesqueras",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Las tecnologías pesqueras",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Las tecnologías pesqueras",
+        "extracted_source": "label",
+        "ground_truth_text": "Las tecnologías pesqueras",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.8489451706409454
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

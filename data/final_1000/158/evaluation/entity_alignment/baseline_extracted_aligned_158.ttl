@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Marie_of_Cleves_Duchess_of_Orléans> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marie of Cleves" ;
+    onto:hasMother <http://example.org/entity/Mary_of_Burgundy_Duchess_of_Cleves> .
+
+<http://example.org/entity/John_the_Fearless> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John the Fearless" .
+
+<http://example.org/entity/Mary_of_Burgundy_Duchess_of_Cleves> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mary of Burgundy" ;
+    onto:hasFather <http://example.org/entity/John_the_Fearless> ;
+    skos:altLabel "Marie of Burgundy, Duchess of Cleves" .
+

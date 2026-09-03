@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/460/originals/extracted_460.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/460/ground_truth_460.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/jean_arman_charlemagne": "http://example.org/entity/Jean_Armand_Charlemagne",
+    "http://example.org/extracted/john_ashburnham_2nd_earl_of_ashburnham": "http://example.org/entity/John_Ashburnham_2nd_Earl_of_Ashburnham"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/jean_arman_charlemagne",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jean Armand Charlemagne",
+          "source": "label"
+        },
+        {
+          "text": "jean arman charlemagne",
+          "source": "uri"
+        }
+      ],
+      "context": "Jean Armand Charlemagne. has birth date: 1753-11-30. has death date: 1838-03-06.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jean_Armand_Charlemagne",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jean Armand Charlemagne",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jean Armand Charlemagne",
+        "extracted_source": "label",
+        "ground_truth_text": "Jean Armand Charlemagne",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6112432181835175
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_ashburnham_2nd_earl_of_ashburnham",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Ashburnham, 2nd Earl of Ashburnham",
+          "source": "label"
+        },
+        {
+          "text": "john ashburnham 2nd earl of ashburnham",
+          "source": "uri"
+        }
+      ],
+      "context": "John Ashburnham, 2nd Earl of Ashburnham. has birth date: 1724-10-30. has death date: 1812-04-08.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Ashburnham_2nd_Earl_of_Ashburnham",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Ashburnham 2nd Earl of Ashburnham",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Ashburnham, 2nd Earl of Ashburnham",
+        "extracted_source": "label",
+        "ground_truth_text": "John Ashburnham 2nd Earl of Ashburnham",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9981754422187805,
+      "string_score": 0.9941558241844177,
+      "independent_identity_support": true,
+      "context_score": 0.9986382722854614,
+      "graph_score": 0.9986382722854614,
+      "margin": 0.6083544194698334
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

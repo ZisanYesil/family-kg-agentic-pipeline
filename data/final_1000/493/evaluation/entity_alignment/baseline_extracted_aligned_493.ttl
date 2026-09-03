@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Song_to_the_Siren> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Song to the Siren" ;
+    onto:hasPerformer <http://example.org/entity/Tim_Buckley> .
+
+<http://example.org/entity/Tim_Buckley> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tim Buckley" ;
+    onto:hasCauseOfDeath <http://example.org/entity/overdose> ;
+    skos:altLabel "Timothy Charles Buckley III" .
+
+<http://example.org/entity/overdose> a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "heroin overdose" .
+

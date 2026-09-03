@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Fast_Car> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Fast Car" ;
+    onto:hasPerformer <http://example.org/entity/Namie_Amuro> ;
+    skos:altLabel "Fast Car (Namie Amuro song)" .
+
+<http://example.org/entity/Naha_Okinawa> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Naha, Okinawa, Japan" .
+
+<http://example.org/entity/Namie_Amuro> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Namie Amuro" ;
+    onto:hasBirthPlace <http://example.org/entity/Naha_Okinawa> ;
+    skos:altLabel "Amuro" .
+

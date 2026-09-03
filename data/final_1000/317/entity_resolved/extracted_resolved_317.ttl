@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:princess_marie_alexandra_sh a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Marie Alexandra of Schleswig-Holstein" ;
+    onto:hasMother data:princess_marie_melita_hl ;
+    skos:altLabel "Marie Alexandra Caroline-Mathilde Viktoria Irene" .
+
+data:ernst_ii_hl a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ernst II, Prince of Hohenlohe-Langenburg" ;
+    skos:altLabel "Ernst II" .
+
+data:princess_marie_melita_hl a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Marie Melita of Hohenlohe-Langenburg" ;
+    onto:hasFather data:ernst_ii_hl ;
+    skos:altLabel "Marie Melita" .
+

@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:leicester_devereux_6th_viscount_hereford a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leicester Devereux, 6th Viscount Hereford" ;
+    onto:hasFather data:walter_devereux_5th_viscount_hereford .
+
+data:england a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "England" ;
+    skos:altLabel "English" .
+
+data:walter_devereux_5th_viscount_hereford a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Walter Devereux, 5th Viscount Hereford" ;
+    onto:hasCountry data:england .
+

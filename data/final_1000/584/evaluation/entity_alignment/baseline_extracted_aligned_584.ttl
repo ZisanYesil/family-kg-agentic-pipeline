@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Angel> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Angel" ;
+    onto:hasPerformer <http://example.org/entity/Sarah_Brightman> .
+
+<http://example.org/entity/Andrew_Lloyd_Webber> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Andrew Lloyd Webber" .
+
+<http://example.org/entity/Sarah_Brightman> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sarah Brightman" ;
+    onto:hasSpouse <http://example.org/entity/Andrew_Lloyd_Webber> .
+

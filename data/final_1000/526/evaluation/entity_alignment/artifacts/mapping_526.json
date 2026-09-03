@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/526/originals/extracted_526.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/526/ground_truth_526.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/li_zhong": "http://example.org/entity/Li_Zhong",
+    "http://example.org/extracted/zhangsun": "http://example.org/entity/Empress_Zhangsun",
+    "http://example.org/extracted/gao_zong": "http://example.org/entity/Gaozong"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/gao_zong",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Li Zhi",
+          "source": "altLabel"
+        },
+        {
+          "text": "Emperor Gaozong of Tang",
+          "source": "label"
+        },
+        {
+          "text": "gao zong",
+          "source": "uri"
+        }
+      ],
+      "context": "Li Zhi. has father: Li Zhong. inverse has mother: Empress Zhangsun.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gaozong",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gaozong",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "gao zong",
+        "extracted_source": "uri",
+        "ground_truth_text": "Gaozong",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.905048131942749,
+      "string_score": 0.41999998688697815,
+      "independent_identity_support": true,
+      "context_score": 0.8823127150535583,
+      "graph_score": 0.4411563575267792,
+      "margin": 0.3329463005065918
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/li_zhong",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Li Zhong",
+          "source": "label"
+        }
+      ],
+      "context": "Li Zhong. inverse has father: Li Zhi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Li_Zhong",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Li Zhong",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Li Zhong",
+        "extracted_source": "label",
+        "ground_truth_text": "Li Zhong",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7744722962379456,
+      "graph_score": 0.3872361481189728,
+      "margin": 0.5229285061359406
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/zhangsun",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Empress Zhangsun",
+          "source": "label"
+        },
+        {
+          "text": "zhangsun",
+          "source": "uri"
+        }
+      ],
+      "context": "Empress Zhangsun. has mother: Li Zhi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Empress_Zhangsun",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Empress Zhangsun",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Empress Zhangsun",
+        "extracted_source": "label",
+        "ground_truth_text": "Empress Zhangsun",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7671254277229309,
+      "graph_score": 0.38356271386146545,
+      "margin": 0.44689756631851196
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/369/evaluation/entity_alignment/final_extracted_aligned_369.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/369/evaluation/entity_alignment/final_ground_truth_aligned_369.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Pye_Min",
+      "predicate": "hasParent",
+      "object": "Thalun",
+      "subject_uri": "http://example.org/entity/Pye_Min",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Thalun"
+    },
+    {
+      "subject": "Pye_Min",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Pye_Min",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Pye_Min",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Pye_Min",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Thalun",
+      "predicate": "hasChild",
+      "object": "Pye_Min",
+      "subject_uri": "http://example.org/entity/Thalun",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Pye_Min"
+    },
+    {
+      "subject": "Thalun",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Thalun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Thalun",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Thalun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Anaukpetlun",
+      "predicate": "hasSibling",
+      "object": "Thalun",
+      "subject_uri": "http://example.org/entity/Anaukpetlun",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Thalun"
+    },
+    {
+      "subject": "Anaukpetlun",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Anaukpetlun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Anaukpetlun",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Anaukpetlun",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Thalun",
+      "predicate": "hasSibling",
+      "object": "Anaukpetlun",
+      "subject_uri": "http://example.org/entity/Thalun",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Anaukpetlun"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Thalun",
+      "predicate": "hasSibling",
+      "object": "minye_kyawswa_ii",
+      "subject_uri": "http://example.org/entity/Thalun",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/extracted/minye_kyawswa_ii"
+    },
+    {
+      "subject": "minye_kyawswa_ii",
+      "predicate": "hasSibling",
+      "object": "Thalun",
+      "subject_uri": "http://example.org/extracted/minye_kyawswa_ii",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Thalun"
+    },
+    {
+      "subject": "minye_kyawswa_ii",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/minye_kyawswa_ii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "minye_kyawswa_ii",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/minye_kyawswa_ii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 14,
+    "true_positives": 6,
+    "false_positives": 4,
+    "false_negatives": 4,
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1": 0.6
+  },
+  "stage": "post_inference"
+}

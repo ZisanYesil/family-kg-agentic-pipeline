@@ -1,0 +1,116 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/305/originals/extracted_305.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/305/ground_truth_305.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_michael_rubbo": "http://example.org/entity/Michael_Rubbo",
+    "http://example.org/extracted/film_margaret_atwood_once_in_august": "http://example.org/entity/Margaret_Atwood_Once_in_August"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_margaret_atwood_once_in_august",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Margaret Atwood: Once in August",
+          "source": "label"
+        },
+        {
+          "text": "film margaret atwood once in august",
+          "source": "uri"
+        }
+      ],
+      "context": "Margaret Atwood: Once in August. has director: Michael Rubbo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Margaret_Atwood_Once_in_August",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Margaret Atwood Once in August",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Margaret Atwood: Once in August",
+        "extracted_source": "label",
+        "ground_truth_text": "Margaret Atwood Once in August",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9842361807823181,
+      "string_score": 0.992622971534729,
+      "independent_identity_support": true,
+      "context_score": 0.9937078356742859,
+      "graph_score": 0.9968539476394653,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_michael_rubbo",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Michael Rubbo",
+          "source": "label"
+        },
+        {
+          "text": "person michael rubbo",
+          "source": "uri"
+        }
+      ],
+      "context": "Michael Rubbo. inverse has director: Margaret Atwood: Once in August.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Michael_Rubbo",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Michael Rubbo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Michael Rubbo",
+        "extracted_source": "label",
+        "ground_truth_text": "Michael Rubbo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7528917193412781,
+      "graph_score": 0.8764458894729614,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Fulbright_Scholarship"
+  ]
+}

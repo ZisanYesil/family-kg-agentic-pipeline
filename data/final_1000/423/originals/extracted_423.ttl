@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_school_in_the_mailbox a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "School in the Mailbox" ;
+    onto:hasDirector data:person_stanley_hawes .
+
+data:org_australian_national_film_board a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Australian National Film Board" ;
+    skos:altLabel "Australian Government's filmmaking body",
+        "Commonwealth Film Unit" .
+
+data:person_stanley_hawes a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Stanley Hawes" ;
+    onto:hasEmployer data:org_australian_national_film_board ;
+    skos:altLabel "Stanley Gilbert Hawes" .
+

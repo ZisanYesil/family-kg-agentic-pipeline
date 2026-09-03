@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Princess_Marie_of_Waldeck_and_Pyrmont> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/entity/Princess_Helena_of_Nassau> ;
+    ex:hasParent <http://example.org/entity/Princess_Helena_of_Nassau> .
+
+<http://example.org/entity/William_Duke_of_Nassau> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Princess_Helena_of_Nassau> .
+
+<http://example.org/entity/Princess_Helena_of_Nassau> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Princess_Marie_of_Waldeck_and_Pyrmont> ;
+    ex:hasFather <http://example.org/entity/William_Duke_of_Nassau> ;
+    ex:hasParent <http://example.org/entity/William_Duke_of_Nassau> .
+

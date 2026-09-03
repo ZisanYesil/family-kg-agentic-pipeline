@@ -1,0 +1,41 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_american_casino a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "American Casino" ;
+    onto:hasDirector data:person_leslie_cockburn ;
+    onto:hasPublicationDate "2009"^^xsd:gYear .
+
+data:award_dupont a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Alfred I. duPont– Columbia University Award" .
+
+data:award_emmy a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Emmy Award" .
+
+data:award_george_polk a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "George Polk Award" .
+
+data:award_hillman_prize a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "The Hillman Prize" .
+
+data:award_rf_kennedy_journalism a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Robert F. Kennedy Journalism Award" .
+
+data:person_leslie_cockburn a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leslie Cockburn" ;
+    onto:hasAwardReceived data:award_dupont,
+        data:award_emmy,
+        data:award_george_polk,
+        data:award_hillman_prize,
+        data:award_rf_kennedy_journalism .
+

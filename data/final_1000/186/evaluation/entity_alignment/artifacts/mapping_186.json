@@ -1,0 +1,151 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/186/originals/extracted_186.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/186/ground_truth_186.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/his_name_was_holy_ghost": "http://example.org/entity/His_Name_Was_Holy_Ghost",
+    "http://example.org/extracted/the_cop_in_blue_jeans": "http://example.org/entity/The_Cop_in_Blue_Jeans",
+    "http://example.org/extracted/italy": "http://example.org/entity/Italian"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 4,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/his_name_was_holy_ghost",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "His Name Was Holy Ghost",
+          "source": "label"
+        }
+      ],
+      "context": "His Name Was Holy Ghost. has country: Italian.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/His_Name_Was_Holy_Ghost",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "His Name Was Holy Ghost",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "His Name Was Holy Ghost",
+        "extracted_source": "label",
+        "ground_truth_text": "His Name Was Holy Ghost",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8990761041641235,
+      "graph_score": 0.44953805208206177,
+      "margin": 0.8634333908557892
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/italy",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Italian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Italy",
+          "source": "label"
+        }
+      ],
+      "context": "Italian. inverse has country: His Name Was Holy Ghost. inverse has country: The Cop In Blue Jeans.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Italian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Italian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Italian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Italian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9612200260162354,
+      "graph_score": 0.4806100130081177,
+      "margin": 0.5476295053958893
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_cop_in_blue_jeans",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Cop In Blue Jeans",
+          "source": "label"
+        }
+      ],
+      "context": "The Cop In Blue Jeans. has country: Italian.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Cop_in_Blue_Jeans",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Cop in Blue Jeans",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Cop In Blue Jeans",
+        "extracted_source": "label",
+        "ground_truth_text": "The Cop in Blue Jeans",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9997988343238831,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.978977382183075,
+      "graph_score": 0.4894886910915375,
+      "margin": 0.8705368041992188
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Spanish"
+  ]
+}

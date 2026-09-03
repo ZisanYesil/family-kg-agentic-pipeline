@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/798/originals/extracted_798.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/798/ground_truth_798.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/friedrich_duke": "http://example.org/entity/Friedrich_Duke_of_Schleswig_Holstein_Sonderburg_Glücksburg",
+    "http://example.org/extracted/louise_caroline": "http://example.org/entity/Princess_Louise_Caroline_of_Hesse_Kassel",
+    "http://example.org/extracted/prince_albert": "http://example.org/entity/Prince_Albert_of_Schleswig_Holstein_Sonderburg_Glücksburg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/friedrich_duke",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Friedrich, Duke of Schleswig-Holstein-Sonderburg-Glücksburg",
+          "source": "label"
+        },
+        {
+          "text": "friedrich duke",
+          "source": "uri"
+        }
+      ],
+      "context": "Friedrich, Duke of Schleswig-Holstein-Sonderburg-Glücksburg. has mother: Princess Louise Caroline of Hesse-Kassel. inverse has father: Prince Albert of Schleswig-Holstein-Sonderburg-Glücksburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Friedrich_Duke_of_Schleswig_Holstein_Sonderburg_Glücksburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Friedrich Duke of Schleswig Holstein Sonderburg Glücksburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Friedrich, Duke of Schleswig-Holstein-Sonderburg-Glücksburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Friedrich Duke of Schleswig Holstein Sonderburg Glücksburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8928306102752686,
+      "string_score": 0.9730769395828247,
+      "independent_identity_support": true,
+      "context_score": 0.8336218595504761,
+      "graph_score": 0.916810929775238,
+      "margin": 0.3255736231803894
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/louise_caroline",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Louise Caroline of Hesse-Kassel",
+          "source": "label"
+        },
+        {
+          "text": "louise caroline",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Louise Caroline of Hesse-Kassel. inverse has mother: Friedrich, Duke of Schleswig-Holstein-Sonderburg-Glücksburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Louise_Caroline_of_Hesse_Kassel",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Louise Caroline of Hesse Kassel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Louise Caroline of Hesse-Kassel",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Louise Caroline of Hesse Kassel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9889990091323853,
+      "string_score": 0.9887499809265137,
+      "independent_identity_support": true,
+      "context_score": 0.8996544480323792,
+      "graph_score": 0.9498271942138672,
+      "margin": 0.6021421849727631
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/prince_albert",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prince Albert of Schleswig-Holstein-Sonderburg-Glücksburg",
+          "source": "label"
+        },
+        {
+          "text": "prince albert",
+          "source": "uri"
+        }
+      ],
+      "context": "Prince Albert of Schleswig-Holstein-Sonderburg-Glücksburg. has father: Friedrich, Duke of Schleswig-Holstein-Sonderburg-Glücksburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prince_Albert_of_Schleswig_Holstein_Sonderburg_Glücksburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prince Albert of Schleswig Holstein Sonderburg Glücksburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prince Albert of Schleswig-Holstein-Sonderburg-Glücksburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Prince Albert of Schleswig Holstein Sonderburg Glücksburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9306849837303162,
+      "string_score": 0.9763157963752747,
+      "independent_identity_support": true,
+      "context_score": 0.7876541614532471,
+      "graph_score": 0.8938270807266235,
+      "margin": 0.3355860710144043
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

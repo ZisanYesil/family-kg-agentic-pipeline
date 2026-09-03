@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "cd307776abdf7bbb1adf734d2165b38d80bfc88e2285af041f65af9f7bc65e93",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/the_thorn_in_mrs_rose_side",
+        "path": null,
+        "value": "http://example.org/extracted/the_return_of_east_atlanta_santa",
+        "expected": null,
+        "message": "Relation phrase 'released earlier than' from http://example.org/extracted/the_thorn_in_mrs_rose_side to http://example.org/extracted/the_return_of_east_atlanta_santa was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "cd307776abdf7bbb1adf734d2165b38d80bfc88e2285af041f65af9f7bc65e93",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/the_thorn_in_mrs_rose_side",
+            "path": null,
+            "value": "http://example.org/extracted/the_return_of_east_atlanta_santa",
+            "expected": null,
+            "message": "Relation phrase 'released earlier than' from http://example.org/extracted/the_thorn_in_mrs_rose_side to http://example.org/extracted/the_return_of_east_atlanta_santa was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 8,
+      "feedback_reasoning": "The violation is an unmapped_relation stating that the work ‘The Thorn in Mrs. Rose's Side’ was released earlier than ‘The Return of East Atlanta Santa’. The source text confirms the dates (1968 vs. 2016). However, the supplied ontology does not contain any predicate whose documented meaning captures a temporal ordering relationship such as “released earlier than”. The only temporal predicate available is `onto:hasPublicationDate`, which records a date but does not express a comparative relation between two resources. Since no suitable ontology predicate exists, we cannot safely add, replace, or remove any triple to represent this relation.",
+      "repairs": [
+        {
+          "violation_fingerprint": "3956be2dd4bca970aa3bc447624ba226813a1e7407a45a984fe14f762ba646aa",
+          "reasoning": "No ontology predicate matches the phrase ‘released earlier than’; thus the relation cannot be represented.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "3956be2dd4bca970aa3bc447624ba226813a1e7407a45a984fe14f762ba646aa"
+      ],
+      "triples_after": 8,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "cd307776abdf7bbb1adf734d2165b38d80bfc88e2285af041f65af9f7bc65e93",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/the_thorn_in_mrs_rose_side",
+            "path": null,
+            "value": "http://example.org/extracted/the_return_of_east_atlanta_santa",
+            "expected": null,
+            "message": "Relation phrase 'released earlier than' from http://example.org/extracted/the_thorn_in_mrs_rose_side to http://example.org/extracted/the_return_of_east_atlanta_santa was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "cd307776abdf7bbb1adf734d2165b38d80bfc88e2285af041f65af9f7bc65e93",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/the_thorn_in_mrs_rose_side",
+        "path": null,
+        "value": "http://example.org/extracted/the_return_of_east_atlanta_santa",
+        "expected": null,
+        "message": "Relation phrase 'released earlier than' from http://example.org/extracted/the_thorn_in_mrs_rose_side to http://example.org/extracted/the_return_of_east_atlanta_santa was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

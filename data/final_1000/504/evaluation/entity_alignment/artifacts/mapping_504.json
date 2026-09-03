@@ -1,0 +1,122 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/504/originals/extracted_504.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/504/ground_truth_504.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/heart_of_paris_film": "http://example.org/entity/Heart_of_Paris",
+    "http://example.org/extracted/padithal_mattum_podhuma_film": "http://example.org/entity/Padithal_Mattum_Podhuma"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/heart_of_paris_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Coeur de Paris",
+          "source": "altLabel"
+        },
+        {
+          "text": "Heart of Paris",
+          "source": "label"
+        },
+        {
+          "text": "heart of paris film",
+          "source": "uri"
+        }
+      ],
+      "context": "Coeur de Paris. has publication date: 1932.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Heart_of_Paris",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Heart of Paris",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Heart of Paris",
+        "extracted_source": "label",
+        "ground_truth_text": "Heart of Paris",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8134058713912964,
+      "graph_score": 0.8134058713912964,
+      "margin": 0.8102080374956131
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/padithal_mattum_podhuma_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Padithaal Mattum Podhuma",
+          "source": "altLabel"
+        },
+        {
+          "text": "Padithal Mattum Podhuma",
+          "source": "label"
+        },
+        {
+          "text": "padithal mattum podhuma film",
+          "source": "uri"
+        }
+      ],
+      "context": "Padithaal Mattum Podhuma. has publication date: 1962-04-14.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Padithal_Mattum_Podhuma",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Padithal Mattum Podhuma",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Padithal Mattum Podhuma",
+        "extracted_source": "label",
+        "ground_truth_text": "Padithal Mattum Podhuma",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9369836449623108,
+      "graph_score": 0.9369836449623108,
+      "margin": 0.7985360622406006
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

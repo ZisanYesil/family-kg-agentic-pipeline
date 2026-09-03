@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:manoranjan_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Manoranjan" ;
+    onto:hasDirector data:shammi_kapoor .
+
+data:filmfare_best_actor_award_1968 a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Best Actor Award" .
+
+data:filmfare_best_supporting_actor_award_1982 a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Award for Best Supporting Actor" .
+
+data:shammi_kapoor a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Shammi Kapoor" ;
+    onto:hasAwardReceived data:filmfare_best_actor_award_1968,
+        data:filmfare_best_supporting_actor_award_1982 .
+

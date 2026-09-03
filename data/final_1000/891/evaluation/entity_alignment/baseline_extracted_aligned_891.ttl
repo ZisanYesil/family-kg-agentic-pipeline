@@ -1,0 +1,22 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Jorge_Sapag> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jorge Augusto Sapag" ;
+    onto:hasFather <http://example.org/entity/Elías_Sapag> ;
+    skos:altLabel "Jorge Sapag" .
+
+<http://example.org/entity/Elías_Sapag> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Elías Canaán Sapag" ;
+    onto:hasBirthPlace <http://example.org/entity/Mayrouba> ;
+    skos:altLabel "Elías Sapag" .
+
+<http://example.org/entity/Mayrouba> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Mayrouba, Lebanon" ;
+    skos:altLabel "Mayrouba" .
+

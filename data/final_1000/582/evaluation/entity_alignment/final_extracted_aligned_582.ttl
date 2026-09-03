@@ -1,0 +1,20 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Black_Birds> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasComposer <http://example.org/entity/Anđelko_Klobučar> ;
+    ex:hasCreator <http://example.org/entity/Anđelko_Klobučar> .
+
+<http://example.org/entity/Vladimir_Nazor_Award> a ex:Award .
+
+<http://example.org/extracted/porin_lifetime_award> a ex:Award .
+
+<http://example.org/entity/Anđelko_Klobučar> a ex:Agent,
+        ex:Person ;
+    ex:hasAwardReceived <http://example.org/entity/Vladimir_Nazor_Award>,
+        <http://example.org/extracted/porin_lifetime_award> ;
+    ex:hasBirthDate "1931-07-11"^^xsd:date ;
+    ex:hasDeathDate "2016-08-07"^^xsd:date .
+

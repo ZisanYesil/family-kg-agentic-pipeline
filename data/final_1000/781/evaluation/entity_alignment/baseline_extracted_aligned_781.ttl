@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Port_of_Seven_Seas> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Port of Seven Seas" ;
+    onto:hasDirector <http://example.org/entity/James_Whale> .
+
+<http://example.org/entity/James_Whale> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "James Whale" ;
+    onto:hasCauseOfDeath <http://example.org/entity/drowning> .
+
+<http://example.org/entity/drowning> a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "suicide" .
+

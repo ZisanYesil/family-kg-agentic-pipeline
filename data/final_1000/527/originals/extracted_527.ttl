@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:james_roosevelt_roosevelt a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "James Roosevelt Roosevelt" ;
+    onto:hasBrother data:franklin_d_roosevelt .
+
+data:eleanor_roosevelt a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Eleanor Roosevelt" .
+
+data:franklin_d_roosevelt a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Franklin Delano Roosevelt" ;
+    onto:hasSpouse data:eleanor_roosevelt .
+

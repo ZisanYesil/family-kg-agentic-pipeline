@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_come_and_see a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Come And See" ;
+    onto:hasCountryOfOrigin data:country_soviet_union .
+
+data:film_the_diplomatic_pouch a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Diplomatic Pouch" ;
+    onto:hasCountryOfOrigin data:country_soviet_union .
+
+data:country_soviet_union a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Soviet Union" ;
+    skos:altLabel "Soviet" .
+

@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/829/originals/extracted_829.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/829/ground_truth_829.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/monster_squad_film": "http://example.org/entity/The_Monster_Squad",
+    "http://example.org/extracted/deadly_little_christmas_film": "http://example.org/entity/Deadly_Little_Christmas"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/deadly_little_christmas_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Deadly Little Christmas",
+          "source": "label"
+        },
+        {
+          "text": "deadly little christmas film",
+          "source": "uri"
+        }
+      ],
+      "context": "Deadly Little Christmas. has publication date: 2009.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Deadly_Little_Christmas",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Deadly Little Christmas",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Deadly Little Christmas",
+        "extracted_source": "label",
+        "ground_truth_text": "Deadly Little Christmas",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.7762173712253571
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/monster_squad_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Monster Squad",
+          "source": "label"
+        },
+        {
+          "text": "monster squad film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Monster Squad. has publication date: 1987-08-14.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Monster_Squad",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Monster Squad",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Monster Squad",
+        "extracted_source": "label",
+        "ground_truth_text": "The Monster Squad",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9758979678153992,
+      "graph_score": 0.9758979678153992,
+      "margin": 0.7836261540651321
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

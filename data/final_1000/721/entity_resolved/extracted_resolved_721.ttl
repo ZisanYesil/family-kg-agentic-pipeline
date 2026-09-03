@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:john_ii_duke_of_cleves a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John II, Duke of Cleves" ;
+    onto:hasSpouse data:mathilde_of_hesse .
+
+data:cologne a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Cologne" .
+
+data:mathilde_of_hesse a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mathilde of Hesse" ;
+    onto:hasDeathPlace data:cologne .
+

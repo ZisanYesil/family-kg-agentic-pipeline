@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/679/originals/extracted_679.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/679/ground_truth_679.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/absalom_baird": "http://example.org/entity/Absalom_Baird",
+    "http://example.org/extracted/david_ashkenazi": "http://example.org/entity/David_Ashkenazi"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/absalom_baird",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Absalom Baird",
+          "source": "label"
+        }
+      ],
+      "context": "Absalom Baird. has birth date: 1824-08-20. has death date: 1905-06-14.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Absalom_Baird",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Absalom Baird",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Absalom Baird",
+        "extracted_source": "label",
+        "ground_truth_text": "Absalom Baird",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.5953768491744995
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/david_ashkenazi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Ashkenazi",
+          "source": "altLabel"
+        },
+        {
+          "text": "David Vladimirovitch Ashkenazi",
+          "source": "label"
+        }
+      ],
+      "context": "David Ashkenazi. has birth date: 1915-12-25. has death date: 1997-02-19.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/David_Ashkenazi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "David Ashkenazi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "David Ashkenazi",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "David Ashkenazi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.619484007358551
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

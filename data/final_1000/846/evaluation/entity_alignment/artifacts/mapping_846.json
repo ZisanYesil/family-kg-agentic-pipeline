@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/846/originals/extracted_846.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/846/ground_truth_846.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/do_frade_river": "http://example.org/entity/Do_Frade_River",
+    "http://example.org/extracted/brazil": "http://example.org/entity/Brazil",
+    "http://example.org/extracted/vermelho_river_manuel_alves_grande": "http://example.org/entity/Vermelho_River_Manuel_Alves_Grande_River"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/brazil",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Brazil",
+          "source": "label"
+        }
+      ],
+      "context": "Brazil. inverse has country: Do Frade River. inverse has country: Vermelho River (Manuel Alves Grande River).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Brazil",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Brazil",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Brazil",
+        "extracted_source": "label",
+        "ground_truth_text": "Brazil",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.995481550693512,
+      "graph_score": 0.9977407455444336,
+      "margin": 0.7547621726989746
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/do_frade_river",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Do Frade River",
+          "source": "label"
+        }
+      ],
+      "context": "Do Frade River. has country: Brazil.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Do_Frade_River",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Do Frade River",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Do Frade River",
+        "extracted_source": "label",
+        "ground_truth_text": "Do Frade River",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4366086721420288
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/vermelho_river_manuel_alves_grande",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vermelho River (Manuel Alves Grande River)",
+          "source": "label"
+        },
+        {
+          "text": "vermelho river manuel alves grande",
+          "source": "uri"
+        }
+      ],
+      "context": "Vermelho River (Manuel Alves Grande River). has country: Brazil.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vermelho_River_Manuel_Alves_Grande_River",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vermelho River Manuel Alves Grande River",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vermelho River (Manuel Alves Grande River)",
+        "extracted_source": "label",
+        "ground_truth_text": "Vermelho River Manuel Alves Grande River",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9662230610847473,
+      "string_score": 0.9890244007110596,
+      "independent_identity_support": true,
+      "context_score": 0.9776497483253479,
+      "graph_score": 0.9888248443603516,
+      "margin": 0.4344712495803833
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

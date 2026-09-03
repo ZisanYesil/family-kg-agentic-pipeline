@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/590/originals/extracted_590.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/590/ground_truth_590.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/mcgraw_electric": "http://example.org/entity/McGraw_Electric",
+    "http://example.org/extracted/max_mcgraw": "http://example.org/entity/Max_McGraw"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/max_mcgraw",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Max Mc Graw",
+          "source": "label"
+        },
+        {
+          "text": "max mcgraw",
+          "source": "uri"
+        }
+      ],
+      "context": "Max Mc Graw. has birth date: 1883-02-01. inverse has founder: Mc Graw Electric Company.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Max_McGraw",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Max Mc Graw",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Max Mc Graw",
+        "extracted_source": "label",
+        "ground_truth_text": "Max Mc Graw",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9835386872291565,
+      "graph_score": 0.9917693138122559,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mcgraw_electric",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mc Graw Electric Company",
+          "source": "altLabel"
+        },
+        {
+          "text": "Mc Graw Electric",
+          "source": "label"
+        },
+        {
+          "text": "mcgraw electric",
+          "source": "uri"
+        }
+      ],
+      "context": "Mc Graw Electric Company. has founder: Max Mc Graw.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/McGraw_Electric",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mc Graw Electric",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mc Graw Electric",
+        "extracted_source": "label",
+        "ground_truth_text": "Mc Graw Electric",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.973844051361084,
+      "graph_score": 0.986922025680542,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

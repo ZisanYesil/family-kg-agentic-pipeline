@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:the_famous_mrs_fair_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Famous Mrs. Fair" ;
+    onto:hasProducer data:louis_b_mayer_person .
+
+data:the_flame_barrier_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Flame Barrier" ;
+    onto:hasProducer data:arthur_gardner_person .
+
+data:arthur_gardner_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Arthur Gardner" ;
+    onto:hasBirthDate "1910-06-07"^^xsd:date ;
+    onto:hasDeathDate "2014-12-19"^^xsd:date .
+
+data:louis_b_mayer_person a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis B. Mayer" ;
+    onto:hasBirthDate "1884-07-12"^^xsd:date ;
+    onto:hasDeathDate "1957-10-29"^^xsd:date .
+

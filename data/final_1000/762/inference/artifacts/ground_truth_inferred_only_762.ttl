@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Blanche_of_France_Duchess_of_Orléans a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Jeanne_d_Évreux .
+
+entity:Louis_Count_of_Évreux a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Jeanne_d_Évreux .
+
+entity:Jeanne_d_Évreux a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Blanche_of_France_Duchess_of_Orléans ;
+    ex:hasParent entity:Louis_Count_of_Évreux .
+

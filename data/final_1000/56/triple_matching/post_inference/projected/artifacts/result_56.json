@@ -1,0 +1,91 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/56/evaluation/entity_alignment/final_extracted_aligned_56.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/56/evaluation/entity_alignment/final_ground_truth_aligned_56.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Heather_Headley",
+      "predicate": "hasAwardReceived",
+      "object": "Tony_Award_for_Best_Actress_in_a_Musical",
+      "subject_uri": "http://example.org/entity/Heather_Headley",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Tony_Award_for_Best_Actress_in_a_Musical"
+    },
+    {
+      "subject": "Heather_Headley",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Heather_Headley",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "In_My_Mind",
+      "predicate": "hasCreator",
+      "object": "Heather_Headley",
+      "subject_uri": "http://example.org/entity/In_My_Mind",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Heather_Headley"
+    },
+    {
+      "subject": "In_My_Mind",
+      "predicate": "hasPerformer",
+      "object": "Heather_Headley",
+      "subject_uri": "http://example.org/entity/In_My_Mind",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Heather_Headley"
+    },
+    {
+      "subject": "In_My_Mind",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/In_My_Mind",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "In_My_Mind",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/In_My_Mind",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Tony_Award_for_Best_Actress_in_a_Musical",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/Tony_Award_for_Best_Actress_in_a_Musical",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Heather_Headley",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Heather_Headley",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 8,
+    "true_positives": 7,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1": 0.9333333333333333
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,16 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:donatus_hesse a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Donatus, Landgrave of Hesse" ;
+    onto:hasFather data:moritz_hesse .
+
+data:moritz_hesse a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Moritz, Landgrave of Hesse" ;
+    onto:hasBirthDate "1926-08-06"^^xsd:date .
+

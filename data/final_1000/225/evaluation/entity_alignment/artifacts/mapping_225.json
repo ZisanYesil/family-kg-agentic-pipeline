@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/225/originals/extracted_225.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/225/ground_truth_225.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/princess_margaret": "http://example.org/entity/Princess_Margaret",
+    "http://example.org/extracted/stroke": "http://example.org/entity/stroke"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/princess_margaret",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Margaret, Countess of Snowdon",
+          "source": "label"
+        },
+        {
+          "text": "princess margaret",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Margaret, Countess of Snowdon. has cause of death: stroke. inverse has mother: Lady Sarah Chatto.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Margaret",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Margaret",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "princess margaret",
+        "extracted_source": "uri",
+        "ground_truth_text": "Princess Margaret",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.7534768581390381,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9114183187484741,
+      "graph_score": 0.9557091593742371,
+      "margin": 0.5740579664707184
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/stroke",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "stroke",
+          "source": "label"
+        }
+      ],
+      "context": "stroke. inverse has cause of death: Princess Margaret, Countess of Snowdon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/stroke",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "stroke",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "stroke",
+        "extracted_source": "label",
+        "ground_truth_text": "stroke",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.891589343547821,
+      "graph_score": 0.9457947015762329,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lady_sarah_chatto",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lady Sarah Chatto",
+          "source": "label"
+        }
+      ],
+      "context": "Lady Sarah Chatto. has mother: Princess Margaret, Countess of Snowdon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lady_Sarah_Frances_Elizabeth_Chatto",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lady Sarah Frances Elizabeth Chatto",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lady Sarah Chatto",
+        "extracted_source": "label",
+        "ground_truth_text": "Lady Sarah Frances Elizabeth Chatto",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8462464213371277,
+      "name_embedding_score": 0.8545604348182678,
+      "string_score": 0.7442307472229004,
+      "independent_identity_support": true,
+      "context_score": 0.8632684946060181,
+      "graph_score": 0.931634247303009,
+      "margin": 0.4780998229980469
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

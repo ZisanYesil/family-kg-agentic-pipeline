@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/895/evaluation/entity_alignment/baseline_extracted_aligned_895.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/895/evaluation/entity_alignment/baseline_ground_truth_aligned_895.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Patricia_Ann_Davis",
+      "predicate": "hasParent",
+      "object": "Nancy_Davis_Reagan",
+      "subject_uri": "http://example.org/entity/Patricia_Ann_Davis",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Nancy_Davis_Reagan"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Nancy_Davis_Reagan",
+      "predicate": "hasDeathPlace",
+      "object": "Bel_Air",
+      "subject_uri": "http://example.org/entity/Nancy_Davis_Reagan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Bel_Air"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Nancy_Davis_Reagan",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Nancy_Davis_Reagan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Nancy_Davis_Reagan",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Nancy_Davis_Reagan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Nancy_Davis_Reagan",
+      "predicate": "label",
+      "object": "\"Nancy Reagan\"",
+      "subject_uri": "http://example.org/entity/Nancy_Davis_Reagan",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Nancy Reagan\""
+    },
+    {
+      "subject": "Nancy_Davis_Reagan",
+      "predicate": "altLabel",
+      "object": "\"Anne Frances Robbins\"",
+      "subject_uri": "http://example.org/entity/Nancy_Davis_Reagan",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Anne Frances Robbins\""
+    },
+    {
+      "subject": "Nancy_Davis_Reagan",
+      "predicate": "altLabel",
+      "object": "\"Nancy Davis Reagan\"",
+      "subject_uri": "http://example.org/entity/Nancy_Davis_Reagan",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Nancy Davis Reagan\""
+    },
+    {
+      "subject": "Patricia_Ann_Davis",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Patricia_Ann_Davis",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Patricia_Ann_Davis",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Patricia_Ann_Davis",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Patricia_Ann_Davis",
+      "predicate": "label",
+      "object": "\"Patti Davis\"",
+      "subject_uri": "http://example.org/entity/Patricia_Ann_Davis",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Patti Davis\""
+    },
+    {
+      "subject": "Patricia_Ann_Davis",
+      "predicate": "altLabel",
+      "object": "\"Patricia Ann Davis\"",
+      "subject_uri": "http://example.org/entity/Patricia_Ann_Davis",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Patricia Ann Davis\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 1,
+    "false_positives": 9,
+    "false_negatives": 1,
+    "precision": 0.1,
+    "recall": 0.5,
+    "f1": 0.16666666666666669
+  },
+  "stage": "pre_inference"
+}

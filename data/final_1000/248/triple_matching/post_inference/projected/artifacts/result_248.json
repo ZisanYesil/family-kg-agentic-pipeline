@@ -1,0 +1,98 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/248/evaluation/entity_alignment/final_extracted_aligned_248.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/248/evaluation/entity_alignment/final_ground_truth_aligned_248.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "George_McCowan",
+      "predicate": "hasCauseOfDeath",
+      "object": "emphysema",
+      "subject_uri": "http://example.org/entity/George_McCowan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+      "object_term": "http://example.org/entity/emphysema"
+    },
+    {
+      "subject": "George_McCowan",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/George_McCowan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "George_McCowan",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/George_McCowan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Starsky_and_Hutch_on_Playboy_Island",
+      "predicate": "hasCreator",
+      "object": "George_McCowan",
+      "subject_uri": "http://example.org/entity/Starsky_and_Hutch_on_Playboy_Island",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/George_McCowan"
+    },
+    {
+      "subject": "Starsky_and_Hutch_on_Playboy_Island",
+      "predicate": "hasDirector",
+      "object": "George_McCowan",
+      "subject_uri": "http://example.org/entity/Starsky_and_Hutch_on_Playboy_Island",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/George_McCowan"
+    },
+    {
+      "subject": "Starsky_and_Hutch_on_Playboy_Island",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Starsky_and_Hutch_on_Playboy_Island",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Starsky_and_Hutch_on_Playboy_Island",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Starsky_and_Hutch_on_Playboy_Island",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Starsky_and_Hutch_on_Playboy_Island",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Starsky_and_Hutch_on_Playboy_Island",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "emphysema",
+      "predicate": "type",
+      "object": "CauseOfDeath",
+      "subject_uri": "http://example.org/entity/emphysema",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CauseOfDeath"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 9,
+    "true_positives": 9,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/130/evaluation/entity_alignment/baseline_extracted_aligned_130.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/130/evaluation/entity_alignment/baseline_ground_truth_aligned_130.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Daawat_e_Ishq",
+      "predicate": "hasDirector",
+      "object": "Habib_Faisal",
+      "subject_uri": "http://example.org/entity/Daawat_e_Ishq",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Habib_Faisal"
+    },
+    {
+      "subject": "Habib_Faisal",
+      "predicate": "hasEducatedAt",
+      "object": "Jamia_Millia_Islamia",
+      "subject_uri": "http://example.org/entity/Habib_Faisal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Jamia_Millia_Islamia"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Daawat_e_Ishq",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Daawat_e_Ishq",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Daawat_e_Ishq",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Daawat_e_Ishq",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Daawat_e_Ishq",
+      "predicate": "label",
+      "object": "\"Daawat-e-Ishq\"",
+      "subject_uri": "http://example.org/entity/Daawat_e_Ishq",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Daawat-e-Ishq\""
+    },
+    {
+      "subject": "Habib_Faisal",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Habib_Faisal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Habib_Faisal",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Habib_Faisal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Habib_Faisal",
+      "predicate": "label",
+      "object": "\"Habib Faisal\"",
+      "subject_uri": "http://example.org/entity/Habib_Faisal",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Habib Faisal\""
+    },
+    {
+      "subject": "Jamia_Millia_Islamia",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Jamia_Millia_Islamia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Jamia_Millia_Islamia",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jamia_Millia_Islamia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jamia_Millia_Islamia",
+      "predicate": "label",
+      "object": "\"Jamia Millia Islamia\"",
+      "subject_uri": "http://example.org/entity/Jamia_Millia_Islamia",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jamia Millia Islamia\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

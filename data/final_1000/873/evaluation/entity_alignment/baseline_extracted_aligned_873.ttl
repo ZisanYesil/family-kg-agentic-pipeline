@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Secrets_of_a_Door_to_Door_Salesman> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Secrets of a Door-to-Door Salesman" ;
+    onto:hasDirector <http://example.org/entity/Wolf_Rilla> .
+
+<http://example.org/entity/Wolf_Rilla> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Wolf Rilla" ;
+    onto:hasNationality data:country_germany .
+
+data:country_germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German" .
+

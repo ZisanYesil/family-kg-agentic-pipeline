@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/547/originals/extracted_547.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/547/ground_truth_547.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/switzerland": "http://example.org/entity/Swiss",
+    "http://example.org/extracted/nestle": "http://example.org/entity/Nestlé",
+    "http://example.org/extracted/bottle_caps_candy": "http://example.org/entity/Bottle_Caps"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/bottle_caps_candy",
+      "extracted_types": [
+        "Product"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bottle Caps (candy)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Bottle Caps",
+          "source": "label"
+        },
+        {
+          "text": "bottle caps candy",
+          "source": "uri"
+        }
+      ],
+      "context": "Bottle Caps (candy). has manufacturer: Nestlé.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bottle_Caps",
+      "ground_truth_types": [
+        "Product"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bottle Caps",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bottle Caps",
+        "extracted_source": "label",
+        "ground_truth_text": "Bottle Caps",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9387386441230774,
+      "graph_score": 0.9693692922592163,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/nestle",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nestlé",
+          "source": "altLabel"
+        },
+        {
+          "text": "Nestlé S.A.",
+          "source": "altLabel"
+        },
+        {
+          "text": "nestle",
+          "source": "uri"
+        }
+      ],
+      "context": "Nestlé. has country: Swiss. inverse has manufacturer: Bottle Caps (candy).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nestlé",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nestlé",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nestlé",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Nestlé",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9727960824966431,
+      "graph_score": 0.9863980412483215,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/switzerland",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Swiss",
+          "source": "altLabel"
+        },
+        {
+          "text": "Switzerland",
+          "source": "label"
+        }
+      ],
+      "context": "Swiss. inverse has country: Nestlé.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Swiss",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Swiss",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Swiss",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Swiss",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

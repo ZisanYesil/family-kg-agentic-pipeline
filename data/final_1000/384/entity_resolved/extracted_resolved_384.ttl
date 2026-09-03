@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:anna_of_saxony_1836 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Anna of Saxony (1836–1859)" ;
+    onto:hasMother data:amalie_auguste_of_bavaria .
+
+data:amalie_auguste_of_bavaria a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Amalie Auguste of Bavaria" ;
+    onto:hasBirthPlace data:munich .
+
+data:munich a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Munich" .
+

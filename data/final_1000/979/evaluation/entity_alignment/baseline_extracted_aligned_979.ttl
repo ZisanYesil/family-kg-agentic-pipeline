@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/The_Phantom_of_the_Operetta> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Phantom of the Operetta (1960 film)" ;
+    onto:hasDirector <http://example.org/entity/Fernando_Cortés> .
+
+<http://example.org/entity/Fernando_Cortés> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fernando Cortés" ;
+    onto:hasSpouse <http://example.org/entity/Mapy_Cortés> ;
+    skos:altLabel "Fernando \"Papi\" Cortés" .
+
+<http://example.org/entity/Mapy_Cortés> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "María del Pilar Cordero" ;
+    skos:altLabel "Mapy Cortés" .
+

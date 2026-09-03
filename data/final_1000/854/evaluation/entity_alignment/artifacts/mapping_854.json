@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/854/originals/extracted_854.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/854/ground_truth_854.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_world_and_time_enough": "http://example.org/entity/World_and_Time_Enough",
+    "http://example.org/extracted/eric_mueller": "http://example.org/entity/Eric_Mueller",
+    "http://example.org/extracted/united_states": "http://example.org/entity/United_States"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/eric_mueller",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eric Mueller",
+          "source": "label"
+        }
+      ],
+      "context": "Eric Mueller. has nationality: United States. inverse has director: World And Time Enough.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eric_Mueller",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eric Mueller",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eric Mueller",
+        "extracted_source": "label",
+        "ground_truth_text": "Eric Mueller",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9641122221946716,
+      "graph_score": 0.648722767829895,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_world_and_time_enough",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "World And Time Enough",
+          "source": "label"
+        },
+        {
+          "text": "film world and time enough",
+          "source": "uri"
+        }
+      ],
+      "context": "World And Time Enough. has director: Eric Mueller.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/World_and_Time_Enough",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "World and Time Enough",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "World And Time Enough",
+        "extracted_source": "label",
+        "ground_truth_text": "World and Time Enough",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9996390342712402,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9994378685951233,
+      "graph_score": 0.9997189044952393,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "United States. inverse has nationality: Eric Mueller.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_States",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United States",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "label",
+        "ground_truth_text": "United States",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9401090741157532,
+      "graph_score": 0.4700545370578766,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/72/originals/extracted_72.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/72/ground_truth_72.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_roel_reine": "http://example.org/entity/Roel_Reiné",
+    "http://example.org/extracted/film_pistol_whipped": "http://example.org/entity/Pistol_Whipped"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_pistol_whipped",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pistol Whipped",
+          "source": "label"
+        },
+        {
+          "text": "film pistol whipped",
+          "source": "uri"
+        }
+      ],
+      "context": "Pistol Whipped. has director: Roel Reiné.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pistol_Whipped",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pistol Whipped",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pistol Whipped",
+        "extracted_source": "label",
+        "ground_truth_text": "Pistol Whipped",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_roel_reine",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Roel Reiné",
+          "source": "label"
+        },
+        {
+          "text": "person roel reine",
+          "source": "uri"
+        }
+      ],
+      "context": "Roel Reiné. has birth place: Eindhoven. inverse has director: Pistol Whipped.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Roel_Reiné",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Roel Reiné",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Roel Reiné",
+        "extracted_source": "label",
+        "ground_truth_text": "Roel Reiné",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.907607913017273,
+      "graph_score": 0.9538039565086365,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_eindhoven",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eindhoven",
+          "source": "label"
+        },
+        {
+          "text": "place eindhoven",
+          "source": "uri"
+        }
+      ],
+      "context": "Eindhoven. inverse has birth place: Roel Reiné.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dutch",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dutch",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eindhoven",
+        "extracted_source": "label",
+        "ground_truth_text": "Dutch",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5596836805343628,
+      "name_embedding_score": 0.5907548069953918,
+      "string_score": 0.12857143580913544,
+      "independent_identity_support": false,
+      "context_score": 0.8573076725006104,
+      "graph_score": 0.9286538362503052,
+      "margin": 0.5596836805343628
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

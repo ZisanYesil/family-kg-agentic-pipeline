@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/835/originals/extracted_835.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/835/ground_truth_835.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ruth_m_kirk": "http://example.org/entity/Ruth_M_Kirk",
+    "http://example.org/extracted/theron_strinden": "http://example.org/entity/Theron_Strinden"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ruth_m_kirk",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ruth M. Kirk",
+          "source": "label"
+        },
+        {
+          "text": "ruth m kirk",
+          "source": "uri"
+        }
+      ],
+      "context": "Ruth M. Kirk. has birth date: 1930-02-02. has death date: 2011-06-17.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ruth_M_Kirk",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ruth M Kirk",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ruth M. Kirk",
+        "extracted_source": "label",
+        "ground_truth_text": "Ruth M Kirk",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9906365871429443,
+      "string_score": 0.980434775352478,
+      "independent_identity_support": true,
+      "context_score": 0.9970940351486206,
+      "graph_score": 0.9970940351486206,
+      "margin": 0.6358048617839813
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/theron_strinden",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Theron Strinden",
+          "source": "label"
+        }
+      ],
+      "context": "Theron Strinden. has birth date: 1919-05-26. has death date: 2011-03-03.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Theron_Strinden",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Theron Strinden",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Theron Strinden",
+        "extracted_source": "label",
+        "ground_truth_text": "Theron Strinden",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7685825079679489
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

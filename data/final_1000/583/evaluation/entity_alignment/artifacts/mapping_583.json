@@ -1,0 +1,109 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/583/originals/extracted_583.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/583/ground_truth_583.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/tim_russert": "http://example.org/entity/Tim_Russert"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/tim_russert",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tim Russert",
+          "source": "label"
+        }
+      ],
+      "context": "Tim Russert. has birth date: 1950-05-07. inverse has presenter: Tim Russert (talk show).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tim_Russert",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tim Russert",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tim Russert",
+        "extracted_source": "label",
+        "ground_truth_text": "Tim Russert",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9601283669471741,
+      "graph_score": 0.9601283669471741,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tim_russert_talk_show",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tim Russert (talk show)",
+          "source": "label"
+        },
+        {
+          "text": "tim russert talk show",
+          "source": "uri"
+        }
+      ],
+      "context": "Tim Russert (talk show). has presenter: Tim Russert.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Timothy_John_Russert",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Timothy John Russert",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tim Russert (talk show)",
+        "extracted_source": "label",
+        "ground_truth_text": "Timothy John Russert",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.6677454113960266,
+      "name_embedding_score": 0.6688528656959534,
+      "string_score": 0.37189921736717224,
+      "independent_identity_support": false,
+      "context_score": 0.9227532744407654,
+      "graph_score": 0.9613766670227051,
+      "margin": 0.6677454113960266
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_secrets_of_a_door_to_door_salesman a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Secrets of a Door-to-Door Salesman" ;
+    onto:hasDirector data:person_wolf_rilla .
+
+data:country_germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German" .
+
+data:person_wolf_rilla a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Wolf Rilla" ;
+    onto:hasNationality data:country_germany .
+

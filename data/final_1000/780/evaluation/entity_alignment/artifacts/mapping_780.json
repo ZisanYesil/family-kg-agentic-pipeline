@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/780/originals/extracted_780.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/780/ground_truth_780.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/humphry_sibthorp_botanist": "http://example.org/entity/Humphry_Waldo_Sibthorp",
+    "http://example.org/extracted/john_sibthorpe": "http://example.org/entity/John_Sibthorpe"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/humphry_sibthorp_botanist",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Humphry Sibthorp (botanist)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Humphry Waldo Sibthorp",
+          "source": "label"
+        },
+        {
+          "text": "humphry sibthorp botanist",
+          "source": "uri"
+        }
+      ],
+      "context": "Humphry Sibthorp (botanist). has father: John Sibthorpe.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Humphry_Waldo_Sibthorp",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Humphry Waldo Sibthorp",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Humphry Waldo Sibthorp",
+        "extracted_source": "label",
+        "ground_truth_text": "Humphry Waldo Sibthorp",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9448052644729614,
+      "graph_score": 0.9724026322364807,
+      "margin": 0.43299567699432373
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_sibthorpe",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Sibthorpe",
+          "source": "label"
+        }
+      ],
+      "context": "John Sibthorpe. has educated at: Christ Church, Oxford. inverse has father: Humphry Sibthorp (botanist).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Sibthorpe",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Sibthorpe",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Sibthorpe",
+        "extracted_source": "label",
+        "ground_truth_text": "John Sibthorpe",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9418980479240417,
+      "graph_score": 0.9709490537643433,
+      "margin": 0.42409849166870117
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/christ_church_oxford",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Christ Church, Oxford",
+          "source": "label"
+        },
+        {
+          "text": "christ church oxford",
+          "source": "uri"
+        }
+      ],
+      "context": "Christ Church, Oxford. inverse has educated at: John Sibthorpe.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Christ_Church",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Christ Church",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Christ Church, Oxford",
+        "extracted_source": "label",
+        "ground_truth_text": "Christ Church",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8527354598045349,
+      "name_embedding_score": 0.8159497976303101,
+      "string_score": 0.8107843399047852,
+      "independent_identity_support": true,
+      "context_score": 0.9365158081054688,
+      "graph_score": 0.9682579040527344,
+      "margin": 0.8527354598045349
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

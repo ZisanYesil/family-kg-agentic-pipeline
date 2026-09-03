@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/34/originals/extracted_34.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/34/ground_truth_34.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/circus_herman_renz_org": "http://example.org/entity/Circus_Herman_Renz",
+    "http://example.org/extracted/besix_org": "http://example.org/entity/BESIX"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/besix_org",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "BESIX Group",
+          "source": "altLabel"
+        },
+        {
+          "text": "BESIX",
+          "source": "label"
+        },
+        {
+          "text": "besix org",
+          "source": "uri"
+        }
+      ],
+      "context": "BESIX Group. has inception: 1909.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/BESIX",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "BESIX",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "BESIX",
+        "extracted_source": "label",
+        "ground_truth_text": "BESIX",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9178338050842285,
+      "graph_score": 0.9178338050842285,
+      "margin": 0.7712596356868744
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/circus_herman_renz_org",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Circus Herman Renz",
+          "source": "label"
+        },
+        {
+          "text": "circus herman renz org",
+          "source": "uri"
+        }
+      ],
+      "context": "Circus Herman Renz. has inception: 1911.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Circus_Herman_Renz",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Circus Herman Renz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Circus Herman Renz",
+        "extracted_source": "label",
+        "ground_truth_text": "Circus Herman Renz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.761752724647522
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

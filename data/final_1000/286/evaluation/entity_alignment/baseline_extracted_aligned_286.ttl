@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Workers_Settlement> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Workers' Settlement" ;
+    onto:hasDirector <http://example.org/entity/Vladimir_Vengerov> .
+
+<http://example.org/entity/People_s_Artist_of_the_RSFSR> a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "People's Artist of the RSFSR" .
+
+<http://example.org/entity/Vladimir_Vengerov> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Vladimir Vengerov" ;
+    onto:hasAwardReceived <http://example.org/entity/People_s_Artist_of_the_RSFSR> ;
+    skos:altLabel "Vladimir Yakovlevich Vengerov" .
+

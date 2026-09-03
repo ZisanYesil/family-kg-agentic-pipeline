@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/26/originals/extracted_26.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/26/ground_truth_26.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/cause_laryngeal_cancer": "http://example.org/entity/laryngeal_cancer",
+    "http://example.org/extracted/song_oh_boy_oh_boy_oh_boy": "http://example.org/entity/Oh_boy_oh_boy_oh_boy",
+    "http://example.org/extracted/person_lasse_dahlquist": "http://example.org/entity/Lasse_Dahlquist"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/cause_laryngeal_cancer",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "laryngeal cancer",
+          "source": "label"
+        },
+        {
+          "text": "cause laryngeal cancer",
+          "source": "uri"
+        }
+      ],
+      "context": "laryngeal cancer. inverse has cause of death: Lasse Dahlquist.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/laryngeal_cancer",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "laryngeal cancer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "laryngeal cancer",
+        "extracted_source": "label",
+        "ground_truth_text": "laryngeal cancer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_lasse_dahlquist",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lasse Dahlquist",
+          "source": "label"
+        },
+        {
+          "text": "person lasse dahlquist",
+          "source": "uri"
+        }
+      ],
+      "context": "Lasse Dahlquist. has cause of death: laryngeal cancer. inverse has performer: Oh boy, oh boy, oh boy!.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lasse_Dahlquist",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lasse Dahlquist",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lasse Dahlquist",
+        "extracted_source": "label",
+        "ground_truth_text": "Lasse Dahlquist",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9949524998664856,
+      "graph_score": 0.9974762201309204,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_oh_boy_oh_boy_oh_boy",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Oh boy, oh boy, oh boy!",
+          "source": "label"
+        },
+        {
+          "text": "song oh boy oh boy oh boy",
+          "source": "uri"
+        }
+      ],
+      "context": "Oh boy, oh boy, oh boy!. has performer: Lasse Dahlquist.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Oh_boy_oh_boy_oh_boy",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Oh boy oh boy oh boy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Oh boy, oh boy, oh boy!",
+        "extracted_source": "label",
+        "ground_truth_text": "Oh boy oh boy oh boy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9551348090171814,
+      "string_score": 0.9686046242713928,
+      "independent_identity_support": true,
+      "context_score": 0.9886698722839355,
+      "graph_score": 0.9943349361419678,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

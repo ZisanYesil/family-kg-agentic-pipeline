@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:catherine_allegret a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Catherine Allégret" ;
+    onto:hasFather data:yves_allegret .
+
+data:marc_allegret a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marc Allégret" .
+
+data:yves_allegret a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Yves Allégret" ;
+    onto:hasBrother data:marc_allegret .
+

@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/235/originals/extracted_235.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/235/ground_truth_235.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/constantine_iii_scotland": "http://example.org/entity/Constantine_III_of_Scotland",
+    "http://example.org/extracted/amlaib": "http://example.org/entity/Amlaíb",
+    "http://example.org/extracted/cuilen": "http://example.org/entity/Cuilén"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/amlaib",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Amlaíb",
+          "source": "label"
+        },
+        {
+          "text": "amlaib",
+          "source": "uri"
+        }
+      ],
+      "context": "Amlaíb. inverse has brother: Cuilén.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Amlaíb",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Amlaíb",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Amlaíb",
+        "extracted_source": "label",
+        "ground_truth_text": "Amlaíb",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9814720749855042,
+      "graph_score": 0.4907360374927521,
+      "margin": 0.540806770324707
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/constantine_iii_scotland",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Constantine III of Scotland",
+          "source": "label"
+        },
+        {
+          "text": "constantine iii scotland",
+          "source": "uri"
+        }
+      ],
+      "context": "Constantine III of Scotland. has father: Cuilén.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Constantine_III_of_Scotland",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Constantine III of Scotland",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Constantine III of Scotland",
+        "extracted_source": "label",
+        "ground_truth_text": "Constantine III of Scotland",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.669519305229187
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/cuilen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cuilén",
+          "source": "label"
+        },
+        {
+          "text": "cuilen",
+          "source": "uri"
+        }
+      ],
+      "context": "Cuilén. has brother: Amlaíb. inverse has father: Constantine III of Scotland.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Cuilén",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Cuilén",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cuilén",
+        "extracted_source": "label",
+        "ground_truth_text": "Cuilén",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9958108067512512,
+      "graph_score": 0.6645720601081848,
+      "margin": 0.4975655674934387
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

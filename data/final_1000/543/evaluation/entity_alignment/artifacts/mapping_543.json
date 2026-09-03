@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/543/originals/extracted_543.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/543/ground_truth_543.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/place_westwood_village_memorial_park_cemetery": "http://example.org/entity/Westwood_Village_Memorial_Park_Cemetery",
+    "http://example.org/extracted/film_hush_money_1931": "http://example.org/entity/Hush_Money",
+    "http://example.org/extracted/person_sidney_lanfield": "http://example.org/entity/Sidney_Lanfield"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_hush_money_1931",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hush Money",
+          "source": "label"
+        },
+        {
+          "text": "film hush money 1931",
+          "source": "uri"
+        }
+      ],
+      "context": "Hush Money. has director: Sidney Lanfield.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hush_Money",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hush Money",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hush Money",
+        "extracted_source": "label",
+        "ground_truth_text": "Hush Money",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_sidney_lanfield",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sidney Lanfield",
+          "source": "label"
+        },
+        {
+          "text": "person sidney lanfield",
+          "source": "uri"
+        }
+      ],
+      "context": "Sidney Lanfield. has burial place: Westwood Village Memorial Park Cemetery. inverse has director: Hush Money.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sidney_Lanfield",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sidney Lanfield",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sidney Lanfield",
+        "extracted_source": "label",
+        "ground_truth_text": "Sidney Lanfield",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_westwood_village_memorial_park_cemetery",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Westwood Village Memorial Park Cemetery",
+          "source": "label"
+        },
+        {
+          "text": "place westwood village memorial park cemetery",
+          "source": "uri"
+        }
+      ],
+      "context": "Westwood Village Memorial Park Cemetery. inverse has burial place: Sidney Lanfield.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Westwood_Village_Memorial_Park_Cemetery",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Westwood Village Memorial Park Cemetery",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Westwood Village Memorial Park Cemetery",
+        "extracted_source": "label",
+        "ground_truth_text": "Westwood Village Memorial Park Cemetery",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

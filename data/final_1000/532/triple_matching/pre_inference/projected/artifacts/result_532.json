@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/532/evaluation/entity_alignment/baseline_extracted_aligned_532.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/532/evaluation/entity_alignment/baseline_ground_truth_aligned_532.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Mahatma_Life_of_Gandhi_1869_1948",
+      "predicate": "hasDirector",
+      "object": "Vithalbhai_Jhaveri",
+      "subject_uri": "http://example.org/entity/Mahatma_Life_of_Gandhi_1869_1948",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Vithalbhai_Jhaveri"
+    },
+    {
+      "subject": "Vithalbhai_Jhaveri",
+      "predicate": "hasAwardReceived",
+      "object": "Padma_Bhushan",
+      "subject_uri": "http://example.org/entity/Vithalbhai_Jhaveri",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Padma_Bhushan"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Mahatma_Life_of_Gandhi_1869_1948",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Mahatma_Life_of_Gandhi_1869_1948",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Mahatma_Life_of_Gandhi_1869_1948",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Mahatma_Life_of_Gandhi_1869_1948",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Mahatma_Life_of_Gandhi_1869_1948",
+      "predicate": "label",
+      "object": "\"Mahatma: Life of Gandhi, 1869–1948\"",
+      "subject_uri": "http://example.org/entity/Mahatma_Life_of_Gandhi_1869_1948",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Mahatma: Life of Gandhi, 1869–1948\""
+    },
+    {
+      "subject": "Padma_Bhushan",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/Padma_Bhushan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "Padma_Bhushan",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Padma_Bhushan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Padma_Bhushan",
+      "predicate": "label",
+      "object": "\"Padma Bhushan\"",
+      "subject_uri": "http://example.org/entity/Padma_Bhushan",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Padma Bhushan\""
+    },
+    {
+      "subject": "Vithalbhai_Jhaveri",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Vithalbhai_Jhaveri",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Vithalbhai_Jhaveri",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Vithalbhai_Jhaveri",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Vithalbhai_Jhaveri",
+      "predicate": "label",
+      "object": "\"Vithalbhai Jhaveri\"",
+      "subject_uri": "http://example.org/entity/Vithalbhai_Jhaveri",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Vithalbhai Jhaveri\""
+    },
+    {
+      "subject": "Vithalbhai_Jhaveri",
+      "predicate": "altLabel",
+      "object": "\"Vitthal Jhaveri\"",
+      "subject_uri": "http://example.org/entity/Vithalbhai_Jhaveri",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Vitthal Jhaveri\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

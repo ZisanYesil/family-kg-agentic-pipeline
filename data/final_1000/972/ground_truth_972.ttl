@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1128
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:Everything_s_Ducky ex:hasDirector inst:Don_Taylor .  # director
+inst:Karthika_film ex:hasDirector inst:M_Krishnan_Nair .  # director
+inst:Don_Taylor_American_actor_and_director ex:hasDeathDate "1998-12-29"^^xsd:date .  # date of death -> "December 29, 1998"
+inst:M_Krishnan_Nair_director ex:hasDeathDate "2001-05-10"^^xsd:date .  # date of death -> "10 May 2001"

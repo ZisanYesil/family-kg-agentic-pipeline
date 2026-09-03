@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/183/originals/extracted_183.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/183/ground_truth_183.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_nippu": "http://example.org/entity/Nippu",
+    "http://example.org/extracted/person_gunasekhar": "http://example.org/entity/Gunasekhar"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_nippu",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nippu",
+          "source": "altLabel"
+        },
+        {
+          "text": "film nippu",
+          "source": "uri"
+        }
+      ],
+      "context": "Nippu. has director: Gunasekar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nippu",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nippu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nippu",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Nippu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9576181769371033,
+      "graph_score": 0.978809118270874,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_gunasekhar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gunasekar",
+          "source": "altLabel"
+        },
+        {
+          "text": "Gunasekhar",
+          "source": "altLabel"
+        },
+        {
+          "text": "person gunasekhar",
+          "source": "uri"
+        }
+      ],
+      "context": "Gunasekar. has award received: Filmfare Award for Best Director – Telugu. inverse has director: Nippu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gunasekhar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gunasekhar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gunasekhar",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Gunasekhar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8586716651916504,
+      "graph_score": 0.9293358325958252,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/award_filmfare_best_director_telugu",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Filmfare Award for Best Director – Telugu",
+          "source": "altLabel"
+        },
+        {
+          "text": "award filmfare best director telugu",
+          "source": "uri"
+        }
+      ],
+      "context": "Filmfare Award for Best Director – Telugu. inverse has award received: Gunasekar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Filmfare_Awards_South",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Filmfare Awards South",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Filmfare Award for Best Director – Telugu",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Filmfare Awards South",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5860449075698853,
+      "name_embedding_score": 0.5456206202507019,
+      "string_score": 0.3780241906642914,
+      "independent_identity_support": false,
+      "context_score": 0.7498282194137573,
+      "graph_score": 0.8749141097068787,
+      "margin": 0.5860449075698853
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

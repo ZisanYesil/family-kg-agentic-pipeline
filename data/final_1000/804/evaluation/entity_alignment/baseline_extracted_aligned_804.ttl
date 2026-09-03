@@ -1,0 +1,22 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Augustus_II_the_Strong> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Augustus II the Strong" ;
+    onto:hasBurialPlace <http://example.org/entity/Wawel_Cathedral> ;
+    onto:hasSon <http://example.org/entity/Maurice_de_Saxe> ;
+    skos:altLabel "Frederick Augustus I" .
+
+<http://example.org/entity/Maurice_de_Saxe> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Maurice de Saxe" ;
+    skos:altLabel "Maurice, Count of Saxony" .
+
+<http://example.org/entity/Wawel_Cathedral> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Wawel Cathedral" ;
+    skos:altLabel "Wawel Cathedral in Kraków" .
+

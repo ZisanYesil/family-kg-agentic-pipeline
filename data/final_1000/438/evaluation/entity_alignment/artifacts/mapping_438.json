@@ -1,0 +1,151 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/438/originals/extracted_438.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/438/ground_truth_438.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/_norman_panama": "http://example.org/entity/Norman_Panama"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/_norman_panama",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Norman Panama",
+          "source": "label"
+        }
+      ],
+      "context": "Norman Panama. has cause of death: complications of Parkinson's disease. inverse has director: The Trap (1959 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Norman_Panama",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Norman Panama",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Norman Panama",
+        "extracted_source": "label",
+        "ground_truth_text": "Norman Panama",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9370965361595154,
+      "graph_score": 0.9370965361595154,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_parkinsons_complications",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "complications of Parkinson's disease",
+          "source": "label"
+        },
+        {
+          "text": "parkinsons complications",
+          "source": "uri"
+        }
+      ],
+      "context": "complications of Parkinson's disease. inverse has cause of death: Norman Panama.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Parkinson",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Parkinson",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "complications of Parkinson's disease",
+        "extracted_source": "label",
+        "ground_truth_text": "Parkinson",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7836213111877441,
+      "name_embedding_score": 0.8148714900016785,
+      "string_score": 0.5299999713897705,
+      "independent_identity_support": false,
+      "context_score": 0.9494848251342773,
+      "graph_score": 0.9747424125671387,
+      "margin": 0.7836213111877441
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/_the_trap_1959_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Trap (1959 film)",
+          "source": "label"
+        },
+        {
+          "text": "the trap 1959 film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Trap (1959 film). has director: Norman Panama.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Trap",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Trap",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Trap (1959 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "The Trap",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7835334539413452,
+      "name_embedding_score": 0.7535555362701416,
+      "string_score": 0.6821428537368774,
+      "independent_identity_support": false,
+      "context_score": 0.8897602558135986,
+      "graph_score": 0.9448801279067993,
+      "margin": 0.7835334539413452
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

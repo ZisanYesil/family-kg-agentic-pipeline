@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:john_ii_marquis_of_namur a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John II, Marquis of Namur" ;
+    onto:hasFather data:john_i_marquis_of_namur .
+
+data:isabelle_of_luxembourg a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Isabelle of Luxembourg" .
+
+data:john_i_marquis_of_namur a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John I, Marquis of Namur" ;
+    onto:hasMother data:isabelle_of_luxembourg .
+

@@ -1,0 +1,113 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/221/originals/extracted_221.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/221/ground_truth_221.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_heat_on": "http://example.org/entity/The_Heat_s_On"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_heat_on",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Heat's On",
+          "source": "label"
+        },
+        {
+          "text": "film heat on",
+          "source": "uri"
+        }
+      ],
+      "context": "The Heat's On. has publication date: 1943.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Heat_s_On",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Heat s On",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Heat's On",
+        "extracted_source": "label",
+        "ground_truth_text": "The Heat s On",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9705523252487183,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9834561944007874,
+      "graph_score": 0.9834561944007874,
+      "margin": 0.611025869846344
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_horror_story",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Horror Story",
+          "source": "label"
+        },
+        {
+          "text": "film horror story",
+          "source": "uri"
+        }
+      ],
+      "context": "Horror Story. has publication date: 2013-09-13.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Horror_Story_film",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Horror Story film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film horror story",
+        "extracted_source": "uri",
+        "ground_truth_text": "Horror Story film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.946490466594696,
+      "name_embedding_score": 0.9804502129554749,
+      "string_score": 0.8676470518112183,
+      "independent_identity_support": true,
+      "context_score": 0.957414448261261,
+      "graph_score": 0.957414448261261,
+      "margin": 0.7046943455934525
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

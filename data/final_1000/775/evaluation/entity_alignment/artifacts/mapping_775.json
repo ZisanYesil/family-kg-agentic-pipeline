@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/775/originals/extracted_775.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/775/ground_truth_775.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sam_cooke": "http://example.org/entity/Sam_Cooke",
+    "http://example.org/extracted/you_were_made_for_me_song": "http://example.org/entity/You_Were_Made_for_Me"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/sam_cooke",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Samuel Cook",
+          "source": "altLabel"
+        },
+        {
+          "text": "Sam Cooke",
+          "source": "label"
+        }
+      ],
+      "context": "Samuel Cook. has death place: Los Angeles. inverse has performer: You Were Made for Me.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sam_Cooke",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sam Cooke",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sam Cooke",
+        "extracted_source": "label",
+        "ground_truth_text": "Sam Cooke",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8805333971977234,
+      "graph_score": 0.9402667284011841,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/you_were_made_for_me_song",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "You Were Made for Me",
+          "source": "label"
+        },
+        {
+          "text": "you were made for me song",
+          "source": "uri"
+        }
+      ],
+      "context": "You Were Made for Me. has performer: Samuel Cook.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/You_Were_Made_for_Me",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "You Were Made for Me",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "You Were Made for Me",
+        "extracted_source": "label",
+        "ground_truth_text": "You Were Made for Me",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8577551245689392,
+      "graph_score": 0.928877592086792,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/los_angeles",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Los Angeles",
+          "source": "label"
+        }
+      ],
+      "context": "Los Angeles. inverse has death place: Samuel Cook.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Los_Angeles_California",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Los Angeles California",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Los Angeles",
+        "extracted_source": "label",
+        "ground_truth_text": "Los Angeles California",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.900335431098938,
+      "name_embedding_score": 0.9523263573646545,
+      "string_score": 0.7666666507720947,
+      "independent_identity_support": true,
+      "context_score": 0.860044538974762,
+      "graph_score": 0.9300222396850586,
+      "margin": 0.900335431098938
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

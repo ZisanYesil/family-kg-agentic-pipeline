@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/733/originals/extracted_733.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/733/ground_truth_733.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_maiden_cheek": "http://example.org/entity/Maiden_s_Cheek",
+    "http://example.org/extracted/person_alekos_sakellarios": "http://example.org/entity/Alekos_Sakellarios",
+    "http://example.org/extracted/place_first_cemetery_of_athens": "http://example.org/entity/First_Cemetery_of_Athens"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_maiden_cheek",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maiden's Cheek",
+          "source": "label"
+        },
+        {
+          "text": "film maiden cheek",
+          "source": "uri"
+        }
+      ],
+      "context": "Maiden's Cheek. has director: Alekos Sakellarios.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maiden_s_Cheek",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maiden s Cheek",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maiden's Cheek",
+        "extracted_source": "label",
+        "ground_truth_text": "Maiden s Cheek",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9671323299407959,
+      "string_score": 0.9678571224212646,
+      "independent_identity_support": true,
+      "context_score": 0.9810162782669067,
+      "graph_score": 0.9905081391334534,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_alekos_sakellarios",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alekos Sakellarios",
+          "source": "label"
+        },
+        {
+          "text": "person alekos sakellarios",
+          "source": "uri"
+        }
+      ],
+      "context": "Alekos Sakellarios. has burial place: First Cemetery of Athens. inverse has director: Maiden's Cheek.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alekos_Sakellarios",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alekos Sakellarios",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alekos Sakellarios",
+        "extracted_source": "label",
+        "ground_truth_text": "Alekos Sakellarios",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9915717840194702,
+      "graph_score": 0.9957858920097351,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_first_cemetery_of_athens",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "First Cemetery of Athens",
+          "source": "label"
+        },
+        {
+          "text": "place first cemetery of athens",
+          "source": "uri"
+        }
+      ],
+      "context": "First Cemetery of Athens. inverse has burial place: Alekos Sakellarios.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/First_Cemetery_of_Athens",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "First Cemetery of Athens",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "First Cemetery of Athens",
+        "extracted_source": "label",
+        "ground_truth_text": "First Cemetery of Athens",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

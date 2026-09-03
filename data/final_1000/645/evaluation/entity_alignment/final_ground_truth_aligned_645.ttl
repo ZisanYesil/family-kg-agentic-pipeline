@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Brera_Academy a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+entity:Michele_Mari a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Enzo_Mari ;
+    ex:hasParent entity:Enzo_Mari .
+
+entity:Enzo_Mari a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Michele_Mari ;
+    ex:hasEducatedAt entity:Brera_Academy .
+

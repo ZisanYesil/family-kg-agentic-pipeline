@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/826/evaluation/entity_alignment/final_extracted_aligned_826.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/826/evaluation/entity_alignment/final_ground_truth_aligned_826.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Filmfare_Award_for_Best_Female_Debut",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/Filmfare_Award_for_Best_Female_Debut",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "Maana_Ke_Hum_Yaar_Nahin",
+      "predicate": "hasCreator",
+      "object": "Parineeti_Chopra",
+      "subject_uri": "http://example.org/entity/Maana_Ke_Hum_Yaar_Nahin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Parineeti_Chopra"
+    },
+    {
+      "subject": "Maana_Ke_Hum_Yaar_Nahin",
+      "predicate": "hasPerformer",
+      "object": "Parineeti_Chopra",
+      "subject_uri": "http://example.org/entity/Maana_Ke_Hum_Yaar_Nahin",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Parineeti_Chopra"
+    },
+    {
+      "subject": "Maana_Ke_Hum_Yaar_Nahin",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Maana_Ke_Hum_Yaar_Nahin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Maana_Ke_Hum_Yaar_Nahin",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Maana_Ke_Hum_Yaar_Nahin",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Parineeti_Chopra",
+      "predicate": "hasAwardReceived",
+      "object": "Filmfare_Award_for_Best_Female_Debut",
+      "subject_uri": "http://example.org/entity/Parineeti_Chopra",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Filmfare_Award_for_Best_Female_Debut"
+    },
+    {
+      "subject": "Parineeti_Chopra",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Parineeti_Chopra",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Parineeti_Chopra",
+      "predicate": "hasAwardReceived",
+      "object": "award_national_film",
+      "subject_uri": "http://example.org/entity/Parineeti_Chopra",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/extracted/award_national_film"
+    },
+    {
+      "subject": "Parineeti_Chopra",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Parineeti_Chopra",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "award_national_film",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/extracted/award_national_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 7,
+    "union_triples_in_scope": 10,
+    "true_positives": 7,
+    "false_positives": 3,
+    "false_negatives": 0,
+    "precision": 0.7,
+    "recall": 1.0,
+    "f1": 0.8235294117647058
+  },
+  "stage": "post_inference"
+}

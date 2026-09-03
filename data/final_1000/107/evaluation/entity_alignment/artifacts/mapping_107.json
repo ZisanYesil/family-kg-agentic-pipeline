@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/107/originals/extracted_107.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/107/ground_truth_107.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/testament_of_dr_mabuse": "http://example.org/entity/The_Testament_of_Dr_Mabuse",
+    "http://example.org/extracted/fast_five": "http://example.org/entity/Fast_Five"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/fast_five",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fast Five",
+          "source": "label"
+        }
+      ],
+      "context": "Fast Five. has publication date: 2011-04-20.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fast_Five",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fast Five",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fast Five",
+        "extracted_source": "label",
+        "ground_truth_text": "Fast Five",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9393264651298523,
+      "graph_score": 0.9393264651298523,
+      "margin": 0.8880711942911148
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/testament_of_dr_mabuse",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Testament Of Dr. Mabuse",
+          "source": "label"
+        },
+        {
+          "text": "testament of dr mabuse",
+          "source": "uri"
+        }
+      ],
+      "context": "The Testament Of Dr. Mabuse. has publication date: 1933.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Testament_of_Dr_Mabuse",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Testament of Dr Mabuse",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Testament Of Dr. Mabuse",
+        "extracted_source": "label",
+        "ground_truth_text": "The Testament of Dr Mabuse",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.996615469455719,
+      "string_score": 0.9915094375610352,
+      "independent_identity_support": true,
+      "context_score": 0.9956167340278625,
+      "graph_score": 0.9956167340278625,
+      "margin": 0.9012170881032944
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

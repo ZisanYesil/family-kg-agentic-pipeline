@@ -1,0 +1,212 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/939/originals/extracted_939.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/939/ground_truth_939.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/denmark_country": "http://example.org/entity/Danish",
+    "http://example.org/extracted/a_lego_brickumentary_film": "http://example.org/entity/A_Lego_Brickumentary",
+    "http://example.org/extracted/the_night_sitter_film": "http://example.org/entity/The_Night_Sitter",
+    "http://example.org/extracted/united_states_country": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/a_lego_brickumentary_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Beyond the Brick: A Lego Brickumentary",
+          "source": "altLabel"
+        },
+        {
+          "text": "A Lego Brickumentary",
+          "source": "label"
+        },
+        {
+          "text": "a lego brickumentary film",
+          "source": "uri"
+        }
+      ],
+      "context": "Beyond the Brick: A Lego Brickumentary. has country of origin: American. has country of origin: Danish.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Lego_Brickumentary",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Lego Brickumentary",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Lego Brickumentary",
+        "extracted_source": "label",
+        "ground_truth_text": "A Lego Brickumentary",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9406803250312805,
+      "graph_score": 0.9703401327133179,
+      "margin": 0.6866288185119629
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/denmark_country",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Danish",
+          "source": "altLabel"
+        },
+        {
+          "text": "Denmark",
+          "source": "label"
+        },
+        {
+          "text": "denmark country",
+          "source": "uri"
+        }
+      ],
+      "context": "Danish. inverse has country of origin: Beyond the Brick: A Lego Brickumentary.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Danish",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Danish",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Danish",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Danish",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9618167281150818,
+      "graph_score": 0.9809083938598633,
+      "margin": 0.6647890210151672
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_night_sitter_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Night Sitter",
+          "source": "label"
+        },
+        {
+          "text": "the night sitter film",
+          "source": "uri"
+        }
+      ],
+      "context": "The Night Sitter. has country of origin: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Night_Sitter",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Night Sitter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Night Sitter",
+        "extracted_source": "label",
+        "ground_truth_text": "The Night Sitter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7703206986188889
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states_country",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "united states country",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has country of origin: Beyond the Brick: A Lego Brickumentary. inverse has country of origin: The Night Sitter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9822882413864136,
+      "graph_score": 0.9911441206932068,
+      "margin": 0.6720484495162964
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

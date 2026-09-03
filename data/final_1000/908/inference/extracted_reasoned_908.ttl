@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/mariamne> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/extracted/herod_agrippa_i> ;
+    ex:hasParent <http://example.org/extracted/herod_agrippa_i> .
+
+<http://example.org/extracted/aristobulus_iv> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/herod_agrippa_i> .
+
+<http://example.org/extracted/herod_agrippa_i> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/mariamne> ;
+    ex:hasFather <http://example.org/extracted/aristobulus_iv> ;
+    ex:hasParent <http://example.org/extracted/aristobulus_iv> .
+

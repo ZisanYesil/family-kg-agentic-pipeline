@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/701/originals/extracted_701.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/701/ground_truth_701.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/the_samurai_in_autumn_film_2016": "http://example.org/entity/The_Samurai_in_Autumn",
+    "http://example.org/extracted/nubes_de_humo_film_1958": "http://example.org/entity/Nubes_de_humo"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/nubes_de_humo_film_1958",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nubes de humo",
+          "source": "altLabel"
+        },
+        {
+          "text": "nubes de humo film 1958",
+          "source": "uri"
+        }
+      ],
+      "context": "Nubes de humo. has publication date: 1958.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nubes_de_humo",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nubes de humo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nubes de humo",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Nubes de humo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.8109138309955597
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_samurai_in_autumn_film_2016",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Samurai in Autumn",
+          "source": "altLabel"
+        },
+        {
+          "text": "the samurai in autumn film 2016",
+          "source": "uri"
+        }
+      ],
+      "context": "The Samurai in Autumn. has publication date: 2016.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Samurai_in_Autumn",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Samurai in Autumn",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Samurai in Autumn",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "The Samurai in Autumn",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8265020847320557
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Truth_or_Consequences_N_M a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Kiefer_Sutherland ;
+    ex:hasDirector entity:Kiefer_Sutherland .
+
+entity:Sarah_Sutherland a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Kiefer_Sutherland .
+
+entity:Kiefer_Sutherland a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Sarah_Sutherland .
+

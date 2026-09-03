@@ -1,0 +1,164 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/615/originals/extracted_615.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/615/ground_truth_615.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_christopher_columbus_the_enigma": "http://example.org/entity/Christopher_Columbus_The_Enigma",
+    "http://example.org/extracted/person_manoel_de_oliveira": "http://example.org/entity/Manoel_de_Oliveira"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_christopher_columbus_the_enigma",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cristóvão Colombo - O Enigma",
+          "source": "altLabel"
+        },
+        {
+          "text": "Christopher Columbus – The Enigma",
+          "source": "label"
+        },
+        {
+          "text": "film christopher columbus the enigma",
+          "source": "uri"
+        }
+      ],
+      "context": "Cristóvão Colombo - O Enigma. has director: Manoel Cândido Pinto de Oliveira.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Christopher_Columbus_The_Enigma",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Christopher Columbus The Enigma",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Christopher Columbus – The Enigma",
+        "extracted_source": "label",
+        "ground_truth_text": "Christopher Columbus The Enigma",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9920384287834167,
+      "string_score": 0.9859374761581421,
+      "independent_identity_support": true,
+      "context_score": 0.7448949217796326,
+      "graph_score": 0.8724474906921387,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_manoel_de_oliveira",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Manoel Cândido Pinto de Oliveira",
+          "source": "altLabel"
+        },
+        {
+          "text": "Manoel de Oliveira",
+          "source": "label"
+        },
+        {
+          "text": "person manoel de oliveira",
+          "source": "uri"
+        }
+      ],
+      "context": "Manoel Cândido Pinto de Oliveira. has birth place: Cedofeita, Porto. inverse has director: Cristóvão Colombo - O Enigma.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Manoel_de_Oliveira",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Manoel de Oliveira",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Manoel de Oliveira",
+        "extracted_source": "label",
+        "ground_truth_text": "Manoel de Oliveira",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8325164318084717,
+      "graph_score": 0.9162582159042358,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_cedofeita_porto",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Cedofeita, Porto",
+          "source": "label"
+        },
+        {
+          "text": "place cedofeita porto",
+          "source": "uri"
+        }
+      ],
+      "context": "Cedofeita, Porto. inverse has birth place: Manoel Cândido Pinto de Oliveira.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Porto",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Porto",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Cedofeita, Porto",
+        "extracted_source": "label",
+        "ground_truth_text": "Porto",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7949309349060059,
+      "name_embedding_score": 0.7972633838653564,
+      "string_score": 0.6392857432365417,
+      "independent_identity_support": false,
+      "context_score": 0.8918224573135376,
+      "graph_score": 0.9459112286567688,
+      "margin": 0.7949309349060059
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

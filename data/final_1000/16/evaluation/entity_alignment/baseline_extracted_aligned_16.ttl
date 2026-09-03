@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Antonio_González_Flores> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Antonio González Flores" ;
+    onto:hasMother <http://example.org/entity/Lola_Flores> ;
+    skos:altLabel "Antonio Flores" .
+
+<http://example.org/entity/Jerez_de_la_Frontera> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Jerez de la Frontera" .
+
+<http://example.org/entity/Lola_Flores> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "María Dolores Flores Ruiz" ;
+    onto:hasBirthPlace <http://example.org/entity/Jerez_de_la_Frontera> ;
+    skos:altLabel "Lola Flores" .
+

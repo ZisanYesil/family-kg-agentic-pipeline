@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/St_James_Holdings> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "St James Holdings Limited" ;
+    onto:hasFounder <http://example.org/entity/Mike_Ashley> ;
+    skos:altLabel "St James Holdings" .
+
+<http://example.org/entity/Mike_Ashley> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mike Ashley" ;
+    onto:hasEmployer <http://example.org/entity/Sports_Direct> ;
+    skos:altLabel "Michael James Wallace Ashley" .
+
+<http://example.org/entity/Sports_Direct> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Sports Direct" .
+

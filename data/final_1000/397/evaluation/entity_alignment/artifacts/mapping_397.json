@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/397/originals/extracted_397.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/397/ground_truth_397.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/hans_rosling_1948": "http://example.org/entity/Hans_Rosling",
+    "http://example.org/extracted/k%C4%B1nar_s%C4%B1vac%C4%B1yan_1876": "http://example.org/entity/Kınar_Sıvacıyan"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/hans_rosling_1948",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hans Rosling",
+          "source": "label"
+        },
+        {
+          "text": "hans rosling 1948",
+          "source": "uri"
+        }
+      ],
+      "context": "Hans Rosling. has birth date: 1948-07-27. has death date: 2017-02-07.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hans_Rosling",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hans Rosling",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hans Rosling",
+        "extracted_source": "label",
+        "ground_truth_text": "Hans Rosling",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.5514229536056519
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/k%C4%B1nar_s%C4%B1vac%C4%B1yan_1876",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kınar Hanım",
+          "source": "altLabel"
+        },
+        {
+          "text": "Kınar Sıvacıyan",
+          "source": "label"
+        },
+        {
+          "text": "kınar sıvacıyan 1876",
+          "source": "uri"
+        }
+      ],
+      "context": "Kınar Hanım. has birth date: 1876. has death date: 1950-08-13.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kınar_Sıvacıyan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kınar Sıvacıyan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kınar Sıvacıyan",
+        "extracted_source": "label",
+        "ground_truth_text": "Kınar Sıvacıyan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997019767761,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8920164704322815,
+      "graph_score": 0.8920164704322815,
+      "margin": 0.5497540831565857
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

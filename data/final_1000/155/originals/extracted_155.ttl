@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:cameranotes a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Camera Notes" ;
+    onto:hasEditor data:alfred_stieglitz .
+
+data:alfred_stieglitz a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alfred Stieglitz" ;
+    onto:hasSpouse data:georgia_okeefe .
+
+data:georgia_okeefe a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Georgia O'Keeffe" .
+

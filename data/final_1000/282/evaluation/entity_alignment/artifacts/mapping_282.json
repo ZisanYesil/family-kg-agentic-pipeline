@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/282/originals/extracted_282.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/282/ground_truth_282.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/foulques_prince": "http://example.org/entity/Prince_Foulques_of_Orléans_Duke_of_Aumale",
+    "http://example.org/extracted/isabelle_prince": "http://example.org/entity/Princess_Isabelle_of_Orléans_Braganza"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/foulques_prince",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prince Foulques of Orléans, Duke of Aumale",
+          "source": "label"
+        },
+        {
+          "text": "foulques prince",
+          "source": "uri"
+        }
+      ],
+      "context": "Prince Foulques of Orléans, Duke of Aumale. has father: Prince Jacques of Orléans, Duke of Orléans.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prince_Foulques_of_Orléans_Duke_of_Aumale",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prince Foulques of Orléans Duke of Aumale",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prince Foulques of Orléans, Duke of Aumale",
+        "extracted_source": "label",
+        "ground_truth_text": "Prince Foulques of Orléans Duke of Aumale",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9936964511871338,
+      "string_score": 0.9945783019065857,
+      "independent_identity_support": true,
+      "context_score": 0.9840386509895325,
+      "graph_score": 0.9840386509895325,
+      "margin": 0.34253495931625366
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/isabelle_prince",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Isabelle of Orléans-Braganza",
+          "source": "label"
+        },
+        {
+          "text": "isabelle prince",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Isabelle of Orléans-Braganza. inverse has mother: Prince Jacques of Orléans, Duke of Orléans.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Isabelle_of_Orléans_Braganza",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Isabelle of Orléans Braganza",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Isabelle of Orléans-Braganza",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Isabelle of Orléans Braganza",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9553124904632568,
+      "string_score": 0.9878378510475159,
+      "independent_identity_support": true,
+      "context_score": 0.9386694431304932,
+      "graph_score": 0.9386694431304932,
+      "margin": 0.4900858402252197
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/jacques_prince",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Prince Jacques of Orléans, Duke of Orléans",
+          "source": "label"
+        },
+        {
+          "text": "jacques prince",
+          "source": "uri"
+        }
+      ],
+      "context": "Prince Jacques of Orléans, Duke of Orléans. has mother: Princess Isabelle of Orléans-Braganza. inverse has father: Prince Foulques of Orléans, Duke of Aumale.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Prince_Jacques_Duke_of_Orléans",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Prince Jacques Duke of Orléans",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Prince Jacques of Orléans, Duke of Orléans",
+        "extracted_source": "label",
+        "ground_truth_text": "Prince Jacques Duke of Orléans",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9575082063674927,
+      "name_embedding_score": 0.9648212790489197,
+      "string_score": 0.925000011920929,
+      "independent_identity_support": true,
+      "context_score": 0.95078045129776,
+      "graph_score": 0.9753901958465576,
+      "margin": 0.29689884185791016
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

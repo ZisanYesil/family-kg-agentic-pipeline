@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:bon_bon_buddy a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Bon Bon Buddy" ;
+    onto:hasPerformer data:billy_murray .
+
+data:billy_murray a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Billy Murray" ;
+    onto:hasNationality data:united_states .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

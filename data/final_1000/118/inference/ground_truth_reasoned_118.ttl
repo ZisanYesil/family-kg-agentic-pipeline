@@ -1,0 +1,14 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Ruffine_Tsiranana a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Justine_Tsiranana ;
+    ex:hasParent entity:Justine_Tsiranana .
+
+entity:Justine_Tsiranana a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Ruffine_Tsiranana ;
+    ex:hasDeathDate "1999"^^xsd:gYear .
+

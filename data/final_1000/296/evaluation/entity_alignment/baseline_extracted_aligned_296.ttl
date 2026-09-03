@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Stanisław_Antoni_Potocki> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Stanisław Antoni Potocki" ;
+    onto:hasChild <http://example.org/entity/Jan_Nepomucen_Potocki> .
+
+<http://example.org/entity/Jan_Nepomucen_Potocki> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jan Nepomucen Potocki" ;
+    onto:hasSpouse <http://example.org/entity/Róża_Maria_Wodzicka>,
+        data:maria_szajer .
+
+<http://example.org/entity/Róża_Maria_Wodzicka> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Róża Maria Wodzicka" .
+
+data:maria_szajer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Maria Szajer" .
+

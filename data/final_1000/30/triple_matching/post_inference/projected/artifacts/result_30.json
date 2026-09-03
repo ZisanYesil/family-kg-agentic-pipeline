@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/30/evaluation/entity_alignment/final_extracted_aligned_30.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/30/evaluation/entity_alignment/final_ground_truth_aligned_30.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Felipe_Cazals",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Felipe_Cazals",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Felipe_Cazals",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Felipe_Cazals",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Los_Motivos_de_Luz",
+      "predicate": "hasCreator",
+      "object": "Felipe_Cazals",
+      "subject_uri": "http://example.org/entity/Los_Motivos_de_Luz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Felipe_Cazals"
+    },
+    {
+      "subject": "Los_Motivos_de_Luz",
+      "predicate": "hasDirector",
+      "object": "Felipe_Cazals",
+      "subject_uri": "http://example.org/entity/Los_Motivos_de_Luz",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Felipe_Cazals"
+    },
+    {
+      "subject": "Los_Motivos_de_Luz",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Los_Motivos_de_Luz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Los_Motivos_de_Luz",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Los_Motivos_de_Luz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Los_Motivos_de_Luz",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Los_Motivos_de_Luz",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Felipe_Cazals",
+      "predicate": "hasBirthPlace",
+      "object": "France",
+      "subject_uri": "http://example.org/entity/Felipe_Cazals",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/France"
+    },
+    {
+      "subject": "France",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/France",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Felipe_Cazals",
+      "predicate": "hasBirthPlace",
+      "object": "place_mexico_df",
+      "subject_uri": "http://example.org/entity/Felipe_Cazals",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/extracted/place_mexico_df"
+    },
+    {
+      "subject": "place_mexico_df",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/place_mexico_df",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 11,
+    "true_positives": 7,
+    "false_positives": 2,
+    "false_negatives": 2,
+    "precision": 0.7777777777777778,
+    "recall": 0.7777777777777778,
+    "f1": 0.7777777777777778
+  },
+  "stage": "post_inference"
+}

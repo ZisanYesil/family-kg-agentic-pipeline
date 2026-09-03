@@ -1,0 +1,139 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/769/evaluation/entity_alignment/baseline_extracted_aligned_769.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/769/evaluation/entity_alignment/baseline_ground_truth_aligned_769.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Bmahray",
+      "predicate": "hasCountry",
+      "object": "Lebanon",
+      "subject_uri": "http://example.org/entity/Bmahray",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Lebanon"
+    },
+    {
+      "subject": "Dargi_Kerman",
+      "predicate": "hasCountry",
+      "object": "Iran",
+      "subject_uri": "http://example.org/entity/Dargi_Kerman",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Iran"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Bmahray",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Bmahray",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Bmahray",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Bmahray",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Bmahray",
+      "predicate": "label",
+      "object": "\"Bmahray\"",
+      "subject_uri": "http://example.org/entity/Bmahray",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bmahray\""
+    },
+    {
+      "subject": "Dargi_Kerman",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Dargi_Kerman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Dargi_Kerman",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Dargi_Kerman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Dargi_Kerman",
+      "predicate": "label",
+      "object": "\"Dargi, Kerman\"",
+      "subject_uri": "http://example.org/entity/Dargi_Kerman",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Dargi, Kerman\""
+    },
+    {
+      "subject": "Iran",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Iran",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Iran",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Iran",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Iran",
+      "predicate": "label",
+      "object": "\"Iran\"",
+      "subject_uri": "http://example.org/entity/Iran",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Iran\""
+    },
+    {
+      "subject": "Lebanon",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Lebanon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Lebanon",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lebanon",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lebanon",
+      "predicate": "label",
+      "object": "\"Lebanon\"",
+      "subject_uri": "http://example.org/entity/Lebanon",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Lebanon\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 4,
+    "extracted_triples_in_scope": 14,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 2,
+    "false_positives": 12,
+    "false_negatives": 0,
+    "precision": 0.14285714285714285,
+    "recall": 1.0,
+    "f1": 0.25
+  },
+  "stage": "pre_inference"
+}

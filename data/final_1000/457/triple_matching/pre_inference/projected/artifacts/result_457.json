@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/457/evaluation/entity_alignment/baseline_extracted_aligned_457.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/457/evaluation/entity_alignment/baseline_ground_truth_aligned_457.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Jean_Tschumi",
+      "predicate": "hasEmployer",
+      "object": "École_polytechnique_fédérale_de_Lausanne",
+      "subject_uri": "http://example.org/entity/Jean_Tschumi",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/École_polytechnique_fédérale_de_Lausanne"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Bernard_Tschumi",
+      "predicate": "hasParent",
+      "object": "Jean_Tschumi",
+      "subject_uri": "http://example.org/entity/Bernard_Tschumi",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Jean_Tschumi"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Bernard_Tschumi",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Bernard_Tschumi",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Bernard_Tschumi",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Bernard_Tschumi",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Bernard_Tschumi",
+      "predicate": "label",
+      "object": "\"Bernard Tschumi\"",
+      "subject_uri": "http://example.org/entity/Bernard_Tschumi",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Bernard Tschumi\""
+    },
+    {
+      "subject": "Jean_Tschumi",
+      "predicate": "hasChild",
+      "object": "Bernard_Tschumi",
+      "subject_uri": "http://example.org/entity/Jean_Tschumi",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Bernard_Tschumi"
+    },
+    {
+      "subject": "Jean_Tschumi",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jean_Tschumi",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jean_Tschumi",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jean_Tschumi",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jean_Tschumi",
+      "predicate": "label",
+      "object": "\"Jean Tschumi\"",
+      "subject_uri": "http://example.org/entity/Jean_Tschumi",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jean Tschumi\""
+    },
+    {
+      "subject": "École_polytechnique_fédérale_de_Lausanne",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/École_polytechnique_fédérale_de_Lausanne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "École_polytechnique_fédérale_de_Lausanne",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/École_polytechnique_fédérale_de_Lausanne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "École_polytechnique_fédérale_de_Lausanne",
+      "predicate": "label",
+      "object": "\"École Polytechnique Fédérale de Lausanne\"",
+      "subject_uri": "http://example.org/entity/École_polytechnique_fédérale_de_Lausanne",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"École Polytechnique Fédérale de Lausanne\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

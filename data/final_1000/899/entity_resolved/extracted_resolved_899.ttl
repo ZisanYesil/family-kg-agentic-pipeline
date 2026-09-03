@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_sixteen_1943 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Sixteen (1943 film)" ;
+    onto:hasDirector data:person_carlos_hugo_christensen .
+
+data:person_carlos_hugo_christensen a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Carlos Hugo Christensen" ;
+    onto:hasBirthPlace data:place_santiago_del_estero .
+
+data:place_santiago_del_estero a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Santiago del Estero" .
+

@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Prince_Foulques_of_Orléans_Duke_of_Aumale a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Prince_Jacques_Duke_of_Orléans .
+
+entity:Princess_Isabelle_of_Orléans_Braganza a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Prince_Jacques_Duke_of_Orléans .
+
+entity:Prince_Jacques_Duke_of_Orléans a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Prince_Foulques_of_Orléans_Duke_of_Aumale ;
+    ex:hasParent entity:Princess_Isabelle_of_Orléans_Braganza .
+

@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/961/originals/extracted_961.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/961/ground_truth_961.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_justin_edgar": "http://example.org/entity/Justin_Edgar",
+    "http://example.org/extracted/film_we_are_the_freaks": "http://example.org/entity/We_Are_the_Freaks",
+    "http://example.org/extracted/film_road_hard": "http://example.org/entity/Road_Hard",
+    "http://example.org/extracted/person_adam_carolla": "http://example.org/entity/Adam_Carolla"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_road_hard",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Road Hard",
+          "source": "label"
+        },
+        {
+          "text": "film road hard",
+          "source": "uri"
+        }
+      ],
+      "context": "Road Hard. has director: Adam Carolla.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Road_Hard",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Road Hard",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Road Hard",
+        "extracted_source": "label",
+        "ground_truth_text": "Road Hard",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8994048163294792
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_we_are_the_freaks",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "We Are the Freaks",
+          "source": "label"
+        },
+        {
+          "text": "film we are the freaks",
+          "source": "uri"
+        }
+      ],
+      "context": "We Are the Freaks. has director: Justin Edgar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/We_Are_the_Freaks",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "We Are the Freaks",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "We Are the Freaks",
+        "extracted_source": "label",
+        "ground_truth_text": "We Are the Freaks",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.9007194489240646
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_adam_carolla",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adam Carolla",
+          "source": "label"
+        },
+        {
+          "text": "person adam carolla",
+          "source": "uri"
+        }
+      ],
+      "context": "Adam Carolla. has birth date: 1964-05-27. inverse has director: Road Hard.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adam_Carolla",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adam Carolla",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adam Carolla",
+        "extracted_source": "label",
+        "ground_truth_text": "Adam Carolla",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.6749337911605835
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_justin_edgar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Justin Edgar",
+          "source": "label"
+        },
+        {
+          "text": "person justin edgar",
+          "source": "uri"
+        }
+      ],
+      "context": "Justin Edgar. has birth date: 1971-08-18. inverse has director: We Are the Freaks.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Justin_Edgar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Justin Edgar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Justin Edgar",
+        "extracted_source": "label",
+        "ground_truth_text": "Justin Edgar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6749337911605835
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

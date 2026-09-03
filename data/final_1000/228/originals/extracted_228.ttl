@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:netflix_song a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Netflix (song)" ;
+    onto:hasPerformer data:tauheed_epps .
+
+data:college_park_georgia a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "College Park, Georgia" .
+
+data:tauheed_epps a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tauheed Epps" ;
+    onto:hasBirthPlace data:college_park_georgia ;
+    skos:altLabel "2 Chainz" .
+

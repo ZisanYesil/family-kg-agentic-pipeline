@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/392/originals/extracted_392.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/392/ground_truth_392.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/place_le_plessis_bouchard": "http://example.org/entity/Le_Plessis_Bouchard",
+    "http://example.org/extracted/person_richard_pottier": "http://example.org/entity/Richard_Pottier",
+    "http://example.org/extracted/film_the_beautiful_otero": "http://example.org/entity/The_Beautiful_Otero"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_beautiful_otero",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "La bella Otero",
+          "source": "altLabel"
+        },
+        {
+          "text": "La belle Otero",
+          "source": "altLabel"
+        },
+        {
+          "text": "The Beautiful Otero",
+          "source": "label"
+        },
+        {
+          "text": "film the beautiful otero",
+          "source": "uri"
+        }
+      ],
+      "context": "La bella Otero. has director: Richard Pottier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Beautiful_Otero",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Beautiful Otero",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Beautiful Otero",
+        "extracted_source": "label",
+        "ground_truth_text": "The Beautiful Otero",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.873782217502594,
+      "graph_score": 0.9368910789489746,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_richard_pottier",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Richard Pottier",
+          "source": "label"
+        },
+        {
+          "text": "person richard pottier",
+          "source": "uri"
+        }
+      ],
+      "context": "Richard Pottier. has death place: Le Plessis-Bouchard. inverse has director: La bella Otero.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Richard_Pottier",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Richard Pottier",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Richard Pottier",
+        "extracted_source": "label",
+        "ground_truth_text": "Richard Pottier",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9321892261505127,
+      "graph_score": 0.9660946130752563,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_le_plessis_bouchard",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Le Plessis-Bouchard",
+          "source": "label"
+        },
+        {
+          "text": "place le plessis bouchard",
+          "source": "uri"
+        }
+      ],
+      "context": "Le Plessis-Bouchard. inverse has death place: Richard Pottier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Le_Plessis_Bouchard",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Le Plessis Bouchard",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Le Plessis-Bouchard",
+        "extracted_source": "label",
+        "ground_truth_text": "Le Plessis Bouchard",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9301673173904419,
+      "string_score": 0.9763157963752747,
+      "independent_identity_support": true,
+      "context_score": 0.979984700679779,
+      "graph_score": 0.9899923801422119,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

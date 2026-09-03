@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/sigmaringen> a ex:Place .
+
+<http://example.org/extracted/frederick_1891> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/extracted/william_1864> ;
+    ex:isSonOf <http://example.org/extracted/william_1864> .
+
+<http://example.org/extracted/william_1864> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/frederick_1891> ;
+    ex:hasDeathPlace <http://example.org/extracted/sigmaringen> ;
+    ex:hasSon <http://example.org/extracted/frederick_1891> .
+

@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/572/evaluation/entity_alignment/baseline_extracted_aligned_572.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/572/evaluation/entity_alignment/baseline_ground_truth_aligned_572.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Boris_Prince_of_Turnovo",
+      "predicate": "hasParent",
+      "object": "Kardam_Prince_of_Turnovo",
+      "subject_uri": "http://example.org/entity/Boris_Prince_of_Turnovo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Kardam_Prince_of_Turnovo"
+    },
+    {
+      "subject": "Kardam_Prince_of_Turnovo",
+      "predicate": "hasEducatedAt",
+      "object": "Penn_State",
+      "subject_uri": "http://example.org/entity/Kardam_Prince_of_Turnovo",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/Penn_State"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Boris_Prince_of_Turnovo",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Boris_Prince_of_Turnovo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Boris_Prince_of_Turnovo",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Boris_Prince_of_Turnovo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Boris_Prince_of_Turnovo",
+      "predicate": "label",
+      "object": "\"Boris, Prince of Turnovo\"",
+      "subject_uri": "http://example.org/entity/Boris_Prince_of_Turnovo",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Boris, Prince of Turnovo\""
+    },
+    {
+      "subject": "Kardam_Prince_of_Turnovo",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Kardam_Prince_of_Turnovo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Kardam_Prince_of_Turnovo",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Kardam_Prince_of_Turnovo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Kardam_Prince_of_Turnovo",
+      "predicate": "label",
+      "object": "\"Kardam, Prince of Turnovo\"",
+      "subject_uri": "http://example.org/entity/Kardam_Prince_of_Turnovo",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Kardam, Prince of Turnovo\""
+    },
+    {
+      "subject": "Penn_State",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/Penn_State",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "Penn_State",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Penn_State",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Penn_State",
+      "predicate": "label",
+      "object": "\"Penn State University\"",
+      "subject_uri": "http://example.org/entity/Penn_State",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Penn State University\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

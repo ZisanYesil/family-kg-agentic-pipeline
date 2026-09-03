@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/681/originals/extracted_681.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/681/ground_truth_681.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/fraise_tagada": "http://example.org/entity/Fraise_Tagada",
+    "http://example.org/extracted/haribo_company": "http://example.org/entity/Haribo"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/fraise_tagada",
+      "extracted_types": [
+        "Product"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fraise Tagada",
+          "source": "label"
+        }
+      ],
+      "context": "Fraise Tagada.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fraise_Tagada",
+      "ground_truth_types": [
+        "Product"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fraise Tagada",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fraise Tagada",
+        "extracted_source": "label",
+        "ground_truth_text": "Fraise Tagada",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.3960866630077362,
+      "graph_score": 0.1980433315038681,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/haribo_company",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Haribo Company",
+          "source": "altLabel"
+        },
+        {
+          "text": "Haribo",
+          "source": "label"
+        }
+      ],
+      "context": "Haribo Company. has founder: Johannes \"Hans\" Riegel, Sr..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Haribo",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Haribo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Haribo",
+        "extracted_source": "label",
+        "ground_truth_text": "Haribo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8295784592628479,
+      "graph_score": 0.41478922963142395,
+      "margin": 0.6546381115913391
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/johannes_riegel_sr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Johannes \"Hans\" Riegel, Sr.",
+          "source": "label"
+        },
+        {
+          "text": "johannes riegel sr",
+          "source": "uri"
+        }
+      ],
+      "context": "Johannes \"Hans\" Riegel, Sr.. inverse has founder: Haribo Company.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hans_Riegel",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hans Riegel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Johannes \"Hans\" Riegel, Sr.",
+        "extracted_source": "label",
+        "ground_truth_text": "Hans Riegel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8278610706329346,
+      "name_embedding_score": 0.8465740084648132,
+      "string_score": 0.6855263113975525,
+      "independent_identity_support": false,
+      "context_score": 0.8655398488044739,
+      "graph_score": 0.9327698945999146,
+      "margin": 0.8278610706329346
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

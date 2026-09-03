@@ -1,0 +1,207 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/87/originals/extracted_87.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/87/ground_truth_87.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_bond_boy": "http://example.org/entity/The_Bond_Boy",
+    "http://example.org/extracted/country_united_kingdom": "http://example.org/entity/British",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "British",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        },
+        {
+          "text": "country united kingdom",
+          "source": "uri"
+        }
+      ],
+      "context": "British. inverse has country: Mad Dogs and Englishmen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "British",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9148561358451843,
+      "graph_score": 0.9148561358451843,
+      "margin": 0.6876233220100403
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has country: The Bond Boy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.950946033000946,
+      "graph_score": 0.475473016500473,
+      "margin": 0.6873389780521393
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_bond_boy",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Bond Boy",
+          "source": "label"
+        },
+        {
+          "text": "film bond boy",
+          "source": "uri"
+        }
+      ],
+      "context": "The Bond Boy. has country: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Bond_Boy",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Bond Boy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Bond Boy",
+        "extracted_source": "label",
+        "ground_truth_text": "The Bond Boy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9432743787765503,
+      "graph_score": 0.47163718938827515,
+      "margin": 0.760295644402504
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_mad_dogs_and_englishmen",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mad Dogs and Englishmen",
+          "source": "label"
+        },
+        {
+          "text": "film mad dogs and englishmen",
+          "source": "uri"
+        }
+      ],
+      "context": "Mad Dogs and Englishmen. has country: British.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mad_Dogs_and_Englishmen_film",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mad Dogs and Englishmen film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "film mad dogs and englishmen",
+        "extracted_source": "uri",
+        "ground_truth_text": "Mad Dogs and Englishmen film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.831741213798523,
+      "name_embedding_score": 0.9809394478797913,
+      "string_score": 0.9196428656578064,
+      "independent_identity_support": true,
+      "context_score": 0.8908863663673401,
+      "graph_score": 0.44544318318367004,
+      "margin": 0.655121460556984
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

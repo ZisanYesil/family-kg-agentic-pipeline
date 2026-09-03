@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/943/evaluation/entity_alignment/final_extracted_aligned_943.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/943/evaluation/entity_alignment/final_ground_truth_aligned_943.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Elizabeth_Fitzalan_Duchess_of_Norfolk",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Elizabeth_Fitzalan_Duchess_of_Norfolk",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Elizabeth_Fitzalan_Duchess_of_Norfolk",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Elizabeth_Fitzalan_Duchess_of_Norfolk",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Thomas_de_Mowbray_1st_Duke_of_Norfolk",
+      "predicate": "hasDeathPlace",
+      "object": "Venice",
+      "subject_uri": "http://example.org/entity/Thomas_de_Mowbray_1st_Duke_of_Norfolk",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Venice"
+    },
+    {
+      "subject": "Thomas_de_Mowbray_1st_Duke_of_Norfolk",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Thomas_de_Mowbray_1st_Duke_of_Norfolk",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Thomas_de_Mowbray_1st_Duke_of_Norfolk",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Thomas_de_Mowbray_1st_Duke_of_Norfolk",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Venice",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Venice",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Elizabeth_Fitzalan_Duchess_of_Norfolk",
+      "predicate": "hasSpouse",
+      "object": "Thomas_Mowbray",
+      "subject_uri": "http://example.org/entity/Elizabeth_Fitzalan_Duchess_of_Norfolk",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Thomas_Mowbray"
+    },
+    {
+      "subject": "Thomas_Mowbray",
+      "predicate": "hasSpouse",
+      "object": "Elizabeth_Fitzalan_Duchess_of_Norfolk",
+      "subject_uri": "http://example.org/entity/Thomas_Mowbray",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Elizabeth_Fitzalan_Duchess_of_Norfolk"
+    },
+    {
+      "subject": "Thomas_Mowbray",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Thomas_Mowbray",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Thomas_Mowbray",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Thomas_Mowbray",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Elizabeth_Fitzalan_Duchess_of_Norfolk",
+      "predicate": "hasSpouse",
+      "object": "Thomas_de_Mowbray_1st_Duke_of_Norfolk",
+      "subject_uri": "http://example.org/entity/Elizabeth_Fitzalan_Duchess_of_Norfolk",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Thomas_de_Mowbray_1st_Duke_of_Norfolk"
+    },
+    {
+      "subject": "Thomas_de_Mowbray_1st_Duke_of_Norfolk",
+      "predicate": "hasSpouse",
+      "object": "Elizabeth_Fitzalan_Duchess_of_Norfolk",
+      "subject_uri": "http://example.org/entity/Thomas_de_Mowbray_1st_Duke_of_Norfolk",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Elizabeth_Fitzalan_Duchess_of_Norfolk"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 12,
+    "true_positives": 6,
+    "false_positives": 2,
+    "false_negatives": 4,
+    "precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666665
+  },
+  "stage": "post_inference"
+}

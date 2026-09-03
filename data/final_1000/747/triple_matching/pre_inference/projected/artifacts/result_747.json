@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/747/evaluation/entity_alignment/baseline_extracted_aligned_747.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/747/evaluation/entity_alignment/baseline_ground_truth_aligned_747.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Godfrey_IV_Duke_of_Lower_Lorraine",
+      "predicate": "hasSpouse",
+      "object": "Matilda_of_Tuscany",
+      "subject_uri": "http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Matilda_of_Tuscany"
+    },
+    {
+      "subject": "Ida_of_Lorraine",
+      "predicate": "hasSibling",
+      "object": "Godfrey_IV_Duke_of_Lower_Lorraine",
+      "subject_uri": "http://example.org/entity/Ida_of_Lorraine",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Godfrey_IV_Duke_of_Lower_Lorraine",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Godfrey_IV_Duke_of_Lower_Lorraine",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Godfrey_IV_Duke_of_Lower_Lorraine",
+      "predicate": "label",
+      "object": "\"Godfrey IV, Duke of Lower Lorraine\"",
+      "subject_uri": "http://example.org/entity/Godfrey_IV_Duke_of_Lower_Lorraine",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Godfrey IV, Duke of Lower Lorraine\""
+    },
+    {
+      "subject": "Ida_of_Lorraine",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ida_of_Lorraine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Ida_of_Lorraine",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ida_of_Lorraine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ida_of_Lorraine",
+      "predicate": "label",
+      "object": "\"Ida of Lorraine\"",
+      "subject_uri": "http://example.org/entity/Ida_of_Lorraine",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ida of Lorraine\""
+    },
+    {
+      "subject": "Matilda_of_Tuscany",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Matilda_of_Tuscany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Matilda_of_Tuscany",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Matilda_of_Tuscany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Matilda_of_Tuscany",
+      "predicate": "label",
+      "object": "\"Matilda of Tuscany\"",
+      "subject_uri": "http://example.org/entity/Matilda_of_Tuscany",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Matilda of Tuscany\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

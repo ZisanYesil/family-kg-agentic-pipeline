@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/792/evaluation/entity_alignment/baseline_extracted_aligned_792.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/792/evaluation/entity_alignment/baseline_ground_truth_aligned_792.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Gang_Up",
+      "predicate": "hasPublicationDate",
+      "object": "\"2017\"^^<http://www.w3.org/2001/XMLSchema#gYear>",
+      "subject_uri": "http://example.org/entity/Gang_Up",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"2017\"^^<http://www.w3.org/2001/XMLSchema#gYear>"
+    },
+    {
+      "subject": "Occidentali_s_Karma",
+      "predicate": "hasPublicationDate",
+      "object": "\"2017-02-10\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Occidentali_s_Karma",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPublicationDate",
+      "object_term": "\"2017-02-10\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Gang_Up",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Gang_Up",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Gang_Up",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gang_Up",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gang_Up",
+      "predicate": "label",
+      "object": "\"Gang Up\"",
+      "subject_uri": "http://example.org/entity/Gang_Up",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gang Up\""
+    },
+    {
+      "subject": "Gang_Up",
+      "predicate": "altLabel",
+      "object": "\"Gang Up\"",
+      "subject_uri": "http://example.org/entity/Gang_Up",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Gang Up\""
+    },
+    {
+      "subject": "Occidentali_s_Karma",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Occidentali_s_Karma",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Occidentali_s_Karma",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Occidentali_s_Karma",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Occidentali_s_Karma",
+      "predicate": "label",
+      "object": "\"Occidentali's Karma\"",
+      "subject_uri": "http://example.org/entity/Occidentali_s_Karma",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Occidentali's Karma\""
+    },
+    {
+      "subject": "Occidentali_s_Karma",
+      "predicate": "altLabel",
+      "object": "\"Occidentali's Karma\"",
+      "subject_uri": "http://example.org/entity/Occidentali_s_Karma",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Occidentali's Karma\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 2,
+    "false_positives": 8,
+    "false_negatives": 0,
+    "precision": 0.2,
+    "recall": 1.0,
+    "f1": 0.33333333333333337
+  },
+  "stage": "pre_inference"
+}

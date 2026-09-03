@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Ayutthaya a ex:Place .
+
+entity:Thep_Kasattri a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Maha_Chakkraphat ;
+    ex:hasParent entity:Maha_Chakkraphat .
+
+entity:Maha_Chakkraphat a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Thep_Kasattri ;
+    ex:hasDeathPlace entity:Ayutthaya .
+

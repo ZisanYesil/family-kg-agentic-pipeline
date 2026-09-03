@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/The_Vanity_Pool> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Vanity Pool" ;
+    onto:hasDirector <http://example.org/entity/Ida_May_Park> .
+
+<http://example.org/entity/Ida_May_Park> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ida May Park" ;
+    onto:hasBirthPlace <http://example.org/entity/Los_Angeles> .
+
+<http://example.org/entity/Los_Angeles> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Los Angeles, California" .
+

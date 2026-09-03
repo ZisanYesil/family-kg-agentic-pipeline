@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example62
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:The_Criminal_1960_film ex:hasProducer inst:Nat_Cohen .  # producer
+inst:A_Soldier_s_Oath ex:hasProducer inst:William_Fox .  # producer
+inst:Nat_Cohen ex:hasDeathDate "1988-02-10"^^xsd:date .  # date of death -> "10 February 1988"
+inst:William_Fox_producer ex:hasDeathDate "1952-05-08"^^xsd:date .  # date of death -> "May 8, 1952"

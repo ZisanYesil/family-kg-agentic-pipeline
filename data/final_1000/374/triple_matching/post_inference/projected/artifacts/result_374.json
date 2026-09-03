@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/374/evaluation/entity_alignment/final_extracted_aligned_374.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/374/evaluation/entity_alignment/final_ground_truth_aligned_374.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Julia_Bracken_Wendt",
+      "predicate": "hasSpouse",
+      "object": "William_Wendt",
+      "subject_uri": "http://example.org/entity/Julia_Bracken_Wendt",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/William_Wendt"
+    },
+    {
+      "subject": "Julia_Bracken_Wendt",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Julia_Bracken_Wendt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Julia_Bracken_Wendt",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Julia_Bracken_Wendt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "William_Wendt",
+      "predicate": "hasSpouse",
+      "object": "Julia_Bracken_Wendt",
+      "subject_uri": "http://example.org/entity/William_Wendt",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Julia_Bracken_Wendt"
+    },
+    {
+      "subject": "William_Wendt",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/William_Wendt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "William_Wendt",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/William_Wendt",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "German",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/German",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "William_Wendt",
+      "predicate": "hasBirthPlace",
+      "object": "German",
+      "subject_uri": "http://example.org/entity/William_Wendt",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/German"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "William_Wendt",
+      "predicate": "hasBirthPlace",
+      "object": "bentzen_kingdom_of_prussia",
+      "subject_uri": "http://example.org/entity/William_Wendt",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/extracted/bentzen_kingdom_of_prussia"
+    },
+    {
+      "subject": "bentzen_kingdom_of_prussia",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/bentzen_kingdom_of_prussia",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 10,
+    "true_positives": 6,
+    "false_positives": 2,
+    "false_negatives": 2,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:dark_is_the_night_song a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Dark Is The Night (Soviet song)" ;
+    onto:hasComposer data:nikita_bogoslovsky .
+
+data:nikita_bogoslovsky a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Nikita Bogoslovsky" ;
+    onto:hasBirthPlace data:saint_petersburg .
+
+data:saint_petersburg a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Saint-Petersburg" .
+

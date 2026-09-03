@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_cupid_cowpuncher a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Cupid the Cowpuncher" ;
+    onto:hasCountryOfOrigin data:country_united_states .
+
+data:film_hashimura_togo a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Hashimura Togo" ;
+    onto:hasCountryOfOrigin data:country_united_states .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

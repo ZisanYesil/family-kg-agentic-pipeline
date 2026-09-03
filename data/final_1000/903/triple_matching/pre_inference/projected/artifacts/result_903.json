@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/903/evaluation/entity_alignment/baseline_extracted_aligned_903.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/903/evaluation/entity_alignment/baseline_ground_truth_aligned_903.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Lighter",
+      "predicate": "hasPerformer",
+      "object": "Miley_Cyrus",
+      "subject_uri": "http://example.org/entity/Lighter",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Miley_Cyrus"
+    },
+    {
+      "subject": "Miley_Cyrus",
+      "predicate": "hasParent",
+      "object": "Billy_Ray_Cyrus",
+      "subject_uri": "http://example.org/entity/Miley_Cyrus",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Billy_Ray_Cyrus"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Billy_Ray_Cyrus",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Billy_Ray_Cyrus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Billy_Ray_Cyrus",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Billy_Ray_Cyrus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Billy_Ray_Cyrus",
+      "predicate": "label",
+      "object": "\"Billy Ray Cyrus\"",
+      "subject_uri": "http://example.org/entity/Billy_Ray_Cyrus",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Billy Ray Cyrus\""
+    },
+    {
+      "subject": "Lighter",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Lighter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    },
+    {
+      "subject": "Lighter",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lighter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lighter",
+      "predicate": "label",
+      "object": "\"Lighter\"",
+      "subject_uri": "http://example.org/entity/Lighter",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Lighter\""
+    },
+    {
+      "subject": "Miley_Cyrus",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Miley_Cyrus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Miley_Cyrus",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Miley_Cyrus",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Miley_Cyrus",
+      "predicate": "label",
+      "object": "\"Miley Cyrus\"",
+      "subject_uri": "http://example.org/entity/Miley_Cyrus",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Miley Cyrus\""
+    },
+    {
+      "subject": "Miley_Cyrus",
+      "predicate": "altLabel",
+      "object": "\"Destiny Hope Cyrus\"",
+      "subject_uri": "http://example.org/entity/Miley_Cyrus",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Destiny Hope Cyrus\""
+    },
+    {
+      "subject": "Miley_Cyrus",
+      "predicate": "altLabel",
+      "object": "\"Miley Ray Hemsworth\"",
+      "subject_uri": "http://example.org/entity/Miley_Cyrus",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Miley Ray Hemsworth\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

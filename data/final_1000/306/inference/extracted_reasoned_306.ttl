@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/priyanka_gandhi> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/extracted/rajiv_gandhi> .
+
+<http://example.org/extracted/sanjay_gandhi> a ex:Agent,
+        ex:Person ;
+    ex:hasSibling <http://example.org/extracted/rajiv_gandhi> ;
+    ex:isBrotherOf <http://example.org/extracted/rajiv_gandhi> .
+
+<http://example.org/extracted/rajiv_gandhi> a ex:Agent,
+        ex:Person ;
+    ex:hasBrother <http://example.org/extracted/sanjay_gandhi> ;
+    ex:hasChild <http://example.org/extracted/priyanka_gandhi> ;
+    ex:hasSibling <http://example.org/extracted/sanjay_gandhi> .
+

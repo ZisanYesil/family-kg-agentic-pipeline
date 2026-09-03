@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/473/evaluation/entity_alignment/baseline_extracted_aligned_473.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/473/evaluation/entity_alignment/baseline_ground_truth_aligned_473.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Hans_J_Salter",
+      "predicate": "hasCountry",
+      "object": "Austrian",
+      "subject_uri": "http://example.org/entity/Hans_J_Salter",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Austrian"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Thunder_on_the_Hill",
+      "predicate": "hasComposer",
+      "object": "Hans_J_Salter",
+      "subject_uri": "http://example.org/entity/Thunder_on_the_Hill",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Hans_J_Salter"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Austrian",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Austrian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Austrian",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Austrian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Austrian",
+      "predicate": "label",
+      "object": "\"Austria\"",
+      "subject_uri": "http://example.org/entity/Austrian",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Austria\""
+    },
+    {
+      "subject": "Austrian",
+      "predicate": "altLabel",
+      "object": "\"Austrian\"",
+      "subject_uri": "http://example.org/entity/Austrian",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Austrian\""
+    },
+    {
+      "subject": "Hans_J_Salter",
+      "predicate": "hasCountry",
+      "object": "united_states",
+      "subject_uri": "http://example.org/entity/Hans_J_Salter",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/united_states"
+    },
+    {
+      "subject": "Hans_J_Salter",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Hans_J_Salter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Hans_J_Salter",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Hans_J_Salter",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Hans_J_Salter",
+      "predicate": "label",
+      "object": "\"Hans J. Salter\"",
+      "subject_uri": "http://example.org/entity/Hans_J_Salter",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Hans J. Salter\""
+    },
+    {
+      "subject": "united_states",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/united_states",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "united_states",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/united_states",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "united_states",
+      "predicate": "label",
+      "object": "\"United States\"",
+      "subject_uri": "http://example.org/extracted/united_states",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"United States\""
+    },
+    {
+      "subject": "united_states",
+      "predicate": "altLabel",
+      "object": "\"American\"",
+      "subject_uri": "http://example.org/extracted/united_states",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"American\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 14,
+    "true_positives": 1,
+    "false_positives": 12,
+    "false_negatives": 1,
+    "precision": 0.07692307692307693,
+    "recall": 0.5,
+    "f1": 0.13333333333333336
+  },
+  "stage": "pre_inference"
+}

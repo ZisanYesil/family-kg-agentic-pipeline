@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:john_manners_sutton_1752 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Manners-Sutton" ;
+    onto:hasFather data:lord_george_manners_sutton .
+
+data:john_manners_marquess_of_granby a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Manners, Marquess of Granby" .
+
+data:lord_george_manners_sutton a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lord George Manners-Sutton" ;
+    onto:hasBrother data:john_manners_marquess_of_granby .
+

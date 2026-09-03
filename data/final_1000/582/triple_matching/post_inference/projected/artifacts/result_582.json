@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/582/evaluation/entity_alignment/final_extracted_aligned_582.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/582/evaluation/entity_alignment/final_ground_truth_aligned_582.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Anđelko_Klobučar",
+      "predicate": "hasAwardReceived",
+      "object": "Vladimir_Nazor_Award",
+      "subject_uri": "http://example.org/entity/Anđelko_Klobučar",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Vladimir_Nazor_Award"
+    },
+    {
+      "subject": "Anđelko_Klobučar",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Anđelko_Klobučar",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Anđelko_Klobučar",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Anđelko_Klobučar",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Black_Birds",
+      "predicate": "hasComposer",
+      "object": "Anđelko_Klobučar",
+      "subject_uri": "http://example.org/entity/Black_Birds",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Anđelko_Klobučar"
+    },
+    {
+      "subject": "Black_Birds",
+      "predicate": "hasCreator",
+      "object": "Anđelko_Klobučar",
+      "subject_uri": "http://example.org/entity/Black_Birds",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Anđelko_Klobučar"
+    },
+    {
+      "subject": "Black_Birds",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Black_Birds",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Black_Birds",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Black_Birds",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Vladimir_Nazor_Award",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/Vladimir_Nazor_Award",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Anđelko_Klobučar",
+      "predicate": "hasAwardReceived",
+      "object": "porin_lifetime_award",
+      "subject_uri": "http://example.org/entity/Anđelko_Klobučar",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/extracted/porin_lifetime_award"
+    },
+    {
+      "subject": "Anđelko_Klobučar",
+      "predicate": "hasBirthDate",
+      "object": "\"1931-07-11\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Anđelko_Klobučar",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1931-07-11\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Anđelko_Klobučar",
+      "predicate": "hasDeathDate",
+      "object": "\"2016-08-07\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Anđelko_Klobučar",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"2016-08-07\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Black_Birds",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Black_Birds",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "porin_lifetime_award",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/extracted/porin_lifetime_award",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 13,
+    "true_positives": 8,
+    "false_positives": 5,
+    "false_negatives": 0,
+    "precision": 0.6153846153846154,
+    "recall": 1.0,
+    "f1": 0.761904761904762
+  },
+  "stage": "post_inference"
+}

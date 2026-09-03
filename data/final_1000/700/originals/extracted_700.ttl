@@ -1,0 +1,36 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:long_legs_long_fingers_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Long Legs, Long Fingers" ;
+    onto:hasDirector data:alfred_vohrer ;
+    skos:altLabel "Long Legs, Long Fingers" .
+
+data:premutos_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Premutos: The Fallen Angel" ;
+    onto:hasDirector data:olaf_ittenbach ;
+    skos:altLabel "Premutos: The Fallen Angel" .
+
+data:alfred_vohrer a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alfred Vohrer" ;
+    onto:hasNationality data:germany ;
+    skos:altLabel "Alfred Vohrer" .
+
+data:olaf_ittenbach a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Olaf Ittenbach" ;
+    onto:hasNationality data:germany ;
+    skos:altLabel "Olaf Ittenbach" .
+
+data:germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German",
+        "Germany" .
+

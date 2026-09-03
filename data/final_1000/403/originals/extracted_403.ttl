@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:take_it_easy_hospital a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Take It Easy Hospital" ;
+    onto:hasFounder data:ash_koosha .
+
+data:ash_koosha a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ashkan Kooshanejad" ;
+    onto:hasNationality data:iran,
+        data:united_kingdom ;
+    skos:altLabel "Ash Koosha" .
+
+data:iran a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Iran" ;
+    skos:altLabel "Iranian" .
+
+data:united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "British" .
+

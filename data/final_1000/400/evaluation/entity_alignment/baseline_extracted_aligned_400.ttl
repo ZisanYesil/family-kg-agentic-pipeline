@@ -1,0 +1,25 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Disgraced> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Disgraced!" ;
+    onto:hasCountryOfOrigin <http://example.org/entity/American> .
+
+<http://example.org/entity/Two_in_a_Big_City> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Two in a Big City" ;
+    onto:hasCountryOfOrigin <http://example.org/entity/German> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/German> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German" .
+

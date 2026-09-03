@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:antonio_flores_1961 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Antonio González Flores" ;
+    onto:hasMother data:lola_flores ;
+    skos:altLabel "Antonio Flores" .
+
+data:jerez_de_la_frontera a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Jerez de la Frontera" .
+
+data:lola_flores a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "María Dolores Flores Ruiz" ;
+    onto:hasBirthPlace data:jerez_de_la_frontera ;
+    skos:altLabel "Lola Flores" .
+

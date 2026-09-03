@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/750/originals/extracted_750.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/750/ground_truth_750.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_la_cage_aux_folles_3": "http://example.org/entity/La_Cage_aux_Folles_3_The_Wedding",
+    "http://example.org/extracted/person_georges_lautner": "http://example.org/entity/Georges_Lautner",
+    "http://example.org/extracted/person_renee_saint_cyr": "http://example.org/entity/Renée_Saint_Cyr"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_la_cage_aux_folles_3",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "La Cage Aux Folles 3: The Wedding",
+          "source": "label"
+        },
+        {
+          "text": "film la cage aux folles 3",
+          "source": "uri"
+        }
+      ],
+      "context": "La Cage Aux Folles 3: The Wedding. has director: Georges Lautner.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/La_Cage_aux_Folles_3_The_Wedding",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "La Cage aux Folles 3 The Wedding",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "La Cage Aux Folles 3: The Wedding",
+        "extracted_source": "label",
+        "ground_truth_text": "La Cage aux Folles 3 The Wedding",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9818610548973083,
+      "string_score": 0.9930769205093384,
+      "independent_identity_support": true,
+      "context_score": 0.986739456653595,
+      "graph_score": 0.9933696985244751,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_georges_lautner",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Georges Lautner",
+          "source": "label"
+        },
+        {
+          "text": "person georges lautner",
+          "source": "uri"
+        }
+      ],
+      "context": "Georges Lautner. has birth date: 1926-01-24. has death date: 2013-11-22. has mother: Renée Saint-Cyr. inverse has director: La Cage Aux Folles 3: The Wedding.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Georges_Lautner",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Georges Lautner",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Georges Lautner",
+        "extracted_source": "label",
+        "ground_truth_text": "Georges Lautner",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.806878924369812,
+      "graph_score": 0.903439462184906,
+      "margin": 0.7383621037006378
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_renee_saint_cyr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Renée Saint-Cyr",
+          "source": "label"
+        },
+        {
+          "text": "person renee saint cyr",
+          "source": "uri"
+        }
+      ],
+      "context": "Renée Saint-Cyr. inverse has mother: Georges Lautner.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Renée_Saint_Cyr",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Renée Saint Cyr",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Renée Saint-Cyr",
+        "extracted_source": "label",
+        "ground_truth_text": "Renée Saint Cyr",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9225237965583801,
+      "string_score": 0.9700000286102295,
+      "independent_identity_support": true,
+      "context_score": 0.9709790349006653,
+      "graph_score": 0.9854894876480103,
+      "margin": 0.6800909042358398
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

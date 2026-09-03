@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_very_moral_night a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A Very Moral Night" ;
+    onto:hasDirector data:person_k%C3%A1roly_makk .
+
+data:person_k%C3%A1roly_makk a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Károly Makk" ;
+    onto:hasBirthPlace data:place_beretty%C3%B3%C3%BAjfalu .
+
+data:place_beretty%C3%B3%C3%BAjfalu a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Berettyóújfalu" .
+

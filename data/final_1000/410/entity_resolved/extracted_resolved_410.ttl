@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_i_believe_in_music a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "I Believe in Music" ;
+    onto:hasPerformer data:person_mac_davis ;
+    skos:altLabel "I Believe in Music (song)" .
+
+data:person_mac_davis a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mac Davis" ;
+    onto:hasBirthPlace data:place_lubbock_texas_usa ;
+    skos:altLabel "Morris Mac Davis" .
+
+data:place_lubbock_texas_usa a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Lubbock, Texas, United States" .
+

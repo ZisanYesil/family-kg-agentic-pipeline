@@ -1,0 +1,100 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/857/evaluation/entity_alignment/baseline_extracted_aligned_857.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/857/evaluation/entity_alignment/baseline_ground_truth_aligned_857.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Thietmar_Margrave_of_Meissen",
+      "predicate": "hasDeathDate",
+      "object": "\"0979-08-03\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Thietmar_Margrave_of_Meissen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"0979-08-03\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Gero_II_Margrave_of_the_Saxon_Ostmark",
+      "predicate": "hasParent",
+      "object": "Thietmar_Margrave_of_Meissen",
+      "subject_uri": "http://example.org/entity/Gero_II_Margrave_of_the_Saxon_Ostmark",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Thietmar_Margrave_of_Meissen"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Thietmar_Margrave_of_Meissen",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Thietmar_Margrave_of_Meissen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Thietmar_Margrave_of_Meissen",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Thietmar_Margrave_of_Meissen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Thietmar_Margrave_of_Meissen",
+      "predicate": "label",
+      "object": "\"Thietmar\"",
+      "subject_uri": "http://example.org/entity/Thietmar_Margrave_of_Meissen",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Thietmar\""
+    },
+    {
+      "subject": "gero_ii",
+      "predicate": "hasParent",
+      "object": "Thietmar_Margrave_of_Meissen",
+      "subject_uri": "http://example.org/extracted/gero_ii",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Thietmar_Margrave_of_Meissen"
+    },
+    {
+      "subject": "gero_ii",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/gero_ii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "gero_ii",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/extracted/gero_ii",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "gero_ii",
+      "predicate": "label",
+      "object": "\"Gero II\"",
+      "subject_uri": "http://example.org/extracted/gero_ii",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gero II\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 1,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 9,
+    "true_positives": 1,
+    "false_positives": 7,
+    "false_negatives": 1,
+    "precision": 0.125,
+    "recall": 0.5,
+    "f1": 0.2
+  },
+  "stage": "pre_inference"
+}

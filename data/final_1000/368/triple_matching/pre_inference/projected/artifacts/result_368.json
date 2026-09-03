@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/368/evaluation/entity_alignment/baseline_extracted_aligned_368.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/368/evaluation/entity_alignment/baseline_ground_truth_aligned_368.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Freakdog",
+      "predicate": "hasDirector",
+      "object": "Paddy_Breathnach",
+      "subject_uri": "http://example.org/entity/Freakdog",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Paddy_Breathnach"
+    },
+    {
+      "subject": "Paddy_Breathnach",
+      "predicate": "hasCountry",
+      "object": "Ireland",
+      "subject_uri": "http://example.org/entity/Paddy_Breathnach",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Ireland"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Freakdog",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Freakdog",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Freakdog",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Freakdog",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Freakdog",
+      "predicate": "label",
+      "object": "\"Freakdog\"",
+      "subject_uri": "http://example.org/entity/Freakdog",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Freakdog\""
+    },
+    {
+      "subject": "Ireland",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Ireland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Ireland",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ireland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ireland",
+      "predicate": "label",
+      "object": "\"Ireland\"",
+      "subject_uri": "http://example.org/entity/Ireland",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ireland\""
+    },
+    {
+      "subject": "Ireland",
+      "predicate": "altLabel",
+      "object": "\"Irish\"",
+      "subject_uri": "http://example.org/entity/Ireland",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Irish\""
+    },
+    {
+      "subject": "Paddy_Breathnach",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Paddy_Breathnach",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Paddy_Breathnach",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Paddy_Breathnach",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Paddy_Breathnach",
+      "predicate": "label",
+      "object": "\"Paddy Breathnach\"",
+      "subject_uri": "http://example.org/entity/Paddy_Breathnach",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Paddy Breathnach\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/5/evaluation/entity_alignment/baseline_extracted_aligned_5.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/5/evaluation/entity_alignment/baseline_ground_truth_aligned_5.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Joe_Jackson",
+      "predicate": "hasAwardReceived",
+      "object": "Grammy",
+      "subject_uri": "http://example.org/entity/Joe_Jackson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Grammy"
+    },
+    {
+      "subject": "Sunday_Papers",
+      "predicate": "hasPerformer",
+      "object": "Joe_Jackson",
+      "subject_uri": "http://example.org/entity/Sunday_Papers",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Joe_Jackson"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Grammy",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/Grammy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "Grammy",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Grammy",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Grammy",
+      "predicate": "label",
+      "object": "\"Grammy Award nomination\"",
+      "subject_uri": "http://example.org/entity/Grammy",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Grammy Award nomination\""
+    },
+    {
+      "subject": "Joe_Jackson",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Joe_Jackson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Joe_Jackson",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Joe_Jackson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Joe_Jackson",
+      "predicate": "label",
+      "object": "\"Joe Jackson\"",
+      "subject_uri": "http://example.org/entity/Joe_Jackson",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Joe Jackson\""
+    },
+    {
+      "subject": "Joe_Jackson",
+      "predicate": "altLabel",
+      "object": "\"David Ian \\\"Joe\\\" Jackson\"",
+      "subject_uri": "http://example.org/entity/Joe_Jackson",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"David Ian \\\"Joe\\\" Jackson\""
+    },
+    {
+      "subject": "Sunday_Papers",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Sunday_Papers",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Sunday_Papers",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sunday_Papers",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sunday_Papers",
+      "predicate": "label",
+      "object": "\"Sunday Papers\"",
+      "subject_uri": "http://example.org/entity/Sunday_Papers",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sunday Papers\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

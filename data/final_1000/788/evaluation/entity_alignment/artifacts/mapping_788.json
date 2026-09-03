@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/788/originals/extracted_788.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/788/ground_truth_788.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ryu_mi_yong": "http://example.org/entity/Ryu_Mi_yong",
+    "http://example.org/extracted/thomas_parr": "http://example.org/entity/Thomas_Johannes_Lauritz_Parr"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ryu_mi_yong",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ryu Mi-yong",
+          "source": "label"
+        },
+        {
+          "text": "ryu mi yong",
+          "source": "uri"
+        }
+      ],
+      "context": "Ryu Mi-yong. has birth date: 1921-02-14. has death date: 2016-11-23.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ryu_Mi_yong",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ryu Mi yong",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ryu Mi-yong",
+        "extracted_source": "label",
+        "ground_truth_text": "Ryu Mi yong",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9772796630859375,
+      "string_score": 0.9590908885002136,
+      "independent_identity_support": true,
+      "context_score": 0.9914430975914001,
+      "graph_score": 0.9914430975914001,
+      "margin": 0.7955286204814911
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/thomas_parr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thomas Johannes Lauritz Parr",
+          "source": "label"
+        },
+        {
+          "text": "thomas parr",
+          "source": "uri"
+        }
+      ],
+      "context": "Thomas Johannes Lauritz Parr. has birth date: 1862-05-13. has death date: 1935-08-12.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thomas_Johannes_Lauritz_Parr",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thomas Johannes Lauritz Parr",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thomas Johannes Lauritz Parr",
+        "extracted_source": "label",
+        "ground_truth_text": "Thomas Johannes Lauritz Parr",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.75747349858284
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

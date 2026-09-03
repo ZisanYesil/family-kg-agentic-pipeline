@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:_richard_bulstrode a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Richard Bulstrode" ;
+    onto:hasFather data:_edward_bulstrode .
+
+data:_edward_bulstrode a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edward Bulstrode" ;
+    onto:hasEducatedAt data:_st_johns_college_oxford .
+
+data:_st_johns_college_oxford a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "St. John's College, Oxford" .
+

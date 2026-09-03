@@ -1,0 +1,112 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/61/originals/extracted_61.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/61/ground_truth_61.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/clodia_pulchra": "http://example.org/entity/Clodia_Pulchra",
+    "http://example.org/extracted/fulvia": "http://example.org/entity/Fulvia"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/clodia_pulchra",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Clodia Pulchra (wife of Octavian)",
+          "source": "label"
+        },
+        {
+          "text": "clodia pulchra",
+          "source": "uri"
+        }
+      ],
+      "context": "Clodia Pulchra (wife of Octavian). has mother: Fulvia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Clodia_Pulchra",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Clodia Pulchra",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "clodia pulchra",
+        "extracted_source": "uri",
+        "ground_truth_text": "Clodia Pulchra",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9564648270606995,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8631039261817932,
+      "graph_score": 0.9315519332885742,
+      "margin": 0.5958040058612823
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/fulvia",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Fulvia",
+          "source": "label"
+        }
+      ],
+      "context": "Fulvia. inverse has mother: Clodia Pulchra (wife of Octavian).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Fulvia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Fulvia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Fulvia",
+        "extracted_source": "label",
+        "ground_truth_text": "Fulvia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8446467518806458,
+      "graph_score": 0.9223233461380005,
+      "margin": 0.5793103277683258
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Roman"
+  ]
+}

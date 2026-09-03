@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/697/originals/extracted_697.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/697/ground_truth_697.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/busir_khagan": "http://example.org/entity/Busir",
+    "http://example.org/extracted/tiberius_705": "http://example.org/entity/Tiberius",
+    "http://example.org/extracted/theodora_of_khazaria": "http://example.org/entity/Theodora_of_Khazaria"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/busir_khagan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Busir, khagan of the Khazars",
+          "source": "altLabel"
+        },
+        {
+          "text": "Busir",
+          "source": "label"
+        },
+        {
+          "text": "busir khagan",
+          "source": "uri"
+        }
+      ],
+      "context": "Busir, khagan of the Khazars. inverse has brother: Theodora of Khazaria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Busir",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Busir",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Busir",
+        "extracted_source": "label",
+        "ground_truth_text": "Busir",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8959735035896301,
+      "graph_score": 0.44798675179481506,
+      "margin": 0.455993115901947
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/theodora_of_khazaria",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Theodora of Khazaria",
+          "source": "label"
+        }
+      ],
+      "context": "Theodora of Khazaria. has brother: Busir, khagan of the Khazars. inverse has mother: Tiberios.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Theodora_of_Khazaria",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Theodora of Khazaria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Theodora of Khazaria",
+        "extracted_source": "label",
+        "ground_truth_text": "Theodora of Khazaria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8440460562705994,
+      "graph_score": 0.5886896848678589,
+      "margin": 0.6411578059196472
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tiberius_705",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tiberios",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tiberius",
+          "source": "label"
+        },
+        {
+          "text": "tiberius 705",
+          "source": "uri"
+        }
+      ],
+      "context": "Tiberios. has mother: Theodora of Khazaria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tiberius",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tiberius",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tiberius",
+        "extracted_source": "label",
+        "ground_truth_text": "Tiberius",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7981898188591003,
+      "graph_score": 0.8990949392318726,
+      "margin": 0.6405742168426514
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

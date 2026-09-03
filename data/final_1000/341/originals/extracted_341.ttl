@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_jfk_years_of_lightning_day_of_drums a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "John F. Kennedy: Years of Lightning, Day of Drums" ;
+    onto:hasDirector data:person_bruce_herschensohn .
+
+data:org_pepperdine_university_school_of_public_policy a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Pepperdine University School of Public Policy" .
+
+data:person_bruce_herschensohn a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bruce Herschensohn" ;
+    onto:hasEmployer data:org_pepperdine_university_school_of_public_policy .
+

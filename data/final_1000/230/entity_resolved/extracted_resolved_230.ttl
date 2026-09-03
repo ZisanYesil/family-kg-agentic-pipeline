@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:the_muppets_on_puppets a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "The Muppets on Puppets" ;
+    onto:hasCreator data:jim_henson .
+
+data:jim_henson a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jim Henson" ;
+    onto:hasEducatedAt data:university_of_maryland_college_park .
+
+data:university_of_maryland_college_park a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "University of Maryland, College Park" .
+

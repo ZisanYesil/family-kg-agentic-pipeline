@@ -1,0 +1,29 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Texas_Gun_Fighter> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Texas Gun Fighter" ;
+    onto:hasDirector <http://example.org/entity/Phil_Rosen> .
+
+<http://example.org/entity/What_Will_People_Say> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "What Will People Say?" ;
+    onto:hasDirector data:alice_guy .
+
+<http://example.org/entity/Phil_Rosen> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Phil Rosen" ;
+    onto:hasBirthDate "1888-05-08"^^xsd:date ;
+    skos:altLabel "Philip E. Rosen" .
+
+data:alice_guy a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alice Guy" ;
+    onto:hasBirthDate "1873-07-01"^^xsd:date ;
+    skos:altLabel "Alice Guy‑Blaché" .
+

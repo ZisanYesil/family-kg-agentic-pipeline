@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/extracted/queen_insun> a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse <http://example.org/extracted/king_myeongjong> .
+
+<http://example.org/extracted/king_myeongjong> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/extracted/queen_munjeong> ;
+    ex:hasParent <http://example.org/extracted/queen_munjeong> ;
+    ex:hasSpouse <http://example.org/extracted/queen_insun> .
+
+<http://example.org/extracted/queen_munjeong> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/extracted/king_myeongjong> .
+

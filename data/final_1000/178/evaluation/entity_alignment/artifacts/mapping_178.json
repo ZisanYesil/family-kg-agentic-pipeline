@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/178/originals/extracted_178.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/178/ground_truth_178.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/pari_khan_khanum": "http://example.org/entity/Pari_Khan_Khanum",
+    "http://example.org/extracted/sultan_agha_khanum": "http://example.org/entity/Sultan_Agha_Khanum",
+    "http://example.org/extracted/badi_al_zaman_mirza_safavi": "http://example.org/entity/Badi_al_Zaman_Mirza_Safavi"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/badi_al_zaman_mirza_safavi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Badi-al Zaman Mirza Safavi",
+          "source": "label"
+        },
+        {
+          "text": "badi al zaman mirza safavi",
+          "source": "uri"
+        }
+      ],
+      "context": "Badi-al Zaman Mirza Safavi. has spouse: Pari Khan Khanum.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Badi_al_Zaman_Mirza_Safavi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Badi al Zaman Mirza Safavi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Badi-al Zaman Mirza Safavi",
+        "extracted_source": "label",
+        "ground_truth_text": "Badi al Zaman Mirza Safavi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9719802141189575,
+      "string_score": 0.982692301273346,
+      "independent_identity_support": true,
+      "context_score": 0.9937433004379272,
+      "graph_score": 0.9968716502189636,
+      "margin": 0.5496951341629028
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pari_khan_khanum",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pari Khan Khanum",
+          "source": "label"
+        }
+      ],
+      "context": "Pari Khan Khanum. has mother: Sultan-Agha Khanum. inverse has spouse: Badi-al Zaman Mirza Safavi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pari_Khan_Khanum",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pari Khan Khanum",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pari Khan Khanum",
+        "extracted_source": "label",
+        "ground_truth_text": "Pari Khan Khanum",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9927469491958618,
+      "graph_score": 0.9963734745979309,
+      "margin": 0.36671799421310425
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sultan_agha_khanum",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sultan-Agha Khanum",
+          "source": "label"
+        },
+        {
+          "text": "sultan agha khanum",
+          "source": "uri"
+        }
+      ],
+      "context": "Sultan-Agha Khanum. inverse has mother: Pari Khan Khanum.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sultan_Agha_Khanum",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sultan Agha Khanum",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sultan-Agha Khanum",
+        "extracted_source": "label",
+        "ground_truth_text": "Sultan Agha Khanum",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9812549352645874,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9930410385131836,
+      "graph_score": 0.9965205192565918,
+      "margin": 0.3806421160697937
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

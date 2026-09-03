@@ -1,0 +1,36 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:operation_petticoat_1959 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Operation Petticoat" ;
+    onto:hasDirector data:blake_edwards .
+
+data:war_book_2014 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "War Book" ;
+    onto:hasDirector data:tom_harper .
+
+data:blake_edwards a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Blake Edwards" ;
+    onto:hasNationality data:united_states .
+
+data:tom_harper a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tom Harper" ;
+    onto:hasNationality data:united_kingdom .
+
+data:united_kingdom a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "British" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

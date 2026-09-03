@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_geography_club a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Geography Club" ;
+    onto:hasDirector data:person_gary_entin .
+
+data:person_gary_entin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gary Entin" ;
+    onto:hasBirthPlace data:place_miami_florida .
+
+data:place_miami_florida a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Miami, Florida" .
+

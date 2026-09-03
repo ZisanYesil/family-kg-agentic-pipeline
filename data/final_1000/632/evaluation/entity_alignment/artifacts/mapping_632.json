@@ -1,0 +1,180 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/632/originals/extracted_632.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/632/ground_truth_632.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/italy": "http://example.org/entity/Italy",
+    "http://example.org/extracted/carnic_alps": "http://example.org/entity/Carnic_Alps",
+    "http://example.org/extracted/austria": "http://example.org/entity/Austria",
+    "http://example.org/extracted/torre_del_gran_san_pietro": "http://example.org/entity/Torre_del_Gran_San_Pietro"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/austria",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Austria",
+          "source": "label"
+        }
+      ],
+      "context": "Austria. inverse has country: Carnic Alps.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Austria",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Austria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Austria",
+        "extracted_source": "label",
+        "ground_truth_text": "Austria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5052948892116547
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/carnic_alps",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Carnic Alps",
+          "source": "label"
+        }
+      ],
+      "context": "Carnic Alps. has country: Austria. has country: Italy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Carnic_Alps",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Carnic Alps",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Carnic Alps",
+        "extracted_source": "label",
+        "ground_truth_text": "Carnic Alps",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6482822299003601
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/italy",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Italy",
+          "source": "label"
+        }
+      ],
+      "context": "Italy. inverse has country: Carnic Alps. inverse has country: Torre del Gran San Pietro.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Italy",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Italy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Italy",
+        "extracted_source": "label",
+        "ground_truth_text": "Italy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 0.4865449070930481
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/torre_del_gran_san_pietro",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Torre del Gran San Pietro",
+          "source": "label"
+        }
+      ],
+      "context": "Torre del Gran San Pietro. has country: Italy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Torre_del_Gran_San_Pietro",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Torre del Gran San Pietro",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Torre del Gran San Pietro",
+        "extracted_source": "label",
+        "ground_truth_text": "Torre del Gran San Pietro",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6633759140968323
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

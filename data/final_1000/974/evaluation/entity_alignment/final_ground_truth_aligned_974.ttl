@@ -1,0 +1,14 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Æthelric a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Æthelmund ;
+    ex:hasParent entity:Æthelmund .
+
+entity:Æthelmund a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Æthelric ;
+    ex:hasDeathDate "0802"^^xsd:gYear .
+

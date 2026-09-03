@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/146/originals/extracted_146.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/146/ground_truth_146.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/song_daddy_come_home": "http://example.org/entity/Daddy_Come_Home",
+    "http://example.org/extracted/person_billy_murray": "http://example.org/entity/Billy_Murray",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/United_States"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has nationality: William Thomas \"Billy\" Murray.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_States",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United States",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "label",
+        "ground_truth_text": "United States",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.841547429561615,
+      "graph_score": 0.4207737147808075,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_billy_murray",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William Thomas \"Billy\" Murray",
+          "source": "altLabel"
+        },
+        {
+          "text": "Billy Murray",
+          "source": "label"
+        },
+        {
+          "text": "person billy murray",
+          "source": "uri"
+        }
+      ],
+      "context": "William Thomas \"Billy\" Murray. has nationality: American. inverse has performer: Daddy, Come Home.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Billy_Murray",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Billy Murray",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Billy Murray",
+        "extracted_source": "label",
+        "ground_truth_text": "Billy Murray",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8821578621864319,
+      "graph_score": 0.6077455878257751,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_daddy_come_home",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Daddy, Come Home",
+          "source": "label"
+        },
+        {
+          "text": "song daddy come home",
+          "source": "uri"
+        }
+      ],
+      "context": "Daddy, Come Home. has performer: William Thomas \"Billy\" Murray.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Daddy_Come_Home",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Daddy Come Home",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Daddy, Come Home",
+        "extracted_source": "label",
+        "ground_truth_text": "Daddy Come Home",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9782193303108215,
+      "string_score": 0.9854838848114014,
+      "independent_identity_support": true,
+      "context_score": 0.9498904347419739,
+      "graph_score": 0.9749451875686646,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

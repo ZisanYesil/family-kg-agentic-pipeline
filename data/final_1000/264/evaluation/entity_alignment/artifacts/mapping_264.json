@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/264/originals/extracted_264.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/264/ground_truth_264.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/aubrie_sellers": "http://example.org/entity/Aubrie_Sellers",
+    "http://example.org/extracted/lee_ann_womack": "http://example.org/entity/Lee_Ann_Womack",
+    "http://example.org/extracted/buckaroo_song": "http://example.org/entity/Buckaroo"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/aubrie_sellers",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Aubrie Sellers",
+          "source": "label"
+        }
+      ],
+      "context": "Aubrie Sellers. inverse has daughter: Lee Ann Womack.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Aubrie_Sellers",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Aubrie Sellers",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Aubrie Sellers",
+        "extracted_source": "label",
+        "ground_truth_text": "Aubrie Sellers",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9705605506896973,
+      "graph_score": 0.48528027534484863,
+      "margin": 0.7188340127468109
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/buckaroo_song",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Buckaroo",
+          "source": "label"
+        },
+        {
+          "text": "buckaroo song",
+          "source": "uri"
+        }
+      ],
+      "context": "Buckaroo. has performer: Lee Ann Womack.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Buckaroo",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Buckaroo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Buckaroo",
+        "extracted_source": "label",
+        "ground_truth_text": "Buckaroo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lee_ann_womack",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lee Ann Womack",
+          "source": "label"
+        }
+      ],
+      "context": "Lee Ann Womack. has daughter: Aubrie Sellers. inverse has performer: Buckaroo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lee_Ann_Womack",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lee Ann Womack",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lee Ann Womack",
+        "extracted_source": "label",
+        "ground_truth_text": "Lee Ann Womack",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9785974621772766,
+      "graph_score": 0.6559653878211975,
+      "margin": 0.7193490266799927
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

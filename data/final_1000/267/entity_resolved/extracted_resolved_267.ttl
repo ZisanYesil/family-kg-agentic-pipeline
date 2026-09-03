@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:song_jihad a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Jihad" ;
+    onto:hasPerformer data:performer_slayer .
+
+data:award_grammy a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Grammy Award" .
+
+data:performer_slayer a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Slayer" ;
+    onto:hasAwardReceived data:award_grammy .
+

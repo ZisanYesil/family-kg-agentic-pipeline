@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/659/originals/extracted_659.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/659/ground_truth_659.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_maureen_osullivan": "http://example.org/entity/Maureen_O_Sullivan",
+    "http://example.org/extracted/person_john_farrow": "http://example.org/entity/John_Farrow",
+    "http://example.org/extracted/film_a_bullet_is_waiting": "http://example.org/entity/A_Bullet_Is_Waiting"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_a_bullet_is_waiting",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "A Bullet Is Waiting",
+          "source": "label"
+        },
+        {
+          "text": "film a bullet is waiting",
+          "source": "uri"
+        }
+      ],
+      "context": "A Bullet Is Waiting. has director: John Farrow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/A_Bullet_Is_Waiting",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "A Bullet Is Waiting",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "A Bullet Is Waiting",
+        "extracted_source": "label",
+        "ground_truth_text": "A Bullet Is Waiting",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_john_farrow",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Farrow",
+          "source": "label"
+        },
+        {
+          "text": "person john farrow",
+          "source": "uri"
+        }
+      ],
+      "context": "John Farrow. has spouse: Maureen O'Sullivan. inverse has director: A Bullet Is Waiting.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Farrow",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Farrow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Farrow",
+        "extracted_source": "label",
+        "ground_truth_text": "John Farrow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9952723979949951,
+      "graph_score": 0.9976361989974976,
+      "margin": 0.6720053255558014
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_maureen_osullivan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maureen O'Sullivan",
+          "source": "label"
+        },
+        {
+          "text": "person maureen osullivan",
+          "source": "uri"
+        }
+      ],
+      "context": "Maureen O'Sullivan. inverse has spouse: John Farrow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maureen_O_Sullivan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maureen O Sullivan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maureen O'Sullivan",
+        "extracted_source": "label",
+        "ground_truth_text": "Maureen O Sullivan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9814823865890503,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9922725558280945,
+      "graph_score": 0.9961363077163696,
+      "margin": 0.7115249931812286
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:musharrif_al_dawla a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Musharrif al-Dawla" ;
+    onto:hasFather data:baha_al_dawla ;
+    skos:altLabel "Abu 'Ali",
+        "Musharrif al-Dawla" .
+
+data:adud_al_dawla a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Adud al-Dawla" ;
+    skos:altLabel "'Adud al-Dawla",
+        "Adud al-Dawla",
+        "Fannā Khusraw",
+        "Panāh Khusraw" .
+
+data:baha_al_dawla a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Baha al-Dawla" ;
+    onto:hasFather data:adud_al_dawla ;
+    skos:altLabel "Abu Nasr Firuz Kharshadh",
+        "Baha al-Dawla" .
+

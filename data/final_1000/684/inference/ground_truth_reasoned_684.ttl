@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Sigismund_II_Augustus a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Bona_Sforza ;
+    ex:hasParent entity:Bona_Sforza .
+
+entity:Bona_Sforza a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Sigismund_II_Augustus ;
+    ex:hasCitizenship entity:Duchy_of_Milan ;
+    ex:hasCountry entity:Duchy_of_Milan .
+
+entity:Duchy_of_Milan a ex:Country,
+        ex:Place .
+

@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:charlotte_hesse_kassel a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Charlotte of Hesse-Kassel" ;
+    onto:hasSpouse data:charles_i_louis_palatin ;
+    skos:altLabel "Landgravine Charlotte of Hesse-Kassel" .
+
+data:frederick_v_palatin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Frederick V of the Palatinate" ;
+    onto:hasSon data:charles_i_louis_palatin .
+
+data:charles_i_louis_palatin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Charles I Louis, Elector Palatine" ;
+    skos:altLabel "Charles Louis, Elector Palatine" .
+

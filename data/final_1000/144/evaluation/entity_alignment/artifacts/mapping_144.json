@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/144/originals/extracted_144.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/144/ground_truth_144.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/canada": "http://example.org/entity/Canadian",
+    "http://example.org/extracted/chris_haughton": "http://example.org/entity/Chris_Haughton",
+    "http://example.org/extracted/j_herve_proulx": "http://example.org/entity/J_Hervé_Proulx"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/canada",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Canadian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Canada",
+          "source": "label"
+        }
+      ],
+      "context": "Canadian. inverse has nationality: Chris Haughton. inverse has nationality: J. Hervé Proulx.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Canadian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Canadian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Canadian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Canadian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9370096325874329,
+      "graph_score": 0.46850481629371643,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/chris_haughton",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chris Haughton",
+          "source": "label"
+        }
+      ],
+      "context": "Chris Haughton. has nationality: Canadian.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chris_Haughton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chris Haughton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chris Haughton",
+        "extracted_source": "label",
+        "ground_truth_text": "Chris Haughton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.943480908870697,
+      "graph_score": 0.4717404544353485,
+      "margin": 0.7525866627693176
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/j_herve_proulx",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "J. Hervé Proulx",
+          "source": "label"
+        },
+        {
+          "text": "j herve proulx",
+          "source": "uri"
+        }
+      ],
+      "context": "J. Hervé Proulx. has nationality: Canadian.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/J_Hervé_Proulx",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "J Hervé Proulx",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "J. Hervé Proulx",
+        "extracted_source": "label",
+        "ground_truth_text": "J Hervé Proulx",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9449256062507629,
+      "string_score": 0.9844827651977539,
+      "independent_identity_support": true,
+      "context_score": 0.9311625957489014,
+      "graph_score": 0.4655812978744507,
+      "margin": 0.719603031873703
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

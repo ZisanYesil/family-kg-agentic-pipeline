@@ -1,0 +1,140 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/413/evaluation/entity_alignment/final_extracted_aligned_413.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/413/evaluation/entity_alignment/final_ground_truth_aligned_413.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Call_for_Help",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Call_for_Help",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Call_for_Help",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Call_for_Help",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Call_for_Help",
+      "predicate": "hasCreator",
+      "object": "Leo_Laporte",
+      "subject_uri": "http://example.org/entity/Call_for_Help",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Leo_Laporte"
+    },
+    {
+      "subject": "Leo_Laporte",
+      "predicate": "hasEmployer",
+      "object": "TWiT_tv",
+      "subject_uri": "http://example.org/entity/Leo_Laporte",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/TWiT_tv"
+    },
+    {
+      "subject": "Leo_Laporte",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Leo_Laporte",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Leo_Laporte",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Leo_Laporte",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "TWiT_tv",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/TWiT_tv",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "TWiT_tv",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/TWiT_tv",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Call_for_Help",
+      "predicate": "hasPresenter",
+      "object": "person_chris_pirillo",
+      "subject_uri": "http://example.org/entity/Call_for_Help",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPresenter",
+      "object_term": "http://example.org/extracted/person_chris_pirillo"
+    },
+    {
+      "subject": "org_lockergnome_inc",
+      "predicate": "hasFounder",
+      "object": "person_chris_pirillo",
+      "subject_uri": "http://example.org/extracted/org_lockergnome_inc",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasFounder",
+      "object_term": "http://example.org/extracted/person_chris_pirillo"
+    },
+    {
+      "subject": "org_lockergnome_inc",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/org_lockergnome_inc",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "org_lockergnome_inc",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/extracted/org_lockergnome_inc",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "person_chris_pirillo",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/extracted/person_chris_pirillo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "person_chris_pirillo",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/extracted/person_chris_pirillo",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 1,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 8,
+    "union_triples_in_scope": 14,
+    "true_positives": 2,
+    "false_positives": 6,
+    "false_negatives": 6,
+    "precision": 0.25,
+    "recall": 0.25,
+    "f1": 0.25
+  },
+  "stage": "post_inference"
+}

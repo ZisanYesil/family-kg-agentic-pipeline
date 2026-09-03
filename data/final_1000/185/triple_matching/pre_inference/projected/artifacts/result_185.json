@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/185/evaluation/entity_alignment/baseline_extracted_aligned_185.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/185/evaluation/entity_alignment/baseline_ground_truth_aligned_185.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Jiří_Baumruk",
+      "predicate": "hasBirthDate",
+      "object": "\"1930-06-27\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Jiří_Baumruk",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1930-06-27\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Jiří_Baumruk",
+      "predicate": "hasDeathDate",
+      "object": "\"1989-11-23\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Jiří_Baumruk",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1989-11-23\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Mathias_Rosenblad",
+      "predicate": "hasBirthDate",
+      "object": "\"1758-06-23\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Mathias_Rosenblad",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1758-06-23\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Mathias_Rosenblad",
+      "predicate": "hasDeathDate",
+      "object": "\"1847-09-04\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Mathias_Rosenblad",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1847-09-04\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Jiří_Baumruk",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jiří_Baumruk",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jiří_Baumruk",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jiří_Baumruk",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jiří_Baumruk",
+      "predicate": "label",
+      "object": "\"Jiří Baumruk\"",
+      "subject_uri": "http://example.org/entity/Jiří_Baumruk",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jiří Baumruk\""
+    },
+    {
+      "subject": "Mathias_Rosenblad",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Mathias_Rosenblad",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Mathias_Rosenblad",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Mathias_Rosenblad",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Mathias_Rosenblad",
+      "predicate": "label",
+      "object": "\"Mathias Rosenblad\"",
+      "subject_uri": "http://example.org/entity/Mathias_Rosenblad",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Mathias Rosenblad\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 10,
+    "true_positives": 4,
+    "false_positives": 6,
+    "false_negatives": 0,
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.5714285714285715
+  },
+  "stage": "pre_inference"
+}

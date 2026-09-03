@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_monsieur_n a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Monsieur N." ;
+    onto:hasDirector data:person_antoine_de_caunes .
+
+data:person_emma_de_caunes a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Emma de Caunes" ;
+    onto:hasFather data:person_antoine_de_caunes .
+
+data:person_antoine_de_caunes a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Antoine de Caunes" .
+

@@ -1,0 +1,142 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/447/originals/extracted_447.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/447/ground_truth_447.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/coretta_scott_king": "http://example.org/entity/Coretta_Scott_King",
+    "http://example.org/extracted/dexter_king": "http://example.org/entity/Dexter_Scott_King"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/coretta_scott_king",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Coretta Scott King",
+          "source": "altLabel"
+        }
+      ],
+      "context": "Coretta Scott King. has burial place: King Center grounds. inverse has mother: Dexter King.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Coretta_Scott_King",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Coretta Scott King",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Coretta Scott King",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Coretta Scott King",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9177968502044678,
+      "graph_score": 0.9588984251022339,
+      "margin": 0.3802477717399597
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/dexter_king",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dexter King",
+          "source": "altLabel"
+        },
+        {
+          "text": "Dexter Scott King",
+          "source": "label"
+        }
+      ],
+      "context": "Dexter King. has mother: Coretta Scott King.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dexter_Scott_King",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dexter Scott King",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dexter Scott King",
+        "extracted_source": "label",
+        "ground_truth_text": "Dexter Scott King",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.975747287273407,
+      "graph_score": 0.9878736734390259,
+      "margin": 0.38049614429473877
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/king_center",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "King Center grounds",
+          "source": "altLabel"
+        },
+        {
+          "text": "King Center",
+          "source": "label"
+        }
+      ],
+      "context": "King Center grounds. inverse has burial place: Coretta Scott King.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Georgia"
+  ]
+}

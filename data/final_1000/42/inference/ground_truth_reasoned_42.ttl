@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Joanna_of_Durazzo a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Maria_of_Calabria ;
+    ex:hasParent entity:Maria_of_Calabria .
+
+entity:Neapolitan a ex:Place .
+
+entity:Maria_of_Calabria a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Joanna_of_Durazzo ;
+    ex:hasDeathPlace entity:Neapolitan .
+

@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:agents_of_good_roots a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Agents of Good Roots" ;
+    onto:hasCountry <http://example.org/entity/American> .
+
+data:the_human_league a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "The Human League" ;
+    onto:hasCountry <http://example.org/entity/British> .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+
+<http://example.org/entity/British> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "English" .
+

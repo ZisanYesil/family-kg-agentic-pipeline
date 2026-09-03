@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:boris_prince_of_turnovo a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Boris, Prince of Turnovo" ;
+    onto:hasFather data:kardam_prince_of_turnovo .
+
+data:kardam_prince_of_turnovo a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Kardam, Prince of Turnovo" ;
+    onto:hasEducatedAt data:penn_state_university .
+
+data:penn_state_university a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Penn State University" .
+

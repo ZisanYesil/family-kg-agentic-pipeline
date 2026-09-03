@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Lady_Sarah_Frances_Elizabeth_Chatto a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Princess_Margaret ;
+    ex:hasParent entity:Princess_Margaret .
+
+entity:stroke a ex:CauseOfDeath .
+
+entity:Princess_Margaret a ex:Agent,
+        ex:Person ;
+    ex:hasCauseOfDeath entity:stroke ;
+    ex:hasChild entity:Lady_Sarah_Frances_Elizabeth_Chatto .
+

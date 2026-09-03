@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Sybilla_of_Burgundy> a ex:Agent,
+        ex:Person ;
+    ex:hasFather <http://example.org/entity/William_I_Count_of_Burgundy> ;
+    ex:hasParent <http://example.org/entity/William_I_Count_of_Burgundy> .
+
+<http://example.org/entity/Alice_of_Normandy> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/William_I_Count_of_Burgundy> .
+
+<http://example.org/entity/William_I_Count_of_Burgundy> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Sybilla_of_Burgundy> ;
+    ex:hasMother <http://example.org/entity/Alice_of_Normandy> ;
+    ex:hasParent <http://example.org/entity/Alice_of_Normandy> .
+

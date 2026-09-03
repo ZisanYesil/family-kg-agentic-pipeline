@@ -1,0 +1,19 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Fraise_Tagada> a onto:Product,
+        owl:NamedIndividual ;
+    rdfs:label "Fraise Tagada" .
+
+<http://example.org/entity/Haribo> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Haribo" ;
+    onto:hasFounder <http://example.org/entity/Hans_Riegel> ;
+    skos:altLabel "Haribo Company" .
+
+<http://example.org/entity/Hans_Riegel> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Johannes \"Hans\" Riegel, Sr." .
+

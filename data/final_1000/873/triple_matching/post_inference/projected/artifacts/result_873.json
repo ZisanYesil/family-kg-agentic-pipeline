@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/873/evaluation/entity_alignment/final_extracted_aligned_873.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/873/evaluation/entity_alignment/final_ground_truth_aligned_873.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Secrets_of_a_Door_to_Door_Salesman",
+      "predicate": "hasCreator",
+      "object": "Wolf_Rilla",
+      "subject_uri": "http://example.org/entity/Secrets_of_a_Door_to_Door_Salesman",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Wolf_Rilla"
+    },
+    {
+      "subject": "Secrets_of_a_Door_to_Door_Salesman",
+      "predicate": "hasDirector",
+      "object": "Wolf_Rilla",
+      "subject_uri": "http://example.org/entity/Secrets_of_a_Door_to_Door_Salesman",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Wolf_Rilla"
+    },
+    {
+      "subject": "Secrets_of_a_Door_to_Door_Salesman",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Secrets_of_a_Door_to_Door_Salesman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Secrets_of_a_Door_to_Door_Salesman",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Secrets_of_a_Door_to_Door_Salesman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Secrets_of_a_Door_to_Door_Salesman",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Secrets_of_a_Door_to_Door_Salesman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Wolf_Rilla",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Wolf_Rilla",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Wolf_Rilla",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Wolf_Rilla",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "United_Kingdom",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "United_Kingdom",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/United_Kingdom",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Wolf_Rilla",
+      "predicate": "hasCountry",
+      "object": "United_Kingdom",
+      "subject_uri": "http://example.org/entity/Wolf_Rilla",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/United_Kingdom"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Wolf_Rilla",
+      "predicate": "hasCountry",
+      "object": "country_germany",
+      "subject_uri": "http://example.org/entity/Wolf_Rilla",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/country_germany"
+    },
+    {
+      "subject": "country_germany",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/country_germany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "country_germany",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/country_germany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 13,
+    "true_positives": 7,
+    "false_positives": 3,
+    "false_negatives": 3,
+    "precision": 0.7,
+    "recall": 0.7,
+    "f1": 0.7
+  },
+  "stage": "post_inference"
+}

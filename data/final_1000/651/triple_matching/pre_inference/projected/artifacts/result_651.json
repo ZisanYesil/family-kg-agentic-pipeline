@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/651/evaluation/entity_alignment/baseline_extracted_aligned_651.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/651/evaluation/entity_alignment/baseline_ground_truth_aligned_651.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "On_Moonlight_Bay",
+      "predicate": "hasComposer",
+      "object": "Percy_Wenrich",
+      "subject_uri": "http://example.org/entity/On_Moonlight_Bay",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Percy_Wenrich"
+    },
+    {
+      "subject": "Percy_Wenrich",
+      "predicate": "hasDeathPlace",
+      "object": "New_York",
+      "subject_uri": "http://example.org/entity/Percy_Wenrich",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/New_York"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "New_York",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "New_York",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "New_York",
+      "predicate": "label",
+      "object": "\"New York City\"",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"New York City\""
+    },
+    {
+      "subject": "On_Moonlight_Bay",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/On_Moonlight_Bay",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    },
+    {
+      "subject": "On_Moonlight_Bay",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/On_Moonlight_Bay",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "On_Moonlight_Bay",
+      "predicate": "label",
+      "object": "\"Moonlight Bay\"",
+      "subject_uri": "http://example.org/entity/On_Moonlight_Bay",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Moonlight Bay\""
+    },
+    {
+      "subject": "Percy_Wenrich",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Percy_Wenrich",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Percy_Wenrich",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Percy_Wenrich",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Percy_Wenrich",
+      "predicate": "label",
+      "object": "\"Percy Wenrich\"",
+      "subject_uri": "http://example.org/entity/Percy_Wenrich",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Percy Wenrich\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

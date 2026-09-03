@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_thundergate a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Thundergate" ;
+    onto:hasDirector data:person_joseph_de_grasse .
+
+data:person_joseph_de_grasse a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Joseph De Grasse" ;
+    onto:hasBirthPlace data:place_bathurst_new_brunswick ;
+    skos:altLabel "Joseph Louis De Grasse" .
+
+data:place_bathurst_new_brunswick a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bathurst, New Brunswick" .
+

@@ -18,6 +18,7 @@ class JobStatus(str, Enum):
 
 class JobCreateRequest(BaseModel):
     text: str = Field(..., min_length=10)
+    question: str = Field(..., min_length=1)
     webhook_url: Optional[HttpUrl] = None
     ontology_path: Optional[str] = Field(
         default=None,

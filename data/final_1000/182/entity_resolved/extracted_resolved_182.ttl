@@ -1,0 +1,36 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_a_heart_in_winter a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A Heart In Winter" ;
+    onto:hasDirector data:person_claude_sautet .
+
+data:film_single_white_female a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Single White Female" ;
+    onto:hasDirector data:person_barbet_schroeder .
+
+data:country_france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+
+data:country_switzerland a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Switzerland" ;
+    skos:altLabel "Swiss" .
+
+data:person_barbet_schroeder a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Barbet Schroeder" ;
+    onto:hasNationality data:country_switzerland .
+
+data:person_claude_sautet a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Claude Sautet" ;
+    onto:hasNationality data:country_france .
+

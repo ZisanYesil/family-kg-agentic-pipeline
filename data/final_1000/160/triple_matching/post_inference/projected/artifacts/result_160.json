@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/160/evaluation/entity_alignment/final_extracted_aligned_160.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/160/evaluation/entity_alignment/final_ground_truth_aligned_160.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Fanfare_of_Love",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Fanfare_of_Love",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "French",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/French",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "French",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/French",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Guilty_2011_film",
+      "predicate": "hasCountry",
+      "object": "French",
+      "subject_uri": "http://example.org/entity/Guilty_2011_film",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/French"
+    },
+    {
+      "subject": "Guilty_2011_film",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Guilty_2011_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Fanfare_of_Love",
+      "predicate": "hasCountry",
+      "object": "French",
+      "subject_uri": "http://example.org/entity/Fanfare_of_Love",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/French"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Fanfare_of_Love",
+      "predicate": "hasCountry",
+      "object": "west_germany",
+      "subject_uri": "http://example.org/entity/Fanfare_of_Love",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/west_germany"
+    },
+    {
+      "subject": "Fanfare_of_Love",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Fanfare_of_Love",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Fanfare_of_Love",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Fanfare_of_Love",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Guilty_2011_film",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Guilty_2011_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Guilty_2011_film",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Guilty_2011_film",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "west_germany",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/west_germany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "west_germany",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/west_germany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 6,
+    "union_triples_in_scope": 13,
+    "true_positives": 5,
+    "false_positives": 7,
+    "false_negatives": 1,
+    "precision": 0.4166666666666667,
+    "recall": 0.8333333333333334,
+    "f1": 0.5555555555555556
+  },
+  "stage": "post_inference"
+}

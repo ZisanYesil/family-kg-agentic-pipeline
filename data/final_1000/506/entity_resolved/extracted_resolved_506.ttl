@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:hans_albrecht_prince a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Hans Albrecht, Hereditary Prince of Schleswig-Holstein" ;
+    onto:hasMother data:marie_melita_hohenlohe ;
+    skos:altLabel "Hans Albrecht, Hereditary Prince of Schleswig-Holstein-Sonderburg-Glücksburg" .
+
+data:ernst_ii_prince a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ernst II, Prince of Hohenlohe-Langenburg" .
+
+data:marie_melita_hohenlohe a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Princess Marie Melita of Hohenlohe-Langenburg" ;
+    onto:hasFather data:ernst_ii_prince .
+

@@ -1,0 +1,106 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/918/evaluation/entity_alignment/final_extracted_aligned_918.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/918/evaluation/entity_alignment/final_ground_truth_aligned_918.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Injong",
+      "predicate": "hasParent",
+      "object": "Yejong",
+      "subject_uri": "http://example.org/entity/Injong",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Yejong"
+    },
+    {
+      "subject": "Injong",
+      "predicate": "hasSpouse",
+      "object": "Queen_Gongye",
+      "subject_uri": "http://example.org/entity/Injong",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Queen_Gongye"
+    },
+    {
+      "subject": "Injong",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Injong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Injong",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Injong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Queen_Gongye",
+      "predicate": "hasSpouse",
+      "object": "Injong",
+      "subject_uri": "http://example.org/entity/Queen_Gongye",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Injong"
+    },
+    {
+      "subject": "Queen_Gongye",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Queen_Gongye",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Queen_Gongye",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Queen_Gongye",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Yejong",
+      "predicate": "hasChild",
+      "object": "Injong",
+      "subject_uri": "http://example.org/entity/Yejong",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Injong"
+    },
+    {
+      "subject": "Yejong",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Yejong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Yejong",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Yejong",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 10,
+    "true_positives": 10,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

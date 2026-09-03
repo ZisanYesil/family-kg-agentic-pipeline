@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/699/originals/extracted_699.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/699/ground_truth_699.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/st_james_holdings": "http://example.org/entity/St_James_Holdings",
+    "http://example.org/extracted/mike_ashley": "http://example.org/entity/Mike_Ashley",
+    "http://example.org/extracted/sports_direct": "http://example.org/entity/Sports_Direct"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/mike_ashley",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Michael James Wallace Ashley",
+          "source": "altLabel"
+        },
+        {
+          "text": "Mike Ashley",
+          "source": "label"
+        }
+      ],
+      "context": "Michael James Wallace Ashley. has employer: Sports Direct. inverse has founder: St James Holdings.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mike_Ashley",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mike Ashley",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mike Ashley",
+        "extracted_source": "label",
+        "ground_truth_text": "Mike Ashley",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9329893589019775,
+      "graph_score": 0.9664946794509888,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sports_direct",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sports Direct",
+          "source": "label"
+        }
+      ],
+      "context": "Sports Direct. inverse has employer: Michael James Wallace Ashley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sports_Direct",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sports Direct",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sports Direct",
+        "extracted_source": "label",
+        "ground_truth_text": "Sports Direct",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9264163374900818,
+      "graph_score": 0.9632081985473633,
+      "margin": 0.8263814747333527
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/st_james_holdings",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "St James Holdings",
+          "source": "altLabel"
+        },
+        {
+          "text": "St James Holdings Limited",
+          "source": "label"
+        }
+      ],
+      "context": "St James Holdings. has founder: Michael James Wallace Ashley.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/St_James_Holdings",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "St James Holdings",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "St James Holdings",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "St James Holdings",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999997615814209,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9162502884864807,
+      "graph_score": 0.958125114440918,
+      "margin": 0.8225347995758057
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

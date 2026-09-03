@@ -1,0 +1,16 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:rip_off_review_of_western_culture a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "The Rip Off Review of Western Culture" ;
+    onto:hasPublisher data:rip_off_press .
+
+data:rip_off_press a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Rip Off Press" ;
+    onto:hasInception "1969"^^xsd:gYear .
+

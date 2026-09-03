@@ -1,0 +1,18 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Eleanor_of_Vermandois> a ex:Agent,
+        ex:Person ;
+    ex:hasMother <http://example.org/entity/Petronilla_of_Aquitaine> ;
+    ex:hasParent <http://example.org/entity/Petronilla_of_Aquitaine> .
+
+<http://example.org/entity/Eleanor_of_Aquitaine> a ex:Agent,
+        ex:Person ;
+    ex:hasSibling <http://example.org/entity/Petronilla_of_Aquitaine> ;
+    ex:isSisterOf <http://example.org/entity/Petronilla_of_Aquitaine> .
+
+<http://example.org/entity/Petronilla_of_Aquitaine> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Eleanor_of_Vermandois> ;
+    ex:hasSibling <http://example.org/entity/Eleanor_of_Aquitaine> ;
+    ex:hasSister <http://example.org/entity/Eleanor_of_Aquitaine> .
+

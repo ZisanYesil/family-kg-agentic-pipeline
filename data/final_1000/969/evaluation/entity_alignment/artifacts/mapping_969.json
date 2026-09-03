@@ -1,0 +1,199 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/969/originals/extracted_969.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/969/ground_truth_969.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/texas_gun_fighter": "http://example.org/entity/Texas_Gun_Fighter",
+    "http://example.org/extracted/what_will_people_say_1916": "http://example.org/entity/What_Will_People_Say",
+    "http://example.org/extracted/phil_rosen": "http://example.org/entity/Phil_Rosen",
+    "http://example.org/extracted/alice_guy": "http://example.org/entity/Alice_Guy_Blaché"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 3,
+    "review": 1,
+    "unmatched": 0,
+    "unmatched_ground_truth": 2
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/phil_rosen",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Philip E. Rosen",
+          "source": "altLabel"
+        },
+        {
+          "text": "Phil Rosen",
+          "source": "label"
+        }
+      ],
+      "context": "Philip E. Rosen. has birth date: 1888-05-08. inverse has director: Texas Gun Fighter.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Phil_Rosen",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Phil Rosen",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Phil Rosen",
+        "extracted_source": "label",
+        "ground_truth_text": "Phil Rosen",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.973857581615448,
+      "graph_score": 0.9869288206100464,
+      "margin": 0.7881114780902863
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/texas_gun_fighter",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Texas Gun Fighter",
+          "source": "label"
+        }
+      ],
+      "context": "Texas Gun Fighter. has director: Philip E. Rosen.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Texas_Gun_Fighter",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Texas Gun Fighter",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Texas Gun Fighter",
+        "extracted_source": "label",
+        "ground_truth_text": "Texas Gun Fighter",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9808289408683777,
+      "graph_score": 0.9904145002365112,
+      "margin": 0.9248002022504807
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/what_will_people_say_1916",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "What Will People Say?",
+          "source": "label"
+        },
+        {
+          "text": "what will people say 1916",
+          "source": "uri"
+        }
+      ],
+      "context": "What Will People Say?. has director: Alice Guy‐Blaché.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/What_Will_People_Say",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "What Will People Say",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "What Will People Say?",
+        "extracted_source": "label",
+        "ground_truth_text": "What Will People Say",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9276278018951416,
+      "string_score": 0.9890244007110596,
+      "independent_identity_support": true,
+      "context_score": 0.9547095894813538,
+      "graph_score": 0.4773547947406769,
+      "margin": 0.8515068292617798
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/alice_guy",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alice Guy‐Blaché",
+          "source": "altLabel"
+        },
+        {
+          "text": "Alice Guy",
+          "source": "label"
+        }
+      ],
+      "context": "Alice Guy‐Blaché. has birth date: 1873-07-01. inverse has director: What Will People Say?.",
+      "decision": "review",
+      "matched": false,
+      "ground_truth_uri": "http://example.org/entity/Alice_Guy_Blaché",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alice Guy Blaché",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alice Guy‐Blaché",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Alice Guy Blaché",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8839132189750671,
+      "string_score": 0.971875011920929,
+      "independent_identity_support": true,
+      "context_score": 0.7104212641716003,
+      "graph_score": 0.35521063208580017,
+      "margin": 0.02911663055419922
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Alice_Guy",
+    "http://example.org/entity/Alice_Guy_Blaché"
+  ]
+}

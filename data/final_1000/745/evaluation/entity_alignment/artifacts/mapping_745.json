@@ -1,0 +1,165 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/745/originals/extracted_745.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/745/ground_truth_745.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/aubrey_herbert": "http://example.org/entity/Aubrey_Herbert",
+    "http://example.org/extracted/george_herbert_5th_earl_of_carnarvon": "http://example.org/entity/George_Herbert_5th_Earl_of_Carnarvon",
+    "http://example.org/extracted/auberon_herbert_landowner": "http://example.org/entity/Auberon_Herbert"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/auberon_herbert_landowner",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Auberon Mark Yvo Henry Molyneux Herbert",
+          "source": "altLabel"
+        },
+        {
+          "text": "Auberon Herbert",
+          "source": "label"
+        },
+        {
+          "text": "auberon herbert landowner",
+          "source": "uri"
+        }
+      ],
+      "context": "Auberon Mark Yvo Henry Molyneux Herbert. has father: Colonel The Honourable Aubrey Nigel Henry Molyneux Herbert.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Auberon_Herbert",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Auberon Herbert",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Auberon Herbert",
+        "extracted_source": "label",
+        "ground_truth_text": "Auberon Herbert",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7265884876251221,
+      "graph_score": 0.863294243812561,
+      "margin": 0.361028254032135
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/aubrey_herbert",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Colonel The Honourable Aubrey Nigel Henry Molyneux Herbert",
+          "source": "altLabel"
+        },
+        {
+          "text": "Aubrey Herbert",
+          "source": "label"
+        }
+      ],
+      "context": "Colonel The Honourable Aubrey Nigel Henry Molyneux Herbert. has brother: George Herbert. inverse has father: Auberon Mark Yvo Henry Molyneux Herbert.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Aubrey_Herbert",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Aubrey Herbert",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Aubrey Herbert",
+        "extracted_source": "label",
+        "ground_truth_text": "Aubrey Herbert",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7775871753692627,
+      "graph_score": 0.5554602742195129,
+      "margin": 0.3531372547149658
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/george_herbert_5th_earl_of_carnarvon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "George Herbert",
+          "source": "altLabel"
+        },
+        {
+          "text": "George Herbert, 5th Earl of Carnarvon",
+          "source": "label"
+        },
+        {
+          "text": "george herbert 5th earl of carnarvon",
+          "source": "uri"
+        }
+      ],
+      "context": "George Herbert. inverse has brother: Colonel The Honourable Aubrey Nigel Henry Molyneux Herbert.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/George_Herbert_5th_Earl_of_Carnarvon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "George Herbert 5th Earl of Carnarvon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "George Herbert, 5th Earl of Carnarvon",
+        "extracted_source": "label",
+        "ground_truth_text": "George Herbert 5th Earl of Carnarvon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9817010164260864,
+      "string_score": 0.9938356280326843,
+      "independent_identity_support": true,
+      "context_score": 0.7819276452064514,
+      "graph_score": 0.3909638226032257,
+      "margin": 0.3471684455871582
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

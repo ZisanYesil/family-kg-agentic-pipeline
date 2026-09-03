@@ -1,0 +1,25 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/extracted/film_codine> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/person_henri_colpi> ;
+    ex:hasDirector <http://example.org/extracted/person_henri_colpi> .
+
+<http://example.org/extracted/film_gold_frankincense_and_myrrh> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/person_ante_babaja> ;
+    ex:hasDirector <http://example.org/extracted/person_ante_babaja> .
+
+<http://example.org/extracted/person_ante_babaja> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1927-10-06"^^xsd:date ;
+    ex:hasDeathDate "2010-01-14"^^xsd:date .
+
+<http://example.org/extracted/person_henri_colpi> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1921-07-15"^^xsd:date ;
+    ex:hasDeathDate "2006-01-14"^^xsd:date .
+

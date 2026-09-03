@@ -1,0 +1,148 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "c91c703466b04ef030bd759434eff53de51ac4e6427fb3d7c29cefed386f2439",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/dhammika_siriwardana",
+        "path": null,
+        "value": "http://example.org/extracted/dhammika_siriwardana",
+        "expected": null,
+        "message": "Relation phrase 'died on' from http://example.org/extracted/dhammika_siriwardana to http://example.org/extracted/dhammika_siriwardana was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      },
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/usmar_ismail",
+        "path": null,
+        "value": "http://example.org/extracted/usmar_ismail",
+        "expected": null,
+        "message": "Relation phrase 'died on' from http://example.org/extracted/usmar_ismail to http://example.org/extracted/usmar_ismail was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "c91c703466b04ef030bd759434eff53de51ac4e6427fb3d7c29cefed386f2439",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/dhammika_siriwardana",
+            "path": null,
+            "value": "http://example.org/extracted/dhammika_siriwardana",
+            "expected": null,
+            "message": "Relation phrase 'died on' from http://example.org/extracted/dhammika_siriwardana to http://example.org/extracted/dhammika_siriwardana was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          },
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/usmar_ismail",
+            "path": null,
+            "value": "http://example.org/extracted/usmar_ismail",
+            "expected": null,
+            "message": "Relation phrase 'died on' from http://example.org/extracted/usmar_ismail to http://example.org/extracted/usmar_ismail was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 16,
+      "feedback_reasoning": "Both violations are of type **unmapped_relation** for the phrase “died on”. The ontology only defines a datatype property **onto:hasDeathDate** (domain Person, range date_or_year) for recording a death date, and it expects a literal value, not an IRI object. The validation finding points to a triple where the object is the same IRI as the subject, i.e. an IRI‑to‑IRI relation, for which no matching object‑property exists in the ontology. Since creating a synthetic IRI for a date or inventing a new predicate would contradict the rule “do not invent … relationships”, the violation cannot be repaired safely.",
+      "repairs": [
+        {
+          "violation_fingerprint": "631024204f3a8bef60dca27fc3cb78a02398bc4dd0b653d4985cc83d931c395b",
+          "reasoning": "No ontology object property matches the phrase “died on”. The appropriate ontology term (**onto:hasDeathDate**) is a datatype property that requires a literal date, not an IRI object. Therefore the unmapped relation cannot be fixed without inventing data, which is prohibited.",
+          "operations": []
+        },
+        {
+          "violation_fingerprint": "1bfd7a029a56f05064c09e0fec6c75c409a68745d78f30038a5e1295177fbddb",
+          "reasoning": "Same situation as the first violation: the phrase “died on” cannot be mapped to any object property in the ontology. The only relevant predicate (**onto:hasDeathDate**) expects a literal, so no repair can be performed.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "1bfd7a029a56f05064c09e0fec6c75c409a68745d78f30038a5e1295177fbddb",
+        "631024204f3a8bef60dca27fc3cb78a02398bc4dd0b653d4985cc83d931c395b"
+      ],
+      "triples_after": 16,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "c91c703466b04ef030bd759434eff53de51ac4e6427fb3d7c29cefed386f2439",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/dhammika_siriwardana",
+            "path": null,
+            "value": "http://example.org/extracted/dhammika_siriwardana",
+            "expected": null,
+            "message": "Relation phrase 'died on' from http://example.org/extracted/dhammika_siriwardana to http://example.org/extracted/dhammika_siriwardana was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          },
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/usmar_ismail",
+            "path": null,
+            "value": "http://example.org/extracted/usmar_ismail",
+            "expected": null,
+            "message": "Relation phrase 'died on' from http://example.org/extracted/usmar_ismail to http://example.org/extracted/usmar_ismail was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "c91c703466b04ef030bd759434eff53de51ac4e6427fb3d7c29cefed386f2439",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/dhammika_siriwardana",
+        "path": null,
+        "value": "http://example.org/extracted/dhammika_siriwardana",
+        "expected": null,
+        "message": "Relation phrase 'died on' from http://example.org/extracted/dhammika_siriwardana to http://example.org/extracted/dhammika_siriwardana was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      },
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/usmar_ismail",
+        "path": null,
+        "value": "http://example.org/extracted/usmar_ismail",
+        "expected": null,
+        "message": "Relation phrase 'died on' from http://example.org/extracted/usmar_ismail to http://example.org/extracted/usmar_ismail was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

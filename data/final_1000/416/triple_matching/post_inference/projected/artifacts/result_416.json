@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/416/evaluation/entity_alignment/final_extracted_aligned_416.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/416/evaluation/entity_alignment/final_ground_truth_aligned_416.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Agnes_of_Meissen",
+      "predicate": "hasParent",
+      "object": "Margaret_of_Sicily",
+      "subject_uri": "http://example.org/entity/Agnes_of_Meissen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Margaret_of_Sicily"
+    },
+    {
+      "subject": "Agnes_of_Meissen",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Agnes_of_Meissen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Agnes_of_Meissen",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Agnes_of_Meissen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Margaret_of_Sicily",
+      "predicate": "hasChild",
+      "object": "Agnes_of_Meissen",
+      "subject_uri": "http://example.org/entity/Margaret_of_Sicily",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Agnes_of_Meissen"
+    },
+    {
+      "subject": "Margaret_of_Sicily",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Margaret_of_Sicily",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Margaret_of_Sicily",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Margaret_of_Sicily",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Germany",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Germany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Germany",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Germany",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Margaret_of_Sicily",
+      "predicate": "hasCountry",
+      "object": "Germany",
+      "subject_uri": "http://example.org/entity/Margaret_of_Sicily",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Germany"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Margaret_of_Sicily",
+      "predicate": "hasCountry",
+      "object": "sicily",
+      "subject_uri": "http://example.org/entity/Margaret_of_Sicily",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/sicily"
+    },
+    {
+      "subject": "sicily",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/sicily",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "sicily",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/sicily",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 12,
+    "true_positives": 6,
+    "false_positives": 3,
+    "false_negatives": 3,
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.6666666666666666
+  },
+  "stage": "post_inference"
+}

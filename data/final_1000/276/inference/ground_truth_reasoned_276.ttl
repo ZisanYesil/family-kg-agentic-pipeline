@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Zoia_Ceaușescu a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Nicolae_Ceaușescu ;
+    ex:hasParent entity:Nicolae_Ceaușescu .
+
+entity:firing_squad a ex:CauseOfDeath .
+
+entity:Nicolae_Ceaușescu a ex:Agent,
+        ex:Person ;
+    ex:hasCauseOfDeath entity:firing_squad ;
+    ex:hasChild entity:Zoia_Ceaușescu .
+

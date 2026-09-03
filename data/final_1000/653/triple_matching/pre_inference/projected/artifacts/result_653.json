@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/653/evaluation/entity_alignment/baseline_extracted_aligned_653.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/653/evaluation/entity_alignment/baseline_ground_truth_aligned_653.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Mansur_ad_Din_of_Adal",
+      "predicate": "hasParent",
+      "object": "Sa_ad_ad_Din_II",
+      "subject_uri": "http://example.org/entity/Mansur_ad_Din_of_Adal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Sa_ad_ad_Din_II"
+    },
+    {
+      "subject": "Sa_ad_ad_Din_II",
+      "predicate": "hasSibling",
+      "object": "Haqq_ad_Din_II",
+      "subject_uri": "http://example.org/entity/Sa_ad_ad_Din_II",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSibling",
+      "object_term": "http://example.org/entity/Haqq_ad_Din_II"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Haqq_ad_Din_II",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Haqq_ad_Din_II",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Haqq_ad_Din_II",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Haqq_ad_Din_II",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Haqq_ad_Din_II",
+      "predicate": "label",
+      "object": "\"Haqq ad-Din II\"",
+      "subject_uri": "http://example.org/entity/Haqq_ad_Din_II",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Haqq ad-Din II\""
+    },
+    {
+      "subject": "Mansur_ad_Din_of_Adal",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Mansur_ad_Din_of_Adal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Mansur_ad_Din_of_Adal",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Mansur_ad_Din_of_Adal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Mansur_ad_Din_of_Adal",
+      "predicate": "label",
+      "object": "\"Mansur ad-Din\"",
+      "subject_uri": "http://example.org/entity/Mansur_ad_Din_of_Adal",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Mansur ad-Din\""
+    },
+    {
+      "subject": "Sa_ad_ad_Din_II",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sa_ad_ad_Din_II",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sa_ad_ad_Din_II",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sa_ad_ad_Din_II",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sa_ad_ad_Din_II",
+      "predicate": "label",
+      "object": "\"Sa'ad ad-Din II\"",
+      "subject_uri": "http://example.org/entity/Sa_ad_ad_Din_II",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sa'ad ad-Din II\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

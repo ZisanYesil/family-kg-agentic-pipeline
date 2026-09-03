@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:article_99_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Article 99" ;
+    onto:hasCountryOfOrigin data:united_states .
+
+data:six_dance_lessons_in_six_weeks_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Six Dance Lessons in Six Weeks" ;
+    onto:hasCountryOfOrigin data:united_states .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

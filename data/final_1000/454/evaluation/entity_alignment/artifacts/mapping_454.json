@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/454/originals/extracted_454.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/454/ground_truth_454.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/gustav_adolph_duke_of_mecklenburg_gustrow": "http://example.org/entity/Gustav_Adolph_Duke_of_Mecklenburg_Güstrow",
+    "http://example.org/extracted/christine_of_mecklenburg_gustrow": "http://example.org/entity/Christine_of_Mecklenburg_Güstrow",
+    "http://example.org/extracted/ferdinande_henriette_of_stolberg_gedern": "http://example.org/entity/Countess_Ferdinande_Henriette_of_Stolberg_Gedern"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/christine_of_mecklenburg_gustrow",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Duchess Christine of Mecklenburg-Güstrow",
+          "source": "label"
+        },
+        {
+          "text": "christine of mecklenburg gustrow",
+          "source": "uri"
+        }
+      ],
+      "context": "Duchess Christine of Mecklenburg-Güstrow. has father: Gustav Adolph, Duke of Mecklenburg-Güstrow. inverse has mother: Countess Ferdinande Henriette of Stolberg-Gedern.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Christine_of_Mecklenburg_Güstrow",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Christine of Mecklenburg Güstrow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Duchess Christine of Mecklenburg-Güstrow",
+        "extracted_source": "label",
+        "ground_truth_text": "Christine of Mecklenburg Güstrow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.8732463121414185,
+      "string_score": 0.887499988079071,
+      "independent_identity_support": true,
+      "context_score": 0.9544312357902527,
+      "graph_score": 0.9772156476974487,
+      "margin": 0.47880053520202637
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ferdinande_henriette_of_stolberg_gedern",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Countess Ferdinande Henriette of Stolberg-Gedern",
+          "source": "label"
+        },
+        {
+          "text": "ferdinande henriette of stolberg gedern",
+          "source": "uri"
+        }
+      ],
+      "context": "Countess Ferdinande Henriette of Stolberg-Gedern. has mother: Duchess Christine of Mecklenburg-Güstrow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Countess_Ferdinande_Henriette_of_Stolberg_Gedern",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Countess Ferdinande Henriette of Stolberg Gedern",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Countess Ferdinande Henriette of Stolberg-Gedern",
+        "extracted_source": "label",
+        "ground_truth_text": "Countess Ferdinande Henriette of Stolberg Gedern",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9894837737083435,
+      "string_score": 0.9906250238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9605845212936401,
+      "graph_score": 0.9802922606468201,
+      "margin": 0.5316533744335175
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/gustav_adolph_duke_of_mecklenburg_gustrow",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gustav Adolph, Duke of Mecklenburg-Güstrow",
+          "source": "label"
+        },
+        {
+          "text": "gustav adolph duke of mecklenburg gustrow",
+          "source": "uri"
+        }
+      ],
+      "context": "Gustav Adolph, Duke of Mecklenburg-Güstrow. inverse has father: Duchess Christine of Mecklenburg-Güstrow.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gustav_Adolph_Duke_of_Mecklenburg_Güstrow",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gustav Adolph Duke of Mecklenburg Güstrow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gustav Adolph, Duke of Mecklenburg-Güstrow",
+        "extracted_source": "label",
+        "ground_truth_text": "Gustav Adolph Duke of Mecklenburg Güstrow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9687951803207397,
+      "string_score": 0.9837349653244019,
+      "independent_identity_support": true,
+      "context_score": 0.9385685324668884,
+      "graph_score": 0.9692842960357666,
+      "margin": 0.4438706636428833
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/383/evaluation/entity_alignment/baseline_extracted_aligned_383.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/383/evaluation/entity_alignment/baseline_ground_truth_aligned_383.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Juris_Podnieks",
+      "predicate": "hasEducatedAt",
+      "object": "VGIK",
+      "subject_uri": "http://example.org/entity/Juris_Podnieks",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEducatedAt",
+      "object_term": "http://example.org/entity/VGIK"
+    },
+    {
+      "subject": "Vai_viegli_būt_jaunam",
+      "predicate": "hasDirector",
+      "object": "Juris_Podnieks",
+      "subject_uri": "http://example.org/entity/Vai_viegli_būt_jaunam",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Juris_Podnieks"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Juris_Podnieks",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Juris_Podnieks",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Juris_Podnieks",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Juris_Podnieks",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Juris_Podnieks",
+      "predicate": "label",
+      "object": "\"Juris Podnieks\"",
+      "subject_uri": "http://example.org/entity/Juris_Podnieks",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Juris Podnieks\""
+    },
+    {
+      "subject": "VGIK",
+      "predicate": "type",
+      "object": "EducationalInstitution",
+      "subject_uri": "http://example.org/entity/VGIK",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#EducationalInstitution"
+    },
+    {
+      "subject": "VGIK",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/VGIK",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "VGIK",
+      "predicate": "label",
+      "object": "\"Soviet VGIK film school\"",
+      "subject_uri": "http://example.org/entity/VGIK",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Soviet VGIK film school\""
+    },
+    {
+      "subject": "VGIK",
+      "predicate": "altLabel",
+      "object": "\"VGIK film school\"",
+      "subject_uri": "http://example.org/entity/VGIK",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"VGIK film school\""
+    },
+    {
+      "subject": "Vai_viegli_būt_jaunam",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Vai_viegli_būt_jaunam",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Vai_viegli_būt_jaunam",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Vai_viegli_būt_jaunam",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Vai_viegli_būt_jaunam",
+      "predicate": "label",
+      "object": "\"Is It Easy To Be Young?\"",
+      "subject_uri": "http://example.org/entity/Vai_viegli_būt_jaunam",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Is It Easy To Be Young?\""
+    },
+    {
+      "subject": "Vai_viegli_būt_jaunam",
+      "predicate": "altLabel",
+      "object": "\"Vai viegli būt jaunam?\"",
+      "subject_uri": "http://example.org/entity/Vai_viegli_būt_jaunam",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Vai viegli būt jaunam?\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

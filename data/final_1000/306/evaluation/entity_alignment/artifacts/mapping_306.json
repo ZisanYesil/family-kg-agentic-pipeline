@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/306/originals/extracted_306.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/306/ground_truth_306.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/priyanka_gandhi": "http://example.org/entity/Priyanka_Gandhi",
+    "http://example.org/extracted/sanjay_gandhi": "http://example.org/entity/Sanjay_Gandhi",
+    "http://example.org/extracted/rajiv_gandhi": "http://example.org/entity/Rajiv_Gandhi"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/priyanka_gandhi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Priyanka Gandhi Vadra",
+          "source": "altLabel"
+        },
+        {
+          "text": "Priyanka Gandhi",
+          "source": "label"
+        }
+      ],
+      "context": "Priyanka Gandhi Vadra. inverse has child: Rajiv Gandhi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Priyanka_Gandhi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Priyanka Gandhi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Priyanka Gandhi",
+        "extracted_source": "label",
+        "ground_truth_text": "Priyanka Gandhi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8560582995414734,
+      "graph_score": 0.4280291497707367,
+      "margin": 0.3400748372077942
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/rajiv_gandhi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rajiv Gandhi",
+          "source": "label"
+        }
+      ],
+      "context": "Rajiv Gandhi. has brother: Sanjay Gandhi. has child: Priyanka Gandhi Vadra.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rajiv_Gandhi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rajiv Gandhi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rajiv Gandhi",
+        "extracted_source": "label",
+        "ground_truth_text": "Rajiv Gandhi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9545080661773682,
+      "graph_score": 0.4772540330886841,
+      "margin": 0.27632224559783936
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sanjay_gandhi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sanjay Gandhi",
+          "source": "label"
+        }
+      ],
+      "context": "Sanjay Gandhi. inverse has brother: Rajiv Gandhi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sanjay_Gandhi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sanjay Gandhi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sanjay Gandhi",
+        "extracted_source": "label",
+        "ground_truth_text": "Sanjay Gandhi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9791595935821533,
+      "graph_score": 0.48957979679107666,
+      "margin": 0.27140647172927856
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

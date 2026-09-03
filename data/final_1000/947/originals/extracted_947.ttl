@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_gods_gun a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "God's Gun" ;
+    onto:hasDirector data:person_gianfranco_parolini .
+
+data:person_gianfranco_parolini a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gianfranco Parolini" ;
+    onto:hasDeathPlace data:place_rome_italy ;
+    skos:altLabel "Frank Kramer" .
+
+data:place_rome_italy a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Rome" ;
+    skos:altLabel "Rome, Italy" .
+

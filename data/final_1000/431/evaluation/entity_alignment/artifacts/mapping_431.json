@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/431/originals/extracted_431.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/431/ground_truth_431.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/rolf_billberg": "http://example.org/entity/Rolf_Billberg",
+    "http://example.org/extracted/yeo_woon_kay": "http://example.org/entity/Yeo_Woon_kay"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/rolf_billberg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rolf Billberg",
+          "source": "label"
+        }
+      ],
+      "context": "Rolf Billberg. has birth date: 1930-08-22. has death date: 1966-08-17.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rolf_Billberg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rolf Billberg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rolf Billberg",
+        "extracted_source": "label",
+        "ground_truth_text": "Rolf Billberg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.8265433013439178
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/yeo_woon_kay",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Yeo Woon-Kay",
+          "source": "label"
+        },
+        {
+          "text": "yeo woon kay",
+          "source": "uri"
+        }
+      ],
+      "context": "Yeo Woon-Kay. has birth date: 1940-02-25. has death date: 2009-05-22.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Yeo_Woon_kay",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Yeo Woon kay",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Yeo Woon-Kay",
+        "extracted_source": "label",
+        "ground_truth_text": "Yeo Woon kay",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9345729351043701,
+      "string_score": 0.9624999761581421,
+      "independent_identity_support": true,
+      "context_score": 0.974587619304657,
+      "graph_score": 0.974587619304657,
+      "margin": 0.8336842358112335
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

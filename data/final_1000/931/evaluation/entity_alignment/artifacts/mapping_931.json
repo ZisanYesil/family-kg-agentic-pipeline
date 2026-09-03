@@ -1,0 +1,203 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/931/originals/extracted_931.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/931/ground_truth_931.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_company_in_love": "http://example.org/entity/The_Company_s_in_Love",
+    "http://example.org/extracted/film_punyakoti": "http://example.org/entity/Punyakoti",
+    "http://example.org/extracted/person_max_ophuls": "http://example.org/entity/Max_Ophüls"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_company_in_love",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Company's in Love",
+          "source": "label"
+        },
+        {
+          "text": "film company in love",
+          "source": "uri"
+        }
+      ],
+      "context": "The Company's in Love. has director: Maximillian Oppenheimer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Company_s_in_Love",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Company s in Love",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Company's in Love",
+        "extracted_source": "label",
+        "ground_truth_text": "The Company s in Love",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9732232093811035,
+      "string_score": 0.9785714149475098,
+      "independent_identity_support": true,
+      "context_score": 0.8636330366134644,
+      "graph_score": 0.9318165183067322,
+      "margin": 0.8306950926780701
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_punyakoti",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Punyakoti",
+          "source": "label"
+        },
+        {
+          "text": "film punyakoti",
+          "source": "uri"
+        }
+      ],
+      "context": "Punyakoti. has director: Ravi Shankar V.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Punyakoti",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Punyakoti",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Punyakoti",
+        "extracted_source": "label",
+        "ground_truth_text": "Punyakoti",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9880533814430237,
+      "graph_score": 0.9880533814430237,
+      "margin": 0.7878975123167038
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_max_ophuls",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maximillian Oppenheimer",
+          "source": "altLabel"
+        },
+        {
+          "text": "Max Ophüls",
+          "source": "label"
+        },
+        {
+          "text": "person max ophuls",
+          "source": "uri"
+        }
+      ],
+      "context": "Maximillian Oppenheimer. has birth date: 1902-05-06. has death date: 1957-03-26. inverse has director: The Company's in Love.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Max_Ophüls",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Max Ophüls",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Max Ophüls",
+        "extracted_source": "label",
+        "ground_truth_text": "Max Ophüls",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8329018354415894,
+      "graph_score": 0.9164509177207947,
+      "margin": 0.8268090784549713
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_ravi_shankar_v",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ravi Shankar V",
+          "source": "label"
+        },
+        {
+          "text": "person ravi shankar v",
+          "source": "uri"
+        }
+      ],
+      "context": "Ravi Shankar V. inverse has director: Punyakoti.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ravi_Shankar",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ravi Shankar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ravi Shankar V",
+        "extracted_source": "label",
+        "ground_truth_text": "Ravi Shankar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9307591319084167,
+      "name_embedding_score": 0.9672174453735352,
+      "string_score": 0.8820512890815735,
+      "independent_identity_support": true,
+      "context_score": 0.8131009340286255,
+      "graph_score": 0.9065504670143127,
+      "margin": 0.7718598395586014
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

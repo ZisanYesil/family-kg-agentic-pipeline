@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Maana_Ke_Hum_Yaar_Nahin> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Maana Ke Hum Yaar Nahin" ;
+    onto:hasPerformer <http://example.org/entity/Parineeti_Chopra> .
+
+<http://example.org/entity/Filmfare_Award_for_Best_Female_Debut> a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Award" .
+
+<http://example.org/entity/Parineeti_Chopra> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Parineeti Chopra" ;
+    onto:hasAwardReceived <http://example.org/entity/Filmfare_Award_for_Best_Female_Debut>,
+        data:award_national_film .
+
+data:award_national_film a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "National Film Award" .
+

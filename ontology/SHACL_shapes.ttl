@@ -30,12 +30,13 @@
 #   still catches a value of the wrong RDF term kind for a property.
 # * sh:datatype / sh:or (datatype properties) is likewise unaffected and
 #   still catches malformed or wrongly-typed literals.
-# * sh:maxCount 1 is added only for properties judged genuinely single-valued
-#   in the real world (hasBirthDate, hasBirthPlace, hasBurialPlace, hasCauseOfDeath, hasCountryOfOrigin, hasDeathDate, hasDeathPlace, hasDoctoralAdvisor, hasFather, hasInception, hasMother, hasPublicationDate); see
-#   generate_shacl_shapes.py:MAX_COUNT_ONE. No property in ontology.ttl is
-#   currently declared owl:FunctionalProperty, so this list is a project-level
-#   judgement call layered on top, not something derived from the ontology
-#   file automatically.
+# * sh:maxCount 1 is used only for project properties judged genuinely
+#   single-valued. hasCountryOfOrigin is intentionally not restricted: films,
+#   organizations, and other artifacts may legitimately originate in multiple
+#   countries. Cardinality must never force a repair agent to delete supported
+#   source facts merely to obtain SHACL conformance. No property in ontology.ttl
+#   is currently declared owl:FunctionalProperty, so these constraints are
+#   explicit project-level decisions rather than ontology-derived axioms.
 # * This is intentionally an *open* shapes file (no sh:closed): kg_builder_agent.py
 #   already rejects unknown attributes/predicates and domain/range mismatches
 #   in Python before any Turtle is written, so SHACL's job here is to catch what
@@ -166,7 +167,6 @@ ex:hasCountryOfOriginShape
     sh:property [
         sh:path ex:hasCountryOfOrigin ;
         sh:nodeKind sh:IRI ;
-        sh:maxCount 1 ;
         sh:name "has country of origin" ;
         sh:message "ex:hasCountryOfOrigin value must be an IRI of the declared range/cardinality" ;
     ] .

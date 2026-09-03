@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Louis_Count_of_Verdun> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis I, Count of Verdun" ;
+    onto:hasFather <http://example.org/entity/Otto_I_Count_of_Chiny> ;
+    skos:altLabel "Louis I" .
+
+<http://example.org/entity/Gerberge_of_Lorraine> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Gerberge of Lorraine" .
+
+<http://example.org/entity/Otto_I_Count_of_Chiny> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Otto I, Count of Chiny" ;
+    onto:hasMother <http://example.org/entity/Gerberge_of_Lorraine> ;
+    skos:altLabel "Otto I" .
+

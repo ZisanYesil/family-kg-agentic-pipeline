@@ -1,0 +1,98 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "2154bc5023f66a46cdd37dfdd6b1d5b44e40df15cd6c31f914386d0a176cdf30",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/nancy_drew_trouble_shooter_film",
+        "path": null,
+        "value": "http://example.org/extracted/wilderness_miniseries",
+        "expected": null,
+        "message": "Relation phrase 'has same country as' from http://example.org/extracted/nancy_drew_trouble_shooter_film to http://example.org/extracted/wilderness_miniseries was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "2154bc5023f66a46cdd37dfdd6b1d5b44e40df15cd6c31f914386d0a176cdf30",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/nancy_drew_trouble_shooter_film",
+            "path": null,
+            "value": "http://example.org/extracted/wilderness_miniseries",
+            "expected": null,
+            "message": "Relation phrase 'has same country as' from http://example.org/extracted/nancy_drew_trouble_shooter_film to http://example.org/extracted/wilderness_miniseries was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 16,
+      "feedback_reasoning": "The violation reports an unmapped relation phrase “has same country as” between the film Nancy Drew … Trouble Shooter and the miniseries Wilderness. The source text states that Nancy Drew … Trouble Shooter is an American film (United States) while Wilderness is a British miniseries (United Kingdom). Because the two entities do **not** share the same country of origin, the asserted relation is false and there is no ontology predicate that can correctly express a “same‑country‑as” relationship between them. Adding any predicate would assert incorrect information, so the violation cannot be safely repaired.",
+      "repairs": [
+        {
+          "violation_fingerprint": "b541092c593ee0107d320d8ffe63f4f0a78e294038bf92fa4112c941a740f5ff",
+          "reasoning": "No valid ontology predicate matches the phrase and the factual data; the relation itself is unsupported by the source text.",
+          "operations": []
+        }
+      ],
+      "edit_log": [],
+      "unresolved_violation_fingerprints": [
+        "b541092c593ee0107d320d8ffe63f4f0a78e294038bf92fa4112c941a740f5ff"
+      ],
+      "triples_after": 16,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "2154bc5023f66a46cdd37dfdd6b1d5b44e40df15cd6c31f914386d0a176cdf30",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/nancy_drew_trouble_shooter_film",
+            "path": null,
+            "value": "http://example.org/extracted/wilderness_miniseries",
+            "expected": null,
+            "message": "Relation phrase 'has same country as' from http://example.org/extracted/nancy_drew_trouble_shooter_film to http://example.org/extracted/wilderness_miniseries was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "outcome": "revalidate"
+    }
+  ],
+  "status": "unresolved",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "2154bc5023f66a46cdd37dfdd6b1d5b44e40df15cd6c31f914386d0a176cdf30",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/nancy_drew_trouble_shooter_film",
+        "path": null,
+        "value": "http://example.org/extracted/wilderness_miniseries",
+        "expected": null,
+        "message": "Relation phrase 'has same country as' from http://example.org/extracted/nancy_drew_trouble_shooter_film to http://example.org/extracted/wilderness_miniseries was not mapped: relation_phrase did not match any ontology predicate. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "dangling_references": []
+}

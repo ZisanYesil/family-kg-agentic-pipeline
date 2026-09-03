@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/929/originals/extracted_929.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/929/ground_truth_929.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/stockholm": "http://example.org/entity/Stockholm",
+    "http://example.org/extracted/adolphe_de_leuven": "http://example.org/entity/Adolphe_de_Leuven",
+    "http://example.org/extracted/adolph_ribbing": "http://example.org/entity/Adolph_Ribbing"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/adolph_ribbing",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adolph de Leuven",
+          "source": "altLabel"
+        },
+        {
+          "text": "Adolph Ribbing",
+          "source": "label"
+        }
+      ],
+      "context": "Adolph de Leuven. has birth place: Stockholm. inverse has father: Adolphe de Leuven.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adolph_Ribbing",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adolph Ribbing",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adolph Ribbing",
+        "extracted_source": "label",
+        "ground_truth_text": "Adolph Ribbing",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7964166402816772,
+      "graph_score": 0.8982083201408386,
+      "margin": 0.2370966672897339
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/adolphe_de_leuven",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Adolphe de Leuven",
+          "source": "label"
+        }
+      ],
+      "context": "Adolphe de Leuven. has father: Adolph de Leuven.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Adolphe_de_Leuven",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Adolphe de Leuven",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Adolphe de Leuven",
+        "extracted_source": "label",
+        "ground_truth_text": "Adolphe de Leuven",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7849624752998352,
+      "graph_score": 0.8924812078475952,
+      "margin": 0.5630767345428467
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/stockholm",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stockholm",
+          "source": "label"
+        }
+      ],
+      "context": "Stockholm. inverse has birth place: Adolph de Leuven.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stockholm",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stockholm",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stockholm",
+        "extracted_source": "label",
+        "ground_truth_text": "Stockholm",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7219917178153992,
+      "graph_score": 0.860995888710022,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

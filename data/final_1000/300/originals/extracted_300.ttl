@@ -1,0 +1,18 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:fuego_song a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Fuego (Eleni Foureira song)" ;
+    onto:hasComposer data:alex_p .
+
+data:alex_p a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alexander \"Alex P\" Papaconstantinou" ;
+    onto:hasBirthDate "1979-12-29"^^xsd:date ;
+    skos:altLabel "Alex P" .
+

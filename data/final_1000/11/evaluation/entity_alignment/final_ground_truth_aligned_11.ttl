@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Alex_Matthiessen a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Peter_Matthiessen ;
+    ex:hasParent entity:Peter_Matthiessen .
+
+entity:leukemia a ex:CauseOfDeath .
+
+entity:Peter_Matthiessen a ex:Agent,
+        ex:Person ;
+    ex:hasCauseOfDeath entity:leukemia ;
+    ex:hasChild entity:Alex_Matthiessen .
+

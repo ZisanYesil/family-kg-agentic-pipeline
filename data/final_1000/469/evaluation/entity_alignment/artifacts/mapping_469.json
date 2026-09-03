@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/469/originals/extracted_469.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/469/ground_truth_469.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/united_states": "http://example.org/entity/United_States",
+    "http://example.org/extracted/primitive_art_museum": "http://example.org/entity/Museum_of_Primitive_Art_and_Culture",
+    "http://example.org/extracted/devils_rope_museum": "http://example.org/entity/Devils_Rope_Barbed_Wire_Museum"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/devils_rope_museum",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Devils Rope Barbed Wire Museum",
+          "source": "altLabel"
+        },
+        {
+          "text": "devils rope museum",
+          "source": "uri"
+        }
+      ],
+      "context": "Devils Rope Barbed Wire Museum. has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Devils_Rope_Barbed_Wire_Museum",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Devils Rope Barbed Wire Museum",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Devils Rope Barbed Wire Museum",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Devils Rope Barbed Wire Museum",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.49746882915496826
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/primitive_art_museum",
+      "extracted_types": [
+        "Artifact"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Museum of Primitive Art and Culture",
+          "source": "altLabel"
+        },
+        {
+          "text": "primitive art museum",
+          "source": "uri"
+        }
+      ],
+      "context": "Museum of Primitive Art and Culture. has country: United States.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Museum_of_Primitive_Art_and_Culture",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Museum of Primitive Art and Culture",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Museum of Primitive Art and Culture",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Museum of Primitive Art and Culture",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.492312490940094
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "United States",
+          "source": "altLabel"
+        }
+      ],
+      "context": "United States. inverse has country: Devils Rope Barbed Wire Museum. inverse has country: Museum of Primitive Art and Culture.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/United_States",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "United States",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United States",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "United States",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.826078861951828
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

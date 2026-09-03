@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:wonder_en_is_gheen_wonder a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Wonder en is gheen Wonder" ;
+    onto:hasPublisher data:skepp .
+
+data:belgium a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Belgium" ;
+    skos:altLabel "Belgian" .
+
+data:skepp a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "SKEPP" ;
+    onto:hasCountry data:belgium .
+

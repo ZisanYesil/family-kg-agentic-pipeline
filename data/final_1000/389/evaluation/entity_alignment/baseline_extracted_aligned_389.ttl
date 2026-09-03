@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/The_Diary_of_Evelyn_Lau> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Diary Of Evelyn Lau" ;
+    onto:hasDirector <http://example.org/entity/Sturla_Gunnarsson> .
+
+<http://example.org/entity/National_Film_Board> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "National Film Board" .
+
+<http://example.org/entity/Sturla_Gunnarsson> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sturla Gunnarsson" ;
+    onto:hasEmployer <http://example.org/entity/National_Film_Board> .
+

@@ -1,0 +1,168 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/800/originals/extracted_800.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/800/ground_truth_800.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/william_s_burroughs_senior": "http://example.org/entity/William_Seward_Burroughs_II",
+    "http://example.org/extracted/william_s_burroughs_jr": "http://example.org/entity/William_S_Burroughs_Jr"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/william_s_burroughs_jr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Billy Burroughs",
+          "source": "altLabel"
+        },
+        {
+          "text": "William S. Burroughs Jr.",
+          "source": "altLabel"
+        },
+        {
+          "text": "William Seward Burroughs III",
+          "source": "altLabel"
+        },
+        {
+          "text": "william s burroughs jr",
+          "source": "uri"
+        }
+      ],
+      "context": "Billy Burroughs. has father: William S. Burroughs.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_S_Burroughs_Jr",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William S Burroughs Jr",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William S. Burroughs Jr.",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "William S Burroughs Jr",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9826053380966187,
+      "string_score": 0.980434775352478,
+      "independent_identity_support": true,
+      "context_score": 0.8448840379714966,
+      "graph_score": 0.9224420189857483,
+      "margin": 0.21767032146453857
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/william_s_burroughs_senior",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William S. Burroughs",
+          "source": "altLabel"
+        },
+        {
+          "text": "William Seward Burroughs II",
+          "source": "altLabel"
+        },
+        {
+          "text": "william s burroughs senior",
+          "source": "uri"
+        }
+      ],
+      "context": "William S. Burroughs. has death place: Lawrence, Kansas. inverse has father: Billy Burroughs.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_Seward_Burroughs_II",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William Seward Burroughs II",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William Seward Burroughs II",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "William Seward Burroughs II",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8675956726074219,
+      "graph_score": 0.9337978363037109,
+      "margin": 0.2096801996231079
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lawrence_kansas",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lawrence, Kansas",
+          "source": "label"
+        },
+        {
+          "text": "lawrence kansas",
+          "source": "uri"
+        }
+      ],
+      "context": "Lawrence, Kansas. inverse has death place: William S. Burroughs.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lawrence",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lawrence",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lawrence, Kansas",
+        "extracted_source": "label",
+        "ground_truth_text": "Lawrence",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7779107093811035,
+      "name_embedding_score": 0.7368860840797424,
+      "string_score": 0.7250000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.8257410526275635,
+      "graph_score": 0.9128705263137817,
+      "margin": 0.7779107093811035
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

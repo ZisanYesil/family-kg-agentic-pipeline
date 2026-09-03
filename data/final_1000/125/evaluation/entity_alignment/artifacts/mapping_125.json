@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/125/originals/extracted_125.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/125/ground_truth_125.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/rolan_bykov": "http://example.org/entity/Rolan_Bykov",
+    "http://example.org/extracted/summer_is_over_film": "http://example.org/entity/Summer_Is_Over",
+    "http://example.org/extracted/high_courses_for_scriptwriters_and_film_directors": "http://example.org/entity/High_Courses_for_Scriptwriters_and_Film_Directors"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/high_courses_for_scriptwriters_and_film_directors",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "High Courses for Scriptwriters and Film Directors",
+          "source": "label"
+        }
+      ],
+      "context": "High Courses for Scriptwriters and Film Directors. inverse has educated at: Rolan Antonovich Bykov.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/High_Courses_for_Scriptwriters_and_Film_Directors",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "High Courses for Scriptwriters and Film Directors",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "High Courses for Scriptwriters and Film Directors",
+        "extracted_source": "label",
+        "ground_truth_text": "High Courses for Scriptwriters and Film Directors",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9453426599502563,
+      "graph_score": 0.4726713299751282,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/rolan_bykov",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rolan Antonovich Bykov",
+          "source": "altLabel"
+        },
+        {
+          "text": "Rolan Bykov",
+          "source": "label"
+        }
+      ],
+      "context": "Rolan Antonovich Bykov. has educated at: High Courses for Scriptwriters and Film Directors. inverse has director: Summer Is Over (film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rolan_Bykov",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rolan Bykov",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rolan Bykov",
+        "extracted_source": "label",
+        "ground_truth_text": "Rolan Bykov",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9459145069122314,
+      "graph_score": 0.6396239399909973,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/summer_is_over_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Summer Is Over (film)",
+          "source": "altLabel"
+        },
+        {
+          "text": "Summer Is Over",
+          "source": "label"
+        },
+        {
+          "text": "summer is over film",
+          "source": "uri"
+        }
+      ],
+      "context": "Summer Is Over (film). has director: Rolan Antonovich Bykov.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Summer_Is_Over",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Summer Is Over",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Summer Is Over",
+        "extracted_source": "label",
+        "ground_truth_text": "Summer Is Over",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9343743920326233,
+      "graph_score": 0.9671871662139893,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

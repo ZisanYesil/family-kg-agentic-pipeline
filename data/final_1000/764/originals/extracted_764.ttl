@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:the_good_soldier_schweik_1926_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Good Soldier Schweik (1926 film)" ;
+    onto:hasDirector data:karel_lamac .
+
+data:hamburg_germany a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Hamburg, Germany" .
+
+data:karel_lamac a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Karel Lamač" ;
+    onto:hasDeathPlace data:hamburg_germany .
+

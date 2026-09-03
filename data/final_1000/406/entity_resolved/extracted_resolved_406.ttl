@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:temple_lea_houston a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Temple Lea Houston" ;
+    onto:hasMother data:margaret_lea_houston .
+
+data:margaret_lea_houston a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Margaret Lea Houston" ;
+    onto:hasCauseOfDeath data:yellow_fever .
+
+data:yellow_fever a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "yellow fever" .
+

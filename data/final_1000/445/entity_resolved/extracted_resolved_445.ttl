@@ -1,0 +1,18 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_there_goes_my_heart_1938 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "There Goes My Heart" .
+
+data:person_marvin_hatley a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marvin Hatley" ;
+    onto:hasDeathPlace data:place_hollywood_california .
+
+data:place_hollywood_california a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Hollywood, California" .
+

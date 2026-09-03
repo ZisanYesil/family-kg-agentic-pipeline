@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:macrianus_minor a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Titus Fulvius Iunius Macrianus" ;
+    onto:hasFather data:macrianus_major ;
+    skos:altLabel "Macrianus Minor" .
+
+data:macrianus_major a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fulvius Macrianus" ;
+    onto:hasDeathPlace data:thrace ;
+    skos:altLabel "Macrianus Major" .
+
+data:thrace a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Thrace" .
+

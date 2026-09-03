@@ -1,0 +1,14 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Tsarevna_Catherine_Ivanovna_of_Russia a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Praskovia_Saltykova ;
+    ex:hasParent entity:Praskovia_Saltykova .
+
+entity:Praskovia_Saltykova a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Tsarevna_Catherine_Ivanovna_of_Russia ;
+    ex:hasDeathDate "1723-10-13"^^xsd:date .
+

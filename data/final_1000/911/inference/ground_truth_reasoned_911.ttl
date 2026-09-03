@@ -1,0 +1,24 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Berlin_Jerusalem a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Amos_Gitai ;
+    ex:hasDirector entity:Amos_Gitai .
+
+entity:The_Shadow_of_Nazareth a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator entity:Arthur_Maude ;
+    ex:hasDirector entity:Arthur_Maude .
+
+entity:Amos_Gitai a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1950-10-11"^^xsd:date .
+
+entity:Arthur_Maude a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1880-07-23"^^xsd:date .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_riders_of_the_plains a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Riders of the Plains" ;
+    onto:hasDirector data:person_jacques_jaccard .
+
+data:person_jacques_jaccard a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jacques Jaccard" ;
+    onto:hasDeathPlace data:place_los_angeles_california .
+
+data:place_los_angeles_california a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Los Angeles, California" .
+

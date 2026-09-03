@@ -1,0 +1,23 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/My_Three_Merry_Widows> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "My Three Merry Widows" ;
+    onto:hasDirector <http://example.org/entity/Fernando_Cortés> .
+
+<http://example.org/entity/Fernando_Cortés> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fernando Cortés" ;
+    onto:hasBirthDate "1909-10-04"^^xsd:date ;
+    onto:hasDeathDate "1979"^^xsd:gYear ;
+    onto:hasSpouse <http://example.org/entity/Mapy_Cortés> .
+
+<http://example.org/entity/Mapy_Cortés> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "María del Pilar Cordero" ;
+    skos:altLabel "Mapy Cortés" .
+

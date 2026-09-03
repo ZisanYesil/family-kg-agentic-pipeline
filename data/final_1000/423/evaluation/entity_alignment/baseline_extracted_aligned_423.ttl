@@ -1,0 +1,22 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/School_in_the_Mailbox> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "School in the Mailbox" ;
+    onto:hasDirector <http://example.org/entity/Stanley_Hawes> .
+
+<http://example.org/entity/National_Film_Board> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Australian National Film Board" ;
+    skos:altLabel "Australian Government's filmmaking body",
+        "Commonwealth Film Unit" .
+
+<http://example.org/entity/Stanley_Hawes> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Stanley Hawes" ;
+    onto:hasEmployer <http://example.org/entity/National_Film_Board> ;
+    skos:altLabel "Stanley Gilbert Hawes" .
+

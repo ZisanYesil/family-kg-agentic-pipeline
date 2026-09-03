@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/119/evaluation/entity_alignment/baseline_extracted_aligned_119.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/119/evaluation/entity_alignment/baseline_ground_truth_aligned_119.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Jim_Wynorski",
+      "predicate": "hasBirthPlace",
+      "object": "New_York",
+      "subject_uri": "http://example.org/entity/Jim_Wynorski",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/New_York"
+    },
+    {
+      "subject": "The_Return_of_Swamp_Thing",
+      "predicate": "hasDirector",
+      "object": "Jim_Wynorski",
+      "subject_uri": "http://example.org/entity/The_Return_of_Swamp_Thing",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Jim_Wynorski"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Jim_Wynorski",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jim_Wynorski",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jim_Wynorski",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jim_Wynorski",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jim_Wynorski",
+      "predicate": "label",
+      "object": "\"Jim Wynorski\"",
+      "subject_uri": "http://example.org/entity/Jim_Wynorski",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jim Wynorski\""
+    },
+    {
+      "subject": "New_York",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "New_York",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "New_York",
+      "predicate": "label",
+      "object": "\"Glen Cove, Long Island, New York\"",
+      "subject_uri": "http://example.org/entity/New_York",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Glen Cove, Long Island, New York\""
+    },
+    {
+      "subject": "The_Return_of_Swamp_Thing",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Return_of_Swamp_Thing",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "The_Return_of_Swamp_Thing",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/The_Return_of_Swamp_Thing",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "The_Return_of_Swamp_Thing",
+      "predicate": "label",
+      "object": "\"The Return of Swamp Thing\"",
+      "subject_uri": "http://example.org/entity/The_Return_of_Swamp_Thing",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"The Return of Swamp Thing\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

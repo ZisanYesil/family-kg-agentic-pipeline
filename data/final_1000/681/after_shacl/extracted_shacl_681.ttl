@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:fraise_tagada a onto:Product,
+        owl:NamedIndividual ;
+    rdfs:label "Fraise Tagada" ;
+    onto:hasManufacturer data:haribo_company .
+
+data:haribo_company a onto:Agent,
+        onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Haribo" ;
+    onto:hasFounder data:johannes_riegel_sr ;
+    skos:altLabel "Haribo Company" .
+
+data:johannes_riegel_sr a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Johannes \"Hans\" Riegel, Sr." .
+

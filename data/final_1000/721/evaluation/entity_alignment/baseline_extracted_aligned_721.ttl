@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/John_II_The_Babymaker_Duke_of_Cleves> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John II, Duke of Cleves" ;
+    onto:hasSpouse <http://example.org/entity/Mathilde_of_Hesse> .
+
+<http://example.org/entity/Cologne> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Cologne" .
+
+<http://example.org/entity/Mathilde_of_Hesse> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mathilde of Hesse" ;
+    onto:hasDeathPlace <http://example.org/entity/Cologne> .
+

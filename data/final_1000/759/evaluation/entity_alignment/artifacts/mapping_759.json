@@ -1,0 +1,160 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/759/originals/extracted_759.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/759/ground_truth_759.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_thundergate": "http://example.org/entity/Thundergate",
+    "http://example.org/extracted/person_joseph_de_grasse": "http://example.org/entity/Joseph_De_Grasse"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_thundergate",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thundergate",
+          "source": "label"
+        },
+        {
+          "text": "film thundergate",
+          "source": "uri"
+        }
+      ],
+      "context": "Thundergate. has director: Joseph Louis De Grasse.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thundergate",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thundergate",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thundergate",
+        "extracted_source": "label",
+        "ground_truth_text": "Thundergate",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.985034167766571,
+      "graph_score": 0.9925171136856079,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_joseph_de_grasse",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Joseph Louis De Grasse",
+          "source": "altLabel"
+        },
+        {
+          "text": "Joseph De Grasse",
+          "source": "label"
+        },
+        {
+          "text": "person joseph de grasse",
+          "source": "uri"
+        }
+      ],
+      "context": "Joseph Louis De Grasse. has birth place: Bathurst, New Brunswick. inverse has director: Thundergate.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Joseph_De_Grasse",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Joseph De Grasse",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Joseph De Grasse",
+        "extracted_source": "label",
+        "ground_truth_text": "Joseph De Grasse",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9629669785499573,
+      "graph_score": 0.9814834594726562,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_bathurst_new_brunswick",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bathurst, New Brunswick",
+          "source": "label"
+        },
+        {
+          "text": "place bathurst new brunswick",
+          "source": "uri"
+        }
+      ],
+      "context": "Bathurst, New Brunswick. inverse has birth place: Joseph Louis De Grasse.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/New_Brunswick",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "New Brunswick",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bathurst, New Brunswick",
+        "extracted_source": "label",
+        "ground_truth_text": "New Brunswick",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8913803100585938,
+      "name_embedding_score": 0.8979703187942505,
+      "string_score": 0.7916666865348816,
+      "independent_identity_support": true,
+      "context_score": 0.9558278322219849,
+      "graph_score": 0.9779139161109924,
+      "margin": 0.8913803100585938
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

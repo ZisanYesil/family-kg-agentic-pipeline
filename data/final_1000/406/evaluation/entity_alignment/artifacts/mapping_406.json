@@ -1,0 +1,145 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/406/originals/extracted_406.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/406/ground_truth_406.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/margaret_lea_houston": "http://example.org/entity/Margaret_Lea_Houston",
+    "http://example.org/extracted/yellow_fever": "http://example.org/entity/yellow_fever",
+    "http://example.org/extracted/temple_lea_houston": "http://example.org/entity/Temple_Lea_Houston"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/margaret_lea_houston",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Margaret Lea Houston",
+          "source": "label"
+        }
+      ],
+      "context": "Margaret Lea Houston. has cause of death: yellow fever. inverse has mother: Temple Lea Houston.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Margaret_Lea_Houston",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Margaret Lea Houston",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Margaret Lea Houston",
+        "extracted_source": "label",
+        "ground_truth_text": "Margaret Lea Houston",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.4135090708732605
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/temple_lea_houston",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Temple Lea Houston",
+          "source": "label"
+        }
+      ],
+      "context": "Temple Lea Houston. has mother: Margaret Lea Houston.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Temple_Lea_Houston",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Temple Lea Houston",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Temple Lea Houston",
+        "extracted_source": "label",
+        "ground_truth_text": "Temple Lea Houston",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.41943007707595825
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/yellow_fever",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "yellow fever",
+          "source": "label"
+        }
+      ],
+      "context": "yellow fever. inverse has cause of death: Margaret Lea Houston.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/yellow_fever",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "yellow fever",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "yellow fever",
+        "extracted_source": "label",
+        "ground_truth_text": "yellow fever",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

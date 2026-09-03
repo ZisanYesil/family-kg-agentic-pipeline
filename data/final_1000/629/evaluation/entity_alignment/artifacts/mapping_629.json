@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/629/originals/extracted_629.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/629/ground_truth_629.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/alfonso_vii_leon_castile": "http://example.org/entity/Alfonso_VII_of_León_and_Castile",
+    "http://example.org/extracted/urraca_of_leon": "http://example.org/entity/Urraca_of_León"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/alfonso_vii_leon_castile",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alfonso VII of León and Castile",
+          "source": "label"
+        },
+        {
+          "text": "alfonso vii leon castile",
+          "source": "uri"
+        }
+      ],
+      "context": "Alfonso VII of León and Castile. has mother: Urraca of León. inverse has father: Sancha of Castile.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alfonso_VII_of_León_and_Castile",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alfonso VII of León and Castile",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alfonso VII of León and Castile",
+        "extracted_source": "label",
+        "ground_truth_text": "Alfonso VII of León and Castile",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9694157242774963,
+      "graph_score": 0.9847078323364258,
+      "margin": 0.42700129747390747
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/urraca_of_leon",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Urraca of León",
+          "source": "label"
+        },
+        {
+          "text": "urraca of leon",
+          "source": "uri"
+        }
+      ],
+      "context": "Urraca of León. inverse has mother: Alfonso VII of León and Castile.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Urraca_of_León",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Urraca of León",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Urraca of León",
+        "extracted_source": "label",
+        "ground_truth_text": "Urraca of León",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4293445944786072
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sancha_of_castile",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sancha of Castile",
+          "source": "label"
+        }
+      ],
+      "context": "Sancha of Castile. has father: Alfonso VII of León and Castile.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sancha_of_Castile_Queen_of_Navarre",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sancha of Castile Queen of Navarre",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sancha of Castile",
+        "extracted_source": "label",
+        "ground_truth_text": "Sancha of Castile Queen of Navarre",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8453975319862366,
+      "name_embedding_score": 0.8313891887664795,
+      "string_score": 0.75,
+      "independent_identity_support": true,
+      "context_score": 0.9376236200332642,
+      "graph_score": 0.9688118100166321,
+      "margin": 0.27225160598754883
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/49/evaluation/entity_alignment/final_extracted_aligned_49.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/49/evaluation/entity_alignment/final_ground_truth_aligned_49.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Count_Your_Blessings",
+      "predicate": "hasComposer",
+      "object": "Franz_Waxman",
+      "subject_uri": "http://example.org/entity/Count_Your_Blessings",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Franz_Waxman"
+    },
+    {
+      "subject": "Count_Your_Blessings",
+      "predicate": "hasCreator",
+      "object": "Franz_Waxman",
+      "subject_uri": "http://example.org/entity/Count_Your_Blessings",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Franz_Waxman"
+    },
+    {
+      "subject": "Count_Your_Blessings",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Count_Your_Blessings",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Count_Your_Blessings",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Count_Your_Blessings",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Franz_Waxman",
+      "predicate": "hasCountry",
+      "object": "German",
+      "subject_uri": "http://example.org/entity/Franz_Waxman",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/German"
+    },
+    {
+      "subject": "Franz_Waxman",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Franz_Waxman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Franz_Waxman",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Franz_Waxman",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "German",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/German",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "German",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/German",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Count_Your_Blessings",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Count_Your_Blessings",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Franz_Waxman",
+      "predicate": "hasCountry",
+      "object": "united_states",
+      "subject_uri": "http://example.org/entity/Franz_Waxman",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/united_states"
+    },
+    {
+      "subject": "united_states",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/united_states",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "united_states",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/united_states",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 13,
+    "true_positives": 9,
+    "false_positives": 4,
+    "false_negatives": 0,
+    "precision": 0.6923076923076923,
+    "recall": 1.0,
+    "f1": 0.8181818181818181
+  },
+  "stage": "post_inference"
+}

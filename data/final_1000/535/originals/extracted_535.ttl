@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:robert_de_brus_4th_lord a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Robert de Brus, 4th Lord of Annandale" ;
+    onto:hasFather data:william_de_brus_3rd_lord .
+
+data:robert_de_brus_uncle a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Robert de Brus (uncle of 4th Lord of Annandale)" .
+
+data:william_de_brus_3rd_lord a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William de Brus, 3rd Lord of Annandale" ;
+    onto:hasBrother data:robert_de_brus_uncle .
+

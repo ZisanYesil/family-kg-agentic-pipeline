@@ -1,0 +1,27 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_heart_attack a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Heart Attack (Enrique Iglesias song)" ;
+    onto:hasPerformer data:performer_enrique_iglesias .
+
+data:country_philippines a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Philippines" ;
+    skos:altLabel "Filipino" .
+
+data:country_spain a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Spain" ;
+    skos:altLabel "Spanish" .
+
+data:performer_enrique_iglesias a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Enrique Iglesias" ;
+    onto:hasNationality data:country_philippines,
+        data:country_spain .
+

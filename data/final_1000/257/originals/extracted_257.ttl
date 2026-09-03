@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:carl_christian_of_austria a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Archduke Carl Christian of Austria" ;
+    onto:hasFather data:carl_ludwig_of_austria .
+
+data:brussels a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Brussels" .
+
+data:carl_ludwig_of_austria a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Archduke Carl Ludwig of Austria" ;
+    onto:hasDeathPlace data:brussels .
+

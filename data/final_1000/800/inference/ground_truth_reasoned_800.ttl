@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Lawrence a ex:Place .
+
+entity:William_S_Burroughs_Jr a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:William_Seward_Burroughs_II ;
+    ex:hasParent entity:William_Seward_Burroughs_II .
+
+entity:William_Seward_Burroughs_II a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:William_S_Burroughs_Jr ;
+    ex:hasDeathPlace entity:Lawrence .
+

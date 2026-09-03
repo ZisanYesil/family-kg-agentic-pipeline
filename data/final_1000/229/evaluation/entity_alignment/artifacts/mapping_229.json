@@ -1,0 +1,295 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/229/originals/extracted_229.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/229/ground_truth_229.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_oklahoma_1999": "http://example.org/entity/Oklahoma_1999_film",
+    "http://example.org/extracted/country_united_states": "http://example.org/entity/American",
+    "http://example.org/extracted/film_its_a_great_feeling": "http://example.org/entity/It_s_a_Great_Feeling",
+    "http://example.org/extracted/person_trevor_nunn": "http://example.org/entity/Trevor_Nunn",
+    "http://example.org/extracted/person_david_butler": "http://example.org/entity/David_Butler"
+  },
+  "summary": {
+    "extracted_entities": 6,
+    "ground_truth_entities": 7,
+    "matched": 6,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        },
+        {
+          "text": "country united states",
+          "source": "uri"
+        }
+      ],
+      "context": "American. inverse has nationality: David Butler.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8753473162651062,
+      "graph_score": 0.4376736581325531,
+      "margin": 0.6667551100254059
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_its_a_great_feeling",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "It's a Great Feeling",
+          "source": "label"
+        },
+        {
+          "text": "film its a great feeling",
+          "source": "uri"
+        }
+      ],
+      "context": "It's a Great Feeling. has director: David Butler.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/It_s_a_Great_Feeling",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "It s a Great Feeling",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "It's a Great Feeling",
+        "extracted_source": "label",
+        "ground_truth_text": "It s a Great Feeling",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9801165461540222,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.9930194020271301,
+      "graph_score": 0.9965096712112427,
+      "margin": 0.69035804271698
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_oklahoma_1999",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Oklahoma! (1999 film)",
+          "source": "label"
+        },
+        {
+          "text": "film oklahoma 1999",
+          "source": "uri"
+        }
+      ],
+      "context": "Oklahoma! (1999 film). has director: Trevor Nunn.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Oklahoma_1999_film",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Oklahoma 1999 film",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Oklahoma! (1999 film)",
+        "extracted_source": "label",
+        "ground_truth_text": "Oklahoma 1999 film",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.909019410610199,
+      "string_score": 0.9653846025466919,
+      "independent_identity_support": true,
+      "context_score": 0.9616348147392273,
+      "graph_score": 0.980817437171936,
+      "margin": 0.8249381333589554
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_david_butler",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "David Butler",
+          "source": "label"
+        },
+        {
+          "text": "person david butler",
+          "source": "uri"
+        }
+      ],
+      "context": "David Butler. has nationality: American. inverse has director: It's a Great Feeling.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/David_Butler",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "David Butler",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "David Butler",
+        "extracted_source": "label",
+        "ground_truth_text": "David Butler",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8388511538505554,
+      "graph_score": 0.6694256067276001,
+      "margin": 0.2770335078239441
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_trevor_nunn",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Trevor Nunn",
+          "source": "label"
+        },
+        {
+          "text": "person trevor nunn",
+          "source": "uri"
+        }
+      ],
+      "context": "Trevor Nunn. has nationality: English. inverse has director: Oklahoma! (1999 film).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Trevor_Nunn",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Trevor Nunn",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Trevor Nunn",
+        "extracted_source": "label",
+        "ground_truth_text": "Trevor Nunn",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9378122091293335,
+      "graph_score": 0.9689061045646667,
+      "margin": 0.617964118719101
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_united_kingdom",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "English",
+          "source": "altLabel"
+        },
+        {
+          "text": "United Kingdom",
+          "source": "label"
+        },
+        {
+          "text": "country united kingdom",
+          "source": "uri"
+        }
+      ],
+      "context": "English. inverse has nationality: Trevor Nunn.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/British",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "British",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "United Kingdom",
+        "extracted_source": "label",
+        "ground_truth_text": "British",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.571803867816925,
+      "name_embedding_score": 0.8579878211021423,
+      "string_score": 0.12857143580913544,
+      "independent_identity_support": false,
+      "context_score": 0.8853367567062378,
+      "graph_score": 0.4426683783531189,
+      "margin": 0.17530736327171326
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/David_Butler_director"
+  ]
+}

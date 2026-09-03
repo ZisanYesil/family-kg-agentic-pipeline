@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/385/originals/extracted_385.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/385/ground_truth_385.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/vladimir_godar": "http://example.org/entity/Vladimír_Godár",
+    "http://example.org/extracted/slovakia": "http://example.org/entity/Slovak",
+    "http://example.org/extracted/let_asfaltoveho_holuba": "http://example.org/entity/Let_asfaltového_holuba"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/let_asfaltoveho_holuba",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Let asfaltového holuba",
+          "source": "label"
+        },
+        {
+          "text": "let asfaltoveho holuba",
+          "source": "uri"
+        }
+      ],
+      "context": "Let asfaltového holuba. has creator: Vladimír Godár.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Let_asfaltového_holuba",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Let asfaltového holuba",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Let asfaltového holuba",
+        "extracted_source": "label",
+        "ground_truth_text": "Let asfaltového holuba",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8979663848876953,
+      "graph_score": 0.44898319244384766,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/slovakia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Slovak",
+          "source": "altLabel"
+        },
+        {
+          "text": "Slovakia",
+          "source": "label"
+        }
+      ],
+      "context": "Slovak. inverse has nationality: Vladimír Godár.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Slovak",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Slovak",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Slovak",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Slovak",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9361218214035034,
+      "graph_score": 0.4680609107017517,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/vladimir_godar",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vladimír Godár",
+          "source": "label"
+        },
+        {
+          "text": "vladimir godar",
+          "source": "uri"
+        }
+      ],
+      "context": "Vladimír Godár. has nationality: Slovak. inverse has creator: Let asfaltového holuba.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vladimír_Godár",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vladimír Godár",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vladimír Godár",
+        "extracted_source": "label",
+        "ground_truth_text": "Vladimír Godár",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9256852865219116,
+      "graph_score": 0.4628426432609558,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

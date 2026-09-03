@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_i_want_you_shana a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "I Want You" ;
+    onto:hasPerformer data:person_shana_petrone ;
+    skos:altLabel "I Want You (Shana song)" .
+
+data:person_shana_petrone a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Shana Petrone" ;
+    onto:hasBirthPlace data:place_park_ridge_illinois ;
+    skos:altLabel "Shana" .
+
+data:place_park_ridge_illinois a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Park Ridge, Illinois" .
+

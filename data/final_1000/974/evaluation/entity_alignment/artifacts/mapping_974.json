@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/974/originals/extracted_974.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/974/ground_truth_974.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/aethelmund": "http://example.org/entity/Æthelmund",
+    "http://example.org/extracted/aethelric_son_of_aethelmund": "http://example.org/entity/Æthelric"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/aethelmund",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Æthelmund",
+          "source": "label"
+        },
+        {
+          "text": "aethelmund",
+          "source": "uri"
+        }
+      ],
+      "context": "Æthelmund. has death date: 0802. inverse has father: Æthelric son of Æthelmund.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Æthelmund",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Æthelmund",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Æthelmund",
+        "extracted_source": "label",
+        "ground_truth_text": "Æthelmund",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9768198132514954,
+      "graph_score": 0.9884098768234253,
+      "margin": 0.33956682682037354
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/aethelric_son_of_aethelmund",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Æthelric son of Æthelmund",
+          "source": "altLabel"
+        },
+        {
+          "text": "Æthelric",
+          "source": "label"
+        },
+        {
+          "text": "aethelric son of aethelmund",
+          "source": "uri"
+        }
+      ],
+      "context": "Æthelric son of Æthelmund. has father: Æthelmund.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Æthelric",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Æthelric",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Æthelric",
+        "extracted_source": "label",
+        "ground_truth_text": "Æthelric",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9728444218635559,
+      "graph_score": 0.9864221811294556,
+      "margin": 0.34799373149871826
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

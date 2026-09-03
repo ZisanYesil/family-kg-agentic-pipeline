@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/762/evaluation/entity_alignment/baseline_extracted_aligned_762.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/762/evaluation/entity_alignment/baseline_ground_truth_aligned_762.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Blanche_of_France_Duchess_of_Orléans",
+      "predicate": "hasParent",
+      "object": "Jeanne_d_Évreux",
+      "subject_uri": "http://example.org/entity/Blanche_of_France_Duchess_of_Orléans",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Jeanne_d_Évreux"
+    },
+    {
+      "subject": "Jeanne_d_Évreux",
+      "predicate": "hasParent",
+      "object": "Louis_Count_of_Évreux",
+      "subject_uri": "http://example.org/entity/Jeanne_d_Évreux",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Louis_Count_of_Évreux"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Blanche_of_France_Duchess_of_Orléans",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Blanche_of_France_Duchess_of_Orléans",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Blanche_of_France_Duchess_of_Orléans",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Blanche_of_France_Duchess_of_Orléans",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Blanche_of_France_Duchess_of_Orléans",
+      "predicate": "label",
+      "object": "\"Blanche of France, Duchess of Orléans\"",
+      "subject_uri": "http://example.org/entity/Blanche_of_France_Duchess_of_Orléans",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Blanche of France, Duchess of Orléans\""
+    },
+    {
+      "subject": "Jeanne_d_Évreux",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Jeanne_d_Évreux",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Jeanne_d_Évreux",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Jeanne_d_Évreux",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Jeanne_d_Évreux",
+      "predicate": "label",
+      "object": "\"Jeanne d'Évreux\"",
+      "subject_uri": "http://example.org/entity/Jeanne_d_Évreux",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Jeanne d'Évreux\""
+    },
+    {
+      "subject": "Louis_Count_of_Évreux",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Évreux",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Louis_Count_of_Évreux",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Évreux",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Louis_Count_of_Évreux",
+      "predicate": "label",
+      "object": "\"Louis, Count of Évreux\"",
+      "subject_uri": "http://example.org/entity/Louis_Count_of_Évreux",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Louis, Count of Évreux\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

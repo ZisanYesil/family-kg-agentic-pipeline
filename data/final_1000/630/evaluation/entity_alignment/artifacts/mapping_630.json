@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/630/originals/extracted_630.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/630/ground_truth_630.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/sofias_last_ambulance": "http://example.org/entity/Sofia_s_Last_Ambulance",
+    "http://example.org/extracted/la_marca_de_satanas": "http://example.org/entity/La_marca_de_Satanás"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/la_marca_de_satanas",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "La Marca de Satanás",
+          "source": "label"
+        },
+        {
+          "text": "la marca de satanas",
+          "source": "uri"
+        }
+      ],
+      "context": "La Marca de Satanás. has publication date: 1957.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/La_marca_de_Satanás",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "La marca de Satanás",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "La Marca de Satanás",
+        "extracted_source": "label",
+        "ground_truth_text": "La marca de Satanás",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9862191081047058,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9236147403717041,
+      "graph_score": 0.9236147403717041,
+      "margin": 0.8863169625401497
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sofias_last_ambulance",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sofia's Last Ambulance",
+          "source": "label"
+        },
+        {
+          "text": "sofias last ambulance",
+          "source": "uri"
+        }
+      ],
+      "context": "Sofia's Last Ambulance. has publication date: 2012.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sofia_s_Last_Ambulance",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sofia s Last Ambulance",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sofia's Last Ambulance",
+        "extracted_source": "label",
+        "ground_truth_text": "Sofia s Last Ambulance",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9892870783805847,
+      "string_score": 0.9795454740524292,
+      "independent_identity_support": true,
+      "context_score": 0.9911618828773499,
+      "graph_score": 0.9911618828773499,
+      "margin": 0.8919330015778542
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

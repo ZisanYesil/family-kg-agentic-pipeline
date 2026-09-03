@@ -1,0 +1,112 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/330/originals/extracted_330.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/330/ground_truth_330.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/drogo_of_champagne": "http://example.org/entity/Drogo_of_Champagne"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 4,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 2
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/drogo_of_champagne",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Drogo of Champagne",
+          "source": "label"
+        }
+      ],
+      "context": "Drogo of Champagne. inverse has father: Pepin of Heristal.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Drogo_of_Champagne",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Drogo of Champagne",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Drogo of Champagne",
+        "extracted_source": "label",
+        "ground_truth_text": "Drogo of Champagne",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.78371661901474,
+      "graph_score": 0.78371661901474,
+      "margin": 0.5752675533294678
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/pippin_of_heristal",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pepin of Heristal",
+          "source": "altLabel"
+        },
+        {
+          "text": "Pippin of Heristal",
+          "source": "label"
+        }
+      ],
+      "context": "Pepin of Heristal. has father: Drogo of Champagne.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pepin of Herstal",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pepin of Heristal",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Pepin of Herstal",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.736082911491394,
+      "name_embedding_score": 0.9556261301040649,
+      "string_score": 0.7613636255264282,
+      "independent_identity_support": true,
+      "context_score": 0.5434310436248779,
+      "graph_score": 0.27171552181243896,
+      "margin": 0.3417951762676239
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Plectrude",
+    "http://example.org/entity/Plectrudis"
+  ]
+}

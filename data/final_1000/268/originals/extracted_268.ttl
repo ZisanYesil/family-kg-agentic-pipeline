@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:university_of_los_andes_colombia a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "University of Los Andes (Colombia)" ;
+    onto:hasFounder data:mario_laserna_pinzon .
+
+data:mario_laserna_pinzon a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mario Laserna Pinzón" ;
+    onto:hasBirthPlace data:paris .
+
+data:paris a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Paris" .
+

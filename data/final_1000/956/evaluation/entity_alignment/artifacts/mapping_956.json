@@ -1,0 +1,148 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/956/originals/extracted_956.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/956/ground_truth_956.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/mecca": "http://example.org/entity/Mecca",
+    "http://example.org/extracted/muhammad": "http://example.org/entity/Muhammad"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/mecca",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mecca",
+          "source": "label"
+        }
+      ],
+      "context": "Mecca. inverse has birth place: Muhammad.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mecca",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mecca",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mecca",
+        "extracted_source": "label",
+        "ground_truth_text": "Mecca",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/muhammad",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Muhammad",
+          "source": "label"
+        }
+      ],
+      "context": "Muhammad. has birth place: Mecca. inverse has spouse: Juwayriyya bint al-Harith.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Muhammad",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Muhammad",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Muhammad",
+        "extracted_source": "label",
+        "ground_truth_text": "Muhammad",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9834933280944824,
+      "graph_score": 0.9917466640472412,
+      "margin": 0.6693697273731232
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/juwayriyya_bint_al_harith",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Juwayriyya bint al-Harith",
+          "source": "label"
+        },
+        {
+          "text": "juwayriyya bint al harith",
+          "source": "uri"
+        }
+      ],
+      "context": "Juwayriyya bint al-Harith. has spouse: Muhammad.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Juwayriya_bint_al_Harith",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Juwayriya bint al Harith",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "juwayriyya bint al harith",
+        "extracted_source": "uri",
+        "ground_truth_text": "Juwayriya bint al Harith",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.89412522315979,
+      "name_embedding_score": 0.8897249102592468,
+      "string_score": 0.815816342830658,
+      "independent_identity_support": true,
+      "context_score": 0.9624698162078857,
+      "graph_score": 0.9812349081039429,
+      "margin": 0.4824024438858032
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/517/evaluation/entity_alignment/baseline_extracted_aligned_517.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/517/evaluation/entity_alignment/baseline_ground_truth_aligned_517.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Kanda_Naal_Mudhal",
+      "predicate": "hasDirector",
+      "object": "V_Priya",
+      "subject_uri": "http://example.org/entity/Kanda_Naal_Mudhal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/V_Priya"
+    },
+    {
+      "subject": "V_Priya",
+      "predicate": "hasStudentOf",
+      "object": "Suhasini",
+      "subject_uri": "http://example.org/entity/V_Priya",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasStudentOf",
+      "object_term": "http://example.org/entity/Suhasini"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Kanda_Naal_Mudhal",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Kanda_Naal_Mudhal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Kanda_Naal_Mudhal",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Kanda_Naal_Mudhal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Kanda_Naal_Mudhal",
+      "predicate": "label",
+      "object": "\"Kanda Naal Mudhal\"",
+      "subject_uri": "http://example.org/entity/Kanda_Naal_Mudhal",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Kanda Naal Mudhal\""
+    },
+    {
+      "subject": "Suhasini",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Suhasini",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Suhasini",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Suhasini",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Suhasini",
+      "predicate": "label",
+      "object": "\"Suhasini\"",
+      "subject_uri": "http://example.org/entity/Suhasini",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Suhasini\""
+    },
+    {
+      "subject": "V_Priya",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/V_Priya",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "V_Priya",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/V_Priya",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "V_Priya",
+      "predicate": "label",
+      "object": "\"V. Priya\"",
+      "subject_uri": "http://example.org/entity/V_Priya",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"V. Priya\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

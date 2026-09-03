@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/773/evaluation/entity_alignment/baseline_extracted_aligned_773.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/773/evaluation/entity_alignment/baseline_ground_truth_aligned_773.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Gu_Changwei",
+      "predicate": "hasBirthPlace",
+      "object": "Xi_an",
+      "subject_uri": "http://example.org/entity/Gu_Changwei",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Xi_an"
+    },
+    {
+      "subject": "Love_on_the_Cloud",
+      "predicate": "hasDirector",
+      "object": "Gu_Changwei",
+      "subject_uri": "http://example.org/entity/Love_on_the_Cloud",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Gu_Changwei"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Gu_Changwei",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gu_Changwei",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Gu_Changwei",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gu_Changwei",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gu_Changwei",
+      "predicate": "label",
+      "object": "\"Gu Changwei\"",
+      "subject_uri": "http://example.org/entity/Gu_Changwei",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gu Changwei\""
+    },
+    {
+      "subject": "Love_on_the_Cloud",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Love_on_the_Cloud",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Love_on_the_Cloud",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Love_on_the_Cloud",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Love_on_the_Cloud",
+      "predicate": "label",
+      "object": "\"Love on the Cloud\"",
+      "subject_uri": "http://example.org/entity/Love_on_the_Cloud",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Love on the Cloud\""
+    },
+    {
+      "subject": "Xi_an",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Xi_an",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Xi_an",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Xi_an",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Xi_an",
+      "predicate": "label",
+      "object": "\"Xi'an, Shaanxi, People's Republic of China\"",
+      "subject_uri": "http://example.org/entity/Xi_an",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Xi'an, Shaanxi, People's Republic of China\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

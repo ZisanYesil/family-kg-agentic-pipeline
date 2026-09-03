@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Ordwulf> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ordwulf" ;
+    onto:hasFather <http://example.org/entity/Ordgar> .
+
+<http://example.org/entity/England> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "England" .
+
+<http://example.org/entity/Ordgar> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ordgar" ;
+    onto:hasNationality <http://example.org/entity/England> .
+

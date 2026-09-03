@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/449/evaluation/entity_alignment/baseline_extracted_aligned_449.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/449/evaluation/entity_alignment/baseline_ground_truth_aligned_449.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Thomas_Henty",
+      "predicate": "hasParent",
+      "object": "Tommy_Cooper",
+      "subject_uri": "http://example.org/entity/Thomas_Henty",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Tommy_Cooper"
+    },
+    {
+      "subject": "Tommy_Cooper",
+      "predicate": "hasCauseOfDeath",
+      "object": "heart_attack",
+      "subject_uri": "http://example.org/entity/Tommy_Cooper",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCauseOfDeath",
+      "object_term": "http://example.org/entity/heart_attack"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Thomas_Henty",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Thomas_Henty",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Thomas_Henty",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Thomas_Henty",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Thomas_Henty",
+      "predicate": "label",
+      "object": "\"Thomas Henty\"",
+      "subject_uri": "http://example.org/entity/Thomas_Henty",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Thomas Henty\""
+    },
+    {
+      "subject": "Tommy_Cooper",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Tommy_Cooper",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Tommy_Cooper",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Tommy_Cooper",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Tommy_Cooper",
+      "predicate": "label",
+      "object": "\"Tommy Cooper\"",
+      "subject_uri": "http://example.org/entity/Tommy_Cooper",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Tommy Cooper\""
+    },
+    {
+      "subject": "Tommy_Cooper",
+      "predicate": "altLabel",
+      "object": "\"Thomas Frederick Cooper\"",
+      "subject_uri": "http://example.org/entity/Tommy_Cooper",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Thomas Frederick Cooper\""
+    },
+    {
+      "subject": "heart_attack",
+      "predicate": "type",
+      "object": "CauseOfDeath",
+      "subject_uri": "http://example.org/entity/heart_attack",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CauseOfDeath"
+    },
+    {
+      "subject": "heart_attack",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/heart_attack",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "heart_attack",
+      "predicate": "label",
+      "object": "\"heart attack\"",
+      "subject_uri": "http://example.org/entity/heart_attack",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"heart attack\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

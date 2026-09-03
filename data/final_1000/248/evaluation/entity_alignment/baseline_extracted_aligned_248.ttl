@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Starsky_and_Hutch_on_Playboy_Island> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Starsky and Hutch on Playboy Island" ;
+    onto:hasDirector <http://example.org/entity/George_McCowan> .
+
+<http://example.org/entity/George_McCowan> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George McCowan" ;
+    onto:hasCauseOfDeath <http://example.org/entity/emphysema> .
+
+<http://example.org/entity/emphysema> a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "emphysema" .
+

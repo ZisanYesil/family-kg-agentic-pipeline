@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Ahmose_Nebetta a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:Seqenenre_Tao .
+
+entity:Tetisheri a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Seqenenre_Tao .
+
+entity:Seqenenre_Tao a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Ahmose_Nebetta ;
+    ex:hasParent entity:Tetisheri .
+

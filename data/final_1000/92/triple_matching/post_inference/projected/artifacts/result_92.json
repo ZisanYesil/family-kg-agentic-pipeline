@@ -1,0 +1,132 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/92/evaluation/entity_alignment/final_extracted_aligned_92.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/92/evaluation/entity_alignment/final_ground_truth_aligned_92.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Angel_Square",
+      "predicate": "hasCreator",
+      "object": "Anne_Wheeler",
+      "subject_uri": "http://example.org/entity/Angel_Square",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Anne_Wheeler"
+    },
+    {
+      "subject": "Angel_Square",
+      "predicate": "hasDirector",
+      "object": "Anne_Wheeler",
+      "subject_uri": "http://example.org/entity/Angel_Square",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Anne_Wheeler"
+    },
+    {
+      "subject": "Angel_Square",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Angel_Square",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Angel_Square",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Angel_Square",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Angel_Square",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Angel_Square",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Anne_Wheeler",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Anne_Wheeler",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Anne_Wheeler",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Anne_Wheeler",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Anne_Wheeler",
+      "predicate": "hasAwardReceived",
+      "object": "Officer_of_the_Order_of_Canada",
+      "subject_uri": "http://example.org/entity/Anne_Wheeler",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/Officer_of_the_Order_of_Canada"
+    },
+    {
+      "subject": "Officer_of_the_Order_of_Canada",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/Officer_of_the_Order_of_Canada",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Anne_Wheeler",
+      "predicate": "hasAwardReceived",
+      "object": "gemini_award",
+      "subject_uri": "http://example.org/entity/Anne_Wheeler",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/extracted/gemini_award"
+    },
+    {
+      "subject": "Anne_Wheeler",
+      "predicate": "hasAwardReceived",
+      "object": "leo_award",
+      "subject_uri": "http://example.org/entity/Anne_Wheeler",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/extracted/leo_award"
+    },
+    {
+      "subject": "gemini_award",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/extracted/gemini_award",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "leo_award",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/extracted/leo_award",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 13,
+    "true_positives": 7,
+    "false_positives": 4,
+    "false_negatives": 2,
+    "precision": 0.6363636363636364,
+    "recall": 0.7777777777777778,
+    "f1": 0.7000000000000001
+  },
+  "stage": "post_inference"
+}

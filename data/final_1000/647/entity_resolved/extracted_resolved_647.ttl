@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_search_and_destroy_1995 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Search and Destroy (1995 film)" ;
+    onto:hasDirector data:person_david_salle .
+
+data:edu_california_institute_of_the_arts a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "California Institute of the Arts" .
+
+data:person_david_salle a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "David Salle" ;
+    onto:hasEducatedAt data:edu_california_institute_of_the_arts .
+

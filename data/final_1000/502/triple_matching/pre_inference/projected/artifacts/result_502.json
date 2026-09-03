@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/502/evaluation/entity_alignment/baseline_extracted_aligned_502.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/502/evaluation/entity_alignment/baseline_ground_truth_aligned_502.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Toke_also_known_as_Valtoke",
+      "predicate": "hasParent",
+      "object": "Gorm_the_Old",
+      "subject_uri": "http://example.org/entity/Toke_also_known_as_Valtoke",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Gorm_the_Old"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Gorm_the_Old",
+      "predicate": "hasDeathPlace",
+      "object": "Jelling",
+      "subject_uri": "http://example.org/entity/Gorm_the_Old",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Jelling"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Gorm_the_Old",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Gorm_the_Old",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Gorm_the_Old",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Gorm_the_Old",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Gorm_the_Old",
+      "predicate": "label",
+      "object": "\"Gorm the Old\"",
+      "subject_uri": "http://example.org/entity/Gorm_the_Old",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Gorm the Old\""
+    },
+    {
+      "subject": "Gorm_the_Old",
+      "predicate": "altLabel",
+      "object": "\"Gorm the Old\"",
+      "subject_uri": "http://example.org/entity/Gorm_the_Old",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Gorm the Old\""
+    },
+    {
+      "subject": "Toke_also_known_as_Valtoke",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Toke_also_known_as_Valtoke",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Toke_also_known_as_Valtoke",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Toke_also_known_as_Valtoke",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Toke_also_known_as_Valtoke",
+      "predicate": "label",
+      "object": "\"Valtoke Gormsson\"",
+      "subject_uri": "http://example.org/entity/Toke_also_known_as_Valtoke",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Valtoke Gormsson\""
+    },
+    {
+      "subject": "Toke_also_known_as_Valtoke",
+      "predicate": "altLabel",
+      "object": "\"Toke\"",
+      "subject_uri": "http://example.org/entity/Toke_also_known_as_Valtoke",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Toke\""
+    },
+    {
+      "subject": "Toke_also_known_as_Valtoke",
+      "predicate": "altLabel",
+      "object": "\"Valtoke Gormsson\"",
+      "subject_uri": "http://example.org/entity/Toke_also_known_as_Valtoke",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Valtoke Gormsson\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 1,
+    "false_positives": 9,
+    "false_negatives": 1,
+    "precision": 0.1,
+    "recall": 0.5,
+    "f1": 0.16666666666666669
+  },
+  "stage": "pre_inference"
+}

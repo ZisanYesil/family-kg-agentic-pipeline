@@ -1,0 +1,200 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/926/originals/extracted_926.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/926/ground_truth_926.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_ante_babaja": "http://example.org/entity/Ante_Babaja",
+    "http://example.org/extracted/film_gold_frankincense_and_myrrh": "http://example.org/entity/Gold_Frankincense_and_Myrrh",
+    "http://example.org/extracted/film_codine": "http://example.org/entity/Codine",
+    "http://example.org/extracted/person_henri_colpi": "http://example.org/entity/Henri_Colpi"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_codine",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Codine",
+          "source": "label"
+        },
+        {
+          "text": "film codine",
+          "source": "uri"
+        }
+      ],
+      "context": "Codine. has director: Henri Colpi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Codine",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Codine",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Codine",
+        "extracted_source": "label",
+        "ground_truth_text": "Codine",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7574898302555084
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_gold_frankincense_and_myrrh",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Gold, Frankincense and Myrrh",
+          "source": "label"
+        },
+        {
+          "text": "film gold frankincense and myrrh",
+          "source": "uri"
+        }
+      ],
+      "context": "Gold, Frankincense and Myrrh. has director: Ante Babaja.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Gold_Frankincense_and_Myrrh",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Gold Frankincense and Myrrh",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Gold, Frankincense and Myrrh",
+        "extracted_source": "label",
+        "ground_truth_text": "Gold Frankincense and Myrrh",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9584669470787048,
+      "string_score": 0.9918181896209717,
+      "independent_identity_support": true,
+      "context_score": 0.9803386926651001,
+      "graph_score": 0.99016934633255,
+      "margin": 0.7700539529323578
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_ante_babaja",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ante Babaja",
+          "source": "label"
+        },
+        {
+          "text": "person ante babaja",
+          "source": "uri"
+        }
+      ],
+      "context": "Ante Babaja. has birth date: 1927-10-06. has death date: 2010-01-14. inverse has director: Gold, Frankincense and Myrrh.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ante_Babaja",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ante Babaja",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ante Babaja",
+        "extracted_source": "label",
+        "ground_truth_text": "Ante Babaja",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9231060147285461,
+      "graph_score": 0.9615529775619507,
+      "margin": 0.7786924093961716
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_henri_colpi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Henri Colpi",
+          "source": "label"
+        },
+        {
+          "text": "person henri colpi",
+          "source": "uri"
+        }
+      ],
+      "context": "Henri Colpi. has birth date: 1921-07-15. has death date: 2006-01-14. inverse has director: Codine.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Henri_Colpi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Henri Colpi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Henri Colpi",
+        "extracted_source": "label",
+        "ground_truth_text": "Henri Colpi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9279857873916626,
+      "graph_score": 0.9639928936958313,
+      "margin": 0.7711577415466309
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

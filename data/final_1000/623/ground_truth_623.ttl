@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example729
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:Dweepa ex:hasProducer inst:Soundarya .  # producer
+inst:Kalank ex:hasProducer inst:Karan_Johar .  # producer
+inst:Soundarya ex:hasBirthDate "1972-07-18"^^xsd:date .  # date of birth -> "18 July 1972"
+inst:Karan_Johar ex:hasBirthDate "1972-05-25"^^xsd:date .  # date of birth -> "25 May 1972"

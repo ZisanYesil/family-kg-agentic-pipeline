@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/420/originals/extracted_420.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/420/ground_truth_420.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/kelheim": "http://example.org/entity/Kelheim",
+    "http://example.org/extracted/otto_i_guelders": "http://example.org/entity/Otto_I_of_Guelders",
+    "http://example.org/extracted/richardis_of_bavaria": "http://example.org/entity/Richardis_of_Bavaria"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/kelheim",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Kelheim",
+          "source": "label"
+        }
+      ],
+      "context": "Kelheim. inverse has birth place: Richardis of Bavaria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Kelheim",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Kelheim",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Kelheim",
+        "extracted_source": "label",
+        "ground_truth_text": "Kelheim",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/otto_i_guelders",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Otto I, Count of Guelders",
+          "source": "altLabel"
+        },
+        {
+          "text": "Otto I of Guelders",
+          "source": "label"
+        },
+        {
+          "text": "otto i guelders",
+          "source": "uri"
+        }
+      ],
+      "context": "Otto I, Count of Guelders. has spouse: Richardis of Bavaria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Otto_I_of_Guelders",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Otto I of Guelders",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Otto I of Guelders",
+        "extracted_source": "label",
+        "ground_truth_text": "Otto I of Guelders",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9825456142425537,
+      "graph_score": 0.9912728071212769,
+      "margin": 0.5425713658332825
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/richardis_of_bavaria",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Richardis of Bavaria",
+          "source": "label"
+        }
+      ],
+      "context": "Richardis of Bavaria. has birth place: Kelheim. inverse has spouse: Otto I, Count of Guelders.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Richardis_of_Bavaria",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Richardis of Bavaria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Richardis of Bavaria",
+        "extracted_source": "label",
+        "ground_truth_text": "Richardis of Bavaria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9897903800010681,
+      "graph_score": 0.9948952198028564,
+      "margin": 0.5414171814918518
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

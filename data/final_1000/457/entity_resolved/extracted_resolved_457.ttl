@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:jean_tschumi a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jean Tschumi" ;
+    onto:hasEmployer data:epfl ;
+    onto:hasSon data:bernard_tschumi .
+
+data:bernard_tschumi a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bernard Tschumi" .
+
+data:epfl a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "École Polytechnique Fédérale de Lausanne" .
+

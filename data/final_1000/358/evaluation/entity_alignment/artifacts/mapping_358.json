@@ -1,0 +1,118 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/358/originals/extracted_358.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/358/ground_truth_358.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/andrzeja_gorska": "http://example.org/entity/Andrzeja_Górska",
+    "http://example.org/extracted/john_chilton": "http://example.org/entity/John_Chilton"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/andrzeja_gorska",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Andrzeja Górska",
+          "source": "altLabel"
+        },
+        {
+          "text": "Maria Stefania Górska",
+          "source": "altLabel"
+        },
+        {
+          "text": "andrzeja gorska",
+          "source": "uri"
+        }
+      ],
+      "context": "Andrzeja Górska. has birth date: 1917-02-02. has death date: 2007-12-15.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Andrzeja_Górska",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Andrzeja Górska",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Andrzeja Górska",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Andrzeja Górska",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998211860657,
+      "margin": 0.7178224325180054
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/john_chilton",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Chilton",
+          "source": "altLabel"
+        },
+        {
+          "text": "John James Chilton",
+          "source": "altLabel"
+        }
+      ],
+      "context": "John Chilton. has birth date: 1932-07-16. has death date: 2016-02-25.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Chilton",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Chilton",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Chilton",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "John Chilton",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7847556322813034
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

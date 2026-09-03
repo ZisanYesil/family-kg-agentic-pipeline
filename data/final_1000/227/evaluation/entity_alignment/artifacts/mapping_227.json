@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/227/originals/extracted_227.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/227/ground_truth_227.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/the_man_in_grey": "http://example.org/entity/The_Man_in_Grey",
+    "http://example.org/extracted/the_queen_s_traitor": "http://example.org/entity/The_Queen_s_Traitor"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/the_man_in_grey",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Man in Grey",
+          "source": "label"
+        }
+      ],
+      "context": "The Man in Grey. has publication date: 1943.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Man_in_Grey",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Man in Grey",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Man in Grey",
+        "extracted_source": "label",
+        "ground_truth_text": "The Man in Grey",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.8182411938905716
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/the_queen_s_traitor",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Queen's Traitor",
+          "source": "label"
+        },
+        {
+          "text": "the queen s traitor",
+          "source": "uri"
+        }
+      ],
+      "context": "The Queen's Traitor. has publication date: 1967.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Queen_s_Traitor",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Queen s Traitor",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "the queen s traitor",
+        "extracted_source": "uri",
+        "ground_truth_text": "The Queen s Traitor",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9964344501495361,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9911438226699829,
+      "graph_score": 0.9911438226699829,
+      "margin": 0.8106224089860916
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,106 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/389/evaluation/entity_alignment/final_extracted_aligned_389.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/389/evaluation/entity_alignment/final_ground_truth_aligned_389.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "National_Film_Board",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/National_Film_Board",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "National_Film_Board",
+      "predicate": "type",
+      "object": "Organization",
+      "subject_uri": "http://example.org/entity/National_Film_Board",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Organization"
+    },
+    {
+      "subject": "Sturla_Gunnarsson",
+      "predicate": "hasEmployer",
+      "object": "National_Film_Board",
+      "subject_uri": "http://example.org/entity/Sturla_Gunnarsson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasEmployer",
+      "object_term": "http://example.org/entity/National_Film_Board"
+    },
+    {
+      "subject": "Sturla_Gunnarsson",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Sturla_Gunnarsson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Sturla_Gunnarsson",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sturla_Gunnarsson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "The_Diary_of_Evelyn_Lau",
+      "predicate": "hasCreator",
+      "object": "Sturla_Gunnarsson",
+      "subject_uri": "http://example.org/entity/The_Diary_of_Evelyn_Lau",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Sturla_Gunnarsson"
+    },
+    {
+      "subject": "The_Diary_of_Evelyn_Lau",
+      "predicate": "hasDirector",
+      "object": "Sturla_Gunnarsson",
+      "subject_uri": "http://example.org/entity/The_Diary_of_Evelyn_Lau",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Sturla_Gunnarsson"
+    },
+    {
+      "subject": "The_Diary_of_Evelyn_Lau",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/The_Diary_of_Evelyn_Lau",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "The_Diary_of_Evelyn_Lau",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The_Diary_of_Evelyn_Lau",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "The_Diary_of_Evelyn_Lau",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Diary_of_Evelyn_Lau",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 10,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 10,
+    "true_positives": 10,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "stage": "post_inference"
+}

@@ -1,0 +1,195 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/856/originals/extracted_856.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/856/ground_truth_856.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/country_pakistan": "http://example.org/entity/Pakistan",
+    "http://example.org/extracted/film_daadagiri": "http://example.org/entity/Daadagiri",
+    "http://example.org/extracted/person_arshad_khan": "http://example.org/entity/Arshad_Khan"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_pakistan",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pakistani",
+          "source": "altLabel"
+        },
+        {
+          "text": "Pakistan",
+          "source": "label"
+        },
+        {
+          "text": "country pakistan",
+          "source": "uri"
+        }
+      ],
+      "context": "Pakistani. inverse has nationality: Arshad Khan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pakistan",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pakistan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pakistan",
+        "extracted_source": "label",
+        "ground_truth_text": "Pakistan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9043443202972412,
+      "graph_score": 0.4521721601486206,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_daadagiri",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Daadagiri",
+          "source": "label"
+        },
+        {
+          "text": "film daadagiri",
+          "source": "uri"
+        }
+      ],
+      "context": "Daadagiri. has director: Arshad Khan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Daadagiri",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Daadagiri",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Daadagiri",
+        "extracted_source": "label",
+        "ground_truth_text": "Daadagiri",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998807907104,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_arshad_khan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Arshad Khan",
+          "source": "label"
+        },
+        {
+          "text": "person arshad khan",
+          "source": "uri"
+        }
+      ],
+      "context": "Arshad Khan. has nationality: Australian. has nationality: Pakistani. inverse has director: Daadagiri.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Arshad_Khan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Arshad Khan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Arshad Khan",
+        "extracted_source": "label",
+        "ground_truth_text": "Arshad Khan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9210055470466614,
+      "graph_score": 0.6271694302558899,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_australia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Australian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Australia",
+          "source": "label"
+        },
+        {
+          "text": "country australia",
+          "source": "uri"
+        }
+      ],
+      "context": "Australian. inverse has nationality: Arshad Khan.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

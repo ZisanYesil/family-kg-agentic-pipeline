@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:edward_i_of_england a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Edward I of England" ;
+    onto:hasFather data:henry_iii_of_england .
+
+data:eleanor_of_provence a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Eleanor of Provence" .
+
+data:henry_iii_of_england a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Henry III of England" ;
+    onto:hasSpouse data:eleanor_of_provence .
+

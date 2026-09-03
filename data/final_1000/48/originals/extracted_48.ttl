@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_mary_janes_pa a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Mary Jane's Pa" ;
+    onto:hasDirector data:person_william_keighley .
+
+data:person_william_keighley a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Keighley" ;
+    onto:hasBirthDate "1889-08-04"^^xsd:date ;
+    onto:hasDeathDate "1984-06-24"^^xsd:date ;
+    onto:hasDeathPlace data:place_new_york_ny ;
+    skos:altLabel "William Jackson Keighley" .
+
+data:place_new_york_ny a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "New York, New York" .
+

@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/989/evaluation/entity_alignment/final_extracted_aligned_989.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/989/evaluation/entity_alignment/final_ground_truth_aligned_989.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Argentine",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Argentine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Argentine",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Argentine",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Carlos_Gardel",
+      "predicate": "hasCountry",
+      "object": "Argentine",
+      "subject_uri": "http://example.org/entity/Carlos_Gardel",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Argentine"
+    },
+    {
+      "subject": "Carlos_Gardel",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Carlos_Gardel",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Carlos_Gardel",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Carlos_Gardel",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Por_una_Cabeza",
+      "predicate": "hasComposer",
+      "object": "Carlos_Gardel",
+      "subject_uri": "http://example.org/entity/Por_una_Cabeza",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasComposer",
+      "object_term": "http://example.org/entity/Carlos_Gardel"
+    },
+    {
+      "subject": "Por_una_Cabeza",
+      "predicate": "hasCreator",
+      "object": "Carlos_Gardel",
+      "subject_uri": "http://example.org/entity/Por_una_Cabeza",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Carlos_Gardel"
+    },
+    {
+      "subject": "Por_una_Cabeza",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Por_una_Cabeza",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Por_una_Cabeza",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Por_una_Cabeza",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Carlos_Gardel",
+      "predicate": "hasCountry",
+      "object": "country_france",
+      "subject_uri": "http://example.org/entity/Carlos_Gardel",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/extracted/country_france"
+    },
+    {
+      "subject": "Por_una_Cabeza",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Por_una_Cabeza",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    },
+    {
+      "subject": "country_france",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/extracted/country_france",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "country_france",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/extracted/country_france",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 13,
+    "true_positives": 9,
+    "false_positives": 4,
+    "false_negatives": 0,
+    "precision": 0.6923076923076923,
+    "recall": 1.0,
+    "f1": 0.8181818181818181
+  },
+  "stage": "post_inference"
+}

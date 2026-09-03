@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_gas_2004 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Gas (2004 film)" ;
+    onto:hasDirector data:person_henry_chan .
+
+data:award_primetime_emmy a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Primetime Emmy Award" .
+
+data:person_henry_chan a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Henry Chan" ;
+    onto:hasAwardReceived data:award_primetime_emmy .
+

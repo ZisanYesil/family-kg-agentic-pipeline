@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:julia_drusilla a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Julia Drusilla" ;
+    onto:hasFather data:caligula .
+
+data:agrippina_the_elder a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Agrippina the Elder" .
+
+data:caligula a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Caligula" ;
+    onto:hasMother data:agrippina_the_elder .
+

@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Eudokia> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fabia Eudokia" ;
+    onto:hasSpouse <http://example.org/entity/Heraclius> ;
+    skos:altLabel "Fabia" .
+
+<http://example.org/entity/Theodore> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Theodore" ;
+    onto:hasBrother <http://example.org/entity/Heraclius> .
+
+<http://example.org/entity/Heraclius> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Heraclius" .
+

@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/286/originals/extracted_286.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/286/ground_truth_286.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_workers_settlement": "http://example.org/entity/Workers_Settlement",
+    "http://example.org/extracted/award_peoples_artist_rsfsr": "http://example.org/entity/People_s_Artist_of_the_RSFSR",
+    "http://example.org/extracted/person_vladimir_vengerov": "http://example.org/entity/Vladimir_Vengerov"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/award_peoples_artist_rsfsr",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "People's Artist of the RSFSR",
+          "source": "label"
+        },
+        {
+          "text": "award peoples artist rsfsr",
+          "source": "uri"
+        }
+      ],
+      "context": "People's Artist of the RSFSR. inverse has award received: Vladimir Yakovlevich Vengerov.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/People_s_Artist_of_the_RSFSR",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "People s Artist of the RSFSR",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "People's Artist of the RSFSR",
+        "extracted_source": "label",
+        "ground_truth_text": "People s Artist of the RSFSR",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9746940732002258,
+      "string_score": 0.9839285612106323,
+      "independent_identity_support": true,
+      "context_score": 0.9701319932937622,
+      "graph_score": 0.9850659966468811,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_workers_settlement",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Workers' Settlement",
+          "source": "label"
+        },
+        {
+          "text": "film workers settlement",
+          "source": "uri"
+        }
+      ],
+      "context": "Workers' Settlement. has director: Vladimir Yakovlevich Vengerov.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Workers_Settlement",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Workers Settlement",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Workers' Settlement",
+        "extracted_source": "label",
+        "ground_truth_text": "Workers Settlement",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9735051989555359,
+      "string_score": 0.9878378510475159,
+      "independent_identity_support": true,
+      "context_score": 0.9411659240722656,
+      "graph_score": 0.9705829620361328,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_vladimir_vengerov",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vladimir Yakovlevich Vengerov",
+          "source": "altLabel"
+        },
+        {
+          "text": "Vladimir Vengerov",
+          "source": "label"
+        },
+        {
+          "text": "person vladimir vengerov",
+          "source": "uri"
+        }
+      ],
+      "context": "Vladimir Yakovlevich Vengerov. has award received: People's Artist of the RSFSR. inverse has director: Workers' Settlement.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vladimir_Vengerov",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vladimir Vengerov",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vladimir Vengerov",
+        "extracted_source": "label",
+        "ground_truth_text": "Vladimir Vengerov",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9652402400970459,
+      "graph_score": 0.982620120048523,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

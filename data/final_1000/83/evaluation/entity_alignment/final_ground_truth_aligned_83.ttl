@@ -1,0 +1,14 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+entity:Princess_Eugénie_of_Greece_and_Denmark a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Princess_Marie_Bonaparte ;
+    ex:hasParent entity:Princess_Marie_Bonaparte .
+
+entity:Princess_Marie_Bonaparte a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Princess_Eugénie_of_Greece_and_Denmark ;
+    ex:hasDeathDate "1962-09-21"^^xsd:date .
+

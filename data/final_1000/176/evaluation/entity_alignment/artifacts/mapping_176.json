@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/176/originals/extracted_176.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/176/ground_truth_176.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_edmund_mortimer": "http://example.org/entity/Edmund_Mortimer",
+    "http://example.org/extracted/film_just_off_broadway_1924": "http://example.org/entity/Just_Off_Broadway"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_just_off_broadway_1924",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Just Off Broadway",
+          "source": "label"
+        },
+        {
+          "text": "film just off broadway 1924",
+          "source": "uri"
+        }
+      ],
+      "context": "Just Off Broadway. has director: Edmund Mortimer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Just_Off_Broadway",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Just Off Broadway",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Just Off Broadway",
+        "extracted_source": "label",
+        "ground_truth_text": "Just Off Broadway",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_edmund_mortimer",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edmund Mortimer",
+          "source": "label"
+        },
+        {
+          "text": "person edmund mortimer",
+          "source": "uri"
+        }
+      ],
+      "context": "Edmund Mortimer. has birth place: New York, New York. inverse has director: Just Off Broadway.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Edmund_Mortimer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Edmund Mortimer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Edmund Mortimer",
+        "extracted_source": "label",
+        "ground_truth_text": "Edmund Mortimer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.991022527217865,
+      "graph_score": 0.9955112934112549,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_new_york_new_york",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "New York, New York",
+          "source": "label"
+        },
+        {
+          "text": "place new york new york",
+          "source": "uri"
+        }
+      ],
+      "context": "New York, New York. inverse has birth place: Edmund Mortimer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/New_York",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "New York",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "New York, New York",
+        "extracted_source": "label",
+        "ground_truth_text": "New York",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9304795265197754,
+      "name_embedding_score": 0.950649619102478,
+      "string_score": 0.8269230723381042,
+      "independent_identity_support": true,
+      "context_score": 0.9873913526535034,
+      "graph_score": 0.9936956763267517,
+      "margin": 0.9304795265197754
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

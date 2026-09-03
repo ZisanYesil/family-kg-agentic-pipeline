@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/733/evaluation/entity_alignment/baseline_extracted_aligned_733.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/733/evaluation/entity_alignment/baseline_ground_truth_aligned_733.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Alekos_Sakellarios",
+      "predicate": "hasBurialPlace",
+      "object": "First_Cemetery_of_Athens",
+      "subject_uri": "http://example.org/entity/Alekos_Sakellarios",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBurialPlace",
+      "object_term": "http://example.org/entity/First_Cemetery_of_Athens"
+    },
+    {
+      "subject": "Maiden_s_Cheek",
+      "predicate": "hasDirector",
+      "object": "Alekos_Sakellarios",
+      "subject_uri": "http://example.org/entity/Maiden_s_Cheek",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Alekos_Sakellarios"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Alekos_Sakellarios",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Alekos_Sakellarios",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Alekos_Sakellarios",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Alekos_Sakellarios",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Alekos_Sakellarios",
+      "predicate": "label",
+      "object": "\"Alekos Sakellarios\"",
+      "subject_uri": "http://example.org/entity/Alekos_Sakellarios",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Alekos Sakellarios\""
+    },
+    {
+      "subject": "First_Cemetery_of_Athens",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/First_Cemetery_of_Athens",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "First_Cemetery_of_Athens",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/First_Cemetery_of_Athens",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "First_Cemetery_of_Athens",
+      "predicate": "label",
+      "object": "\"First Cemetery of Athens\"",
+      "subject_uri": "http://example.org/entity/First_Cemetery_of_Athens",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"First Cemetery of Athens\""
+    },
+    {
+      "subject": "Maiden_s_Cheek",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Maiden_s_Cheek",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Maiden_s_Cheek",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Maiden_s_Cheek",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Maiden_s_Cheek",
+      "predicate": "label",
+      "object": "\"Maiden's Cheek\"",
+      "subject_uri": "http://example.org/entity/Maiden_s_Cheek",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Maiden's Cheek\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

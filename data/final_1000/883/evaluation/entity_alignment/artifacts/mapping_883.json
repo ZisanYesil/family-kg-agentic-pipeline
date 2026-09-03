@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/883/originals/extracted_883.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/883/ground_truth_883.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_jean_harlow": "http://example.org/entity/Jean_Harlow",
+    "http://example.org/extracted/person_paul_bern_1889": "http://example.org/entity/Paul_Bern",
+    "http://example.org/extracted/film_the_dressmaker_from_paris": "http://example.org/entity/The_Dressmaker_from_Paris"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_dressmaker_from_paris",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Dressmaker from Paris",
+          "source": "label"
+        },
+        {
+          "text": "film the dressmaker from paris",
+          "source": "uri"
+        }
+      ],
+      "context": "The Dressmaker from Paris. has director: Paul Bern.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Dressmaker_from_Paris",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Dressmaker from Paris",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Dressmaker from Paris",
+        "extracted_source": "label",
+        "ground_truth_text": "The Dressmaker from Paris",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_jean_harlow",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jean Harlow",
+          "source": "label"
+        },
+        {
+          "text": "person jean harlow",
+          "source": "uri"
+        }
+      ],
+      "context": "Jean Harlow. inverse has spouse: Paul Bern.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jean_Harlow",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jean Harlow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jean Harlow",
+        "extracted_source": "label",
+        "ground_truth_text": "Jean Harlow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6380675733089447
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_paul_bern_1889",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Paul Bern",
+          "source": "label"
+        },
+        {
+          "text": "person paul bern 1889",
+          "source": "uri"
+        }
+      ],
+      "context": "Paul Bern. has spouse: Jean Harlow. inverse has director: The Dressmaker from Paris.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Paul_Bern",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Paul Bern",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Paul Bern",
+        "extracted_source": "label",
+        "ground_truth_text": "Paul Bern",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6380675733089447
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

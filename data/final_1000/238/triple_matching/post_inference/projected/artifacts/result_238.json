@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/238/evaluation/entity_alignment/final_extracted_aligned_238.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/238/evaluation/entity_alignment/final_ground_truth_aligned_238.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Keiko_Fuji",
+      "predicate": "hasChild",
+      "object": "Utada_Hikaru",
+      "subject_uri": "http://example.org/entity/Keiko_Fuji",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Utada_Hikaru"
+    },
+    {
+      "subject": "Keiko_Fuji",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Keiko_Fuji",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Keiko_Fuji",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Keiko_Fuji",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Passion",
+      "predicate": "hasCreator",
+      "object": "Utada_Hikaru",
+      "subject_uri": "http://example.org/entity/Passion",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Utada_Hikaru"
+    },
+    {
+      "subject": "Passion",
+      "predicate": "hasPerformer",
+      "object": "Utada_Hikaru",
+      "subject_uri": "http://example.org/entity/Passion",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Utada_Hikaru"
+    },
+    {
+      "subject": "Passion",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/Passion",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "Passion",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/Passion",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "Utada_Hikaru",
+      "predicate": "hasParent",
+      "object": "Keiko_Fuji",
+      "subject_uri": "http://example.org/entity/Utada_Hikaru",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Keiko_Fuji"
+    },
+    {
+      "subject": "Utada_Hikaru",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Utada_Hikaru",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Utada_Hikaru",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Utada_Hikaru",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Passion",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Passion",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 10,
+    "union_triples_in_scope": 11,
+    "true_positives": 10,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.9090909090909091,
+    "recall": 1.0,
+    "f1": 0.9523809523809523
+  },
+  "stage": "post_inference"
+}

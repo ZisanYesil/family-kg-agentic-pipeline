@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:blanche_of_france_duchess_of_orleans a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Blanche of France, Duchess of Orléans" ;
+    onto:hasMother data:jeanne_d_evreux .
+
+data:jeanne_d_evreux a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jeanne d'Évreux" ;
+    onto:hasFather data:louis_count_of_evreux .
+
+data:louis_count_of_evreux a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Louis, Count of Évreux" .
+

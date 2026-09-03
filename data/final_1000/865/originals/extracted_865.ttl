@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:_film_my_three_merry_widows a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "My Three Merry Widows" ;
+    onto:hasDirector data:_person_fernando_cortes .
+
+data:_person_fernando_cortes a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Fernando Cortés" ;
+    onto:hasBirthDate "1909-10-04"^^xsd:date ;
+    onto:hasDeathDate "1979"^^xsd:gYear ;
+    onto:hasSpouse data:_person_maria_del_pilar_cordero .
+
+data:_person_maria_del_pilar_cordero a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "María del Pilar Cordero" ;
+    skos:altLabel "Mapy Cortés" .
+

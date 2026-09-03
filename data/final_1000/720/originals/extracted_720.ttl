@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:douglas_macarthur a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Douglas MacArthur" ;
+    onto:hasFather data:arthur_macarthur_iv ;
+    onto:hasNationality data:united_states .
+
+data:arthur_macarthur_iv a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Arthur MacArthur IV" .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

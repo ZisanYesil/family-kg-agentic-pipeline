@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/359/evaluation/entity_alignment/baseline_extracted_aligned_359.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/359/evaluation/entity_alignment/baseline_ground_truth_aligned_359.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Marie_Frederike_of_Hesse_Kassel",
+      "predicate": "hasParent",
+      "object": "William_I_Elector_of_Hesse",
+      "subject_uri": "http://example.org/entity/Marie_Frederike_of_Hesse_Kassel",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/William_I_Elector_of_Hesse"
+    },
+    {
+      "subject": "William_I_Elector_of_Hesse",
+      "predicate": "hasParent",
+      "object": "Princess_Mary_of_Great_Britain",
+      "subject_uri": "http://example.org/entity/William_I_Elector_of_Hesse",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Princess_Mary_of_Great_Britain"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Marie_Frederike_of_Hesse_Kassel",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Marie_Frederike_of_Hesse_Kassel",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Marie_Frederike_of_Hesse_Kassel",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Marie_Frederike_of_Hesse_Kassel",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Marie_Frederike_of_Hesse_Kassel",
+      "predicate": "label",
+      "object": "\"Marie Frederike of Hesse-Kassel\"",
+      "subject_uri": "http://example.org/entity/Marie_Frederike_of_Hesse_Kassel",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Marie Frederike of Hesse-Kassel\""
+    },
+    {
+      "subject": "Marie_Frederike_of_Hesse_Kassel",
+      "predicate": "altLabel",
+      "object": "\"Marie Friederike of Hesse-Kassel\"",
+      "subject_uri": "http://example.org/entity/Marie_Frederike_of_Hesse_Kassel",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Marie Friederike of Hesse-Kassel\""
+    },
+    {
+      "subject": "Princess_Mary_of_Great_Britain",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Princess_Mary_of_Great_Britain",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Princess_Mary_of_Great_Britain",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Princess_Mary_of_Great_Britain",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Princess_Mary_of_Great_Britain",
+      "predicate": "label",
+      "object": "\"Princess Mary of Great Britain\"",
+      "subject_uri": "http://example.org/entity/Princess_Mary_of_Great_Britain",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Princess Mary of Great Britain\""
+    },
+    {
+      "subject": "William_I_Elector_of_Hesse",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/William_I_Elector_of_Hesse",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "William_I_Elector_of_Hesse",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/William_I_Elector_of_Hesse",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "William_I_Elector_of_Hesse",
+      "predicate": "label",
+      "object": "\"William I, Elector of Hesse\"",
+      "subject_uri": "http://example.org/entity/William_I_Elector_of_Hesse",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"William I, Elector of Hesse\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

@@ -1,0 +1,26 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/My_Father_the_Hero_1994_film> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "My Father the Hero (1994 film)" ;
+    onto:hasCountryOfOrigin <http://example.org/entity/American>,
+        <http://example.org/entity/French> .
+
+<http://example.org/entity/Wyoming_Roundup> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Wyoming Roundup" ;
+    onto:hasCountryOfOrigin <http://example.org/entity/American> .
+
+<http://example.org/entity/French> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+
+<http://example.org/entity/American> a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

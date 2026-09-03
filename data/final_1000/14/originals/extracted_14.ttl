@@ -1,0 +1,17 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_old_man_drinking_a_glass_of_beer a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Old Man Drinking a Glass of Beer" ;
+    onto:hasDirector data:person_george_albert_smith .
+
+data:person_george_albert_smith a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "George Albert Smith" ;
+    onto:hasBirthDate "1864-01-04"^^xsd:date ;
+    onto:hasDeathDate "1959-05-17"^^xsd:date .
+

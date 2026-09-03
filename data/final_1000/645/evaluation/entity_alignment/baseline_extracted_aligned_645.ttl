@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/Michele_Mari> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Michele Mari" ;
+    onto:hasFather <http://example.org/entity/Enzo_Mari> .
+
+<http://example.org/entity/Brera_Academy> a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Brera Academy" .
+
+<http://example.org/entity/Enzo_Mari> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Enzo Mari" ;
+    onto:hasEducatedAt <http://example.org/entity/Brera_Academy> .
+

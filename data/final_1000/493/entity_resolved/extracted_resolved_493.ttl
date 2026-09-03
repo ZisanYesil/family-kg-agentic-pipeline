@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:song_to_the_siren a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Song to the Siren" ;
+    onto:hasPerformer data:tim_buckley .
+
+data:heroin_overdose a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "heroin overdose" .
+
+data:tim_buckley a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tim Buckley" ;
+    onto:hasCauseOfDeath data:heroin_overdose ;
+    skos:altLabel "Timothy Charles Buckley III" .
+

@@ -1,0 +1,117 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/379/originals/extracted_379.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/379/ground_truth_379.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {},
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/infanta_maria_cristina_spain_1833",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maria Cristina, Infanta of Spain and Portugal",
+          "source": "altLabel"
+        },
+        {
+          "text": "Infanta Maria Cristina of Spain",
+          "source": "label"
+        },
+        {
+          "text": "infanta maria cristina spain 1833",
+          "source": "uri"
+        }
+      ],
+      "context": "Maria Cristina, Infanta of Spain and Portugal. has mother: Princess Luisa Carlotta of Bourbon-Two Sicilies.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maria_Cristina_Infanta_of_Spain",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maria Cristina Infanta of Spain",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Infanta Maria Cristina of Spain",
+        "extracted_source": "label",
+        "ground_truth_text": "Maria Cristina Infanta of Spain",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.9135946035385132,
+      "name_embedding_score": 0.984356701374054,
+      "string_score": 0.8838709592819214,
+      "independent_identity_support": true,
+      "context_score": 0.801794171333313,
+      "graph_score": 0.801794171333313,
+      "margin": 0.1603495478630066
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/luisa_carlotta_bourbon_two_sicilies",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Luisa Carlotta of Bourbon-Two Sicilies",
+          "source": "label"
+        },
+        {
+          "text": "luisa carlotta bourbon two sicilies",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Luisa Carlotta of Bourbon-Two Sicilies. inverse has mother: Maria Cristina, Infanta of Spain and Portugal.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Luisa_Carlotta_of_Naples_and_Sicily",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Luisa Carlotta of Naples and Sicily",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Luisa Carlotta of Bourbon-Two Sicilies",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Luisa Carlotta of Naples and Sicily",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7514151334762573,
+      "name_embedding_score": 0.7805118560791016,
+      "string_score": 0.607692301273346,
+      "independent_identity_support": false,
+      "context_score": 0.836944580078125,
+      "graph_score": 0.836944580078125,
+      "margin": 0.20067018270492554
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Infante_Francisco_de_Paula_of_Spain"
+  ]
+}

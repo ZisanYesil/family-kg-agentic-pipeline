@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Amun_her_khepeshef> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Amun-her-khepeshef" ;
+    onto:hasMother <http://example.org/entity/Nefertari> ;
+    skos:altLabel "Amun-her-khepeshef (son of Ramesses II)" .
+
+<http://example.org/entity/Nefertari> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Nefertari" ;
+    onto:hasBurialPlace <http://example.org/entity/QV66> ;
+    skos:altLabel "Nefertari Meritmut" .
+
+<http://example.org/entity/QV66> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "QV66 (Valley of the Queens)" .
+

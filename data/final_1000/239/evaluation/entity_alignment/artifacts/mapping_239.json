@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/239/originals/extracted_239.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/239/ground_truth_239.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/catherine_elisabeth_brunswick_luneburg": "http://example.org/entity/Catherine_Elisabeth_of_Brunswick_Lüneburg",
+    "http://example.org/extracted/helvig_of_schauenburg": "http://example.org/entity/Helvig_of_Schauenburg",
+    "http://example.org/extracted/magnus_ii_brunswick_luneburg": "http://example.org/entity/Magnus_II_Duke_of_Brunswick_Lüneburg"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/catherine_elisabeth_brunswick_luneburg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Catherine Elisabeth of Brunswick-Lüneburg",
+          "source": "label"
+        },
+        {
+          "text": "catherine elisabeth brunswick luneburg",
+          "source": "uri"
+        }
+      ],
+      "context": "Catherine Elisabeth of Brunswick-Lüneburg. has daughter: Helvig of Schauenburg. inverse has daughter: Magnus II, Duke of Brunswick-Lüneburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Catherine_Elisabeth_of_Brunswick_Lüneburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Catherine Elisabeth of Brunswick Lüneburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Catherine Elisabeth of Brunswick-Lüneburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Catherine Elisabeth of Brunswick Lüneburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9843960404396057,
+      "string_score": 0.9890244007110596,
+      "independent_identity_support": true,
+      "context_score": 0.9500649571418762,
+      "graph_score": 0.4750324785709381,
+      "margin": 0.46118438243865967
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/helvig_of_schauenburg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Helvig of Schauenburg",
+          "source": "label"
+        }
+      ],
+      "context": "Helvig of Schauenburg. inverse has daughter: Catherine Elisabeth of Brunswick-Lüneburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Helvig_of_Schauenburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Helvig of Schauenburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Helvig of Schauenburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Helvig of Schauenburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9490904211997986,
+      "graph_score": 0.4745452105998993,
+      "margin": 0.6011764407157898
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/magnus_ii_brunswick_luneburg",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Magnus II, Duke of Brunswick-Lüneburg",
+          "source": "label"
+        },
+        {
+          "text": "magnus ii brunswick luneburg",
+          "source": "uri"
+        }
+      ],
+      "context": "Magnus II, Duke of Brunswick-Lüneburg. has daughter: Catherine Elisabeth of Brunswick-Lüneburg.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Magnus_II_Duke_of_Brunswick_Lüneburg",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Magnus II Duke of Brunswick Lüneburg",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Magnus II, Duke of Brunswick-Lüneburg",
+        "extracted_source": "label",
+        "ground_truth_text": "Magnus II Duke of Brunswick Lüneburg",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9654063582420349,
+      "string_score": 0.9815068244934082,
+      "independent_identity_support": true,
+      "context_score": 0.9265742897987366,
+      "graph_score": 0.4632871448993683,
+      "margin": 0.48032230138778687
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

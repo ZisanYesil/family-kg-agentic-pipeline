@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/841/originals/extracted_841.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/841/ground_truth_841.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/b_boy_song": "http://example.org/entity/B_Boy",
+    "http://example.org/extracted/state_correctional_institution_chester": "http://example.org/entity/State_Correctional_Institution_Chester",
+    "http://example.org/extracted/meek_mill": "http://example.org/entity/Meek_Mill"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/b_boy_song",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "B Boy",
+          "source": "label"
+        },
+        {
+          "text": "b boy song",
+          "source": "uri"
+        }
+      ],
+      "context": "B Boy. has performer: Meek Mill.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/B_Boy",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "B Boy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "B Boy",
+        "extracted_source": "label",
+        "ground_truth_text": "B Boy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/meek_mill",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Meek Mill",
+          "source": "label"
+        }
+      ],
+      "context": "Meek Mill. has detention place: State Correctional Institution – Chester. inverse has performer: B Boy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Meek_Mill",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Meek Mill",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Meek Mill",
+        "extracted_source": "label",
+        "ground_truth_text": "Meek Mill",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9973292946815491,
+      "graph_score": 0.9986646175384521,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/state_correctional_institution_chester",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "State Correctional Institution – Chester",
+          "source": "label"
+        },
+        {
+          "text": "state correctional institution chester",
+          "source": "uri"
+        }
+      ],
+      "context": "State Correctional Institution – Chester. inverse has detention place: Meek Mill.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/State_Correctional_Institution_Chester",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "State Correctional Institution Chester",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "State Correctional Institution – Chester",
+        "extracted_source": "label",
+        "ground_truth_text": "State Correctional Institution Chester",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9890970587730408,
+      "string_score": 0.9884615540504456,
+      "independent_identity_support": true,
+      "context_score": 0.9969833493232727,
+      "graph_score": 0.998491644859314,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

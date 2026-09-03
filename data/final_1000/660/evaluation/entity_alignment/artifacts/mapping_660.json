@@ -1,0 +1,110 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/660/originals/extracted_660.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/660/ground_truth_660.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/charles_l_biedenbach": "http://example.org/entity/Charles_L_Biedenbach",
+    "http://example.org/extracted/merle_tottenham": "http://example.org/entity/Merle_Tottenham"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/charles_l_biedenbach",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Charles L. Biedenbach",
+          "source": "label"
+        },
+        {
+          "text": "charles l biedenbach",
+          "source": "uri"
+        }
+      ],
+      "context": "Charles L. Biedenbach. has birth date: 1865-01-13. has death date: 1942-09-15.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Charles_L_Biedenbach",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Charles L Biedenbach",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Charles L. Biedenbach",
+        "extracted_source": "label",
+        "ground_truth_text": "Charles L Biedenbach",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9930381774902344,
+      "string_score": 0.9890244007110596,
+      "independent_identity_support": true,
+      "context_score": 0.997412383556366,
+      "graph_score": 0.997412383556366,
+      "margin": 0.6445255875587463
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/merle_tottenham",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Merle Tottenham",
+          "source": "label"
+        }
+      ],
+      "context": "Merle Tottenham. has birth date: 1901-01-22. has death date: 1958-07-18.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Merle_Tottenham",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Merle Tottenham",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Merle Tottenham",
+        "extracted_source": "label",
+        "ground_truth_text": "Merle Tottenham",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.707823634147644
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

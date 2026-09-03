@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/973/evaluation/entity_alignment/baseline_extracted_aligned_973.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/973/evaluation/entity_alignment/baseline_ground_truth_aligned_973.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "For_a_Few_Extra_Dollars",
+      "predicate": "hasCountry",
+      "object": "Italian",
+      "subject_uri": "http://example.org/entity/For_a_Few_Extra_Dollars",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Italian"
+    },
+    {
+      "subject": "Vendetta_di_zingara",
+      "predicate": "hasCountry",
+      "object": "Italian",
+      "subject_uri": "http://example.org/entity/Vendetta_di_zingara",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCountry",
+      "object_term": "http://example.org/entity/Italian"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "For_a_Few_Extra_Dollars",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/For_a_Few_Extra_Dollars",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "For_a_Few_Extra_Dollars",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/For_a_Few_Extra_Dollars",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "For_a_Few_Extra_Dollars",
+      "predicate": "label",
+      "object": "\"For a Few Extra Dollars\"",
+      "subject_uri": "http://example.org/entity/For_a_Few_Extra_Dollars",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"For a Few Extra Dollars\""
+    },
+    {
+      "subject": "Italian",
+      "predicate": "type",
+      "object": "Country",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Country"
+    },
+    {
+      "subject": "Italian",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Italian",
+      "predicate": "label",
+      "object": "\"Italy\"",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Italy\""
+    },
+    {
+      "subject": "Italian",
+      "predicate": "altLabel",
+      "object": "\"Italian\"",
+      "subject_uri": "http://example.org/entity/Italian",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Italian\""
+    },
+    {
+      "subject": "Vendetta_di_zingara",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Vendetta_di_zingara",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Vendetta_di_zingara",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Vendetta_di_zingara",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Vendetta_di_zingara",
+      "predicate": "label",
+      "object": "\"Vendetta di zingara\"",
+      "subject_uri": "http://example.org/entity/Vendetta_di_zingara",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Vendetta di zingara\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 2,
+    "false_positives": 10,
+    "false_negatives": 0,
+    "precision": 0.16666666666666666,
+    "recall": 1.0,
+    "f1": 0.2857142857142857
+  },
+  "stage": "pre_inference"
+}

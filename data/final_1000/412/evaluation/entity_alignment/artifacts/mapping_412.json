@@ -1,0 +1,142 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/412/originals/extracted_412.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/412/ground_truth_412.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/lorenzo_de_medicis": "http://example.org/entity/Lorenzo_de_Medici",
+    "http://example.org/extracted/clarice_orsini": "http://example.org/entity/Clarice_Orsini"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/clarice_orsini",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Clarice Orsini",
+          "source": "label"
+        }
+      ],
+      "context": "Clarice Orsini. has spouse: Lorenzo de' Medici.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Clarice_Orsini",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Clarice Orsini",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Clarice Orsini",
+        "extracted_source": "label",
+        "ground_truth_text": "Clarice Orsini",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9950193762779236,
+      "graph_score": 0.9975097179412842,
+      "margin": 0.6939292252063751
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/lorenzo_de_medicis",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lorenzo de' Medici",
+          "source": "label"
+        },
+        {
+          "text": "lorenzo de medicis",
+          "source": "uri"
+        }
+      ],
+      "context": "Lorenzo de' Medici. has nationality: Italian. inverse has spouse: Clarice Orsini.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lorenzo_de_Medici",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lorenzo de Medici",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lorenzo de' Medici",
+        "extracted_source": "label",
+        "ground_truth_text": "Lorenzo de Medici",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.988656222820282,
+      "string_score": 0.9871428608894348,
+      "independent_identity_support": true,
+      "context_score": 0.9153642058372498,
+      "graph_score": 0.9576821327209473,
+      "margin": 0.6907739043235779
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/italy",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Italian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Italy",
+          "source": "label"
+        }
+      ],
+      "context": "Italian. inverse has nationality: Lorenzo de' Medici.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Florentine_Republic"
+  ]
+}

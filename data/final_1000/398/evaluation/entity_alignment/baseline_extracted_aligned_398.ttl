@@ -1,0 +1,16 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Bonne_of_Berry> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Bonne of Berry" ;
+    onto:hasMother data:amadeus_viii .
+
+data:amadeus_viii a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Amadeus VIII, Duke of Savoy" ;
+    skos:altLabel "Amadeus VIII" .
+

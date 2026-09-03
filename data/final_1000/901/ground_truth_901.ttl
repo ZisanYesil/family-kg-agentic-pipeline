@@ -1,0 +1,13 @@
+@prefix ex:   <http://example.org/2wiki-ontology#> .
+@prefix inst: <http://example.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Silver ground-truth triples for example1052
+# Source: 2WikiMultihopQA dev split, evidences field
+# Predicates use this project's ontology (see ontology.ttl)
+
+inst:Red_Sundown ex:hasDirector inst:Jack_Arnold .  # director
+inst:Suvarna_Sethuve ex:hasDirector inst:Geethapriya .  # director
+inst:Jack_Arnold_director ex:hasDeathDate "1992-03-17"^^xsd:date .  # date of death -> "March 17, 1992"
+inst:Geethapriya ex:hasDeathDate "2016-01-17"^^xsd:date .  # date of death -> "17 January 2016"

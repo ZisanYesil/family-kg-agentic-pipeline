@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/751/evaluation/entity_alignment/baseline_extracted_aligned_751.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/751/evaluation/entity_alignment/baseline_ground_truth_aligned_751.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Elia_Kazan",
+      "predicate": "hasBirthPlace",
+      "object": "Constantinople",
+      "subject_uri": "http://example.org/entity/Elia_Kazan",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Constantinople"
+    },
+    {
+      "subject": "Splendor_in_the_Grass",
+      "predicate": "hasDirector",
+      "object": "Elia_Kazan",
+      "subject_uri": "http://example.org/entity/Splendor_in_the_Grass",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Elia_Kazan"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Constantinople",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Constantinople",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Constantinople",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Constantinople",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Constantinople",
+      "predicate": "label",
+      "object": "\"Constantinople\"",
+      "subject_uri": "http://example.org/entity/Constantinople",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Constantinople\""
+    },
+    {
+      "subject": "Elia_Kazan",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Elia_Kazan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Elia_Kazan",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Elia_Kazan",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Elia_Kazan",
+      "predicate": "label",
+      "object": "\"Elia Kazan\"",
+      "subject_uri": "http://example.org/entity/Elia_Kazan",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Elia Kazan\""
+    },
+    {
+      "subject": "Splendor_in_the_Grass",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Splendor_in_the_Grass",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Splendor_in_the_Grass",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Splendor_in_the_Grass",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Splendor_in_the_Grass",
+      "predicate": "label",
+      "object": "\"Splendor in the Grass\"",
+      "subject_uri": "http://example.org/entity/Splendor_in_the_Grass",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Splendor in the Grass\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 11,
+    "true_positives": 2,
+    "false_positives": 9,
+    "false_negatives": 0,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "f1": 0.3076923076923077
+  },
+  "stage": "pre_inference"
+}

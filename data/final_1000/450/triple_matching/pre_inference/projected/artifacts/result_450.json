@@ -1,0 +1,124 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/450/evaluation/entity_alignment/baseline_extracted_aligned_450.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/450/evaluation/entity_alignment/baseline_ground_truth_aligned_450.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Truth_or_Consequences_N_M",
+      "predicate": "hasDirector",
+      "object": "Kiefer_Sutherland",
+      "subject_uri": "http://example.org/entity/Truth_or_Consequences_N_M",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Kiefer_Sutherland"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Kiefer_Sutherland",
+      "predicate": "hasChild",
+      "object": "Sarah_Sutherland",
+      "subject_uri": "http://example.org/entity/Kiefer_Sutherland",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasChild",
+      "object_term": "http://example.org/entity/Sarah_Sutherland"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Kiefer_Sutherland",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Kiefer_Sutherland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Kiefer_Sutherland",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Kiefer_Sutherland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Kiefer_Sutherland",
+      "predicate": "label",
+      "object": "\"Kiefer Sutherland\"",
+      "subject_uri": "http://example.org/entity/Kiefer_Sutherland",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Kiefer Sutherland\""
+    },
+    {
+      "subject": "Sarah_Sutherland",
+      "predicate": "hasParent",
+      "object": "Kiefer_Sutherland",
+      "subject_uri": "http://example.org/entity/Sarah_Sutherland",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Kiefer_Sutherland"
+    },
+    {
+      "subject": "Sarah_Sutherland",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Sarah_Sutherland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Sarah_Sutherland",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Sarah_Sutherland",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Sarah_Sutherland",
+      "predicate": "label",
+      "object": "\"Sarah Sutherland\"",
+      "subject_uri": "http://example.org/entity/Sarah_Sutherland",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Sarah Sutherland\""
+    },
+    {
+      "subject": "Truth_or_Consequences_N_M",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Truth_or_Consequences_N_M",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Truth_or_Consequences_N_M",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Truth_or_Consequences_N_M",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Truth_or_Consequences_N_M",
+      "predicate": "label",
+      "object": "\"Truth or Consequences, N.M.\"",
+      "subject_uri": "http://example.org/entity/Truth_or_Consequences_N_M",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Truth or Consequences, N.M.\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 12,
+    "true_positives": 1,
+    "false_positives": 10,
+    "false_negatives": 1,
+    "precision": 0.09090909090909091,
+    "recall": 0.5,
+    "f1": 0.15384615384615385
+  },
+  "stage": "pre_inference"
+}

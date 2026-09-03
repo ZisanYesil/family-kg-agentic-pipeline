@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/437/originals/extracted_437.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/437/ground_truth_437.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/country_pakistan": "http://example.org/entity/Pakistan",
+    "http://example.org/extracted/person_nusrat_fateh_ali_khan": "http://example.org/entity/Nusrat_Fateh_Ali_Khan",
+    "http://example.org/extracted/song_mere_rashke_qamar": "http://example.org/entity/Mere_Rashke_Qamar"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_pakistan",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pakistani",
+          "source": "altLabel"
+        },
+        {
+          "text": "Pakistan",
+          "source": "label"
+        },
+        {
+          "text": "country pakistan",
+          "source": "uri"
+        }
+      ],
+      "context": "Pakistani. inverse has nationality: Nusrat Fateh Ali Khan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pakistan",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pakistan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pakistan",
+        "extracted_source": "label",
+        "ground_truth_text": "Pakistan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9143121838569641,
+      "graph_score": 0.45715609192848206,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_nusrat_fateh_ali_khan",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Nusrat Fateh Ali Khan",
+          "source": "label"
+        },
+        {
+          "text": "person nusrat fateh ali khan",
+          "source": "uri"
+        }
+      ],
+      "context": "Nusrat Fateh Ali Khan. has nationality: Pakistani. inverse has composer: Mere Rashke Qamar.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Nusrat_Fateh_Ali_Khan",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Nusrat Fateh Ali Khan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Nusrat Fateh Ali Khan",
+        "extracted_source": "label",
+        "ground_truth_text": "Nusrat Fateh Ali Khan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.956027626991272,
+      "graph_score": 0.6446805000305176,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_mere_rashke_qamar",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mere Rashke Qamar",
+          "source": "label"
+        },
+        {
+          "text": "song mere rashke qamar",
+          "source": "uri"
+        }
+      ],
+      "context": "Mere Rashke Qamar. has composer: Nusrat Fateh Ali Khan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mere_Rashke_Qamar",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mere Rashke Qamar",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mere Rashke Qamar",
+        "extracted_source": "label",
+        "ground_truth_text": "Mere Rashke Qamar",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

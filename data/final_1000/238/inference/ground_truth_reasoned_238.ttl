@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Passion a ex:Artifact,
+        ex:CreativeWork ;
+    ex:hasCreator entity:Utada_Hikaru ;
+    ex:hasPerformer entity:Utada_Hikaru .
+
+entity:Keiko_Fuji a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Utada_Hikaru .
+
+entity:Utada_Hikaru a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Keiko_Fuji ;
+    ex:hasParent entity:Keiko_Fuji .
+

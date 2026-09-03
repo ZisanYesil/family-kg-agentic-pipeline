@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/215/evaluation/entity_alignment/baseline_extracted_aligned_215.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/215/evaluation/entity_alignment/baseline_ground_truth_aligned_215.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Albert_Kellogg",
+      "predicate": "hasBirthDate",
+      "object": "\"1813-12-06\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Albert_Kellogg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1813-12-06\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Albert_Kellogg",
+      "predicate": "hasDeathDate",
+      "object": "\"1887-03-31\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Albert_Kellogg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1887-03-31\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Johann_Jakob_Schalch",
+      "predicate": "hasBirthDate",
+      "object": "\"1723-01-23\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Johann_Jakob_Schalch",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1723-01-23\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Johann_Jakob_Schalch",
+      "predicate": "hasDeathDate",
+      "object": "\"1789-08-21\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Johann_Jakob_Schalch",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1789-08-21\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Albert_Kellogg",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Albert_Kellogg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Albert_Kellogg",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Albert_Kellogg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Albert_Kellogg",
+      "predicate": "label",
+      "object": "\"Albert Kellogg\"",
+      "subject_uri": "http://example.org/entity/Albert_Kellogg",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Albert Kellogg\""
+    },
+    {
+      "subject": "Albert_Kellogg",
+      "predicate": "altLabel",
+      "object": "\"Albert Kellogg\"",
+      "subject_uri": "http://example.org/entity/Albert_Kellogg",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Albert Kellogg\""
+    },
+    {
+      "subject": "Johann_Jakob_Schalch",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Johann_Jakob_Schalch",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Johann_Jakob_Schalch",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Johann_Jakob_Schalch",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Johann_Jakob_Schalch",
+      "predicate": "label",
+      "object": "\"Johann Jakob Schalch\"",
+      "subject_uri": "http://example.org/entity/Johann_Jakob_Schalch",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Johann Jakob Schalch\""
+    },
+    {
+      "subject": "Johann_Jakob_Schalch",
+      "predicate": "altLabel",
+      "object": "\"Johann Jakob Schalch\"",
+      "subject_uri": "http://example.org/entity/Johann_Jakob_Schalch",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Johann Jakob Schalch\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 12,
+    "true_positives": 4,
+    "false_positives": 8,
+    "false_negatives": 0,
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "f1": 0.5
+  },
+  "stage": "pre_inference"
+}

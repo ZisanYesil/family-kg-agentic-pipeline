@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:passion_song a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Passion (Utada Hikaru song)" ;
+    onto:hasPerformer data:utada_hikaru ;
+    skos:altLabel "Passion" .
+
+data:keiko_fuji a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Keiko Fuji" .
+
+data:utada_hikaru a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Utada Hikaru" ;
+    onto:hasMother data:keiko_fuji ;
+    skos:altLabel "Hikaru Utada",
+        "Utada" .
+

@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_disgraced_1933 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Disgraced!" ;
+    onto:hasCountryOfOrigin data:country_united_states .
+
+data:film_two_in_a_big_city_1942 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Two in a Big City" ;
+    onto:hasCountryOfOrigin data:country_germany .
+
+data:country_germany a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Germany" ;
+    skos:altLabel "German" .
+
+data:country_united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

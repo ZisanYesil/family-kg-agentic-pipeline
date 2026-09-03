@@ -1,0 +1,115 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/836/evaluation/entity_alignment/final_extracted_aligned_836.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/836/evaluation/entity_alignment/final_ground_truth_aligned_836.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "César_Award_for_Best_Director",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/entity/César_Award_for_Best_Director",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    },
+    {
+      "subject": "Luc_Besson",
+      "predicate": "hasAwardReceived",
+      "object": "César_Award_for_Best_Director",
+      "subject_uri": "http://example.org/entity/Luc_Besson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/entity/César_Award_for_Best_Director"
+    },
+    {
+      "subject": "Luc_Besson",
+      "predicate": "type",
+      "object": "Agent",
+      "subject_uri": "http://example.org/entity/Luc_Besson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Agent"
+    },
+    {
+      "subject": "Luc_Besson",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Luc_Besson",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "predicate": "hasCreator",
+      "object": "Luc_Besson",
+      "subject_uri": "http://example.org/entity/The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasCreator",
+      "object_term": "http://example.org/entity/Luc_Besson"
+    },
+    {
+      "subject": "The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "predicate": "hasDirector",
+      "object": "Luc_Besson",
+      "subject_uri": "http://example.org/entity/The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Luc_Besson"
+    },
+    {
+      "subject": "The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "predicate": "type",
+      "object": "Artifact",
+      "subject_uri": "http://example.org/entity/The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Artifact"
+    },
+    {
+      "subject": "The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "predicate": "type",
+      "object": "CreativeWork",
+      "subject_uri": "http://example.org/entity/The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#CreativeWork"
+    },
+    {
+      "subject": "The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/The_Extraordinary_Adventures_of_Adèle_Blanc_Sec",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Luc_Besson",
+      "predicate": "hasAwardReceived",
+      "object": "award_best_french_director",
+      "subject_uri": "http://example.org/entity/Luc_Besson",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasAwardReceived",
+      "object_term": "http://example.org/extracted/award_best_french_director"
+    },
+    {
+      "subject": "award_best_french_director",
+      "predicate": "type",
+      "object": "Award",
+      "subject_uri": "http://example.org/extracted/award_best_french_director",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Award"
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 11,
+    "ground_truth_triples_in_scope": 9,
+    "union_triples_in_scope": 11,
+    "true_positives": 9,
+    "false_positives": 2,
+    "false_negatives": 0,
+    "precision": 0.8181818181818182,
+    "recall": 1.0,
+    "f1": 0.9
+  },
+  "stage": "post_inference"
+}

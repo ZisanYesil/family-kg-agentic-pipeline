@@ -1,0 +1,19 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Anurutha> a ex:Agent,
+        ex:Person ;
+    ex:hasParent <http://example.org/entity/Inthasom> ;
+    ex:isSonOf <http://example.org/entity/Inthasom> .
+
+<http://example.org/entity/Kingkitsarat> a ex:Agent,
+        ex:Person ;
+    ex:hasSibling <http://example.org/entity/Inthasom> ;
+    ex:isBrotherOf <http://example.org/entity/Inthasom> .
+
+<http://example.org/entity/Inthasom> a ex:Agent,
+        ex:Person ;
+    ex:hasBrother <http://example.org/entity/Kingkitsarat> ;
+    ex:hasChild <http://example.org/entity/Anurutha> ;
+    ex:hasSibling <http://example.org/entity/Kingkitsarat> ;
+    ex:hasSon <http://example.org/entity/Anurutha> .
+

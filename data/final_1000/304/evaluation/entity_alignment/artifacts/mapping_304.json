@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/304/originals/extracted_304.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/304/ground_truth_304.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_ida_may_park": "http://example.org/entity/Ida_May_Park",
+    "http://example.org/extracted/film_the_vanity_pool": "http://example.org/entity/The_Vanity_Pool"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_the_vanity_pool",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "The Vanity Pool",
+          "source": "label"
+        },
+        {
+          "text": "film the vanity pool",
+          "source": "uri"
+        }
+      ],
+      "context": "The Vanity Pool. has director: Ida May Park.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/The_Vanity_Pool",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "The Vanity Pool",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "The Vanity Pool",
+        "extracted_source": "label",
+        "ground_truth_text": "The Vanity Pool",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_ida_may_park",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ida May Park",
+          "source": "label"
+        },
+        {
+          "text": "person ida may park",
+          "source": "uri"
+        }
+      ],
+      "context": "Ida May Park. has birth place: Los Angeles, California. inverse has director: The Vanity Pool.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ida_May_Park",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ida May Park",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ida May Park",
+        "extracted_source": "label",
+        "ground_truth_text": "Ida May Park",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9874191880226135,
+      "graph_score": 0.9937095642089844,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_los_angeles_california",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Los Angeles, California",
+          "source": "label"
+        },
+        {
+          "text": "place los angeles california",
+          "source": "uri"
+        }
+      ],
+      "context": "Los Angeles, California. inverse has birth place: Ida May Park.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Los_Angeles",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Los Angeles",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Los Angeles, California",
+        "extracted_source": "label",
+        "ground_truth_text": "Los Angeles",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8956050872802734,
+      "name_embedding_score": 0.9159553050994873,
+      "string_score": 0.7578431367874146,
+      "independent_identity_support": true,
+      "context_score": 0.9853335618972778,
+      "graph_score": 0.9926667809486389,
+      "margin": 0.8956050872802734
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

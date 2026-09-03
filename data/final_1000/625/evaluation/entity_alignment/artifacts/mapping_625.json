@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/625/originals/extracted_625.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/625/ground_truth_625.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/to_grab_the_ring_film": "http://example.org/entity/To_Grab_the_Ring",
+    "http://example.org/extracted/murder_tomorrow_film": "http://example.org/entity/Murder_Tomorrow"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/murder_tomorrow_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Murder Tomorrow",
+          "source": "label"
+        },
+        {
+          "text": "murder tomorrow film",
+          "source": "uri"
+        }
+      ],
+      "context": "Murder Tomorrow. has publication date: 1938.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Murder_Tomorrow",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Murder Tomorrow",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Murder Tomorrow",
+        "extracted_source": "label",
+        "ground_truth_text": "Murder Tomorrow",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.8183615505695343
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/to_grab_the_ring_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "To Grab the Ring",
+          "source": "label"
+        },
+        {
+          "text": "to grab the ring film",
+          "source": "uri"
+        }
+      ],
+      "context": "To Grab the Ring. has publication date: 1968.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/To_Grab_the_Ring",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "To Grab the Ring",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "To Grab the Ring",
+        "extracted_source": "label",
+        "ground_truth_text": "To Grab the Ring",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7974593937397003
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

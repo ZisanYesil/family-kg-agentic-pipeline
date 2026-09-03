@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/532/originals/extracted_532.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/532/ground_truth_532.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/padma_bhushan": "http://example.org/entity/Padma_Bhushan",
+    "http://example.org/extracted/vithalbhai_jhaveri": "http://example.org/entity/Vithalbhai_Jhaveri",
+    "http://example.org/extracted/mahatma_life_of_gandhi_1968_film": "http://example.org/entity/Mahatma_Life_of_Gandhi_1869_1948"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/mahatma_life_of_gandhi_1968_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mahatma: Life of Gandhi, 1869–1948",
+          "source": "label"
+        },
+        {
+          "text": "mahatma life of gandhi 1968 film",
+          "source": "uri"
+        }
+      ],
+      "context": "Mahatma: Life of Gandhi, 1869–1948. has director: Vitthal Jhaveri.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mahatma_Life_of_Gandhi_1869_1948",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mahatma Life of Gandhi 1869 1948",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mahatma: Life of Gandhi, 1869–1948",
+        "extracted_source": "label",
+        "ground_truth_text": "Mahatma Life of Gandhi 1869 1948",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9722099900245667,
+      "string_score": 0.9727272987365723,
+      "independent_identity_support": true,
+      "context_score": 0.9608214497566223,
+      "graph_score": 0.9804106950759888,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/padma_bhushan",
+      "extracted_types": [
+        "Award"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Padma Bhushan",
+          "source": "label"
+        }
+      ],
+      "context": "Padma Bhushan. inverse has award received: Vitthal Jhaveri.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Padma_Bhushan",
+      "ground_truth_types": [
+        "Award"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Padma Bhushan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Padma Bhushan",
+        "extracted_source": "label",
+        "ground_truth_text": "Padma Bhushan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9936070442199707,
+      "graph_score": 0.9968035221099854,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/vithalbhai_jhaveri",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vitthal Jhaveri",
+          "source": "altLabel"
+        },
+        {
+          "text": "Vithalbhai Jhaveri",
+          "source": "label"
+        }
+      ],
+      "context": "Vitthal Jhaveri. has award received: Padma Bhushan. inverse has director: Mahatma: Life of Gandhi, 1869–1948.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vithalbhai_Jhaveri",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vithalbhai Jhaveri",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vithalbhai Jhaveri",
+        "extracted_source": "label",
+        "ground_truth_text": "Vithalbhai Jhaveri",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9870174527168274,
+      "graph_score": 0.9935086965560913,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,25 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/extracted/film_song_of_arizona> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/person_frank_mcdonald> ;
+    ex:hasDirector <http://example.org/extracted/person_frank_mcdonald> .
+
+<http://example.org/extracted/film_texas_terrors> a ex:Artifact,
+        ex:CreativeWork,
+        ex:Film ;
+    ex:hasCreator <http://example.org/extracted/person_george_sherman> ;
+    ex:hasDirector <http://example.org/extracted/person_george_sherman> .
+
+<http://example.org/extracted/person_frank_mcdonald> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1899-11-09"^^xsd:date ;
+    ex:hasDeathDate "1980-03-08"^^xsd:date .
+
+<http://example.org/extracted/person_george_sherman> a ex:Agent,
+        ex:Person ;
+    ex:hasBirthDate "1908-07-14"^^xsd:date ;
+    ex:hasDeathDate "1991-03-15"^^xsd:date .
+

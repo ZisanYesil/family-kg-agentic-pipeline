@@ -1,0 +1,21 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Hubert_Humphrey> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Hubert Horatio Humphrey Jr." ;
+    onto:hasBirthPlace <http://example.org/entity/Wallace> ;
+    onto:hasSon <http://example.org/entity/Hubert_Horatio_Skip_Humphrey> ;
+    skos:altLabel "Hubert Humphrey" .
+
+<http://example.org/entity/Hubert_Horatio_Skip_Humphrey> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Hubert Horatio \"Skip\" Humphrey III" ;
+    skos:altLabel "Skip Humphrey" .
+
+<http://example.org/entity/Wallace> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Wallace, South Dakota" .
+

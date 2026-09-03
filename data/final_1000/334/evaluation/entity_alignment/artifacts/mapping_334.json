@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/334/originals/extracted_334.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/334/ground_truth_334.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/abdulaziz": "http://example.org/entity/Abdülaziz",
+    "http://example.org/extracted/edadil_kadin": "http://example.org/entity/Edadil_Kadın"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/abdulaziz",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Abdülaziz",
+          "source": "label"
+        },
+        {
+          "text": "abdulaziz",
+          "source": "uri"
+        }
+      ],
+      "context": "Abdülaziz. has birth place: Eyüp Palace, Constantinople (present‐day Istanbul). inverse has spouse: Edadil Kadın.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Abdülaziz",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Abdülaziz",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Abdülaziz",
+        "extracted_source": "label",
+        "ground_truth_text": "Abdülaziz",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.896507203578949,
+      "graph_score": 0.9482536315917969,
+      "margin": 0.6185365915298462
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/edadil_kadin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Edadil Kadın",
+          "source": "label"
+        },
+        {
+          "text": "edadil kadin",
+          "source": "uri"
+        }
+      ],
+      "context": "Edadil Kadın. has spouse: Abdülaziz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Edadil_Kadın",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Edadil Kadın",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Edadil Kadın",
+        "extracted_source": "label",
+        "ground_truth_text": "Edadil Kadın",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.6403411328792572
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/eyup_palace_constan",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eyüp Palace, Constantinople (present‐day Istanbul)",
+          "source": "label"
+        },
+        {
+          "text": "eyup palace constan",
+          "source": "uri"
+        }
+      ],
+      "context": "Eyüp Palace, Constantinople (present‐day Istanbul). inverse has birth place: Abdülaziz.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Constantinople",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Constantinople",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eyüp Palace, Constantinople (present‐day Istanbul)",
+        "extracted_source": "label",
+        "ground_truth_text": "Constantinople",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7418879866600037,
+      "name_embedding_score": 0.7545611262321472,
+      "string_score": 0.5385416746139526,
+      "independent_identity_support": false,
+      "context_score": 0.8397761583328247,
+      "graph_score": 0.9198880791664124,
+      "margin": 0.7418879866600037
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

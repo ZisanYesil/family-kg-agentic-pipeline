@@ -1,0 +1,131 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/807/evaluation/entity_alignment/baseline_extracted_aligned_807.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/807/evaluation/entity_alignment/baseline_ground_truth_aligned_807.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Lil_Boosie",
+      "predicate": "hasBirthPlace",
+      "object": "Baton_Rouge",
+      "subject_uri": "http://example.org/entity/Lil_Boosie",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthPlace",
+      "object_term": "http://example.org/entity/Baton_Rouge"
+    },
+    {
+      "subject": "Show_da_World",
+      "predicate": "hasPerformer",
+      "object": "Lil_Boosie",
+      "subject_uri": "http://example.org/entity/Show_da_World",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasPerformer",
+      "object_term": "http://example.org/entity/Lil_Boosie"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Baton_Rouge",
+      "predicate": "type",
+      "object": "Place",
+      "subject_uri": "http://example.org/entity/Baton_Rouge",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Place"
+    },
+    {
+      "subject": "Baton_Rouge",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Baton_Rouge",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Baton_Rouge",
+      "predicate": "label",
+      "object": "\"Baton Rouge, Louisiana\"",
+      "subject_uri": "http://example.org/entity/Baton_Rouge",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Baton Rouge, Louisiana\""
+    },
+    {
+      "subject": "Lil_Boosie",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Lil_Boosie",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Lil_Boosie",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lil_Boosie",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lil_Boosie",
+      "predicate": "label",
+      "object": "\"Boosie Badazz\"",
+      "subject_uri": "http://example.org/entity/Lil_Boosie",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Boosie Badazz\""
+    },
+    {
+      "subject": "Lil_Boosie",
+      "predicate": "altLabel",
+      "object": "\"Lil Boosie\"",
+      "subject_uri": "http://example.org/entity/Lil_Boosie",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Lil Boosie\""
+    },
+    {
+      "subject": "Lil_Boosie",
+      "predicate": "altLabel",
+      "object": "\"Torrence Hatch Jr.\"",
+      "subject_uri": "http://example.org/entity/Lil_Boosie",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Torrence Hatch Jr.\""
+    },
+    {
+      "subject": "Show_da_World",
+      "predicate": "type",
+      "object": "MusicalWork",
+      "subject_uri": "http://example.org/entity/Show_da_World",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#MusicalWork"
+    },
+    {
+      "subject": "Show_da_World",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Show_da_World",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Show_da_World",
+      "predicate": "label",
+      "object": "\"Show da World\"",
+      "subject_uri": "http://example.org/entity/Show_da_World",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Show da World\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 3,
+    "extracted_triples_in_scope": 13,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 13,
+    "true_positives": 2,
+    "false_positives": 11,
+    "false_negatives": 0,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "f1": 0.2666666666666667
+  },
+  "stage": "pre_inference"
+}

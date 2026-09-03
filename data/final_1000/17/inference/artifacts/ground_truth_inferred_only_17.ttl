@@ -1,0 +1,16 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Charles_Willoughby_10th_Baron_Willoughby_of_Parham a ex:Agent,
+        ex:Person ;
+    ex:hasParent entity:William_Willoughby .
+
+entity:Lady_Frances_Manners a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:William_Willoughby .
+
+entity:William_Willoughby a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Charles_Willoughby_10th_Baron_Willoughby_of_Parham ;
+    ex:hasParent entity:Lady_Frances_Manners .
+

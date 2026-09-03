@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Veslefrekk> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Veslefrekk" ;
+    onto:hasMember <http://example.org/entity/Ståle_Storløkken> .
+
+<http://example.org/entity/Dombås_Norway> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Dombås, Norway" ;
+    skos:altLabel "Dombås" .
+
+<http://example.org/entity/Ståle_Storløkken> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Ståle Storløkken" ;
+    onto:hasBirthPlace <http://example.org/entity/Dombås_Norway> .
+

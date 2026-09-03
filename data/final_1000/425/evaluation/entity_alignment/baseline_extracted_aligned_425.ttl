@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Brisa_Auto_estradas_de_Portugal> a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Brisa – Auto-estradas de Portugal" ;
+    onto:hasFounder <http://example.org/entity/Jorge_de_Brito> .
+
+<http://example.org/entity/Jorge_de_Brito> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jorge Artur Rego de Brito" ;
+    onto:hasDeathPlace data:place_lisbon ;
+    skos:altLabel "Jorge de Brito" .
+
+data:place_lisbon a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Lisbon" .
+

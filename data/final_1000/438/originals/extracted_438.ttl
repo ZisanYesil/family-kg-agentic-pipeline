@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:_the_trap_1959_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Trap (1959 film)" ;
+    onto:hasDirector data:_norman_panama .
+
+data:_norman_panama a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Norman Panama" ;
+    onto:hasCauseOfDeath data:_parkinsons_complications .
+
+data:_parkinsons_complications a onto:CauseOfDeath,
+        owl:NamedIndividual ;
+    rdfs:label "complications of Parkinson's disease" .
+

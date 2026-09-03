@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/27/originals/extracted_27.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/27/ground_truth_27.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/yves_allegret": "http://example.org/entity/Yves_Allégret",
+    "http://example.org/extracted/catherine_allegret": "http://example.org/entity/Catherine_Allégret",
+    "http://example.org/extracted/marc_allegret": "http://example.org/entity/Marc_Allégret"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/catherine_allegret",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Catherine Allégret",
+          "source": "label"
+        },
+        {
+          "text": "catherine allegret",
+          "source": "uri"
+        }
+      ],
+      "context": "Catherine Allégret. has father: Yves Allégret.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Catherine_Allégret",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Catherine Allégret",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Catherine Allégret",
+        "extracted_source": "label",
+        "ground_truth_text": "Catherine Allégret",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5057010054588318
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/marc_allegret",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Marc Allégret",
+          "source": "label"
+        },
+        {
+          "text": "marc allegret",
+          "source": "uri"
+        }
+      ],
+      "context": "Marc Allégret. inverse has brother: Yves Allégret.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Marc_Allégret",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Marc Allégret",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Marc Allégret",
+        "extracted_source": "label",
+        "ground_truth_text": "Marc Allégret",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9683486819267273,
+      "graph_score": 0.48417434096336365,
+      "margin": 0.3512107729911804
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/yves_allegret",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Yves Allégret",
+          "source": "label"
+        },
+        {
+          "text": "yves allegret",
+          "source": "uri"
+        }
+      ],
+      "context": "Yves Allégret. has brother: Marc Allégret. inverse has father: Catherine Allégret.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Yves_Allégret",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Yves Allégret",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Yves Allégret",
+        "extracted_source": "label",
+        "ground_truth_text": "Yves Allégret",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9894298911094666,
+      "graph_score": 0.6613816022872925,
+      "margin": 0.3507155776023865
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

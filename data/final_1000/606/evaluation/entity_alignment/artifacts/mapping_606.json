@@ -1,0 +1,159 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/606/originals/extracted_606.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/606/ground_truth_606.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_alex_kramer": "http://example.org/entity/Alex_Kramer"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/person_alex_kramer",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Alex J. Kramer",
+          "source": "altLabel"
+        },
+        {
+          "text": "Alex Kramer",
+          "source": "label"
+        },
+        {
+          "text": "person alex kramer",
+          "source": "uri"
+        }
+      ],
+      "context": "Alex J. Kramer. has birth place: Montreal, Quebec, Canada. inverse has composer: Candy (1944 song).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Alex_Kramer",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Alex Kramer",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Alex Kramer",
+        "extracted_source": "label",
+        "ground_truth_text": "Alex Kramer",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9514848589897156,
+      "graph_score": 0.9514848589897156,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_montreal_canada",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Montreal, Quebec, Canada",
+          "source": "label"
+        },
+        {
+          "text": "place montreal canada",
+          "source": "uri"
+        }
+      ],
+      "context": "Montreal, Quebec, Canada. inverse has birth place: Alex J. Kramer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Montreal_Quebec",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Montreal Quebec",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Montreal, Quebec, Canada",
+        "extracted_source": "label",
+        "ground_truth_text": "Montreal Quebec",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8976730108261108,
+      "name_embedding_score": 0.8975983262062073,
+      "string_score": 0.8128204941749573,
+      "independent_identity_support": true,
+      "context_score": 0.9653496146202087,
+      "graph_score": 0.9826748371124268,
+      "margin": 0.8976730108261108
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/song_candy_1944",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Candy (1944 song)",
+          "source": "label"
+        },
+        {
+          "text": "song candy 1944",
+          "source": "uri"
+        }
+      ],
+      "context": "Candy (1944 song). has composer: Alex J. Kramer.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Candy",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Candy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Candy (1944 song)",
+        "extracted_source": "label",
+        "ground_truth_text": "Candy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7393834590911865,
+      "name_embedding_score": 0.7039737701416016,
+      "string_score": 0.5878787636756897,
+      "independent_identity_support": false,
+      "context_score": 0.9234152436256409,
+      "graph_score": 0.961707592010498,
+      "margin": 0.7393834590911865
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

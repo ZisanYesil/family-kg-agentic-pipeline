@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_la_cage_aux_folles_3 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "La Cage Aux Folles 3: The Wedding" ;
+    onto:hasDirector data:person_georges_lautner .
+
+data:person_georges_lautner a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Georges Lautner" ;
+    onto:hasBirthDate "1926-01-24"^^xsd:date ;
+    onto:hasDeathDate "2013-11-22"^^xsd:date ;
+    onto:hasMother data:person_renee_saint_cyr .
+
+data:person_renee_saint_cyr a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Renée Saint-Cyr" .
+

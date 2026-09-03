@@ -1,0 +1,29 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/Dawn_Fraser> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Dawn Fraser" ;
+    onto:hasBirthDate "1937-09-04"^^xsd:date ;
+    onto:hasOccupation <http://example.org/entity/politician>,
+        <http://example.org/entity/swimmer> .
+
+<http://example.org/entity/Dunois_Master> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Dunois Master" ;
+    onto:hasOccupation <http://example.org/entity/manuscript_illuminator> .
+
+<http://example.org/entity/manuscript_illuminator> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "manuscript illuminator" .
+
+<http://example.org/entity/politician> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "politician" .
+
+<http://example.org/entity/swimmer> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "swimmer" .
+

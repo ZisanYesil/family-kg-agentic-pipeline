@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/858/originals/extracted_858.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/858/ground_truth_858.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/tantallon_castle_east_lothian": "http://example.org/entity/Tantallon_Castle",
+    "http://example.org/extracted/james_douglas_3rd_earl_of_angus": "http://example.org/entity/James_Douglas_3rd_Earl_of_Angus",
+    "http://example.org/extracted/william_douglas_2nd_earl_of_angus": "http://example.org/entity/William_Douglas_2nd_Earl_of_Angus"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/james_douglas_3rd_earl_of_angus",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "James Douglas, 3rd Earl of Angus",
+          "source": "label"
+        },
+        {
+          "text": "james douglas 3rd earl of angus",
+          "source": "uri"
+        }
+      ],
+      "context": "James Douglas, 3rd Earl of Angus. inverse has son: William Douglas, 2nd Earl of Angus.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/James_Douglas_3rd_Earl_of_Angus",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "James Douglas 3rd Earl of Angus",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "James Douglas, 3rd Earl of Angus",
+        "extracted_source": "label",
+        "ground_truth_text": "James Douglas 3rd Earl of Angus",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.991253137588501,
+      "string_score": 0.9928571581840515,
+      "independent_identity_support": true,
+      "context_score": 0.958967924118042,
+      "graph_score": 0.479483962059021,
+      "margin": 0.24322444200515747
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tantallon_castle_east_lothian",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tantallon Castle",
+          "source": "label"
+        },
+        {
+          "text": "tantallon castle east lothian",
+          "source": "uri"
+        }
+      ],
+      "context": "Tantallon Castle. inverse has birth place: William Douglas, 2nd Earl of Angus.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tantallon_Castle",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tantallon Castle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tantallon Castle",
+        "extracted_source": "label",
+        "ground_truth_text": "Tantallon Castle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9915499687194824,
+      "graph_score": 0.9957749843597412,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/william_douglas_2nd_earl_of_angus",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William Douglas, 2nd Earl of Angus",
+          "source": "label"
+        },
+        {
+          "text": "william douglas 2nd earl of angus",
+          "source": "uri"
+        }
+      ],
+      "context": "William Douglas, 2nd Earl of Angus. has birth place: Tantallon Castle. has son: James Douglas, 3rd Earl of Angus.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/William_Douglas_2nd_Earl_of_Angus",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "William Douglas 2nd Earl of Angus",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "William Douglas, 2nd Earl of Angus",
+        "extracted_source": "label",
+        "ground_truth_text": "William Douglas 2nd Earl of Angus",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9922259449958801,
+      "string_score": 0.9932835698127747,
+      "independent_identity_support": true,
+      "context_score": 0.960848867893219,
+      "graph_score": 0.6470910906791687,
+      "margin": 0.23755812644958496
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

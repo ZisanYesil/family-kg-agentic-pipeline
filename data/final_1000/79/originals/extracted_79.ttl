@@ -1,0 +1,31 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:film_a_french_gigolo a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A French Gigolo" ;
+    onto:hasDirector data:person_josiane_balasko .
+
+data:film_temptation_1929 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Temptation (1929 film)" ;
+    onto:hasDirector data:person_rene_barberis .
+
+data:person_josiane_balasko a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Josiane Balasko" ;
+    onto:hasNationality data:country_france .
+
+data:person_rene_barberis a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "René Barberis" ;
+    onto:hasNationality data:country_france .
+
+data:country_france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+

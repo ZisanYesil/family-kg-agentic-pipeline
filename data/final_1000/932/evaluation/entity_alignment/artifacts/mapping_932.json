@@ -1,0 +1,159 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/932/originals/extracted_932.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/932/ground_truth_932.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/hubert_humphrey_jr": "http://example.org/entity/Hubert_Humphrey"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/hubert_humphrey_jr",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hubert Humphrey",
+          "source": "altLabel"
+        },
+        {
+          "text": "Hubert Horatio Humphrey Jr.",
+          "source": "label"
+        },
+        {
+          "text": "hubert humphrey jr",
+          "source": "uri"
+        }
+      ],
+      "context": "Hubert Humphrey. has birth place: Wallace, South Dakota. has son: Skip Humphrey.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hubert_Humphrey",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hubert Humphrey",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hubert Humphrey",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Hubert Humphrey",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8821967840194702,
+      "graph_score": 0.8821967840194702,
+      "margin": 0.27611374855041504
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/skip_humphrey",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Skip Humphrey",
+          "source": "altLabel"
+        },
+        {
+          "text": "Hubert Horatio \"Skip\" Humphrey III",
+          "source": "label"
+        }
+      ],
+      "context": "Skip Humphrey. inverse has son: Hubert Humphrey.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hubert_Horatio_Skip_Humphrey",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hubert Horatio Skip Humphrey",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hubert Horatio \"Skip\" Humphrey III",
+        "extracted_source": "label",
+        "ground_truth_text": "Hubert Horatio Skip Humphrey",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7700541019439697,
+      "name_embedding_score": 0.8730316162109375,
+      "string_score": 0.9064516425132751,
+      "independent_identity_support": true,
+      "context_score": 0.8554031848907471,
+      "graph_score": 0.42770159244537354,
+      "margin": 0.0861862301826477
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/wallace_south_dakota",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Wallace, South Dakota",
+          "source": "label"
+        },
+        {
+          "text": "wallace south dakota",
+          "source": "uri"
+        }
+      ],
+      "context": "Wallace, South Dakota. inverse has birth place: Hubert Humphrey.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Wallace",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Wallace",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Wallace, South Dakota",
+        "extracted_source": "label",
+        "ground_truth_text": "Wallace",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7499803304672241,
+      "name_embedding_score": 0.7184616923332214,
+      "string_score": 0.6083333492279053,
+      "independent_identity_support": false,
+      "context_score": 0.9093294739723206,
+      "graph_score": 0.9546647071838379,
+      "margin": 0.7499803304672241
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

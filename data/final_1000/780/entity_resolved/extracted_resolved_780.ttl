@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:humphry_sibthorp_botanist a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Humphry Waldo Sibthorp" ;
+    onto:hasFather data:john_sibthorpe ;
+    skos:altLabel "Humphry Sibthorp (botanist)" .
+
+data:christ_church_oxford a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Christ Church, Oxford" .
+
+data:john_sibthorpe a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "John Sibthorpe" ;
+    onto:hasEducatedAt data:christ_church_oxford .
+

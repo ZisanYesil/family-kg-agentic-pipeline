@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/915/originals/extracted_915.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/915/ground_truth_915.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/queen_munjeong": "http://example.org/entity/Queen_Munjeong",
+    "http://example.org/extracted/queen_insun": "http://example.org/entity/Queen_Insun",
+    "http://example.org/extracted/king_myeongjong": "http://example.org/entity/Myeongjong_of_Joseon"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/king_myeongjong",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Myeongjong of Joseon",
+          "source": "label"
+        },
+        {
+          "text": "king myeongjong",
+          "source": "uri"
+        }
+      ],
+      "context": "Myeongjong of Joseon. has mother: Queen Munjeong. inverse has spouse: Queen Insun.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Myeongjong_of_Joseon",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Myeongjong of Joseon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Myeongjong of Joseon",
+        "extracted_source": "label",
+        "ground_truth_text": "Myeongjong of Joseon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5457306504249573
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/queen_insun",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Queen Insun",
+          "source": "label"
+        }
+      ],
+      "context": "Queen Insun. has spouse: Myeongjong of Joseon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Queen_Insun",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Queen Insun",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Queen Insun",
+        "extracted_source": "label",
+        "ground_truth_text": "Queen Insun",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.4918116331100464
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/queen_munjeong",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Queen Munjeong",
+          "source": "label"
+        }
+      ],
+      "context": "Queen Munjeong. inverse has mother: Myeongjong of Joseon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Queen_Munjeong",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Queen Munjeong",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Queen Munjeong",
+        "extracted_source": "label",
+        "ground_truth_text": "Queen Munjeong",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.4918116331100464
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

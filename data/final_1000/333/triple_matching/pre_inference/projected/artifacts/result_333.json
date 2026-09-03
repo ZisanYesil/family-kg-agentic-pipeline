@@ -1,0 +1,123 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/333/evaluation/entity_alignment/baseline_extracted_aligned_333.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/333/evaluation/entity_alignment/baseline_ground_truth_aligned_333.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Ernst_Bessey",
+      "predicate": "hasBirthDate",
+      "object": "\"1877-02-20\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Ernst_Bessey",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1877-02-20\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Ernst_Bessey",
+      "predicate": "hasDeathDate",
+      "object": "\"1957-07-17\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Ernst_Bessey",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1957-07-17\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Friedrich_Paschen",
+      "predicate": "hasBirthDate",
+      "object": "\"1865-01-22\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Friedrich_Paschen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasBirthDate",
+      "object_term": "\"1865-01-22\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    },
+    {
+      "subject": "Friedrich_Paschen",
+      "predicate": "hasDeathDate",
+      "object": "\"1947-02-25\"^^<http://www.w3.org/2001/XMLSchema#date>",
+      "subject_uri": "http://example.org/entity/Friedrich_Paschen",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathDate",
+      "object_term": "\"1947-02-25\"^^<http://www.w3.org/2001/XMLSchema#date>"
+    }
+  ],
+  "ground_truth_only_triples": [],
+  "extracted_only_triples": [
+    {
+      "subject": "Ernst_Bessey",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Ernst_Bessey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Ernst_Bessey",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Ernst_Bessey",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Ernst_Bessey",
+      "predicate": "label",
+      "object": "\"Ernst Bessey\"",
+      "subject_uri": "http://example.org/entity/Ernst_Bessey",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Ernst Bessey\""
+    },
+    {
+      "subject": "Ernst_Bessey",
+      "predicate": "altLabel",
+      "object": "\"Ernst Athearn Bessey\"",
+      "subject_uri": "http://example.org/entity/Ernst_Bessey",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Ernst Athearn Bessey\""
+    },
+    {
+      "subject": "Friedrich_Paschen",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Friedrich_Paschen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Friedrich_Paschen",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Friedrich_Paschen",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Friedrich_Paschen",
+      "predicate": "label",
+      "object": "\"Friedrich Paschen\"",
+      "subject_uri": "http://example.org/entity/Friedrich_Paschen",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Friedrich Paschen\""
+    },
+    {
+      "subject": "Friedrich_Paschen",
+      "predicate": "altLabel",
+      "object": "\"Louis Carl Heinrich Friedrich Paschen\"",
+      "subject_uri": "http://example.org/entity/Friedrich_Paschen",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Louis Carl Heinrich Friedrich Paschen\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 12,
+    "ground_truth_triples_in_scope": 4,
+    "union_triples_in_scope": 12,
+    "true_positives": 4,
+    "false_positives": 8,
+    "false_negatives": 0,
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "f1": 0.5
+  },
+  "stage": "pre_inference"
+}

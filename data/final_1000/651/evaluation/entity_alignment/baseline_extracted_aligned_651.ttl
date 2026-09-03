@@ -1,0 +1,18 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/entity/On_Moonlight_Bay> a onto:MusicalWork,
+        owl:NamedIndividual ;
+    rdfs:label "Moonlight Bay" ;
+    onto:hasComposer <http://example.org/entity/Percy_Wenrich> .
+
+<http://example.org/entity/New_York> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "New York City" .
+
+<http://example.org/entity/Percy_Wenrich> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Percy Wenrich" ;
+    onto:hasDeathPlace <http://example.org/entity/New_York> .
+

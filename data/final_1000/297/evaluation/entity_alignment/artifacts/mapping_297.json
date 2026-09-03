@@ -1,0 +1,415 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/297/originals/extracted_297.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/297/ground_truth_297.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_quentin_tarantino": "http://example.org/entity/Quentin_Tarantino",
+    "http://example.org/extracted/person_mike_fleiss": "http://example.org/entity/Mike_Fleiss",
+    "http://example.org/extracted/person_chris_briggs": "http://example.org/entity/Chris_Briggs",
+    "http://example.org/extracted/person_scott_spiegel": "http://example.org/entity/Scott_Spiegel",
+    "http://example.org/extracted/person_vikram_prabhu": "http://example.org/entity/Vikram_Prabhu",
+    "http://example.org/extracted/film_neruppu_da": "http://example.org/entity/Neruppu_Da",
+    "http://example.org/extracted/film_hostel_part_ii": "http://example.org/entity/Hostel_Part_II",
+    "http://example.org/extracted/person_boaz_yakin": "http://example.org/entity/Boaz_Yakin",
+    "http://example.org/extracted/person_eli_roth": "http://example.org/entity/Eli_Roth"
+  },
+  "summary": {
+    "extracted_entities": 9,
+    "ground_truth_entities": 9,
+    "matched": 9,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_hostel_part_ii",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Hostel: Part II",
+          "source": "label"
+        },
+        {
+          "text": "film hostel part ii",
+          "source": "uri"
+        }
+      ],
+      "context": "Hostel: Part II. has producer: Boaz Yakin. has producer: Chris Briggs. has producer: Eli Roth. has producer: Mike Fleiss. has producer: Quentin Tarantino. has producer: Scott Spiegel.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Hostel_Part_II",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Hostel Part II",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Hostel: Part II",
+        "extracted_source": "label",
+        "ground_truth_text": "Hostel Part II",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9884583950042725,
+      "string_score": 0.9844827651977539,
+      "independent_identity_support": true,
+      "context_score": 0.9966710209846497,
+      "graph_score": 0.9983354806900024,
+      "margin": 0.7651428580284119
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_neruppu_da",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Neruppu Da",
+          "source": "label"
+        },
+        {
+          "text": "film neruppu da",
+          "source": "uri"
+        }
+      ],
+      "context": "Neruppu Da. has producer: Vikram Prabhu.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Neruppu_Da",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Neruppu Da",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Neruppu Da",
+        "extracted_source": "label",
+        "ground_truth_text": "Neruppu Da",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7696098983287811
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_boaz_yakin",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Boaz Yakin",
+          "source": "label"
+        },
+        {
+          "text": "person boaz yakin",
+          "source": "uri"
+        }
+      ],
+      "context": "Boaz Yakin. inverse has producer: Hostel: Part II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Boaz_Yakin",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Boaz Yakin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Boaz Yakin",
+        "extracted_source": "label",
+        "ground_truth_text": "Boaz Yakin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9974660277366638,
+      "graph_score": 0.9987330436706543,
+      "margin": 0.616975873708725
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_chris_briggs",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chris Briggs",
+          "source": "label"
+        },
+        {
+          "text": "person chris briggs",
+          "source": "uri"
+        }
+      ],
+      "context": "Chris Briggs. inverse has producer: Hostel: Part II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chris_Briggs",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chris Briggs",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chris Briggs",
+        "extracted_source": "label",
+        "ground_truth_text": "Chris Briggs",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9971955418586731,
+      "graph_score": 0.9985977411270142,
+      "margin": 0.5002812147140503
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_eli_roth",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eli Roth",
+          "source": "label"
+        },
+        {
+          "text": "person eli roth",
+          "source": "uri"
+        }
+      ],
+      "context": "Eli Roth. inverse has producer: Hostel: Part II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eli_Roth",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eli Roth",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eli Roth",
+        "extracted_source": "label",
+        "ground_truth_text": "Eli Roth",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9972031712532043,
+      "graph_score": 0.9986015558242798,
+      "margin": 0.5305933654308319
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_mike_fleiss",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mike Fleiss",
+          "source": "label"
+        },
+        {
+          "text": "person mike fleiss",
+          "source": "uri"
+        }
+      ],
+      "context": "Mike Fleiss. inverse has producer: Hostel: Part II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mike_Fleiss",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mike Fleiss",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mike Fleiss",
+        "extracted_source": "label",
+        "ground_truth_text": "Mike Fleiss",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9973345398902893,
+      "graph_score": 0.9986672401428223,
+      "margin": 0.4330505132675171
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_quentin_tarantino",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Quentin Tarantino",
+          "source": "label"
+        },
+        {
+          "text": "person quentin tarantino",
+          "source": "uri"
+        }
+      ],
+      "context": "Quentin Tarantino. inverse has producer: Hostel: Part II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Quentin_Tarantino",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Quentin Tarantino",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Quentin Tarantino",
+        "extracted_source": "label",
+        "ground_truth_text": "Quentin Tarantino",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9978026151657104,
+      "graph_score": 0.9989013075828552,
+      "margin": 0.5590384006500244
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_scott_spiegel",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Scott Spiegel",
+          "source": "label"
+        },
+        {
+          "text": "person scott spiegel",
+          "source": "uri"
+        }
+      ],
+      "context": "Scott Spiegel. inverse has producer: Hostel: Part II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Scott_Spiegel",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Scott Spiegel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Scott Spiegel",
+        "extracted_source": "label",
+        "ground_truth_text": "Scott Spiegel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9969968199729919,
+      "graph_score": 0.9984984397888184,
+      "margin": 0.44139784574508667
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_vikram_prabhu",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Vikram Prabhu",
+          "source": "label"
+        },
+        {
+          "text": "person vikram prabhu",
+          "source": "uri"
+        }
+      ],
+      "context": "Vikram Prabhu. inverse has producer: Neruppu Da.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Vikram_Prabhu",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Vikram Prabhu",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Vikram Prabhu",
+        "extracted_source": "label",
+        "ground_truth_text": "Vikram Prabhu",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.7233904302120209
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

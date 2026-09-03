@@ -1,0 +1,24 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:carnic_alps a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Carnic Alps" ;
+    onto:hasCountry data:austria,
+        data:italy .
+
+data:torre_del_gran_san_pietro a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Torre del Gran San Pietro" ;
+    onto:hasCountry data:italy .
+
+data:austria a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Austria" .
+
+data:italy a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Italy" .
+

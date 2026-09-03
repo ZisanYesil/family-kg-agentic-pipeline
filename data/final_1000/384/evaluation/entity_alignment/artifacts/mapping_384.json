@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/384/originals/extracted_384.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/384/ground_truth_384.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/anna_of_saxony_1836": "http://example.org/entity/Princess_Anna_of_Saxony_1836_1859",
+    "http://example.org/extracted/munich": "http://example.org/entity/Munich",
+    "http://example.org/extracted/amalie_auguste_of_bavaria": "http://example.org/entity/Amalie_Auguste_of_Bavaria"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/amalie_auguste_of_bavaria",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Amalie Auguste of Bavaria",
+          "source": "label"
+        }
+      ],
+      "context": "Amalie Auguste of Bavaria. has birth place: Munich. inverse has mother: Princess Anna of Saxony (1836–1859).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Amalie_Auguste_of_Bavaria",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Amalie Auguste of Bavaria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Amalie Auguste of Bavaria",
+        "extracted_source": "label",
+        "ground_truth_text": "Amalie Auguste of Bavaria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9956915378570557,
+      "graph_score": 0.9978457689285278,
+      "margin": 0.5499135851860046
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/anna_of_saxony_1836",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Princess Anna of Saxony (1836–1859)",
+          "source": "label"
+        },
+        {
+          "text": "anna of saxony 1836",
+          "source": "uri"
+        }
+      ],
+      "context": "Princess Anna of Saxony (1836–1859). has mother: Amalie Auguste of Bavaria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Princess_Anna_of_Saxony_1836_1859",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Princess Anna of Saxony 1836 1859",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Princess Anna of Saxony (1836–1859)",
+        "extracted_source": "label",
+        "ground_truth_text": "Princess Anna of Saxony 1836 1859",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.978280246257782,
+      "string_score": 0.9735293984413147,
+      "independent_identity_support": true,
+      "context_score": 0.9865177273750305,
+      "graph_score": 0.9932588338851929,
+      "margin": 0.5134093165397644
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/munich",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Munich",
+          "source": "label"
+        }
+      ],
+      "context": "Munich. inverse has birth place: Amalie Auguste of Bavaria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Munich",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Munich",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Munich",
+        "extracted_source": "label",
+        "ground_truth_text": "Munich",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

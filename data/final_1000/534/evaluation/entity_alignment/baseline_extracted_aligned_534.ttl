@@ -1,0 +1,39 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Amir_Hossein_Arman> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Amir Hossein Arman" ;
+    onto:hasOccupation <http://example.org/entity/actor>,
+        <http://example.org/entity/model>,
+        <http://example.org/entity/singer> .
+
+<http://example.org/entity/Inbakavi> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Inbakavi" ;
+    onto:hasOccupation <http://example.org/entity/dramatist>,
+        <http://example.org/entity/poet> ;
+    skos:altLabel "Xavier Henric Leam" .
+
+<http://example.org/entity/actor> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "actor" .
+
+<http://example.org/entity/dramatist> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "dramatist" .
+
+<http://example.org/entity/model> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "model" .
+
+<http://example.org/entity/poet> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "poet" .
+
+<http://example.org/entity/singer> a onto:Occupation,
+        owl:NamedIndividual ;
+    rdfs:label "singer" .
+

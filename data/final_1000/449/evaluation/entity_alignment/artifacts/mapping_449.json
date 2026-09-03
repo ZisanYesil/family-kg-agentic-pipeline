@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/449/originals/extracted_449.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/449/ground_truth_449.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/heart_attack": "http://example.org/entity/heart_attack",
+    "http://example.org/extracted/tommy_cooper": "http://example.org/entity/Tommy_Cooper",
+    "http://example.org/extracted/thomas_henty": "http://example.org/entity/Thomas_Henty"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/heart_attack",
+      "extracted_types": [
+        "CauseOfDeath"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "heart attack",
+          "source": "label"
+        }
+      ],
+      "context": "heart attack. inverse has cause of death: Thomas Frederick Cooper.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/heart_attack",
+      "ground_truth_types": [
+        "CauseOfDeath"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "heart attack",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "heart attack",
+        "extracted_source": "label",
+        "ground_truth_text": "heart attack",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9406901001930237,
+      "graph_score": 0.9703450202941895,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/thomas_henty",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thomas Henty",
+          "source": "label"
+        }
+      ],
+      "context": "Thomas Henty. has father: Thomas Frederick Cooper.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thomas_Henty",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thomas Henty",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thomas Henty",
+        "extracted_source": "label",
+        "ground_truth_text": "Thomas Henty",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9246596097946167,
+      "graph_score": 0.9623298048973083,
+      "margin": 0.7177441418170929
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tommy_cooper",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thomas Frederick Cooper",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tommy Cooper",
+          "source": "label"
+        }
+      ],
+      "context": "Thomas Frederick Cooper. has cause of death: heart attack. inverse has father: Thomas Henty.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tommy_Cooper",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tommy Cooper",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tommy Cooper",
+        "extracted_source": "label",
+        "ground_truth_text": "Tommy Cooper",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9260925650596619,
+      "graph_score": 0.9630463123321533,
+      "margin": 0.6128855347633362
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

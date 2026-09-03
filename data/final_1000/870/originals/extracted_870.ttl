@@ -1,0 +1,30 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:a_gathering_of_eagles a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A Gathering of Eagles" ;
+    onto:hasDirector data:delbert_mann .
+
+data:september_affair a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "September Affair" ;
+    onto:hasDirector data:william_dieterle .
+
+data:delbert_mann a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Delbert Mann" ;
+    onto:hasBirthDate "1920-01-30"^^xsd:date ;
+    onto:hasDeathDate "2007-11-11"^^xsd:date ;
+    skos:altLabel "Delbert Martin Mann Jr." .
+
+data:william_dieterle a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Dieterle" ;
+    onto:hasBirthDate "1893-07-15"^^xsd:date ;
+    onto:hasDeathDate "1972-12-09"^^xsd:date .
+

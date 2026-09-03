@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Louis_Alexandre_Prince_of_Lamballe a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Louis_Jean_Marie_de_Bourbon ;
+    ex:hasParent entity:Louis_Jean_Marie_de_Bourbon .
+
+entity:France a ex:Country,
+        ex:Place .
+
+entity:Louis_Jean_Marie_de_Bourbon a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Louis_Alexandre_Prince_of_Lamballe ;
+    ex:hasCitizenship entity:France ;
+    ex:hasCountry entity:France .
+

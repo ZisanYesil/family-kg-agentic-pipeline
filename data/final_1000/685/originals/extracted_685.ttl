@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:mary_capel_countess_of_essex a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Mary Capel, Countess of Essex" ;
+    onto:hasFather data:william_bentinck_1st_earl_of_portland .
+
+data:bulstrode_park_buckinghamshire a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bulstrode Park, Buckinghamshire" .
+
+data:william_bentinck_1st_earl_of_portland a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "William Bentinck, 1st Earl of Portland" ;
+    onto:hasDeathPlace data:bulstrode_park_buckinghamshire .
+

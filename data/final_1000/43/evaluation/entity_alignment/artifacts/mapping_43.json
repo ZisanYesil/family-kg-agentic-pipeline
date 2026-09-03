@@ -1,0 +1,157 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/43/originals/extracted_43.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/43/ground_truth_43.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/edu_national_film_school_lodz": "http://example.org/entity/National_Film_School_in_Łódź",
+    "http://example.org/extracted/film_polish_russian_war_2009": "http://example.org/entity/Polish_Russian_War",
+    "http://example.org/extracted/person_xawery_zulawski": "http://example.org/entity/Xawery_Żuławski"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/edu_national_film_school_lodz",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "National Film School in Łódź",
+          "source": "label"
+        },
+        {
+          "text": "edu national film school lodz",
+          "source": "uri"
+        }
+      ],
+      "context": "National Film School in Łódź. inverse has educated at: Xawery Żuławski.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/National_Film_School_in_Łódź",
+      "ground_truth_types": [
+        "EducationalInstitution"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "National Film School in Łódź",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "National Film School in Łódź",
+        "extracted_source": "label",
+        "ground_truth_text": "National Film School in Łódź",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_polish_russian_war_2009",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Polish-Russian War",
+          "source": "label"
+        },
+        {
+          "text": "film polish russian war 2009",
+          "source": "uri"
+        }
+      ],
+      "context": "Polish-Russian War. has director: Xawery Żuławski.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Polish_Russian_War",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Polish Russian War",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Polish-Russian War",
+        "extracted_source": "label",
+        "ground_truth_text": "Polish Russian War",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9900190234184265,
+      "string_score": 0.9750000238418579,
+      "independent_identity_support": true,
+      "context_score": 0.9887654185295105,
+      "graph_score": 0.9943827390670776,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_xawery_zulawski",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Xawery Żuławski",
+          "source": "label"
+        },
+        {
+          "text": "person xawery zulawski",
+          "source": "uri"
+        }
+      ],
+      "context": "Xawery Żuławski. has educated at: National Film School in Łódź. inverse has director: Polish-Russian War.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Xawery_Żuławski",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Xawery Żuławski",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Xawery Żuławski",
+        "extracted_source": "label",
+        "ground_truth_text": "Xawery Żuławski",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9967241287231445,
+      "graph_score": 0.9983620643615723,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

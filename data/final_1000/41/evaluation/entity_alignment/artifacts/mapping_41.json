@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/41/originals/extracted_41.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/41/ground_truth_41.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/aelfthryth": "http://example.org/entity/Ælfthryth",
+    "http://example.org/extracted/england": "http://example.org/entity/English"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/aelfthryth",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ælfthryth",
+          "source": "label"
+        },
+        {
+          "text": "aelfthryth",
+          "source": "uri"
+        }
+      ],
+      "context": "Ælfthryth. has nationality: English. inverse has spouse: Æthelwald.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ælfthryth",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ælfthryth",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ælfthryth",
+        "extracted_source": "label",
+        "ground_truth_text": "Ælfthryth",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8876435160636902,
+      "graph_score": 0.4438217580318451,
+      "margin": 0.600580483675003
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/england",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "English",
+          "source": "altLabel"
+        },
+        {
+          "text": "England",
+          "source": "label"
+        }
+      ],
+      "context": "English. inverse has nationality: Ælfthryth.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/English",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "English",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "English",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "English",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9134808778762817,
+      "graph_score": 0.45674043893814087,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/aethelwald",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Æthelwald",
+          "source": "label"
+        },
+        {
+          "text": "aethelwald",
+          "source": "uri"
+        }
+      ],
+      "context": "Æthelwald. has spouse: Ælfthryth.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Æthelwald_died_962_was_ealdorman_of_East_Anglia",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Æthelwald died 962 was ealdorman of East Anglia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Æthelwald",
+        "extracted_source": "label",
+        "ground_truth_text": "Æthelwald died 962 was ealdorman of East Anglia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.64788419008255,
+      "name_embedding_score": 0.5985552668571472,
+      "string_score": 0.4758928716182709,
+      "independent_identity_support": false,
+      "context_score": 0.837066650390625,
+      "graph_score": 0.9185333251953125,
+      "margin": 0.14121359586715698
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

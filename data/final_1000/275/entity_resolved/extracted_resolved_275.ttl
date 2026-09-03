@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:brand_new_immortals a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Brand New Immortals" ;
+    onto:hasFounder data:david_ryan_harris .
+
+data:david_ryan_harris a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "David Ryan Harris" ;
+    onto:hasBirthPlace data:evanston_illinois .
+
+data:evanston_illinois a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Evanston, Illinois" .
+

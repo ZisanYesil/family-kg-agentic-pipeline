@@ -1,0 +1,20 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/American_University> a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+
+<http://example.org/entity/Fatima_Maada_Bio> a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse <http://example.org/entity/Julius_Maada_Bio> .
+
+<http://example.org/entity/Julius_Maada_Bio> a ex:Agent,
+        ex:Person ;
+    ex:hasEducatedAt <http://example.org/entity/American_University>,
+        <http://example.org/extracted/benguema_military_academy> ;
+    ex:hasSpouse <http://example.org/entity/Fatima_Maada_Bio> .
+
+<http://example.org/extracted/benguema_military_academy> a ex:Agent,
+        ex:EducationalInstitution,
+        ex:Organization .
+

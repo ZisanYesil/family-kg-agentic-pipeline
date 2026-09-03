@@ -1,0 +1,108 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/573/evaluation/entity_alignment/baseline_extracted_aligned_573.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/573/evaluation/entity_alignment/baseline_ground_truth_aligned_573.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [
+    {
+      "subject": "Clegg",
+      "predicate": "hasDirector",
+      "object": "Lindsay_Shonteff",
+      "subject_uri": "http://example.org/entity/Clegg",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDirector",
+      "object_term": "http://example.org/entity/Lindsay_Shonteff"
+    }
+  ],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Lindsay_Shonteff",
+      "predicate": "hasDeathPlace",
+      "object": "Canadian",
+      "subject_uri": "http://example.org/entity/Lindsay_Shonteff",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasDeathPlace",
+      "object_term": "http://example.org/entity/Canadian"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Clegg",
+      "predicate": "type",
+      "object": "Film",
+      "subject_uri": "http://example.org/entity/Clegg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Film"
+    },
+    {
+      "subject": "Clegg",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Clegg",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Clegg",
+      "predicate": "label",
+      "object": "\"Clegg\"",
+      "subject_uri": "http://example.org/entity/Clegg",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Clegg\""
+    },
+    {
+      "subject": "Clegg",
+      "predicate": "altLabel",
+      "object": "\"Clegg (film)\"",
+      "subject_uri": "http://example.org/entity/Clegg",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Clegg (film)\""
+    },
+    {
+      "subject": "Lindsay_Shonteff",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Lindsay_Shonteff",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Lindsay_Shonteff",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Lindsay_Shonteff",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Lindsay_Shonteff",
+      "predicate": "label",
+      "object": "\"Lindsay Shonteff\"",
+      "subject_uri": "http://example.org/entity/Lindsay_Shonteff",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Lindsay Shonteff\""
+    },
+    {
+      "subject": "Lindsay_Shonteff",
+      "predicate": "altLabel",
+      "object": "\"Lindsay Craig Shonteff\"",
+      "subject_uri": "http://example.org/entity/Lindsay_Shonteff",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Lindsay Craig Shonteff\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 9,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 1,
+    "false_positives": 8,
+    "false_negatives": 1,
+    "precision": 0.1111111111111111,
+    "recall": 0.5,
+    "f1": 0.1818181818181818
+  },
+  "stage": "pre_inference"
+}

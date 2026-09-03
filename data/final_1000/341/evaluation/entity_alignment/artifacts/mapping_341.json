@@ -1,0 +1,146 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/341/originals/extracted_341.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/341/ground_truth_341.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_bruce_herschensohn": "http://example.org/entity/Bruce_Herschensohn",
+    "http://example.org/extracted/film_jfk_years_of_lightning_day_of_drums": "http://example.org/entity/John_F_Kennedy_Years_of_Lightning_Day_of_Drums"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_jfk_years_of_lightning_day_of_drums",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John F. Kennedy: Years of Lightning, Day of Drums",
+          "source": "label"
+        },
+        {
+          "text": "film jfk years of lightning day of drums",
+          "source": "uri"
+        }
+      ],
+      "context": "John F. Kennedy: Years of Lightning, Day of Drums. has director: Bruce Herschensohn.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_F_Kennedy_Years_of_Lightning_Day_of_Drums",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John F Kennedy Years of Lightning Day of Drums",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John F. Kennedy: Years of Lightning, Day of Drums",
+        "extracted_source": "label",
+        "ground_truth_text": "John F Kennedy Years of Lightning Day of Drums",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9735775589942932,
+      "string_score": 0.9857894778251648,
+      "independent_identity_support": true,
+      "context_score": 0.978463351726532,
+      "graph_score": 0.9892317056655884,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_bruce_herschensohn",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Bruce Herschensohn",
+          "source": "label"
+        },
+        {
+          "text": "person bruce herschensohn",
+          "source": "uri"
+        }
+      ],
+      "context": "Bruce Herschensohn. has employer: Pepperdine University School of Public Policy. inverse has director: John F. Kennedy: Years of Lightning, Day of Drums.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Bruce_Herschensohn",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Bruce Herschensohn",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Bruce Herschensohn",
+        "extracted_source": "label",
+        "ground_truth_text": "Bruce Herschensohn",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8465355038642883,
+      "graph_score": 0.9232677221298218,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/org_pepperdine_university_school_of_public_policy",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pepperdine University School of Public Policy",
+          "source": "label"
+        },
+        {
+          "text": "org pepperdine university school of public policy",
+          "source": "uri"
+        }
+      ],
+      "context": "Pepperdine University School of Public Policy. inverse has employer: Bruce Herschensohn.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Harvard"
+  ]
+}

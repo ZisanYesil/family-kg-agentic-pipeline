@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:hugh_le_despenser_1338 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Hugh Le Despenser, Baron Le Despenser (1338)" ;
+    onto:hasMother data:eleanor_de_clare ;
+    skos:altLabel "Hugh Le Despenser, Baron Le Despenser (1338)" .
+
+data:caerphilly_castle a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Caerphilly Castle" ;
+    skos:altLabel "Caerphilly Castle" .
+
+data:eleanor_de_clare a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Eleanor de Clare" ;
+    onto:hasBirthPlace data:caerphilly_castle ;
+    skos:altLabel "Eleanor de Clare" .
+

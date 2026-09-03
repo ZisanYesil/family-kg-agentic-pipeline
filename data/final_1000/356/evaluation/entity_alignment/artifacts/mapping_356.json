@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/356/originals/extracted_356.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/356/ground_truth_356.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/dance_with_a_stranger_film": "http://example.org/entity/Dance_with_a_Stranger",
+    "http://example.org/extracted/miley_naa_miley_hum_film": "http://example.org/entity/Miley_Naa_Miley_Hum"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/dance_with_a_stranger_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dance with a Stranger",
+          "source": "label"
+        },
+        {
+          "text": "dance with a stranger film",
+          "source": "uri"
+        }
+      ],
+      "context": "Dance with a Stranger. has publication date: 1985.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dance_with_a_Stranger",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dance with a Stranger",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dance with a Stranger",
+        "extracted_source": "label",
+        "ground_truth_text": "Dance with a Stranger",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7896330058574677
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/miley_naa_miley_hum_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Miley Naa Miley Hum",
+          "source": "label"
+        },
+        {
+          "text": "miley naa miley hum film",
+          "source": "uri"
+        }
+      ],
+      "context": "Miley Naa Miley Hum. has publication date: 2011-11-04.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Miley_Naa_Miley_Hum",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Miley Naa Miley Hum",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Miley Naa Miley Hum",
+        "extracted_source": "label",
+        "ground_truth_text": "Miley Naa Miley Hum",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9653088450431824,
+      "graph_score": 0.9653088450431824,
+      "margin": 0.722125768661499
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

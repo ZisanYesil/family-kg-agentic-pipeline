@@ -1,0 +1,149 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/692/originals/extracted_692.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/692/ground_truth_692.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/ngwane_v": "http://example.org/entity/Ngwane_V",
+    "http://example.org/extracted/sobhuza_ii": "http://example.org/entity/Sobhuza_II",
+    "http://example.org/extracted/tibiyo_takangwa": "http://example.org/entity/Tibiyo_TakaNgwane"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ngwane_v",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ngwane V",
+          "source": "label"
+        }
+      ],
+      "context": "Ngwane V. inverse has father: Sobhuza II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ngwane_V",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ngwane V",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ngwane V",
+        "extracted_source": "label",
+        "ground_truth_text": "Ngwane V",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.593786209821701
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sobhuza_ii",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sobhuza II",
+          "source": "label"
+        }
+      ],
+      "context": "Sobhuza II. has father: Ngwane V. inverse has founder: Tibiyo Taka Ngwane.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sobhuza_II",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sobhuza II",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sobhuza II",
+        "extracted_source": "label",
+        "ground_truth_text": "Sobhuza II",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.593786209821701
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/tibiyo_takangwa",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Tibiyo Taka Ngwane",
+          "source": "label"
+        },
+        {
+          "text": "tibiyo takangwa",
+          "source": "uri"
+        }
+      ],
+      "context": "Tibiyo Taka Ngwane. has founder: Sobhuza II.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Tibiyo_TakaNgwane",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Tibiyo Taka Ngwane",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Tibiyo Taka Ngwane",
+        "extracted_source": "label",
+        "ground_truth_text": "Tibiyo Taka Ngwane",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999997615814209,
+      "graph_score": 0.9999998807907104,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

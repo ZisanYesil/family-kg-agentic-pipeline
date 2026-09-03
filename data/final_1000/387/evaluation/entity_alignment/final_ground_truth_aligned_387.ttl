@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Goldman a ex:Agent,
+        ex:Organization .
+
+entity:Louise_Linton a ex:Agent,
+        ex:Person ;
+    ex:hasSpouse entity:Steven_Mnuchin .
+
+entity:Steven_Mnuchin a ex:Agent,
+        ex:Person ;
+    ex:hasEmployer entity:Goldman ;
+    ex:hasSpouse entity:Louise_Linton .
+

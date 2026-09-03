@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+<http://example.org/entity/Stefan_the_First_Crowned> a ex:Agent,
+        ex:Person ;
+    ex:hasCountry <http://example.org/extracted/serbia> ;
+    ex:hasFather <http://example.org/entity/Stefan_Vladislav> ;
+    ex:hasNationality <http://example.org/extracted/serbia> ;
+    ex:hasParent <http://example.org/entity/Stefan_Vladislav> .
+
+<http://example.org/entity/Stefan_Vladislav> a ex:Agent,
+        ex:Person ;
+    ex:hasChild <http://example.org/entity/Stefan_the_First_Crowned> .
+
+<http://example.org/extracted/serbia> a ex:Country,
+        ex:Place .
+

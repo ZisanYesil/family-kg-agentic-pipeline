@@ -1,0 +1,114 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/291/originals/extracted_291.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/291/ground_truth_291.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/smiles_of_a_summer_night_film": "http://example.org/entity/Smiles_of_a_Summer_Night",
+    "http://example.org/extracted/two_idiots_in_hollywood_film": "http://example.org/entity/Two_Idiots_in_Hollywood"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/smiles_of_a_summer_night_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Smiles of a Summer Night",
+          "source": "label"
+        },
+        {
+          "text": "smiles of a summer night film",
+          "source": "uri"
+        }
+      ],
+      "context": "Smiles of a Summer Night. has publication date: 1955.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Smiles_of_a_Summer_Night",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Smiles of a Summer Night",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Smiles of a Summer Night",
+        "extracted_source": "label",
+        "ground_truth_text": "Smiles of a Summer Night",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998211860657,
+      "graph_score": 0.9999998211860657,
+      "margin": 0.7136279940605164
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/two_idiots_in_hollywood_film",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Two Idiots in Hollywood",
+          "source": "label"
+        },
+        {
+          "text": "two idiots in hollywood film",
+          "source": "uri"
+        }
+      ],
+      "context": "Two Idiots in Hollywood. has publication date: 1988.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Two_Idiots_in_Hollywood",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Two Idiots in Hollywood",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Two Idiots in Hollywood",
+        "extracted_source": "label",
+        "ground_truth_text": "Two Idiots in Hollywood",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.7907963395118713
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

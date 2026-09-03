@@ -1,0 +1,194 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/351/originals/extracted_351.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/351/ground_truth_351.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_butterfly_on_a_wheel": "http://example.org/entity/Butterfly_on_a_Wheel",
+    "http://example.org/extracted/person_john_hughes": "http://example.org/entity/John_Hughes",
+    "http://example.org/extracted/film_reach_the_rock": "http://example.org/entity/Reach_the_Rock"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 1,
+    "unmatched_ground_truth": 2
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_butterfly_on_a_wheel",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Butterfly on a Wheel",
+          "source": "label"
+        },
+        {
+          "text": "film butterfly on a wheel",
+          "source": "uri"
+        }
+      ],
+      "context": "Butterfly on a Wheel. has producer: William Morrissey.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Butterfly_on_a_Wheel",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Butterfly on a Wheel",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Butterfly on a Wheel",
+        "extracted_source": "label",
+        "ground_truth_text": "Butterfly on a Wheel",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8247684240341187,
+      "graph_score": 0.8247684240341187,
+      "margin": 0.8444711863994598
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_reach_the_rock",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Reach the Rock",
+          "source": "label"
+        },
+        {
+          "text": "film reach the rock",
+          "source": "uri"
+        }
+      ],
+      "context": "Reach the Rock. has producer: John Wilden Hughes Jr..",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Reach_the_Rock",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Reach the Rock",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Reach the Rock",
+        "extracted_source": "label",
+        "ground_truth_text": "Reach the Rock",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9094116687774658,
+      "graph_score": 0.9547058343887329,
+      "margin": 0.8411529660224915
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_john_hughes",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "John Wilden Hughes Jr.",
+          "source": "altLabel"
+        },
+        {
+          "text": "John Hughes",
+          "source": "label"
+        },
+        {
+          "text": "person john hughes",
+          "source": "uri"
+        }
+      ],
+      "context": "John Wilden Hughes Jr.. has birth date: 1950-02-18. inverse has producer: Reach the Rock.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/John_Hughes",
+      "ground_truth_types": [
+        "Agent"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "John Hughes",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "John Hughes",
+        "extracted_source": "label",
+        "ground_truth_text": "John Hughes",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7308720350265503,
+      "graph_score": 0.8654360175132751,
+      "margin": 0.28234636783599854
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_william_morrissey",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "William Morrissey",
+          "source": "label"
+        },
+        {
+          "text": "person william morrissey",
+          "source": "uri"
+        }
+      ],
+      "context": "William Morrissey. inverse has producer: Butterfly on a Wheel.",
+      "decision": "unmatched",
+      "matched": false,
+      "ground_truth_uri": null,
+      "ground_truth_types": null,
+      "ground_truth_name_variants": null,
+      "best_name_pair": null,
+      "final_score": null,
+      "name_embedding_score": null,
+      "string_score": null,
+      "independent_identity_support": false,
+      "context_score": null,
+      "graph_score": null,
+      "margin": null
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/John_Hughes_filmmaker",
+    "http://example.org/entity/Pierce_Brosnan"
+  ]
+}

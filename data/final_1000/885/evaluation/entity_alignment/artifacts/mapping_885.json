@@ -1,0 +1,161 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/885/originals/extracted_885.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/885/ground_truth_885.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/place_dombas": "http://example.org/entity/Dombås_Norway",
+    "http://example.org/extracted/org_veslefrekk": "http://example.org/entity/Veslefrekk",
+    "http://example.org/extracted/person_storloekken": "http://example.org/entity/Ståle_Storløkken"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/org_veslefrekk",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Veslefrekk",
+          "source": "label"
+        },
+        {
+          "text": "org veslefrekk",
+          "source": "uri"
+        }
+      ],
+      "context": "Veslefrekk. has member: Ståle Storløkken.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Veslefrekk",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Veslefrekk",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Veslefrekk",
+        "extracted_source": "label",
+        "ground_truth_text": "Veslefrekk",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998211860657,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_storloekken",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ståle Storløkken",
+          "source": "label"
+        },
+        {
+          "text": "person storloekken",
+          "source": "uri"
+        }
+      ],
+      "context": "Ståle Storløkken. has birth place: Dombås. inverse has member: Veslefrekk.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ståle_Storløkken",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ståle Storløkken",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ståle Storløkken",
+        "extracted_source": "label",
+        "ground_truth_text": "Ståle Storløkken",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9437122344970703,
+      "graph_score": 0.9718561172485352,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_dombas",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Dombås",
+          "source": "altLabel"
+        },
+        {
+          "text": "Dombås, Norway",
+          "source": "label"
+        },
+        {
+          "text": "place dombas",
+          "source": "uri"
+        }
+      ],
+      "context": "Dombås. inverse has birth place: Ståle Storløkken.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Dombås_Norway",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Dombås Norway",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Dombås, Norway",
+        "extracted_source": "label",
+        "ground_truth_text": "Dombås Norway",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9346227049827576,
+      "string_score": 0.9833333492279053,
+      "independent_identity_support": true,
+      "context_score": 0.91412353515625,
+      "graph_score": 0.957061767578125,
+      "margin": 1.0
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

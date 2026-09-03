@@ -1,0 +1,247 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/505/originals/extracted_505.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/505/ground_truth_505.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_francois_leterrier": "http://example.org/entity/François_Leterrier",
+    "http://example.org/extracted/person_jean_durant": "http://example.org/entity/Jean_Durand",
+    "http://example.org/extracted/country_france": "http://example.org/entity/French",
+    "http://example.org/extracted/film_an_ideal_woman": "http://example.org/entity/An_Ideal_Woman",
+    "http://example.org/extracted/film_goodbye_emmanuelle": "http://example.org/entity/Goodbye_Emmanuelle"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        },
+        {
+          "text": "country france",
+          "source": "uri"
+        }
+      ],
+      "context": "French. inverse has nationality: François Leterrier. inverse has nationality: Jean Durand.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/French",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "French",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "French",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "French",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9329451322555542,
+      "graph_score": 0.4664725661277771,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_an_ideal_woman",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "An Ideal Woman",
+          "source": "label"
+        },
+        {
+          "text": "film an ideal woman",
+          "source": "uri"
+        }
+      ],
+      "context": "An Ideal Woman. has director: Jean Durand.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/An_Ideal_Woman",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "An Ideal Woman",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "An Ideal Woman",
+        "extracted_source": "label",
+        "ground_truth_text": "An Ideal Woman",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.8642605841159821
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_goodbye_emmanuelle",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Goodbye Emmanuelle",
+          "source": "label"
+        },
+        {
+          "text": "film goodbye emmanuelle",
+          "source": "uri"
+        }
+      ],
+      "context": "Goodbye Emmanuelle. has director: François Leterrier.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Goodbye_Emmanuelle",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Goodbye Emmanuelle",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Goodbye Emmanuelle",
+        "extracted_source": "label",
+        "ground_truth_text": "Goodbye Emmanuelle",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.826920747756958
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_francois_leterrier",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "François Leterrier",
+          "source": "label"
+        },
+        {
+          "text": "person francois leterrier",
+          "source": "uri"
+        }
+      ],
+      "context": "François Leterrier. has nationality: French. inverse has director: Goodbye Emmanuelle.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/François_Leterrier",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "François Leterrier",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "François Leterrier",
+        "extracted_source": "label",
+        "ground_truth_text": "François Leterrier",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9704404473304749,
+      "graph_score": 0.6518868803977966,
+      "margin": 0.6126137375831604
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_jean_durant",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jean Durand",
+          "source": "label"
+        },
+        {
+          "text": "person jean durant",
+          "source": "uri"
+        }
+      ],
+      "context": "Jean Durand. has nationality: French. inverse has director: An Ideal Woman.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jean_Durand",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jean Durand",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jean Durand",
+        "extracted_source": "label",
+        "ground_truth_text": "Jean Durand",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9683144688606262,
+      "graph_score": 0.6508238911628723,
+      "margin": 0.6269030570983887
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

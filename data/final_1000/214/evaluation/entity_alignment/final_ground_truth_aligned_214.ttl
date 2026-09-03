@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Prince_Nikolaus_Wilhelm_of_Nassau a ex:Agent,
+        ex:Person ;
+    ex:hasMother entity:Princess_Pauline_of_Württemberg ;
+    ex:hasParent entity:Princess_Pauline_of_Württemberg .
+
+entity:Stuttgart a ex:Place .
+
+entity:Princess_Pauline_of_Württemberg a ex:Agent,
+        ex:Person ;
+    ex:hasBirthPlace entity:Stuttgart ;
+    ex:hasChild entity:Prince_Nikolaus_Wilhelm_of_Nassau .
+

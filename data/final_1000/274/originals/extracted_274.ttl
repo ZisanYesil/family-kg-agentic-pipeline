@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:film_conquest a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Conquest of the Planet of the Apes" ;
+    onto:hasProducer data:person_arthur_jacobs .
+
+data:film_im_not_harry_jenson a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "I'm Not Harry Jenson" ;
+    onto:hasProducer data:person_tom_hern .
+
+data:person_arthur_jacobs a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Arthur P. Jacobs" ;
+    onto:hasBirthDate "1922-03-07"^^xsd:date .
+
+data:person_tom_hern a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tom Hern" ;
+    onto:hasBirthDate "1984-12-10"^^xsd:date .
+

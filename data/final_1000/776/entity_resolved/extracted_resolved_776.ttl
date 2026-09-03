@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:nancy_drew_trouble_shooter_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Nancy Drew … Trouble Shooter" ;
+    onto:hasCountryOfOrigin data:united_states_country .
+
+data:wilderness_miniseries a onto:Artifact,
+        owl:NamedIndividual ;
+    rdfs:label "Wilderness (miniseries)" ;
+    onto:hasCountryOfOrigin data:united_kingdom_country .
+
+data:united_kingdom_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United Kingdom" ;
+    skos:altLabel "British" .
+
+data:united_states_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

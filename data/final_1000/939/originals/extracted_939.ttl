@@ -1,0 +1,28 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:a_lego_brickumentary_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "A Lego Brickumentary" ;
+    onto:hasCountryOfOrigin data:denmark_country,
+        data:united_states_country ;
+    skos:altLabel "Beyond the Brick: A Lego Brickumentary" .
+
+data:the_night_sitter_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "The Night Sitter" ;
+    onto:hasCountryOfOrigin data:united_states_country .
+
+data:denmark_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Denmark" ;
+    skos:altLabel "Danish" .
+
+data:united_states_country a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

@@ -1,0 +1,22 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:tiberius_705 a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Tiberius" ;
+    onto:hasMother data:theodora_of_khazaria ;
+    skos:altLabel "Tiberios" .
+
+data:busir_khagan a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Busir" ;
+    skos:altLabel "Busir, khagan of the Khazars" .
+
+data:theodora_of_khazaria a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Theodora of Khazaria" ;
+    onto:hasBrother data:busir_khagan .
+

@@ -1,0 +1,109 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/785/originals/extracted_785.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/785/ground_truth_785.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/lester_del_rey": "http://example.org/entity/Lester_del_Rey"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 2,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/lester_del_rey",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Lester del Rey",
+          "source": "label"
+        }
+      ],
+      "context": "Lester del Rey. has death date: 1993-05-10. inverse has editor: Science Fiction Adventures (1952 magazine).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Lester_del_Rey",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Lester del Rey",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Lester del Rey",
+        "extracted_source": "label",
+        "ground_truth_text": "Lester del Rey",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9798372387886047,
+      "graph_score": 0.9798372387886047,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/science_fiction_adventures_1952_magazine",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Science Fiction Adventures (1952 magazine)",
+          "source": "label"
+        },
+        {
+          "text": "science fiction adventures 1952 magazine",
+          "source": "uri"
+        }
+      ],
+      "context": "Science Fiction Adventures (1952 magazine). has editor: Lester del Rey.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Science_Fiction_Adventures",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Science Fiction Adventures",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Science Fiction Adventures (1952 magazine)",
+        "extracted_source": "label",
+        "ground_truth_text": "Science Fiction Adventures",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8942636251449585,
+      "name_embedding_score": 0.9076700806617737,
+      "string_score": 0.7941176295280457,
+      "independent_identity_support": true,
+      "context_score": 0.935193657875061,
+      "graph_score": 0.9675968289375305,
+      "margin": 0.8942636251449585
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/654/originals/extracted_654.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/654/ground_truth_654.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/canada": "http://example.org/entity/Canadian",
+    "http://example.org/extracted/thomson_reuters": "http://example.org/entity/Thomson_Reuters"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/canada",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Canadian",
+          "source": "altLabel"
+        },
+        {
+          "text": "Canada",
+          "source": "label"
+        }
+      ],
+      "context": "Canadian. inverse has country: Thomson Reuters Corporation.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Canadian",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Canadian",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Canadian",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Canadian",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9430520534515381,
+      "graph_score": 0.971526026725769,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/thomson_reuters",
+      "extracted_types": [
+        "Organization"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Thomson Reuters Corporation",
+          "source": "altLabel"
+        },
+        {
+          "text": "Thomson Reuters",
+          "source": "label"
+        }
+      ],
+      "context": "Thomson Reuters Corporation. has country: Canadian. inverse has publisher: Safeguard (magazine).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Thomson_Reuters",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Thomson Reuters",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Thomson Reuters",
+        "extracted_source": "label",
+        "ground_truth_text": "Thomson Reuters",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9631962180137634,
+      "graph_score": 0.9815981388092041,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/safeguard_magazine",
+      "extracted_types": [
+        "CreativeWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Safeguard (magazine)",
+          "source": "label"
+        },
+        {
+          "text": "safeguard magazine",
+          "source": "uri"
+        }
+      ],
+      "context": "Safeguard (magazine). has publisher: Thomson Reuters Corporation.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Safeguard",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Safeguard",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Safeguard (magazine)",
+        "extracted_source": "label",
+        "ground_truth_text": "Safeguard",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8503919839859009,
+      "name_embedding_score": 0.8621096611022949,
+      "string_score": 0.7043103575706482,
+      "independent_identity_support": true,
+      "context_score": 0.9460766315460205,
+      "graph_score": 0.9730383157730103,
+      "margin": 0.8503919839859009
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,153 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/393/originals/extracted_393.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/393/ground_truth_393.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/noemie_fox": "http://example.org/entity/Noemie_Fox",
+    "http://example.org/extracted/myriam_fox_jerusalmi": "http://example.org/entity/Myriam_Fox_Jerusalmi",
+    "http://example.org/extracted/france": "http://example.org/entity/French"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/france",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "French",
+          "source": "altLabel"
+        },
+        {
+          "text": "France",
+          "source": "label"
+        }
+      ],
+      "context": "French. inverse has nationality: Myriam Fox-Jerusalmi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/French",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "French",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "French",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "French",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9283393621444702,
+      "graph_score": 0.4641696810722351,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/myriam_fox_jerusalmi",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Myriam Fox-Jerusalmi",
+          "source": "label"
+        },
+        {
+          "text": "myriam fox jerusalmi",
+          "source": "uri"
+        }
+      ],
+      "context": "Myriam Fox-Jerusalmi. has nationality: French. inverse has mother: Noemie Fox.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Myriam_Fox_Jerusalmi",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Myriam Fox Jerusalmi",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Myriam Fox-Jerusalmi",
+        "extracted_source": "label",
+        "ground_truth_text": "Myriam Fox Jerusalmi",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9582887291908264,
+      "string_score": 0.9775000214576721,
+      "independent_identity_support": true,
+      "context_score": 0.9517897963523865,
+      "graph_score": 0.6425615549087524,
+      "margin": 0.4258185029029846
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/noemie_fox",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Noemie Fox",
+          "source": "label"
+        }
+      ],
+      "context": "Noemie Fox. has mother: Myriam Fox-Jerusalmi.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Noemie_Fox",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Noemie Fox",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Noemie Fox",
+        "extracted_source": "label",
+        "ground_truth_text": "Noemie Fox",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9910608530044556,
+      "graph_score": 0.9955304265022278,
+      "margin": 0.4984058141708374
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

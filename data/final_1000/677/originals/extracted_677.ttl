@@ -1,0 +1,23 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:theobald_ii_count_of_champagne a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Theobald II, Count of Champagne" ;
+    onto:hasSpouse data:matilda_of_carinthia ;
+    skos:altLabel "Theobald the Great",
+        "Thibaut de Blois" .
+
+data:matilda_of_carinthia a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Matilda of Carinthia" ;
+    onto:hasMother data:uta_of_passau ;
+    skos:altLabel "Mathilde of Sponheim" .
+
+data:uta_of_passau a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Uta of Passau" .
+

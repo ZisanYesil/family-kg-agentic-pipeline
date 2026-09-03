@@ -1,0 +1,196 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/382/originals/extracted_382.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/382/ground_truth_382.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/place_chak_26_11_l": "http://example.org/entity/Chak_26_11_L_Chichawatni",
+    "http://example.org/extracted/place_chah_e_ali_kapari": "http://example.org/entity/Chah_e_Ali_Kapari",
+    "http://example.org/extracted/country_pakistan": "http://example.org/entity/Pakistan",
+    "http://example.org/extracted/country_iran": "http://example.org/entity/Iran"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 4,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/country_iran",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Iran",
+          "source": "label"
+        },
+        {
+          "text": "country iran",
+          "source": "uri"
+        }
+      ],
+      "context": "Iran. inverse has country: Chah-E Ali Kapari.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Iran",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Iran",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Iran",
+        "extracted_source": "label",
+        "ground_truth_text": "Iran",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9949727654457092,
+      "graph_score": 0.9974863529205322,
+      "margin": 0.63182732462883
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/country_pakistan",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Pakistan",
+          "source": "label"
+        },
+        {
+          "text": "country pakistan",
+          "source": "uri"
+        }
+      ],
+      "context": "Pakistan. inverse has country: Chak 26/11-L, Chichawatni.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Pakistan",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Pakistan",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Pakistan",
+        "extracted_source": "label",
+        "ground_truth_text": "Pakistan",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9874162077903748,
+      "graph_score": 0.9937081336975098,
+      "margin": 0.6323071718215942
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_chah_e_ali_kapari",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chah-E Ali Kapari",
+          "source": "label"
+        },
+        {
+          "text": "place chah e ali kapari",
+          "source": "uri"
+        }
+      ],
+      "context": "Chah-E Ali Kapari. has country: Iran.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chah_e_Ali_Kapari",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chah e Ali Kapari",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chah-E Ali Kapari",
+        "extracted_source": "label",
+        "ground_truth_text": "Chah e Ali Kapari",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9480074644088745,
+      "string_score": 0.9735293984413147,
+      "independent_identity_support": true,
+      "context_score": 0.9927424192428589,
+      "graph_score": 0.9963712096214294,
+      "margin": 0.5907799005508423
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_chak_26_11_l",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Chak 26/11-L, Chichawatni",
+          "source": "label"
+        },
+        {
+          "text": "place chak 26 11 l",
+          "source": "uri"
+        }
+      ],
+      "context": "Chak 26/11-L, Chichawatni. has country: Pakistan.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Chak_26_11_L_Chichawatni",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Chak 26 11 L Chichawatni",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Chak 26/11-L, Chichawatni",
+        "extracted_source": "label",
+        "ground_truth_text": "Chak 26 11 L Chichawatni",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9623314142227173,
+      "string_score": 0.954081654548645,
+      "independent_identity_support": true,
+      "context_score": 0.9793469309806824,
+      "graph_score": 0.9896734952926636,
+      "margin": 0.6158196330070496
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

@@ -1,0 +1,107 @@
+{
+  "inputs": {
+    "extracted": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/330/evaluation/entity_alignment/baseline_extracted_aligned_330.ttl",
+    "ground_truth": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/330/evaluation/entity_alignment/baseline_ground_truth_aligned_330.ttl"
+  },
+  "scoring_profile": "projected",
+  "semantic_projection": true,
+  "comparison": "exact RDF term equality after entity canonicalization, string/date representation normalization, and family/country semantic projection",
+  "matched_triples": [],
+  "ground_truth_only_triples": [
+    {
+      "subject": "Drogo_of_Champagne",
+      "predicate": "hasParent",
+      "object": "Plectrudis",
+      "subject_uri": "http://example.org/entity/Drogo_of_Champagne",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Plectrudis"
+    },
+    {
+      "subject": "Plectrude",
+      "predicate": "hasSpouse",
+      "object": "Pepin_of_Herstal",
+      "subject_uri": "http://example.org/entity/Plectrude",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasSpouse",
+      "object_term": "http://example.org/entity/Pepin_of_Herstal"
+    }
+  ],
+  "extracted_only_triples": [
+    {
+      "subject": "Drogo_of_Champagne",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Drogo_of_Champagne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Drogo_of_Champagne",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Drogo_of_Champagne",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Drogo_of_Champagne",
+      "predicate": "label",
+      "object": "\"Drogo of Champagne\"",
+      "subject_uri": "http://example.org/entity/Drogo_of_Champagne",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Drogo of Champagne\""
+    },
+    {
+      "subject": "Pepin_of_Herstal",
+      "predicate": "hasParent",
+      "object": "Drogo_of_Champagne",
+      "subject_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "predicate_uri": "http://example.org/2wiki-ontology#hasParent",
+      "object_term": "http://example.org/entity/Drogo_of_Champagne"
+    },
+    {
+      "subject": "Pepin_of_Herstal",
+      "predicate": "type",
+      "object": "Person",
+      "subject_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://example.org/2wiki-ontology#Person"
+    },
+    {
+      "subject": "Pepin_of_Herstal",
+      "predicate": "type",
+      "object": "NamedIndividual",
+      "subject_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "predicate_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "object_term": "http://www.w3.org/2002/07/owl#NamedIndividual"
+    },
+    {
+      "subject": "Pepin_of_Herstal",
+      "predicate": "label",
+      "object": "\"Pippin of Heristal\"",
+      "subject_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "predicate_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "object_term": "\"Pippin of Heristal\""
+    },
+    {
+      "subject": "Pepin_of_Herstal",
+      "predicate": "altLabel",
+      "object": "\"Pepin of Heristal\"",
+      "subject_uri": "http://example.org/entity/Pepin_of_Herstal",
+      "predicate_uri": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "object_term": "\"Pepin of Heristal\""
+    }
+  ],
+  "metrics": {
+    "accepted_entity_pairs": 2,
+    "extracted_triples_in_scope": 8,
+    "ground_truth_triples_in_scope": 2,
+    "union_triples_in_scope": 10,
+    "true_positives": 0,
+    "false_positives": 8,
+    "false_negatives": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "stage": "pre_inference"
+}

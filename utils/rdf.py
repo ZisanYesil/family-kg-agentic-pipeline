@@ -6,7 +6,7 @@ from rdflib import Graph
 
 EMPTY_TURTLE_PLACEHOLDER = "<empty turtle graph>"
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-FAMILY_EXTENDED_ONTOLOGY_PATH = PROJECT_ROOT / "ontology" / "family_extended.ttl"
+FAMILY_EXTENDED_ONTOLOGY_PATH = PROJECT_ROOT / "ontology" / "ontology.ttl"
 
 
 class TurtleParseError(ValueError):
@@ -68,12 +68,7 @@ def count_turtle_triples(graph_turtle: str) -> int:
 
 
 def load_family_ontology_graph() -> Graph:
-    """Load the merged family ontology extension into an rdflib graph.
-
-    family_extended.ttl is a merged artifact: it includes the original ontology
-    graph, minus three AnnotationProperty type triples that would conflict with
-    the DatatypeProperty redeclarations needed for OWL 2 DL tooling.
-    """
+    """Load the current default ontology graph."""
     graph = Graph()
     graph.parse(FAMILY_EXTENDED_ONTOLOGY_PATH, format="turtle")
     return graph

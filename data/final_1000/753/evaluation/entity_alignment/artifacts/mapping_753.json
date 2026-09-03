@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/753/originals/extracted_753.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/753/ground_truth_753.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_man_of_god": "http://example.org/entity/Man_of_God",
+    "http://example.org/extracted/person_jefery_levy": "http://example.org/entity/Jefery_Levy"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_man_of_god",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Man Of God",
+          "source": "label"
+        },
+        {
+          "text": "film man of god",
+          "source": "uri"
+        }
+      ],
+      "context": "Man Of God. has director: Jefery Levy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Man_of_God",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Man of God",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Man Of God",
+        "extracted_source": "label",
+        "ground_truth_text": "Man of God",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9996671080589294,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9997238516807556,
+      "graph_score": 0.9998619556427002,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_jefery_levy",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Jefery Levy",
+          "source": "label"
+        },
+        {
+          "text": "person jefery levy",
+          "source": "uri"
+        }
+      ],
+      "context": "Jefery Levy. has employer: University of Southern California film school. inverse has director: Man Of God.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Jefery_Levy",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Jefery Levy",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Jefery Levy",
+        "extracted_source": "label",
+        "ground_truth_text": "Jefery Levy",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9534019231796265,
+      "graph_score": 0.9767009615898132,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/org_us_csu_film_school",
+      "extracted_types": [
+        "EducationalInstitution"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "University of Southern California film school",
+          "source": "label"
+        },
+        {
+          "text": "org us csu film school",
+          "source": "uri"
+        }
+      ],
+      "context": "University of Southern California film school. inverse has employer: Jefery Levy.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/University_of_Southern_California",
+      "ground_truth_types": [
+        "Organization"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "University of Southern California",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "University of Southern California film school",
+        "extracted_source": "label",
+        "ground_truth_text": "University of Southern California",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8051608204841614,
+      "name_embedding_score": 0.7163398265838623,
+      "string_score": 0.8474358916282654,
+      "independent_identity_support": true,
+      "context_score": 0.8810552358627319,
+      "graph_score": 0.940527617931366,
+      "margin": 0.8051608204841614
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

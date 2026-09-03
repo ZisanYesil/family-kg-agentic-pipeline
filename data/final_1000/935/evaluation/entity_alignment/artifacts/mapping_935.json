@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/935/originals/extracted_935.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/935/ground_truth_935.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/we_write_the_story": "http://example.org/entity/We_Write_the_Story",
+    "http://example.org/extracted/avicii": "http://example.org/entity/Avicii"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/avicii",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Avicii",
+          "source": "altLabel"
+        },
+        {
+          "text": "Tim Bergling",
+          "source": "label"
+        }
+      ],
+      "context": "Avicii. has death place: Muscat, Oman. inverse has composer: We Write the Story.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Avicii",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Avicii",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Avicii",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Avicii",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9374724626541138,
+      "graph_score": 0.9687362313270569,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/we_write_the_story",
+      "extracted_types": [
+        "MusicalWork"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "We Write the Story",
+          "source": "label"
+        }
+      ],
+      "context": "We Write the Story. has composer: Avicii.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/We_Write_the_Story",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "We Write the Story",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "We Write the Story",
+        "extracted_source": "label",
+        "ground_truth_text": "We Write the Story",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/muscat_oman",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Muscat, Oman",
+          "source": "label"
+        },
+        {
+          "text": "muscat oman",
+          "source": "uri"
+        }
+      ],
+      "context": "Muscat, Oman. inverse has death place: Avicii.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Muscat",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Muscat",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "muscat oman",
+        "extracted_source": "uri",
+        "ground_truth_text": "Muscat",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7674756050109863,
+      "name_embedding_score": 0.7027820944786072,
+      "string_score": 0.7426470518112183,
+      "independent_identity_support": true,
+      "context_score": 0.8433824181556702,
+      "graph_score": 0.9216911792755127,
+      "margin": 0.7674756050109863
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

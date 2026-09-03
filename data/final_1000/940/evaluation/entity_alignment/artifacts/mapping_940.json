@@ -1,0 +1,141 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/940/originals/extracted_940.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/940/ground_truth_940.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/novochesnokovo": "http://example.org/entity/Novochesnokovo",
+    "http://example.org/extracted/katanda": "http://example.org/entity/Katanda",
+    "http://example.org/extracted/russia": "http://example.org/entity/Russia"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/katanda",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Katanda",
+          "source": "label"
+        }
+      ],
+      "context": "Katanda. has country: Russia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Katanda",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Katanda",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Katanda",
+        "extracted_source": "label",
+        "ground_truth_text": "Katanda",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.5661824345588684
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/novochesnokovo",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Novochesnokovo",
+          "source": "label"
+        }
+      ],
+      "context": "Novochesnokovo. has country: Russia.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Novochesnokovo",
+      "ground_truth_types": [],
+      "ground_truth_name_variants": [
+        {
+          "text": "Novochesnokovo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Novochesnokovo",
+        "extracted_source": "label",
+        "ground_truth_text": "Novochesnokovo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999998807907104,
+      "graph_score": 0.9999999403953552,
+      "margin": 0.5661824345588684
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/russia",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Russia",
+          "source": "label"
+        }
+      ],
+      "context": "Russia. inverse has country: Katanda. inverse has country: Novochesnokovo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Russia",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Russia",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Russia",
+        "extracted_source": "label",
+        "ground_truth_text": "Russia",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5980392694473267
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

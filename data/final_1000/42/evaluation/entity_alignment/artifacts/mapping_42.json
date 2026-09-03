@@ -1,0 +1,108 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/42/originals/extracted_42.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/42/ground_truth_42.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/joanna_of_durazzo": "http://example.org/entity/Joanna_of_Durazzo",
+    "http://example.org/extracted/maria_of_calabria": "http://example.org/entity/Maria_of_Calabria"
+  },
+  "summary": {
+    "extracted_entities": 2,
+    "ground_truth_entities": 3,
+    "matched": 2,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/joanna_of_durazzo",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Joanna of Durazzo",
+          "source": "label"
+        }
+      ],
+      "context": "Joanna of Durazzo. has mother: Maria of Calabria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Joanna_of_Durazzo",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Joanna of Durazzo",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Joanna of Durazzo",
+        "extracted_source": "label",
+        "ground_truth_text": "Joanna of Durazzo",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5409220457077026
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/maria_of_calabria",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Maria of Calabria",
+          "source": "label"
+        }
+      ],
+      "context": "Maria of Calabria. inverse has mother: Joanna of Durazzo.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Maria_of_Calabria",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Maria of Calabria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Maria of Calabria",
+        "extracted_source": "label",
+        "ground_truth_text": "Maria of Calabria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8483284115791321,
+      "graph_score": 0.9241641759872437,
+      "margin": 0.5300549864768982
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Neapolitan"
+  ]
+}

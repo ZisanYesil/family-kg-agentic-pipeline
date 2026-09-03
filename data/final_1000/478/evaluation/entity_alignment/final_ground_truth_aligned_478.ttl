@@ -1,0 +1,17 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Ordoño_Bermúdez a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Bermudo_II_of_León ;
+    ex:hasParent entity:Bermudo_II_of_León .
+
+entity:Bermudo_II_of_León a ex:Agent,
+        ex:Person ;
+    ex:hasChild entity:Ordoño_Bermúdez ;
+    ex:hasCitizenship entity:Kingdom_of_León ;
+    ex:hasCountry entity:Kingdom_of_León .
+
+entity:Kingdom_of_León a ex:Country,
+        ex:Place .
+

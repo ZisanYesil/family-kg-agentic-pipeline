@@ -1,0 +1,235 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/195/originals/extracted_195.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/195/ground_truth_195.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/to_kill_a_dragon": "http://example.org/entity/To_Kill_a_Dragon",
+    "http://example.org/extracted/germany": "http://example.org/entity/German",
+    "http://example.org/extracted/soviet_union": "http://example.org/entity/Soviet",
+    "http://example.org/extracted/mystery_plane": "http://example.org/entity/Mystery_Plane",
+    "http://example.org/extracted/united_states": "http://example.org/entity/American"
+  },
+  "summary": {
+    "extracted_entities": 5,
+    "ground_truth_entities": 5,
+    "matched": 5,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/germany",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "German",
+          "source": "altLabel"
+        },
+        {
+          "text": "Germany",
+          "source": "label"
+        }
+      ],
+      "context": "German. inverse has country: To Kill a Dragon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/German",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "German",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "German",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "German",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9630663394927979,
+      "graph_score": 0.4815331697463989,
+      "margin": 0.6372927725315094
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/mystery_plane",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Mystery Plane",
+          "source": "label"
+        }
+      ],
+      "context": "Mystery Plane. has country: American.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Mystery_Plane",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Mystery Plane",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Mystery Plane",
+        "extracted_source": "label",
+        "ground_truth_text": "Mystery Plane",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999998807907104,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9561640620231628,
+      "graph_score": 0.4780820310115814,
+      "margin": 0.8295988142490387
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/soviet_union",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Soviet",
+          "source": "altLabel"
+        },
+        {
+          "text": "Soviet Union",
+          "source": "label"
+        }
+      ],
+      "context": "Soviet. inverse has country: To Kill a Dragon.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Soviet",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Soviet",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Soviet",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Soviet",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9659567475318909,
+      "graph_score": 0.48297837376594543,
+      "margin": 0.6421750485897064
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/to_kill_a_dragon",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "To Kill a Dragon",
+          "source": "label"
+        }
+      ],
+      "context": "To Kill a Dragon. has country: German. has country: Soviet.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/To_Kill_a_Dragon",
+      "ground_truth_types": [
+        "Artifact"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "To Kill a Dragon",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "To Kill a Dragon",
+        "extracted_source": "label",
+        "ground_truth_text": "To Kill a Dragon",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9481076002120972,
+      "graph_score": 0.4740538001060486,
+      "margin": 0.8259293586015701
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/united_states",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "American",
+          "source": "altLabel"
+        },
+        {
+          "text": "United States",
+          "source": "label"
+        }
+      ],
+      "context": "American. inverse has country: Mystery Plane.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/American",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "American",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "American",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "American",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9447168707847595,
+      "graph_score": 0.47235843539237976,
+      "margin": 0.6795431673526764
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

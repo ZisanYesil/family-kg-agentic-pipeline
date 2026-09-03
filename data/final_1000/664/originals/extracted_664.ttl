@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:herbert_henry_dow a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Herbert Henry Dow" ;
+    onto:hasEducatedAt data:case_school_of_applied_science ;
+    onto:hasFather data:alden_b_dow .
+
+data:alden_b_dow a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Alden B. Dow" .
+
+data:case_school_of_applied_science a onto:EducationalInstitution,
+        owl:NamedIndividual ;
+    rdfs:label "Case School of Applied Science" .
+

@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:film_dalida_2017 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Dalida (2017 film)" ;
+    onto:hasDirector data:person_lisa_azuelos .
+
+data:person_lisa_azuelos a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lisa Azuelos" ;
+    onto:hasMother data:person_marie_laforet .
+
+data:person_marie_laforet a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Marie Laforêt" .
+

@@ -1,0 +1,156 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/801/originals/extracted_801.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/801/ground_truth_801.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/person_eric_england": "http://example.org/entity/Eric_England",
+    "http://example.org/extracted/film_get_the_girl": "http://example.org/entity/Get_the_Girl"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_get_the_girl",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Get The Girl",
+          "source": "label"
+        },
+        {
+          "text": "film get the girl",
+          "source": "uri"
+        }
+      ],
+      "context": "Get The Girl. has director: Eric England.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Get_the_Girl",
+      "ground_truth_types": [
+        "Film"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Get the Girl",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Get The Girl",
+        "extracted_source": "label",
+        "ground_truth_text": "Get the Girl",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9995983839035034,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9997361898422241,
+      "graph_score": 0.9998680949211121,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_eric_england",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Eric England",
+          "source": "label"
+        },
+        {
+          "text": "person eric england",
+          "source": "uri"
+        }
+      ],
+      "context": "Eric England. has birth place: Russellville, Arkansas. inverse has director: Get The Girl.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Eric_England",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Eric England",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Eric England",
+        "extracted_source": "label",
+        "ground_truth_text": "Eric England",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9697895646095276,
+      "graph_score": 0.9848947525024414,
+      "margin": 1.0
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/place_russellville_arkansas",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Russellville, Arkansas",
+          "source": "label"
+        },
+        {
+          "text": "place russellville arkansas",
+          "source": "uri"
+        }
+      ],
+      "context": "Russellville, Arkansas. inverse has birth place: Eric England.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Russellville",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Russellville",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Russellville, Arkansas",
+        "extracted_source": "label",
+        "ground_truth_text": "Russellville",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.8317340612411499,
+      "name_embedding_score": 0.8069430589675903,
+      "string_score": 0.7426470518112183,
+      "independent_identity_support": true,
+      "context_score": 0.9408064484596252,
+      "graph_score": 0.9704031944274902,
+      "margin": 0.8317340612411499
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

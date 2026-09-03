@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:jee_mukt_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Jeevan Mukt" ;
+    onto:hasDirector data:sudhendu_roy .
+
+data:filmfare_best_art_direction_award a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Filmfare Award for Best Art Direction" .
+
+data:sudhendu_roy a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Sudhendu Roy" ;
+    onto:hasAwardReceived data:filmfare_best_art_direction_award .
+

@@ -1,0 +1,41 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/entity/American_Casino> a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "American Casino" ;
+    onto:hasDirector <http://example.org/entity/Leslie_Cockburn> ;
+    onto:hasPublicationDate "2009"^^xsd:gYear .
+
+<http://example.org/entity/George_Polk_Award> a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "George Polk Award" .
+
+<http://example.org/entity/Leslie_Cockburn> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Leslie Cockburn" ;
+    onto:hasAwardReceived <http://example.org/entity/George_Polk_Award>,
+        data:award_dupont,
+        data:award_emmy,
+        data:award_hillman_prize,
+        data:award_rf_kennedy_journalism .
+
+data:award_dupont a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Alfred I. duPont– Columbia University Award" .
+
+data:award_emmy a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Emmy Award" .
+
+data:award_hillman_prize a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "The Hillman Prize" .
+
+data:award_rf_kennedy_journalism a onto:Award,
+        owl:NamedIndividual ;
+    rdfs:label "Robert F. Kennedy Journalism Award" .
+

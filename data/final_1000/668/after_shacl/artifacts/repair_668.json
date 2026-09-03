@@ -1,0 +1,134 @@
+{
+  "enabled": true,
+  "max_iterations": 3,
+  "initial_validation": {
+    "validation_contract_version": 2,
+    "conforms": false,
+    "fingerprint": "8267a99c78e479c8825717a6347f3f1f20d6def24f99ca8c9dab229b2e6525b0",
+    "violations": [
+      {
+        "kind": "unmapped_relation",
+        "source": "ontology_mapping",
+        "focus_node": "http://example.org/extracted/prometheus_art_song",
+        "path": null,
+        "value": "http://example.org/extracted/franz_schubert",
+        "expected": null,
+        "message": "Relation phrase 'composed by' from http://example.org/extracted/prometheus_art_song to http://example.org/extracted/franz_schubert was not mapped: subject type 'CreativeWork' does not satisfy hasComposer's expected domain 'MusicalWork'. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+        "severity": "violation",
+        "constraint_component": "OntologyMappingConstraint"
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "validation_before": {
+        "validation_contract_version": 2,
+        "conforms": false,
+        "fingerprint": "8267a99c78e479c8825717a6347f3f1f20d6def24f99ca8c9dab229b2e6525b0",
+        "violations": [
+          {
+            "kind": "unmapped_relation",
+            "source": "ontology_mapping",
+            "focus_node": "http://example.org/extracted/prometheus_art_song",
+            "path": null,
+            "value": "http://example.org/extracted/franz_schubert",
+            "expected": null,
+            "message": "Relation phrase 'composed by' from http://example.org/extracted/prometheus_art_song to http://example.org/extracted/franz_schubert was not mapped: subject type 'CreativeWork' does not satisfy hasComposer's expected domain 'MusicalWork'. Select a predicate only when its meaning is supported by the relation phrase and source text; do not substitute a merely type-compatible predicate.",
+            "severity": "violation",
+            "constraint_component": "OntologyMappingConstraint"
+          }
+        ]
+      },
+      "triples_before": 10,
+      "feedback_reasoning": "The source text states that the art song “Prometheus” was composed by Franz Schubert, i.e. Franz Schubert is the composer of the CreativeWork. The ontology provides the predicate onto:hasComposer (domain CreativeWork, range Person) that matches the relation phrase “composed by”. The subject node is currently typed only as onto:CreativeWork, which the validator rejected because the expected domain for a composer relation is MusicalWork. The text supports treating the song as a MusicalWork, a declared subclass, so we replace the rdf:type with onto:MusicalWork and then add the hasComposer triple.",
+      "repairs": [
+        {
+          "violation_fingerprint": "a7cb343187667639875b1909b12413c728f505ca8cb3d830b87075cafcca2033",
+          "reasoning": "Change the type of the song to MusicalWork (a more specific class that fits the composer relation) and add the appropriate hasComposer relationship.",
+          "operations": [
+            {
+              "operation": "remove_triple",
+              "subject": "http://example.org/extracted/prometheus_art_song",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/2wiki-ontology#CreativeWork"
+              }
+            },
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/prometheus_art_song",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/2wiki-ontology#MusicalWork"
+              }
+            },
+            {
+              "operation": "add_triple",
+              "subject": "http://example.org/extracted/prometheus_art_song",
+              "predicate": "http://example.org/2wiki-ontology#hasComposer",
+              "object": {
+                "kind": "iri",
+                "value": "http://example.org/extracted/franz_schubert"
+              }
+            }
+          ]
+        }
+      ],
+      "edit_log": [
+        {
+          "violation_fingerprint": "a7cb343187667639875b1909b12413c728f505ca8cb3d830b87075cafcca2033",
+          "operation_index": 0,
+          "operation": "remove_triple",
+          "subject": "http://example.org/extracted/prometheus_art_song",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "old_value": "<http://example.org/2wiki-ontology#CreativeWork>",
+          "new_value": null,
+          "triples_before": 10,
+          "triples_after": 9
+        },
+        {
+          "violation_fingerprint": "a7cb343187667639875b1909b12413c728f505ca8cb3d830b87075cafcca2033",
+          "operation_index": 1,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/prometheus_art_song",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "old_value": null,
+          "new_value": "<http://example.org/2wiki-ontology#MusicalWork>",
+          "triples_before": 9,
+          "triples_after": 10
+        },
+        {
+          "violation_fingerprint": "a7cb343187667639875b1909b12413c728f505ca8cb3d830b87075cafcca2033",
+          "operation_index": 2,
+          "operation": "add_triple",
+          "subject": "http://example.org/extracted/prometheus_art_song",
+          "predicate": "http://example.org/2wiki-ontology#hasComposer",
+          "old_value": null,
+          "new_value": "<http://example.org/extracted/franz_schubert>",
+          "triples_before": 10,
+          "triples_after": 11
+        }
+      ],
+      "unresolved_violation_fingerprints": [],
+      "triples_after": 11,
+      "validation_after": {
+        "validation_contract_version": 2,
+        "conforms": true,
+        "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "violations": []
+      },
+      "outcome": "conforms"
+    }
+  ],
+  "status": "repaired",
+  "final_validation": {
+    "validation_contract_version": 2,
+    "conforms": true,
+    "fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "violations": []
+  },
+  "dangling_references": []
+}

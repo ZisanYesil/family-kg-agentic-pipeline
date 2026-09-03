@@ -1,0 +1,19 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+data:lucretia a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lucretia" ;
+    onto:hasFather data:spurius_lucretius_tricipitinus ;
+    onto:hasSpouse data:lucius_tarquinius_collatinus .
+
+data:lucius_tarquinius_collatinus a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lucius Tarquinius Collatinus" .
+
+data:spurius_lucretius_tricipitinus a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Spurius Lucretius Tricipitinus" .
+

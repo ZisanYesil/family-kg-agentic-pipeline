@@ -1,0 +1,15 @@
+@prefix entity: <http://example.org/entity/> .
+@prefix ex: <http://example.org/2wiki-ontology#> .
+
+entity:Kraków a ex:Place .
+
+entity:Władysław_I_Herman a ex:Agent,
+        ex:Person ;
+    ex:hasFather entity:Casimir_I_the_Restorer ;
+    ex:hasParent entity:Casimir_I_the_Restorer .
+
+entity:Casimir_I_the_Restorer a ex:Agent,
+        ex:Person ;
+    ex:hasBirthPlace entity:Kraków ;
+    ex:hasChild entity:Władysław_I_Herman .
+

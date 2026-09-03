@@ -1,0 +1,37 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:lovers_1999 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Lovers (1999 film)" ;
+    onto:hasDirector data:jean_marc_barr .
+
+data:pitch_perfect_3 a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Pitch Perfect 3" ;
+    onto:hasDirector data:trish_sie .
+
+data:france a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "France" ;
+    skos:altLabel "French" .
+
+data:jean_marc_barr a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Jean-Marc Barr" ;
+    onto:hasNationality data:france,
+        data:united_states .
+
+data:trish_sie a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Trish Sie" ;
+    onto:hasNationality data:united_states .
+
+data:united_states a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "United States" ;
+    skos:altLabel "American" .
+

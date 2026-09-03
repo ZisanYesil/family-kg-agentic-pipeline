@@ -1,0 +1,155 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/868/originals/extracted_868.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/868/ground_truth_868.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/stanislaw_koniecpolski": "http://example.org/entity/Stanisław_Koniecpolski"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/stanislaw_koniecpolski",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Stanisław Koniecpolski",
+          "source": "label"
+        },
+        {
+          "text": "stanislaw koniecpolski",
+          "source": "uri"
+        }
+      ],
+      "context": "Stanisław Koniecpolski. has nationality: Polish. has son: Aleksander Koniecpolski (1620–1659).",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stanisław_Koniecpolski",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stanisław Koniecpolski",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Stanisław Koniecpolski",
+        "extracted_source": "label",
+        "ground_truth_text": "Stanisław Koniecpolski",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8851466178894043,
+      "graph_score": 0.8851466178894043,
+      "margin": 0.27474838495254517
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/alexander_koniecpolski_1620",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Aleksander Koniecpolski (1620–1659)",
+          "source": "label"
+        },
+        {
+          "text": "alexander koniecpolski 1620",
+          "source": "uri"
+        }
+      ],
+      "context": "Aleksander Koniecpolski (1620–1659). inverse has son: Stanisław Koniecpolski.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Aleksander_Koniecpolski",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Aleksander Koniecpolski",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Aleksander Koniecpolski (1620–1659)",
+        "extracted_source": "label",
+        "ground_truth_text": "Aleksander Koniecpolski",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.7028968930244446,
+      "name_embedding_score": 0.793216347694397,
+      "string_score": 0.7818965315818787,
+      "independent_identity_support": true,
+      "context_score": 0.8865165710449219,
+      "graph_score": 0.44325828552246094,
+      "margin": 0.10872077941894531
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/poland",
+      "extracted_types": [
+        "Country"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Polish",
+          "source": "altLabel"
+        },
+        {
+          "text": "Poland",
+          "source": "label"
+        }
+      ],
+      "context": "Polish. inverse has nationality: Stanisław Koniecpolski.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Polish_Lithuanian_Commonwealth",
+      "ground_truth_types": [
+        "Country"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Polish Lithuanian Commonwealth",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Polish",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Polish Lithuanian Commonwealth",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5941952466964722,
+      "name_embedding_score": 0.7089326977729797,
+      "string_score": 0.5333333611488342,
+      "independent_identity_support": false,
+      "context_score": 0.8511642217636108,
+      "graph_score": 0.4255821108818054,
+      "margin": 0.5941952466964722
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

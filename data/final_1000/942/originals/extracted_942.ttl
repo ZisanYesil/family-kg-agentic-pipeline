@@ -1,0 +1,26 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:demetrius_and_the_gladiators_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Demetrius and the Gladiators" ;
+    onto:hasDirector data:delmer_daves .
+
+data:riders_of_the_deadline_film a onto:Film,
+        owl:NamedIndividual ;
+    rdfs:label "Riders of the Deadline" ;
+    onto:hasDirector data:lesley_selander .
+
+data:delmer_daves a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Delmer Daves" ;
+    onto:hasBirthDate "1904-07-24"^^xsd:date .
+
+data:lesley_selander a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Lesley Selander" ;
+    onto:hasBirthDate "1900-05-26"^^xsd:date .
+

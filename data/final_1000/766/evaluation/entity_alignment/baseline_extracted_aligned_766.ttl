@@ -1,0 +1,20 @@
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://example.org/entity/Levels> a onto:CreativeWork,
+        owl:NamedIndividual ;
+    rdfs:label "Levels" ;
+    onto:hasPerformer <http://example.org/entity/Meek_Mill> .
+
+<http://example.org/entity/Meek_Mill> a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Meek Mill" ;
+    onto:hasDetentionPlace <http://example.org/entity/State_Correctional_Institution_Chester> ;
+    skos:altLabel "Robert Rihmeek Williams" .
+
+<http://example.org/entity/State_Correctional_Institution_Chester> a onto:Place,
+        owl:NamedIndividual ;
+    rdfs:label "State Correctional Institution – Chester" .
+

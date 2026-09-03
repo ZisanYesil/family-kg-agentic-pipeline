@@ -1,0 +1,152 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/594/originals/extracted_594.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/594/ground_truth_594.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/joanna_sophia_of_bavaria": "http://example.org/entity/Joanna_Sophia_of_Bavaria",
+    "http://example.org/extracted/albert_iv_duke_of_austria": "http://example.org/entity/Albert_IV_Duke_of_Austria"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/albert_iv_duke_of_austria",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Albert IV, Duke of Austria",
+          "source": "label"
+        },
+        {
+          "text": "albert iv duke of austria",
+          "source": "uri"
+        }
+      ],
+      "context": "Albert IV, Duke of Austria. has burial place: Ducal Crypt in the Stephansdom, Vienna. inverse has spouse: Joanna Sophia of Bavaria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Albert_IV_Duke_of_Austria",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Albert IV Duke of Austria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Albert IV, Duke of Austria",
+        "extracted_source": "label",
+        "ground_truth_text": "Albert IV Duke of Austria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.990323007106781,
+      "string_score": 0.9911764860153198,
+      "independent_identity_support": true,
+      "context_score": 0.9134856462478638,
+      "graph_score": 0.9567428231239319,
+      "margin": 0.612038254737854
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/joanna_sophia_of_bavaria",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Joanna Sophia of Bavaria",
+          "source": "label"
+        }
+      ],
+      "context": "Joanna Sophia of Bavaria. has spouse: Albert IV, Duke of Austria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Joanna_Sophia_of_Bavaria",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Joanna Sophia of Bavaria",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Joanna Sophia of Bavaria",
+        "extracted_source": "label",
+        "ground_truth_text": "Joanna Sophia of Bavaria",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.993445873260498,
+      "graph_score": 0.996722936630249,
+      "margin": 0.6488500833511353
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/ducal_crypt_stephansdom_vienna",
+      "extracted_types": [
+        "Place"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ducal Crypt in the Stephansdom, Vienna",
+          "source": "label"
+        },
+        {
+          "text": "ducal crypt stephansdom vienna",
+          "source": "uri"
+        }
+      ],
+      "context": "Ducal Crypt in the Stephansdom, Vienna. inverse has burial place: Albert IV, Duke of Austria.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Stephansdom",
+      "ground_truth_types": [
+        "Place"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Stephansdom",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ducal Crypt in the Stephansdom, Vienna",
+        "extracted_source": "label",
+        "ground_truth_text": "Stephansdom",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 0.5999952554702759,
+      "name_embedding_score": 0.4676326513290405,
+      "string_score": 0.5437074899673462,
+      "independent_identity_support": false,
+      "context_score": 0.8420166969299316,
+      "graph_score": 0.9210083484649658,
+      "margin": 0.5999952554702759
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

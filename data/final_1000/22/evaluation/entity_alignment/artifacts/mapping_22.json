@@ -1,0 +1,173 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/22/originals/extracted_22.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/22/ground_truth_22.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/olof_skotkonung": "http://example.org/entity/Olof_Skötkonung",
+    "http://example.org/extracted/ingegerd_oloftdotter": "http://example.org/entity/Ingegerd_Olofsdotter_of_Sweden",
+    "http://example.org/extracted/sigrid_haughty": "http://example.org/entity/Sigrid_the_Haughty"
+  },
+  "summary": {
+    "extracted_entities": 3,
+    "ground_truth_entities": 3,
+    "matched": 3,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 0
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/ingegerd_oloftdotter",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Anna",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ingegerd Olofsdotter",
+          "source": "altLabel"
+        },
+        {
+          "text": "Ingegerd Olofsdotter of Sweden",
+          "source": "altLabel"
+        },
+        {
+          "text": "Irene",
+          "source": "altLabel"
+        },
+        {
+          "text": "Saint Anna",
+          "source": "altLabel"
+        },
+        {
+          "text": "ingegerd oloftdotter",
+          "source": "uri"
+        }
+      ],
+      "context": "Anna. has father: Olof Skötkonung.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ingegerd_Olofsdotter_of_Sweden",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ingegerd Olofsdotter of Sweden",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ingegerd Olofsdotter of Sweden",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Ingegerd Olofsdotter of Sweden",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 0.9999999403953552,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.7129918932914734,
+      "graph_score": 0.8564959764480591,
+      "margin": 0.5107969641685486
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/olof_skotkonung",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Olof Skötkonung",
+          "source": "altLabel"
+        },
+        {
+          "text": "olof skotkonung",
+          "source": "uri"
+        }
+      ],
+      "context": "Olof Skötkonung. has mother: Sigrid the Haughty. inverse has father: Anna.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Olof_Skötkonung",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Olof Skötkonung",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Olof Skötkonung",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Olof Skötkonung",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8931517601013184,
+      "graph_score": 0.9465758800506592,
+      "margin": 0.5502377152442932
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/sigrid_haughty",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Sigrid the Haughty",
+          "source": "altLabel"
+        },
+        {
+          "text": "sigrid haughty",
+          "source": "uri"
+        }
+      ],
+      "context": "Sigrid the Haughty. inverse has mother: Olof Skötkonung.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Sigrid_the_Haughty",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Sigrid the Haughty",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Sigrid the Haughty",
+        "extracted_source": "altLabel",
+        "ground_truth_text": "Sigrid the Haughty",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.6149874031543732
+    }
+  ],
+  "unmatched_ground_truth_entities": []
+}

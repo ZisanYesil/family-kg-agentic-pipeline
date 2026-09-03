@@ -1,0 +1,202 @@
+{
+  "mode": "2wiki_graph_pair",
+  "extracted_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/422/originals/extracted_422.ttl",
+  "ground_truth_graph": "/Users/zisanyesil/family-kg-agentic-pipeline/data/final_1000/422/ground_truth_422.ttl",
+  "matching_config": {
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "threshold": 0.55,
+    "margin": 0.05,
+    "name_weight": 0.5,
+    "string_weight": 0.25,
+    "context_weight": 0.25,
+    "class_compatibility": "hard",
+    "automatic_acceptance": "combined-score assignment above confidence margin"
+  },
+  "exact_name_anchors": {
+    "http://example.org/extracted/film_ab_dilli_dur_nahin": "http://example.org/entity/Ab_Dilli_Dur_Nahin",
+    "http://example.org/extracted/film_rarandoi_veduka_chudham": "http://example.org/entity/Rarandoi_Veduka_Chudham",
+    "http://example.org/extracted/person_akkineni_nagarjuna": "http://example.org/entity/Akkineni_Nagarjuna",
+    "http://example.org/extracted/person_raj_kapoor": "http://example.org/entity/Raj_Kapoor"
+  },
+  "summary": {
+    "extracted_entities": 4,
+    "ground_truth_entities": 5,
+    "matched": 4,
+    "review": 0,
+    "unmatched": 0,
+    "unmatched_ground_truth": 1
+  },
+  "entities": [
+    {
+      "extracted_uri": "http://example.org/extracted/film_ab_dilli_dur_nahin",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Ab Dilli Dur Nahin",
+          "source": "label"
+        },
+        {
+          "text": "film ab dilli dur nahin",
+          "source": "uri"
+        }
+      ],
+      "context": "Ab Dilli Dur Nahin. has producer: Raj Kapoor.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Ab_Dilli_Dur_Nahin",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Ab Dilli Dur Nahin",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Ab Dilli Dur Nahin",
+        "extracted_source": "label",
+        "ground_truth_text": "Ab Dilli Dur Nahin",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9999999403953552,
+      "graph_score": 1.0,
+      "margin": 0.629304051399231
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/film_rarandoi_veduka_chudham",
+      "extracted_types": [
+        "Film"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Rarandoi Veduka Chudham",
+          "source": "label"
+        },
+        {
+          "text": "film rarandoi veduka chudham",
+          "source": "uri"
+        }
+      ],
+      "context": "Rarandoi Veduka Chudham. has producer: Akkineni Nagarjuna.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Rarandoi_Veduka_Chudham",
+      "ground_truth_types": [
+        "CreativeWork"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Rarandoi Veduka Chudham",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Rarandoi Veduka Chudham",
+        "extracted_source": "label",
+        "ground_truth_text": "Rarandoi Veduka Chudham",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.9972771406173706,
+      "graph_score": 0.4986385703086853,
+      "margin": 0.6281985640525818
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_akkineni_nagarjuna",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Akkineni Nagarjuna",
+          "source": "label"
+        },
+        {
+          "text": "person akkineni nagarjuna",
+          "source": "uri"
+        }
+      ],
+      "context": "Akkineni Nagarjuna. has birth date: 1959-08-29. inverse has producer: Rarandoi Veduka Chudham.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Akkineni_Nagarjuna",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Akkineni Nagarjuna",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Akkineni Nagarjuna",
+        "extracted_source": "label",
+        "ground_truth_text": "Akkineni Nagarjuna",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 0.8164666891098022,
+      "graph_score": 0.4082333445549011,
+      "margin": 0.08763080835342407
+    },
+    {
+      "extracted_uri": "http://example.org/extracted/person_raj_kapoor",
+      "extracted_types": [
+        "Person"
+      ],
+      "extracted_name_variants": [
+        {
+          "text": "Raj Kapoor",
+          "source": "label"
+        },
+        {
+          "text": "person raj kapoor",
+          "source": "uri"
+        }
+      ],
+      "context": "Raj Kapoor. has birth date: 1924-12-14. inverse has producer: Ab Dilli Dur Nahin.",
+      "decision": "matched",
+      "matched": true,
+      "ground_truth_uri": "http://example.org/entity/Raj_Kapoor",
+      "ground_truth_types": [
+        "Person"
+      ],
+      "ground_truth_name_variants": [
+        {
+          "text": "Raj Kapoor",
+          "source": "uri"
+        }
+      ],
+      "best_name_pair": {
+        "extracted_text": "Raj Kapoor",
+        "extracted_source": "label",
+        "ground_truth_text": "Raj Kapoor",
+        "ground_truth_source": "uri"
+      },
+      "final_score": 1.0,
+      "name_embedding_score": 1.0,
+      "string_score": 1.0,
+      "independent_identity_support": true,
+      "context_score": 1.0,
+      "graph_score": 1.0,
+      "margin": 0.5803843140602112
+    }
+  ],
+  "unmatched_ground_truth_entities": [
+    "http://example.org/entity/Nagarjuna_Akkineni"
+  ]
+}

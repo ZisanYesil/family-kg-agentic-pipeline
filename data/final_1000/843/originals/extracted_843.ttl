@@ -1,0 +1,21 @@
+@prefix data: <http://example.org/extracted/> .
+@prefix onto: <http://example.org/2wiki-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+data:de_dannan a onto:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "De Dannan" ;
+    onto:hasCountry data:ireland ;
+    onto:hasFounder data:frankie_gavin .
+
+data:frankie_gavin a onto:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Frankie Gavin" .
+
+data:ireland a onto:Country,
+        owl:NamedIndividual ;
+    rdfs:label "Ireland" ;
+    skos:altLabel "Irish" .
+
